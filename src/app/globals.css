@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-serif: var(--font-newsreader);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-acd-surface: #fbfbf8;
+  --color-acd-navy: #142b3f;
+  --color-acd-navy-mid: #3d4f5c;
+  --color-acd-navy-soft: #243b30;
+  --color-acd-green: #16522a;
+  --color-acd-green-dark: #123f20;
+  --color-acd-green-mid: #1f5132;
+  --color-acd-green-body: #46555e;
+  --color-acd-green-body2: #56646b;
+  --color-acd-muted: #5a6b73;
+  --color-acd-dim: #6b7a82;
+  --color-acd-dimmer: #8a969c;
+  --color-acd-dimest: #9aa6ab;
+  --color-acd-pale-text: #b7c0c5;
+  --color-acd-border: #ecece4;
+  --color-acd-border-card: #edeee7;
+  --color-acd-border-light: #e4e4dc;
+  --color-acd-border-hover: #cbddd0;
+  --color-acd-border-green: #d7e2da;
+  --color-acd-border-dropdown: #eaeae2;
+  --color-acd-tag-green-bg: #eaf1ec;
+  --color-acd-tag-green-text: #2c5340;
+  --color-acd-tag-muted-bg: #f4f4ee;
+  --color-acd-tag-muted-text: #6a747a;
+  --color-acd-chip-bg: #edf3ee;
+  --color-acd-chip-text: #1f5132;
+  --color-acd-chip-remove: #d8e6dc;
+  --color-acd-verified-bg: #e7f0e9;
+  --color-acd-green-pale: #f4f7f4;
+  --color-acd-green-pale-border: #e1eae2;
+  --color-acd-logo-bg: #f3f6f2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fbfbf8;
+  color: #142b3f;
+}
+
+::placeholder {
+  color: #9aa6ab;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dcdcd4;
+  border-radius: 8px;
+  border: 3px solid #fbfbf8;
+}
+
+@layer base {
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  a:focus-visible {
+    outline: 2px solid rgba(22, 82, 42, 0.35);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
