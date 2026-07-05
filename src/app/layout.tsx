@@ -23,7 +23,20 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata: Metadata = {
   title: "Africa Career Desk",
   description:
-    "Curated Africa finance and investment careers. Premium roles in private equity, DFI, infrastructure, venture capital, climate finance and strategy.",
+    "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+  openGraph: {
+    siteName: "Africa Career Desk",
+    type: "website",
+    title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
+    description:
+      "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
+    description:
+      "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+  },
 };
 
 export default function RootLayout({

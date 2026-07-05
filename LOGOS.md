@@ -12,7 +12,7 @@ Files placed here are served at `/logos/<filename>` in production and locally.
 
 ---
 
-## Upload checklist — 25 employers
+## Upload checklist — 34 employers
 
 | # | Employer name | Recommended filename | Local path | `logoUrl` set? | Notes |
 |---|---|---|---|---|---|
@@ -41,6 +41,15 @@ Files placed here are served at `/logos/<filename>` in production and locally.
 | 23 | SPE Capital | `spe-capital.svg` | `public/logos/spe-capital.svg` | set ✓ | |
 | 24 | Ventures Platform | `ventures-platform.svg` | `public/logos/ventures-platform.svg` | set ✓ | |
 | 25 | XSML Capital | `xsml.svg` | `public/logos/xsml.svg` | set ✓ | All caps — use lowercase |
+| 26 | Proparco | `proparco.png` | `public/logos/proparco.png` | set ✓ | V2 — applies to ACD-0056, 0057, 0058, 0060 |
+| 27 | Investisseurs & Partenaires | `ip.png` | `public/logos/ip.png` | set ✓ | V2 — applies to ACD-0061, 0062, 0063 |
+| 28 | IFC | `ifc.svg` | `public/logos/ifc.svg` | set ✓ | V2 — applies to ACD-0064 |
+| 29 | African Development Bank | `afdb.jpeg` | `public/logos/afdb.jpeg` | set ✓ | V2 — applies to ACD-0068 |
+| 30 | FMO | `fmo.png` | `public/logos/fmo.png` | set ✓ | V2 — applies to ACD-0069 |
+| 31 | FinDev Canada | `findev-canada.png` | `public/logos/findev-canada.png` | set ✓ | V2 — applies to ACD-0073 |
+| 32 | DBSA | `dbsa.svg` | `public/logos/dbsa.svg` | set ✓ | V2 — applies to ACD-0076, 0077, 0081 |
+| 33 | TLG Capital | `tlg-capital.jpeg` | `public/logos/tlg-capital.jpeg` | set ✓ | V2 — applies to ACD-0078 |
+| 34 | RMB | `rmb.png` | `public/logos/rmb.png` | set ✓ | V2 — applies to ACD-0080 |
 
 ---
 
@@ -65,6 +74,20 @@ Files placed here are served at `/logos/<filename>` in production and locally.
 5. Run `npm run build` to confirm.
 
 Some employers appear in multiple entries (e.g. Afreximbank has ACD-0002, 0003, 0004, 0042). Add `logoUrl` to every entry for that employer.
+
+**V2 wiring — add these `logoUrl` fields once the files are in `public/logos/`:**
+
+| File | Entries wired |
+|---|---|
+| `proparco.png` | ACD-0056, ACD-0057, ACD-0058, ACD-0060 — set ✓ |
+| `ip.png` | ACD-0061, ACD-0062, ACD-0063 — set ✓ |
+| `ifc.svg` | ACD-0064 — set ✓ |
+| `afdb.jpeg` | ACD-0068 — set ✓ |
+| `fmo.png` | ACD-0069 — set ✓ |
+| `findev-canada.png` | ACD-0073 — set ✓ |
+| `dbsa.svg` | ACD-0076, ACD-0077, ACD-0081 — set ✓ |
+| `tlg-capital.jpeg` | ACD-0078 — set ✓ |
+| `rmb.png` | ACD-0080 — set ✓ |
 
 ---
 
