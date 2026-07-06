@@ -45,7 +45,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <p className="mt-3 text-[11.5px] leading-relaxed text-acd-dimmer">
+        <p data-nosnippet className="mt-3 text-[11.5px] leading-relaxed text-acd-dimmer">
           Africa Career Desk is an independent curated job-discovery platform.
           Company names and logos are used only to identify listed
           opportunities. Applications are submitted through official employer or
