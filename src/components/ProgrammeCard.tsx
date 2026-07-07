@@ -1,5 +1,8 @@
+"use client";
+
 import type { Opportunity } from "@/types";
 import LogoContainer from "./LogoContainer";
+import { trackApplyClicked } from "@/lib/analytics";
 
 interface ProgrammeCardProps {
   programme: Opportunity;
@@ -45,6 +48,7 @@ export default function ProgrammeCard({ programme }: ProgrammeCardProps) {
         href={programme.applyUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackApplyClicked(programme)}
         className="inline-flex items-center gap-2 bg-white text-acd-green border-[1.5px] border-acd-border-hover rounded-[11px] px-[18px] py-3 text-[14.5px] font-semibold hover:bg-acd-green hover:text-white hover:border-acd-green transition-colors duration-150 no-underline shrink-0 whitespace-nowrap"
       >
         View programme

@@ -1,0 +1,8 @@
+﻿Step,Instruction
+1,Use sheet 'V3 update actions' first: remove ACD-0061 and ACD-0062 from src/data/opportunities.ts.
+2,"For ACD-0063, do not create a duplicate. If it exists under Programmes, change boardSection to 'Jobs' so the Dakar I&P role appears on the Jobs page."
+3,Then use sheet 'Launch opportunities 3' for new additions. Rows with IDs ACD-0082 through ACD-0093 are new rows to add.
+4,"Before import, check for ID conflicts and slug conflicts. Keep all remaining existing IDs and slugs unchanged."
+5,"For near-deadline IFC roles (ACD-0087, ACD-0088, ACD-0090), only add if we publish immediately and remove after the deadline if closed."
+6,Do not add any row from 'V3 rejected expired'. Those are deliberately excluded from the final add list.
+7,"Run npm run build after changes and confirm final counts for Jobs, Programmes, Open Applications and total."

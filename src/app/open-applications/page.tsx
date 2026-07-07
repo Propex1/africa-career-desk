@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import OpenAppCard from "@/components/OpenAppCard";
+import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { OPEN_APPLICATIONS } from "@/data/opportunities";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function OpenApplicationsPage() {
   return (
     <section className="max-w-[1180px] mx-auto px-5 md:px-8 py-14 md:py-[54px]">
+      <SectionViewTracker section="Open Applications" />
       <p className="m-0 mb-4 text-[13px] font-semibold tracking-[2.4px] text-acd-green uppercase">
         Speculative Applications
       </p>

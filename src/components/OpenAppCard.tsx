@@ -1,5 +1,8 @@
+"use client";
+
 import type { Opportunity } from "@/types";
 import LogoContainer from "./LogoContainer";
+import { trackApplyClicked } from "@/lib/analytics";
 
 interface OpenAppCardProps {
   item: Opportunity;
@@ -44,6 +47,7 @@ export default function OpenAppCard({ item }: OpenAppCardProps) {
         href={item.applyUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackApplyClicked(item)}
         className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-white text-acd-green border-[1.5px] border-acd-border-hover rounded-[11px] px-[13px] py-3 text-[14.5px] font-semibold hover:bg-acd-green hover:text-white hover:border-acd-green transition-colors duration-150 no-underline"
       >
         {item.applyButtonText}

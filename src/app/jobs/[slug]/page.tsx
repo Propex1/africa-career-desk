@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { getJobBySlug, JOBS } from "@/data/opportunities";
 import LogoContainer from "@/components/LogoContainer";
 import BackButton from "@/components/BackButton";
+import ApplyLink from "@/components/analytics/ApplyLink";
+import JobDetailTracker from "@/components/analytics/JobDetailTracker";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -36,6 +38,8 @@ export default async function JobDetailPage({ params }: Props) {
 
   return (
     <section className="max-w-[1180px] mx-auto px-5 md:px-8 py-9 pb-[72px]">
+      <JobDetailTracker job={job} />
+
       {/* Back */}
       <BackButton />
 
@@ -259,10 +263,9 @@ export default async function JobDetailPage({ params }: Props) {
             </div>
 
             {/* CTA */}
-            <a
+            <ApplyLink
+              job={job}
               href={job.applyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-[22px] w-full inline-flex items-center justify-center gap-[9px] bg-acd-green hover:bg-acd-green-dark text-white border-0 rounded-[12px] py-4 text-[15.5px] font-semibold cursor-pointer font-sans transition-colors duration-150 no-underline"
             >
               {job.applyButtonText}
@@ -278,7 +281,7 @@ export default async function JobDetailPage({ params }: Props) {
               >
                 <path d="M7 17L17 7M9 7h8v8" />
               </svg>
-            </a>
+            </ApplyLink>
 
             <p className="mt-[15px] text-[12.5px] text-acd-dimest text-center leading-snug">
               {job.applyUrl.startsWith("mailto:")

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ProgrammeCard from "@/components/ProgrammeCard";
+import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { PROGRAMMES } from "@/data/opportunities";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function ProgrammesPage() {
   return (
     <section className="max-w-[1180px] mx-auto px-5 md:px-8 py-14 md:py-[54px]">
+      <SectionViewTracker section="Programmes" />
       <p className="m-0 mb-4 text-[13px] font-semibold tracking-[2.4px] text-acd-green uppercase">
         Structured Pathways
       </p>

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { Opportunity } from "@/types";
 import JobCard from "./JobCard";
+import { trackFilterUsed, trackSearchUsed } from "@/lib/analytics";
 
 // ── Filter Dropdown ───────────────────────────────────────────────────────────
 
@@ -353,6 +354,7 @@ export default function JobsBoard({
             : [...arr, value],
         };
       });
+      trackFilterUsed(key, value, "Jobs");
     },
     []
   );
@@ -376,6 +378,11 @@ export default function JobsBoard({
     []
   );
 
+  const handleSort = useCallback((value: "recent" | "deadline") => {
+    setSort(value);
+    trackFilterUsed("sort", value, "Jobs");
+  }, []);
+
   const q = search.trim().toLowerCase();
 
   const filtered = jobs
@@ -397,6 +404,21 @@ export default function JobsBoard({
       if (sort === "deadline") return deadlineMs(a.deadlineDisplay) - deadlineMs(b.deadlineDisplay);
       return 0;
     });
+
+  // Track search usage once the user pauses typing, with the live result count.
+  const resultCountRef = useRef(0);
+  useEffect(() => {
+    resultCountRef.current = filtered.length;
+  });
+
+  useEffect(() => {
+    const query = search.trim();
+    if (!query) return;
+    const timer = setTimeout(() => {
+      trackSearchUsed(query.length, "Jobs", resultCountRef.current);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [search]);
 
   const anyFilter =
     Object.values(filters).some((arr) => arr.length > 0) || q.length > 0;
@@ -518,7 +540,7 @@ export default function JobsBoard({
             </button>
           )}
         </div>
-        <SortDropdown value={sort} onChange={setSort} />
+        <SortDropdown value={sort} onChange={handleSort} />
       </div>
 
       {/* Job cards */}

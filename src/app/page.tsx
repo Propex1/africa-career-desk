@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JobsBoard from "@/components/JobsBoard";
+import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import {
   JOBS,
   JOB_REGIONS,
@@ -30,13 +31,16 @@ export const metadata: Metadata = {
 
 export default function JobsPage() {
   return (
-    <JobsBoard
-      jobs={JOBS}
-      regions={JOB_REGIONS}
-      countries={JOB_COUNTRIES}
-      roleTypes={JOB_ROLE_TYPES}
-      experienceBuckets={JOB_EXPERIENCE_BUCKETS}
-      languages={JOB_LANGUAGES}
-    />
+    <>
+      <SectionViewTracker section="Jobs" />
+      <JobsBoard
+        jobs={JOBS}
+        regions={JOB_REGIONS}
+        countries={JOB_COUNTRIES}
+        roleTypes={JOB_ROLE_TYPES}
+        experienceBuckets={JOB_EXPERIENCE_BUCKETS}
+        languages={JOB_LANGUAGES}
+      />
+    </>
   );
 }

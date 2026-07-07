@@ -1,12 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import LogoContainer from "./LogoContainer";
 import type { Opportunity } from "@/types";
+import { trackJobCardClicked } from "@/lib/analytics";
 
 interface JobCardProps {
   job: Opportunity;
 }
 
 export default function JobCard({ job }: JobCardProps) {
+  const onClick = () => trackJobCardClicked(job);
+
   const otherTags = [job.experienceBucket, job.language].filter(Boolean) as string[];
 
   return (
@@ -22,6 +27,7 @@ export default function JobCard({ job }: JobCardProps) {
       <div className="flex-1 min-w-[200px]">
         <Link
           href={`/jobs/${job.slug}`}
+          onClick={onClick}
           className="font-serif font-semibold text-[20px] text-acd-navy leading-tight tracking-[-0.2px] hover:text-acd-green transition-colors no-underline block"
         >
           {job.title}
@@ -79,6 +85,7 @@ export default function JobCard({ job }: JobCardProps) {
       <div className="flex items-center gap-3 shrink-0">
         <Link
           href={`/jobs/${job.slug}`}
+          onClick={onClick}
           className="inline-flex items-center gap-2 bg-white text-acd-green-mid border border-acd-border-green rounded-[11px] px-[19px] py-3 text-[14px] font-semibold hover:bg-acd-green hover:text-white hover:border-acd-green transition-colors duration-150 no-underline whitespace-nowrap"
         >
           View role
