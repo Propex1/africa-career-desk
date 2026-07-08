@@ -10,22 +10,22 @@ import {
   JOB_LANGUAGES,
 } from "@/data/opportunities";
 
+const HOME_DESCRIPTION =
+  "Find curated Africa-focused roles in finance, investment, private equity, infrastructure, DFI, climate, VC and strategy.";
+
 export const metadata: Metadata = {
   title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
-  description:
-    "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+  description: HOME_DESCRIPTION,
   openGraph: {
     siteName: "Africa Career Desk",
     type: "website",
     title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
-    description:
-      "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+    description: HOME_DESCRIPTION,
   },
   twitter: {
     card: "summary",
     title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
-    description:
-      "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",
+    description: HOME_DESCRIPTION,
   },
 };
 
