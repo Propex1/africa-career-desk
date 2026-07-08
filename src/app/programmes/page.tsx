@@ -3,10 +3,23 @@ import ProgrammeCard from "@/components/ProgrammeCard";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { PROGRAMMES } from "@/data/opportunities";
 
+const PROGRAMMES_DESCRIPTION =
+  "Explore curated Africa-focused graduate programmes, fellowships, internships and early-career opportunities in finance, investment, development and strategy.";
+
 export const metadata: Metadata = {
   title: "Programmes | Africa Career Desk",
-  description:
-    "Selective graduate programmes and fellowships from leading investors and development finance institutions: the structured route into Africa-focused finance.",
+  description: PROGRAMMES_DESCRIPTION,
+  openGraph: {
+    siteName: "Africa Career Desk",
+    type: "website",
+    title: "Programmes | Africa Career Desk",
+    description: PROGRAMMES_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary",
+    title: "Programmes | Africa Career Desk",
+    description: PROGRAMMES_DESCRIPTION,
+  },
 };
 
 export default function ProgrammesPage() {

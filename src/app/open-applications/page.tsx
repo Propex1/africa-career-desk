@@ -3,10 +3,23 @@ import OpenAppCard from "@/components/OpenAppCard";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { OPEN_APPLICATIONS } from "@/data/opportunities";
 
+const OPEN_APPLICATIONS_DESCRIPTION =
+  "Find open application channels for Africa-focused finance, investment, DFI, infrastructure, VC, climate and strategy roles.";
+
 export const metadata: Metadata = {
   title: "Open Applications | Africa Career Desk",
-  description:
-    "Selected investors and institutions that welcome speculative applications from strong candidates, even when no specific role is advertised.",
+  description: OPEN_APPLICATIONS_DESCRIPTION,
+  openGraph: {
+    siteName: "Africa Career Desk",
+    type: "website",
+    title: "Open Applications | Africa Career Desk",
+    description: OPEN_APPLICATIONS_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary",
+    title: "Open Applications | Africa Career Desk",
+    description: OPEN_APPLICATIONS_DESCRIPTION,
+  },
 };
 
 export default function OpenApplicationsPage() {
