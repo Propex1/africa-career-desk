@@ -4,7 +4,7 @@ import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { OPEN_APPLICATIONS } from "@/data/opportunities";
 
 const OPEN_APPLICATIONS_DESCRIPTION =
-  "Find open application channels for Africa-focused finance, investment, DFI, infrastructure, VC, climate and strategy roles.";
+  "Discover official open application channels and talent pipelines for Africa-focused roles in private equity, infrastructure, DFI, climate, VC and strategy.";
 
 export const metadata: Metadata = {
   title: "Open Applications | Africa Career Desk",
@@ -33,9 +33,11 @@ export default function OpenApplicationsPage() {
         Firms accepting open applications
       </h1>
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[660px]">
-        Selected investors and institutions that welcome speculative applications
-        from strong candidates, even when no specific role is advertised. Apply
-        directly through their official channels.
+        Discover official open application channels and talent pipelines for
+        Africa-focused roles in private equity, infrastructure, DFI, climate, VC
+        and strategy. Selected investors and institutions that welcome speculative
+        applications from strong candidates, even when no specific role is
+        advertised.
       </p>
 
       <div className="mt-[42px] grid grid-cols-1 md:grid-cols-2 gap-4">

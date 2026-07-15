@@ -439,8 +439,9 @@ export default function JobsBoard({
         Premium Africa finance &amp; investment roles
       </h1>
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[620px]">
-        Carefully selected opportunities in private equity, DFI, infrastructure,
-        venture capital, climate finance and strategic finance across Africa.
+        Find curated Africa-focused roles in finance, investment, private equity,
+        infrastructure, DFI, climate, VC and strategy. Explore jobs, programmes
+        and open application channels across leading Africa-focused employers.
       </p>
 
       {/* Search */}

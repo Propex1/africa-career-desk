@@ -4,7 +4,7 @@ import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { PROGRAMMES } from "@/data/opportunities";
 
 const PROGRAMMES_DESCRIPTION =
-  "Explore curated Africa-focused graduate programmes, fellowships, internships and early-career opportunities in finance, investment, development and strategy.";
+  "Explore Africa-focused graduate programmes, fellowships, internships and early-career pathways in finance, investment, development finance, infrastructure and strategy.";
 
 export const metadata: Metadata = {
   title: "Programmes | Africa Career Desk",
@@ -33,9 +33,10 @@ export default function ProgrammesPage() {
         Graduate programmes &amp; fellowships
       </h1>
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[640px]">
-        Selective multi-year programmes and fellowships from leading investors
-        and development finance institutions: the structured route into
-        Africa-focused finance.
+        Explore Africa-focused graduate programmes, fellowships, internships and
+        early-career pathways in finance, investment, development finance,
+        infrastructure and strategy. Selective multi-year programmes from leading
+        investors and development finance institutions.
       </p>
 
       <div className="mt-[42px] flex flex-col gap-[14px]">

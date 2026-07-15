@@ -36,7 +36,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-[#EEEEE7] flex items-center justify-between gap-4 flex-wrap">
+        <div data-nosnippet className="mt-4 pt-4 border-t border-[#EEEEE7] flex items-center justify-between gap-4 flex-wrap">
           <p className="m-0 text-[12.5px] text-acd-dimmer">
             Curated Africa finance, investment and infrastructure opportunities.
           </p>

@@ -11,7 +11,7 @@ import {
 } from "@/data/opportunities";
 
 const HOME_DESCRIPTION =
-  "Find curated Africa-focused roles in finance, investment, private equity, infrastructure, DFI, climate, VC and strategy.";
+  "Find curated Africa-focused roles in finance, investment, private equity, infrastructure, DFI, climate, VC and strategy. Explore jobs, programmes and open application channels across leading Africa-focused employers.";
 
 export const metadata: Metadata = {
   title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
