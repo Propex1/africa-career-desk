@@ -2432,42 +2432,6 @@ export const OPPORTUNITIES: Opportunity[] = [
     status: "Active",
   },
   {
-    id: "ACD-0089",
-    slug: "associate-investment-officer-ifc-luanda-angola",
-    title: "Associate Investment Officer",
-    company: "IFC",
-    companyInitials: "IF",
-    logoUrl: "/logos/ifc.svg",
-    boardSection: "Jobs",
-    roleType: "DFI / MDB / Investment",
-    experienceBucket: "Associate",
-    city: "Luanda",
-    country: "Angola",
-    region: "Southern Africa",
-    locationDisplay: "Luanda, Angola",
-    language: "English; Portuguese",
-    languageTags: ["English", "Portuguese"],
-    deadlineDisplay: "14 Jul 2026",
-    summary:
-      "IFC associate investment role based in Luanda, suitable for candidates with investment, finance and private-sector development experience.",
-    aboutRole:
-      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Associate Investment Officer role is based in IFC's Luanda office, supporting private-sector investment origination, structuring, and portfolio activities in Angola and the broader Southern Africa region.",
-    requirements: [
-      "Relevant experience in investment, project finance, corporate finance, M&A, private equity, credit, or emerging-market private-sector finance",
-      "English proficiency required; Portuguese essential for this Luanda-based role",
-    ],
-    applicationNotes:
-      "Closing date: 14 July 2026. Apply via the official World Bank Group careers portal.",
-    applyUrl:
-      "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37382?c=worldbankgroup",
-    sourceUrl:
-      "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37382?c=worldbankgroup",
-    sourceType: "Official ATS",
-    applyButtonText: "Apply on official application page",
-    lastChecked: "15 Jul 2026",
-    status: "Active",
-  },
-  {
     id: "ACD-0091",
     slug: "associate-operations-officer-advisory-services-ifc-rabat-morocco",
     title: "Associate Operations Officer - Advisory Services",
