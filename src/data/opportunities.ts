@@ -2485,15 +2485,34 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French", "Arabic"],
     deadlineDisplay: "16 Jul 2026",
     summary:
-      "IFC advisory services role in Morocco, relevant for private-sector development, investment climate and strategic advisory profiles.",
+      "IFC advisory services role in Morocco supporting private-sector reform projects, investment climate analytics and portfolio oversight in the North Africa and Horn of Africa cluster.",
     aboutRole:
-      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Associate Operations Officer role in Advisory Services is based in Rabat, Morocco, contributing to IFC's private-sector development and investment climate advisory work in Morocco and the broader North Africa region.",
+      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Associate Operations Officer role sits within the Country Advisory and Economics (CAE) unit of IFC's North Africa and Horn of Africa cluster, which supports a large investment portfolio alongside a rich set of advisory projects dealing with a wide range of government and private-sector stakeholders. The position is based in Rabat on a 3-year term at Grade GF.",
+    responsibilities: [
+      "Support business and project development in line with client and market needs, working collaboratively across the World Bank Group",
+      "Participate in senior-level client meetings to provide technical advice and monitor project progress",
+      "Support quality of project supervision and completion documents and provide quality control over client deliverables",
+      "Engage with World Bank and IFC teams on reforms needed to unlock new markets",
+      "Support oversight of the advisory portfolio in Morocco for quality and consistency of approach",
+      "Engage with top management in government and the private sector to improve IFC's visibility",
+      "Support knowledge-sharing sessions across the region",
+      "Conduct research and diagnostics relevant to clients and stakeholders",
+      "Support resource management including budget and short-term consultants for effective project implementation",
+    ],
     requirements: [
-      "Experience in advisory, private-sector development, project implementation, economics, policy, strategy, or development finance",
-      "Strong communication skills in English and French; Arabic useful",
+      "Master's degree in Finance, Business, or Economics",
+      "At least 5 years of experience in private-sector development, with a focus on delivering private-sector-oriented reform projects",
+      "Strong track record of working with government clients",
+      "Understanding of IFC/WBG products and cross-organisational collaboration opportunities",
+      "Ability to conceptualise research and analytical projects that could open new markets",
+      "Excellent written, verbal, and presentation skills; fluency in English and French",
+    ],
+    niceToHave: [
+      "Demonstrable experience with IFC and WBG products",
+      "Arabic language skills",
     ],
     applicationNotes:
-      "Closing date: 16 July 2026. Apply via the official World Bank Group careers portal.",
+      "Grade GF, 3-year term. Closing date: 16 July 2026. Apply via the official World Bank Group careers portal.",
     applyUrl:
       "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37399?c=worldbankgroup",
     sourceUrl:
@@ -2581,22 +2600,44 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior AfDB independent evaluation role contributing to evaluation of Bank interventions and strategic learning across development finance operations.",
     aboutRole:
-      "The African Development Bank (AfDB) is a multilateral development finance institution and a leading provider of development finance in Africa. The Independent Development Evaluation department (IDEV) conducts independent evaluations of AfDB's strategies, policies, programmes, and projects, providing evidence-based assessments to improve development effectiveness and strategic learning across the Bank's operations.",
+      "Established in 1964, the African Development Bank (AfDB) is the premier pan-African development institution, promoting economic growth and social progress across the continent. With 81 member states, including 54 Regional Member Countries, the Bank delivers financial and technical support for transformative projects and is guided by its Ten-Year Strategy (2024-2033). The Independent Development Evaluation (IDEV) function reports to the Board of Directors and is mandated to conduct independent evaluations of AfDB's policies, strategies, programmes, and operations, providing evidence-based assessments to improve development effectiveness and drive strategic learning. IDEV comprises three divisions: IDEV.1 (energy, industrialisation, integration); IDEV.2 (agriculture, food security, quality of life); and IDEV.3 (knowledge management, dissemination, and evaluation-capacity development). The Senior Evaluation Officer contributes to the delivery of complex evaluations, co-leads moderately complex ones, and provides evaluation expertise to junior colleagues.",
+    responsibilities: [
+      "Design and conduct evaluations in accordance with the Bank's Evaluation Policy and international standards (OECD-DAC Evaluation Standards; ECG Good Practice Standards)",
+      "Develop theory of change, evaluation design, analytical frameworks, and data collection tools; identify and address methodological limitations",
+      "Carry out data collection and analysis across economic, social, and statistical dimensions",
+      "Co-author evaluation reports that are evidence-based, balanced, and timely; develop recommendations for the Board and senior management",
+      "Manage evaluation project budgets, timelines, and quality-management processes, including internal and external peer review",
+      "Supervise staff and consultants and manage multidisciplinary evaluation teams",
+      "Consult widely with Bank management, staff, and external stakeholders throughout evaluation processes",
+      "Promote evaluation as an accountability and learning tool within the Bank and in Regional Member Countries; deliver evaluation training",
+      "Prepare communication outputs (briefs, highlights, tip sheets) targeted to different audiences including policymakers and the Board",
+      "Engage in evaluation communities of practice and build strategic partnerships with international institutions",
+    ],
     requirements: [
-      "At least 5 years of experience in evaluation, development finance, economics, statistics, policy, strategy, or development-project analysis",
-      "Demonstrated ability to design and conduct evaluations of development interventions",
-      "Strong analytical and quantitative skills",
-      "Excellent written and verbal communication in both English and French",
+      "Master's degree in economics, sociology, statistics, public administration, or a development-related field",
+      "Minimum 5 years of experience formulating, implementing, and evaluating development interventions in accordance with international evaluation standards",
+      "Experience in development planning, management, and evaluation in multilateral development banks or international development agencies",
+      "Experience writing evaluation and/or research reports and providing strategic advice to management",
+      "Knowledge of evaluation theories, approaches, designs, and quantitative and qualitative methods",
+      "Knowledge of OECD-DAC Evaluation Standards and ECG Good Practice Standards",
+      "Knowledge of African development theories and issues",
+      "Ability to manage projects and multidisciplinary teams under tight deadlines",
+      "Effective communication in English or French; proficiency in both desirable",
+    ],
+    niceToHave: [
+      "Degree or certificate in development evaluation, development-oriented research, or programme/project management",
+      "Facilitation experience in multi-cultural or multi-sector settings",
+      "Competence in qualitative analysis software (e.g., Atlas.ti), AI tools, or GIS/remote sensing data",
     ],
     applicationNotes:
-      "Closing date: 28 July 2026. Apply via the official African Development Bank careers portal.",
+      "Position Grade LP5. Position Number 50113762. This position is classified Local Status and attracts local terms and conditions of employment. Closing date: 28 July 2026. Apply via the official African Development Bank careers portal. For technical difficulties submitting your application, contact HRDirect@AFDB.ORG.",
     applyUrl:
       "https://www.afdb.org/en/vacancy/senior-evaluation-officer-idev-95031",
     sourceUrl:
       "https://www.afdb.org/en/vacancy/senior-evaluation-officer-idev-95031",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "6 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
 
@@ -2620,15 +2661,32 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     deadlineDisplay: "22 Jul 2026",
     summary:
-      "Senior IFC country leadership role overseeing the institution's investment and advisory activities and portfolio in Cameroon.",
+      "Senior IFC country leadership role overseeing all of the institution's investment and advisory activities in Cameroon, reporting to the Division Director for Nigeria and Central Africa.",
     aboutRole:
-      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Program Manager role provides senior country leadership for IFC's investment and advisory activities in Cameroon, combining investment oversight, client relationship management, and institutional representation.",
+      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Program Manager role leads the operationalisation of IFC's strategy at the country level in Cameroon, based in Douala. Reporting to the Division Director for Nigeria and Central Africa, the Program Manager oversees all IFC activities in the country — including the investment and advisory portfolio — and drives significant growth through new opportunities and strengthened impact. The position is a 4-year term at Grade GH.",
+    responsibilities: [
+      "Lead development, implementation, and refinement of IFC's multi-year country strategy for Cameroon",
+      "Build and manage high-level relationships with government, private sector, regulators, development partners, and civil society",
+      "Coordinate with World Bank Group institutions and other partners on joint initiatives",
+      "Oversee IFC's investment and advisory portfolio in Cameroon to the highest standards",
+      "Monitor environmental, social, and reputational risks related to IFC engagements",
+      "Lead, manage, and mentor a diverse country team",
+      "Serve as a key member of the Nigeria and Central Africa cluster leadership team",
+    ],
     requirements: [
-      "Extensive senior experience in investment, advisory, country management or development finance",
-      "Fluency in English and French",
+      "MBA or equivalent professional qualification with a minimum of 12 years of relevant experience, including 5+ years in a managerial role",
+      "Outstanding track record in investment and advisory operations",
+      "Strong leadership and people-management capabilities",
+      "Demonstrated success in developing and sustaining high-level client relationships",
+      "Ability to represent IFC externally with a wide range of stakeholders",
+      "Fluency in English and French (essential)",
+    ],
+    niceToHave: [
+      "Transaction processing and portfolio supervision experience",
+      "Work experience in Africa",
     ],
     applicationNotes:
-      "Closing date: 22 July 2026. Apply via the official World Bank Group careers portal.",
+      "Grade GH, 4-year term. Closing date: 22 July 2026. Apply via the official World Bank Group careers portal.",
     applyUrl:
       "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37479?c=worldbankgroup",
     sourceUrl:
@@ -2656,15 +2714,32 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     deadlineDisplay: "24 Jul 2026",
     summary:
-      "IFC sustainable-infrastructure advisory role supporting business development and projects in sectors including energy, transport and mining in Guinea.",
+      "IFC Sustainable Infrastructure Advisory role in Guinea supporting clients in mining and infrastructure to address sustainability challenges, with a focus on climate, digital, and social inclusion.",
     aboutRole:
-      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Associate Operations Officer role in the Sustainable Infrastructure Advisory team is based in Conakry, Guinea, contributing to IFC's infrastructure business development and advisory projects across the energy, transport and mining sectors.",
+      "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Associate Operations Officer role sits within the Sustainable Infrastructure Advisory (SIA) team, part of IFC's Infrastructure VPU. The SIA team delivers sustainability-related services — covering climate, digital, and social inclusion — to IFC's investment clients and partners to ensure broad stakeholder benefit, community buy-in, and the development of resilient infrastructure. In Guinea, the team implements projects supporting clients in the mining and infrastructure sectors. The position is a 3-year term at Grade GF.",
+    responsibilities: [
+      "Contribute to risk and opportunity assessments for understanding sustainability issues faced by IFC clients",
+      "Support design of innovative solutions addressing clients' business risks and sustainability challenges",
+      "Work with investment, ESG, legal, and relevant teams to develop tailored solutions aligned with WBG mandates",
+      "Prepare projects' legal agreements based on agreed terms and ensure execution",
+      "Lead preparation of project concept notes, implementation work plans, budgets, and programme reports",
+      "Facilitate provision of sustainability expertise to clients",
+      "Participate in selection, screening, recruitment, and management of service providers and consultants",
+      "Provide quality assurance and ensure compliance with project delivery timelines, budgets, and contractual agreements",
+      "Build and maintain relationships with key stakeholders including IFC clients and government officials",
+      "Contribute to development of knowledge materials on SIA's services and sustainability topics",
+    ],
     requirements: [
-      "Relevant infrastructure, advisory, investment, project-development or transaction experience",
-      "Fluency in English and French",
+      "Master's degree in a relevant discipline (business, finance, social sciences, economics, sustainable development, engineering, or similar)",
+      "Minimum 5 years of relevant experience in sustainability, sustainable finance, or resilient infrastructure development",
+      "Solid understanding of the evolving ESG reporting landscape and sustainability indicators",
+      "Proven track record designing, implementing, and managing complex operations using innovative approaches",
+      "Strong analytical and critical thinking skills with sustainability expertise in private-sector development in Africa or emerging markets",
+      "Ability to develop and manage relations with diverse stakeholders in the private and public sectors",
+      "Excellent oral and written communication in English and French",
     ],
     applicationNotes:
-      "Closing date: 24 July 2026. Apply via the official World Bank Group careers portal.",
+      "Grade GF, 3-year term. Closing date: 24 July 2026. Apply via the official World Bank Group careers portal.",
     applyUrl:
       "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37501?c=worldbankgroup",
     sourceUrl:
@@ -2693,9 +2768,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior IDC investment role evaluating infrastructure funding applications and structuring transactions that support industrial and sector development.",
     aboutRole:
-      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Senior Dealmaker role sits within the Infrastructure department, leading the evaluation of funding applications, due diligence and structuring of infrastructure transactions across South Africa.",
+      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Senior Dealmaker role sits within the Infrastructure department at M Band, leading the evaluation and structuring of infrastructure funding applications on a permanent basis in Gauteng.",
+    responsibilities: [
+      "Evaluate and structure transactions with detailed application of IDC financing instruments",
+      "Ensure financial soundness of all credit submissions",
+      "Evaluate funding applications across financial, technical and marketing disciplines",
+      "Design and negotiate the financial and legal relationship between the client and IDC",
+      "Identify and mitigate transaction risks",
+      "Lead due diligence teams on high-value and complex transactions",
+      "Prepare well-written, motivated reports for Credit Committee presentation",
+      "Conduct peer reviews across all due diligence disciplines",
+      "Proactively originate and develop a pipeline of bankable transactions",
+      "Mentor and coach Business Analysts and Dealmakers",
+    ],
     requirements: [
-      "Senior experience evaluating funding applications, conducting due diligence and structuring infrastructure transactions",
+      "Relevant commercial or technical Honours degree",
+      "8-10 years of related work experience, of which 8 years in deal assessment and transaction closing",
+      "Competence declared across three due diligence disciplines: Marketing, Technical and Financial",
+      "Transaction leadership experience on complex deals",
+      "Experience in peer review and interpretation and analysis of financial statements",
+      "Knowledge of the market environment, technology landscape and financing instruments",
+      "Ability to understand and review models of proposed financial structures",
+    ],
+    niceToHave: [
+      "Knowledge of the infrastructure sector",
     ],
     applicationNotes:
       "Closing date: 28 July 2026. Reference: IDC00760. Apply via the IDC careers portal.",
@@ -2725,9 +2821,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior cross-border IDC role leading infrastructure and logistics transaction structuring and execution, with substantial activity outside South Africa.",
     aboutRole:
-      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Transaction Principal role covers infrastructure and logistics transactions across South Africa and the rest of Africa, requiring senior origination, structuring and execution capability.",
+      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Transaction Principal role (M Band, reference IDC00761) covers infrastructure and logistics transactions across South Africa and the African continent, requiring senior origination, structuring and execution capability with a proven track record of concluding deals across Africa.",
+    responsibilities: [
+      "Proactively originate suitable infrastructure and logistics transactions in target countries and sectors",
+      "Evaluate funding applications across financial, technical and marketing disciplines",
+      "Design and negotiate the financial and legal relationship between client and IDC",
+      "Identify and mitigate transaction risks",
+      "Lead due diligence teams on high-value and complex transactions",
+      "Prepare well-written, motivated reports for Credit Committee presentation",
+      "Conduct peer reviews across all due diligence disciplines",
+      "Unlock concessional finance and technical assistance for supported transactions",
+      "Crowd in funding through syndication and co-financing with other funders",
+      "Mentor and coach Business Analysts and Dealmakers",
+    ],
     requirements: [
-      "Senior transaction origination, structuring, due-diligence and execution experience",
+      "Relevant commercial or technical Honours degree or equivalent",
+      "8-10 years of related experience, of which 8 years in deal assessment and transaction closing",
+      "Demonstrable track record of originating, structuring and closing infrastructure and logistics transactions across the African continent",
+      "Competence declared across three due diligence disciplines: Marketing, Technical and Financial",
+      "Transaction leadership experience on complex deals",
+      "Experience in peer review and interpretation and analysis of financial statements",
+      "Knowledge of the market environment, technology landscape and financing instruments",
+      "Demonstrated ability to conclude deals on the continent; willingness to travel regularly throughout Africa",
+    ],
+    niceToHave: [
+      "French or Portuguese language skills",
     ],
     applicationNotes:
       "Closing date: 17 July 2026. Reference: IDC00761. Apply via the IDC careers portal.",
@@ -2757,9 +2875,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior IDC transaction role evaluating and structuring manufacturing investments that support industrial development, including cross-border transactions.",
     aboutRole:
-      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Transaction Principal role focuses on manufacturing sector investments, requiring senior-level financial analysis, structuring and execution capability across South Africa and the rest of Africa.",
+      "The Industrial Development Corporation (IDC) is a South African national development finance institution whose primary mandate is to promote economic development through industrial financing. This Transaction Principal role (M Band, reference IDC00762) focuses on manufacturing sector investments across South Africa and the African continent, requiring senior origination, structuring and execution capability with a proven track record in manufacturing transactions.",
+    responsibilities: [
+      "Proactively originate suitable manufacturing transactions in target countries and sectors",
+      "Evaluate funding applications across financial, technical and marketing disciplines",
+      "Design and negotiate the financial and legal relationship between client and IDC",
+      "Identify and mitigate transaction risks",
+      "Lead due diligence teams on high-value and complex transactions",
+      "Prepare well-written, motivated reports for Credit Committee presentation",
+      "Conduct peer reviews across all due diligence disciplines",
+      "Unlock concessional finance and technical assistance for supported transactions",
+      "Crowd in funding through syndication and co-financing with other funders",
+      "Mentor and coach Business Analysts and Dealmakers",
+    ],
     requirements: [
-      "Senior transaction origination, financial analysis, structuring, due-diligence and execution experience",
+      "Relevant commercial or technical Honours degree or equivalent",
+      "8-10 years of related experience, of which 8 years in deal assessment and transaction closing",
+      "Demonstrable track record of originating, structuring and closing manufacturing transactions across the African continent",
+      "Competence declared across three due diligence disciplines: Marketing, Technical and Financial",
+      "Transaction leadership experience on complex deals",
+      "Experience in peer review and interpretation and analysis of financial statements",
+      "Knowledge of the market environment, technology landscape and financing instruments",
+      "Demonstrated ability to conclude deals on the continent; willingness to travel regularly throughout Africa",
+    ],
+    niceToHave: [
+      "French or Portuguese language skills",
     ],
     applicationNotes:
       "Closing date: 17 July 2026. Reference: IDC00762. Apply via the IDC careers portal.",
@@ -2790,9 +2930,34 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Applied research role informing DBSA investment decisions, infrastructure-sector intelligence, climate finance and capital mobilisation across Africa.",
     aboutRole:
-      "The Development Bank of Southern Africa (DBSA) is a development finance institution focused on building Africa's prosperity through infrastructure investment. This Research Specialist role contributes to DBSA's knowledge and strategy function, producing applied research that directly informs investment decisions, infrastructure-sector analysis, climate finance strategy and capital mobilisation across South Africa, the SADC region and the rest of Africa.",
+      "The Development Bank of Southern Africa (DBSA) is a development finance institution focused on building Africa's prosperity through infrastructure investment. This Research Specialist role supports the Bank's Insights, Execution and Enablement (IEE) function, working across all business units. The role is responsible for designing and executing applied research that directly informs DBSA's investment decisions, infrastructure-sector strategy, climate finance positioning, and capital mobilisation across South Africa, SADC, and the rest of Africa.",
+    responsibilities: [
+      "Design, execute, and disseminate research aligned with corporate strategy across energy transition, municipal finance, regional integration, and climate resilience",
+      "Deliver research briefs, background papers, and Board enrichment inputs supporting the investment pipeline and sector strategies",
+      "Lead peer review and editing of research outputs for credibility and quality alignment",
+      "Apply econometric principles to infrastructure development across operational sectors",
+      "Conduct quantitative research on energy, transport, water, ICT, and social infrastructure using tools such as R, Stata, SPSS, or EViews",
+      "Generate sector intelligence on energy transition, infrastructure investment models, and regional economic integration",
+      "Develop research partnerships with DFIs, multilateral banks, think tanks, academia, and government agencies",
+      "Engage regulators and policy bodies to align research with national priorities",
+      "Design and deliver training programmes building analytical capacity across business units",
+    ],
     requirements: [
-      "Minimum 8 years of experience in applied research in economics, infrastructure, development finance or related fields",
+      "Master's degree in Economics, Development Studies, Public Policy, Social Sciences, or a closely related field",
+      "Minimum 8 years in applied research in economics, infrastructure, or development finance",
+      "Proven expertise designing and executing research agendas",
+      "Advanced proficiency in econometric tools and large, complex, multi-source datasets",
+      "Sound knowledge of infrastructure financing across key sectors",
+      "Strong policy analysis and translation capabilities",
+      "Track record producing high-quality research outputs including reports, policy briefs, and investment papers",
+      "Experience engaging senior stakeholders",
+    ],
+    niceToHave: [
+      "PhD or Doctoral qualification in Economics, Development Studies, or a related discipline",
+      "Direct DFI or MDB experience (AfDB, World Bank Group, NDB, or similar)",
+      "Municipal finance reform and local government infrastructure experience",
+      "Knowledge of infrastructure project lifecycle processes",
+      "Exposure to Sub-Saharan African and SADC regional research agendas",
     ],
     applicationNotes:
       "Closing date: 27 July 2026. Reference: DBS260709-2. Apply via the DBSA eRecruit careers portal.",
@@ -2802,7 +2967,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260709-2",
     sourceType: "Official ATS",
     applyButtonText: "Apply on official page",
-    lastChecked: "13 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -2824,9 +2989,28 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Investment analyst opportunity in PIC's Properties department focused on indirect investments within a major African institutional investor.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Investment Analyst role sits within the Properties department and focuses on indirect investments, offering exposure to private-market investment analysis at one of the continent's most significant institutional investors.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Investment Analyst role sits within the Properties department (Grade C3-D3, Pretoria) and focuses on indirect investments, offering exposure to commercial property investment analysis at one of the continent's most significant institutional investors.",
+    responsibilities: [
+      "Maximise portfolio value to meet or exceed benchmark returns",
+      "Develop financial models and investment analysis with scenario testing",
+      "Support fund manager decision-making with strategic recommendations",
+      "Analyse investment opportunities, legal information, and financial data",
+      "Compile and review annual client asset valuations",
+      "Track financial and market trends, risks, and investment products",
+      "Create investment reports and summaries",
+      "Conduct market research and risk assessments",
+    ],
     requirements: [
-      "Investment analysis experience relevant to indirect property or private-market investments",
+      "Bachelor's degree in Property Studies, Investment Management, Finance, Economics, or equivalent",
+      "2-4 years of experience in the commercial property investment industry",
+      "RE 05 Certificate (or to be obtained within 6 months of appointment)",
+      "Property management and market knowledge",
+      "Investment risk assessment knowledge",
+      "Financial analysis and interpretation expertise",
+      "Proficiency in property valuation techniques",
+    ],
+    niceToHave: [
+      "Familiarity with ESG trends in property investment",
     ],
     applicationNotes:
       "Closing date: 17 July 2026. Apply via the official PIC careers page.",
@@ -2855,9 +3039,28 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior private-credit origination and execution role covering leveraged finance, structured credit, direct lending and infrastructure, primarily in South Africa with broader African exposure.",
     aboutRole:
-      "Ninety One is an independent, active investment manager with a strong focus on emerging markets and Africa. This Investment Specialist role sits within the private credit team and covers leveraged finance, structured credit, direct lending and infrastructure transactions, primarily in South Africa with broader African market exposure.",
+      "Ninety One is an independent, active investment manager with a strong focus on emerging markets and Africa. This Investment Specialist role sits within the EM Alternative Credit (EMAC) platform, one of Ninety One's highest-growth investment businesses. The team deploys private credit across South Africa, the rest of Africa, broader emerging markets, and select developed market opportunities, investing across the capital structure in leveraged finance, infrastructure debt, direct lending, high yield, and structured credit. Investment professionals remain embedded in transactions from initial origination through close and ongoing portfolio management.",
+    responsibilities: [
+      "Own end-to-end origination of private credit transactions across sector coverage, with a minimum 80% focus on the South African market and selective cross-border activity",
+      "Independently source, screen, and progress opportunities from first contact through investment committee approval",
+      "Build and maintain relationships with deal-sourcing counterparties including private equity sponsors, corporates, banks, intermediaries, and development finance institutions",
+      "Lead deal structuring, credit analysis, and transaction execution across leveraged finance, structured finance, and direct lending in consumer, services, real estate, industrials, and infrastructure sectors",
+      "Serve as deal lead and primary investment professional from origination through credit committee, documentation, and close",
+      "Prepare and present investment papers, credit committee materials, and portfolio monitoring reports to internal governance forums",
+      "Contribute to platform development including fund strategy, investor reporting, and sector views",
+      "Mentor and develop junior investment team members",
+    ],
     requirements: [
-      "7-10 years of experience in leveraged finance, structured finance, principal credit investing or a closely related field",
+      "7-10 years of relevant experience in leveraged finance, structured finance, principal credit investing, or a closely related discipline",
+      "Demonstrable track record of originating and closing privately negotiated credit transactions with genuinely portable relationships",
+      "Deep sector expertise across at least two of: consumer and retail, business services, real estate, industrials, or core infrastructure",
+      "Strong credit structuring skills including capital structure design, security packages, financial covenant setting, and relative value assessment",
+      "Experience working on South African transactions with understanding of local market dynamics and regulatory frameworks",
+      "Comfort operating across the full deal cycle from teaser review through documentation oversight",
+    ],
+    niceToHave: [
+      "CFA, CA(SA), MBA, or equivalent professional qualification",
+      "Strong undergraduate foundation in finance, economics, or law",
     ],
     applicationNotes:
       "Apply via the Ninety One LinkedIn job posting.",
@@ -2867,7 +3070,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://za.linkedin.com/jobs/view/investment-specialist-%E2%80%93-private-credit-at-ninety-one-4430624479",
     sourceType: "LinkedIn company post",
     applyButtonText: "Apply via employer posting",
-    lastChecked: "13 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -2887,21 +3090,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English"],
     deadlineDisplay: "30 Sep 2026",
     summary:
-      "Two-year full-time investment programme with rotations across sovereign debt, emerging-market corporate debt, private credit and equities.",
+      "Two-year full-time investment programme with rotations across sovereign debt, emerging-market corporate debt, private credit and equities, designed for career changers and non-traditional backgrounds.",
     aboutRole:
-      "Ninety One is an independent, active investment manager with a strong focus on emerging markets and Africa. The Investment Acceleration Programme (IAP) is designed for recent graduates and career changers seeking to transition into asset management. Participants rotate across investment teams covering sovereign debt, emerging-market corporate debt, private credit and equities over a two-year period.",
+      "Ninety One is an independent, active investment manager with a strong focus on emerging markets and Africa. The Investment Acceleration Programme (IAP) is a two-year structured programme designed to launch a new career in global investing. It is built to create a diverse pipeline of investment professionals from non-traditional backgrounds. Participants gain hands-on exposure across multiple investment teams, building a broad understanding of global markets while developing analytical rigour and investment judgement. The programme includes CFA Level 1 study support and deep immersion in Ninety One's long-term investment culture.",
+    responsibilities: [
+      "Rotate across several investment teams over two years, including sovereign debt, emerging-market corporate debt, private credit, and equities",
+      "Develop investment expertise, analytical rigour, and investment judgement through hands-on deal and portfolio work",
+      "Build a broad understanding of global markets and Ninety One's diverse investing approaches",
+      "Study toward CFA Level 1 with company support",
+    ],
     requirements: [
-      "Recent graduates or career changers; typically 0-4 years of experience depending on background",
+      "Chartered Accountant (CA) qualification; OR engineering background combined with an MBA, CFA, or Finance Masters; OR non-technical degree (e.g. law, political science) combined with an MBA, CFA, or Finance Masters; OR recent honours graduate with zero to four years of experience",
+      "Zero to approximately three years of post-qualification professional experience",
+      "Demonstrated passion for investing and markets",
+      "Strong academic performance and intellectual curiosity",
+      "Initiative, ambition, and strong ethical character",
     ],
     applicationNotes:
-      "Applications close 30 September 2026. Apply via the official Ninety One programme page.",
+      "Applications close 30 September 2026. The programme is designed for career changers and non-traditional backgrounds. Apply via the official Ninety One programme page.",
     applyUrl:
       "https://externalcareers.ninetyone.com/graduates/details.html?LG=UK&id=PLYFK026203F3VBQBLOV779KT&languageSelect=UK&mask=ninetyone&nPostingId=1474&nPostingTargetId=4193",
     sourceUrl:
       "https://ninetyone.com/en/south-africa/about-us/career-change-unlocking-your-investment-potential",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "13 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -2955,19 +3168,38 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior growth-equity investment role leading origination, due diligence, structuring, execution, portfolio value creation and exit work across Aruwa's West African investment strategy.",
     aboutRole:
-      "Aruwa Capital Management is a West Africa-focused growth equity and venture firm investing in female-founded and female-led businesses. This Principal role sits at the heart of the investment team, leading the full private equity lifecycle from origination through to exit across the firm's West African portfolio.",
+      "Aruwa Capital Management is a Lagos-based growth equity impact fund focused on investing in rapidly growing, profitable companies that provide essential goods and services to women or meaningfully engage women across their workforce and value chain. Founded on the conviction that addressing gender imbalance among capital allocators in Africa can unlock underserved economic segments, Aruwa aims to close gender economic gaps while delivering strong financial returns. As one of the few woman-owned and woman-led private equity funds on the continent, the firm is led by Founder Adesuwa Okunbo Rhodes and combines international best-practice investment expertise with deep local networks and on-the-ground presence. The Principal plays a key role in sourcing, evaluating, structuring, and executing growth equity investments aligned with Aruwa's impact and gender-focused mandate. This is a full-time, on-site role in Lagos.",
+    responsibilities: [
+      "Originate deal flow and build relationships with entrepreneurs and intermediaries",
+      "Lead financial and commercial due diligence and develop investment theses and valuation models",
+      "Oversee transaction execution, including negotiating terms, coordinating advisors, and preparing investment committee materials",
+      "Actively support portfolio companies through strategic guidance, performance monitoring, and value-creation initiatives",
+      "Contribute to impact measurement, reporting, and fundraising activities",
+      "Represent Aruwa at industry events and stakeholder engagements across the local and regional ecosystem",
+    ],
     requirements: [
-      "Minimum 10 years of private equity, growth equity, venture capital or principal-investing experience, with end-to-end deal execution",
+      "10+ years of private equity, growth equity, venture capital, or principal-investing experience",
+      "Bachelor's degree in finance, economics, or accounting",
+      "Demonstrated end-to-end deal execution experience: origination, due diligence, closing, portfolio value creation, and exits",
+      "Significant experience in complex financial modelling, company valuations, and deal completion",
+      "Strong knowledge of African markets and networks (founders, investors, sector experts)",
+      "Experience engaging with boards and governance structures; board member experience preferred",
+      "Strong negotiation skills and stakeholder management across founders, co-investors, advisors, and LPs",
+      "Already based in Lagos with local citizenship or work authorisation",
+    ],
+    niceToHave: [
+      "Graduate business degree, Chartered Accountant (CA), CFA, and/or MBA",
+      "Sector exposure in manufacturing, clean energy, financial services, healthcare, or agriprocessing",
     ],
     applicationNotes:
-      "Apply via the Aruwa Capital Management LinkedIn job posting.",
+      "This is a full-time, on-site role in Lagos. Genuine commitment to working with early-stage and growth companies and alignment with Aruwa's gender-lens investment mission are essential. Apply via the Aruwa Capital Management LinkedIn job posting.",
     applyUrl:
       "https://ng.linkedin.com/jobs/view/principal-at-aruwa-capital-management-4439313963",
     sourceUrl:
       "https://ng.linkedin.com/jobs/view/principal-at-aruwa-capital-management-4439313963",
     sourceType: "LinkedIn company post",
     applyButtonText: "Apply on LinkedIn",
-    lastChecked: "14 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -2989,10 +3221,26 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Infrastructure portfolio role supporting IFRS and IPEV valuations, performance analysis, investment monitoring, reporting and strategic decision-making across Africa50's portfolio.",
     aboutRole:
-      "Africa50 is a pan-African infrastructure investment platform dedicated to closing the infrastructure gap through private investment in African projects. This Portfolio Performance Analyst role (open at Analyst and Senior Analyst level) is based in Casablanca and supports the portfolio team with IFRS and IPEV valuations, investment performance analysis, monitoring, reporting and strategic decision-making across Africa50's active portfolio.",
+      "Africa50 is a pan-African infrastructure investment platform dedicated to closing the infrastructure gap through private investment in African projects. This role sits within the Finance department, reporting to the Portfolio Performance Manager and supporting the broader Portfolio team. The position is open at both Analyst and Senior Analyst level (4-7 years of experience) and focuses on valuation, portfolio monitoring, and performance reporting across Africa50's active investments.",
+    responsibilities: [
+      "Perform and review valuations using DCF, market multiples, transaction approach, and other models",
+      "Compile and review documentation for comparable company assumptions and evaluate cost of capital using CAPM",
+      "Analyse value creation drivers contributing to valuation changes and manage databases for portfolio financials and KPIs",
+      "Monitor and review financial and operational performance of investments",
+      "Prepare periodic valuation and performance reporting for Management and the Board",
+      "Support internal and external audit processes",
+      "Analyse portfolio trends, investment return drivers, and macroeconomic factors affecting investments",
+      "Assist in selecting tools and technology for data management and reporting",
+    ],
     requirements: [
-      "Relevant experience in valuations, financial analysis, portfolio monitoring, investment reporting or infrastructure investment",
-      "English proficiency required; French valued",
+      "4-7 years of relevant experience in private equity, transaction services, valuations, financial analysis, or a related role",
+      "University degree in Finance, Business Administration, or a related field",
+      "Demonstrated academic excellence",
+    ],
+    niceToHave: [
+      "Experience in emerging markets, with Africa preferred",
+      "Knowledge of business intelligence solutions such as Capital IQ or Bloomberg",
+      "Living experience in emerging countries",
     ],
     applicationNotes:
       "Apply via the official Africa50 careers page. Only selected candidates will be contacted.",
@@ -3002,7 +3250,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "14 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -3019,15 +3267,32 @@ export const OPPORTUNITIES: Opportunity[] = [
     country: "Morocco",
     region: "Pan-African",
     locationDisplay: "Casablanca, Morocco",
-    language: "English; French valued",
+    language: "English; French",
     languageTags: ["English", "French"],
     summary:
       "Internship supporting infrastructure portfolio monitoring, investment reporting, industry research, investment-data organisation and financial analysis.",
     aboutRole:
-      "Africa50 is a pan-African infrastructure investment platform dedicated to closing the infrastructure gap through private investment in African projects. This Portfolio Performance Intern role is based in Casablanca and offers direct exposure to infrastructure investment and portfolio management, supporting the team with monitoring, reporting, industry research, investment-data organisation and financial analysis.",
+      "Africa50 is a pan-African infrastructure investment platform dedicated to closing the infrastructure gap through private investment in African projects. This internship sits within the Finance department, reporting to the Portfolio Performance Manager and supporting the broader Portfolio team. The role offers hands-on exposure to infrastructure investment monitoring, valuation support, and performance reporting across Africa50's active portfolio.",
+    responsibilities: [
+      "Collect, consolidate, validate, and maintain financial, operational, and investment data for portfolio monitoring, valuation, and reporting",
+      "Support updates to portfolio databases, KPI trackers, dashboards, and reporting templates",
+      "Research industry, market, and macroeconomic developments affecting Africa50's portfolio",
+      "Prepare portfolio reports and presentation materials for Management, Investment Committee, and the Board",
+      "Follow up with Investment, Finance, and other teams on information requests and data gaps",
+      "Contribute to ad hoc portfolio analysis and process improvements",
+    ],
     requirements: [
-      "Current bachelor's or master's student or recent graduate in finance, economics, accounting, engineering or a related discipline",
-      "English proficiency required; French valued",
+      "Currently pursuing a bachelor's or master's degree in Finance, Economics, Accounting, Business Administration, Engineering, or a related discipline",
+      "Strong academic record with demonstrated interest in investments, corporate finance, or infrastructure",
+      "Proficiency in Microsoft Office, particularly Excel and PowerPoint",
+      "Strong analytical and numerical abilities with excellent attention to detail",
+      "Strong research, written communication, and presentation skills",
+      "Proficiency in English and French (written and verbal)",
+      "Ability to work accurately under pressure and meet deadlines",
+    ],
+    niceToHave: [
+      "Previous internship, coursework, or project work in private equity, investment banking, transaction advisory, asset management, or consulting",
+      "Financial modelling experience or familiarity with data visualisation and business intelligence tools",
     ],
     applicationNotes:
       "Apply via the official Africa50 careers page. Only selected candidates will be contacted.",
@@ -3037,7 +3302,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "14 Jul 2026",
+    lastChecked: "15 Jul 2026",
     status: "Active",
   },
   {
@@ -3058,10 +3323,24 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Twelve-month renewable consulting role supporting ASSA's continental strategy, policy research, strategic partnerships, institutional growth and business development.",
     aboutRole:
-      "Africa Finance Corporation (AFC) is an investment-grade, multilateral finance institution and infrastructure solutions provider dedicated to Africa's economic development. This consulting engagement supports the Africa Social Security Association (ASSA) on continental strategy, policy research, strategic partnerships and business development. The role is twelve months and renewable.",
+      "Africa Finance Corporation (AFC) is an investment-grade, multilateral finance institution and infrastructure solutions provider dedicated to Africa's economic development. AFC is partnering with the Africa Social Security Association (ASSA) — the continental body driving Africa's social protection agenda — to recruit a Strategy, Research and Business Development Consultant. ASSA works across African Union member states to advance social security and pension systems continent-wide. The engagement is twelve months and renewable.",
+    responsibilities: [
+      "Lead the development, review and implementation of ASSA's multi-year strategic plan in alignment with the African Union's Agenda 2063",
+      "Support the development of a continental regulatory mapping of social security and pension systems in Africa",
+      "Lead the development of ASSA's flagship reports, policy briefs and continental benchmarking tools, including the Africa Social Security Index",
+      "Build and manage high-value strategic partnerships with RECs, African Union institutions, UN agencies, the World Bank, ILO and ISSA",
+      "Contribute to stakeholder coordination for the ASSA Annual Summit 2026 in Abidjan",
+      "Develop and execute a business development strategy to grow ASSA's membership base and diversify revenue streams",
+      "Develop compelling concept notes, proposals and grant applications",
+      "Work with the communications team to position ASSA as a continental thought leader",
+    ],
     requirements: [
-      "Senior strategy, policy research, partnerships or business-development experience relevant to African institutions, social protection or pensions",
-      "Fluency in English and French; Arabic or Swahili advantageous",
+      "Proficiency in written and spoken English (mandatory)",
+      "Fluency in French (required)",
+      "Senior experience in strategy, policy research, partnerships or business development relevant to African institutions, social protection or pensions",
+    ],
+    niceToHave: [
+      "Knowledge of Arabic and/or Swahili",
     ],
     applicationNotes:
       "Closing date: 21 July 2026. Apply by email to careers@africafc.org with subject line CSRSS6126.",
@@ -3092,9 +3371,27 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior multi-manager role supporting global manager selection, portfolio construction, risk-and-return analysis, monitoring and investment recommendations.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Assistant Portfolio Manager role sits within the Multi-Management Public Markets team and focuses on global manager selection, portfolio construction and risk-and-return analysis.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Assistant Portfolio Manager role (Grade E1-E2, reference APMG070726) sits within the Multi-Management Public Markets team, assisting in manager selection and portfolio construction across allocated asset classes while providing a high level of support in the monitoring of external managers.",
+    responsibilities: [
+      "Assist in manager selection and portfolio construction across allocated asset classes",
+      "Monitor financial market developments and their impact on client portfolios",
+      "Analyse existing managers using qualitative and quantitative approaches",
+      "Produce risk and return analysis of managers against peer groups",
+      "Generate reports for clients and internal committees including the Portfolio Management Committee and Investment Committee",
+      "Conduct quantitative analysis relative to benchmarks and peer groups",
+      "Research and evaluate investment strategies, ideas, and concepts",
+    ],
     requirements: [
-      "At least 10 years of post-qualification investment experience, including multi-manager funds and global strategies",
+      "B Com (Hons) or BSc (Hons) in Financial Management",
+      "10+ years of post-qualification investment experience",
+      "Minimum 5 years in multi-manager funds and minimum 5 years in global strategies",
+      "Excellent quantitative skills including Excel and risk tools such as MSCI Barra or Bloomberg",
+      "Strong ability to research, interpret, and communicate investment recommendations",
+      "Solid knowledge of investment managers' disciplines and portfolio characteristics",
+    ],
+    niceToHave: [
+      "Masters, CFA, or CA(SA)",
+      "FAIS representative status",
     ],
     applicationNotes:
       "Closing date: 28 July 2026. Reference: APMG070726. Apply via the official application form.",
@@ -3125,12 +3422,32 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Unlisted-investment role integrating ESG factors into investment decisions, due diligence, governance, compliance and portfolio monitoring.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. Two ESG Associate positions are available in the Unlisted Investments team, focusing on integrating ESG factors into the investment process, due diligence, governance, compliance and portfolio monitoring.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. Two ESG Associate positions are available (Grade D1-D5, reference ESGAU130726) in the Unlisted Investments team, focused on ensuring that ESG principles and plans are adopted throughout the investment decision-making process.",
+    responsibilities: [
+      "Develop and implement ESG strategy within the unlisted investments team",
+      "Conduct pre- and post-transaction ESG due diligence",
+      "Monitor ESG plans and portfolio issues actively",
+      "Report ESG performance to stakeholders",
+      "Train PIC staff and investee companies on ESG compliance",
+      "Supervise ESG Analysts",
+      "Conduct periodic impact analysis",
+      "Engage with companies on ESG-related concerns",
+      "Contribute to ESG thought leadership research and opinion pieces",
+    ],
     requirements: [
-      "Relevant honours degree and substantial ESG experience, including integration into investment due diligence and portfolio monitoring",
+      "Relevant Honours degree",
+      "5+ years of experience specifically in an ESG role",
+      "Understanding of environmental and social legislative frameworks",
+      "Corporate governance knowledge",
+      "Investments or financing-related project experience",
+      "Ability to communicate complex ESG issues clearly to diverse stakeholders",
+    ],
+    niceToHave: [
+      "MBA or MBL",
+      "Institute of Directors (IoD) or Chartered Institute of Secretaries (CISA) membership",
     ],
     applicationNotes:
-      "Closing date: 27 July 2026. Reference: ESGAU130726. Apply via the official application form.",
+      "Closing date: 27 July 2026. Reference: ESGAU130726. Two posts available. Apply via the official application form.",
     applyUrl:
       "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=XrL9BoynGEijBFYgB_12Gxlff2oYRUVOhT7hR68mGYJUNzIwOFA2SzQwVU81RVlGWkZCWjJRVDJIWi4u",
     sourceUrl: "https://www.pic.gov.za/careers",
@@ -3158,9 +3475,29 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior real-estate investment role developing and executing a pipeline of property developments, acquisitions, disposals, debt, equity and indirect investments.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Fund Principal role in the Property Deals and Transactions team leads the development and execution of a pipeline of property deals including developments, acquisitions, disposals, debt, equity and indirect investments.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Fund Principal role (Grade E4-F1, reference FP001) sits in the Property Deals and Transactions team and is responsible for developing a pipeline of property deals and delivering approved outputs across equity, debt, acquisitions, disposals and developments.",
+    responsibilities: [
+      "Generate new property investment opportunities for PIC Properties",
+      "Evaluate value-unlocking opportunities in the existing portfolio",
+      "Oversee deal structuring across equity and debt instruments",
+      "Produce committee motivation reports",
+      "Execute asset sales and acquisitions per portfolio objectives",
+      "Close value-accretive deals aligned with investment mandates",
+      "Develop stakeholder and industry networks",
+      "Implement pipeline management and reporting systems",
+      "Research market opportunities for competitive advantage",
+    ],
     requirements: [
-      "Approximately 10-12 years of property investment and deal experience, including senior management responsibility",
+      "Honours degree in Finance, Property, or Real Estate",
+      "10-12 years of investment and deal experience specifically in property",
+      "5 years at Senior Management level with direct reports",
+      "RE 05 Certificate (or to be obtained within 6 months)",
+      "Expertise in deal structuring across equity and debt instruments",
+      "Cross-sectorial real estate experience and financial modelling ability",
+    ],
+    niceToHave: [
+      "MSc in Real Estate, MBA, CA(SA), or CFA",
+      "Certification or Diploma in Property Law and Sales",
     ],
     applicationNotes:
       "Closing date: 24 July 2026. Reference: FP001. Apply by email to Recruitment4@pic.gov.za with subject FP001.",
@@ -3190,9 +3527,26 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior property-investment and business-development role focused on fund partners, strategic opportunities, commercial growth and development initiatives.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This National Development Manager role focuses on property investment business development, including managing fund partners, identifying strategic opportunities, and driving commercial growth and development initiatives.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This National Development Manager role (Grade E1-E3, reference NDVM001) focuses exclusively on growing commercial interest with fund partners and seeking strategic opportunities across PIC's property development portfolio.",
+    responsibilities: [
+      "Brief professional teams on project concepts",
+      "Conduct risk and due diligence procedures",
+      "Present projects to stakeholders and JV partners",
+      "Analyse opportunities for financial returns",
+      "Conduct market research informing investment decisions",
+      "Manage all aspects of projects and associated risk factors",
+      "Develop staff and oversee project development activities",
+    ],
     requirements: [
-      "Senior property, real-estate finance or development experience, including commercial strategy, due diligence and stakeholder management",
+      "Honours Degree in Quantity Surveying, Civil Engineering, BSc Building, Finance, or Property",
+      "8-10+ years of post-professional registration experience in real estate investment or finance",
+      "3 years at Senior Management level with direct reports",
+      "RE 05 Certificate (or to be obtained within 6 months)",
+      "Demonstrated project management and construction development expertise",
+      "Ability to manage stakeholders including JV partners, professional teams, and regulators",
+    ],
+    niceToHave: [
+      "Masters in Built Environment, Development Studies, or Business Administration",
     ],
     applicationNotes:
       "Closing date: 24 July 2026. Reference: NDVM001. Apply by email to Recruitment4@pic.gov.za with subject NDVM001.",
@@ -3222,9 +3576,25 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Senior economics and investment-strategy role producing macroeconomic research, financial-market forecasts and insights for asset allocation and portfolio construction.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Principal Economist role leads macroeconomic research and financial-market analysis, producing forecasts and insights that inform PIC's asset allocation decisions and portfolio construction across global and African markets.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Principal Economist role (Grade E1-E2, reference PE001) provides intellectual leadership on all aspects of macroeconomic research, financial markets analysis and investment strategy, advising investment teams and managing the economist function.",
+    responsibilities: [
+      "Conduct macroeconomic analysis and economic outlook across asset classes",
+      "Develop forecasting and econometric models",
+      "Provide economic input into investment strategy formulation",
+      "Conduct empirical analysis and thematic research",
+      "Generate thought leadership pieces on economics and financial markets",
+      "Advise investment teams on asset allocation strategies",
+      "Lead and manage the economist team",
+    ],
     requirements: [
-      "Approximately 8-10 years of relevant economics, investment-research or financial-markets experience, including senior leadership",
+      "Masters degree in Econometrics, Economics, Finance and Investments, or equivalent",
+      "8-10 years of relevant experience in macroeconomic research or financial markets",
+      "3 years at senior manager level with team leadership experience",
+      "Strong financial markets forecasting and investment strategy formulation capability",
+      "Expertise in econometrics, macroeconomic modelling, and portfolio construction",
+    ],
+    niceToHave: [
+      "CFA or MBA",
     ],
     applicationNotes:
       "Closing date: 23 July 2026. Reference: PE001. Apply by email to Recruitment4@pic.gov.za with subject PE001.",
@@ -3254,9 +3624,26 @@ export const OPPORTUNITIES: Opportunity[] = [
     summary:
       "Private-equity leadership role supporting fund strategy and leading investment screening, due diligence, structuring, execution, portfolio value creation and exits.",
     aboutRole:
-      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Associate Fund Principal role in the Private Equity team supports the fund's investment strategy and leads deal screening, due diligence, transaction structuring, execution, portfolio value creation and exits across South Africa and Africa.",
+      "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Associate Fund Principal role (Grade E1-E4, reference APL017) in the Private Equity team assists the Fund Principal in providing leadership and strategic vision for the fund investment business, covering the full investment cycle from origination through to exit.",
+    responsibilities: [
+      "Maximise committed funds for investment",
+      "Implement investment strategy and philosophy",
+      "Identify investment partners and opportunities proactively",
+      "Execute the complete investment process from screening through to exit",
+      "Develop value enhancement strategies at investee companies",
+      "Manage and enforce ESG discipline within the portfolio",
+      "Conduct industry and sectoral research",
+      "Facilitate contracting and disbursement processes",
+      "Manage the portfolio and negotiate exits",
+      "Ensure risk management, regulatory compliance, and reporting",
+    ],
     requirements: [
-      "Approximately 5-8 years of relevant investment experience, with transaction execution, financial analysis, due diligence and portfolio-management exposure",
+      "Bachelor's degree in Finance, Engineering, or a relevant Commerce discipline",
+      "5-8 years of investment experience",
+      "Postgraduate qualification (MBA, M.Com, MFI, MSc, CA, or CFA) - completed or in progress",
+      "FAIS Representative registration",
+      "Advanced financial modelling skills",
+      "Deal structuring, negotiation, and valuation expertise",
     ],
     applicationNotes:
       "Closing date: 20 July 2026. Reference: APL017. Apply by email to Recruitment1@pic.gov.za with subject APL017.",
