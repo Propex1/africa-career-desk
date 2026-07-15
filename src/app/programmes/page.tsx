@@ -35,8 +35,7 @@ export default function ProgrammesPage() {
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[640px]">
         Explore Africa-focused graduate programmes, fellowships, internships and
         early-career pathways in finance, investment, development finance,
-        infrastructure and strategy. Selective multi-year programmes from leading
-        investors and development finance institutions.
+        infrastructure and strategy.
       </p>
 
       <div className="mt-[42px] flex flex-col gap-[14px]">

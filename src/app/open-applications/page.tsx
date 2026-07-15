@@ -35,9 +35,7 @@ export default function OpenApplicationsPage() {
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[660px]">
         Discover official open application channels and talent pipelines for
         Africa-focused roles in private equity, infrastructure, DFI, climate, VC
-        and strategy. Selected investors and institutions that welcome speculative
-        applications from strong candidates, even when no specific role is
-        advertised.
+        and strategy.
       </p>
 
       <div className="mt-[42px] grid grid-cols-1 md:grid-cols-2 gap-4">
