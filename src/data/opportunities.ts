@@ -2408,37 +2408,6 @@ export const OPPORTUNITIES: Opportunity[] = [
     status: "Active",
   },
   {
-    id: "ACD-0134",
-    slug: "investment-analyst-associate-aiim-cape-town",
-    title: "Investment Analyst/Associate",
-    company: "African Infrastructure Investment Managers (AIIM)",
-    companyInitials: "AI",
-    boardSection: "Jobs",
-    roleType: "Private Equity / Infrastructure",
-    experienceBucket: "Associate",
-    city: "Cape Town",
-    country: "South Africa",
-    region: "Pan-African",
-    locationDisplay: "Cape Town, South Africa",
-    language: "English",
-    languageTags: ["English"],
-    summary:
-      "Pan-African infrastructure-investment role covering financial modelling, valuation, due diligence, transaction execution, origination, asset management and investor reporting.",
-    requirements: [
-      "3-6 years in investment banking (M&A, corporate finance or project finance), private equity or a Big Four accounting firm",
-    ],
-    applicationNotes:
-      "Apply via the Old Mutual / AIIM Workday careers portal.",
-    applyUrl:
-      "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Cape-Town/Investment-Analyst-Associate_JR-81426",
-    sourceUrl:
-      "https://za.linkedin.com/jobs/view/investment-analyst-associate-at-old-mutual-south-africa-4440064757",
-    sourceType: "Official ATS",
-    applyButtonText: "Apply on official page",
-    lastChecked: "27 Jul 2026",
-    status: "Active",
-  },
-  {
     id: "ACD-0135",
     slug: "finance-associate-world-bank-group-cairo-kigali-multiple-cities",
     title: "Finance Associate",
