@@ -2045,8 +2045,36 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "5 Aug 2026",
     summary:
       "Regional IFC leadership role developing upstream and advisory initiatives that create investable manufacturing and services opportunities across Africa.",
+    aboutRole:
+      "IFC is the largest global development institution focused on the private sector in emerging markets, operating in more than 100 countries. The Upstream & Advisory Manager for Manufacturing & Services (M&S) in Africa leads IFC's efforts to enable investment opportunities, enhance investment outcomes and deliver development impact through upstream and advisory interventions across M&S sectors. The Manager serves on the Africa M&S Management Team, working closely with Regional Industry Managers, WBG Country Representatives and Global Industry teams to formulate market creation strategies, scale development impact and support the generation of investment opportunities.",
+    responsibilities: [
+      "Lead and manage the Upstream & Advisory unit, ensuring high performance, collaboration and alignment with IFC's strategic priorities",
+      "Mentor staff and promote professional growth, mobility and continued learning",
+      "Formulate and implement upstream and advisory strategies for M&S sectors in Africa in coordination with regional and global teams",
+      "Lead market creation efforts that expand private sector participation and unlock new investment opportunities",
+      "Identify and structure upstream opportunities with strong potential to mobilize co-investors, sponsors, donors, DFIs and private capital",
+      "Advance strategic regional initiatives in tourism, gas-for-power, manufacturing competitiveness and value chain development",
+      "Enable investment opportunities by incubating high-impact projects, developing new markets and preparing clients for investment",
+      "Work with Regional Industry Managers and investment teams to translate upstream engagements into investable opportunities with clear pathways for capital mobilization",
+      "Build and maintain strategic relationships with governments, regulators, sponsors, investors and development partners",
+      "Convene stakeholders around priority sector platforms and upstream initiatives to unlock investment and scale development impact",
+      "Identify game-changing trends, technologies and business models, and serve as a bridge between Africa operations and IFC's global knowledge platform",
+    ],
     requirements: [
-      "12+ years of relevant experience, including 5+ years in a managerial or team-lead capacity",
+      "Master's degree or equivalent in Business, Finance, Economics, Engineering, International Relations or a related field",
+      "Minimum 12 years of relevant professional experience, including at least 5 years in a managerial or lead capacity",
+      "Deep understanding of Manufacturing & Services sectors and their role in driving jobs, productivity and economic transformation",
+      "Demonstrated track record leading upstream, advisory and/or investment operations",
+      "Strong commercial judgment and understanding of bankability, sponsor quality, scalability and private sector business models",
+      "Proven ability to translate upstream and advisory engagements into investment opportunities and measurable development outcomes",
+      "Demonstrated ability to mobilize partners, sponsors, donors, DFIs or private capital around market creation initiatives",
+      "Strong stakeholder management and partnership-building capabilities",
+      "Excellent people management, communication and leadership skills",
+      "Strong commitment to diversity, collaboration and talent development",
+    ],
+    niceToHave: [
+      "Investment, transaction, corporate finance, project finance or private equity experience",
+      "French language proficiency",
     ],
     applicationNotes:
       "Closing date: 5 August 2026. Apply via the World Bank Group careers portal.",
@@ -2078,8 +2106,29 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "2 Aug 2026",
     summary:
       "Infrastructure-advisory role originating and delivering sustainable infrastructure engagements and investment opportunities in West Africa.",
+    aboutRole:
+      "IFC's Sustainable Infrastructure Advisory (SIA) team delivers sustainability-related services on climate, digital inclusion and social inclusion to IFC investment clients, helping build stakeholder buy-in and resilient infrastructure across energy, mining, transport and waste management sectors. The Operations Officer will support the growth of IFC's infrastructure investment business in West Africa, working across the full project lifecycle from business development through to portfolio management.",
+    responsibilities: [
+      "Lead or contribute to sustainability risk and opportunity assessments for infrastructure clients",
+      "Design and develop proposals and project pitches for IFC advisory engagements",
+      "Work closely with investment, ESG, legal and other teams to develop tailored sustainability solutions",
+      "Prepare project legal agreements and concept notes based on agreed client terms",
+      "Lead project implementation including work plans, budgets, field missions and quality assurance",
+      "Manage service providers and consultants to ensure delivery standards and compliance",
+      "Build and maintain relationships with key stakeholders including government, private sector and development partners",
+      "Develop community engagement and stakeholder management strategies",
+      "Lead development of knowledge materials, good practices and peer review contributions",
+      "Participate in relevant development forums and industry events",
+    ],
     requirements: [
-      "8+ years of relevant infrastructure, transaction-advisory, investment or business-development experience",
+      "Master's degree in business, finance, engineering, sustainable development or a related discipline",
+      "8+ years of relevant experience in private infrastructure sustainability, sustainable finance, resilient infrastructure development or climate-smart investment services",
+      "Solid understanding of the SDGs, ESG principles and sustainability reporting landscape",
+      "Proven track record designing and managing complex advisory operations",
+      "Ability to develop and manage diverse stakeholder relationships",
+      "Familiarity with IFC operations, investments and environmental and social performance standards",
+      "Fluent in English and French, written and verbal",
+      "Strong analytical and critical thinking skills with private sector development expertise in Africa",
     ],
     applicationNotes:
       "Closing date: 2 August 2026. Apply via the World Bank Group careers portal.",
@@ -2109,6 +2158,17 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "25 Aug 2026",
     summary:
       "Junior investment consultancy supporting pipeline development, transaction analysis and implementation under the AfDB's Lusophone Compact Initiative.",
+    aboutRole:
+      "The Lusophone Compact Initiative was established to accelerate private sector development across Portuguese-speaking African countries (PALOPs), including Angola, Cabo Verde, Guinea-Bissau, Mozambique and Sao Tome and Principe. The Junior Investment Consultant will support the Compact Secretariat in implementing a three-year programme of investment, risk mitigation and technical assistance activities, helping to develop a viable pipeline of transactions in these markets.",
+    responsibilities: [
+      "Help identify business opportunities and support non-sovereign operations teams in advancing transactions",
+      "Contribute to active management of the Lusophone Compact pipeline and portfolio",
+      "Develop a pipeline of viable investments and technical assistance opportunities in PALOPs",
+      "Assess investment opportunities using the Bank's evaluation tools, including the Lusophone Compact Guarantee",
+      "Conduct analytical work on financial and economic viability, development impact and structural economic contribution",
+      "Advise on appropriate financial structures for transactions across Lusophone compact countries",
+      "Participate in negotiations and perform due diligence on transactions and sponsors",
+    ],
     requirements: [
       "Early-career investment, finance or transaction-analysis experience relevant to pipeline development and investment support",
     ],
@@ -2140,6 +2200,13 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "2 Aug 2026",
     summary:
       "Regional consultancy supporting climate-change, green-growth and green-finance work across North Africa for the AfDB.",
+    aboutRole:
+      "The African Development Bank's Power, Energy, Climate Change and Green Growth Department (PECG) implements the Bank's Climate Change Action Plan and Green Growth Strategic Framework. The Regional Climate Change and Green Finance Consultant will support implementation of these frameworks and their related policies, procedures and guidelines into the Bank's operations for both private and public sectors in the North Africa Region (RDGN).",
+    responsibilities: [
+      "Support implementation of the Climate Change Action Plan and Green Growth Strategic Framework, and related policies, procedures and guidelines, into Bank operations for private and public sectors in RDGN",
+      "Support Operational Complexes to ensure climate change and green growth considerations are mainstreamed across all regional operations",
+      "Provide support, where relevant, to access green finance across all operations in the North Africa region",
+    ],
     requirements: [
       "Senior climate-change, green-growth and green-finance experience relevant to regional advisory and investment mobilisation",
     ],
@@ -2155,40 +2222,12 @@ export const OPPORTUNITIES: Opportunity[] = [
     status: "Active",
   },
   {
-    id: "ACD-0126",
-    slug: "consultant-analyst-strategy-development-and-research-rdri-african-development-bank-afdb-remote",
-    title: "Consultant Analyst - Strategy Development and Research (RDRI)",
-    company: "African Development Bank (AfDB)",
-    companyInitials: "AD",
-    logoUrl: "/logos/afdb.jpeg",
-    boardSection: "Jobs",
-    roleType: "DFI / MDB / Strategy",
-    experienceBucket: "Analyst",
-    region: "Pan-African",
-    locationDisplay: "Remote / Africa-wide",
-    deadlineDisplay: "29 Jul 2026",
-    summary:
-      "Analytical consultancy supporting strategy development, research and regional-integration work across the African continent.",
-    requirements: [
-      "Relevant strategy, research, economics or regional-integration experience",
-    ],
-    applicationNotes:
-      "Closing date: 29 July 2026. Consultancy engagement. Apply via the African Development Bank consultants portal.",
-    applyUrl:
-      "https://www.afdb.org/en/consultants/eoi-consultant-analyst-strategy-development-and-research-rdri-95571",
-    sourceUrl:
-      "https://www.afdb.org/en/consultants/eoi-consultant-analyst-strategy-development-and-research-rdri-95571",
-    sourceType: "Company website",
-    applyButtonText: "Apply on official page",
-    lastChecked: "27 Jul 2026",
-    status: "Active",
-  },
-  {
     id: "ACD-0127",
     slug: "regional-director-west-africa-norfund-accra",
     title: "Regional Director - West Africa",
     company: "Norfund",
     companyInitials: "NF",
+    logoUrl: "/logos/Norfund_logo.png",
     boardSection: "Jobs",
     roleType: "DFI / MDB / Investment",
     experienceBucket: "Leadership",
@@ -2201,44 +2240,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "2 Aug 2026",
     summary:
       "Regional investment leadership role responsible for origination, portfolio oversight, stakeholder relationships and team leadership across West Africa.",
+    aboutRole:
+      "Norfund is Norway's development finance institution, investing in private-sector businesses across developing countries to create jobs and support the transition to net zero. With a NOK 43.2 billion portfolio spanning 245 companies and offices across Africa, the Americas and Asia, the Regional Director for West Africa leads Norfund's Accra office at the most senior regional level, sitting on the Extended Management Team and reporting to the Executive Vice President for Scalable Enterprises.",
+    responsibilities: [
+      "Build, lead and develop the West Africa team based in Accra",
+      "Drive investment origination and business development across priority sectors",
+      "Oversee portfolio performance, ownership and regional risk management",
+      "Represent Norfund externally with entrepreneurs, investors, governments and other stakeholders",
+    ],
     requirements: [
-      "Senior investment leadership, portfolio-management and regional business-development experience",
+      "15+ years of experience in investments, private equity, project finance, M&A or related fields",
+      "Master's degree in finance, economics, business administration or equivalent",
+      "Significant senior leadership experience including direct people management",
+      "Sector experience in agribusiness, manufacturing, renewable energy or financial inclusion",
+      "Strong commercial acumen and analytical capabilities",
+      "Experience leading multicultural teams",
+      "Proven stakeholder management and relationship-building skills",
+      "Fluent English, written and verbal",
+    ],
+    niceToHave: [
+      "Proficiency in French",
     ],
     applicationNotes:
       "Closing date: 2 August 2026. Apply via the Norfund Webcruiter portal.",
     applyUrl: "https://9665.webcruiter.no/Main/Recruit/Public/5155891539",
     sourceUrl: "https://9665.webcruiter.no/Main/Recruit/Public/5155891539",
-    sourceType: "Official ATS",
-    applyButtonText: "Apply on official page",
-    lastChecked: "27 Jul 2026",
-    status: "Active",
-  },
-  {
-    id: "ACD-0128",
-    slug: "investment-analyst-sub-saharan-africa-symbiotics-multiple-cities",
-    title: "Investment Analyst, Sub-Saharan Africa",
-    company: "Symbiotics",
-    companyInitials: "Sy",
-    boardSection: "Jobs",
-    roleType: "Impact Investing / Private Credit",
-    experienceBucket: "Mid-level",
-    city: "Cape Town / Dakar / Nairobi",
-    country: "Sub-Saharan Africa",
-    region: "Multi-region",
-    locationDisplay: "Cape Town, South Africa / Dakar, Senegal / Nairobi, Kenya",
-    language: "English; French preferred",
-    languageTags: ["English", "French"],
-    summary:
-      "Impact-investment role analysing financial institutions and credit opportunities across Sub-Saharan Africa, with regional travel.",
-    requirements: [
-      "Proven credit or financial-analysis experience; Sub-Saharan Africa experience is essential",
-    ],
-    applicationNotes:
-      "No closing date listed. Apply via the Symbiotics careers portal.",
-    applyUrl:
-      "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=e6e85be2-1858-444d-ae1e-4ea3bd27553e",
-    sourceUrl:
-      "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=e6e85be2-1858-444d-ae1e-4ea3bd27553e",
     sourceType: "Official ATS",
     applyButtonText: "Apply on official page",
     lastChecked: "27 Jul 2026",
@@ -2263,8 +2289,28 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "3 Aug 2026",
     summary:
       "Investment role originating, appraising, structuring and executing municipal infrastructure-finance transactions.",
+    aboutRole:
+      "The Development Bank of Southern Africa (DBSA) is a development finance institution dedicated to financing infrastructure that improves quality of life across southern Africa. The Investment Officer sits within the municipal finance team, responsible for generating deal flow and building a strong pipeline of development-financing opportunities in the public sector.",
+    responsibilities: [
+      "Originate, identify, structure and execute infrastructure investment opportunities in municipal environments",
+      "Perform commercial analysis, financial modelling and risk assessment on prospective transactions",
+      "Negotiate transaction agreements and project documents, and facilitate deal closure",
+      "Prepare Investment Committee and Board papers",
+      "Collaborate with Treasury, Legal and Credit teams on term sheets and securing internal approvals",
+      "Build and maintain relationships with clients, government officials, banking partners and private businesses",
+      "Identify and pursue business development opportunities across South Africa and Sub-Saharan Africa",
+    ],
     requirements: [
-      "3-5 years of relevant investment, infrastructure-finance or transaction experience",
+      "Bachelor's degree in Business, Finance, Engineering, Economics, Actuarial Science or a related field",
+      "3-5 years of experience in municipal finance, SOE finance, project finance, corporate finance or structured finance at a financial institution",
+      "Knowledge of public sector financial environments including the PFMA and MFMA",
+      "Proven experience working with government institutions in South Africa",
+      "Track record of originating, structuring and closing infrastructure finance transactions",
+      "Understanding of corporate finance and project finance agreements",
+    ],
+    niceToHave: [
+      "Experience securing infrastructure investment deals in the public sector or with municipalities",
+      "Experience developing new business strategies and pipeline opportunities",
     ],
     applicationNotes:
       "Closing date: 3 August 2026. Reference: DBS260717-1. Apply via the DBSA eRecruit portal.",
@@ -2296,8 +2342,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Aug 2026",
     summary:
       "Specialist role delivering equity valuations, portfolio reporting and investment-performance analysis for DBSA's equity investments.",
+    aboutRole:
+      "The Equity Valuations and Reporting Specialist is responsible for the periodic valuation, monitoring and reporting of DBSA's equity and equity-related investment portfolio. The role requires deep expertise in financial modelling, IFRS compliance and stakeholder reporting, operating within a complex development banking environment.",
+    responsibilities: [
+      "Perform periodic equity valuations using DCF, comparable company analysis and market-based techniques",
+      "Develop and maintain financial models for assessing the equity investment portfolio",
+      "Review financial statements, forecasts and market data to support valuations",
+      "Validate that valuations comply with IFRS standards and internal policies",
+      "Monitor financial and operational performance of equity investments and identify impairment indicators",
+      "Prepare regular monitoring and valuation reports for management and governance committees",
+      "Support quarterly and annual financial reporting and coordinate with internal and external audit processes",
+      "Build relationships with National Treasury, rating agencies and internal investment teams",
+    ],
     requirements: [
-      "8 years of relevant valuation, investment-portfolio, financial-modelling or reporting experience",
+      "Bachelor's degree in Finance, Economics, Accounting or a related field",
+      "Minimum 8 years in equity valuation, portfolio monitoring and financial reporting in a banking environment",
+      "Working knowledge of financial modelling and valuation techniques including DCF and comparable company analysis",
+      "Demonstrated experience in IFRS 9 and IFRS 13 among other applicable standards",
+      "In-depth experience preparing and analysing financial statements",
+      "Advanced Microsoft Excel modelling skills and PowerPoint presentation skills",
+      "Knowledge of PFMA, King IV and other applicable regulations",
+    ],
+    niceToHave: [
+      "Postgraduate qualification such as an MBA, CA(SA) or CFA",
+      "Proven track record in equity deal structuring",
+      "Exposure to African and global financial markets",
     ],
     applicationNotes:
       "Closing date: 1 August 2026. Reference: DBS260410-1. Apply via the DBSA eRecruit portal.",
@@ -2329,8 +2398,24 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "5 Aug 2026",
     summary:
       "Senior role structuring infrastructure transactions, developing financial models and providing financing advice for complex projects.",
+    aboutRole:
+      "The Infrastructure Finance Specialist at DBSA provides financial modelling, transaction structuring, infrastructure financing and investment advisory support for infrastructure projects and programmes. The role contributes to the bank's infrastructure finance advisory mandate, supporting public and private sector clients from early feasibility through to financial close.",
+    responsibilities: [
+      "Develop, maintain and optimise detailed project finance models in Excel, including sensitivity analysis and stress-testing",
+      "Support the preparation, structuring, negotiation and closing of infrastructure finance transactions",
+      "Participate in transaction due diligence across financial, commercial, technical, environmental, legal and operational dimensions",
+      "Develop sustainable financing structures including blended finance, PPPs, B-BBEE funding structures, local currency funding, guarantees and derivative hedges",
+      "Evaluate feasibility and bankability of infrastructure opportunities and conduct financial risk assessments",
+      "Provide financial advisory services to public sector institutions on PPP and infrastructure project development",
+      "Prepare investment memoranda, financial reports and governance submissions",
+    ],
     requirements: [
-      "8 years of relevant infrastructure-finance, financial-modelling, transaction-structuring or advisory experience",
+      "Postgraduate qualification in Development Finance, Finance, Business, Engineering or Economics",
+      "Minimum 8 years of experience in project finance and infrastructure finance",
+      "Proven ability to build and interrogate complex project finance models using Microsoft Excel",
+      "Experience investing in infrastructure in emerging markets across a diversified sector portfolio",
+      "Experience in project risk identification, management and mitigation",
+      "Knowledge of banking sector, financial markets and the legal and regulatory environment for infrastructure procurement in South Africa",
     ],
     applicationNotes:
       "Closing date: 5 August 2026. Reference: DBS250617-1. Apply via the DBSA eRecruit portal.",
@@ -2362,8 +2447,26 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "31 Jul 2026",
     summary:
       "Leadership role structuring and executing complex infrastructure-finance transactions and guiding multidisciplinary deal teams.",
+    aboutRole:
+      "The Lead Infrastructure Finance at DBSA is a senior role responsible for leading the structuring, development, execution and implementation of complex infrastructure finance transactions and sustainable financing solutions. The role mentors Infrastructure Finance Specialists and contributes directly to the bank's infrastructure finance advisory pipeline.",
+    responsibilities: [
+      "Lead the preparation, structuring, negotiation and execution of complex infrastructure finance transactions",
+      "Direct financial analysis and advanced modelling within multidisciplinary deal teams",
+      "Provide strategic advisory services to internal and external stakeholders",
+      "Drive projects to bankability through transaction structuring and risk mitigation",
+      "Design sustainable financing structures including blended finance, PPPs, B-BBEE, local currency and green bonds",
+      "Lead credit approval processes and negotiate transaction terms",
+      "Develop relationships with government, DFIs and private investors",
+      "Represent the bank in stakeholder engagements and negotiations",
+      "Mentor Infrastructure Finance Specialists and support pipeline expansion",
+    ],
     requirements: [
-      "10 years of relevant infrastructure-finance, transaction-structuring or investment experience",
+      "Postgraduate qualification in Development Finance, Finance, Business, Engineering or Economics",
+      "Minimum 10 years of proven experience in project finance and infrastructure finance at a senior professional level",
+      "Experience investing in infrastructure in emerging markets across diverse sectors",
+      "In-depth knowledge of the banking sector, financial markets and the legal and regulatory environment for infrastructure procurement in South Africa",
+      "Demonstrable experience assessing investment transaction opportunities from early review through to bankable debt financing",
+      "Demonstrated knowledge of legislation and regulations governing infrastructure planning and development in South Africa including the PFMA",
     ],
     applicationNotes:
       "Closing date: 31 July 2026. Reference: DBS250922-2. Apply via the DBSA eRecruit portal.",
@@ -2395,8 +2498,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "31 Jul 2026",
     summary:
       "GuarantCo investment-team role supporting origination, due diligence, credit analysis, financial modelling, transaction execution and post-close portfolio monitoring across emerging and frontier markets.",
+    aboutRole:
+      "GuarantCo is a member of the Private Infrastructure Development Group (PIDG), using guarantee solutions to help close the infrastructure funding gap in lower-income countries across Africa and Asia. Reporting to an Associate Director in the Investment team, the Investment Analyst supports origination, execution and portfolio management, working on transactions from identification through to financial close and post-close monitoring.",
+    responsibilities: [
+      "Support origination and execution of transactions, including early-stage New Business Committee approvals",
+      "Conduct due diligence and credit analysis, including financial modelling and stress-testing",
+      "Support deal structuring and review of commercial and legal transaction documentation",
+      "Draft and present new business proposals to Credit Committee",
+      "Lead client on-boarding, KYC analysis and coordination with Impact and HSES teams",
+      "Monitor the transaction portfolio post-close, tracking performance against covenants and objectives",
+      "Develop and manage relationships with clients and transaction counterparties",
+      "Write and present transaction monitoring reports to Portfolio Committee",
+      "Contribute to process improvement and share lessons learned across the investment team",
+    ],
     requirements: [
-      "Familiarity with corporate and project finance, credit-risk assessment, structured finance, financial-statement analysis and guarantees",
+      "Relevant professional qualifications with a strong academic background",
+      "Familiarity with corporate and project finance in emerging and frontier markets",
+      "Understanding of structured and project finance transactions",
+      "Credit risk assessment experience",
+      "Financial accounting and statement analysis experience",
+      "Strong Microsoft Office skills, including Excel financial modelling",
+      "Familiarity with guarantees from Export Credit Agencies and development finance institutions",
+    ],
+    niceToHave: [
+      "Knowledge of a language relevant to the markets covered (Africa, the Middle East or Asia)",
     ],
     applicationNotes:
       "Closing date: 31 July 2026. Four analyst positions available. Apply via the GuarantCo / PIDG careers page.",
@@ -2413,6 +2538,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     title: "Finance Associate",
     company: "World Bank Group",
     companyInitials: "WB",
+    logoUrl: "/logos/world-bank-group.svg",
     boardSection: "Jobs",
     roleType: "DFI / Finance",
     experienceBucket: "Analyst",
@@ -2425,8 +2551,28 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "7 Aug 2026",
     summary:
       "Country-office finance role covering payments, budgeting, cash management, financial reporting, internal controls, business advisory and process improvement across four duty stations.",
+    aboutRole:
+      "The World Bank Group is one of the largest multilateral sources of funding and knowledge for developing countries, with 189 member countries and offices in over 120 countries. Finance Associates serve in Country Office Accounting as specialists in accounting, analytics, controls and financial processes, enabling World Bank country offices to operate effectively and in line with organisational financial standards.",
+    responsibilities: [
+      "Process financial transactions including payables, payroll, travel advances and vendor payments",
+      "Prepare monthly expense forecasts, budget reports with variance analysis and bank reconciliations",
+      "Monitor purchase orders and manage vendor open items through administrative systems",
+      "Maintain internal controls over corporate cards, asset inventory and compliance matters",
+      "Provide financial and administrative guidance to the Country Manager and office staff",
+      "Support audit responses, documentation filing and process improvement initiatives",
+    ],
     requirements: [
-      "Bachelor's degree in accounting, business, finance or a relevant discipline and at least 1 year of comparable accounting or finance-oriented experience",
+      "Bachelor's degree in accounting, business, finance or a related discipline",
+      "At least 1 year of relevant accounting or finance experience",
+      "Working knowledge of budget and finance systems, particularly SAP",
+      "Data management and process analysis experience",
+      "Strong collaboration and project management abilities",
+      "Fluent English with excellent written and oral communication skills",
+    ],
+    niceToHave: [
+      "Experience with Power BI, BW/AO or BPC financial systems",
+      "Business analysis and critical thinking capabilities",
+      "Knowledge of external funds policies and bank reconciliation processes",
     ],
     applicationNotes:
       "Closing date: 7 August 2026. Apply via the World Bank Group careers portal.",
