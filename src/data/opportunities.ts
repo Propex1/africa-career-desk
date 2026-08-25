@@ -1,4 +1,4 @@
-import type { Opportunity } from "@/types";
+﻿import type { Opportunity } from "@/types";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
 //   logoUrl: "/logos/company-name.svg"
@@ -65,7 +65,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.afreximbank.com/careers/vacancies/international-job/relationship-manager-arise-implant/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -116,7 +116,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -173,7 +173,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -228,7 +228,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -280,7 +280,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-director-africa50-project-development/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -332,7 +332,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-director-dre-africa-platfrom/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -385,7 +385,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/investment-director-project-development-agia/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -440,7 +440,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -492,7 +492,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-agia/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -545,7 +545,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -599,7 +599,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -656,7 +656,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://recruitment.cezannehr.com/shared/job/investment-manager-agdevco-ventures-86834",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -722,7 +722,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://armharith.com/open-positions/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -776,7 +776,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://crossboundary.applytojob.com/apply/zhj6z9d5eC/Analyst",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -822,7 +822,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://crossboundary.applytojob.com/apply/SacHg7gDEI/Senior-Associate",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -873,7 +873,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://opencapitaladvisors.applytojob.com/apply/gofjQBgbeh/Senior-Project-Leaders",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -924,7 +924,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -972,7 +972,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2282/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1022,7 +1022,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2276/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1074,7 +1074,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2273/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1129,7 +1129,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2267/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1192,7 +1192,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10443?c=afd&lang=fr-FR",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1249,7 +1249,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10533?c=afd&lang=fr-FR",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1305,7 +1305,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10305?c=afd&lang=fr-FR",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1365,7 +1365,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.avca.africa/news-insights/job-board/tlg-capital-portfolio-monitoring-manager/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1410,7 +1410,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.afdb.org/en/consultants/eoi-junior-investment-consultant-lusophone-compact-initiative-pisd-95710",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "27 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1440,7 +1440,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.afreximbank.com/careers/vacancies/internship/internship-opportunities/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1465,7 +1465,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://www.bio-invest.be/en/careers",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1490,7 +1490,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://deginvest-recruiting.de/eng",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1516,7 +1516,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://sahelcapital.com/careers/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1561,7 +1561,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.venturesplatform.com/companies/ventures-platform/jobs/82764188-vp-kickstarter-intern",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1615,7 +1615,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1668,7 +1668,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
     sourceType: "Company website",
     applyButtonText: "Apply on official application page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1720,7 +1720,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/intern-project-development-1/",
     sourceType: "Company website",
     applyButtonText: "Apply on official application page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1766,7 +1766,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10442?c=afd&lang=fr-FR",
     sourceType: "Official ATS",
     applyButtonText: "Apply on official application page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1812,7 +1812,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://ninetyone.com/en/south-africa/about-us/career-change-unlocking-your-investment-potential",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1865,7 +1865,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://ng.linkedin.com/jobs/view/principal-at-aruwa-capital-management-4439313963",
     sourceType: "LinkedIn company post",
     applyButtonText: "Apply on LinkedIn",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1916,7 +1916,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -1968,7 +1968,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -1999,7 +1999,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://a50mobility.com/associate-director-development/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2027,7 +2027,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://crossboundary.com/jobs/investment-analyst-and-associate-crossboundary-energy/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2055,7 +2055,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2083,7 +2083,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://apply.workable.com/afreximbank/j/1518D569F4",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2113,7 +2113,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
     sourceType: "Trusted third-party",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2142,7 +2142,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2171,7 +2171,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2200,7 +2200,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2229,7 +2229,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Economics_Research_Specialists_and_Strategy/a0f00c0984fe4922a64a620b2309fdfb",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2260,7 +2260,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10326?c=afd",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "21 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2288,7 +2288,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://apply.workable.com/afreximbank/j/10B4DBB343/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2314,7 +2314,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://apply.workable.com/afreximbank/j/2993C85B66/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2344,7 +2344,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2374,7 +2374,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://recruitingapp-2830.umantis.com/Vacancies/2268/Description/2?DesignID=00",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2404,7 +2404,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2428,7 +2428,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://armharith.com/fr/postes-ouverts/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2457,7 +2457,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://pidg.org/job/investor-relations-analyst/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2483,7 +2483,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://pidg.org/job/global-managing-director-guarantees/",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2509,7 +2509,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.afdb.org/en/consultants/eoi-consultant-project-finance-expert-pern-96220",
     sourceType: "Company website",
     applyButtonText: "Apply on official page",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2537,7 +2537,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2565,7 +2565,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.ebrd.com/job/Nairobi-Analyst%2C-Economics-%26-Policy/1427463533/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2590,7 +2590,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.linkedin.com/posts/verdant-capital_hiring-associate-investmentbanking-activity-7466898332796346368-SEIw",
     sourceType: "LinkedIn company post",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2615,7 +2615,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2643,7 +2643,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2671,7 +2671,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2702,7 +2702,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://careers.idc.co.za/details.html?jobId=16793&jobTitle=Transaction+Associate+",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2732,7 +2732,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://careers.idc.co.za/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2762,7 +2762,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://careers.idc.co.za/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2792,7 +2792,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
     sourceType: "LinkedIn company post",
     applyButtonText: "Apply on LinkedIn",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2819,7 +2819,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -2852,7 +2852,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2882,7 +2882,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -2909,7 +2909,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://job-boards.greenhouse.io/gacampus/jobs/5755751004",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2933,7 +2933,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://www.bio-invest.be/en/careers",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2957,7 +2957,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://loraxcapitalpartners.com/careers/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -2977,7 +2977,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://careers.meridiam.com/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3001,7 +3001,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://www.spe-capital.com/careers",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3023,7 +3023,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://jobs.venturesplatform.com/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3047,7 +3047,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://www.xsmlcapital.com/contact/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "15 Jul 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 
@@ -3072,7 +3072,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://amethis.com/en/contacts/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3092,7 +3092,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://www.phatisa.com/contact-10",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3112,7 +3112,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://apmollercapital.com/en/our-people/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3134,7 +3134,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://bamboocp.com/careers/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3158,7 +3158,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://jobs.boad.org/fr/annonces",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
   {
@@ -3182,7 +3182,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.sc.com/en/global-careers/business-areas/corporate-commercial-and-institutional-banking-ccib/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
+    lastChecked: "26 Aug 2026",
     status: "Active",
   },
 ];
