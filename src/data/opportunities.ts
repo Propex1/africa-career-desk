@@ -1,4 +1,4 @@
-﻿import type { Opportunity } from "@/types";
+import type { Opportunity } from "@/types";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
 //   logoUrl: "/logos/company-name.svg"
@@ -2757,36 +2757,6 @@ export const OPPORTUNITIES: Opportunity[] = [
     sourceUrl: "https://careers.idc.co.za/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
-    lastChecked: "25 Aug 2026",
-    status: "Active",
-  },
-  {
-    id: "ACD-0185",
-    slug: "assistant-portfolio-manager-rest-africa-pic-pretoria",
-    title: "Assistant Portfolio Manager – Rest of Africa",
-    company: "Public Investment Corporation (PIC)",
-    companyInitials: "PI",
-    logoUrl: "/logos/Public_Investment_Corporation_logo.svg",
-    boardSection: "Jobs",
-    roleType: "Asset Management / Investment",
-    experienceBucket: "Senior",
-    city: "Pretoria",
-    country: "South Africa",
-    region: "Pan-African",
-    locationDisplay: "Pretoria, South Africa / Rest of Africa portfolio",
-    language: "English",
-    languageTags: ["English"],
-    deadlineDisplay: "25 Aug 2026",
-    summary:
-      "Listed-equities portfolio-management role conducting country, sector and security research, building valuation models and making investment recommendations for PIC's Rest of Africa portfolio.",
-    requirements: [
-      "5–7 years of relevant experience in investment management, banking or management consulting",
-    ],
-    applyUrl:
-      "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=XrL9BoynGEijBFYgB_12Gxlff2oYRUVOhT7hR68mGYJUMEw0OENIS1NPMEpVTFJLMFpDWjJKMTkwTS4u",
-    sourceUrl: "https://www.pic.gov.za/careers",
-    sourceType: "Company website",
-    applyButtonText: "Apply on official page",
     lastChecked: "25 Aug 2026",
     status: "Active",
   },
