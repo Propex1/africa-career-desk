@@ -2159,13 +2159,13 @@ export const OPPORTUNITIES: Opportunity[] = [
       "Oral and written fluency in French",
     ],
     applicationNotes:
-      "Send CV to careers@armharith.com with the role title in the subject line of your email.",
+      "ARM-Harith accepts applications by email. Send your CV to careers@armharith.com with 'Sustainability Manager' in the subject line. The official vacancy document contains the complete application instructions.",
     applyUrl:
-      "mailto:careers@armharith.com?subject=Sustainability%20Manager",
+      "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
     sourceUrl:
       "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
-    sourceType: "Email application",
-    applyButtonText: "Apply on company site",
+    sourceType: "Company website",
+    applyButtonText: "View official vacancy",
     lastChecked: "26 Aug 2026",
     status: "Active",
   },
@@ -2203,12 +2203,13 @@ export const OPPORTUNITIES: Opportunity[] = [
       "Ability to work in a fast-paced environment and manage multiple workstreams simultaneously",
     ],
     applicationNotes:
-      "Send CV to careers@armharith.com with 'Investment Associate' in the subject line of your email.",
+      "ARM-Harith accepts applications by email. Send your CV to careers@armharith.com with 'Investment Associate' in the subject line. The official vacancy document contains the complete application instructions.",
     applyUrl:
-      "mailto:careers@armharith.com?subject=Investment%20Associate",
-    sourceUrl: "https://armharith.com/fr/postes-ouverts/",
-    sourceType: "Email application",
-    applyButtonText: "Apply on company site",
+      "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+    sourceUrl:
+      "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+    sourceType: "Company website",
+    applyButtonText: "View official vacancy",
     lastChecked: "26 Aug 2026",
     status: "Active",
   },
