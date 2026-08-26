@@ -1405,9 +1405,38 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     summary:
       "Senior project-development investment role at Africa50 Mobility, focused on identifying, structuring and executing African mobility and infrastructure investments.",
-    requirements: [
-      "8+ years of relevant infrastructure investment, project finance, PPP or project development experience",
+    aboutRole:
+      "Africa50 Mobility is a specialised infrastructure platform launched by Africa50 to develop, finance, and operate road and bridge infrastructure assets across Africa, mobilising private capital for transport infrastructure and supporting governments with sustainable funding models. The Associate Director, Development will identify and execute project development investments, leading the structuring and negotiation of equity and project-finance transactions with sponsors, lenders, and public authorities. The role is based in Abidjan, Côte d'Ivoire, with regular travel across Africa.",
+    responsibilities: [
+      "Develop a robust pipeline of opportunities by anticipating market trends and leveraging sector, sponsor, and country knowledge",
+      "Lead the structuring of project development and equity investments",
+      "Lead and participate in negotiations with sponsors, lenders, and public authorities",
+      "Drive portfolio projects toward bankability with a strong focus on achieving investment-ready outcomes",
+      "Maintain a strong understanding of project and concession financing and policy issues",
+      "Prepare project-related documents for internal and external audiences",
+      "Build and maintain strong relationships with infrastructure companies, banking and multilateral partners, and government officials",
+      "Develop thorough knowledge of the transport sector, including major operators and technologies",
+      "Contribute to supervising portfolio companies",
     ],
+    requirements: [
+      "8+ years of investment and industry experience in project development, investment, and/or project finance in the transport sector (concessionaire, infrastructure department at an investment bank, DFI, advisory firm, or infrastructure PE fund with project development exposure)",
+      "MBA, MSc, or equivalent qualification",
+      "Project management experience",
+      "Solid understanding of concession agreements, PPP, EPC, and O&M contracts",
+      "Demonstrated track record of closing transactions",
+      "Awareness of the latest trends and developments in infrastructure financing",
+      "Strong work ethic; this role regularly requires late nights, weekends, and travel",
+      "Self-starter with high initiative, clarity of thought, and decisive action",
+    ],
+    niceToHave: [
+      "Strong connection to Africa with intent to have an Africa-focused career",
+      "Excellent written and verbal communication skills in English and French",
+      "Strong interpersonal skills and ability to interact effectively across cultural backgrounds",
+      "Living experience in emerging countries",
+      "Prior knowledge of African infrastructure and existing relationships in Africa",
+    ],
+    applicationNotes:
+      "Role is based in Abidjan, Côte d'Ivoire with travel across Africa required. Only candidates selected for interviews will be contacted.",
     applyUrl: "https://intranet.africa50-group.com/candidate/request/3320",
     sourceUrl: "https://a50mobility.com/associate-director-development/",
     sourceType: "Company website",
@@ -1431,9 +1460,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Nairobi, Kenya",
     summary:
       "Investment role supporting capital raising, project finance, project development and portfolio management for distributed energy investments across African markets.",
-    requirements: [
-      "3–6 years at a top-tier bank, infrastructure or energy investor, project finance, advisory or related institution",
+    aboutRole:
+      "CrossBoundary Energy is recruiting a full-time Investment Associate or Senior Investment Associate to join its Investment team. The role spans the full investment cycle: fundraising, project due diligence, structuring, portfolio management, and risk mitigation for distributed renewable energy assets. CrossBoundary Energy develops, owns, and operates renewable energy solutions — including ~400 MWp of solar PV, wind, and thermal projects and ~700 MWh of battery storage — primarily across African markets, with a US$550M portfolio of awarded, signed, in-construction, and operating assets.",
+    responsibilities: [
+      "Drive group-level senior and subordinated debt capital raising, including corporate and project finance models, presentations, investment memoranda, term sheet negotiation, and due diligence",
+      "Assess and structure project investment opportunities from early-stage leads through to financial close, ensuring alignment with portfolio objectives and bankability",
+      "Drive project-level fundraising for senior debt, subordinated debt, and bridge instruments",
+      "Analyse project economics, risks, and contracts to support value-accretive project development",
+      "Maintain portfolio models and track investment performance metrics and debt covenants, identifying key risks proactively",
+      "Execute tax, capital, and corporate structuring to optimise economic outcomes across group and project levels",
+      "Prepare investor updates and engagement materials for group and project-level investors",
+      "Identify and execute solutions to mitigate investment risks across the portfolio",
     ],
+    requirements: [
+      "3–6 years of experience in energy, infrastructure, or project finance at a top-tier investment bank, commercial bank, or specialist advisory firm",
+      "Demonstrated transaction experience across corporate/project finance, financial modelling, due diligence, fundraising, and investment analysis",
+      "Experience in or strong understanding of African energy sector markets",
+      "Strong analytical capabilities with high attention to detail",
+      "Excellent presentation skills and ability to produce clear, high-quality investment materials",
+      "Ability to project-manage multiple complex workstreams simultaneously",
+      "Excellent communication and stakeholder management abilities across cultures",
+      "BA/BSc/HND qualification (minimum)",
+    ],
+    applicationNotes:
+      "Full-time role. Preferred locations: Nairobi, Kenya or London, UK. Infrequent travel required. Apply via crossboundary.applytojob.com.",
     applyUrl:
       "https://crossboundary.applytojob.com/apply/UNsmDvSMBR/Investment-Analyst-And-Associate-CrossBoundary-Energy",
     sourceUrl:
@@ -1461,9 +1511,35 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     summary:
       "FEDA investment role covering deal origination, financial analysis, valuation, structuring, due diligence, portfolio monitoring, value creation and fundraising across its fund strategies.",
-    requirements: [
-      "Minimum 5 years of work experience, including 3 years in investment banking, private equity or a similar financial role",
+    aboutRole:
+      "As an Assistant Investment Manager (Bilingual), you will support the investment team across each stage of the investment process for all of FEDA's fund strategies. The role requires bilingual proficiency in English and French to serve FEDA's pan-African mandate across Anglophone and Francophone markets. FEDA (Fund for Export Development in Africa) is the impact investment subsidiary of Afreximbank, a US$1 billion multi-investment platform providing equity, quasi-equity, and private credit solutions to support the growth and transformation of Africa's trade and industrial sectors.",
+    responsibilities: [
+      "Support the investment team across all phases of the investment lifecycle, including deal origination, evaluation, investment committees, Board presentations, portfolio management, exit strategies, and fundraising",
+      "Assess potential investments, including risks, opportunities, and merits of investment projects for each of FEDA's fund strategies",
+      "Conduct comprehensive financial analysis, modelling, and valuation to evaluate investment opportunities and perform portfolio monitoring",
+      "Support deal structuring, term sheet preparation, investment memo drafting, and participation in negotiations",
+      "Organise deal execution meetings and follow up on implementation of key decisions",
+      "Perform due diligence on target companies and coordinate due diligence advisors; review their deliverables and present findings to FEDA's management and investment committee",
+      "Support development, implementation, and monitoring of value-creation plans including ESG action plans for portfolio companies",
+      "Prepare monthly and quarterly investment reports for FEDA's governance bodies (Executive Management, Board, Investors)",
+      "Support fundraising efforts, including creating marketing materials and participating in investor meetings",
+      "Stay updated on market trends, regulatory changes, and economic factors affecting FEDA's investments",
     ],
+    requirements: [
+      "Bachelor's degree in Finance, Economics, Banking, Engineering, Sciences, or a related field",
+      "Minimum 5 years of work experience, with at least 3 years in investment banking, private equity, or a similar financial role",
+      "Strong financial analysis, valuation, and investment structuring experience",
+      "Proficiency in financial modelling, Excel, and analytical tools",
+      "Strong understanding of investment principles, valuation methodologies, and risk management",
+      "Solid understanding of private equity and greenfield investments in Africa",
+      "Bilingual proficiency in English and French",
+      "Familiarity with legal and regulatory frameworks governing private equity investments",
+    ],
+    niceToHave: [
+      "MBA or MSc in Finance, Economics, Accounting, or Banking",
+    ],
+    applicationNotes:
+      "Benefits include private health insurance, training & development, and performance bonus. Apply via the Workable portal.",
     applyUrl: "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
     sourceUrl: "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
     sourceType: "Official ATS",
@@ -1489,9 +1565,34 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English"],
     summary:
       "Investment role supporting FEDA's Strategic Initiatives Fund and AfCFTA Adjustment Fund through investment assessment, modelling, structuring, due diligence, deployment and portfolio governance.",
-    requirements: [
-      "Investment and private-equity experience required; approximately 5 years total with relevant transaction experience",
+    aboutRole:
+      "As an Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund), you will support FEDA's investment team across the full investment lifecycle, with primary focus on the Strategic Initiatives Fund — a $250 million fund strategy dedicated to high-impact greenfield investments in critical sectors — and the operationalisation and deployment of the AfCFTA Adjustment Fund. FEDA (Fund for Export Development in Africa) is the investment arm of Afreximbank, a pan-African multilateral institution mandated to finance and promote intra- and extra-African trade and industrialisation.",
+    responsibilities: [
+      "Support the investment team across deal origination, evaluation, investment committees, Board presentations, portfolio company management, exit strategies, and fundraising",
+      "Assess risks, opportunities, and merits of proposed investments or innovative greenfield projects within the Strategic Initiatives Fund",
+      "Conduct comprehensive financial analysis, modelling, and valuation to evaluate investment opportunities and perform portfolio monitoring",
+      "Support deal structuring, term sheet preparation, investment memo drafting, and negotiation",
+      "Perform due diligence on target companies and coordinate due diligence advisors",
+      "Support the operationalisation, capital deployment, fundraising, and ongoing monitoring and governance of the AfCFTA Adjustment Fund",
+      "Monitor and evaluate portfolio company performance, supporting value-creation plans including ESG action plans",
+      "Prepare monthly and quarterly investment reports for FEDA's governance bodies (Executive Management, Board, Investors)",
+      "Stay updated on market trends, regulatory changes, and economic factors affecting FEDA's investments",
     ],
+    requirements: [
+      "Bachelor's degree in Finance, Economics, Banking, Engineering, Sciences, or a related field",
+      "Minimum 5 years of work experience, with at least 3 years in investment banking, private equity, or a similar financial role",
+      "Strong financial analysis, valuation, and investment structuring experience",
+      "Proficiency in financial modelling, Excel, and analytical tools",
+      "Solid understanding of private equity and greenfield investments in Africa",
+      "Ability to work in a fast-paced investment environment across multiple fund strategies",
+      "Familiarity with legal and regulatory frameworks governing private equity investments",
+      "Excellent written and verbal communication skills",
+    ],
+    niceToHave: [
+      "MBA or MSc in Finance, Economics, Accounting, or Banking",
+    ],
+    applicationNotes:
+      "Benefits include private health insurance, training & development, and performance bonus. Apply via the Workable portal.",
     applyUrl: "https://apply.workable.com/afreximbank/j/1518D569F4",
     sourceUrl: "https://apply.workable.com/afreximbank/j/1518D569F4",
     sourceType: "Official ATS",
@@ -1517,9 +1618,36 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English"],
     summary:
       "Senior FEDA direct-investment role leading origination, financial modelling, valuation, structuring, due diligence, portfolio management, exits and fundraising across African investments.",
-    requirements: [
-      "Minimum 8 years of work experience, including 5 years in investment banking, private equity or a similar financial role",
+    aboutRole:
+      "The Investment Manager at FEDA will lead all phases of the investment process for FEDA's Direct Investment Fund strategy, covering deal origination, evaluation, structuring, and portfolio oversight through to exit, with a focus on African direct investments. The role involves managing an investment team and engaging with investment committees, portfolio companies, and external stakeholders. FEDA (Fund for Export Development in Africa) is an impact investment subsidiary of Afreximbank dedicated to supporting the growth and transformation of Africa's trade and industrial sectors through equity and quasi-equity investments. The role is based in Kigali, Rwanda.",
+    responsibilities: [
+      "Lead and manage the investment team through deal origination, evaluation, investment committee participation, Board meetings, portfolio company management, exit strategies, and fundraising",
+      "Conduct thorough risk assessments and evaluate the potential merits of investments or innovative greenfield projects",
+      "Lead comprehensive financial analysis, modelling, and valuation to evaluate investment opportunities and perform portfolio monitoring",
+      "Oversee the deal structuring process, including term sheet preparation, investment memo drafting, and negotiation",
+      "Conduct in-depth due diligence on target companies and coordinate with due diligence advisors; present findings to FEDA's management and investment committee",
+      "Monitor portfolio company performance, value-creation plans, and ESG action plans",
+      "Prepare monthly and quarterly investment reports for FEDA's governance (Executive Management, Board, Investors)",
+      "Stay informed on market trends, regulatory changes, and economic factors affecting FEDA's investments",
+      "Support fundraising initiatives, including creating marketing materials and participating in investor meetings",
     ],
+    requirements: [
+      "Master's degree in Finance, Economics, Banking, Engineering, Sciences, or a related field",
+      "Minimum 8 years of work experience, with at least 5 years in investment banking, private equity, or a similar financial role",
+      "Strong financial analysis and valuation methodology expertise",
+      "Advanced Excel and financial modelling proficiency",
+      "Deep knowledge of private equity legal and regulatory frameworks",
+      "Excellent written and verbal English communication skills",
+      "Strong problem-solving and critical-thinking skills with the ability to analyse complex financial data",
+      "Willingness to relocate to Kigali, Rwanda",
+    ],
+    niceToHave: [
+      "Strong analytical thinking for dissecting complex financial information",
+      "Meticulous attention to detail and commitment to accuracy",
+      "Collaborative teamwork mindset across departments and cultures",
+    ],
+    applicationNotes:
+      "Permanent position based in Kigali, Rwanda. Reference number: BRJA041. Submit CV to jadams@caglobalint.com (CA Global). Benefits include private health insurance, training & development, and performance bonus.",
     applyUrl:
       "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
     sourceUrl:
@@ -1546,9 +1674,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "Infrastructure-finance analyst role supporting due diligence, financial analysis, transaction evaluation and portfolio monitoring for DBSA investment and project-finance activities.",
-    requirements: [
-      "2–3 years of relevant experience in banking, trade finance, investments, corporate finance or project finance",
+    aboutRole:
+      "The Analyst ICT is an entry-level permanent position within the Development Bank of Southern Africa (DBSA), designed as a stepping-stone for graduates who have completed the DBSA graduate programme, providing practical on-the-job training in investment banking, trade finance, project finance, and related activities. DBSA is a development finance institution mandated to accelerate sustainable socioeconomic development across Southern Africa and the broader continent through infrastructure investment and financing. The role is based permanently in Midrand, Gauteng.",
+    responsibilities: [
+      "Liaise with clients and conduct research on client businesses, operations, performance, and industry trends",
+      "Conduct due diligence for infrastructure finance operations and provide recommendations on funding and debt restructurings",
+      "Evaluate the feasibility of investment opportunities and project transactions in line with DBSA's strategy and mandate",
+      "Support business development by analysing sales activity, pipeline data, and client plans",
+      "Conduct in-depth market, sector, and client research to support trade finance pipeline development",
+      "Develop and maintain financial models for trade finance transactions, including cash flow projections, pricing scenarios, and sensitivity analyses",
+      "Prepare and update project plan documents and assist in the preparation of project management deliverables",
+      "Prepare reports, presentations, and dashboards for steering committees, Exco, and the Board",
+      "Assist in the early-stage screening of potential transactions, evaluating alignment with institutional mandate and risk appetite",
+      "Monitor and track programme and project budget spending",
     ],
+    requirements: [
+      "Bachelor's degree in Finance, Business, Accounting, Economics, or a related field",
+      "Minimum 2–3 years of experience in banking, trade finance, investments, or corporate/project finance",
+      "Exposure to trade finance transactions, including financial modelling and documentation preparation",
+      "Familiarity with trade finance instruments such as guarantees, letters of credit, supply chain finance, and receivables financing",
+      "Experience preparing reports, dashboards, and presentations for stakeholder engagement",
+      "Proficiency in financial modelling and data analysis",
+    ],
+    applicationNotes:
+      "Permanent position. Reference number: DBS260710-2. Application deadline: 1 September 2026. Location: Midrand, Gauteng, South Africa. Apply via the DBSA erecruit careers portal.",
     applyUrl:
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceUrl:
@@ -1575,9 +1724,35 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "Specialist role building and reviewing financial models for infrastructure and project-finance transactions, feasibility work, structuring and investment decision materials.",
-    requirements: [
-      "5+ years of financial-modelling experience in project finance, investment banking, infrastructure or corporate finance",
+    aboutRole:
+      "The Financial Modelling Specialist at DBSA is responsible for building robust financial models and providing advanced data analysis to support infrastructure project development, feasibility assessments, and bankable feasibility studies, validating technical and commercial assumptions, and structuring optimal financing solutions. DBSA (Development Bank of Southern Africa) is a development finance institution mandated to accelerate sustainable socioeconomic development and infrastructure delivery across Southern Africa and the broader continent.",
+    responsibilities: [
+      "Build, update, and maintain complex, dynamic financial models for infrastructure and project finance transactions, including scenario, sensitivity, and stress testing",
+      "Lead the financial modelling component of Bankable Feasibility Studies (BFS), ensuring alignment with project technical, environmental, social, regulatory, and commercial requirements",
+      "Provide models that support preparation of feasibility assessments, concept studies, pre-feasibility studies, and bankable feasibility studies",
+      "Review, validate, and challenge technical and operational assumptions used within financial models",
+      "Assess financial performance indicators and recommend funding structures aligned with development impact and financial sustainability",
+      "Support preparation of technical and investment documentation for internal decision-making committees and external stakeholders",
+      "Present financial modelling outputs, results, and recommendations to executives, project sponsors, investors, and partners",
+      "Participate in negotiations and discussions with sponsors, advisors, lenders, and government entities",
+      "Prepare investment committee submissions, memos, and model commentary for review by multidisciplinary project teams",
     ],
+    requirements: [
+      "Bachelor's degree in Business Science, Actuarial Science, Finance, Economics, or a related field",
+      "Minimum 5 years of experience in financial modelling within project finance, investment banking, infrastructure development, or corporate finance",
+      "Advanced financial modelling capability",
+      "Strong understanding of project finance structures, capital allocation, cost of capital models, and risk allocation",
+      "Experience developing or supporting infrastructure or capital-intensive projects",
+      "Exposure to project feasibility studies, due diligence, and transaction structuring",
+      "Demonstrated understanding of the project preparation cycle and requirements to prepare bankable projects",
+    ],
+    niceToHave: [
+      "Post-graduate qualification or honours degree in Finance, Business, Accounting, or Economics",
+      "Development finance experience",
+      "Ability to interpret technical, engineering, regulatory, and commercial project data",
+    ],
+    applicationNotes:
+      "Permanent position. Reference number: DBS251124-2. Application deadline: 1 September 2026. Location: Midrand, Gauteng, South Africa. Apply via the DBSA erecruit careers portal.",
     applyUrl:
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceUrl:
@@ -1604,9 +1779,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "Senior structuring role developing bankable project-finance solutions including blended finance, PPPs, guarantees, funding structures and transaction due diligence.",
-    requirements: [
-      "8+ years of relevant project-finance or infrastructure-finance experience",
+    aboutRole:
+      "The Project Finance Structuring Specialist at DBSA provides expert financial structuring and advisory support for investment projects, driving informed investment decisions and project financial closure by designing innovative financing solutions and advising on multi-sector funding strategies. DBSA (Development Bank of Southern Africa) is a development finance institution that promotes sustainable development and infrastructure delivery across Southern Africa and the broader continent.",
+    responsibilities: [
+      "Develop and implement innovative and sustainable financial structuring solutions to unlock and accelerate development projects",
+      "Implement innovative financing instruments, including blended finance, PPPs, guarantees, local currency funding, derivatives, and other financial solutions",
+      "Conduct detailed due diligence and appraisal of proposed transactions, including commercial, financial, risk, and institutional analysis",
+      "Provide input into the preparation and negotiation of project contracts, with a focus on financial structuring implications",
+      "Test market readiness of projects with developers, investors, DFIs, and OEMs",
+      "Map financing options across commercial, concessional, blended-finance, and climate-finance sources",
+      "Design blended finance structures combining concessional debt, commercial financing, grants, equity, and guarantees to de-risk projects",
+      "Engage DFIs and climate funders, prepare concept notes and pitch materials, and support project sponsors in funder outreach",
+      "Build and maintain strong relationships with clients, banking and multilateral partners, and government officials",
+      "Provide transaction structuring inputs to ensure bankability of projects and facilitate project closure",
     ],
+    requirements: [
+      "8+ years of relevant experience in project finance, infrastructure finance, or financial structuring",
+      "Strong understanding of project finance, PPP structures, blended finance, and innovative financing mechanisms",
+      "Experience with DFI engagement, climate finance, and concessional finance instruments",
+      "Demonstrated track record in preparing and executing bankable infrastructure projects",
+      "Ability to build and maintain senior client relationships",
+      "Excellent communication and negotiation skills",
+    ],
+    applicationNotes:
+      "Permanent position. Reference number: DBS251124-1. Application deadline: 1 September 2026. Location: Midrand, Gauteng, South Africa. Apply via the DBSA erecruit careers portal.",
     applyUrl:
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Investment_Banking/1dff2c81bf764abeae185352d029cc57",
     sourceUrl:
@@ -1633,9 +1829,35 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "2 Sep 2026",
     summary:
       "Sustainable-finance role integrating ESG and development-impact considerations across DBSA's loan book, including investment appraisal, structuring, monitoring and sustainable-finance instruments.",
-    requirements: [
-      "8+ years of experience preparing or appraising investment projects and assessing development outcomes and ESG risks",
+    aboutRole:
+      "The Sustainability Specialist (Loan Book) leads the integration and implementation of environmental, social, and governance (ESG) principles across the Development Bank of Southern Africa's investment activities, applying robust safeguard policies aligned with international best practice. The role sits within the investment/sustainability function and involves appraising, structuring, and monitoring transactions for alignment with the Bank's Environmental and Social Safeguard Standards (ESSS) and international ESG reporting frameworks. DBSA is a development finance institution focused on infrastructure investment across Southern Africa and the broader continent.",
+    responsibilities: [
+      "Develop and implement sustainability policies aligned with international best practice and the Sustainable Development Goals (SDGs)",
+      "Conduct environmental and social due diligence for investments and present ESG findings to decision-making committees",
+      "Integrate gender, climate resilience, and social inclusion considerations into project appraisals",
+      "Monitor portfolio ESG compliance and recommend corrective actions to ensure ongoing alignment",
+      "Contribute to the development of the Bank's Impact Framework and track environmental, social, and governance outcomes",
+      "Produce ESG and impact reports for internal and external stakeholders",
+      "Design and deliver ESG training programmes and facilitate knowledge-sharing initiatives",
+      "Build partnerships with investors, lenders, and development partners, and represent the Bank in technical forums and sustainability networks",
+      "Support clients with ESG advisory services and structure sustainable finance solutions",
+      "Monitor portfolio-level ESG risks and performance metrics against international reporting frameworks",
     ],
+    requirements: [
+      "Postgraduate degree (Master's level) in Environmental Science, Sustainability, Development Studies, Economics, Finance, or Engineering",
+      "Minimum 8 years of experience preparing and appraising investment projects, identifying environmental, social, and governance risks",
+      "Minimum 4 years of experience assessing climate-related risks at transaction level",
+      "Extensive experience in the infrastructure sector",
+      "Working knowledge of IFC Performance Standards, the Equator Principles, and national environmental legislation",
+      "Understanding of corporate governance, ESG principles, and responsible investing frameworks",
+      "Knowledge of ESG reporting frameworks including TCFD and GHG Protocol/carbon footprinting",
+    ],
+    niceToHave: [
+      "Professional registration with a relevant professional body",
+      "Professional certifications in sustainability or ESG",
+    ],
+    applicationNotes:
+      "Permanent position. Reference number: DBS260423-2. Application deadline: 2 September 2026. Location: Midrand, Gauteng, South Africa. Apply via the DBSA erecruit careers portal.",
     applyUrl:
       "https://dbsa.erecruit.co/candidateapp/Jobs/Categories/Economics_Research_Specialists_and_Strategy/a0f00c0984fe4922a64a620b2309fdfb",
     sourceUrl:
@@ -1664,9 +1886,23 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "31 Aug 2026",
     summary:
       "Nairobi-based Proparco V.I.A. role supporting private equity and venture-capital origination, investment analysis, structuring, modelling and portfolio and value-creation work across East Africa.",
-    requirements: [
-      "1–3 years of relevant professional experience",
+    aboutRole:
+      "This is a Volontariat International en Administration (V.I.A.) analyst-level position based at Proparco's East Africa Regional Office in Nairobi, Kenya. The role supports private equity and venture-capital origination, investment analysis, deal structuring, financial modelling, and portfolio and value-creation work across the East Africa region. Proparco is the private-sector financing arm of the Agence Française de Développement (AFD) Group, deploying equity and quasi-equity investments in companies and funds across Africa and other emerging markets to support sustainable and inclusive development.",
+    responsibilities: [
+      "Support private equity and venture capital deal origination across East Africa",
+      "Conduct investment analysis on target companies and funds",
+      "Assist with structuring of equity and quasi-equity investment transactions",
+      "Perform financial modelling and valuation work",
+      "Contribute to portfolio monitoring and value-creation activities across the East Africa portfolio",
     ],
+    requirements: [
+      "1–3 years of relevant professional experience (e.g. private equity, venture capital, investment banking, or transaction services)",
+      "English proficiency at C1 level minimum",
+      "Analyst-level profile with demonstrated finance or investment skills",
+      "Eligibility to participate in the French V.I.A. (Volontariat International en Administration) programme",
+    ],
+    applicationNotes:
+      "Contract type: V.I.A. (Volontariat International en Administration). Location: Nairobi, Kenya. Application deadline: 31 August 2026. Apply via the official AFD/Proparco ATS portal.",
     applyUrl:
       "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10326?c=afd",
     sourceUrl:
@@ -1694,9 +1930,26 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French", "Arabic", "Portuguese"],
     summary:
       "Treasury client-solutions role structuring hedging, derivatives and investment solutions, supporting financial-risk management and market transactions for Afreximbank clients across Africa and CARICOM.",
-    requirements: [
-      "Minimum 5 years of experience in a Treasury and Markets function in financial services or a corporate environment",
+    aboutRole:
+      "The Assistant Manager, Treasury Client Solutions reports to the Group Treasurer and is responsible for designing and delivering financial risk-management solutions for the Bank and its clients. The role sits within the Treasury & Markets Division and works closely with the Treasurer and Client Relations teams to expand the client base and boost non-funded treasury revenues. Afreximbank (African Export-Import Bank) is a pan-African multilateral trade finance institution headquartered in Cairo, Egypt, mandated to finance and promote intra- and extra-African trade and investment.",
+    responsibilities: [
+      "Design and deliver financial risk-management solutions for the Bank and its clients",
+      "Collaborate with the Group Treasurer and Client Relations teams to develop and expand treasury product offerings",
+      "Expand the Bank's treasury client portfolio across Africa and CARICOM markets",
+      "Drive growth in non-funded treasury revenues",
+      "Identify and structure treasury product solutions in collaboration with origination teams",
+      "Present treasury product features and benefits to clients and investors",
     ],
+    requirements: [
+      "Bachelor's degree in Finance, Economics, Accounting, Business Administration, or a related field",
+      "Postgraduate degree in Finance, Banking, or a related discipline (preferred)",
+      "Minimum 5 years of experience in treasury, financial markets, or a related area",
+      "Strong understanding of treasury products and financial risk management",
+      "Relevant professional certification (e.g. AMCT, ACI, CTP) is an advantage",
+      "Experience working with African financial markets or multilateral development banks is advantageous",
+    ],
+    applicationNotes:
+      "Role is based at Afreximbank headquarters in Cairo, Egypt. Apply via the Workable portal at apply.workable.com/afreximbank.",
     applyUrl: "https://apply.workable.com/afreximbank/j/10B4DBB343/",
     sourceUrl: "https://apply.workable.com/afreximbank/j/10B4DBB343/",
     sourceType: "Official ATS",
@@ -1720,9 +1973,32 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Cairo, Egypt",
     summary:
       "Leadership role responsible for Afreximbank's funding strategy and execution across debt and loan capital markets, investor engagement, securitisation and sustainable-finance resource mobilisation.",
-    requirements: [
-      "12 years of experience in treasury and finance, including at least 5 years leading teams",
+    aboutRole:
+      "The Director, Treasury & Markets (Resource Mobilisation) leads the Resource Mobilisation Department within Afreximbank's Treasury & Markets division, reporting to the Group Treasurer. The role involves shaping the Bank's funding strategy, executing funding plans across debt and loan capital markets, and managing a diverse team to secure broad market access and deep liquidity. Afreximbank (African Export-Import Bank) is a pan-African multilateral trade finance institution headquartered in Cairo, Egypt, whose mission is to expand Africa's share of global trade through financing and promoting intra- and extra-African commerce.",
+    responsibilities: [
+      "Formulate and execute a resource mobilisation strategy enabling robust market access in debt and loan capital markets, aligned with the Bank's Strategic Plan",
+      "Develop and monitor fundraising strategies with yearly Africa-sourced funding targets; engage central banks, institutional investors, and corporates across Africa and the Caribbean",
+      "Devise and implement strategies for raising international market funds through public debt issuances, private placements, and wholesale deposits",
+      "Negotiate pricing for all funding transactions and advise on ECA and DFI pricing recommendations",
+      "Develop and execute securitisation programmes including synthetic and collateralised loan obligations",
+      "Develop a sustainable liabilities financing framework and raise funds for Green, Social, and Climate Finance projects",
+      "Manage Assets-Liabilities Management (ALM) governance and ALCO coordination",
+      "Oversee daily treasury operational risk identification, assessment, documentation, and reporting",
+      "Oversee Treasury Management System (TMS) activities related to resource mobilisation",
+      "Establish talent resource planning and succession planning frameworks for the Resource Mobilisation Department",
     ],
+    requirements: [
+      "First degree in accounting, financial management, economics, or a related discipline, plus a postgraduate qualification",
+      "Minimum 12 years of experience in treasury and/or finance functions",
+      "Minimum 5 years of experience leading teams in corporate or financial services settings",
+      "Demonstrated expertise in debt and loan capital markets, funding strategy, and resource mobilisation",
+      "Experience with securitisation structures and sustainable finance instruments",
+    ],
+    niceToHave: [
+      "Professional certifications: MCT, AMCT, CTP, ACI, ACCA, CIMA, or CFA",
+    ],
+    applicationNotes:
+      "Location: Cairo, Egypt. Competitive salary. Benefits include private health insurance, training & development, and performance bonus. Application deadline: 20 September 2026. Apply via the Workable portal.",
     applyUrl: "https://apply.workable.com/afreximbank/j/2993C85B66/",
     sourceUrl: "https://apply.workable.com/afreximbank/j/2993C85B66/",
     sourceType: "Official ATS",
@@ -1748,9 +2024,31 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French", "Arabic"],
     summary:
       "Sub-Saharan Africa private-debt investment role covering sourcing, credit analysis, due diligence, structuring, portfolio management and monitoring of financial institutions.",
-    requirements: [
-      "Minimum 5 years of relevant experience in the financial sector in an international environment, ideally as a credit analyst or similar",
+    aboutRole:
+      "The Investment Officer in Financial Inclusion Debt is based in responsAbility's Cape Town office, focusing on developing and managing financial sector debt investments across Sub-Saharan Africa. The position covers the full investment lifecycle — from sourcing through due diligence, implementation, and ongoing portfolio monitoring — with a primary focus on microfinance institutions and related financial entities. responsAbility is a Swiss impact asset manager dedicated to investing in emerging and frontier markets to promote sustainable development.",
+    responsibilities: [
+      "Develop, manage, and expand debt investments in African financial markets",
+      "Conduct credit risk analysis of counterparties through due diligence and scoring exercises in collaboration with Credit and Risk teams",
+      "Manage the complete investment lifecycle: sourcing, due diligence, implementation, portfolio management, and monitoring",
+      "Structure transactions in coordination with risk management and investment committee teams",
+      "Represent the organisation at industry conferences and events",
+      "Work with external stakeholders on transaction implementation and execution",
     ],
+    requirements: [
+      "Degree in Economics, Business Administration, Finance, or a related field",
+      "Minimum 5 years of experience in the financial sector in an international environment, ideally as a credit analyst",
+      "Knowledge of microfinance, SME finance, and leasing sectors",
+      "Excellent oral and written English communication skills",
+      "Strong analytical, writing, and presentation abilities",
+      "Commercial acumen and interest in business development",
+      "Ability and willingness to travel frequently within Africa",
+    ],
+    niceToHave: [
+      "Advanced graduate degree from a recognised institution",
+      "French or Arabic language skills",
+    ],
+    applicationNotes:
+      "Location: Cape Town, South Africa. Recruitment handled by AMS on behalf of responsAbility. Applications must be submitted online only.",
     applyUrl:
       "https://recruitingapp-2830.umantis.com/Vacancies/2272/Application/New/2",
     sourceUrl:
@@ -1808,9 +2106,35 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     summary:
       "Infrastructure-investment sustainability role integrating ESG and climate strategy into deal screening, due diligence, IC materials, portfolio value creation, reporting and exit readiness.",
-    requirements: [
-      "Minimum 6 years of relevant leadership experience in ESG, climate strategy execution or sustainability consulting within infrastructure",
+    aboutRole:
+      "The Sustainability Manager at ARM-Harith Infrastructure Investment Limited will support the Chief Investment Officer in the development and execution of the firm's ESG and climate strategy across the full investment process, from deal screening and due diligence through portfolio value creation, exit readiness, and post-exit assessment. ARM-Harith Infrastructure Investment Limited is a Nigeria-based infrastructure fund manager registered and regulated by the Securities and Exchange Commission of Nigeria, focused on private equity infrastructure investments across Sub-Saharan Africa.",
+    responsibilities: [
+      "Develop, implement, and maintain sustainability initiatives, policies, and action plans across the investment process aligned with Fund Manager and Funds' goals",
+      "Oversee ESG and climate due diligence for all transactions, including driving ESIA and ESAP development and recommendations",
+      "Maintain structured ESG/climate scoring models used in screening, IC materials, and valuations; identify material risks and define mitigation actions before capital deployment",
+      "Establish baseline KPIs and climate pathways for each investment; embed ESG/climate obligations in legal agreements with portfolio assets",
+      "Implement ESG and climate transformation plans, driving decarbonisation, governance strengthening, H&S improvements, and operational efficiency across portfolio assets",
+      "Conduct periodic monitoring, audits, and data analysis to validate portfolio data and track KPI performance against fund-wide targets",
+      "Prepare ESG and climate sell-side materials and data rooms for exit; support CIO/MD in defining buyer narratives and ensuring audit-ready impact claims",
+      "Operationalise the fund's climate transformation strategy including GHG accounting (Scopes 1, 2, and relevant Scope 3) and climate-risk scenario analysis aligned with IFRS S2 and ILPA ECDI",
+      "Deliver annual ESG and climate reporting aligned with IFRS S2/S1, ILPA ECDI, TCFD, and GRI standards",
+      "Work directly with portfolio company boards, DFIs, institutional LPs, and technical partners; provide ESG/climate training for investment teams and portfolio operators",
     ],
+    requirements: [
+      "Minimum 6 years of relevant leadership experience in ESG, climate strategy execution, and/or sustainability consulting within the infrastructure segment (energy, mobility, industrials, waste, water, and/or connectivity)",
+      "Good understanding of private equity and value creation objectives",
+      "Strong experience in GHG accounting, climate-risk scenario modelling, IFC Performance Standards, AfDB Operational Standards, and related safeguards",
+      "Strong experience with reporting standards such as ILPA ECDI, IFRS S2, EU Taxonomy, GHG Protocol, and Rio Markers",
+      "Strong analytical capability for KPI frameworks, scenario analysis, and audit-ready reporting",
+      "Excellent written and verbal communication and presentation skills for investor-grade stakeholder engagement",
+      "Proven ability to influence teams and work collaboratively with key stakeholders",
+      "Advanced proficiency in Microsoft Office suite, especially Excel and PowerPoint; fluency in written and spoken English",
+    ],
+    niceToHave: [
+      "Oral and written fluency in French",
+    ],
+    applicationNotes:
+      "Send CV to careers@armharith.com with the role title in the subject line of your email.",
     applyUrl:
       "mailto:careers@armharith.com?subject=Sustainability%20Manager",
     sourceUrl:
@@ -1836,6 +2160,25 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Ikoyi, Lagos, Nigeria",
     summary:
       "Infrastructure private-equity investment role supporting transaction evaluation and execution, financial modelling, due diligence and portfolio monitoring.",
+    aboutRole:
+      "ARM-Harith Infrastructure Investments is a Nigerian infrastructure fund manager regulated by the Securities and Exchange Commission of Nigeria, focused on private equity investments in Sub-Saharan African infrastructure assets across energy, transport, utilities, and digital infrastructure. The Investment Associate sits within the investment team and supports the full transaction cycle from origination and evaluation through execution, portfolio monitoring, and exit activities.",
+    responsibilities: [
+      "Support deal origination, screening, and evaluation of new investment opportunities",
+      "Build and maintain financial models for infrastructure asset valuation and transaction structuring",
+      "Conduct due diligence on target assets, including financial, commercial, and technical workstreams",
+      "Prepare investment committee materials, information memoranda, and management presentations",
+      "Monitor portfolio asset performance against key performance indicators",
+      "Assist with exit preparation and exit execution activities",
+      "Engage with advisors, co-investors, and external counterparties throughout the transaction process",
+    ],
+    requirements: [
+      "2–5 years of experience in infrastructure private equity, project finance, investment banking, or corporate finance",
+      "Strong financial modelling and analytical skills",
+      "Excellent written and verbal communication skills in English",
+      "Ability to work in a fast-paced environment and manage multiple workstreams simultaneously",
+    ],
+    applicationNotes:
+      "Send CV to careers@armharith.com with 'Investment Associate' in the subject line of your email.",
     applyUrl:
       "mailto:careers@armharith.com?subject=Investment%20Associate",
     sourceUrl: "https://armharith.com/fr/postes-ouverts/",
@@ -1863,9 +2206,33 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "4 Sep 2026",
     summary:
       "Investor-relations and fundraising role supporting investor engagement, pitch materials, financial data, due diligence and funding relationships for PIDG's infrastructure platform across Sub-Saharan Africa and Asia.",
-    requirements: [
-      "At least 2 years of experience, preferably in development finance, private markets, government or PPP work, or an impact-focused organisation",
+    aboutRole:
+      "The Investor Relations Analyst supports PIDG's funding strategy by managing investor relationships and coordinating engagement activities across development finance and private markets. Reporting to the Global Head of Investor Relations, the role involves developing pitch materials, maintaining CRM records, and preparing governance reports for management, the Board, and Owners. PIDG (Private Infrastructure Development Group) is a development finance organisation focused on mobilising private investment into infrastructure in frontier and emerging markets across Sub-Saharan Africa and Asia.",
+    responsibilities: [
+      "Coordinate investor meetings and speaking engagements, including scheduling and logistics",
+      "Develop presentations and pitch materials using financial analysis and data",
+      "Maintain records of investor interactions and ensure timely follow-up actions",
+      "Support growth of connections with current and prospective funding partners",
+      "Update and manage the CRM database tracking investor interactions and opportunities",
+      "Prepare governance reports for management, Board, and Owners",
+      "Ensure accuracy across all investor communications",
+      "Facilitate cross-team collaboration",
     ],
+    requirements: [
+      "Bachelor's degree",
+      "Minimum 2 years of experience in development finance, private markets (infrastructure, private equity, real estate, or venture capital), government, PPP arrangements, or impact-focused organisations",
+      "Strong Excel modelling and PowerPoint skills",
+      "Excellent communication and presentation abilities",
+      "Stakeholder engagement expertise",
+      "Ability to work under pressure and manage multiple deadlines",
+      "Self-starter able to work with minimal supervision",
+    ],
+    niceToHave: [
+      "German and/or French language skills",
+      "Emerging markets exposure in Africa and/or Asia",
+    ],
+    applicationNotes:
+      "Full-time position based in London (6 Bevis Marks, EC3A 7BA). Travel may be required. Application deadline: 4 September 2026.",
     applyUrl: "https://pidg.org/job/investor-relations-analyst/",
     sourceUrl: "https://pidg.org/job/investor-relations-analyst/",
     sourceType: "Company website",
@@ -1889,9 +2256,35 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "4 Sep 2026",
     summary:
       "Executive role leading PIDG's global guarantees business, including GuarantCo strategy, growth, product development, portfolio performance, capital structuring and stakeholder relationships across African and Asian markets.",
-    requirements: [
-      "Extensive senior experience in infrastructure finance, guarantees or credit enhancement, debt products, capital structuring, portfolio management and multi-region business leadership",
+    aboutRole:
+      "The Global Head of Guarantees leads PIDG's worldwide guarantees business, with overall responsibility for GuarantCo — setting strategy, driving growth, managing risk, and ensuring operational excellence across multiple regions including Africa and Asia. The role chairs the GuarantCo Executive Committee, leads 3-year strategic business plans, and acts as a senior public ambassador for the PIDG Group. PIDG (Private Infrastructure Development Group) is a development finance institution focused on mobilising private investment into infrastructure in frontier and emerging markets aligned with SDG objectives.",
+    responsibilities: [
+      "Take overall responsibility for GuarantCo, including strategy, growth, risk management, and operational performance",
+      "Develop and implement PIDG strategic objectives under Board oversight",
+      "Maintain and strengthen external ratings agency ratings for GuarantCo",
+      "Manage cost structure and financial performance aligned with SDG objectives",
+      "Chair the GuarantCo Executive Committee and lead 3-year strategic business plans",
+      "Serve as culture carrier emphasising transparency and collaboration across the organisation",
+      "Build senior-level relationships with partners and government officials",
+      "Act as public ambassador for the PIDG Group at senior forums and events",
+      "Allocate funds for new development activities in collaboration with PIDG Ltd",
     ],
+    requirements: [
+      "Degree-level education",
+      "Extensive governance experience, including board-level positions",
+      "Strong private sector background in infrastructure finance, guarantees, or related fields",
+      "Understanding of infrastructure funding and project development cycles",
+      "Knowledge of guarantees from Export Credit Agencies and multilateral institutions",
+      "IFRS, Basel, and Solvency framework expertise",
+      "African and Asian market experience",
+      "Multi-cultural team management and matrix organisation collaboration experience",
+      "Excellent communication skills with high ethical standards",
+    ],
+    niceToHave: [
+      "Professional qualifications in finance, law, or a related discipline",
+    ],
+    applicationNotes:
+      "Full-time role based in London, Nairobi, or Singapore; frequent travel required. Reports to the CEO. Application deadline: 4 September 2026. Apply via the online application form with a resume and cover letter.",
     applyUrl: "https://pidg.org/job/global-managing-director-guarantees/",
     sourceUrl: "https://pidg.org/job/global-managing-director-guarantees/",
     sourceType: "Company website",
@@ -1916,6 +2309,30 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "27 Aug 2026",
     summary:
       "SEFA project-finance consultancy supporting preparation, appraisal and execution of renewable-energy and energy-access transactions, with emphasis on blended finance, concessional resources and private-capital mobilisation.",
+    aboutRole:
+      "This is an Expression of Interest for an Individual Consultant – Project Finance Expert within the Sustainable Energy Fund for Africa (SEFA) team, housed in the Renewable Energy and Energy Efficiency Department (PERN) of the African Development Bank (AfDB). The consultant will provide investment and transaction support with a focus on project finance, blended finance structuring, and private capital mobilisation for bankable renewable energy and energy access transactions across Africa. The AfDB is a multilateral development bank headquartered in Abidjan, Côte d'Ivoire, with a mandate to promote sustainable economic development and social progress across Africa.",
+    responsibilities: [
+      "Support identification, screening, and prioritisation of investment opportunities in renewable energy and climate infrastructure across African markets",
+      "Assess project viability, review and stress-test project finance models, and coordinate due diligence workstreams (legal, technical, environmental, financial)",
+      "Design catalytic blended financing structures combining concessional and commercial capital to mobilise private investment",
+      "Prepare term sheets and financing structure notes, and support negotiations of financing agreements and project documentation",
+      "Ensure compliance with Bank policies, SEFA priorities, DFI blended finance principles, and relevant approval requirements",
+      "Prepare board and management documentation, including investment memoranda",
+      "Monitor portfolio investments and produce portfolio monitoring and completion reports",
+      "Deliver pipeline screening documents and project finance risk assessments aligned with development finance standards",
+    ],
+    requirements: [
+      "Master's degree in finance or a related field",
+      "Minimum 8 years of experience in project finance, infrastructure finance, structured finance, or development finance in emerging markets, preferably Africa",
+      "Strong experience in renewable energy, distributed renewable energy, mini-grids, clean cooking, or energy access sectors",
+      "Demonstrated track record originating and executing transactions in emerging markets",
+      "Hands-on experience with blended finance instruments and first-loss mechanisms",
+      "Advanced financial modelling proficiency and complex due diligence management skills",
+      "Proficiency in English and French",
+      "Ability to draft investment memoranda, term sheets, and board papers",
+    ],
+    applicationNotes:
+      "Contract type: Individual Consultant, Temporary Full Time. Duration: 150 working days over 12 months (renewable). Assignment period: October 2026 – September 2027. Duty station: Abidjan, Côte d'Ivoire or Nairobi, Kenya. Application deadline: 27 August 2026. Apply via the AfDB EOI page (reference 96220).",
     applyUrl:
       "https://www.afdb.org/en/consultants/eoi-consultant-project-finance-expert-pern-96220",
     sourceUrl:
