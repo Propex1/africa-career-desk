@@ -935,49 +935,6 @@ export const OPPORTUNITIES: Opportunity[] = [
 
   // ── BATCH 2026-07-27 ─────────────────────────────────────────────────────
 
-  {
-    id: "ACD-0124",
-    slug: "junior-investment-consultant-lusophone-compact-initiative-pisd-african-development-bank-afdb-remote-abidjan",
-    title: "Junior Investment Consultant - Lusophone Compact Initiative (PISD)",
-    company: "African Development Bank (AfDB)",
-    companyInitials: "AD",
-    logoUrl: "/logos/afdb.jpeg",
-    boardSection: "Jobs",
-    roleType: "DFI / MDB / Investment",
-    experienceBucket: "Analyst",
-    city: "Remote / Abidjan",
-    country: "Côte d'Ivoire",
-    region: "Pan-African",
-    locationDisplay: "Remote / Abidjan, Côte d'Ivoire",
-    deadlineDisplay: "25 Aug 2026",
-    summary:
-      "Junior investment consultancy supporting pipeline development, transaction analysis and implementation under the AfDB's Lusophone Compact Initiative.",
-    aboutRole:
-      "The Lusophone Compact Initiative was established to accelerate private sector development across Portuguese-speaking African countries (PALOPs), including Angola, Cabo Verde, Guinea-Bissau, Mozambique and Sao Tome and Principe. The Junior Investment Consultant will support the Compact Secretariat in implementing a three-year programme of investment, risk mitigation and technical assistance activities, helping to develop a viable pipeline of transactions in these markets.",
-    responsibilities: [
-      "Help identify business opportunities and support non-sovereign operations teams in advancing transactions",
-      "Contribute to active management of the Lusophone Compact pipeline and portfolio",
-      "Develop a pipeline of viable investments and technical assistance opportunities in PALOPs",
-      "Assess investment opportunities using the Bank's evaluation tools, including the Lusophone Compact Guarantee",
-      "Conduct analytical work on financial and economic viability, development impact and structural economic contribution",
-      "Advise on appropriate financial structures for transactions across Lusophone compact countries",
-      "Participate in negotiations and perform due diligence on transactions and sponsors",
-    ],
-    requirements: [
-      "Early-career investment, finance or transaction-analysis experience relevant to pipeline development and investment support",
-    ],
-    applicationNotes:
-      "Closing date: 25 August 2026. Consultancy engagement. Apply via the African Development Bank consultants portal.",
-    applyUrl:
-      "https://www.afdb.org/en/consultants/eoi-junior-investment-consultant-lusophone-compact-initiative-pisd-95710",
-    sourceUrl:
-      "https://www.afdb.org/en/consultants/eoi-junior-investment-consultant-lusophone-compact-initiative-pisd-95710",
-    sourceType: "Company website",
-    applyButtonText: "Apply on official page",
-    lastChecked: "26 Aug 2026",
-    status: "Active",
-  },
-
   // ── PROGRAMMES ────────────────────────────────────────────────────────────
 
   {
