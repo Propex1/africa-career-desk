@@ -2076,9 +2076,34 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French", "Arabic"],
     summary:
       "Senior private-debt investment role leading origination, transaction execution, credit analysis and portfolio management for financial institutions across Sub-Saharan Africa.",
-    requirements: [
-      "Minimum 8 years of relevant experience in the financial sector in an international environment, ideally as a credit analyst or similar",
+    aboutRole:
+      "The Senior Investment Officer will lead financial-institution debt investments across Sub-Saharan Africa, providing senior and subordinated debt to banks and other financial institutions. Based in Cape Town, the role covers relationship development, origination, credit analysis, transaction structuring and active portfolio management across the complete investment cycle. It also includes mentoring junior colleagues and representing responsAbility at relevant industry events.",
+    responsibilities: [
+      "Build relationships and identify debt-investment opportunities with financial institutions across Sub-Saharan Africa",
+      "Originate, execute and actively manage senior and subordinated debt investments",
+      "Conduct on-site and off-site credit and market-risk analysis of counterparties",
+      "Lead due-diligence and scoring exercises with the Credit and Risk teams",
+      "Structure and implement transactions with Risk, Investment Committees, transaction teams and external parties",
+      "Manage the full investment cycle from sourcing through execution, portfolio decisions and monitoring",
+      "Represent responsAbility at conferences, seminars and relevant industry events in a leadership capacity",
+      "Mentor junior members of the investment team",
     ],
+    requirements: [
+      "Master's-level degree in economics, business administration, finance or a related field",
+      "At least eight years of relevant financial-sector experience in an international environment",
+      "Credit-analysis or comparable investment experience",
+      "Strong knowledge of Sub-Saharan African financial markets and banking systems",
+      "Knowledge of small-business and SME finance, leasing and consumer or unsecured finance",
+      "Strong credit-writing, analytical, commercial and presentation skills",
+      "Excellent written and spoken English",
+      "Ability to work independently in a multicultural environment",
+      "Willingness to travel frequently within Sub-Saharan Africa",
+    ],
+    niceToHave: [
+      "French or Arabic language skills",
+    ],
+    applicationNotes:
+      "Based in Cape Town. Recruitment is being managed by AMS on behalf of responsAbility. Applications must be submitted online.",
     applyUrl:
       "https://recruitingapp-2830.umantis.com/Vacancies/2268/Application/New/2",
     sourceUrl:
@@ -2361,6 +2386,42 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "7 Sep 2026",
     summary:
       "Senior EBRD Financial Institutions leadership role in Egypt covering business strategy, deal origination, structuring and execution, portfolio monitoring, client development, blended-finance fundraising and junior-banker leadership.",
+    aboutRole:
+      "The Associate Director, Deputy Head Egypt, Financial Institutions is a senior leadership position supporting both EBRD's Egypt country strategy and its Financial Institutions business. The role combines financial-sector strategy, client development, transaction origination and execution, portfolio oversight, policy engagement, fundraising and junior-banker leadership. It reports to the Director, Financial Institutions Middle East and Africa and works closely with the Managing Director for SEMED and senior country management.",
+    responsibilities: [
+      "Support implementation of EBRD's Egypt country strategy and annual Financial Institutions targets",
+      "Serve as a senior contact for Egyptian financial-sector clients and develop new business",
+      "Lead the expansion of EBRD's financial-institutions pipeline and client footprint in Egypt",
+      "Originate, structure and oversee execution of financial-sector investments",
+      "Ensure transaction quality and compliance with EBRD policies and approval procedures",
+      "Coordinate investment, policy and advisory activities with Banking, Equity, SME Finance and other teams",
+      "Contribute to policy initiatives that improve Egypt's financial sector and investment environment",
+      "Support fundraising for technical assistance and blended-finance programmes",
+      "Oversee annual counterparty credit reviews and continuous portfolio-risk monitoring",
+      "Manage implementation and monitoring issues across the Financial Institutions portfolio",
+      "Review and approve investment documents for committees and the Board",
+      "Manage, mentor and allocate work to Analysts and Associate Bankers",
+      "Represent EBRD with clients, government bodies, industry organisations and external forums",
+    ],
+    requirements: [
+      "Bachelor's degree in economics, business administration, finance or a related field",
+      "Extensive transactional-banking and financial-institutions experience",
+      "Strong understanding of Egypt's financial sector, private investment environment and economic priorities",
+      "Proven experience originating, structuring and executing financial-sector transactions",
+      "Strong portfolio, credit-risk and compliance-management experience",
+      "Strategic decision-making and senior stakeholder-management capabilities",
+      "Experience leading, mentoring and developing junior bankers",
+      "Excellent networking, communication and influencing skills",
+      "Fluency in English",
+      "Ability to operate effectively in a complex matrix organisation",
+    ],
+    niceToHave: [
+      "Higher degree in economics, business administration, finance or a related discipline",
+      "Arabic proficiency",
+      "Prior knowledge of EBRD policies and operational procedures",
+    ],
+    applicationNotes:
+      "Four-year fixed-term contract with potential renewal for another four years. Based in Cairo. Requisition 37012. Deadline: 7 September 2026.",
     applyUrl:
       "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
     sourceUrl:
@@ -2389,6 +2450,39 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "Nairobi-based EBRD role covering Sub-Saharan Africa, supporting economic and policy analysis, capital-markets development, country strategy, transaction work and Banking teams on specific investments.",
+    aboutRole:
+      "The Analyst will join EBRD's Nairobi-based Regional Policy and Strategy team covering Sub-Saharan Africa. The team develops country strategies, economic and political analysis and policy programmes in coordination with Banking and specialist policy teams. The Analyst will contribute to macroeconomic analysis, country diagnostics, reform monitoring and policy work while also supporting specific EBRD investments and transaction-related assignments.",
+    responsibilities: [
+      "Monitor economic growth, macroeconomic risks and structural-reform progress across the region",
+      "Support policy work in green transition, economic governance, competitiveness, human capital, digitalisation and capital-markets development",
+      "Contribute to investment transactions, policy initiatives and analytical assignments",
+      "Support Banking teams on specific investments and related committee or Board presentations",
+      "Prepare macroeconomic assessments, briefings, presentations and short analytical reports",
+      "Contribute to EBRD's Regional Economic Prospects and annual Transition Report",
+      "Support preparation of country diagnostics, country strategies and policy compacts",
+      "Prepare regular growth forecasts and long-term scenarios for Banking financial models",
+      "Conduct research on macroeconomic, sectoral, structural and policy developments",
+      "Coordinate with multidisciplinary and international teams across EBRD",
+    ],
+    requirements: [
+      "Degree-level education in economics or a closely related discipline",
+      "Understanding of economic theory, economic policy and development policy",
+      "Familiarity with emerging markets and transition economies",
+      "Familiarity with finance and investment decision-making",
+      "Experience contributing to project management and multidisciplinary teams",
+      "Ability to communicate complex economic and policy subjects clearly",
+      "Strong research, writing and stakeholder-management skills",
+      "Excellent written and spoken English",
+      "Advanced Excel, PowerPoint and Word skills",
+      "Demonstrated commitment to EBRD's transition mandate",
+    ],
+    niceToHave: [
+      "Education or experience in industrial business, engineering, environmental sciences or energy economics",
+      "Knowledge of a priority policy area",
+      "Knowledge of another language used in EBRD countries of operation",
+    ],
+    applicationNotes:
+      "Regular position based in Nairobi. Resume must be submitted in English. Requisition 36937. Deadline: 1 September 2026.",
     applyUrl:
       "https://jobs.ebrd.com/job/Nairobi-Analyst%2C-Economics-%26-Policy/1427463533/",
     sourceUrl:
@@ -2414,6 +2508,15 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Nairobi, Kenya",
     summary:
       "Nairobi-based Associate opportunity with Verdant Capital, an Africa-focused investment bank and private-markets adviser, with direct relevance to investment banking, corporate finance and private-market transactions.",
+    aboutRole:
+      "Verdant Capital is recruiting an Associate for its Nairobi team. Verdant is a pan-African investment bank and investment manager active in investment banking, corporate finance, private credit, financial inclusion and private-market transactions. Its advisory work includes capital raising, M&A and transaction execution for African companies, financial institutions and private-equity investors.",
+    requirements: [
+      "Associate-level candidate interested in investment banking, corporate finance and private markets",
+      "Ability to work from Verdant Capital's Nairobi office",
+      "CV and academic transcripts must be submitted with the application",
+    ],
+    applicationNotes:
+      "Apply by emailing a CV and academic transcripts to nomuntu.shongwe@verdant-cap.com.",
     applyUrl:
       "mailto:nomuntu.shongwe@verdant-cap.com?subject=Associate%20Level%20-%20Nairobi",
     sourceUrl:
@@ -2439,6 +2542,38 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Cape Town / Johannesburg, South Africa (Remote)",
     summary:
       "Strategic-finance role owning long-range planning, market-entry business cases, funding analyses and complex financial models used by M-KOPA's executive team and board across its African markets.",
+    aboutRole:
+      "The Strategic Finance Analyst will support the financial analysis behind M-KOPA's major growth and investment decisions across African markets. Working directly with the Head of Strategic Finance, the Analyst will own important elements of the company's long-range planning, market-entry business cases, funding analyses and executive-level financial models. The outputs of the role are used by M-KOPA's CEO, COO, leadership team and Board.",
+    responsibilities: [
+      "Develop and maintain M-KOPA's long-range financial plan",
+      "Build base, stretch and market-specific upside and downside scenarios",
+      "Prepare assumption packs and supporting documentation for leadership and the Board",
+      "Build audit-ready models for new-market entry, unit economics and distribution costs",
+      "Analyse funding scenarios and other strategic-finance questions",
+      "Build and maintain complex three-statement financial models",
+      "Identify balance-sheet and cash-flow inconsistencies before executive review",
+      "Support monthly and quarterly budgeting and FP&A cycles",
+      "Produce budget-versus-actual analysis, performance commentary and reporting packs",
+      "Help migrate financial-planning processes into Anaplan",
+      "Structure incomplete business questions into clear analytical models",
+    ],
+    requirements: [
+      "Demonstrable experience building complex three-statement models from scratch",
+      "Experience producing high-quality work under tight deadlines",
+      "Strong understanding of how operational drivers affect financial statements",
+      "Excellent attention to detail",
+      "Ability to document and defend assumptions clearly to senior stakeholders",
+      "Strong problem-structuring and financial-analysis skills",
+      "Ability to work effectively with incomplete information and changing priorities",
+    ],
+    niceToHave: [
+      "Investment-banking or transaction-services background",
+      "Experience with Anaplan or another planning platform",
+      "Fintech, lending or consumer-credit exposure",
+      "Experience with multi-currency and multi-entity African businesses",
+    ],
+    applicationNotes:
+      "Remote position available from Cape Town or Johannesburg. Applications are reviewed on a rolling basis and the vacancy may close early.",
     applyUrl:
       "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
     sourceUrl:
@@ -2464,8 +2599,37 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Johannesburg, South Africa",
     summary:
       "Africa-focused FIC research role producing macro forecasts, fixed-income and currency trade ideas, sovereign-market analysis and investor-facing research across several African countries.",
+    aboutRole:
+      "The Economist will cover approximately three to five African countries within Standard Bank's Africa Region Fixed Income and Currencies Research team. The role combines macroeconomic forecasting, sovereign and financial-market analysis and the development of tradable fixed-income and currency ideas for institutional and corporate clients.",
+    responsibilities: [
+      "Collect, organise and analyse primary macroeconomic data for assigned African countries",
+      "Maintain reliable databases of economic and financial-market information",
+      "Produce medium- and long-term forecasts for growth, inflation, exchange rates and interest rates",
+      "Translate macroeconomic forecasts into fixed-income and currency trading or hedging strategies",
+      "Monitor sovereign credit ratings and African Eurobond pricing",
+      "Contribute trade ideas and analysis to the Africa Sovereign weekly report",
+      "Produce timely commentary for the Africa Brief",
+      "Contribute to the African Financial Markets Handbook",
+      "Develop frameworks for monitoring economic and market trends",
+      "Present country forecasts and market developments to internal and external stakeholders",
+      "Support the Chief Economist at IMF, AfDB and investor meetings",
+      "Organise research roadshows and investor trips involving policymakers and institutional investors",
+      "Produce flash notes and client-facing research",
+    ],
     requirements: [
-      "8–10 years of senior macroeconomic research and financial-markets experience, including fixed-income or currency investment or hedging ideas",
+      "Approximately 8–10 years of senior macroeconomic-research and financial-market experience",
+      "Experience producing fixed-income or currency investment ideas",
+      "Experience developing currency-hedging ideas for corporate clients",
+      "Strong economic forecasting and financial-market-analysis skills",
+      "Knowledge of African sovereign, rates and currency markets",
+      "Ability to manage and interpret large economic datasets",
+      "Strong written and verbal communication skills",
+      "Ability to present investment views to institutional clients and senior policymakers",
+    ],
+    niceToHave: [
+      "Postgraduate degree in business, commerce, finance or accounting",
+      "Bond-pricing, hedging and investment-analysis expertise",
+      "Experience engaging the IMF, World Bank, AfDB or other international institutions",
     ],
     applyUrl:
       "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
@@ -2492,8 +2656,34 @@ export const OPPORTUNITIES: Opportunity[] = [
     locationDisplay: "Johannesburg, South Africa",
     summary:
       "Investment-banking role leading Equity Finance & Investments solutions across the transaction lifecycle for Standard Bank's Real Estate Finance franchise, including structuring, modelling and client execution.",
+    aboutRole:
+      "The Vice President will lead and deliver Equity Finance and Investments solutions within Standard Bank's Real Estate Finance franchise. The position covers the end-to-end design and execution of client solutions, including origination, structuring, financial analysis, valuation, risk coordination and transaction implementation across South Africa and other African markets.",
+    responsibilities: [
+      "Lead small and moderately complex Equity Finance and Investments transactions",
+      "Support senior team members on larger or more complex solutions",
+      "Manage transactions across the full deal lifecycle",
+      "Design and implement client-focused equity-finance and investment solutions",
+      "Originate and execute transactions across South African and African markets",
+      "Lead and coordinate multidisciplinary deal teams",
+      "Conduct financial analysis and prepare transaction reports",
+      "Review, challenge and validate financial models and valuations",
+      "Coordinate with specialist risk teams",
+      "Monitor portfolio risk and exposure",
+      "Interpret relevant lending and regulatory requirements",
+      "Lead client engagement and present innovative financing solutions",
+      "Contribute to Real Estate Finance revenue and client-experience targets",
+    ],
     requirements: [
-      "5–7 years of banking experience in advisory, private equity or debt solutions, with South Africa or Africa market experience",
+      "Postgraduate degree in finance or accounting",
+      "Approximately 5–7 years of banking experience",
+      "Background in advisory, private equity or debt solutions",
+      "Experience leading and coordinating transaction teams",
+      "South African or broader African market experience",
+      "Knowledge of local and global lending and equity-finance products",
+      "Strong financial-analysis, valuation and modelling-review skills",
+      "Experience working with specialist risk teams",
+      "Portfolio-monitoring and regulatory-framework experience",
+      "Strong client-management and presentation capabilities",
     ],
     applyUrl:
       "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
@@ -2523,9 +2713,40 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "26 Aug 2026",
     summary:
       "IDC transaction role evaluating funding applications, performing financial and commercial due diligence, structuring financing instruments and negotiating investment transactions.",
-    requirements: [
-      "5–8 years of relevant experience, including approximately 2–3 years in transaction assessment and closing",
+    aboutRole:
+      "The Transaction Associate evaluates funding applications and structures transactions that support IDC's business-unit objectives and industry-development mandate. The role performs financial, technical and marketing due diligence, identifies transaction risks and prepares funding proposals for IDC approval. It also manages relationships with applicants and portfolio clients and supports transactions through approval and initial drawdown.",
+    responsibilities: [
+      "Evaluate and structure transactions using appropriate IDC financing instruments",
+      "Conduct financial, technical and marketing due diligence on funding applications",
+      "Structure and negotiate financial, legal, commercial, environmental and health-and-safety arrangements",
+      "Identify financial, operational, legal and execution risks and recommend mitigation measures",
+      "Participate in multidisciplinary due-diligence teams",
+      "Optimise transactions to support IDC's strategic and industry-development objectives",
+      "Prepare preliminary assessments and comprehensive credit proposals",
+      "Conduct peer reviews of assessments and credit submissions",
+      "Maintain accurate transaction documentation and audit trails",
+      "Manage relationships with applicants, enquirers and portfolio clients",
+      "Coordinate with IDC business units and support functions",
+      "Mentor and coach Business Analysts",
     ],
+    requirements: [
+      "Relevant commercial or technical Honours degree or equivalent",
+      "Between five and eight years of relevant experience",
+      "Approximately two to three years of transaction assessment and closing experience",
+      "Experience managing approved transactions through legal agreements and first drawdown",
+      "Competence in at least two due-diligence disciplines: financial, technical or marketing",
+      "Strong grounding in at least one due-diligence discipline",
+      "Ability to interpret financial statements",
+      "Financial acumen and transaction-risk assessment skills",
+      "Investment or portfolio-management knowledge",
+      "Strong report-writing, planning, negotiation and stakeholder-management skills",
+    ],
+    niceToHave: [
+      "Sector-specific knowledge",
+      "Knowledge of IDC financing products",
+    ],
+    applicationNotes:
+      "Permanent P-Band position in Gauteng. Requisition IDC00793.",
     applyUrl:
       "https://careers.idc.co.za/details.html?jobId=16793&jobTitle=Transaction+Associate+",
     sourceUrl:
@@ -2554,9 +2775,39 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "IDC investment role covering due diligence, transaction structuring, financial and shareholder returns, deal execution and portfolio management.",
-    requirements: [
-      "5–8 years of relevant experience, including 2–3 years in transaction assessment and closing",
+    aboutRole:
+      "The Dealmaker assesses financing applications and structures investments that advance IDC's unit objectives and industrial-development mandate. The role combines due diligence, deal structuring, risk assessment, credit-proposal preparation and account management through first drawdown.",
+    responsibilities: [
+      "Evaluate and structure transactions using IDC financing instruments",
+      "Conduct financial, technical and marketing due diligence",
+      "Design and negotiate financial, legal, commercial and environmental transaction terms",
+      "Identify and mitigate transaction risks",
+      "Participate in multidisciplinary due-diligence teams",
+      "Optimise transactions against IDC and industry-development objectives",
+      "Manage approved transactions through first drawdown",
+      "Prepare preliminary assessments and comprehensive credit proposals",
+      "Maintain accurate client and transaction data",
+      "Manage relationships with applicants and portfolio clients",
+      "Coordinate transaction requirements with IDC departments",
+      "Mentor and coach Business Analysts",
     ],
+    requirements: [
+      "Relevant commercial qualification, CA qualification or technical Honours degree",
+      "Between five and eight years of relevant experience",
+      "Approximately two to three years in transaction assessment and closing",
+      "Competence in at least two of the financial, technical or marketing due-diligence disciplines",
+      "Strong grounding in at least one due-diligence discipline",
+      "Financial-statement interpretation experience",
+      "Financial acumen, deal-structuring and risk-mitigation skills",
+      "Investment or portfolio-management knowledge",
+      "Strong planning, report-writing, negotiation and stakeholder-management skills",
+    ],
+    niceToHave: [
+      "Sector-specific knowledge",
+      "Knowledge of IDC financial products",
+    ],
+    applicationNotes:
+      "Permanent P-Band position in Gauteng. Requisition IDC00794. Deadline: 1 September 2026.",
     applyUrl:
       "https://careers.idc.co.za/apply/index.html?jobId=PD4FK026203F3VBQB6868QWCT-16805&langCode=en_GB",
     sourceUrl: "https://careers.idc.co.za/",
@@ -2584,9 +2835,38 @@ export const OPPORTUNITIES: Opportunity[] = [
     deadlineDisplay: "1 Sep 2026",
     summary:
       "Senior IDC investment role leading complex due diligence, structuring, negotiation, transaction execution and portfolio and investment management.",
-    requirements: [
-      "8–10 years of relevant experience, including substantial transaction assessment, structuring and closing experience",
+    aboutRole:
+      "The Senior Dealmaker leads the assessment, structuring and execution of complex IDC investments. The position is responsible for leading multidisciplinary due-diligence teams, ensuring the financial soundness of credit submissions, negotiating transaction structures and mentoring Business Analysts and Dealmakers.",
+    responsibilities: [
+      "Evaluate and structure complex transactions using IDC financing instruments",
+      "Ensure the financial soundness of credit submissions",
+      "Lead financial, technical and marketing due diligence",
+      "Design and negotiate financial and legal relationships between IDC and clients",
+      "Identify and mitigate complex transaction risks",
+      "Lead due-diligence teams on high-value or complex investments",
+      "Align transactions with business-unit strategy and industrial-development objectives",
+      "Manage approved transactions through first drawdown",
+      "Prepare reports for Credit and other approval committees",
+      "Conduct peer reviews across due-diligence disciplines",
+      "Support business-unit strategy and action-plan implementation",
+      "Advise, train and mentor Business Analysts and Dealmakers",
+      "Lead transaction teams and coordinate internal stakeholders",
     ],
+    requirements: [
+      "Relevant commercial, CA or technical Honours degree",
+      "Between eight and ten years of relevant experience",
+      "Extensive transaction-assessment and closing experience",
+      "Experience leading complex transactions",
+      "Competence across financial, technical and marketing due diligence",
+      "Ability to assess legal and other transaction risks",
+      "Experience conducting peer reviews",
+      "Strong financial-statement and financial-model analysis skills",
+      "Knowledge of financing instruments, market conditions and relevant technologies",
+      "Proven coaching, mentoring and team-leadership capability",
+      "Strong negotiation, communication and stakeholder-management skills",
+    ],
+    applicationNotes:
+      "Permanent M-Band position in Gauteng. Requisition IDC00795. Deadline: 1 September 2026.",
     applyUrl:
       "https://careers.idc.co.za/apply/index.html?jobId=PD4FK026203F3VBQB6868QWCT-16813&langCode=en_GB",
     sourceUrl: "https://careers.idc.co.za/",
@@ -2613,9 +2893,36 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["Arabic", "English"],
     summary:
       "Institutional-equities trading role executing client trades, developing market and stock ideas, supporting structured and access products and expanding institutional client relationships.",
-    requirements: [
-      "Minimum 4 years of experience with capital markets, investment products and trading",
+    aboutRole:
+      "The Associate is responsible for processing and executing institutional-client trades across different markets. The role combines trade execution, client coverage, stock and market analysis, order management, regulatory compliance and coordination with local brokers and back-office teams.",
+    responsibilities: [
+      "Develop business with institutional clients through trade execution and market coverage",
+      "Provide clients with market data, news, market commentary and trade ideas",
+      "Receive and execute client orders through phone, email, Bloomberg and FIX channels",
+      "Monitor stock performance and determine appropriate execution strategies",
+      "Execute VWAP, volume-restricted, price-restricted and benchmarked orders",
+      "Book daily executions in internal order-management systems",
+      "Review invoices and send confirmations to clients",
+      "Maintain relationships with clients, brokers and back-office teams",
+      "Follow fundamental and technical research and regional market developments",
+      "Offer access and structured-product solutions",
+      "Support cross-border growth between trading desks",
+      "Ensure compliance with market, AML, CTF and sanctions requirements",
     ],
+    requirements: [
+      "Bachelor's degree",
+      "At least four years of experience in a similar role",
+      "Strong understanding of capital markets and investment products",
+      "Experience in institutional sales, client service or trading",
+      "Strong analytical and problem-solving skills",
+      "Very good written and spoken Arabic and English",
+      "Good Word, Excel and PowerPoint skills",
+      "Excellent communication and relationship-building abilities",
+      "Ability to work under pressure and manage changing deadlines",
+      "Consistent focus on accuracy and high-quality execution",
+    ],
+    applicationNotes:
+      "Full-time Associate position in Giza, Egypt. Only shortlisted candidates are likely to receive a response.",
     applyUrl:
       "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
     sourceUrl:
@@ -2643,6 +2950,41 @@ export const OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English", "French"],
     summary:
       "Casablanca-based equity-research role conducting international stock analysis, financial and economic modelling, valuation work and client-facing research within SG ATS/Bernstein.",
+    aboutRole:
+      "The Equity Research Associate will join SG Africa Technologies & Services in Casablanca and work closely with senior equity analysts based in London and Paris. The role supports Bernstein's international equity-research platform through company analysis, financial modelling, sector research, client publications and marketing materials.",
+    responsibilities: [
+      "Conduct financial research and analysis on international listed companies",
+      "Support preparation of equity-research reports distributed to clients",
+      "Assist senior analysts with presentations, pitches and marketing campaigns",
+      "Develop sector expertise alongside senior analysts",
+      "Collect public information and verify the reliability of sources",
+      "Analyse company, sector and economic information",
+      "Build and maintain financial and economic models",
+      "Ensure models and research deliverables meet Group standards",
+      "Develop value-added approaches to data collection and analysis",
+      "Prepare regular publications covering sector and market developments",
+      "Comply with financial-research regulations and internal procedures",
+      "Respond to bespoke client-research requests within compliance requirements",
+    ],
+    requirements: [
+      "Master's-equivalent degree from an engineering school, business school or university",
+      "Academic specialisation relevant to financial analysis",
+      "Strong interest in investment and equity analysis",
+      "Excellent quantitative and analytical skills",
+      "Strong written and spoken English and French",
+      "Intellectual curiosity and strong attention to detail",
+      "Proactive and critical-thinking approach",
+      "Ability to work effectively in a demanding, collaborative team",
+      "Strong interpersonal and communication skills",
+    ],
+    niceToHave: [
+      "CFA studies completed or planned",
+      "Python or VBA programming experience",
+      "Statistical-analysis skills",
+      "Financial-modelling, valuation or M&A-analysis experience",
+    ],
+    applicationNotes:
+      "Permanent role based in Casablanca with possible remote working. The employee will join the Bernstein research platform through SG ATS. Reference 260008IB.",
     applyUrl:
       "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
     sourceUrl:
