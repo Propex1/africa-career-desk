@@ -2889,6 +2889,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     title: "Investment Manager",
     company: "Pula",
     companyInitials: "Pu",
+    logoUrl: "/logos/Pula logo.png",
     boardSection: "Jobs",
     roleType: "Strategic Investment / M&A",
     experienceBucket: "Senior",
