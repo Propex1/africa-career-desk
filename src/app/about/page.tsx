@@ -49,6 +49,9 @@ export default function AboutPage() {
           capital, venture capital, climate finance and strategy.
         </p>
         <p className="mt-[18px] text-[16px] leading-[1.7] text-acd-green-body">
+          New opportunities are added regularly.
+        </p>
+        <p className="mt-[18px] text-[16px] leading-[1.7] text-acd-green-body">
           We are not a general job board. We focus on a smaller number of
           genuinely relevant opportunities from credible employers, making them
           easier to find and compare.
