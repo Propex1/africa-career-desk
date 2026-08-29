@@ -34,6 +34,27 @@ Run the deterministic test suite:
 npm run acd:test
 ```
 
+Prepare an immutable, local-only employer research handoff for a stable batch. The dry run previews a small handoff without writing files:
+
+```bash
+npm run acd:research:prepare -- --batch batch-08 --dry-run
+```
+
+To create a task snapshot, omit `--dry-run`. It writes `research-task.json` and independently resumable employer result files under `data/acd-runtime/research/<batch-run-id>/`:
+
+```bash
+npm run acd:research:prepare -- --batch batch-08 --batch-run batch-08-example
+npm run acd:research:validate -- --batch-run batch-08-example
+```
+
+For a deliberately limited pilot, use explicit employers from one real batch. The snapshot retains the real batch ID but is marked `pilot`; it does not update any batch-cycle state:
+
+```bash
+npm run acd:research:prepare -- --batch batch-07 --pilot --employer employer-128-u-s-international-development-finance-corporation-dfc --employer employer-132-west-african-development-bank-boad
+```
+
+Validation is read-only. It checks task/result schema versions, exact source observations, and honest coverage status; it never imports results into vacancies or changes the SQLite database. See `tools/acd/research-instructions.md` for the Codex handoff instructions.
+
 ## Data and workflow
 
 The SQLite database and generated manifests live under `data/acd-runtime/`, which is ignored by Git. Versioned registry definitions, migrations, source adapters and tests live in `tools/acd/`.

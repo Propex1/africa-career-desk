@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africacareerdesk.local/schemas/employer-research-result.v1.json",
+  "title": "EmployerResearchResult",
+  "type": "object",
+  "required": ["schemaVersion", "taskId", "batchRunId", "employerId", "completedAt", "status", "coverageStatus", "sourceObservations", "opportunities"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "taskId": { "type": "string", "minLength": 1 },
+    "batchRunId": { "type": "string", "minLength": 1 },
+    "employerId": { "type": "string", "minLength": 1 },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["completed", "completed_with_limitations"] },
+    "coverageStatus": { "enum": ["complete", "limited"] },
+    "limitationSummary": { "type": "string", "minLength": 1 },
+    "sourceObservations": { "type": "array", "items": { "$ref": "#/$defs/observation" } },
+    "opportunities": { "type": "array", "items": { "$ref": "#/$defs/opportunity" } }
+  },
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "required": ["sourceId", "outcome", "note"],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "outcome": { "enum": ["checked_no_openings", "checked_openings_found", "inaccessible", "not_checked", "not_applicable"] },
+        "checkedAt": { "type": "string", "format": "date-time" },
+        "evidenceUrl": { "type": "string", "format": "uri" },
+        "note": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "opportunity": {
+      "type": "object",
+      "required": ["title", "evidenceUrl"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "location": { "type": "string" },
+        "requisitionId": { "type": "string" },
+        "applicationUrl": { "type": "string", "format": "uri" },
+        "evidenceUrl": { "type": "string", "format": "uri" },
+        "summary": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -6,6 +6,7 @@ import type { Classification, CollectedVacancy, DecisionAction, DuplicateMatch, 
 import { normalizeUrl } from "./normalize.ts";
 import { existingMetadata } from "./existing.ts";
 import { assessFreshness, contentFingerprint } from "./freshness.ts";
+import { batches, employerRegistry } from "./batches.ts";
 
 export class AcdDatabase {
   readonly db: DatabaseSync;
@@ -17,7 +18,7 @@ export class AcdDatabase {
   }
   private migrate() {
     this.db.exec("CREATE TABLE IF NOT EXISTS schema_migrations (id TEXT PRIMARY KEY, applied_at TEXT NOT NULL)");
-    for (const id of ["001_initial", "002_add_department", "003_add_freshness"]) {
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches"]) {
       if (this.db.prepare("SELECT id FROM schema_migrations WHERE id = ?").get(id)) continue;
       this.db.exec(readFileSync(resolve(this.root, `tools/acd/migrations/${id}.sql`), "utf8"));
       this.db.prepare("INSERT INTO schema_migrations VALUES (?, ?)").run(id, new Date().toISOString());
@@ -28,6 +29,23 @@ export class AcdDatabase {
     for (const item of employers) employer.run(item.id, item.name, JSON.stringify(item.aliases), item.logoUrl ?? null);
     const source = this.db.prepare("INSERT OR REPLACE INTO sources (id,employer_id,source_type,url,priority,required,active,access_method,last_verified,expected_coverage,notes) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
     for (const item of sources) source.run(item.id, item.employerId, item.type, item.url, item.priority, Number(item.required), Number(item.active), item.accessMethod, item.lastVerified, item.expectedCoverage, item.notes);
+    const batch = this.db.prepare("INSERT OR IGNORE INTO batches (id,sequence,status,created_at) VALUES (?,?,?,?)");
+    const membership = this.db.prepare("INSERT OR IGNORE INTO batch_employers (batch_id,employer_id,ordinal) VALUES (?,?,?)");
+    const research = this.db.prepare("INSERT OR IGNORE INTO employer_research (batch_id,employer_id,status) VALUES (?,?,?)");
+    for (const item of batches) { batch.run(item.id, item.sequence, "Not researched", new Date().toISOString()); item.employerIds.forEach((employerId, ordinal) => { membership.run(item.id, employerId, ordinal + 1); research.run(item.id, employerId, "Not researched"); }); }
+  }
+
+  batchOverview(batchId?: string) {
+    const batch = (batchId ? this.db.prepare("SELECT * FROM batches WHERE id=?").get(batchId) : undefined) as Record<string, unknown> | undefined ?? this.db.prepare("SELECT * FROM batches WHERE status != 'Completed - awaiting publication' ORDER BY sequence LIMIT 1").get() as Record<string, unknown> | undefined ?? this.db.prepare("SELECT * FROM batches ORDER BY COALESCE(research_completed_at, '0000-00-00'),sequence LIMIT 1").get() as Record<string, unknown> | undefined;
+    if (!batch) return null;
+    const employers = this.db.prepare("SELECT e.id,e.name,er.status,er.completed_at,er.limitation_reason,er.manual_follow_up,er.acknowledged_at FROM batch_employers be JOIN employers e ON e.id=be.employer_id JOIN employer_research er ON er.batch_id=be.batch_id AND er.employer_id=be.employer_id WHERE be.batch_id=? ORDER BY be.ordinal").all(batch.id);
+    return { ...batch, totalBatches: batches.length, employers, registry: { included: employerRegistry.employers.length, sourceWorkbook: employerRegistry.sourceWorkbook, sourceSheet: employerRegistry.sourceSheet } };
+  }
+  acknowledgeEmployerLimitation(batchId: string, employerId: string, note: string, manualFollowUp = false) { this.db.prepare("UPDATE employer_research SET status=?,acknowledged_at=?,acknowledgement_note=?,manual_follow_up=? WHERE batch_id=? AND employer_id=?").run(manualFollowUp ? "Manual follow-up required" : "Complete with limitations", new Date().toISOString(), note, Number(manualFollowUp), batchId, employerId); }
+  completeBatch(batchId: string) {
+    const outstanding = Number((this.db.prepare("SELECT COUNT(*) AS count FROM employer_research WHERE batch_id=? AND status NOT IN ('Complete','Complete with limitations')").get(batchId) as { count: number }).count);
+    if (outstanding) throw new Error(`${outstanding} employer source-coverage result(s) still need completion or acknowledgement.`);
+    this.db.prepare("UPDATE batches SET status='Completed - awaiting publication',review_completed_at=? WHERE id=?").run(new Date().toISOString(), batchId);
   }
   createRun(resumedFrom?: number): number { return Number(this.db.prepare("INSERT INTO runs (status,started_at,resumed_from) VALUES ('running',?,?)").run(new Date().toISOString(), resumedFrom ?? null).lastInsertRowid); }
   latestInterruptedRun(): number | undefined { const row = this.db.prepare("SELECT id FROM runs WHERE status IN ('running','interrupted') ORDER BY id DESC LIMIT 1").get() as { id?: number } | undefined; return row?.id; }
@@ -57,7 +75,7 @@ export class AcdDatabase {
     const update = this.db.prepare("UPDATE vacancy_freshness SET freshness_status=?,freshness_reason=? WHERE source_id=? AND source_key=?");
     for (const row of rows) { const assessed = assessFreshness({ publishedAt: row.official_posted_at, deadline: row.official_deadline, applicationRouteStatus: row.application_route_status, sourcePresent: true, manualConfirmedAt: row.manual_confirmed_at }); update.run(assessed.status, assessed.reason, row.source_id, row.source_key); }
   }
-  dashboard() {
+  dashboard(batchId?: string) {
     this.refreshFreshnessAssessments();
     const latest = this.db.prepare("SELECT * FROM runs ORDER BY id DESC LIMIT 1").get() as Record<string, unknown> | undefined;
     if (!latest) return { run: null, checks: [], vacancies: [], totals: {} };
@@ -66,7 +84,7 @@ export class AcdDatabase {
     const vacancies = this.db.prepare("SELECT v.*,e.name AS employer_name,e.logo_url,d.action,d.edited_json,d.reviewer_note,f.first_seen_at,f.last_successfully_seen_at,f.last_checked_at,f.official_posted_at,f.official_deadline,f.content_fingerprint,f.application_route_status,f.freshness_status,f.freshness_reason,f.manual_confirmed_at,f.manual_confirmation_note,(SELECT COUNT(*) FROM duplicate_matches dm WHERE dm.vacancy_id=v.id) AS duplicate_count FROM vacancies v JOIN employers e ON e.id=v.employer_id LEFT JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.run_id=? ORDER BY v.id DESC").all(runId) as Array<Record<string, unknown>>;
     const matches = this.db.prepare("SELECT vacancy_id AS vacancyId,kind,basis,external_reference AS externalReference,detail FROM duplicate_matches WHERE vacancy_id IN (SELECT id FROM vacancies WHERE run_id=?)").all(runId) as Array<{ vacancyId: number; kind: string; basis: string; externalReference?: string; detail: string }>;
     const decoratedVacancies = vacancies.map((vacancy) => ({ ...vacancy, duplicateMatches: matches.filter((match) => match.vacancyId === vacancy.id).map((match) => ({ ...match, existing: existingMetadata(this.root, match.externalReference) })) }));
-    return { run: latest, totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
+    return { run: latest, batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
   }
   decide(vacancyId: number, action: DecisionAction, edited: unknown, note?: string) {
     if (action === "approved") { const row = this.db.prepare("SELECT f.freshness_status FROM vacancies v LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.id=?").get(vacancyId) as { freshness_status?: string } | undefined; if (row?.freshness_status !== "verified_active") throw new Error("Freshness must be confirmed before approving this vacancy."); }

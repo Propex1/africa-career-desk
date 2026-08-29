@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africacareerdesk.local/schemas/employer-research-result.v1.1.json",
+  "title": "EmployerResearchResult v1.1",
+  "type": "object",
+  "required": ["schemaVersion", "taskId", "batchRunId", "employerId", "completedAt", "status", "coverage", "sourceObservations", "activeCandidates", "expiredFindings", "discoveredSources"],
+  "properties": {
+    "schemaVersion": { "const": "1.1.0" },
+    "taskId": { "type": "string", "minLength": 1 },
+    "batchRunId": { "type": "string", "minLength": 1 },
+    "employerId": { "type": "string", "minLength": 1 },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["completed", "completed_with_limitations"] },
+    "coverage": { "$ref": "#/$defs/coverage" },
+    "sourceObservations": { "type": "array", "items": { "$ref": "#/$defs/observation" } },
+    "activeCandidates": { "type": "array", "items": { "$ref": "#/$defs/candidate" } },
+    "expiredFindings": { "type": "array", "items": { "$ref": "#/$defs/expiredFinding" } },
+    "discoveredSources": { "type": "array", "items": { "$ref": "#/$defs/discoveredSource" } }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"] },
+    "observation": {
+      "type": "object",
+      "required": ["sourceId", "scope", "sourceType", "outcome", "note"],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "scope": { "enum": ["task", "additional"] },
+        "sourceType": { "enum": ["official_careers", "official_ats", "linkedin_company", "linkedin_jobs", "other_verified", "google_query"] },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "outcome": { "enum": ["checked_no_openings", "checked_openings_found", "inaccessible", "not_checked", "not_applicable", "partially_checked"] },
+        "checkedAt": { "type": "string", "format": "date-time" },
+        "evidenceUrl": { "type": "string", "format": "uri" },
+        "note": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["overallStatus", "overallReason", "paginationCompleted", "dimensions"],
+      "properties": {
+        "overallStatus": { "enum": ["complete", "limited"] },
+        "overallReason": { "type": "string", "minLength": 1 },
+        "paginationCompleted": { "type": "boolean" },
+        "dimensions": { "type": "array", "items": { "$ref": "#/$defs/coverageDimension" } }
+      },
+      "additionalProperties": false
+    },
+    "coverageDimension": {
+      "type": "object",
+      "required": ["dimension", "status", "reason", "sourceIds"],
+      "properties": {
+        "dimension": { "enum": ["critical_official_sources", "ats_application_platform", "google_public_web", "linkedin_discovery", "other_configured_sources"] },
+        "status": { "enum": ["complete", "partial", "inaccessible", "not_applicable"] },
+        "reason": { "type": "string", "minLength": 1 },
+        "sourceIds": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      },
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "required": ["title", "opportunityType", "location", "requisitionId", "officialPostingDate", "officialDeadline", "applicationUrl", "applicationRouteStatus", "evidenceUrl", "evidenceQuality", "evidenceSummary", "editorialClassification", "classificationReason", "freshnessStatus", "freshnessReason", "missingFields", "duplicateEvidence"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "opportunityType": { "enum": ["Job", "Programme", "Open Application"] },
+        "location": { "$ref": "#/$defs/nullableString" },
+        "requisitionId": { "$ref": "#/$defs/nullableString" },
+        "officialPostingDate": { "$ref": "#/$defs/nullableString" },
+        "officialDeadline": { "$ref": "#/$defs/nullableString" },
+        "applicationUrl": { "type": ["string", "null"], "format": "uri" },
+        "applicationRouteStatus": { "enum": ["available", "broken", "unknown"] },
+        "evidenceUrl": { "type": "string", "format": "uri" },
+        "evidenceQuality": { "enum": ["official", "authorized", "secondary", "insufficient"] },
+        "evidenceSummary": { "type": "string", "minLength": 1 },
+        "editorialClassification": { "enum": ["strong_candidate", "borderline_review", "out_of_scope", "insufficient_evidence", "existing_on_acd", "possible_duplicate"] },
+        "classificationReason": { "type": "string", "minLength": 1 },
+        "freshnessStatus": { "enum": ["verified_active", "check_freshness", "closed_expired"] },
+        "freshnessReason": { "type": "string", "minLength": 1 },
+        "missingFields": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "duplicateEvidence": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      },
+      "additionalProperties": false
+    },
+    "expiredFinding": {
+      "type": "object",
+      "required": ["title", "employer", "sourceUrl", "applicationUrl", "officialPostingDate", "officialDeadline", "closureEvidence", "checkedAt", "exclusionReason"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "employer": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "applicationUrl": { "type": ["string", "null"], "format": "uri" },
+        "officialPostingDate": { "$ref": "#/$defs/nullableString" },
+        "officialDeadline": { "$ref": "#/$defs/nullableString" },
+        "closureEvidence": { "type": "string", "minLength": 1 },
+        "checkedAt": { "type": "string", "format": "date-time" },
+        "exclusionReason": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "discoveredSource": {
+      "type": "object",
+      "required": ["sourceType", "url", "provider", "officialEvidenceUrl", "recommendedRegistryAction", "confidence", "discoveredAt"],
+      "properties": {
+        "sourceType": { "enum": ["official_careers", "official_ats", "linkedin_company", "linkedin_jobs", "other_verified", "google_query"] },
+        "url": { "type": "string", "format": "uri" },
+        "provider": { "$ref": "#/$defs/nullableString" },
+        "officialEvidenceUrl": { "type": "string", "format": "uri" },
+        "recommendedRegistryAction": { "enum": ["add_official_source", "review_registry_source", "no_action"] },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "discoveredAt": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,4 +1,5 @@
 import type { Employer, Source } from "./types.ts";
+import { employerRegistry } from "./batches.ts";
 
 export const employers: Employer[] = [
   { id: "afreximbank", name: "Afreximbank / FEDA", aliases: ["Afreximbank", "African Export-Import Bank", "FEDA", "Fund for Export Development in Africa"], logoUrl: "/logos/afreximbank.jpg" },
@@ -19,4 +20,7 @@ export const sources: Source[] = [
   { id: "proparco-cornerstone", employerId: "proparco", type: "official_ats", url: "https://afd.csod.com/ux/ats/careersite/5/home?c=afd&lang=en-US", priority: 1, required: true, active: true, accessMethod: "web_page", lastVerified: "2026-08-28", expectedCoverage: "AFD/Proparco public vacancies when search endpoint is available", notes: "Official AFD Cornerstone ATS. Public API endpoint requires further adapter work." },
   { id: "proparco-linkedin-company", employerId: "proparco", type: "linkedin_company", url: "https://www.linkedin.com/company/proparco/", priority: 3, required: true, active: true, accessMethod: "manual_review", lastVerified: "2026-08-28", expectedCoverage: "Public company posts only when accessible", notes: "Manual LinkedIn review required." },
   { id: "proparco-linkedin-jobs", employerId: "proparco", type: "linkedin_jobs", url: "https://www.linkedin.com/company/proparco/jobs/", priority: 3, required: true, active: true, accessMethod: "manual_review", lastVerified: "2026-08-28", expectedCoverage: "Partial, public indexed job visibility", notes: "Manual LinkedIn review required." },
+  ...employerRegistry.employers.flatMap((employer) => employer.otherVerifiedSources.map((source) => ({ id: `registry-${source.id}`, employerId: employer.id, type: source.type, url: source.url, priority: source.required ? 1 : 2, required: source.required, active: false, accessMethod: source.accessMethod, lastVerified: "", expectedCoverage: "Configured from the researched employer workbook; manual source setup is still required.", notes: employer.manualReviewNotes } satisfies Source))),
 ];
+
+employers.push(...employerRegistry.employers.map((employer) => ({ id: employer.id, name: employer.displayName, aliases: employer.aliases })));
