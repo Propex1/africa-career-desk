@@ -1,5 +1,15 @@
 export type BoardSection = "Jobs" | "Programmes" | "Open Applications";
 
+export type RoleType =
+  | "Private Equity, VC & Private Credit"
+  | "Infrastructure & Project Finance"
+  | "Development Finance & Multilaterals"
+  | "Climate & Impact Investing"
+  | "Investment Banking & Advisory"
+  | "Corporate Development, M&A & Strategy"
+  | "Fund Management, Treasury & Investor Relations"
+  | "Legal, Risk & Compliance";
+
 export type SourceType =
   | "Company website"
   | "Official ATS"
@@ -15,7 +25,7 @@ export type Opportunity = {
   companyInitials: string;
   logoUrl?: string;
   boardSection: BoardSection;
-  roleType: string;
+  roleType: RoleType;
   experienceBucket?: string;
   city?: string;
   country?: string;
