@@ -15,6 +15,7 @@ interface FilterDropdownProps {
   selected: string[];
   onToggle: (value: string) => void;
   onClear: () => void;
+  className?: string;
 }
 
 function FilterDropdown({
@@ -25,6 +26,7 @@ function FilterDropdown({
   selected,
   onToggle,
   onClear,
+  className,
 }: FilterDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -49,7 +51,7 @@ function FilterDropdown({
       : `${label} · ${selected.length}`;
 
   return (
-    <div ref={ref} className="relative flex-1 min-w-[160px]">
+    <div ref={ref} className={`relative w-full sm:min-w-0 lg:flex-1 lg:min-w-[160px] ${className ?? ""}`}>
       <button
         aria-haspopup="listbox"
         aria-expanded={isOpen}
@@ -63,7 +65,7 @@ function FilterDropdown({
       >
         <span className="flex items-center gap-[10px] min-w-0">
           {icon}
-          <span className="truncate">{displayLabel}</span>
+          <span className="whitespace-normal text-left leading-5 sm:truncate">{displayLabel}</span>
         </span>
         <svg
           width="16"
@@ -462,7 +464,7 @@ export default function JobsBoard({
       </div>
 
       {/* Filters */}
-      <div className="mt-[18px] flex flex-wrap gap-3">
+      <div className="mt-[18px] flex flex-col gap-3 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:flex-wrap">
         <FilterDropdown
           label="Region"
           icon={RegionIcon}
@@ -507,6 +509,7 @@ export default function JobsBoard({
           selected={filters.language}
           onToggle={(v) => toggle("language", v)}
           onClear={() => clearFilter("language")}
+          className="sm:col-span-2 lg:col-span-1"
         />
       </div>
 

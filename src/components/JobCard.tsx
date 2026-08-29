@@ -55,14 +55,14 @@ export default function JobCard({ job }: JobCardProps) {
       </div>
 
       {/* Tags */}
-      <div className="w-full md:w-[348px] shrink-0 flex flex-wrap gap-2">
-        <span className="bg-acd-tag-green-bg text-acd-tag-green-text text-[12px] font-semibold px-3 py-[6px] rounded-[8px] whitespace-nowrap">
+      <div className="w-full md:w-[348px] min-w-0 shrink-0 flex flex-wrap gap-2">
+        <span className="max-w-full bg-acd-tag-green-bg text-acd-tag-green-text text-[12px] font-semibold px-3 py-[6px] rounded-[8px] whitespace-normal break-words leading-[1.35]">
           {job.roleType}
         </span>
         {otherTags.map((tag) => (
           <span
             key={tag}
-            className="bg-acd-tag-muted-bg text-acd-tag-muted-text text-[12px] font-medium px-3 py-[6px] rounded-[8px] whitespace-nowrap"
+            className="max-w-full bg-acd-tag-muted-bg text-acd-tag-muted-text text-[12px] font-medium px-3 py-[6px] rounded-[8px] whitespace-normal break-words leading-[1.35]"
           >
             {tag}
           </span>

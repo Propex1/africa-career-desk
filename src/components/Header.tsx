@@ -37,11 +37,12 @@ export default function Header() {
 
   return (
     <header className="border-b border-acd-border sticky top-0 z-40 bg-[rgba(251,251,248,0.9)] backdrop-saturate-[140%] backdrop-blur-[6px]">
-      <div className="max-w-[1180px] mx-auto px-8 py-[18px] flex items-center justify-between gap-6">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-8 py-[18px] flex items-center justify-between gap-3 sm:gap-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline shrink-0 focus:outline-none focus-visible:shadow-[0_0_0_2px_rgba(22,82,42,0.28)] focus-visible:rounded-[11px]">
-          <AcdMark />
-          <span className="font-serif font-semibold text-[22px] tracking-[-0.2px] text-acd-navy whitespace-nowrap">
+          <span className="sm:hidden"><AcdMark compact /></span>
+          <span className="hidden sm:inline-flex"><AcdMark /></span>
+          <span className="font-serif font-semibold text-[19px] sm:text-[22px] tracking-[-0.2px] text-acd-navy whitespace-nowrap">
             Africa Career Desk
           </span>
         </Link>
