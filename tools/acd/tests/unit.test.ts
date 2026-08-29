@@ -11,6 +11,7 @@ import { join } from "node:path";
 import { Script } from "node:vm";
 import { pulaDetail, pulaList, workableFeed } from "./fixtures.ts";
 import { reviewHtml } from "../server.ts";
+import { batchesHtml } from "../batches-page.ts";
 import { normalizeLocation } from "../location.ts";
 import { assessFreshness, confirmationIsValid, isGenuineRepost } from "../freshness.ts";
 import { BATCH_SIZE, batches, employerRegistry } from "../batches.ts";
@@ -231,6 +232,38 @@ test("research import is explicit, transactional, idempotent, and preserves exis
   } finally { removeTemp(root); }
 });
 
+test("research batches overview is read-only and shows pilot metrics with honest fallbacks", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-batches-overview-"));
+  const dfc = "employer-128-u-s-international-development-finance-corporation-dfc";
+  const boad = "employer-132-west-african-development-bank-boad";
+  try {
+    mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
+    const baseline = new AcdDatabase(root); const baselineRun = baseline.createRun();
+    const preserved = baseline.addVacancy(baselineRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
+    baseline.completeRun(baselineRun); baseline.decide(preserved, "deferred", {});
+    const empty = baseline.researchBatchesOverview();
+    assert.equal(empty.totalEmployers, 142); assert.equal(empty.totalBatches, 8); assert.equal(empty.batches.length, batches.length);
+    assert.equal(empty.batches.find((batch) => batch.id === "batch-07")?.researchStatus, "Not researched");
+    assert.equal(empty.batches.find((batch) => batch.id === "batch-07")?.lastResearchedAt, null);
+    assert.equal(empty.lastPublicationAt, null); baseline.close();
+    const prepared = prepareResearchBatch(root, { batchId: "batch-07", pilot: true, employerIds: [dfc, boad], batchRunId: "pilot-batch-07-dfc-boad-overview" });
+    const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
+    const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]); second.activeCandidates = []; second.expiredFindings = []; second.discoveredSources = [];
+    saveEmployerResearchResult(root, first); saveEmployerResearchResult(root, second); previewResearchImport(root, prepared.task.batchRunId, { writeReport: true });
+    const imported = importResearchRun(root, prepared.task.batchRunId, { apply: true });
+    const afterImport = new AcdDatabase(root); const importedVacancy = afterImport.dashboard(undefined, imported.runId).vacancies[0] as unknown as { id: number };
+    afterImport.confirmFreshness(importedVacancy.id); afterImport.decide(importedVacancy.id, "approved", {});
+    const overview = afterImport.researchBatchesOverview(); const pilot = overview.batches.find((batch) => batch.id === "batch-07");
+    assert.ok(pilot); assert.equal(pilot.name, "Batch 7 Pilot - DFC and BOAD"); assert.equal(pilot.firmsChecked, 2); assert.equal(pilot.firmsExpected, 2); assert.equal(pilot.activeOpportunities, 1); assert.equal(pilot.reviewed, 1); assert.equal(pilot.reviewable, 1); assert.equal(pilot.expiredExcluded, 1); assert.equal(pilot.limitations, true); assert.equal(pilot.reviewStatus, "Review complete - Not ready for Codex"); assert.equal(pilot.lastPublishedAt, null);
+    const completion = afterImport.reviewCompletion(imported.runId!); const preview = afterImport.codexManifestPreview(imported.runId!);
+    assert.equal(completion.decisionsCompleted, 1); assert.equal(completion.approved, 1); assert.equal(completion.readyForCodex, 0); assert.equal(completion.blockedApproved.length, 1); assert.ok(completion.blockedApproved[0].missingFields.includes("official_deadline"));
+    assert.equal(preview.readyOpportunities.length, 0); assert.equal(preview.blockedApprovedOpportunities.length, 1); assert.deepEqual(afterImport.codexManifestPreview(imported.runId!), preview); assert.throws(() => afterImport.createCodexManifest(imported.runId!), /Resolve required publication information/);
+    assert.equal((afterImport.dashboard(undefined, baselineRun).vacancies[0] as unknown as { action: string }).action, "deferred");
+    assert.equal(Number((afterImport.db.prepare("SELECT COUNT(*) AS count FROM publication_manifests").get() as { count: number }).count), 0); afterImport.close();
+  } finally { removeTemp(root); }
+});
+
 test("pilot research selection is explicit, batch-constrained, immutable, and leaves batch storage untouched", () => {
   const root = mkdtempSync(join(tmpdir(), "acd-research-pilot-"));
   const dfc = "employer-128-u-s-international-development-finance-corporation-dfc";
@@ -335,6 +368,10 @@ test("an incomplete run is available for resumption and preserves its source che
 });
 
 test("review page uses safe delegated decisions and exposes retry feedback", () => {
+  assert.match(batchesHtml, /Research Batches/);
+  assert.match(batchesHtml, /View firms/);
+  assert.match(batchesHtml, /\/review\?runId=/);
+  assert.match(reviewHtml, /Back to batches/);
   assert.match(reviewHtml, /id="load-error"/);
   assert.match(reviewHtml, /data-action="retry"/);
   assert.doesNotMatch(reviewHtml, /Review request failed/);

@@ -1,5 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { employers, sources } from "./registry.ts";
 import type { Classification, CollectedVacancy, DecisionAction, DuplicateMatch, SourceResult } from "./types.ts";
@@ -47,6 +47,31 @@ export class AcdDatabase {
     const employers = this.db.prepare("SELECT e.id,e.name,er.status,er.completed_at,er.limitation_reason,er.manual_follow_up,er.acknowledged_at FROM batch_employers be JOIN employers e ON e.id=be.employer_id JOIN employer_research er ON er.batch_id=be.batch_id AND er.employer_id=be.employer_id WHERE be.batch_id=? ORDER BY be.ordinal").all(batch.id);
     return { ...batch, totalBatches: batches.length, employers, registry: { included: employerRegistry.employers.length, sourceWorkbook: employerRegistry.sourceWorkbook, sourceSheet: employerRegistry.sourceSheet } };
   }
+  researchBatchesOverview() {
+    const importForBatch = this.db.prepare("SELECT ri.batch_run_id AS batchRunId,ri.run_id AS runId,ri.imported_at AS importedAt,r.label FROM research_imports ri JOIN runs r ON r.id=ri.run_id WHERE ri.batch_run_id=? OR ri.batch_run_id LIKE ? OR ri.batch_run_id LIKE ? ORDER BY ri.imported_at DESC LIMIT 1");
+    const employerCheck = this.db.prepare("SELECT MAX(sc.completed_at) AS lastChecked FROM source_checks sc JOIN sources s ON s.id=sc.source_id WHERE sc.run_id=? AND s.employer_id=?");
+    const checkedEmployers = this.db.prepare("SELECT COUNT(DISTINCT s.employer_id) AS count FROM source_checks sc JOIN sources s ON s.id=sc.source_id WHERE sc.run_id=?");
+    const metrics = this.db.prepare("SELECT COUNT(*) AS activeOpportunities,SUM(CASE WHEN json_extract(v.classification_json,'$.outcome') != 'existing_duplicate' THEN 1 ELSE 0 END) AS reviewable,SUM(CASE WHEN d.action IS NOT NULL AND d.action != 'treat_as_new' AND json_extract(v.classification_json,'$.outcome') != 'existing_duplicate' THEN 1 ELSE 0 END) AS reviewed FROM vacancies v LEFT JOIN decisions d ON d.vacancy_id=v.id WHERE v.run_id=?");
+    const limitations = this.db.prepare("SELECT COUNT(*) AS count FROM source_checks WHERE run_id=? AND (failure_reason IS NOT NULL OR manual_review_required=1)");
+    const expired = this.db.prepare("SELECT COUNT(*) AS count FROM research_import_expired_findings WHERE batch_run_id=?");
+    const published = this.db.prepare("SELECT MAX(pm.created_at) AS lastPublishedAt FROM publication_manifests pm WHERE pm.run_id=?");
+    const result = batches.map((definition) => {
+      const imported = importForBatch.get(definition.id, `${definition.id}-%`, `pilot-${definition.id}-%`) as { batchRunId: string; runId: number; importedAt: string; label?: string } | undefined;
+      const employers = this.db.prepare("SELECT e.id,e.name,er.status FROM batch_employers be JOIN employers e ON e.id=be.employer_id JOIN employer_research er ON er.batch_id=be.batch_id AND er.employer_id=be.employer_id WHERE be.batch_id=? ORDER BY be.ordinal").all(definition.id) as Array<{ id: string; name: string; status: string }>;
+      if (!imported) return { id: definition.id, number: definition.sequence, name: `Research batch ${definition.sequence}`, employers: employers.map((employer) => ({ ...employer, lastChecked: null })), employerCount: employers.length, firmsChecked: 0, firmsExpected: employers.length, activeOpportunities: 0, reviewed: 0, reviewable: 0, expiredExcluded: 0, limitations: false, researchStatus: "Not researched", reviewStatus: "No imported review run", lastResearchedAt: null, lastPublishedAt: null, action: "Start batch", runId: null };
+      const checked = Number((checkedEmployers.get(imported.runId) as { count: number }).count);
+      const counts = metrics.get(imported.runId) as { activeOpportunities: number; reviewable: number | null; reviewed: number | null };
+      const limitationCount = Number((limitations.get(imported.runId) as { count: number }).count);
+      const completion = this.reviewCompletion(imported.runId);
+      const reviewable = Number(counts.reviewable ?? 0), reviewed = Number(counts.reviewed ?? 0);
+      const isPilot = imported.batchRunId.startsWith(`pilot-${definition.id}-`);
+      return { id: definition.id, number: definition.sequence, name: (imported.label ?? `Batch ${definition.sequence}`).replace(/^Batch 0?(\d+) /, "Batch $1 "), employers: employers.map((employer) => ({ ...employer, lastChecked: (employerCheck.get(imported.runId, employer.id) as { lastChecked?: string | null }).lastChecked ?? null, status: (employerCheck.get(imported.runId, employer.id) as { lastChecked?: string | null }).lastChecked ? "Checked" : "Not researched" })), employerCount: employers.length, firmsChecked: checked, firmsExpected: isPilot ? checked : employers.length, activeOpportunities: Number(counts.activeOpportunities), reviewed, reviewable, expiredExcluded: Number((expired.get(imported.batchRunId) as { count: number }).count), limitations: limitationCount > 0, researchStatus: limitationCount ? "Completed with limitations" : "Ready for review", reviewStatus: completion.completionLabel, codexIssues: completion.unresolved + completion.blockedApproved.length, lastResearchedAt: imported.importedAt, lastPublishedAt: (published.get(imported.runId) as { lastPublishedAt?: string | null }).lastPublishedAt ?? null, action: reviewed === reviewable && reviewable > 0 ? "View batch" : "Continue review", runId: imported.runId };
+    });
+    const researched = result.filter((batch) => batch.lastResearchedAt).sort((left, right) => String(right.lastResearchedAt).localeCompare(String(left.lastResearchedAt)));
+    const current = researched[0];
+    const publication = this.db.prepare("SELECT MAX(created_at) AS lastPublishedAt FROM publication_manifests").get() as { lastPublishedAt?: string | null };
+    return { totalEmployers: employerRegistry.employers.length, totalBatches: result.length, mostRecentlyResearched: current ? { id: current.id, name: current.name, at: current.lastResearchedAt } : null, currentReview: current ? { reviewed: current.reviewed, reviewable: current.reviewable } : null, lastPublicationAt: publication.lastPublishedAt ?? null, batches: result };
+  }
   acknowledgeEmployerLimitation(batchId: string, employerId: string, note: string, manualFollowUp = false) { this.db.prepare("UPDATE employer_research SET status=?,acknowledged_at=?,acknowledgement_note=?,manual_follow_up=? WHERE batch_id=? AND employer_id=?").run(manualFollowUp ? "Manual follow-up required" : "Complete with limitations", new Date().toISOString(), note, Number(manualFollowUp), batchId, employerId); }
   completeBatch(batchId: string) {
     const outstanding = Number((this.db.prepare("SELECT COUNT(*) AS count FROM employer_research WHERE batch_id=? AND status NOT IN ('Complete','Complete with limitations')").get(batchId) as { count: number }).count);
@@ -92,7 +117,41 @@ export class AcdDatabase {
     const matches = this.db.prepare("SELECT vacancy_id AS vacancyId,kind,basis,external_reference AS externalReference,detail FROM duplicate_matches WHERE vacancy_id IN (SELECT id FROM vacancies WHERE run_id=?)").all(runId) as Array<{ vacancyId: number; kind: string; basis: string; externalReference?: string; detail: string }>;
     const decoratedVacancies = vacancies.map((vacancy) => ({ ...vacancy, duplicateMatches: matches.filter((match) => match.vacancyId === vacancy.id).map((match) => ({ ...match, existing: existingMetadata(this.root, match.externalReference) })) }));
     const pilot = this.db.prepare("SELECT ri.batch_run_id AS batchRunId,COUNT(DISTINCT sc.source_id) AS employersChecked,COUNT(DISTINCT v.id) AS opportunitiesToReview,COUNT(DISTINCT ef.id) AS expiredExcluded,MAX(ri.imported_at) AS importedAt FROM research_imports ri LEFT JOIN source_checks sc ON sc.run_id=ri.run_id LEFT JOIN vacancies v ON v.run_id=ri.run_id LEFT JOIN research_import_expired_findings ef ON ef.batch_run_id=ri.batch_run_id WHERE ri.run_id=? GROUP BY ri.batch_run_id").get(runId);
-    return { run: latest, runs, pilot, batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
+    return { run: latest, runs, pilot, completion: this.reviewCompletion(runId), batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
+  }
+  reviewCompletion(runId: number) {
+    const rows = this.db.prepare("SELECT v.*,e.name AS employerName,e.logo_url AS logoUrl,d.action,f.freshness_status,f.application_route_status,ril.batch_run_id AS batchRunId,ril.employer_id AS lineageEmployerId,ril.result_path AS resultPath,ril.source_key AS lineageSourceKey,ril.publication_missing_fields_json AS publicationMissingFields FROM vacancies v JOIN employers e ON e.id=v.employer_id LEFT JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key LEFT JOIN research_import_lineage ril ON ril.vacancy_id=v.id WHERE v.run_id=? ORDER BY v.id").all(runId) as Array<Record<string, unknown>>;
+    const expiredFindings = Number((this.db.prepare("SELECT COUNT(*) AS count FROM research_imports ri JOIN research_import_expired_findings ef ON ef.batch_run_id=ri.batch_run_id WHERE ri.run_id=?").get(runId) as { count: number }).count);
+    const reviewable = rows.filter((row) => JSON.parse(String(row.classification_json)).outcome !== "existing_duplicate");
+    const unresolved = reviewable.filter((row) => !row.action || row.action === "treat_as_new");
+    const approved = reviewable.filter((row) => row.action === "approved");
+    const blockedApproved = approved.map((row) => {
+      const classification = JSON.parse(String(row.classification_json)) as Classification;
+      const missingFields = [...new Set([...(classification.missingFields ?? []), ...((row.publicationMissingFields ? JSON.parse(String(row.publicationMissingFields)) : []) as string[])])].filter((field) => field !== "verified_freshness" || row.freshness_status !== "verified_active").sort();
+      const blockers = [row.freshness_status !== "verified_active" ? "Freshness is not verified active." : null, row.application_route_status !== "available" ? "The official application route is not confirmed usable." : null, missingFields.length ? "Required publication information is missing." : null, classification.outcome === "possible_duplicate" ? "Duplicate resolution is still required." : null].filter(Boolean) as string[];
+      return { ...row, classification, missingFields, blockers, ready: blockers.length === 0 };
+    });
+    const readyApproved = blockedApproved.filter((row) => row.ready);
+    return { runId, reviewable: reviewable.length, decisionsCompleted: reviewable.length - unresolved.length, approved: approved.length, rejected: reviewable.filter((row) => row.action === "rejected").length, keptForLater: reviewable.filter((row) => row.action === "deferred").length, unresolved: unresolved.length, readyForCodex: readyApproved.length, approvedOpportunities: blockedApproved, blockedApproved: blockedApproved.filter((row) => !row.ready), expiredFindings, canComplete: unresolved.length === 0 && blockedApproved.every((row) => row.ready), completionLabel: unresolved.length ? "Review in progress" : blockedApproved.some((row) => !row.ready) ? "Review complete - Not ready for Codex" : "Review complete - Ready for Codex" };
+  }
+  codexManifestPreview(runId: number) {
+    const completion = this.reviewCompletion(runId);
+    const sourceCoverage = this.db.prepare("SELECT sc.*,s.url,s.source_type,e.name AS employerName FROM source_checks sc JOIN sources s ON s.id=sc.source_id JOIN employers e ON e.id=s.employer_id WHERE sc.run_id=? ORDER BY s.id").all(runId);
+    const importRow = this.db.prepare("SELECT batch_run_id AS batchRunId,preview_path AS previewPath FROM research_imports WHERE run_id=?").get(runId) as { batchRunId?: string; previewPath?: string } | undefined;
+    const preview = importRow?.previewPath && existsSync(importRow.previewPath) ? JSON.parse(readFileSync(importRow.previewPath, "utf8")) as { preview?: { discoveredSourceProposals?: unknown[] }; discoveredSourceProposals?: unknown[] } : undefined;
+    const summarize = (row: Record<string, unknown>) => { const classification = row.classification as Classification; return { batchRunId: row.batchRunId ?? null, reviewRunId: runId, vacancyId: row.id, employerId: row.employer_id, employerName: row.employerName, logoUrl: row.logoUrl ?? null, title: row.title, opportunityType: classification.section, classification, freshness: row.freshness_status ?? "check_freshness", officialSourceUrl: row.source_url, applicationUrl: row.apply_url, applicationRouteStatus: row.application_route_status, location: row.location, postingDate: row.published_at, deadline: row.deadline, description: row.description, evidence: row.evidence, missingFields: row.missingFields, blockers: row.blockers, lineage: row.batchRunId ? { batchRunId: row.batchRunId, employerId: row.lineageEmployerId, resultPath: row.resultPath, sourceKey: row.lineageSourceKey } : null }; };
+    const rejected = this.db.prepare("SELECT v.id,v.employer_id,e.name AS employerName,v.title,d.action FROM vacancies v JOIN employers e ON e.id=v.employer_id JOIN decisions d ON d.vacancy_id=v.id WHERE v.run_id=? AND d.action='rejected' ORDER BY v.id").all(runId);
+    const keptForLater = this.db.prepare("SELECT v.id,v.employer_id,e.name AS employerName,v.title,d.action FROM vacancies v JOIN employers e ON e.id=v.employer_id JOIN decisions d ON d.vacancy_id=v.id WHERE v.run_id=? AND d.action='deferred' ORDER BY v.id").all(runId);
+    const expiredFindings = this.db.prepare("SELECT ef.* FROM research_imports ri JOIN research_import_expired_findings ef ON ef.batch_run_id=ri.batch_run_id WHERE ri.run_id=? ORDER BY ef.id").all(runId);
+    return { version: "acd-codex-manifest-preview-v1", runId, batchRunId: importRow?.batchRunId ?? null, completion, readyOpportunities: completion.approvedOpportunities.filter((row) => row.ready).map(summarize), blockedApprovedOpportunities: completion.blockedApproved.map(summarize), rejectedOpportunities: rejected, keptForLater, expiredFindings, sourceCoverage, discoveredSourceProposals: preview?.preview?.discoveredSourceProposals ?? preview?.discoveredSourceProposals ?? [] };
+  }
+  createCodexManifest(runId: number) {
+    const preview = this.codexManifestPreview(runId);
+    if (preview.completion.unresolved) throw new Error("Review unresolved items before generating the Codex publication manifest.");
+    if (preview.completion.blockedApproved.length) throw new Error("Resolve required publication information before generating the Codex publication manifest.");
+    const dir = resolve(this.root, "data/acd-runtime/publication", String(runId)); const path = resolve(dir, "publication-manifest.json"); const content = JSON.stringify(preview, null, 2);
+    mkdirSync(dir, { recursive: true }); if (!existsSync(path) || readFileSync(path, "utf8") !== content) writeFileSync(path, content);
+    return { path, content: preview };
   }
   decide(vacancyId: number, action: DecisionAction, edited: unknown, note?: string) {
     if (action === "approved") { const row = this.db.prepare("SELECT f.freshness_status FROM vacancies v LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.id=?").get(vacancyId) as { freshness_status?: string } | undefined; if (row?.freshness_status !== "verified_active") throw new Error("Freshness must be confirmed before approving this vacancy."); }
