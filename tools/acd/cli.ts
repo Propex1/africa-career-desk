@@ -4,6 +4,8 @@ import { startReviewServer } from "./server.ts";
 import { AcdDatabase } from "./db.ts";
 import { verifiedWorkableHumanUrl } from "./collectors.ts";
 import { prepareResearchBatch, validateResearchBatch } from "./research.ts";
+import { previewResearchImport } from "./import-preview.ts";
+import { importResearchRun } from "./research-import.ts";
 
 const root = resolve(import.meta.dirname, "../..");
 const command = process.argv[2];
@@ -28,4 +30,14 @@ else if (command === "research:validate") {
   console.log(JSON.stringify(validation, null, 2));
   if (validation.invalid.length) process.exitCode = 1;
 }
-else console.error("Usage: npm run acd:discover | acd:resume | acd:review | acd:status | acd:repair-links | acd:research:prepare | acd:research:validate");
+else if (command === "research:preview") {
+  const batchRunId = option("--batch-run");
+  if (!batchRunId) throw new Error("Usage: npm run acd:research:preview -- --batch-run <id>");
+  console.log(JSON.stringify(previewResearchImport(root, batchRunId, { writeReport: true }), null, 2));
+}
+else if (command === "research:import") {
+  const batchRunId = option("--batch-run");
+  if (!batchRunId) throw new Error("Usage: npm run acd:research:import -- --batch-run <id> [--apply]");
+  console.log(JSON.stringify(importResearchRun(root, batchRunId, { apply: process.argv.includes("--apply") }), null, 2));
+}
+else console.error("Usage: npm run acd:discover | acd:resume | acd:review | acd:status | acd:repair-links | acd:research:prepare | acd:research:validate | acd:research:preview | acd:research:import");

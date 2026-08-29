@@ -18,9 +18,15 @@ export class AcdDatabase {
   }
   private migrate() {
     this.db.exec("CREATE TABLE IF NOT EXISTS schema_migrations (id TEXT PRIMARY KEY, applied_at TEXT NOT NULL)");
-    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches"]) {
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) {
       if (this.db.prepare("SELECT id FROM schema_migrations WHERE id = ?").get(id)) continue;
-      this.db.exec(readFileSync(resolve(this.root, `tools/acd/migrations/${id}.sql`), "utf8"));
+      let migration = readFileSync(resolve(this.root, `tools/acd/migrations/${id}.sql`), "utf8");
+      if (id === "005_research_imports") {
+        const columns = new Set((this.db.prepare("PRAGMA table_info(runs)").all() as Array<{ name: string }>).map((column) => column.name));
+        if (columns.has("label")) migration = migration.replace("ALTER TABLE runs ADD COLUMN label TEXT;\n", "");
+        if (columns.has("import_batch_run_id")) migration = migration.replace("ALTER TABLE runs ADD COLUMN import_batch_run_id TEXT;\n", "");
+      }
+      this.db.exec(migration);
       this.db.prepare("INSERT INTO schema_migrations VALUES (?, ?)").run(id, new Date().toISOString());
     }
   }
@@ -75,16 +81,18 @@ export class AcdDatabase {
     const update = this.db.prepare("UPDATE vacancy_freshness SET freshness_status=?,freshness_reason=? WHERE source_id=? AND source_key=?");
     for (const row of rows) { const assessed = assessFreshness({ publishedAt: row.official_posted_at, deadline: row.official_deadline, applicationRouteStatus: row.application_route_status, sourcePresent: true, manualConfirmedAt: row.manual_confirmed_at }); update.run(assessed.status, assessed.reason, row.source_id, row.source_key); }
   }
-  dashboard(batchId?: string) {
+  dashboard(batchId?: string, selectedRunId?: number) {
     this.refreshFreshnessAssessments();
-    const latest = this.db.prepare("SELECT * FROM runs ORDER BY id DESC LIMIT 1").get() as Record<string, unknown> | undefined;
+    const latest = (selectedRunId ? this.db.prepare("SELECT * FROM runs WHERE id=?").get(selectedRunId) : undefined) as Record<string, unknown> | undefined ?? this.db.prepare("SELECT * FROM runs ORDER BY id DESC LIMIT 1").get() as Record<string, unknown> | undefined;
     if (!latest) return { run: null, checks: [], vacancies: [], totals: {} };
     const runId = latest.id as number;
+    const runs = this.db.prepare("SELECT id,status,started_at,completed_at,label,import_batch_run_id FROM runs WHERE id=(SELECT MAX(id) FROM runs WHERE import_batch_run_id IS NULL AND status='completed') OR import_batch_run_id IS NOT NULL ORDER BY id").all();
     const checks = this.db.prepare("SELECT sc.*,s.url,s.source_type,e.name AS employer_name FROM source_checks sc JOIN sources s ON s.id=sc.source_id JOIN employers e ON e.id=s.employer_id WHERE sc.run_id=? ORDER BY s.priority,s.id").all(runId);
     const vacancies = this.db.prepare("SELECT v.*,e.name AS employer_name,e.logo_url,d.action,d.edited_json,d.reviewer_note,f.first_seen_at,f.last_successfully_seen_at,f.last_checked_at,f.official_posted_at,f.official_deadline,f.content_fingerprint,f.application_route_status,f.freshness_status,f.freshness_reason,f.manual_confirmed_at,f.manual_confirmation_note,(SELECT COUNT(*) FROM duplicate_matches dm WHERE dm.vacancy_id=v.id) AS duplicate_count FROM vacancies v JOIN employers e ON e.id=v.employer_id LEFT JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.run_id=? ORDER BY v.id DESC").all(runId) as Array<Record<string, unknown>>;
     const matches = this.db.prepare("SELECT vacancy_id AS vacancyId,kind,basis,external_reference AS externalReference,detail FROM duplicate_matches WHERE vacancy_id IN (SELECT id FROM vacancies WHERE run_id=?)").all(runId) as Array<{ vacancyId: number; kind: string; basis: string; externalReference?: string; detail: string }>;
     const decoratedVacancies = vacancies.map((vacancy) => ({ ...vacancy, duplicateMatches: matches.filter((match) => match.vacancyId === vacancy.id).map((match) => ({ ...match, existing: existingMetadata(this.root, match.externalReference) })) }));
-    return { run: latest, batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
+    const pilot = this.db.prepare("SELECT ri.batch_run_id AS batchRunId,COUNT(DISTINCT sc.source_id) AS employersChecked,COUNT(DISTINCT v.id) AS opportunitiesToReview,COUNT(DISTINCT ef.id) AS expiredExcluded,MAX(ri.imported_at) AS importedAt FROM research_imports ri LEFT JOIN source_checks sc ON sc.run_id=ri.run_id LEFT JOIN vacancies v ON v.run_id=ri.run_id LEFT JOIN research_import_expired_findings ef ON ef.batch_run_id=ri.batch_run_id WHERE ri.run_id=? GROUP BY ri.batch_run_id").get(runId);
+    return { run: latest, runs, pilot, batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
   }
   decide(vacancyId: number, action: DecisionAction, edited: unknown, note?: string) {
     if (action === "approved") { const row = this.db.prepare("SELECT f.freshness_status FROM vacancies v LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.id=?").get(vacancyId) as { freshness_status?: string } | undefined; if (row?.freshness_status !== "verified_active") throw new Error("Freshness must be confirmed before approving this vacancy."); }
@@ -102,9 +110,9 @@ export class AcdDatabase {
     if (!latest) throw new Error("No completed run is available.");
     const unresolved = Number((this.db.prepare("SELECT COUNT(*) AS count FROM vacancies v LEFT JOIN decisions d ON d.vacancy_id=v.id WHERE v.run_id=? AND ((json_extract(v.classification_json,'$.outcome') = 'possible_duplicate' AND (d.action IS NULL OR d.action = 'treat_as_new')) OR (json_extract(v.classification_json,'$.outcome') != 'existing_duplicate' AND d.action IS NULL AND (json_extract(v.classification_json,'$.blocking') = 1 OR json_extract(v.classification_json,'$.outcome') IN ('strong_candidate','borderline'))))").get(latest.id) as { count: number }).count);
     if (unresolved) throw new Error(`${unresolved} candidate or blocking item(s) still need an explicit decision.`);
-    const ineligible = Number((this.db.prepare("SELECT COUNT(*) AS count FROM vacancies v JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.run_id=? AND d.action='approved' AND COALESCE(f.freshness_status,'check_freshness') != 'verified_active'").get(latest.id) as { count: number }).count);
-    if (ineligible) throw new Error(`${ineligible} approved vacancy/vacancies still need freshness confirmation.`);
-    const approved = this.db.prepare("SELECT v.*,d.edited_json FROM vacancies v JOIN decisions d ON d.vacancy_id=v.id JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.run_id=? AND d.action='approved' AND f.freshness_status='verified_active'").all(latest.id) as Record<string, unknown>[];
+    const ineligible = Number((this.db.prepare("SELECT COUNT(*) AS count FROM vacancies v JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key LEFT JOIN research_import_lineage ril ON ril.vacancy_id=v.id WHERE v.run_id=? AND d.action='approved' AND (COALESCE(f.freshness_status,'check_freshness') != 'verified_active' OR (ril.publication_missing_fields_json IS NOT NULL AND json_array_length(ril.publication_missing_fields_json) > 0))").get(latest.id) as { count: number }).count);
+    if (ineligible) throw new Error(`${ineligible} approved vacancy/vacancies still need freshness confirmation or required publication fields.`);
+    const approved = this.db.prepare("SELECT v.*,d.edited_json FROM vacancies v JOIN decisions d ON d.vacancy_id=v.id JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key LEFT JOIN research_import_lineage ril ON ril.vacancy_id=v.id WHERE v.run_id=? AND d.action='approved' AND f.freshness_status='verified_active' AND (ril.publication_missing_fields_json IS NULL OR json_array_length(ril.publication_missing_fields_json)=0)").all(latest.id) as Record<string, unknown>[];
     const content = { generatedAt: new Date().toISOString(), runId: latest.id, approved: approved.map((row: Record<string, unknown>) => ({ ...row, classification: JSON.parse(String(row.classification_json)), edits: JSON.parse(String(row.edited_json)) })), note: "Review manifest only. It does not publish or alter src/data/opportunities.ts." };
     const dir = resolve(this.root, "data/acd-runtime/manifests"); mkdirSync(dir, { recursive: true }); const path = resolve(dir, `run-${latest.id}-publication-manifest.json`);
     writeFileSync(path, JSON.stringify(content, null, 2));

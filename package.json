@@ -14,6 +14,8 @@
     "acd:repair-links": "node --experimental-strip-types tools/acd/cli.ts repair-links",
     "acd:research:prepare": "node --experimental-strip-types tools/acd/cli.ts research:prepare",
     "acd:research:validate": "node --experimental-strip-types tools/acd/cli.ts research:validate",
+    "acd:research:preview": "node --experimental-strip-types tools/acd/cli.ts research:preview",
+    "acd:research:import": "node --experimental-strip-types tools/acd/cli.ts research:import",
     "acd:test": "node --experimental-strip-types tools/acd/tests/run.ts"
   },
   "dependencies": {

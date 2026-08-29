@@ -45,6 +45,8 @@ To create a task snapshot, omit `--dry-run`. It writes `research-task.json` and 
 ```bash
 npm run acd:research:prepare -- --batch batch-08 --batch-run batch-08-example
 npm run acd:research:validate -- --batch-run batch-08-example
+npm run acd:research:preview -- --batch-run batch-08-example
+npm run acd:research:import -- --batch-run batch-08-example --apply
 ```
 
 For a deliberately limited pilot, use explicit employers from one real batch. The snapshot retains the real batch ID but is marked `pilot`; it does not update any batch-cycle state:
@@ -53,7 +55,9 @@ For a deliberately limited pilot, use explicit employers from one real batch. Th
 npm run acd:research:prepare -- --batch batch-07 --pilot --employer employer-128-u-s-international-development-finance-corporation-dfc --employer employer-132-west-african-development-bank-boad
 ```
 
-Validation is read-only. It checks task/result schema versions, exact source observations, and honest coverage status; it never imports results into vacancies or changes the SQLite database. See `tools/acd/research-instructions.md` for the Codex handoff instructions.
+Validation is read-only. The preview command accepts structured v1.1 results only, compares them read-only against public and local evidence, and writes an ignored `import-preview.json`; neither command imports results into vacancies or changes the SQLite database. See `tools/acd/research-instructions.md` for the Codex handoff instructions.
+
+The import command is deliberately dry-run by default. Only `--apply` creates a separate, transactional local review run. It preserves research-result lineage and never changes the public opportunity file or employer registry.
 
 ## Data and workflow
 

@@ -11,7 +11,7 @@ export function startReviewServer(root: string, port = 4317) {
     const url = new URL(request.url ?? "/", `http://${request.headers.host ?? "127.0.0.1"}`);
     const database = new AcdDatabase(root);
     try {
-      if (url.pathname === "/api/dashboard") send(200, database.dashboard(url.searchParams.get("batchId") ?? undefined));
+      if (url.pathname === "/api/dashboard") send(200, database.dashboard(url.searchParams.get("batchId") ?? undefined, Number(url.searchParams.get("runId")) || undefined));
       else if (request.url === "/api/batch/complete" && request.method === "POST") { let body = ""; for await (const chunk of request) body += chunk; database.completeBatch(String(JSON.parse(body).batchId)); send(200, { ok: true }); }
       else if (request.url === "/api/batch/acknowledge" && request.method === "POST") { let body = ""; for await (const chunk of request) body += chunk; const value = JSON.parse(body); database.acknowledgeEmployerLimitation(String(value.batchId), String(value.employerId), String(value.note ?? "Acknowledged limitation."), Boolean(value.manualFollowUp)); send(200, { ok: true }); }
       else if (request.url === "/api/decision" && request.method === "POST") { let body = ""; for await (const chunk of request) body += chunk; const value = JSON.parse(body); database.decide(Number(value.id), value.action, value.edited, value.note); send(200, { ok: true }); }
