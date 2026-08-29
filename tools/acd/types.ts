@@ -8,7 +8,7 @@ export type ACDSection = "Job" | "Programme" | "Open Application";
 export interface Employer { id: string; name: string; aliases: string[]; logoUrl?: string; }
 export interface Source { id: string; employerId: string; type: "official_careers" | "official_ats" | "linkedin_company" | "linkedin_jobs" | "other_verified"; url: string; priority: number; required: boolean; active: boolean; accessMethod: "http_json" | "http_markdown" | "web_page" | "manual_review"; lastVerified: string; expectedCoverage: string; notes: string; }
 export interface CollectedVacancy { sourceKey: string; employerId: string; sourceId: string; title: string; department?: string; location?: string; description?: string; employmentType?: string; requisitionId?: string; publishedAt?: string; deadline?: string; applyUrl?: string; applicationRouteStatus?: ApplicationRouteStatus; sourceUrl: string; sourceType: string; evidence: string; discoveredAt: string; }
-export interface Classification { outcome: ReviewOutcome; section: ACDSection; category?: string; confidence: number; reasons: string[]; missingFields: string[]; blocking: boolean; }
+export interface Classification { outcome: ReviewOutcome; section: ACDSection; category?: string; confidence: number; reasons: string[]; missingFields: string[]; blocking: boolean; archived?: boolean; archivedAt?: string; archivalReason?: string; }
 export interface DuplicateMatch { kind: "exact" | "cautious"; basis: "requisition_id" | "application_url" | "title_location" | "existing_listing" | "previous_decision"; vacancyId?: number; externalReference?: string; detail: string; }
 
 export const RESEARCH_TASK_SCHEMA_VERSION = "1.0.0" as const;

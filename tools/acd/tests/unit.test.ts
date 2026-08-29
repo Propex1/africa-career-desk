@@ -189,7 +189,13 @@ test("research import preview is deterministic, read-only, and distinguishes dup
 
     const possible = createRun("preview-possible", (result) => { result.activeCandidates[0] = { ...result.activeCandidates[0], title: "Investment Manager", opportunityType: "Job", location: "Nairobi", requisitionId: null, applicationUrl: "https://example.test/jobs/new", evidenceSummary: "Direct investment portfolio management" }; });
     assert.equal(previewResearchImport(root, possible.task.batchRunId, { publishedComparables: [{ employerId: possible.task.employers[0].id, title: "Investment Manager", location: "Nairobi", evidence: "Direct investment portfolio management" }], localComparables: [] }).preview.candidates[0].outcome, "possible_published_duplicate");
-    assert.equal(previewResearchImport(root, possible.task.batchRunId, { publishedComparables: [], localComparables: [{ id: 7, employerId: possible.task.employers[0].id, title: "Other", applyUrl: "https://example.test/jobs/new" }] }).preview.candidates[0].outcome, "already_in_local_review");
+    assert.equal(previewResearchImport(root, possible.task.batchRunId, { publishedComparables: [], localComparables: [{ id: 7, employerId: possible.task.employers[0].id, title: "Other", applyUrl: "https://example.test/jobs/new" }] }).preview.candidates[0].outcome, "possible_local_duplicate");
+
+    const sharedIndex = createRun("preview-shared-index", (result) => { result.activeCandidates[0] = { ...result.activeCandidates[0], title: "Investment Manager", opportunityType: "Job", location: "Nairobi", requisitionId: null, applicationUrl: "https://example.test/recruitment", evidenceSummary: "Official recruitment index." }; });
+    const sibling = structuredResearchResult(sharedIndex.task.batchRunId, sharedIndex.task.taskId, sharedIndex.task.employers[1]);
+    sibling.activeCandidates[0] = { ...sibling.activeCandidates[0], title: "Portfolio Manager", opportunityType: "Job", location: "Nairobi", requisitionId: null, applicationUrl: "https://example.test/recruitment", evidenceSummary: "Official recruitment index." };
+    // The immutable fixture already exists, so validate shared-URL behaviour through a comparable instead.
+    assert.equal(previewResearchImport(root, sharedIndex.task.batchRunId, { publishedComparables: [], localComparables: [{ id: 8, employerId: sharedIndex.task.employers[0].id, title: "Other role", applyUrl: "https://example.test/recruitment" }] }).preview.candidates[0].outcome, "ready_for_review_import");
 
     const missing = createRun("preview-missing", (result) => { result.activeCandidates[0] = { ...result.activeCandidates[0], opportunityType: "Job", applicationUrl: null, applicationRouteStatus: "unknown" }; });
     assert.equal(previewResearchImport(root, missing.task.batchRunId, { publishedComparables: [], localComparables: [] }).preview.candidates[0].outcome, "blocked_missing_fields");
@@ -229,6 +235,53 @@ test("research import is explicit, transactional, idempotent, and preserves exis
     const reloaded = new AcdDatabase(root);
     assert.equal((reloaded.dashboard(undefined, applied.runId).vacancies[0] as unknown as { action: string }).action, "approved");
     assert.equal((reloaded.dashboard(undefined, existingRun).vacancies[0] as unknown as { action: string }).action, "deferred"); reloaded.close();
+  } finally { removeTemp(root); }
+});
+
+test("research import retains exact cross-run duplicate evidence without claiming it is published", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-import-duplicate-"));
+  try {
+    mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
+    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "import-duplicate" });
+    const db = new AcdDatabase(root); const existingRun = db.createRun();
+    db.addVacancy(existingRun, { sourceKey: "existing-requisition", employerId: prepared.task.employers[0].id, sourceId: "pula-bamboohr", title: "Existing role", requisitionId: "REQ-DUP", applicationRouteStatus: "available", applyUrl: "https://example.test/jobs/req-dup", sourceUrl: "https://example.test/jobs/req-dup", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
+    db.completeRun(existingRun); db.close();
+    const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
+    first.activeCandidates[0] = { ...first.activeCandidates[0], title: "Existing role", opportunityType: "Job", requisitionId: "REQ-DUP", applicationUrl: "https://example.test/jobs/req-dup" };
+    const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]); second.activeCandidates = []; second.expiredFindings = []; second.discoveredSources = [];
+    saveEmployerResearchResult(root, first); saveEmployerResearchResult(root, second);
+    const preview = previewResearchImport(root, prepared.task.batchRunId, { writeReport: true }).preview;
+    assert.equal(preview.candidates[0].outcome, "possible_local_duplicate"); assert.equal(preview.summary.importReady, true);
+    const imported = importResearchRun(root, prepared.task.batchRunId, { apply: true });
+    const importedDb = new AcdDatabase(root); const row = importedDb.dashboard(undefined, imported.runId).vacancies[0] as unknown as { classification_json: string; duplicateMatches: unknown[] };
+    assert.equal(JSON.parse(row.classification_json).outcome, "possible_duplicate"); assert.equal(row.duplicateMatches.length, 1); importedDb.close();
+  } finally { removeTemp(root); }
+});
+
+test("expired import corrections preserve decision and lineage while removing the vacancy from review and publication", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-expiry-correction-"));
+  try {
+    mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
+    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "expiry-correction" });
+    const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
+    first.activeCandidates[0] = { ...first.activeCandidates[0], title: "Responsable Amor\u00e7age - Madagascar", opportunityType: "Job", applicationUrl: "https://example.test/jobs/amorcage", evidenceUrl: "https://example.test/jobs/amorcage", officialDeadline: "2099-01-01", freshnessStatus: "verified_active", freshnessReason: "Fixture current." };
+    const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]); second.activeCandidates = []; second.expiredFindings = []; second.discoveredSources = [];
+    saveEmployerResearchResult(root, first); saveEmployerResearchResult(root, second); previewResearchImport(root, prepared.task.batchRunId, { writeReport: true });
+    const imported = importResearchRun(root, prepared.task.batchRunId, { apply: true });
+    const db = new AcdDatabase(root); const vacancy = db.dashboard(undefined, imported.runId).vacancies[0] as unknown as { id: number };
+    db.correctImportedVacancy(vacancy.id, { title: "Responsable Amor\u00e7age - Madagascar", sourceUrl: "https://example.test/jobs/amorcage", applicationUrl: "https://example.test/jobs/amorcage", postedAt: "2026-02-20", deadline: "2026-03-20", freshnessStatus: "verified_active", freshnessReason: "Fixture audit correction.", applicationRouteStatus: "available" });
+    const corrected = db.db.prepare("SELECT title,apply_url,published_at,deadline FROM vacancies WHERE id=?").get(vacancy.id) as { title: string; apply_url: string; published_at: string; deadline: string };
+    assert.equal(corrected.title, "Responsable Amor\u00e7age - Madagascar"); assert.equal(corrected.apply_url, "https://example.test/jobs/amorcage"); assert.equal(corrected.published_at, "2026-02-20"); assert.equal(corrected.deadline, "2026-03-20");
+    db.decide(vacancy.id, "approved", {});
+    db.archiveImportedVacancyAsExpired(vacancy.id, "The official deadline was 20 March 2026.", "Official deadline passed before the audit date.");
+    assert.equal(db.dashboard(undefined, imported.runId).vacancies.length, 0);
+    assert.equal(db.reviewCompletion(imported.runId!).reviewable, 0);
+    assert.equal(Number((db.db.prepare("SELECT COUNT(*) AS count FROM decisions WHERE vacancy_id=?").get(vacancy.id) as { count: number }).count), 1);
+    assert.equal(Number((db.db.prepare("SELECT COUNT(*) AS count FROM research_import_lineage WHERE vacancy_id=?").get(vacancy.id) as { count: number }).count), 1);
+    assert.equal(Number((db.db.prepare("SELECT COUNT(*) AS count FROM research_import_expired_findings WHERE batch_run_id=?").get(prepared.task.batchRunId) as { count: number }).count), 2);
+    db.close();
   } finally { removeTemp(root); }
 });
 

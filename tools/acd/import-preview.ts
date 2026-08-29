@@ -17,6 +17,7 @@ export interface ResearchImportPreview {
   candidates: Array<{
     employerId: string;
     employer: string;
+    candidateIndex: number;
     title: string;
     opportunityType: string;
     outcome: PreviewOutcome;
@@ -75,18 +76,20 @@ function candidateComparable(employerId: string, candidate: StructuredResearchOp
   return { employerId, title: candidate.title, location: candidate.location ?? undefined, requisitionId: candidate.requisitionId ?? undefined, applyUrl: candidate.applicationUrl ?? undefined, evidence: candidate.evidenceSummary, reference, description: candidate.evidenceSummary };
 }
 
-function genericOpenApplication(candidate: StructuredResearchOpportunity): boolean {
-  if (candidate.opportunityType !== "Open Application") return false;
+function genericApplicationPage(candidate: StructuredResearchOpportunity): boolean {
   if (candidate.requisitionId) return false;
   const url = normalizeUrl(candidate.applicationUrl ?? undefined);
   if (!url) return true;
   const path = new URL(url).pathname.replace(/\/$/, "");
-  return /\/(?:careers?|jobs?|annonces?|apply)$/i.test(path);
+  return /\/(?:careers?|jobs?|annonces?|apply|recruitment(?:-\d+)?|contact-us)$/i.test(path);
 }
 
 function duplicateMatches(employerId: string, candidate: StructuredResearchOpportunity, comparables: ComparableVacancy[]) {
   const matches = findDuplicates({ sourceKey: "research-preview", employerId, sourceId: "research-preview", title: candidate.title, location: candidate.location ?? undefined, description: candidate.evidenceSummary, requisitionId: candidate.requisitionId ?? undefined, applyUrl: candidate.applicationUrl ?? undefined, sourceUrl: candidate.evidenceUrl, sourceType: "Research result", evidence: candidate.evidenceSummary, discoveredAt: "" }, comparables);
-  return genericOpenApplication(candidate) ? [] : matches;
+  if (candidate.opportunityType === "Open Application" && genericApplicationPage(candidate)) return [];
+  // A shared careers/recruitment index is not vacancy identity. Keep title- or
+  // requisition-based evidence, but discard URL-only matches from such pages.
+  return genericApplicationPage(candidate) ? matches.filter((match) => match.basis !== "application_url") : matches;
 }
 
 function reviewMissingFields(candidate: StructuredResearchOpportunity) {
@@ -131,17 +134,19 @@ export function previewResearchImport(root: string, batchRunId: string, options:
     else if (reviewMissing.length) { outcome = "blocked_missing_fields"; blockingReasons.push(`Missing review-import fields: ${reviewMissing.join(", ")}.`); }
     else if (publishedMatches.some((match) => match.kind === "exact")) { outcome = "confirmed_published_duplicate"; blockingReasons.push("Exact published duplicate evidence was found."); }
     else if (publishedMatches.length) { outcome = "possible_published_duplicate"; blockingReasons.push("Possible published duplicate evidence requires reviewer resolution."); }
-    else if (localMatches.some((match) => match.kind === "exact")) { outcome = "already_in_local_review"; blockingReasons.push("An exact local-review vacancy already exists."); }
+    // Local runs are audit evidence, not proof that a vacancy is published on ACD.
+    // Even an exact prior-run match stays in the duplicate-resolution workflow.
     else if (localMatches.length || runMatches.length) { outcome = "possible_local_duplicate"; blockingReasons.push("Possible local or same-run duplicate evidence requires reviewer resolution."); }
     else if (candidate.freshnessStatus !== "verified_active" && candidate.freshnessStatus !== "check_freshness") { outcome = "blocked_freshness"; blockingReasons.push("Freshness is not suitable for review import."); }
     const freshnessWarning = candidate.freshnessStatus === "check_freshness" ? candidate.freshnessReason : null;
-    return { employerId: result.employerId, employer: employer.displayName, title: candidate.title, opportunityType: candidate.opportunityType, outcome, allowedIntoReview: outcome === "ready_for_review_import", eligibleForPublication: outcome === "ready_for_review_import" && !publicationMissing.length, reviewMissingFields: reviewMissing, publicationMissingFields: publicationMissing, freshnessWarning, blockingReasons, publishedMatches, localMatches, runMatches };
+    const importable = !["blocked_missing_fields", "blocked_freshness", "excluded_out_of_scope", "excluded_closed_expired"].includes(outcome);
+    return { employerId: result.employerId, employer: employer.displayName, candidateIndex: index, title: candidate.title, opportunityType: candidate.opportunityType, outcome, allowedIntoReview: importable, eligibleForPublication: outcome === "ready_for_review_import" && !publicationMissing.length, reviewMissingFields: reviewMissing, publicationMissingFields: publicationMissing, freshnessWarning, blockingReasons, publishedMatches, localMatches, runMatches };
   }));
   const expiredFindings = results.flatMap(({ result }) => result.expiredFindings.map((finding) => ({ employerId: result.employerId, title: finding.title, closureEvidence: finding.closureEvidence, exclusionReason: finding.exclusionReason })));
   const discoveredSourceProposals = results.flatMap(({ employer, result }) => result.discoveredSources.map((source) => ({ employerId: result.employerId, employer: employer.displayName, sourceType: source.sourceType, url: source.url, provider: source.provider, confidence: source.confidence, proposedAction: source.recommendedRegistryAction })));
   const duplicateCategories = Object.fromEntries(["confirmed_published_duplicate", "possible_published_duplicate", "already_in_local_review", "possible_local_duplicate"].map((outcome) => [outcome, candidates.filter((candidate) => candidate.outcome === outcome).length]));
   const blockers = [...new Set(candidates.flatMap((candidate) => candidate.blockingReasons))];
-  const preview: ResearchImportPreview = { batchRunId, employerResultCount: results.length, candidates, expiredFindings, discoveredSourceProposals, summary: { activeCandidates: candidates.length, readyForReview: candidates.filter((candidate) => candidate.outcome === "ready_for_review_import").length, duplicateCategories, freshnessWarnings: candidates.filter((candidate) => candidate.freshnessWarning).length, blockedCandidates: candidates.filter((candidate) => candidate.outcome === "blocked_missing_fields" || candidate.outcome === "blocked_freshness").length, excludedCandidates: candidates.filter((candidate) => candidate.outcome.startsWith("excluded_")).length, expiredFindings: expiredFindings.length, discoveredSourceProposals: discoveredSourceProposals.length, importReady: candidates.every((candidate) => candidate.outcome === "ready_for_review_import"), blockingReasons: blockers } };
+  const preview: ResearchImportPreview = { batchRunId, employerResultCount: results.length, candidates, expiredFindings, discoveredSourceProposals, summary: { activeCandidates: candidates.length, readyForReview: candidates.filter((candidate) => candidate.allowedIntoReview).length, duplicateCategories, freshnessWarnings: candidates.filter((candidate) => candidate.freshnessWarning).length, blockedCandidates: candidates.filter((candidate) => candidate.outcome === "blocked_missing_fields" || candidate.outcome === "blocked_freshness").length, excludedCandidates: candidates.filter((candidate) => candidate.outcome.startsWith("excluded_")).length, expiredFindings: expiredFindings.length, discoveredSourceProposals: discoveredSourceProposals.length, importReady: candidates.every((candidate) => candidate.allowedIntoReview), blockingReasons: blockers } };
   if (!options.writeReport) return { preview };
   const path = join(runPath(root, batchRunId), "import-preview.json");
   const content = `${JSON.stringify(preview, null, 2)}\n`;
