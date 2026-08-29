@@ -3296,6 +3296,96 @@ export const OPPORTUNITIES: Opportunity[] = [
     lastChecked: "26 Aug 2026",
     status: "Active",
   },
+
+  // ── BATCH 7 RUN 5: APPROVED OPPORTUNITIES ─────────────────────────────────
+
+  {
+    id: "ACD-0191",
+    slug: "business-development-associate-africa-greenco-johannesburg",
+    title: "Business Development Associate",
+    company: "Africa GreenCo",
+    companyInitials: "GC",
+    boardSection: "Jobs",
+    roleType: "Climate & Impact Investing",
+    city: "Johannesburg",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Johannesburg, Gauteng, South Africa",
+    summary:
+      "Official Africa GreenCo careers listing for a Business Development Associate in its Business Development function in Johannesburg.",
+    applicationNotes:
+      "Apply through Africa GreenCo's official careers page. The public listing does not expose a separate direct application URL or a closing date.",
+    applyUrl: "https://africagreenco.com/careers/",
+    sourceUrl: "https://africagreenco.com/careers/",
+    sourceType: "Company website",
+    applyButtonText: "Apply on company site",
+    lastChecked: "30 Aug 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0192",
+    slug: "open-application-arise-iip-africa",
+    title: "Open Application",
+    company: "ARISE Integrated Industrial Platforms",
+    companyInitials: "AI",
+    boardSection: "Open Applications",
+    roleType: "Infrastructure & Project Finance",
+    region: "Pan-African",
+    locationDisplay: "Africa (location not specified)",
+    language: "English",
+    languageTags: ["English"],
+    summary:
+      "Official ARISE IIP open-application route for candidates interested in opportunities across its industrial ecosystems in Africa.",
+    applicationNotes:
+      "Send a CV and cover letter to careers@arisenet.com. The official careers page does not state a specific role, city or closing date.",
+    applyUrl: "mailto:careers@arisenet.com",
+    sourceUrl: "https://www.ariseiip.com/careers/",
+    sourceType: "Email application",
+    applyButtonText: "Apply by email",
+    lastChecked: "30 Aug 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0193",
+    slug: "chargee-suivi-financier-operations-ipdev-antananarivo",
+    title: "Chargé.e de Suivi Financier et des Opérations",
+    company: "Investisseurs & Partenaires (I&P)",
+    companyInitials: "IP",
+    logoUrl: "/logos/ip.png",
+    boardSection: "Jobs",
+    roleType: "Fund Management, Treasury & Investor Relations",
+    experienceBucket: "Mid-level",
+    city: "Antananarivo",
+    country: "Madagascar",
+    region: "East Africa",
+    locationDisplay: "Antananarivo, Madagascar",
+    language: "French; English",
+    languageTags: ["French", "English"],
+    summary:
+      "IPDEV is recruiting a finance-and-operations professional in Antananarivo to support financial reporting, treasury, compliance and fund operations.",
+    aboutRole:
+      "The role supports IPDEV's finance, administration and investment teams, including portfolio reporting, fund operations and financial governance.",
+    responsibilities: [
+      "Prepare financial reporting and support accounting, treasury and audit processes.",
+      "Support compliance, governance and operational reporting for IPDEV and its funds.",
+      "Work with the investment and finance teams on portfolio monitoring and fundraising-related activities.",
+    ],
+    requirements: [
+      "Master's degree in finance, accounting, audit or a related field.",
+      "At least three years of relevant professional experience.",
+      "Professional French and English communication skills.",
+    ],
+    applicationNotes:
+      "Email a CV of no more than two pages and a cover letter to a.thirouin@ietp.com, with the requested IPDEV 2 subject line. The listing states an as-soon-as-possible start date but no application deadline.",
+    applyUrl:
+      "mailto:a.thirouin@ietp.com?subject=Charg%C3%A9.e%20de%20suivi%20financier%20et%20des%20op%C3%A9rations%20IPDEV%202%20%E2%80%93%20NOM",
+    sourceUrl:
+      "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
+    sourceType: "Email application",
+    applyButtonText: "Apply by email",
+    lastChecked: "30 Aug 2026",
+    status: "Active",
+  },
 ];
 
 export const JOBS = OPPORTUNITIES.filter((o) => o.boardSection === "Jobs");
