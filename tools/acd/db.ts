@@ -7,6 +7,7 @@ import { normalizeUrl } from "./normalize.ts";
 import { existingMetadata } from "./existing.ts";
 import { assessFreshness, contentFingerprint } from "./freshness.ts";
 import { batches, employerRegistry } from "./batches.ts";
+import { assessReadiness } from "./readiness.ts";
 
 export class AcdDatabase {
   readonly db: DatabaseSync;
@@ -120,16 +121,18 @@ export class AcdDatabase {
     return { run: latest, runs, pilot, completion: this.reviewCompletion(runId), batch: this.batchOverview(batchId), batches: batches.map((item) => ({ id: item.id, sequence: item.sequence })), totals: this.db.prepare("SELECT json_extract(classification_json,'$.outcome') AS outcome, COUNT(*) AS count FROM vacancies WHERE run_id=? GROUP BY outcome").all(runId), checks, vacancies: decoratedVacancies };
   }
   reviewCompletion(runId: number) {
-    const rows = this.db.prepare("SELECT v.*,e.name AS employerName,e.logo_url AS logoUrl,d.action,f.freshness_status,f.application_route_status,ril.batch_run_id AS batchRunId,ril.employer_id AS lineageEmployerId,ril.result_path AS resultPath,ril.source_key AS lineageSourceKey,ril.publication_missing_fields_json AS publicationMissingFields FROM vacancies v JOIN employers e ON e.id=v.employer_id LEFT JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key LEFT JOIN research_import_lineage ril ON ril.vacancy_id=v.id WHERE v.run_id=? ORDER BY v.id").all(runId) as Array<Record<string, unknown>>;
+    const rows = this.db.prepare("SELECT v.*,e.name AS employerName,e.logo_url AS logoUrl,d.action,d.edited_json,f.freshness_status,f.application_route_status,ril.batch_run_id AS batchRunId,ril.employer_id AS lineageEmployerId,ril.result_path AS resultPath,ril.source_key AS lineageSourceKey,ril.publication_missing_fields_json AS publicationMissingFields FROM vacancies v JOIN employers e ON e.id=v.employer_id LEFT JOIN decisions d ON d.vacancy_id=v.id LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key LEFT JOIN research_import_lineage ril ON ril.vacancy_id=v.id WHERE v.run_id=? ORDER BY v.id").all(runId) as Array<Record<string, unknown>>;
     const expiredFindings = Number((this.db.prepare("SELECT COUNT(*) AS count FROM research_imports ri JOIN research_import_expired_findings ef ON ef.batch_run_id=ri.batch_run_id WHERE ri.run_id=?").get(runId) as { count: number }).count);
     const reviewable = rows.filter((row) => JSON.parse(String(row.classification_json)).outcome !== "existing_duplicate");
     const unresolved = reviewable.filter((row) => !row.action || row.action === "treat_as_new");
     const approved = reviewable.filter((row) => row.action === "approved");
     const blockedApproved = approved.map((row) => {
       const classification = JSON.parse(String(row.classification_json)) as Classification;
-      const missingFields = [...new Set([...(classification.missingFields ?? []), ...((row.publicationMissingFields ? JSON.parse(String(row.publicationMissingFields)) : []) as string[])])].filter((field) => field !== "verified_freshness" || row.freshness_status !== "verified_active").sort();
-      const blockers = [row.freshness_status !== "verified_active" ? "Freshness is not verified active." : null, row.application_route_status !== "available" ? "The official application route is not confirmed usable." : null, missingFields.length ? "Required publication information is missing." : null, classification.outcome === "possible_duplicate" ? "Duplicate resolution is still required." : null].filter(Boolean) as string[];
-      return { ...row, classification, missingFields, blockers, ready: blockers.length === 0 };
+      const edited = row.edited_json ? JSON.parse(String(row.edited_json)) as { readiness?: Record<string, unknown> } : {};
+      const values = edited.readiness ?? {};
+      const importedMissingFields = [...new Set([...(classification.missingFields ?? []), ...((row.publicationMissingFields ? JSON.parse(String(row.publicationMissingFields)) : []) as string[])])];
+      const assessment = assessReadiness({ employerName: row.employerName, title: values.title ?? row.title, location: values.location ?? row.location, description: values.description ?? row.description, applicationUrl: values.applicationUrl ?? row.apply_url, opportunityType: classification.section, freshnessStatus: row.freshness_status, applicationRouteStatus: values.applicationUrl ? "available" : row.application_route_status, classification, importedMissingFields });
+      return { ...row, title: values.title ?? row.title, location: values.location ?? row.location, description: values.description ?? row.description, apply_url: values.applicationUrl ?? row.apply_url, source_url: values.evidenceUrl ?? row.source_url, evidence: values.evidenceUrl ? `${String(row.evidence ?? "")}\nReviewer evidence: ${values.evidenceUrl}` : row.evidence, ...assessment, classification, edited: values, importedMissingFields };
     });
     const readyApproved = blockedApproved.filter((row) => row.ready);
     return { runId, reviewable: reviewable.length, decisionsCompleted: reviewable.length - unresolved.length, approved: approved.length, rejected: reviewable.filter((row) => row.action === "rejected").length, keptForLater: reviewable.filter((row) => row.action === "deferred").length, unresolved: unresolved.length, readyForCodex: readyApproved.length, approvedOpportunities: blockedApproved, blockedApproved: blockedApproved.filter((row) => !row.ready), expiredFindings, canComplete: unresolved.length === 0 && blockedApproved.every((row) => row.ready), completionLabel: unresolved.length ? "Review in progress" : blockedApproved.some((row) => !row.ready) ? "Review complete - Not ready for Codex" : "Review complete - Ready for Codex" };
@@ -156,6 +159,21 @@ export class AcdDatabase {
   decide(vacancyId: number, action: DecisionAction, edited: unknown, note?: string) {
     if (action === "approved") { const row = this.db.prepare("SELECT f.freshness_status FROM vacancies v LEFT JOIN vacancy_freshness f ON f.source_id=v.source_id AND f.source_key=v.source_key WHERE v.id=?").get(vacancyId) as { freshness_status?: string } | undefined; if (row?.freshness_status !== "verified_active") throw new Error("Freshness must be confirmed before approving this vacancy."); }
     this.db.prepare("INSERT OR REPLACE INTO decisions (vacancy_id,action,edited_json,decided_at,reviewer_note) VALUES (?,?,?,?,?)").run(vacancyId, action, JSON.stringify(edited ?? {}), new Date().toISOString(), note ?? null);
+  }
+  saveReadiness(vacancyId: number, values: Partial<Record<"title" | "location" | "description" | "applicationUrl", string>>, evidenceUrl: string) {
+    const allowed = new Set(["title", "location", "description", "applicationUrl"]);
+    const entries = Object.entries(values).filter(([key, value]) => allowed.has(key) && typeof value === "string" && value.trim());
+    if (!entries.length) throw new Error("Provide at least one factual readiness value.");
+    const validUrl = (value: string) => { try { const url = new URL(value); return url.protocol === "https:" || url.protocol === "http:"; } catch { return false; } };
+    if (!validUrl(evidenceUrl)) throw new Error("A valid official evidence URL is required.");
+    for (const [field, value] of entries) if (field === "applicationUrl" && !validUrl(value)) throw new Error("Application URL must be a valid http(s) URL.");
+    const row = this.db.prepare("SELECT edited_json FROM decisions WHERE vacancy_id=?").get(vacancyId) as { edited_json?: string } | undefined;
+    if (!row) throw new Error("An editorial decision is required before readiness information can be saved.");
+    const prior = row.edited_json ? JSON.parse(row.edited_json) as Record<string, unknown> : {};
+    const readiness = { ...((prior.readiness as Record<string, unknown> | undefined) ?? {}), ...Object.fromEntries(entries), evidenceUrl };
+    this.db.exec("BEGIN IMMEDIATE");
+    try { this.db.prepare("UPDATE decisions SET edited_json=?,decided_at=? WHERE vacancy_id=?").run(JSON.stringify({ ...prior, readiness }), new Date().toISOString(), vacancyId); this.db.exec("COMMIT"); }
+    catch (error) { this.db.exec("ROLLBACK"); throw error; }
   }
   confirmFreshness(vacancyId: number, note?: string, override = false) {
     if (override && !note?.trim()) throw new Error("A reviewer note is required to override a closed or expired vacancy.");

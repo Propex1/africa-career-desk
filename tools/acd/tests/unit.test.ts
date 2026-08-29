@@ -77,7 +77,7 @@ function structuredResearchResult(batchRunId: string, taskId: string, employer: 
       ...employer.sources.map((source) => ({ sourceId: source.id, scope: "task" as const, sourceType: source.type, outcome: "checked_no_openings" as const, checkedAt, evidenceUrl: source.url ?? "https://example.test/search", note: "Fixture source check." })),
       { sourceId: "linkedin-discovery", scope: "additional", sourceType: "linkedin_jobs", sourceUrl: "https://www.linkedin.com/jobs/", outcome: "inaccessible", note: "Fixture limitation; it does not mean zero jobs." },
     ],
-    activeCandidates: [{ title: "Open application", opportunityType: "Open Application", location: null, requisitionId: null, officialPostingDate: null, officialDeadline: null, applicationUrl: "https://example.test/apply", applicationRouteStatus: "available", evidenceUrl: "https://example.test/apply", evidenceQuality: "official", evidenceSummary: "Official fixture channel.", editorialClassification: "borderline_review", classificationReason: "No role details were supplied.", freshnessStatus: "check_freshness", freshnessReason: "No date was available.", missingFields: ["official_deadline", "role_description"], duplicateEvidence: [] }],
+    activeCandidates: [{ title: "Open application", opportunityType: "Open Application", location: "Lome, Togo", requisitionId: null, officialPostingDate: null, officialDeadline: null, applicationUrl: "https://example.test/apply", applicationRouteStatus: "available", evidenceUrl: "https://example.test/apply", evidenceQuality: "official", evidenceSummary: "Official fixture channel.", editorialClassification: "borderline_review", classificationReason: "No role details were supplied.", freshnessStatus: "check_freshness", freshnessReason: "No date was available.", missingFields: ["official_deadline", "role_description"], duplicateEvidence: [] }],
     expiredFindings: [{ title: "Expired programme", employer: employer.displayName, sourceUrl: "https://example.test/expired", applicationUrl: null, officialPostingDate: null, officialDeadline: "2026-07-10", closureEvidence: "The deadline passed before the fixture check.", checkedAt, exclusionReason: "Expired and excluded from active candidates." }],
     discoveredSources: [{ sourceType: "official_ats", url: "https://example.test/ats", provider: null, officialEvidenceUrl: "https://example.test/careers", recommendedRegistryAction: "review_registry_source", confidence: "medium", discoveredAt: checkedAt }],
   };
@@ -124,7 +124,7 @@ test("research result v1.1 keeps structured editorial, freshness, source, and cl
     const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "fixture-v11" });
     const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
     assert.equal(first.schemaVersion, "1.1.0");
-    assert.equal(first.activeCandidates[0].location, null);
+    assert.equal(first.activeCandidates[0].location, "Lome, Togo");
     assert.deepEqual(first.activeCandidates[0].missingFields, ["official_deadline", "role_description"]);
     assert.equal(first.expiredFindings.length, 1);
     assert.equal(first.discoveredSources.length, 1);
@@ -255,12 +255,32 @@ test("research batches overview is read-only and shows pilot metrics with honest
     const afterImport = new AcdDatabase(root); const importedVacancy = afterImport.dashboard(undefined, imported.runId).vacancies[0] as unknown as { id: number };
     afterImport.confirmFreshness(importedVacancy.id); afterImport.decide(importedVacancy.id, "approved", {});
     const overview = afterImport.researchBatchesOverview(); const pilot = overview.batches.find((batch) => batch.id === "batch-07");
-    assert.ok(pilot); assert.equal(pilot.name, "Batch 7 Pilot - DFC and BOAD"); assert.equal(pilot.firmsChecked, 2); assert.equal(pilot.firmsExpected, 2); assert.equal(pilot.activeOpportunities, 1); assert.equal(pilot.reviewed, 1); assert.equal(pilot.reviewable, 1); assert.equal(pilot.expiredExcluded, 1); assert.equal(pilot.limitations, true); assert.equal(pilot.reviewStatus, "Review complete - Not ready for Codex"); assert.equal(pilot.lastPublishedAt, null);
+    assert.ok(pilot); assert.equal(pilot.name, "Batch 7 Pilot - DFC and BOAD"); assert.equal(pilot.firmsChecked, 2); assert.equal(pilot.firmsExpected, 2); assert.equal(pilot.activeOpportunities, 1); assert.equal(pilot.reviewed, 1); assert.equal(pilot.reviewable, 1); assert.equal(pilot.expiredExcluded, 1); assert.equal(pilot.limitations, true); assert.equal(pilot.reviewStatus, "Review complete - Ready for Codex"); assert.equal(pilot.lastPublishedAt, null);
     const completion = afterImport.reviewCompletion(imported.runId!); const preview = afterImport.codexManifestPreview(imported.runId!);
-    assert.equal(completion.decisionsCompleted, 1); assert.equal(completion.approved, 1); assert.equal(completion.readyForCodex, 0); assert.equal(completion.blockedApproved.length, 1); assert.ok(completion.blockedApproved[0].missingFields.includes("official_deadline"));
-    assert.equal(preview.readyOpportunities.length, 0); assert.equal(preview.blockedApprovedOpportunities.length, 1); assert.deepEqual(afterImport.codexManifestPreview(imported.runId!), preview); assert.throws(() => afterImport.createCodexManifest(imported.runId!), /Resolve required publication information/);
+    assert.equal(completion.decisionsCompleted, 1); assert.equal(completion.approved, 1); assert.equal(completion.readyForCodex, 1); assert.equal(completion.blockedApproved.length, 0);
+    assert.equal(preview.readyOpportunities.length, 1); assert.equal(preview.blockedApprovedOpportunities.length, 0); assert.deepEqual(afterImport.codexManifestPreview(imported.runId!), preview); const manifest = afterImport.createCodexManifest(imported.runId!); assert.deepEqual(afterImport.createCodexManifest(imported.runId!), manifest);
     assert.equal((afterImport.dashboard(undefined, baselineRun).vacancies[0] as unknown as { action: string }).action, "deferred");
     assert.equal(Number((afterImport.db.prepare("SELECT COUNT(*) AS count FROM publication_manifests").get() as { count: number }).count), 0); afterImport.close();
+  } finally { removeTemp(root); }
+});
+
+test("readiness policy is opportunity-type aware and factual edits persist without changing decisions", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-readiness-"));
+  try {
+    mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
+    const db = new AcdDatabase(root); const run = db.createRun();
+    const add = (key: string, section: "Job" | "Programme" | "Open Application", item: Record<string, unknown> = {}, missingFields: string[] = []) => db.addVacancy(run, { sourceKey: key, employerId: "pula", sourceId: "pula-bamboohr", title: `${section} fixture`, location: "Nairobi, Kenya", applicationRouteStatus: "available", applyUrl: "https://example.test/apply", sourceUrl: "https://example.test/source", sourceType: "fixture", evidence: "Official evidence", discoveredAt: "2026-08-29T12:00:00.000Z", ...item }, { outcome: "borderline", section, confidence: 0.5, reasons: ["fixture"], missingFields, blocking: false });
+    const open = add("open", "Open Application", { description: "Official channel description" }, ["requisition_id", "official_posting_date", "official_deadline", "direct_application_form_url", "role_description"]);
+    const job = add("job", "Job", {}, ["role_description"]);
+    const programme = add("programme", "Programme", { description: "Official programme description", applyUrl: undefined, applicationRouteStatus: "unknown" });
+    db.completeRun(run); for (const id of [open, job, programme]) { db.confirmFreshness(id); db.decide(id, "approved", {}); }
+    let completion = db.reviewCompletion(run); const blocked = completion.blockedApproved as unknown as Array<{ id: number; missingFields: string[] }>; assert.equal(completion.readyForCodex, 1); assert.equal(blocked.length, 2); assert.ok(blocked.some((row) => row.id === job && row.missingFields.includes("description"))); assert.ok(blocked.some((row) => row.id === programme && row.missingFields.includes("application_url")));
+    assert.throws(() => db.saveReadiness(job, { description: "Verified role description" }, "not-a-url"), /official evidence URL/);
+    assert.throws(() => db.saveReadiness(programme, { applicationUrl: "not-a-url" }, "https://example.test/source"), /Application URL/);
+    db.saveReadiness(job, { description: "Verified role description" }, "https://example.test/job-evidence"); db.saveReadiness(programme, { applicationUrl: "https://example.test/programme-apply" }, "https://example.test/programme-evidence");
+    completion = db.reviewCompletion(run); assert.equal(completion.readyForCodex, 3); assert.equal(completion.blockedApproved.length, 0); assert.equal((db.dashboard(undefined, run).vacancies.find((row) => (row as unknown as { id: number }).id === job) as unknown as { action: string }).action, "approved"); const manifest = db.createCodexManifest(run); assert.deepEqual(db.createCodexManifest(run), manifest); db.close();
+    const reloaded = new AcdDatabase(root); assert.equal(reloaded.reviewCompletion(run).readyForCodex, 3); assert.equal((reloaded.dashboard(undefined, run).vacancies.find((row) => (row as unknown as { id: number }).id === job) as unknown as { action: string }).action, "approved"); reloaded.close();
   } finally { removeTemp(root); }
 });
 
