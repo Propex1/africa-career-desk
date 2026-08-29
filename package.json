@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "acd:discover": "node --experimental-strip-types tools/acd/cli.ts discover",
+    "acd:resume": "node --experimental-strip-types tools/acd/cli.ts resume",
+    "acd:review": "node --experimental-strip-types tools/acd/cli.ts review",
+    "acd:status": "node --experimental-strip-types tools/acd/cli.ts status",
+    "acd:repair-links": "node --experimental-strip-types tools/acd/cli.ts repair-links",
+    "acd:test": "node --experimental-strip-types tools/acd/tests/run.ts"
   },
   "dependencies": {
     "next": "16.2.9",

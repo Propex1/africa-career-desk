@@ -1,5 +1,9 @@
 # Africa Career Desk
 
+## Local discovery review
+
+The public Next.js site remains static. The semi-automated employer discovery and editorial review companion is local-only; see [the discovery guide](docs/africa-career-desk-discovery.md) for commands and operational details.
+
 Curated Africa finance and investment careers — private equity, DFI, infrastructure, venture capital, climate finance and strategy.
 
 Built with Next.js 16 (App Router), TypeScript, and Tailwind CSS v4. Fully static — no database, no backend.
