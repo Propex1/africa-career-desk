@@ -3486,7 +3486,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     ],
     applicationNotes:
       "Apply through Africa50's official application form for the Associate Investment Director, PD Fund (Transport and ICT) role.",
-    applyUrl: "https://intranet.africa50-group.com/candidate/request/3442",
+    applyUrl: "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
     sourceUrl: "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
     sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
