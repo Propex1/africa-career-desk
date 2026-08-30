@@ -12,7 +12,7 @@ interface OpenAppCardProps {
 export default function OpenAppCard({ item }: OpenAppCardProps) {
   return (
     <div className="relative bg-white border border-acd-border rounded-[18px] p-[26px] flex flex-col transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
-      <div className="hidden md:block absolute top-3 right-8">
+      <div className="absolute top-2 right-4 md:right-8">
         <NewOpportunityBadge publishedAt={item.publishedAt} />
       </div>
       <div className="flex items-start gap-4">
@@ -22,10 +22,7 @@ export default function OpenAppCard({ item }: OpenAppCardProps) {
           logoUrl={item.logoUrl}
           size="sm"
         />
-        <div>
-          <div className="mb-2 md:hidden">
-            <NewOpportunityBadge publishedAt={item.publishedAt} />
-          </div>
+        <div className="pr-16 md:pr-0">
           <p className="m-0 font-serif font-semibold text-[19px] text-acd-navy">
             {item.title}
           </p>

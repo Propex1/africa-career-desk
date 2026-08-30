@@ -8,7 +8,8 @@ interface NewOpportunityBadgeProps {
 }
 
 export default function NewOpportunityBadge({ publishedAt }: NewOpportunityBadgeProps) {
-  const [visible, setVisible] = useState(false);
+  // Render the current calendar-day state immediately; the timer keeps an open page correct at midnight.
+  const [visible, setVisible] = useState(() => isNewlyPublished({ publishedAt }));
 
   useEffect(() => {
     const refresh = () => setVisible(isNewlyPublished({ publishedAt }));

@@ -345,6 +345,9 @@ export default function JobsBoard({
   });
   const [sort, setSort] = useState<"recent" | "deadline">("recent");
 
+  // Keep the rendered cards and both counts on the same active Jobs dataset.
+  const activeJobs = jobs.filter((job) => job.status === "Active");
+
   const toggle = useCallback(
     (key: keyof Filters, value: string) => {
       setFilters((prev) => {
@@ -387,7 +390,7 @@ export default function JobsBoard({
 
   const q = search.trim().toLowerCase();
 
-  const filtered = jobs
+  const filtered = activeJobs
     .filter((j) => {
       if (filters.region.length && !filters.region.includes(j.region ?? "")) return false;
       if (filters.country.length && !filters.country.includes(j.country ?? "")) return false;
@@ -532,7 +535,7 @@ export default function JobsBoard({
           <p className="m-0 text-[16px] font-semibold text-acd-navy flex items-center gap-[9px]">
             {anyFilter
               ? `${filtered.length} matching ${filtered.length === 1 ? "role" : "roles"}`
-              : `${jobs.length} live roles`}
+              : `${activeJobs.length} live roles`}
             <span className="w-[7px] h-[7px] rounded-full bg-acd-green inline-block" />
           </p>
           {anyFilter && (

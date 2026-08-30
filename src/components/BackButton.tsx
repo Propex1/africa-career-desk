@@ -1,12 +1,11 @@
-"use client";
+interface BackButtonProps {
+  jobSlug: string;
+}
 
-import { useRouter } from "next/navigation";
-
-export default function BackButton() {
-  const router = useRouter();
+export default function BackButton({ jobSlug }: BackButtonProps) {
   return (
-    <button
-      onClick={() => router.back()}
+    <a
+      href={`/#job-${jobSlug}`}
       className="inline-flex items-center gap-2 no-underline text-[14.5px] text-acd-dim hover:text-acd-green transition-colors mb-[30px] bg-transparent border-none cursor-pointer p-0"
     >
       <svg
@@ -22,6 +21,6 @@ export default function BackButton() {
         <path d="M19 12H5M11 18l-6-6 6-6" />
       </svg>
       Back to jobs
-    </button>
+    </a>
   );
 }

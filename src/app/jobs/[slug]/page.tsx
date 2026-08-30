@@ -41,7 +41,7 @@ export default async function JobDetailPage({ params }: Props) {
       <JobDetailTracker job={job} />
 
       {/* Back */}
-      <BackButton />
+      <BackButton jobSlug={job.slug} />
 
       <div className="flex gap-10 items-start flex-wrap">
         {/* ── Left content ── */}

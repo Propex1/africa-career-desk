@@ -12,7 +12,7 @@ interface ProgrammeCardProps {
 export default function ProgrammeCard({ programme }: ProgrammeCardProps) {
   return (
     <div className="relative bg-white border border-acd-border rounded-[18px] px-7 py-6 flex items-center gap-6 flex-wrap transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
-      <div className="hidden md:block absolute top-3 right-8">
+      <div className="absolute top-2 right-4 md:right-8">
         <NewOpportunityBadge publishedAt={programme.publishedAt} />
       </div>
       <LogoContainer
@@ -22,10 +22,7 @@ export default function ProgrammeCard({ programme }: ProgrammeCardProps) {
         size="sm"
       />
 
-      <div className="flex-1 min-w-[240px]">
-        <div className="mb-2 md:hidden">
-          <NewOpportunityBadge publishedAt={programme.publishedAt} />
-        </div>
+      <div className="flex-1 min-w-[240px] pr-16 md:pr-0">
         <p className="m-0 mb-[7px] text-[12.5px] font-semibold text-acd-green tracking-[0.4px] uppercase">
           {programme.roleType}
         </p>

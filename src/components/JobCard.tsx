@@ -16,8 +16,8 @@ export default function JobCard({ job }: JobCardProps) {
   const otherTags = [job.experienceBucket, job.language].filter(Boolean) as string[];
 
   return (
-    <div className="relative bg-white border border-acd-border-card rounded-[18px] p-5 md:p-[28px_32px] flex items-center gap-6 flex-wrap transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)] shadow-[0_1px_3px_rgba(20,43,63,0.04)]">
-      <div className="hidden md:block absolute top-3 right-8">
+    <div id={`job-${job.slug}`} className="relative scroll-mt-6 bg-white border border-acd-border-card rounded-[18px] p-5 md:p-[28px_32px] flex items-center gap-6 flex-wrap transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)] shadow-[0_1px_3px_rgba(20,43,63,0.04)]">
+      <div className="absolute top-2 right-4 md:right-8">
         <NewOpportunityBadge publishedAt={job.publishedAt} />
       </div>
       {/* Logo */}
@@ -28,10 +28,7 @@ export default function JobCard({ job }: JobCardProps) {
       />
 
       {/* Title + company + location */}
-      <div className="flex-1 min-w-[200px]">
-        <div className="mb-2 md:hidden">
-          <NewOpportunityBadge publishedAt={job.publishedAt} />
-        </div>
+      <div className="flex-1 min-w-[200px] pr-16 md:pr-0">
         <Link
           href={`/jobs/${job.slug}`}
           onClick={onClick}
