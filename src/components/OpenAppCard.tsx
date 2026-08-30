@@ -2,6 +2,7 @@
 
 import type { Opportunity } from "@/types";
 import LogoContainer from "./LogoContainer";
+import NewOpportunityBadge from "./NewOpportunityBadge";
 import { trackApplyClicked } from "@/lib/analytics";
 
 interface OpenAppCardProps {
@@ -10,7 +11,10 @@ interface OpenAppCardProps {
 
 export default function OpenAppCard({ item }: OpenAppCardProps) {
   return (
-    <div className="bg-white border border-acd-border rounded-[18px] p-[26px] flex flex-col transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
+    <div className="relative bg-white border border-acd-border rounded-[18px] p-[26px] flex flex-col transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
+      <div className="hidden md:block absolute top-3 right-8">
+        <NewOpportunityBadge publishedAt={item.publishedAt} />
+      </div>
       <div className="flex items-start gap-4">
         <LogoContainer
           company={item.company}
@@ -19,6 +23,9 @@ export default function OpenAppCard({ item }: OpenAppCardProps) {
           size="sm"
         />
         <div>
+          <div className="mb-2 md:hidden">
+            <NewOpportunityBadge publishedAt={item.publishedAt} />
+          </div>
           <p className="m-0 font-serif font-semibold text-[19px] text-acd-navy">
             {item.title}
           </p>

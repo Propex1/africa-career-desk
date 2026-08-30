@@ -25,9 +25,20 @@ export interface ReadinessAssessment {
 }
 
 const isText = (value: unknown) => typeof value === "string" && value.trim().length > 0;
+const hasDetailedRoleDescription = (value: unknown) => {
+  if (!isText(value)) return false;
+  const text = String(value).trim();
+  // A short listing label is not enough editorial copy for a role or programme page.
+  return text.length >= 160 && text.split(/[.!?]+(?:\s|$)/).filter(Boolean).length >= 2;
+};
 const isUrl = (value: unknown) => {
   if (!isText(value)) return false;
   try { const url = new URL(String(value)); return url.protocol === "https:" || url.protocol === "http:"; } catch { return false; }
+};
+const isGenericRoleIndex = (value: unknown) => {
+  if (!isUrl(value)) return false;
+  const path = new URL(String(value)).pathname.replace(/\/+$/, "");
+  return /\/(careers?|open-positions|vacancies|recruitment|jobs?)$/i.test(path);
 };
 
 export function readinessType(value: unknown): ReadinessAssessment["opportunityType"] {
@@ -45,8 +56,8 @@ export function assessReadiness(input: ReadinessInput): ReadinessAssessment {
   if (!isText(input.employerName)) missingFields.push("employer");
   if (!isText(input.title)) missingFields.push("title");
   if (!isText(input.location)) missingFields.push("location");
-  if (!isUrl(input.applicationUrl) || input.applicationRouteStatus !== "available") missingFields.push("application_url");
-  if (!isText(input.description)) missingFields.push("description");
+  if (!isUrl(input.applicationUrl) || input.applicationRouteStatus !== "available" || (opportunityType !== "Open Application" && isGenericRoleIndex(input.applicationUrl))) missingFields.push("application_url");
+  if (opportunityType === "Open Application" ? !isText(input.description) : !hasDetailedRoleDescription(input.description)) missingFields.push("description");
   if (input.freshnessStatus !== "verified_active") missingFields.push("freshness");
   if (!input.classification?.outcome) missingFields.push("classification");
   if (input.classification?.outcome === "possible_duplicate") missingFields.push("duplicate_resolution");
@@ -63,8 +74,8 @@ export function assessReadiness(input: ReadinessInput): ReadinessAssessment {
   const notApplicableFields = opportunityType === "Open Application" ? ["requisition_id", "official_posting_date", "official_deadline"] : [];
   const blockers = missingFields.map((field) => ({
     employer: "Employer is missing.", title: "Title is missing.", location: "Location or geographic scope is missing.",
-    opportunity_type: "Opportunity type is missing.", application_url: "The official application destination is not confirmed usable.",
-    description: opportunityType === "Open Application" ? "A factual official-channel description is missing." : "A verified role or programme description is missing.",
+    opportunity_type: "Opportunity type is missing.", application_url: opportunityType !== "Open Application" && isGenericRoleIndex(input.applicationUrl) ? "Jobs and Programmes require a role-specific official listing or application URL; record a limitation when no direct listing exists." : "The official application destination is not confirmed usable.",
+    description: opportunityType === "Open Application" ? "A factual official-channel description is missing." : "A verified, detailed role or programme description is required; a generic one-sentence listing summary is not enough.",
     freshness: "Freshness is not verified active.", classification: "Editorial classification is missing.", duplicate_resolution: "Duplicate resolution is still required."
   }[field]!));
   return { opportunityType, missingFields, optionalFields, notApplicableFields, blockers, ready: blockers.length === 0 };

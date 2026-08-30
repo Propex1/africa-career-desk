@@ -45,6 +45,8 @@ export type Opportunity = {
   sourceUrl: string;
   sourceType: SourceType;
   applyButtonText: string;
+  /** Immutable calendar date of first publication on Africa Career Desk. */
+  publishedAt?: string;
   lastChecked: string;
   status: "Active";
 };

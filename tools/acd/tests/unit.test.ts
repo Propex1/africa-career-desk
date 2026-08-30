@@ -14,6 +14,8 @@ import { reviewHtml } from "../server.ts";
 import { batchesHtml } from "../batches-page.ts";
 import { normalizeLocation } from "../location.ts";
 import { assessFreshness, confirmationIsValid, isGenuineRepost } from "../freshness.ts";
+import { assessReadiness } from "../readiness.ts";
+import { isNewlyPublished, sortByFirstPublication, withFirstPublicationDate } from "../../../src/lib/opportunity-publication.ts";
 import { BATCH_SIZE, batches, employerRegistry } from "../batches.ts";
 import { prepareResearchBatch, readResearchTask, saveEmployerResearchResult, validateEmployerResearchResult, validateResearchBatch } from "../research.ts";
 import { previewResearchImport } from "../import-preview.ts";
@@ -326,15 +328,46 @@ test("readiness policy is opportunity-type aware and factual edits persist witho
     const add = (key: string, section: "Job" | "Programme" | "Open Application", item: Record<string, unknown> = {}, missingFields: string[] = []) => db.addVacancy(run, { sourceKey: key, employerId: "pula", sourceId: "pula-bamboohr", title: `${section} fixture`, location: "Nairobi, Kenya", applicationRouteStatus: "available", applyUrl: "https://example.test/apply", sourceUrl: "https://example.test/source", sourceType: "fixture", evidence: "Official evidence", discoveredAt: "2026-08-29T12:00:00.000Z", ...item }, { outcome: "borderline", section, confidence: 0.5, reasons: ["fixture"], missingFields, blocking: false });
     const open = add("open", "Open Application", { description: "Official channel description" }, ["requisition_id", "official_posting_date", "official_deadline", "direct_application_form_url", "role_description"]);
     const job = add("job", "Job", {}, ["role_description"]);
-    const programme = add("programme", "Programme", { description: "Official programme description", applyUrl: undefined, applicationRouteStatus: "unknown" });
+    const programme = add("programme", "Programme", { description: "The official programme combines structured learning, supervised project work and practical exposure to finance operations. Participants receive role-specific support while contributing to the employer's investment and development mandate.", applyUrl: undefined, applicationRouteStatus: "unknown" });
     db.completeRun(run); for (const id of [open, job, programme]) { db.confirmFreshness(id); db.decide(id, "approved", {}); }
     let completion = db.reviewCompletion(run); const blocked = completion.blockedApproved as unknown as Array<{ id: number; missingFields: string[] }>; assert.equal(completion.readyForCodex, 1); assert.equal(blocked.length, 2); assert.ok(blocked.some((row) => row.id === job && row.missingFields.includes("description"))); assert.ok(blocked.some((row) => row.id === programme && row.missingFields.includes("application_url")));
     assert.throws(() => db.saveReadiness(job, { description: "Verified role description" }, "not-a-url"), /official evidence URL/);
     assert.throws(() => db.saveReadiness(programme, { applicationUrl: "not-a-url" }, "https://example.test/source"), /Application URL/);
-    db.saveReadiness(job, { description: "Verified role description" }, "https://example.test/job-evidence"); db.saveReadiness(programme, { applicationUrl: "https://example.test/programme-apply" }, "https://example.test/programme-evidence");
+    db.saveReadiness(job, { description: "The official role description confirms responsibility for portfolio reporting, operational analysis and preparation of financial information. It also requires collaboration with the investment team and clear written communication with stakeholders." }, "https://example.test/job-evidence"); db.saveReadiness(programme, { applicationUrl: "https://example.test/programme-apply" }, "https://example.test/programme-evidence");
     completion = db.reviewCompletion(run); assert.equal(completion.readyForCodex, 3); assert.equal(completion.blockedApproved.length, 0); assert.equal((db.dashboard(undefined, run).vacancies.find((row) => (row as unknown as { id: number }).id === job) as unknown as { action: string }).action, "approved"); const manifest = db.createCodexManifest(run); assert.deepEqual(db.createCodexManifest(run), manifest); db.close();
     const reloaded = new AcdDatabase(root); assert.equal(reloaded.reviewCompletion(run).readyForCodex, 3); assert.equal((reloaded.dashboard(undefined, run).vacancies.find((row) => (row as unknown as { id: number }).id === job) as unknown as { action: string }).action, "approved"); reloaded.close();
   } finally { removeTemp(root); }
+});
+
+test("publication readiness requires detailed copy for jobs and programmes but permits concise open-application copy", () => {
+  const classification = { outcome: "borderline" as const, section: "Job" as const, confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false };
+  const common = { employerName: "Fixture employer", title: "Fixture title", location: "Nairobi, Kenya", applicationUrl: "https://example.test/apply", freshnessStatus: "verified_active", applicationRouteStatus: "available", classification };
+  assert.ok(assessReadiness({ ...common, opportunityType: "Job", description: "Official listing." }).missingFields.includes("description"));
+  assert.equal(assessReadiness({ ...common, opportunityType: "Job", description: "The official listing describes a finance role supporting portfolio reporting, investment operations and stakeholder updates. It requires demonstrated analytical judgement and experience working with financial information." }).ready, true);
+  assert.ok(assessReadiness({ ...common, opportunityType: "Job", description: "The official listing describes a finance role supporting portfolio reporting, investment operations and stakeholder updates. It requires demonstrated analytical judgement and experience working with financial information.", applicationUrl: "https://example.test/careers/" }).missingFields.includes("application_url"));
+  assert.equal(assessReadiness({ ...common, opportunityType: "Open Application", description: "Official channel for future applications." }).ready, true);
+  assert.equal(assessReadiness({ ...common, opportunityType: "Open Application", description: "Official channel for future applications.", applicationUrl: "https://example.test/careers/" }).ready, true);
+  assert.ok(assessReadiness({ ...common, opportunityType: "Open Application", description: "Official channel for future applications.", applicationUrl: "mailto:careers@example.test" }).missingFields.includes("application_url"));
+});
+
+test("public opportunities keep immutable first-publication dates, sort newest first, and expire New after seven calendar days", () => {
+  const historical = { id: "historic" };
+  const sameDateFirst = { id: "same-first", publishedAt: "2026-08-30" };
+  const newer = { id: "newer", publishedAt: "2026-08-31" };
+  const sameDateSecond = { id: "same-second", publishedAt: "2026-08-30" };
+  const historicalSecond = { id: "historic-second" };
+  assert.deepEqual(sortByFirstPublication([historical, sameDateFirst, newer, sameDateSecond, historicalSecond]).map((item) => item.id), ["newer", "same-first", "same-second", "historic", "historic-second"]);
+  assert.deepEqual(sortByFirstPublication([{ id: "relationship" }, { id: "green", publishedAt: "2026-08-30" }, { id: "ip", publishedAt: "2026-08-30" }].reverse()).map((item) => item.id), ["ip", "green", "relationship"]);
+  assert.equal(withFirstPublicationDate({ id: "entry", publishedAt: "2026-08-30" }, { publishedAt: "2026-08-12" }, new Date(2026, 7, 30)).publishedAt, "2026-08-12");
+  assert.equal(withFirstPublicationDate({ id: "entry" }, undefined, new Date(2026, 7, 30)).publishedAt, "2026-08-30");
+  assert.equal(isNewlyPublished({ publishedAt: "2026-08-30" }, new Date(2026, 7, 30)), true);
+  assert.equal(isNewlyPublished({ publishedAt: "2026-08-30" }, new Date(2026, 8, 5)), true);
+  assert.equal(isNewlyPublished({ publishedAt: "2026-08-30" }, new Date(2026, 8, 6)), false);
+  assert.equal(isNewlyPublished({ publishedAt: undefined }, new Date(2026, 7, 30)), false);
+  const rechecked = { publishedAt: "2026-08-30", lastChecked: "2026-09-06" };
+  assert.equal(isNewlyPublished(rechecked, new Date(2026, 8, 6)), false);
+  assert.equal(isNewlyPublished({ publishedAt: "2026-03-25" }, new Date(2026, 2, 31)), true);
+  assert.equal(isNewlyPublished({ publishedAt: "2026-03-25" }, new Date(2026, 3, 1)), false);
 });
 
 test("pilot research selection is explicit, batch-constrained, immutable, and leaves batch storage untouched", () => {

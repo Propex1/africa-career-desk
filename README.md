@@ -43,11 +43,12 @@ Each entry follows the `Opportunity` type defined in `src/types/index.ts`.
 | `boardSection` | `"Jobs"`, `"Programmes"`, or `"Open Applications"` |
 | `roleType` | Role category shown as the primary tag |
 | `locationDisplay` | Display string shown on cards and detail pages |
-| `summary` | 1–2 sentence description |
-| `applyUrl` | Direct apply URL or `mailto:` link |
+| `summary` | Concise factual description |
+| `applyUrl` | Direct official application or instructions URL |
 | `sourceUrl` | Where the listing was verified |
 | `sourceType` | `"Company website"`, `"Official ATS"`, `"LinkedIn company post"`, `"Email application"`, or `"Trusted third-party"` |
 | `applyButtonText` | Button label, e.g. `"Apply on company site"` |
+| `publishedAt` | Immutable first-publication date, `YYYY-MM-DD`; omit only for older entries whose date is not reliable |
 | `lastChecked` | Date string, e.g. `"23 Jun 2026"` |
 | `status` | Always `"Active"` |
 
@@ -69,6 +70,11 @@ Each entry follows the `Opportunity` type defined in `src/types/index.ts`.
 - If no verified deadline, omit `deadlineDisplay` — the deadline line hides itself.
 - Use `Experience`, not `Seniority`, for the experience field label.
 - `languageTags` must be clean single-language strings (`"English"`, `"French"`, etc.).
+- Jobs and Programmes need a verified, role-specific description with enough detail for a useful detail page. Do not publish a generic one-sentence listing label; add `aboutRole`, responsibilities and requirements where the official source supports them.
+- Open Applications may use shorter, purpose-specific copy because they are not individual vacancies.
+- For Open Applications, make the primary action the official webpage containing the application instructions whenever one exists. Mention the official email address in the copy when relevant; use a `mailto:` action only when no official instructions webpage is available, and state that limitation clearly.
+- For Jobs and Programmes, click through the employer's careers index to the individual official listing before publishing. Use that role-specific page for the application URL, factual source, description, responsibilities, requirements, contract type and deadline. A generic careers or vacancies index does not satisfy publication readiness; if no individual page exists, record that limitation instead of presenting the index as a direct listing.
+- During publication preparation, set `publishedAt` once to the actual ACD publication day (`YYYY-MM-DD`) using `withFirstPublicationDate`. Never replace an existing value when editing, rechecking or correcting a listing. The public listings sort dated entries newest first, preserve stable same-date/source order, and show a `New` badge for the first seven calendar days only.
 
 After editing, run `npm run build` to confirm TypeScript is clean and all 48+ pages pre-render.
 

@@ -1,5 +1,7 @@
 ﻿import type { Opportunity, RoleType } from "@/types";
 
+import { sortByFirstPublication } from "@/lib/opportunity-publication";
+
 // To add a logo for an employer, place the file in public/logos/ and set:
 //   logoUrl: "/logos/company-name.svg"
 // See LOGOS.md for the full checklist and naming convention.
@@ -555,7 +557,7 @@ export const OPPORTUNITIES: Opportunity[] = [
       "French language fluency (written and spoken)",
     ],
     applicationNotes:
-      "Send CV and a brief cover note to careers@armharith.com with the subject line 'Head of Finance Application'. Only shortlisted candidates will be contacted.",
+      "Send CV and a brief cover note to careers@armharith.com with the subject line 'Head of Finance Application'. ARM-Harith's official page confirms this role is active, but does not expose a separate role-detail or online application page. Only shortlisted candidates will be contacted.",
     applyUrl: "https://armharith.com/open-positions/",
     sourceUrl: "https://armharith.com/open-positions/",
     sourceType: "Company website",
@@ -959,31 +961,6 @@ export const OPPORTUNITIES: Opportunity[] = [
       "https://www.afreximbank.com/careers/vacancies/internship/internship-opportunities/",
     sourceUrl:
       "https://www.afreximbank.com/careers/vacancies/internship/internship-opportunities/",
-    sourceType: "Company website",
-    applyButtonText: "Apply on company site",
-    lastChecked: "26 Aug 2026",
-    status: "Active",
-  },
-  {
-    id: "ACD-0043",
-    slug: "internship-student-i-and-s-officer-bio-invest-brussels-belgium-dfi-mandate",
-    title: "Internship / Student I&S Officer",
-    company: "BIO Invest",
-    companyInitials: "BI",
-    logoUrl: "/logos/bio-invest.png",
-    boardSection: "Programmes",
-    roleType: "Development Finance & Multilaterals",
-    experienceBucket: "Intern / Graduate",
-    city: "Brussels",
-    country: "Belgium",
-    region: "Pan-African",
-    locationDisplay: "Brussels, Belgium / DFI mandate",
-    language: "English; French/Dutch may help",
-    languageTags: ["English", "French", "Dutch"],
-    summary:
-      "BIO internship and student I&S officer opportunity listed on the official careers page of the Belgian development finance institution.",
-    applyUrl: "https://www.bio-invest.be/en/careers",
-    sourceUrl: "https://www.bio-invest.be/en/careers",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
     lastChecked: "26 Aug 2026",
@@ -3305,20 +3282,42 @@ export const OPPORTUNITIES: Opportunity[] = [
     title: "Business Development Associate",
     company: "Africa GreenCo",
     companyInitials: "GC",
+    logoUrl: "/logos/Africa_GreenCo_Logo.png",
     boardSection: "Jobs",
     roleType: "Climate & Impact Investing",
+    experienceBucket: "Mid-level",
     city: "Johannesburg",
     country: "South Africa",
     region: "Southern Africa",
     locationDisplay: "Johannesburg, Gauteng, South Africa",
     summary:
-      "Official Africa GreenCo careers listing for a Business Development Associate in its Business Development function in Johannesburg.",
+      "Africa GreenCo is recruiting a full-time Business Development Associate in Johannesburg to help grow corporate power-procurement, independent power producer and structured-transaction opportunities in South Africa.",
+    aboutRole:
+      "The role supports the full commercial lifecycle, from evaluating opportunities and engaging stakeholders to financial modelling, negotiation support and delivery coordination. It reports to the country Head of Business Development and works with GreenCo's leadership, new-ventures and functional teams.",
+    responsibilities: [
+      "Develop and maintain commercial pipelines, customer account plans and market intelligence for corporate power procurement and IPP partnerships.",
+      "Support deal structuring, proposals and bid submissions, including supply and offtake arrangements, term sheets and commercial risk inputs.",
+      "Build and maintain pricing and financial models, assessing scenarios, margins, affordability and risk-adjusted returns.",
+      "Coordinate deal workstreams and engage customers, IPPs, financiers, advisers and relevant market stakeholders.",
+    ],
+    requirements: [
+      "Bachelor's degree in finance, economics, engineering, business or a related field; a relevant master's degree or professional qualification is advantageous.",
+      "At least four years of relevant South African experience in energy commercial work, infrastructure finance, corporate energy procurement, transaction advisory, renewables origination or trading/commercialisation.",
+      "Financial modelling capability in Excel, with strong commercial, project-finance and transaction fundamentals.",
+      "Strong written communication, stakeholder coordination and project-management skills; CRM experience is expected.",
+    ],
+    niceToHave: [
+      "An existing South African energy-market network.",
+      "Experience with dashboards or analytics tools such as Power BI or Tableau.",
+    ],
     applicationNotes:
-      "Apply through Africa GreenCo's official careers page. The public listing does not expose a separate direct application URL or a closing date.",
-    applyUrl: "https://africagreenco.com/careers/",
-    sourceUrl: "https://africagreenco.com/careers/",
-    sourceType: "Company website",
+      "Apply on GreenCo's official BambooHR listing with a CV and cover letter explaining your interest in GreenCo and the skills, experience and perspective you would bring. The listing closes on 30 Aug 2026.",
+    deadlineDisplay: "30 Aug 2026",
+    applyUrl: "https://greenco.bamboohr.com/careers/75",
+    sourceUrl: "https://greenco.bamboohr.com/careers/75",
+    sourceType: "Official ATS",
     applyButtonText: "Apply on company site",
+    publishedAt: "2026-08-30",
     lastChecked: "30 Aug 2026",
     status: "Active",
   },
@@ -3338,10 +3337,11 @@ export const OPPORTUNITIES: Opportunity[] = [
       "Official ARISE IIP open-application route for candidates interested in opportunities across its industrial ecosystems in Africa.",
     applicationNotes:
       "Send a CV and cover letter to careers@arisenet.com. The official careers page does not state a specific role, city or closing date.",
-    applyUrl: "mailto:careers@arisenet.com",
+    applyUrl: "https://www.ariseiip.com/careers/",
     sourceUrl: "https://www.ariseiip.com/careers/",
-    sourceType: "Email application",
-    applyButtonText: "Apply by email",
+    sourceType: "Company website",
+    applyButtonText: "View application instructions",
+    publishedAt: "2026-08-30",
     lastChecked: "30 Aug 2026",
     status: "Active",
   },
@@ -3378,23 +3378,22 @@ export const OPPORTUNITIES: Opportunity[] = [
     applicationNotes:
       "Email a CV of no more than two pages and a cover letter to a.thirouin@ietp.com, with the requested IPDEV 2 subject line. The listing states an as-soon-as-possible start date but no application deadline.",
     applyUrl:
-      "mailto:a.thirouin@ietp.com?subject=Charg%C3%A9.e%20de%20suivi%20financier%20et%20des%20op%C3%A9rations%20IPDEV%202%20%E2%80%93%20NOM",
+      "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
     sourceUrl:
       "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
     sourceType: "Email application",
-    applyButtonText: "Apply by email",
+    applyButtonText: "Apply on company site",
+    publishedAt: "2026-08-30",
     lastChecked: "30 Aug 2026",
     status: "Active",
   },
 ];
 
-export const JOBS = OPPORTUNITIES.filter((o) => o.boardSection === "Jobs");
-export const PROGRAMMES = OPPORTUNITIES.filter(
-  (o) => o.boardSection === "Programmes"
-);
-export const OPEN_APPLICATIONS = OPPORTUNITIES.filter(
-  (o) => o.boardSection === "Open Applications"
-);
+// One-time historical baseline correction. Future dated publications still lead via the shared sorter.
+const JOBS_BASELINE = [...OPPORTUNITIES.filter((o) => o.boardSection === "Jobs")].reverse();
+export const JOBS = sortByFirstPublication(JOBS_BASELINE);
+export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes"));
+export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications"));
 
 export function getJobBySlug(slug: string): Opportunity | undefined {
   return JOBS.find((o) => o.slug === slug);
