@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { Opportunity } from "@/types";
+import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
 import JobCard from "./JobCard";
 import { trackFilterUsed, trackSearchUsed } from "@/lib/analytics";
 
@@ -528,6 +529,8 @@ export default function JobsBoard({
           ))}
         </div>
       )}
+
+      <BeehiivNewsletterSection />
 
       {/* Count + sort */}
       <div className="mt-[34px] flex items-center justify-between gap-4 flex-wrap">
