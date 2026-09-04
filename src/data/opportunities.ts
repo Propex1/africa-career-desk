@@ -3735,7 +3735,15 @@ export const OPPORTUNITIES: Opportunity[] = [
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
 const JOBS_BASELINE = [...OPPORTUNITIES.filter((o) => o.boardSection === "Jobs")].reverse();
-export const JOBS = sortByFirstPublication(JOBS_BASELINE);
+const JOBS_DISPLAY_PRIORITY = [
+  "via-chargee-affaires-financement-mas-proparco-abidjan",
+  "associate-principal-power-infrastructure-crossboundary",
+];
+const ORDERED_JOBS_BASELINE = [
+  ...JOBS_DISPLAY_PRIORITY.flatMap((slug) => JOBS_BASELINE.filter((job) => job.slug === slug)),
+  ...JOBS_BASELINE.filter((job) => !JOBS_DISPLAY_PRIORITY.includes(job.slug)),
+];
+export const JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
 export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes"));
 export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications"));
 
