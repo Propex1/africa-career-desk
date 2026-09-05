@@ -1,0 +1,10 @@
+# Local research, import work, and generated artifacts are not application runtime inputs.
+/data/
+/docs/
+/tools/
+/.tmp/
+/.next/
+/node_modules/
+/out/
+/.env*
+/.vercel/
