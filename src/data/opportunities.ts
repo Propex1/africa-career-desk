@@ -3733,8 +3733,29 @@ export const OPPORTUNITIES: Opportunity[] = [
   },
 ];
 
+// Confirmed against stored official deadlines during the 6 Sep 2026 expiry audit.
+const EXPIRED_JOB_IDS = new Set([
+  "ACD-0060",
+  "ACD-0143",
+  "ACD-0144",
+  "ACD-0145",
+  "ACD-0146",
+  "ACD-0147",
+  "ACD-0159",
+  "ACD-0160",
+  "ACD-0163",
+  "ACD-0183",
+  "ACD-0184",
+  "ACD-0191",
+  "ACD-0201",
+  "ACD-0202",
+  "ACD-0203",
+]);
+
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
-const JOBS_BASELINE = [...OPPORTUNITIES.filter((o) => o.boardSection === "Jobs")].reverse();
+const JOBS_BASELINE = [...OPPORTUNITIES.filter(
+  (opportunity) => opportunity.boardSection === "Jobs" && !EXPIRED_JOB_IDS.has(opportunity.id)
+)].reverse();
 const JOBS_DISPLAY_PRIORITY = [
   "via-chargee-affaires-financement-mas-proparco-abidjan",
   "associate-principal-power-infrastructure-crossboundary",
