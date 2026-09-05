@@ -442,12 +442,14 @@ export default function JobsBoard({
         Curated Africa Careers
       </p>
       <h1 className="m-0 font-serif font-medium text-[clamp(36px,6vw,58px)] leading-[1.04] tracking-[-1px] text-acd-navy max-w-[760px]">
-        Premium Africa finance &amp; investment roles
+        Curated Africa finance &amp; investment opportunities
       </h1>
       <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[620px]">
-        Find curated Africa-focused roles in finance, investment, private equity,
-        infrastructure, DFI, climate, VC and strategy. Explore jobs, programmes
-        and open application channels across leading Africa-focused employers.
+        Private equity, infrastructure, development finance, climate finance and
+        investment opportunities from leading Africa-focused employers.
+      </p>
+      <p className="mt-3 text-[14px] leading-relaxed text-acd-muted max-w-[620px]">
+        Every opportunity is reviewed and links to an official application source.
       </p>
 
       {/* Search */}
