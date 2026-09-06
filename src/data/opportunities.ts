@@ -1,5 +1,6 @@
 ﻿import type { Opportunity, RoleType } from "@/types";
 
+import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
 import { sortByFirstPublication } from "@/lib/opportunity-publication";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
@@ -7,7 +8,7 @@ import { sortByFirstPublication } from "@/lib/opportunity-publication";
 // See LOGOS.md for the full checklist and naming convention.
 // Do not set logoUrl until the file exists in public/logos/.
 
-export const OPPORTUNITIES: Opportunity[] = [
+const EXISTING_OPPORTUNITIES: Opportunity[] = [
   // ── JOBS ─────────────────────────────────────────────────────────────────
 
   {
@@ -3733,6 +3734,11 @@ export const OPPORTUNITIES: Opportunity[] = [
   },
 ];
 
+export const OPPORTUNITIES: Opportunity[] = [
+  ...EXISTING_OPPORTUNITIES,
+  ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
+];
+
 // Confirmed against stored official deadlines during the 6 Sep 2026 expiry audit.
 const EXPIRED_JOB_IDS = new Set([
   "ACD-0060",
@@ -3757,6 +3763,7 @@ const JOBS_BASELINE = [...OPPORTUNITIES.filter(
   (opportunity) => opportunity.boardSection === "Jobs" && !EXPIRED_JOB_IDS.has(opportunity.id)
 )].reverse();
 const JOBS_DISPLAY_PRIORITY = [
+  "private-equity-professional-fund-of-funds-responsability-cape-town",
   "via-chargee-affaires-financement-mas-proparco-abidjan",
   "associate-principal-power-infrastructure-crossboundary",
 ];
