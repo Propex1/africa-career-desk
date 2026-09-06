@@ -9,7 +9,9 @@ const BEEHIIV_SCRIPT_SRC = `${BEEHIIV_ORIGIN}/v3/loader.js`;
 
 type EmbedStatus = "loading" | "ready" | "error";
 
-export default function BeehiivNewsletterSection() {
+type BeehiivNewsletterSectionProps = { variant?: "banner" | "trigger" };
+
+export default function BeehiivNewsletterSection({ variant = "banner" }: BeehiivNewsletterSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -37,6 +39,7 @@ export default function BeehiivNewsletterSection() {
   }, [showSuccessToast]);
 
   useEffect(() => {
+    if (variant !== "banner") return;
     if (shouldPrepare) return;
 
     const section = sectionRef.current;
@@ -53,7 +56,7 @@ export default function BeehiivNewsletterSection() {
 
     observer.observe(section);
     return () => observer.disconnect();
-  }, [shouldPrepare]);
+  }, [shouldPrepare, variant]);
 
   useEffect(() => {
     if (!shouldPrepare) return;
@@ -171,11 +174,17 @@ export default function BeehiivNewsletterSection() {
     };
   }, [isOpen]);
 
+  const openNewsletter = () => {
+    successHandledRef.current = false;
+    prepareNewsletter();
+    setIsOpen(true);
+  };
+
   if (!NEWSLETTER_ENABLED) return null;
 
   return (
-    <section ref={sectionRef} id="newsletter" className="mb-[-16px] mt-5 md:mt-6" aria-labelledby={titleId}>
-      <div className="relative overflow-hidden rounded-[20px] border border-acd-green-pale-border bg-acd-green-pale px-5 py-4 shadow-[0_10px_30px_-24px_rgba(20,43,63,0.22)] md:h-[160px] md:px-7 md:py-5">
+    <section ref={sectionRef} id={variant === "banner" ? "newsletter" : undefined} className={variant === "banner" ? "mb-[-16px] mt-5 md:mt-6" : "contents"} aria-labelledby={variant === "banner" ? titleId : undefined}>
+      {variant === "banner" ? <div className="relative overflow-hidden rounded-[20px] border border-acd-green-pale-border bg-acd-green-pale px-5 py-4 shadow-[0_10px_30px_-24px_rgba(20,43,63,0.22)] md:h-[160px] md:px-7 md:py-5">
         <div className="absolute -right-10 -top-10 h-[100px] w-[100px] rounded-full bg-[radial-gradient(circle_at_center,rgba(22,82,42,0.14),rgba(22,82,42,0))]" />
         <div className="relative flex flex-col gap-4 md:h-full md:flex-row md:items-center md:justify-between md:gap-8">
           <div className="max-w-[680px]">
@@ -196,11 +205,7 @@ export default function BeehiivNewsletterSection() {
           <button
             ref={openButtonRef}
             type="button"
-            onClick={() => {
-              successHandledRef.current = false;
-              prepareNewsletter();
-              setIsOpen(true);
-            }}
+            onClick={openNewsletter}
             onMouseEnter={prepareNewsletter}
             onFocus={prepareNewsletter}
             onPointerDown={prepareNewsletter}
@@ -209,7 +214,7 @@ export default function BeehiivNewsletterSection() {
             Join the Newsletter
           </button>
         </div>
-      </div>
+      </div> : <button ref={openButtonRef} type="button" onClick={openNewsletter} onMouseEnter={prepareNewsletter} onFocus={prepareNewsletter} onPointerDown={prepareNewsletter} className="inline-flex min-h-[46px] items-center justify-center rounded-[11px] border border-acd-border-green bg-white px-6 text-[15px] font-semibold text-acd-green transition-colors hover:border-acd-green">Join the Newsletter</button>}
 
       {shouldPrepare && (
         <div

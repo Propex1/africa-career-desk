@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BeehiivNewsletterSection from "@/components/BeehiivNewsletterSection";
 import { JOBS } from "@/data/opportunities";
 
 export const metadata: Metadata = {
@@ -123,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="explore-heading" className="mt-16 border border-acd-green-pale-border bg-acd-green-pale px-6 py-10 md:mt-24 md:px-12 md:py-12">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-12"><div className="max-w-[720px]"><p className="m-0 text-[13px] font-semibold uppercase tracking-[2.4px] text-acd-green">Africa Career Desk</p><h2 id="explore-heading" className="m-0 mt-4 font-serif text-[clamp(30px,3.8vw,44px)] font-medium leading-[1.08] tracking-[-0.8px] text-acd-navy">Explore Africa-focused opportunities</h2><p className="m-0 mt-4 text-[17px] leading-[1.6] text-acd-green-body">Discover curated roles across private capital, infrastructure, development finance, climate finance and more.</p></div><div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><Link href="/" className="inline-flex min-h-[46px] items-center justify-center rounded-[11px] bg-acd-green px-6 text-[15px] font-semibold text-white no-underline transition-colors hover:bg-acd-green-mid">Browse opportunities</Link><Link href="/#newsletter" className="inline-flex min-h-[46px] items-center justify-center rounded-[11px] border border-acd-border-green bg-white px-6 text-[15px] font-semibold text-acd-green no-underline transition-colors hover:border-acd-green">Join the Newsletter</Link></div></div>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-12"><div className="max-w-[720px]"><p className="m-0 text-[13px] font-semibold uppercase tracking-[2.4px] text-acd-green">Africa Career Desk</p><h2 id="explore-heading" className="m-0 mt-4 font-serif text-[clamp(30px,3.8vw,44px)] font-medium leading-[1.08] tracking-[-0.8px] text-acd-navy">Explore Africa-focused opportunities</h2><p className="m-0 mt-4 text-[17px] leading-[1.6] text-acd-green-body">Discover curated roles across private capital, infrastructure, development finance, climate finance and more.</p></div><div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><Link href="/" className="inline-flex min-h-[46px] items-center justify-center rounded-[11px] bg-acd-green px-6 text-[15px] font-semibold text-white no-underline transition-colors hover:bg-acd-green-mid">Browse opportunities</Link><BeehiivNewsletterSection variant="trigger" /></div></div>
       </section>
     </div>
   );
