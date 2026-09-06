@@ -434,23 +434,32 @@ export default function JobsBoard({
   (Object.keys(filters) as (keyof Filters)[]).forEach((key) => {
     filters[key].forEach((value) => chips.push({ key, value }));
   });
+  const employerCount = new Set(jobs.map((job) => job.company)).size;
+  const countryCount = new Set(jobs.flatMap((job) => (job.country ? [job.country] : []))).size;
 
   return (
-    <section className="max-w-[1180px] mx-auto px-5 md:px-8 py-[54px_20px] md:py-[54px_32px]">
+    <section className="max-w-[1180px] mx-auto px-5 py-[48px_20px] md:px-8 md:py-[48px_32px]">
       {/* Hero */}
-      <p className="m-0 mb-4 text-[13px] font-semibold tracking-[2.4px] text-acd-green uppercase">
-        Curated Africa Careers
-      </p>
-      <h1 className="m-0 font-serif font-medium text-[clamp(36px,6vw,58px)] leading-[1.04] tracking-[-1px] text-acd-navy max-w-[760px]">
-        Curated Africa finance &amp; investment opportunities
-      </h1>
-      <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[620px]">
-        Private equity, infrastructure, development finance, climate finance and
-        investment opportunities from leading Africa-focused employers.
-      </p>
-      <p className="mt-3 text-[14px] leading-relaxed text-acd-muted max-w-[620px]">
-        Every opportunity is reviewed and links to an official application source.
-      </p>
+      <div className="xl:grid xl:grid-cols-[minmax(0,760px)_1fr] xl:items-end xl:gap-12">
+        <div>
+          <p className="m-0 mb-4 text-[13px] font-semibold tracking-[2.4px] text-acd-green uppercase">
+            Africa Finance &amp; Investment Careers
+          </p>
+          <h1 className="m-0 font-serif font-medium text-[clamp(36px,6vw,58px)] leading-[1.04] tracking-[-1px] text-acd-navy max-w-[760px]">
+            Curated Africa finance &amp; investment opportunities
+          </h1>
+          <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[620px]">
+            Private equity, infrastructure, development finance and climate finance roles from leading Africa-focused employers.
+          </p>
+          <p className="mt-3 text-[14px] leading-relaxed text-acd-muted max-w-[620px]">
+            Reviewed opportunities &middot; Official application sources &middot; Updated regularly
+          </p>
+        </div>
+        <div className="hidden border-l border-acd-border-green pl-7 pb-1 xl:block">
+          <p className="m-0 text-[11px] font-semibold uppercase tracking-[2px] text-acd-green">Live on ACD</p>
+          <p className="m-0 mt-2 text-[14px] leading-relaxed text-acd-muted">{jobs.length} roles &middot; {employerCount} employers &middot; {countryCount} countries</p>
+        </div>
+      </div>
 
       {/* Search */}
       <div className="mt-10 relative">
