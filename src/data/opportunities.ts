@@ -3739,8 +3739,9 @@ export const OPPORTUNITIES: Opportunity[] = [
   ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
 ];
 
-// Confirmed against stored official deadlines during the 6 Sep 2026 expiry audit.
-const EXPIRED_JOB_IDS = new Set([
+// Expired jobs and editor-approved removals; historical records remain intact.
+// Evidence and approval: docs/audits/2026-09-09-job-expiry-audit.md.
+const REMOVED_JOB_IDS = new Set([
   "ACD-0060",
   "ACD-0143",
   "ACD-0144",
@@ -3756,11 +3757,23 @@ const EXPIRED_JOB_IDS = new Set([
   "ACD-0201",
   "ACD-0202",
   "ACD-0203",
+  "ACD-0139",
+  "ACD-0162",
+  "ACD-0167",
+  "ACD-0168",
+  "ACD-0189",
+  "ACD-0199",
+  // Additional manual removals approved by the editor on 9 Sep 2026.
+  "ACD-0150",
+  "ACD-0158",
+  "ACD-0157",
+  "ACD-0078",
+  "ACD-0165",
 ]);
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
 const JOBS_BASELINE = [...OPPORTUNITIES.filter(
-  (opportunity) => opportunity.boardSection === "Jobs" && !EXPIRED_JOB_IDS.has(opportunity.id)
+  (opportunity) => opportunity.boardSection === "Jobs" && !REMOVED_JOB_IDS.has(opportunity.id)
 )].reverse();
 const JOBS_DISPLAY_PRIORITY = [
   "private-equity-professional-fund-of-funds-responsability-cape-town",

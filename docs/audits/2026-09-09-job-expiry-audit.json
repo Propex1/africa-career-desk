@@ -1,0 +1,3664 @@
+{
+  "auditDate": "2026-09-09",
+  "auditTimezone": "Europe/Zurich",
+  "auditNote": "Checks took place after midnight CEST on 9 Sep, while UTC and Dakar were still on 8 Sep. Date-only deadlines on 9 Sep were not treated as expired.",
+  "generatedAt": "2026-09-08T22:35:45.748Z",
+  "site": "https://www.africacareerdesk.com/",
+  "scope": "All 70 job cards on the live Jobs board, reconciled one-to-one with local JOBS; all 70 live detail pages, displayed deadlines and Apply URLs matched. Programmes and Open Applications are separate sections and were not audited.",
+  "productionChanged": false,
+  "sourceRemovalsImplemented": true,
+  "counts": {
+    "Removed locally": 6,
+    "Confirmed active": 55,
+    "Needs review": 9
+  },
+  "retainedCount": 64,
+  "method": "Read-only HTTP checks of every live detail page and Apply URL, source URLs where different, official job metadata/public vacancy APIs for JavaScript pages, linked application forms and targeted investigation of uncertain destinations. No application submission, sign-in, email, deployment, commit or push.",
+  "linkFindings": [
+    {
+      "id": "ACD-0139",
+      "type": "Closed Apply URL; separate source broken",
+      "detail": "ATS HTTP 410 / no longer available; company source HTTP 404. Removed locally."
+    },
+    {
+      "id": "ACD-0162",
+      "type": "Closed Apply destination",
+      "detail": "EBRD now shows the position filled. Removed locally."
+    },
+    {
+      "id": "ACD-0199",
+      "type": "Closed Apply destination",
+      "detail": "EBRD now shows the position filled. Removed locally."
+    },
+    {
+      "id": "ACD-0167",
+      "type": "Closed Apply destination",
+      "detail": "SmartRecruiters returns HTTP 200 with an explicit expired-job notice. Removed locally."
+    },
+    {
+      "id": "ACD-0168",
+      "type": "Closed Apply destination",
+      "detail": "SmartRecruiters returns HTTP 200 with an explicit expired-job notice. Removed locally."
+    },
+    {
+      "id": "ACD-0189",
+      "type": "Removed Apply destination",
+      "detail": "HTTP 410 Gone with a not-found/job-unavailable page. Removed locally."
+    },
+    {
+      "id": "ACD-0150",
+      "type": "Apply and source access failure",
+      "detail": "Vacancy 2272 description/application both return HTTP 403 Invalid permission. Kept for review."
+    },
+    {
+      "id": "ACD-0200",
+      "type": "Apply blocked",
+      "detail": "Official vacancy and careers index are blocked by a 403 challenge. Kept for review."
+    },
+    {
+      "id": "ACD-0008",
+      "type": "Broken downstream Apply Now link",
+      "detail": "Official advert and latest-vacancies index remain live; linked Odoo application form /candidate/request/60 returns 404. Kept for review."
+    },
+    {
+      "id": "ACD-0078",
+      "type": "Downstream form requires access",
+      "detail": "AVCA advert loads; Google Forms returns 401 and cookie/sign-in prompts. Kept for review."
+    },
+    {
+      "id": "ACD-0142",
+      "type": "Downstream ATS blocked",
+      "detail": "CA Global advert loads; its iSmartRecruit Apply now target returns 403. Kept for review."
+    },
+    {
+      "id": "ACD-0210",
+      "type": "Deadline conflict / client-rendered application",
+      "detail": "ACD deadline 10 Sep differs from the timezone-free official 8 Sep 23:59:59 metadata. Application acceptance remains unverified. Kept for review."
+    },
+    {
+      "id": "ACD-0149",
+      "type": "Changed canonical requisition",
+      "detail": "2993C85B66 resolves to CDC5C2F331, still published and matching the role. ACD URL left unchanged."
+    },
+    {
+      "id": "ACD-0141",
+      "type": "Changed canonical requisition",
+      "detail": "1518D569F4 resolves to FE8EBB2061, still published and matching the role. ACD URL left unchanged."
+    },
+    {
+      "id": "ACD-0190",
+      "type": "Changed role title at same Apply URL",
+      "detail": "BambooHR 228 now says Investment Director; ACD says Investment Manager. Status Open. ACD content left unchanged."
+    },
+    {
+      "id": "ACD-0204",
+      "type": "Changed title / canonical slug",
+      "detail": "ATS XF8MGrTZmV now says Senior Associate / Associate Principal - Power & Infrastructure; the ACD URL still opens its active form."
+    },
+    {
+      "id": "ACD-0005",
+      "type": "Expanded title in linked form",
+      "detail": "The matching IAF application form now covers Investment Associate / Senior Investment Associate. It remains open."
+    },
+    {
+      "id": "ACD-0082",
+      "type": "Changed Microsoft Forms host",
+      "detail": "The advert form link redirects from forms.office.com to forms.cloud.microsoft. The KPMG vacancy remains live with rolling applications; the form renders with JavaScript."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "ACD-0211",
+      "title": "Private Equity Professional with Fund-of-Funds experience in Emerging Markets",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/private-equity-professional-fund-of-funds-responsability-cape-town/",
+      "slug": "private-equity-professional-fund-of-funds-responsability-cape-town",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Description/2?DesignID=00",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Description/2?DesignID=00",
+      "status": "Confirmed active",
+      "reason": "The exact responsAbility Umantis role description and matching application form load successfully. The role also appears on the official current vacancies list. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/private-equity-professional-fund-of-funds-responsability-cape-town/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/private-equity-professional-fund-of-funds-responsability-cape-town/",
+          "checkedAt": "2026-09-08T22:29:35.545Z",
+          "title": "Private Equity Professional with Fund-of-Funds experience in Emerging Markets at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Description/2?DesignID=00",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:35.447Z",
+          "title": "Private Equity Professional with Fund-of-Funds experience in Emerging Markets.",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Application/New/2",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2293/Application/New/2",
+          "checkedAt": "2026-09-08T22:30:50.229Z",
+          "title": "Private Equity Professional with Fund-of-Funds experience in Emerging Markets. - Application | eRecruiting responsAbility",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0226",
+      "title": "Chief of Staff",
+      "company": "Nedbank Group",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/chief-of-staff-nedbank-johannesburg/",
+      "slug": "chief-of-staff-nedbank-johannesburg",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Chief-of-Staff/1433079633/",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Chief-of-Staff/1433079633/",
+      "status": "Confirmed active",
+      "reason": "The exact Nedbank vacancy page contains the matching job description, requisition number and Apply now controls. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/chief-of-staff-nedbank-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/chief-of-staff-nedbank-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:35.549Z",
+          "title": "Chief of Staff at Nedbank Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://jobs.nedbank.co.za/job/Johannesburg-Chief-of-Staff/1433079633/",
+          "status": 200,
+          "finalUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Chief-of-Staff/1433079633/",
+          "checkedAt": "2026-09-08T22:29:35.547Z",
+          "title": "Chief of Staff Job Details | Nedbank",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0225",
+      "title": "Senior Valuer CPF Valuations-VP",
+      "company": "Absa Corporate Property Finance / Absa Group",
+      "location": "Umhlanga, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-valuer-cpf-valuations-vp-absa-umhlanga/",
+      "slug": "senior-valuer-cpf-valuations-vp-absa-umhlanga",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-valuer-cpf-valuations-vp-absa-umhlanga/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-valuer-cpf-valuations-vp-absa-umhlanga/",
+          "checkedAt": "2026-09-08T22:29:35.552Z",
+          "title": "Senior Valuer CPF Valuations-VP at Absa Corporate Property Finance / Absa Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "checkedAt": "2026-09-08T22:29:35.551Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "checkedAt": "2026-09-08T22:30:50.299Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "fields": {
+            "title": "Senior Valuer CPF Valuations-VP",
+            "id": "301cd72d9fcb10019b99e31c07a90000",
+            "jobReqId": "R-15990452",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-10",
+            "jobPostingEndDateAsText": "End Date: 10 September 2026"
+          }
+        },
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452",
+          "fields": {
+            "identifier": {
+              "name": "Senior Valuer CPF Valuations-VP",
+              "@type": "PropertyValue",
+              "value": "R-15990452"
+            },
+            "datePosted": "2026-08-27",
+            "validThrough": "2026-09-10",
+            "title": "Senior Valuer CPF Valuations-VP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0224",
+      "title": "Senior Investment Manager",
+      "company": "Absa Asset Management Limited / Absa Group",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-manager-absa-asset-management-nairobi/",
+      "slug": "senior-investment-manager-absa-asset-management-nairobi",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": "The description explicitly says 10 Sep 2026, while Workday metadata says 11 Sep. Retain the earlier displayed deadline.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-manager-absa-asset-management-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-manager-absa-asset-management-nairobi/",
+          "checkedAt": "2026-09-08T22:29:35.554Z",
+          "title": "Senior Investment Manager at Absa Asset Management Limited / Absa Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "checkedAt": "2026-09-08T22:29:35.553Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "checkedAt": "2026-09-08T22:30:50.300Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "fields": {
+            "title": "Senior Investment Manager",
+            "id": "f5983b7ff98e10019bb507e6b9a90000",
+            "jobReqId": "R-15990715",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-11",
+            "jobPostingEndDateAsText": "End Date: 11 September 2026"
+          }
+        },
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1",
+          "fields": {
+            "identifier": {
+              "name": "Senior Investment Manager",
+              "@type": "PropertyValue",
+              "value": "R-15990715"
+            },
+            "datePosted": "2026-09-03",
+            "validThrough": "2026-09-11",
+            "title": "Senior Investment Manager"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0223",
+      "title": "Senior Investment Dealer",
+      "company": "Absa Asset Management Limited / Absa Group",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-dealer-absa-asset-management-nairobi/",
+      "slug": "senior-investment-dealer-absa-asset-management-nairobi",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": "The description explicitly says 10 Sep 2026, while Workday metadata says 11 Sep. Retain the earlier displayed deadline.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-dealer-absa-asset-management-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-dealer-absa-asset-management-nairobi/",
+          "checkedAt": "2026-09-08T22:29:35.878Z",
+          "title": "Senior Investment Dealer at Absa Asset Management Limited / Absa Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "checkedAt": "2026-09-08T22:29:35.868Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "checkedAt": "2026-09-08T22:30:50.302Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "fields": {
+            "title": "Senior Investment Dealer",
+            "id": "2bec615509d510019ce76a387d640000",
+            "jobReqId": "R-15990716",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-11",
+            "jobPostingEndDateAsText": "End Date: 11 September 2026"
+          }
+        },
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716",
+          "fields": {
+            "identifier": {
+              "name": "Senior Investment Dealer",
+              "@type": "PropertyValue",
+              "value": "R-15990716"
+            },
+            "datePosted": "2026-09-03",
+            "validThrough": "2026-09-11",
+            "title": "Senior Investment Dealer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0222",
+      "title": "Investment Dealer",
+      "company": "Absa Asset Management Limited / Absa Group",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-dealer-absa-asset-management-nairobi/",
+      "slug": "investment-dealer-absa-asset-management-nairobi",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": "The description explicitly says 10 Sep 2026, while Workday metadata says 11 Sep. Retain the earlier displayed deadline.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-dealer-absa-asset-management-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-dealer-absa-asset-management-nairobi/",
+          "checkedAt": "2026-09-08T22:29:35.950Z",
+          "title": "Investment Dealer at Absa Asset Management Limited / Absa Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "checkedAt": "2026-09-08T22:29:35.893Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "checkedAt": "2026-09-08T22:30:50.304Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "fields": {
+            "title": "Investment Dealer",
+            "id": "2bec615509d510019d7707f587e20001",
+            "jobReqId": "R-15990717",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-11",
+            "jobPostingEndDateAsText": "End Date: 11 September 2026"
+          }
+        },
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1",
+          "fields": {
+            "identifier": {
+              "name": "Investment Dealer",
+              "@type": "PropertyValue",
+              "value": "R-15990717"
+            },
+            "datePosted": "2026-09-03",
+            "validThrough": "2026-09-11",
+            "title": "Investment Dealer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0221",
+      "title": "Credit Analyst",
+      "company": "Nedbank",
+      "location": "National, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-nedbank-national/",
+      "slug": "credit-analyst-nedbank-national",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.nedbank.co.za/job/National-Credit-Analyst/1365427733/",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/National-Credit-Analyst/1365427733/",
+      "status": "Confirmed active",
+      "reason": "The exact Nedbank vacancy page contains the matching job description, requisition number and Apply now controls. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.nedbank.co.za/job/National-Credit-Analyst/1365427733/",
+          "status": 200,
+          "finalUrl": "https://jobs.nedbank.co.za/job/National-Credit-Analyst/1365427733/",
+          "checkedAt": "2026-09-08T22:29:36.034Z",
+          "title": "Credit Analyst Job Details | Nedbank",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/credit-analyst-nedbank-national/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-nedbank-national/",
+          "checkedAt": "2026-09-08T22:29:36.091Z",
+          "title": "Credit Analyst at Nedbank | Africa Career Desk",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0220",
+      "title": "Executive: Deal Structuring - Trade and Working Capital",
+      "company": "Absa Corporate and Investment Banking",
+      "location": "Sandton, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/executive-deal-structuring-trade-working-capital-absa-cib-sandton/",
+      "slug": "executive-deal-structuring-trade-working-capital-absa-cib-sandton",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/executive-deal-structuring-trade-working-capital-absa-cib-sandton/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/executive-deal-structuring-trade-working-capital-absa-cib-sandton/",
+          "checkedAt": "2026-09-08T22:29:36.134Z",
+          "title": "Executive: Deal Structuring - Trade and Working Capital at Absa Corporate and Investment Banking | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "checkedAt": "2026-09-08T22:29:36.121Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "status": 200,
+          "finalUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "checkedAt": "2026-09-08T22:30:50.305Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "fields": {
+            "title": "Executive: Deal Structuring – Trade and Working Capital",
+            "id": "2bec615509d5100137d24fe0c07c0000",
+            "jobReqId": "R-15990640",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-10",
+            "jobPostingEndDateAsText": "End Date: 10 September 2026"
+          }
+        },
+        {
+          "url": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+          "fields": {
+            "identifier": {
+              "name": "Executive: Deal Structuring – Trade and Working Capital",
+              "@type": "PropertyValue",
+              "value": "R-15990640"
+            },
+            "datePosted": "2026-09-02",
+            "validThrough": "2026-09-10",
+            "title": "Executive: Deal Structuring – Trade and Working Capital"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0219",
+      "title": "Investment Analyst",
+      "company": "Old Mutual Alternative Investments / Old Mutual Investment Group",
+      "location": "Harare, Zimbabwe",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-analyst-old-mutual-alternative-investments-harare/",
+      "slug": "investment-analyst-old-mutual-alternative-investments-harare",
+      "displayedDeadline": "9 Sep 2026",
+      "applyUrl": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+      "sourceUrl": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": "The description explicitly closes 9 Sep 2026 at 23:59, while Workday endDate is 10 Sep. Keep the displayed 9 Sep deadline; it has not yet passed.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-analyst-old-mutual-alternative-investments-harare/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-analyst-old-mutual-alternative-investments-harare/",
+          "checkedAt": "2026-09-08T22:29:36.198Z",
+          "title": "Investment Analyst at Old Mutual Alternative Investments / Old Mutual Investment Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "status": 200,
+          "finalUrl": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "checkedAt": "2026-09-08T22:29:36.142Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://oldmutual.wd3.myworkdayjobs.com/wday/cxs/oldmutual/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "status": 200,
+          "finalUrl": "https://oldmutual.wd3.myworkdayjobs.com/wday/cxs/oldmutual/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "checkedAt": "2026-09-08T22:30:50.683Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://oldmutual.wd3.myworkdayjobs.com/wday/cxs/oldmutual/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "fields": {
+            "title": "Investment Analyst",
+            "id": "703408ba003a1001940f71d275a50000",
+            "jobReqId": "JR-83521",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-10"
+          }
+        },
+        {
+          "url": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521",
+          "fields": {
+            "identifier": {
+              "name": "Investment Analyst",
+              "@type": "PropertyValue",
+              "value": "JR-83521"
+            },
+            "datePosted": "2026-09-03",
+            "validThrough": "2026-09-10",
+            "title": "Investment Analyst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0218",
+      "title": "Head, Corporate & Investment Banking, Botswana",
+      "company": "Standard Bank Group / Corporate & Investment Banking",
+      "location": "Gaborone, Botswana",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/head-corporate-investment-banking-botswana-standard-bank-gaborone/",
+      "slug": "head-corporate-investment-banking-botswana-standard-bank-gaborone",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146488429-head-corporate-investment-banking-botswana",
+      "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146488429-head-corporate-investment-banking-botswana",
+      "status": "Confirmed active",
+      "reason": "The official SmartRecruiters page contains the matching role and an enabled application invitation. The public posting API also returns the exact requisition and application URL. No closure message was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146488429-head-corporate-investment-banking-botswana",
+          "status": 200,
+          "finalUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146488429-head-corporate-investment-banking-botswana",
+          "checkedAt": "2026-09-08T22:29:36.221Z",
+          "title": "Standard Bank Group Head, Corporate & Investment Banking, Botswana | SmartRecruiters",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/head-corporate-investment-banking-botswana-standard-bank-gaborone/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/head-corporate-investment-banking-botswana-standard-bank-gaborone/",
+          "checkedAt": "2026-09-08T22:29:36.291Z",
+          "title": "Head, Corporate & Investment Banking, Botswana at Standard Bank Group / Corporate & Investment Banking | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146488429",
+          "status": 200,
+          "finalUrl": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146488429",
+          "checkedAt": "2026-09-08T22:33:08.851Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146488429",
+          "fields": {
+            "name": "Head, Corporate & Investment Banking, Botswana",
+            "id": "744000146488429",
+            "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146488429-head-corporate-investment-banking-botswana?oga=true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0217",
+      "title": "Vice President, Energy & Infrastructure, Investment Banking",
+      "company": "Standard Bank Group / Corporate & Investment Banking",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/vice-president-energy-infrastructure-investment-banking-standard-bank-nairobi/",
+      "slug": "vice-president-energy-infrastructure-investment-banking-standard-bank-nairobi",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking",
+      "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking",
+      "status": "Confirmed active",
+      "reason": "The official SmartRecruiters page contains the matching role and an enabled application invitation. The public posting API also returns the exact requisition and application URL. No closure message was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking",
+          "status": 200,
+          "finalUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking",
+          "checkedAt": "2026-09-08T22:29:36.296Z",
+          "title": "Standard Bank Group Vice President, Energy & Infrastructure, Investment Banking | SmartRecruiters",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/vice-president-energy-infrastructure-investment-banking-standard-bank-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/vice-president-energy-infrastructure-investment-banking-standard-bank-nairobi/",
+          "checkedAt": "2026-09-08T22:29:36.375Z",
+          "title": "Vice President, Energy & Infrastructure, Investment Banking at Standard Bank Group / Corporate & Investment Banking | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146957239",
+          "status": 200,
+          "finalUrl": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146957239",
+          "checkedAt": "2026-09-08T22:33:08.853Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://api.smartrecruiters.com/v1/companies/StandardBankGroup/postings/744000146957239",
+          "fields": {
+            "name": "Vice President, Energy & Infrastructure, Investment Banking",
+            "id": "744000146957239",
+            "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking?oga=true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0216",
+      "title": "Credit Analyst",
+      "company": "RMB / Rand Merchant Bank",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-rmb-johannesburg/",
+      "slug": "credit-analyst-rmb-johannesburg",
+      "displayedDeadline": "31 Oct 2026",
+      "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst_R52770",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst_R52770",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/credit-analyst-rmb-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-rmb-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:36.421Z",
+          "title": "Credit Analyst at RMB / Rand Merchant Bank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "checkedAt": "2026-09-08T22:29:36.386Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "checkedAt": "2026-09-08T22:30:50.766Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "fields": {
+            "title": "Credit Analyst",
+            "id": "e9543cbd2d5e10019e817bde72a50000",
+            "jobReqId": "R52770",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-10-31",
+            "jobPostingEndDateAsText": "End Date: 31 October 2026"
+          }
+        },
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst_R52770",
+          "fields": {
+            "identifier": {
+              "name": "Credit Analyst",
+              "@type": "PropertyValue",
+              "value": "R52770"
+            },
+            "datePosted": "2026-08-20",
+            "validThrough": "2026-10-31",
+            "title": "Credit Analyst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0215",
+      "title": "Debt Financing Solutions Senior Transactor",
+      "company": "RMB / Rand Merchant Bank",
+      "location": "Lagos, Nigeria",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/debt-financing-solutions-senior-transactor-rmb-lagos/",
+      "slug": "debt-financing-solutions-senior-transactor-rmb-lagos",
+      "displayedDeadline": "17 Sep 2026",
+      "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/debt-financing-solutions-senior-transactor-rmb-lagos/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/debt-financing-solutions-senior-transactor-rmb-lagos/",
+          "checkedAt": "2026-09-08T22:29:36.457Z",
+          "title": "Debt Financing Solutions Senior Transactor at RMB / Rand Merchant Bank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "checkedAt": "2026-09-08T22:29:36.431Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "checkedAt": "2026-09-08T22:30:50.774Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "fields": {
+            "title": "Debt Financing Solutions Senior Transactor",
+            "id": "1c9f04514a491001958362bbcb590000",
+            "jobReqId": "R50641",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-17",
+            "jobPostingEndDateAsText": "End Date: 17 September 2026"
+          }
+        },
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641",
+          "fields": {
+            "identifier": {
+              "name": "Debt Financing Solutions Senior Transactor",
+              "@type": "PropertyValue",
+              "value": "R50641"
+            },
+            "datePosted": "2026-09-03",
+            "validThrough": "2026-09-17",
+            "title": "Debt Financing Solutions Senior Transactor"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0214",
+      "title": "Structurer",
+      "company": "RMB / Rand Merchant Bank",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/structurer-rmb-johannesburg/",
+      "slug": "structurer-rmb-johannesburg",
+      "displayedDeadline": "12 Sep 2026",
+      "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/structurer-rmb-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/structurer-rmb-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:36.520Z",
+          "title": "Structurer at RMB / Rand Merchant Bank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553",
+          "checkedAt": "2026-09-08T22:29:36.498Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Structurer_R46553",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Structurer_R46553",
+          "checkedAt": "2026-09-08T22:30:50.807Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Structurer_R46553",
+          "fields": {
+            "title": "Structurer",
+            "id": "66de72be5f4b10018fd34ced6bb60000",
+            "jobReqId": "R46553",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-12",
+            "jobPostingEndDateAsText": "End Date: 12 September 2026"
+          }
+        },
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553",
+          "fields": {
+            "identifier": {
+              "name": "Structurer",
+              "@type": "PropertyValue",
+              "value": "R46553"
+            },
+            "datePosted": "2026-09-02",
+            "validThrough": "2026-09-12",
+            "title": "Structurer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0213",
+      "title": "Credit Analyst: Real Estate",
+      "company": "RMB / Rand Merchant Bank",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-real-estate-rmb-johannesburg/",
+      "slug": "credit-analyst-real-estate-rmb-johannesburg",
+      "displayedDeadline": "12 Sep 2026",
+      "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/credit-analyst-real-estate-rmb-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/credit-analyst-real-estate-rmb-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:36.594Z",
+          "title": "Credit Analyst: Real Estate at RMB / Rand Merchant Bank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "checkedAt": "2026-09-08T22:29:36.536Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "checkedAt": "2026-09-08T22:30:50.831Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "fields": {
+            "title": "Credit Analyst: Real Estate",
+            "id": "94bb6e64c2ff10014dbd199256550000",
+            "jobReqId": "R53087",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-12",
+            "jobPostingEndDateAsText": "End Date: 12 September 2026"
+          }
+        },
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087",
+          "fields": {
+            "identifier": {
+              "name": "Credit Analyst: Real Estate",
+              "@type": "PropertyValue",
+              "value": "R53087"
+            },
+            "datePosted": "2026-09-02",
+            "validThrough": "2026-09-12",
+            "title": "Credit Analyst: Real Estate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0212",
+      "title": "TWC Transactor",
+      "company": "RMB / Rand Merchant Bank",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/twc-transactor-rmb-johannesburg/",
+      "slug": "twc-transactor-rmb-johannesburg",
+      "displayedDeadline": "12 Sep 2026",
+      "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283",
+      "status": "Confirmed active",
+      "reason": "The exact Workday requisition returns a full matching jobPostingInfo record with posted=true and canApply=true. Its official closing date has not passed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/twc-transactor-rmb-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/twc-transactor-rmb-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:36.693Z",
+          "title": "TWC Transactor at RMB / Rand Merchant Bank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "checkedAt": "2026-09-08T22:29:36.610Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "status": 200,
+          "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "checkedAt": "2026-09-08T22:30:50.867Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "fields": {
+            "title": "TWC Transactor",
+            "id": "7cde7c415f7d1001ecaa814f58cd0000",
+            "jobReqId": "R53283",
+            "canApply": true,
+            "posted": true,
+            "endDate": "2026-09-12",
+            "jobPostingEndDateAsText": "End Date: 12 September 2026"
+          }
+        },
+        {
+          "url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283",
+          "fields": {
+            "identifier": {
+              "name": "TWC Transactor",
+              "@type": "PropertyValue",
+              "value": "R53283"
+            },
+            "datePosted": "2026-09-04",
+            "validThrough": "2026-09-12",
+            "title": "TWC Transactor"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0210",
+      "title": "VIA - Dakar - Chargé.e de mission financement généraliste",
+      "company": "Proparco",
+      "location": "Dakar, Senegal",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/via-dakar-chargee-mission-financement-generaliste-proparco/",
+      "slug": "via-dakar-chargee-mission-financement-generaliste-proparco",
+      "displayedDeadline": "10 Sep 2026",
+      "applyUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd",
+      "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd",
+      "status": "Needs review",
+      "reason": "ACD displays 10 Sep 2026, but the exact AFD/Proparco page embeds ValidThrough=2026-09-08T23:59:59 without a timezone. The audit is on 9 Sep in Zurich but still 8 Sep UTC/Dakar, so that timestamp is not unambiguously past. The specific job description remains in the page; the JavaScript application state could not be verified. The legacy detail URL resolves to the same requisition. Keep unchanged until the deadline timezone and current application acceptance are confirmed.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd",
+          "status": 200,
+          "finalUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd",
+          "checkedAt": "2026-09-08T22:29:36.737Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/via-dakar-chargee-mission-financement-generaliste-proparco/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/via-dakar-chargee-mission-financement-generaliste-proparco/",
+          "checkedAt": "2026-09-08T22:29:36.796Z",
+          "title": "VIA - Dakar - Chargé.e de mission financement généraliste at Proparco | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://afd.csod.com/services/x/career-site/v1/requisitions/10665?careerSiteId=5",
+          "status": 401,
+          "finalUrl": "https://afd.csod.com/services/x/career-site/v1/requisitions/10665?careerSiteId=5",
+          "checkedAt": "2026-09-08T22:30:52.907Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "legacy-detail",
+          "url": "https://afd.csod.com/ats/careersite/JobDetails.aspx?site=5&id=10665",
+          "status": 200,
+          "finalUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd&c=afd",
+          "checkedAt": "2026-09-08T22:31:47.720Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd",
+          "fields": {
+            "DatePosted": "2026-08-19T00:00:00",
+            "ValidThrough": "2026-09-08T23:59:59",
+            "Title": "VIA – DAKAR – CHARGE.E DE MISSION FINANCEMENT GENERALISTE"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0209",
+      "title": "Principal I, Policy",
+      "company": "European Bank for Reconstruction and Development (EBRD)",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/principal-i-policy-ebrd-casablanca/",
+      "slug": "principal-i-policy-ebrd-casablanca",
+      "displayedDeadline": "18 Sep 2026",
+      "applyUrl": "https://jobs.ebrd.com/job/Casablanca-Principal-I,-Policy/1434038033/",
+      "sourceUrl": "https://jobs.ebrd.com/job/Casablanca-Principal-I,-Policy/1434038033/",
+      "status": "Confirmed active",
+      "reason": "The official EBRD page shows requisition 37031, Principal I, Policy, a posting end date of 18/09/2026 and Apply now controls.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/principal-i-policy-ebrd-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/principal-i-policy-ebrd-casablanca/",
+          "checkedAt": "2026-09-08T22:29:36.871Z",
+          "title": "Principal I, Policy at European Bank for Reconstruction and Development (EBRD) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://jobs.ebrd.com/job/Casablanca-Principal-I,-Policy/1434038033/",
+          "status": 200,
+          "finalUrl": "https://jobs.ebrd.com/job/Casablanca-Principal-I,-Policy/1434038033/",
+          "checkedAt": "2026-09-08T22:29:36.854Z",
+          "title": "Principal I, Policy Job Details | EBRD",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0205",
+      "title": "VIA - Chargé.e d'Affaires Financement MAS (Corporate)",
+      "company": "Proparco",
+      "location": "Abidjan, Côte d'Ivoire",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/via-chargee-affaires-financement-mas-proparco-abidjan/",
+      "slug": "via-chargee-affaires-financement-mas-proparco-abidjan",
+      "displayedDeadline": null,
+      "applyUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US",
+      "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US",
+      "status": "Confirmed active",
+      "reason": "The exact AFD/Proparco requisition page embeds the matching full job description and official JobPosting metadata with ValidThrough=2026-12-30T00:00:00. The legacy job-detail route also resolves to this requisition. This confirms the specific posting; submission through the JavaScript application flow was not tested.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US",
+          "status": 200,
+          "finalUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US",
+          "checkedAt": "2026-09-08T22:29:36.918Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/via-chargee-affaires-financement-mas-proparco-abidjan/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/via-chargee-affaires-financement-mas-proparco-abidjan/",
+          "checkedAt": "2026-09-08T22:29:36.933Z",
+          "title": "VIA - Chargé.e d&#x27;Affaires Financement MAS (Corporate) at Proparco | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://afd.csod.com/services/x/career-site/v1/requisitions/10644?careerSiteId=5",
+          "status": 401,
+          "finalUrl": "https://afd.csod.com/services/x/career-site/v1/requisitions/10644?careerSiteId=5",
+          "checkedAt": "2026-09-08T22:30:52.998Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "legacy-detail",
+          "url": "https://afd.csod.com/ats/careersite/JobDetails.aspx?site=5&id=10644",
+          "status": 200,
+          "finalUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&c=afd",
+          "checkedAt": "2026-09-08T22:31:47.827Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US",
+          "fields": {
+            "DatePosted": "2026-07-27T00:00:00",
+            "ValidThrough": "2026-12-30T00:00:00",
+            "Title": "VIA - ABIDJAN - CHARGE-E D'AFFAIRES FINANCEMENT MAS (CORPORATE) - PROPARCO - H/F"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0204",
+      "title": "Associate Principal - Power & Infrastructure",
+      "company": "CrossBoundary Energy",
+      "location": "London, Nairobi, Dubai or Mumbai",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-principal-power-infrastructure-crossboundary/",
+      "slug": "associate-principal-power-infrastructure-crossboundary",
+      "displayedDeadline": null,
+      "applyUrl": "https://crossboundary.applytojob.com/apply/XF8MGrTZmV/Associate-Principal-Power-Infrastructure",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/XF8MGrTZmV/Associate-Principal-Power-Infrastructure",
+      "status": "Confirmed active",
+      "reason": "The exact employer ATS posting contains the role description and an open application form with required candidate fields and Submit Application. No expired deadline or closure signal was found.",
+      "note": "The same ATS identifier XF8MGrTZmV now displays Senior Associate / Associate Principal - Power & Infrastructure. The old slug still opens that active form.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-principal-power-infrastructure-crossboundary/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-principal-power-infrastructure-crossboundary/",
+          "checkedAt": "2026-09-08T22:29:37.006Z",
+          "title": "Associate Principal - Power & Infrastructure at CrossBoundary Energy | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://crossboundary.applytojob.com/apply/XF8MGrTZmV/Associate-Principal-Power-Infrastructure",
+          "status": 200,
+          "finalUrl": "https://crossboundary.applytojob.com/apply/XF8MGrTZmV/Associate-Principal-Power-Infrastructure",
+          "checkedAt": "2026-09-08T22:29:36.992Z",
+          "title": "Senior Associate / Associate Principal - Power & Infrastructure - CrossBoundary - Career Page",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://crossboundary.applytojob.com/apply/XF8MGrTZmV/Associate-Principal-Power-Infrastructure",
+          "fields": {
+            "title": "Senior Associate / Associate Principal - Power & Infrastructure",
+            "datePosted": "2026-08-28",
+            "validThrough": "2026-11-26"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0208",
+      "title": "Head: Credit Origination",
+      "company": "Development Bank of Southern Africa (DBSA)",
+      "location": "Midrand, Gauteng, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/head-credit-origination-dbsa-midrand/",
+      "slug": "head-credit-origination-dbsa-midrand",
+      "displayedDeadline": "9 Sep 2026",
+      "applyUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+      "status": "Confirmed active",
+      "reason": "The official DBSA page contains reference DBS260824-1, the full Head: Credit Origination description and closing date 2026/09/09. The date is today, not a past date; no explicit closure is shown.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/head-credit-origination-dbsa-midrand/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/head-credit-origination-dbsa-midrand/",
+          "checkedAt": "2026-09-08T22:29:37.049Z",
+          "title": "Head: Credit Origination at Development Bank of Southern Africa (DBSA) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+          "status": 200,
+          "finalUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+          "checkedAt": "2026-09-08T22:29:37.021Z",
+          "title": "Head: Credit Origination",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+          "fields": {
+            "title": "Head: Credit Origination",
+            "datePosted": "2026-08-25",
+            "validThrough": "2026-09-09",
+            "identifier": {
+              "@type": "PropertyValue",
+              "name": "DBSA",
+              "value": "DBS260824-1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0207",
+      "title": "Senior Credit Analyst",
+      "company": "Trade and Development Bank Group (TDB Group)",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-credit-analyst-tdb-nairobi/",
+      "slug": "senior-credit-analyst-tdb-nairobi",
+      "displayedDeadline": "25 Sep 2026",
+      "applyUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1302",
+      "sourceUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1302",
+      "status": "Confirmed active",
+      "reason": "Official TDB SuccessFactors requisition 1302 contains the matching Senior Credit Analyst description, an Apply control and instructions to submit by 25 September 2026.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-credit-analyst-tdb-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-credit-analyst-tdb-nairobi/",
+          "checkedAt": "2026-09-08T22:29:37.100Z",
+          "title": "Senior Credit Analyst at Trade and Development Bank Group (TDB Group) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1302",
+          "status": 200,
+          "finalUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1302",
+          "checkedAt": "2026-09-08T22:29:37.094Z",
+          "title": "Career Opportunities: Senior Credit Analyst (1302)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0206",
+      "title": "Consultant - Middle East Investor Relations & Fundraising",
+      "company": "Trade and Development Bank Group (TDB Group)",
+      "location": "Remote / Ebene, Mauritius / Middle East travel",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/consultant-middle-east-investor-relations-fundraising-tdb/",
+      "slug": "consultant-middle-east-investor-relations-fundraising-tdb",
+      "displayedDeadline": "15 Sep 2026",
+      "applyUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1303",
+      "sourceUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1303",
+      "status": "Confirmed active",
+      "reason": "Official TDB SuccessFactors requisition 1303 contains the matching consultant description, an Apply control and instructions to submit by 15 September 2026.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/consultant-middle-east-investor-relations-fundraising-tdb/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/consultant-middle-east-investor-relations-fundraising-tdb/",
+          "checkedAt": "2026-09-08T22:29:37.212Z",
+          "title": "Consultant - Middle East Investor Relations & Fundraising at Trade and Development Bank Group (TDB Group) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1303",
+          "status": 200,
+          "finalUrl": "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1303",
+          "checkedAt": "2026-09-08T22:29:37.105Z",
+          "title": "Career Opportunities: Consultant - Middle East Investor Relations & Fundraising, TDB Trade Finance Funds (1303)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0200",
+      "title": "Regional Hub Director (EL4)",
+      "company": "African Development Bank (AfDB)",
+      "location": "Various African regional hubs",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/regional-hub-director-afdb-various-african-regional-hubs/",
+      "slug": "regional-hub-director-afdb-various-african-regional-hubs",
+      "displayedDeadline": "24 Sep 2026",
+      "applyUrl": "https://www.afdb.org/en/vacancy/regional-hub-director-96369",
+      "sourceUrl": "https://www.afdb.org/en/vacancy/regional-hub-director-96369",
+      "status": "Needs review",
+      "reason": "The exact AfDB vacancy and official current-vacancies index return HTTP 403 with a JavaScript/cookie challenge; a second web reader also failed. Searches found recent references with a 24 Sep deadline, but could not establish current official application acceptance. ACD shows 24 Sep 2026. Access failure is not evidence of closure.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.afdb.org/en/vacancy/regional-hub-director-96369",
+          "status": 403,
+          "finalUrl": "https://www.afdb.org/en/vacancy/regional-hub-director-96369",
+          "checkedAt": "2026-09-08T22:29:37.233Z",
+          "title": "Just a moment...",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/regional-hub-director-afdb-various-african-regional-hubs/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/regional-hub-director-afdb-various-african-regional-hubs/",
+          "checkedAt": "2026-09-08T22:29:37.248Z",
+          "title": "Regional Hub Director (EL4) at African Development Bank (AfDB) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "official-index",
+          "url": "https://www.afdb.org/en/about-us/careers/current-vacancies",
+          "status": 403,
+          "finalUrl": "https://www.afdb.org/en/about-us/careers/current-vacancies",
+          "checkedAt": "2026-09-08T22:30:52.814Z",
+          "title": "Just a moment...",
+          "error": null
+        },
+        {
+          "kind": "official-french",
+          "url": "https://www.afdb.org/fr/vacancy/directeur-de-pole-regional-96370",
+          "status": 403,
+          "finalUrl": "https://www.afdb.org/fr/vacancy/directeur-de-pole-regional-96370",
+          "checkedAt": "2026-09-08T22:31:48.165Z",
+          "title": "Just a moment...",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0199",
+      "title": "Analyst, ASB",
+      "company": "European Bank for Reconstruction and Development (EBRD)",
+      "location": "Dakar, Senegal",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/analyst-asb-ebrd-dakar/",
+      "slug": "analyst-asb-ebrd-dakar",
+      "displayedDeadline": "8 Sep 2026",
+      "applyUrl": "https://jobs.ebrd.com/search//job/Dakar-Analyst%2C-ASB/1399851333/",
+      "sourceUrl": "https://jobs.ebrd.com/search//job/Dakar-Analyst%2C-ASB/1399851333/",
+      "status": "Removed locally",
+      "reason": "ACD displays 8 Sep 2026, which has passed on the audit calendar date. The official EBRD page independently states: \"Sorry, this position has been filled.\"",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.ebrd.com/search//job/Dakar-Analyst%2C-ASB/1399851333/",
+          "status": 200,
+          "finalUrl": "https://jobs.ebrd.com/search//job/Dakar-Analyst%2C-ASB/1399851333/",
+          "checkedAt": "2026-09-08T22:29:37.268Z",
+          "title": "Analyst, ASB Job Details | EBRD",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/analyst-asb-ebrd-dakar/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/analyst-asb-ebrd-dakar/",
+          "checkedAt": "2026-09-08T22:29:37.350Z",
+          "title": "Analyst, ASB at European Bank for Reconstruction and Development (EBRD) | Africa Career Desk",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0198",
+      "title": "Associate Investment Director, Project Development Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-investment-director-project-development-fund-africa50-casablanca/",
+      "slug": "associate-investment-director-project-development-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-investment-director-project-development-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-investment-director-project-development-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.397Z",
+          "title": "Associate Investment Director, Project Development Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
+          "checkedAt": "2026-09-08T22:29:37.371Z",
+          "title": "Associate Investment Director, Project Development Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3442",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3442",
+          "checkedAt": "2026-09-08T22:30:51.142Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0197",
+      "title": "Senior Investment Associate, Project Development Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-fund-africa50-casablanca/",
+      "slug": "senior-investment-associate-project-development-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.521Z",
+          "title": "Senior Investment Associate, Project Development Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
+          "checkedAt": "2026-09-08T22:29:37.420Z",
+          "title": "Senior Investment Associate, Project Development Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3441",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3441",
+          "checkedAt": "2026-09-08T22:30:51.196Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0196",
+      "title": "Investment Associate, Project Development Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-fund-africa50-casablanca/",
+      "slug": "investment-associate-project-development-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-2/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-2/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.594Z",
+          "title": "Investment Associate, Project Development Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-2/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-2/",
+          "checkedAt": "2026-09-08T22:29:37.542Z",
+          "title": "Investment Associate, Project Development Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3440",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3440",
+          "checkedAt": "2026-09-08T22:30:51.294Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0195",
+      "title": "Senior Investment Analyst, Project Development Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-fund-africa50-casablanca/",
+      "slug": "senior-investment-analyst-project-development-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-fund/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-fund/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.662Z",
+          "title": "Senior Investment Analyst, Project Development Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-fund/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-fund/",
+          "checkedAt": "2026-09-08T22:29:37.639Z",
+          "title": "Senior Investment Analyst, Project Development Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3439",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3439",
+          "checkedAt": "2026-09-08T22:30:51.349Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0194",
+      "title": "Investment Analyst, Project Development Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-analyst-project-development-fund-africa50-casablanca/",
+      "slug": "investment-analyst-project-development-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-analyst-project-development-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-analyst-project-development-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.733Z",
+          "title": "Investment Analyst, Project Development Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
+          "checkedAt": "2026-09-08T22:29:37.715Z",
+          "title": "Investment Analyst, Project Development Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3438",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3438",
+          "checkedAt": "2026-09-08T22:30:51.360Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0193",
+      "title": "Chargé.e de Suivi Financier et des Opérations",
+      "company": "Investisseurs & Partenaires (I&P)",
+      "location": "Antananarivo, Madagascar",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/chargee-suivi-financier-operations-ipdev-antananarivo/",
+      "slug": "chargee-suivi-financier-operations-ipdev-antananarivo",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
+      "sourceUrl": "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
+      "status": "Confirmed active",
+      "reason": "The exact I&P role description and current recruitment index both list this Antananarivo vacancy. The description invites applications to a.thirouin@ietp.com and gives no expired deadline.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/chargee-suivi-financier-operations-ipdev-antananarivo/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/chargee-suivi-financier-operations-ipdev-antananarivo/",
+          "checkedAt": "2026-09-08T22:29:37.844Z",
+          "title": "Chargé.e de Suivi Financier et des Opérations at Investisseurs & Partenaires (I&P) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
+          "status": 200,
+          "finalUrl": "https://www.ietp.com/fr/content/chargee-de-suivi-financier-ipdev",
+          "checkedAt": "2026-09-08T22:29:37.809Z",
+          "title": "Chargé.e de Suivi Financier et des Opérations | IETP",
+          "error": null
+        },
+        {
+          "kind": "current-vacancies",
+          "url": "https://www.ietp.com/fr/content/recrutement",
+          "status": 200,
+          "finalUrl": "https://www.ietp.com/fr/content/recrutement",
+          "checkedAt": "2026-09-08T22:33:09.078Z",
+          "title": "Recrutement | IETP",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0190",
+      "title": "Investment Manager",
+      "company": "Pula",
+      "location": "Remote — Africa (EAT ±3h)",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-manager-pula-xcelerator-pula-remote/",
+      "slug": "investment-manager-pula-xcelerator-pula-remote",
+      "displayedDeadline": null,
+      "applyUrl": "https://pula.bamboohr.com/careers/228",
+      "sourceUrl": "https://pula.bamboohr.com/careers/228",
+      "status": "Confirmed active",
+      "reason": "Official BambooHR opening 228 is present in the current public vacancies list. Its detail endpoint returns jobOpeningStatus=Open and application form fields. The title is now Investment Director, whereas ACD says Investment Manager; the same vacancy number remains active.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-manager-pula-xcelerator-pula-remote/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-manager-pula-xcelerator-pula-remote/",
+          "checkedAt": "2026-09-08T22:29:37.861Z",
+          "title": "Investment Manager at Pula | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://pula.bamboohr.com/careers/228",
+          "status": 200,
+          "finalUrl": "https://pula.bamboohr.com/careers/228",
+          "checkedAt": "2026-09-08T22:29:37.853Z",
+          "title": "BambooHR",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://pula.bamboohr.com/careers/228/detail",
+          "status": 200,
+          "finalUrl": "https://pula.bamboohr.com/careers/228/detail",
+          "checkedAt": "2026-09-08T22:30:52.654Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "current-vacancies",
+          "url": "https://pula.bamboohr.com/careers/list",
+          "status": 200,
+          "finalUrl": "https://pula.bamboohr.com/careers/list",
+          "checkedAt": "2026-09-08T22:31:47.926Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://pula.bamboohr.com/careers/228/detail",
+          "fields": {
+            "jobOpeningName": "Investment Director",
+            "jobOpeningStatus": "Open"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0189",
+      "title": "Equity Research Associate",
+      "company": "Société Générale CIB",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/equity-research-associate-societe-generale-casablanca/",
+      "slug": "equity-research-associate-societe-generale-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+      "sourceUrl": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+      "status": "Removed locally",
+      "reason": "The exact Societe Generale vacancy returns HTTP 410 Gone and a job-unavailable page headed \"Page introuvable / ERREUR 404\". The response explains that the requested page or offer is no longer online.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/equity-research-associate-societe-generale-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/equity-research-associate-societe-generale-casablanca/",
+          "checkedAt": "2026-09-08T22:29:37.934Z",
+          "title": "Equity Research Associate at Société Générale CIB | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+          "status": 410,
+          "finalUrl": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+          "checkedAt": "2026-09-08T22:29:37.913Z",
+          "title": "Erreur client | Careers Société Générale",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0187",
+      "title": "Associate, Local Institutional Trading",
+      "company": "EFG Holding / EFG Hermes",
+      "location": "Giza, Egypt",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-local-institutional-trading-efg-holding-giza/",
+      "slug": "associate-local-institutional-trading-efg-holding-giza",
+      "displayedDeadline": null,
+      "applyUrl": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+      "sourceUrl": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+      "status": "Confirmed active",
+      "reason": "The employer LinkedIn job page loads the specific Associate, Local Institutional Trading role with Apply controls. JobPosting metadata identifies EFG Holding and a future validThrough of 16 Sep 2026. Sign-in is part of the application flow; the link is not a generic login-only destination.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-local-institutional-trading-efg-holding-giza/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-local-institutional-trading-efg-holding-giza/",
+          "checkedAt": "2026-09-08T22:29:37.964Z",
+          "title": "Associate, Local Institutional Trading at EFG Holding / EFG Hermes | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+          "status": 200,
+          "finalUrl": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+          "checkedAt": "2026-09-08T22:29:37.941Z",
+          "title": "‏Associate, Local Institutional Trading‏ في ‏EFG Holding‏ — ‏الجيزة الجيزة مصر‏ | وظائف LinkedIn",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+          "fields": {
+            "datePosted": "2026-08-17T07:13:29.000Z",
+            "identifier": {
+              "@type": "PropertyValue",
+              "name": "EFG Holding"
+            },
+            "title": "Associate, Local Institutional Trading",
+            "validThrough": "2026-09-16T07:13:29.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0168",
+      "title": "Real Estate Equity Finance and Investments Vice President, Investment Banking",
+      "company": "Standard Bank Corporate & Investment Banking",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/real-estate-equity-finance-investments-vice-president-standard-bank-johannesburg/",
+      "slug": "real-estate-equity-finance-investments-vice-president-standard-bank-johannesburg",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
+      "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
+      "status": "Removed locally",
+      "reason": "The exact official Standard Bank SmartRecruiters posting says: \"Sorry, this job has expired.\" HTTP 200 is a closure page, not an active application.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
+          "status": 200,
+          "finalUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
+          "checkedAt": "2026-09-08T22:29:38.019Z",
+          "title": "Standard Bank Group Real Estate Equity Finance and Investments Vice President, Investment Banking | SmartRecruiters",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/real-estate-equity-finance-investments-vice-president-standard-bank-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/real-estate-equity-finance-investments-vice-president-standard-bank-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:38.078Z",
+          "title": "Real Estate Equity Finance and Investments Vice President, Investment Banking at Standard Bank Corporate & Investment Banking | Africa Career Desk",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0167",
+      "title": "Economist, Africa Region FIC Research",
+      "company": "Standard Bank Corporate & Investment Banking",
+      "location": "Johannesburg, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/economist-africa-region-fic-research-standard-bank-johannesburg/",
+      "slug": "economist-africa-region-fic-research-standard-bank-johannesburg",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+      "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+      "status": "Removed locally",
+      "reason": "The exact official Standard Bank SmartRecruiters posting says: \"Sorry, this job has expired.\" HTTP 200 is a closure page, not an active application.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/economist-africa-region-fic-research-standard-bank-johannesburg/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/economist-africa-region-fic-research-standard-bank-johannesburg/",
+          "checkedAt": "2026-09-08T22:29:38.154Z",
+          "title": "Economist, Africa Region FIC Research at Standard Bank Corporate & Investment Banking | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+          "status": 200,
+          "finalUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+          "checkedAt": "2026-09-08T22:29:38.137Z",
+          "title": "Standard Bank Group Economist, Africa Region FIC Research | SmartRecruiters",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0166",
+      "title": "Strategic Finance Analyst",
+      "company": "M-KOPA",
+      "location": "Cape Town / Johannesburg, South Africa (Remote)",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/strategic-finance-analyst-m-kopa-south-africa/",
+      "slug": "strategic-finance-analyst-m-kopa-south-africa",
+      "displayedDeadline": null,
+      "applyUrl": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+      "sourceUrl": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+      "status": "Confirmed active",
+      "reason": "The official M-KOPA Ashby job-board API lists the exact Strategic Finance Analyst UUID with isListed=true and its application URL; the role-specific page is available.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+          "status": 200,
+          "finalUrl": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+          "checkedAt": "2026-09-08T22:29:38.197Z",
+          "title": "Strategic Finance Analyst @ M-KOPA",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/strategic-finance-analyst-m-kopa-south-africa/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/strategic-finance-analyst-m-kopa-south-africa/",
+          "checkedAt": "2026-09-08T22:29:38.321Z",
+          "title": "Strategic Finance Analyst at M-KOPA | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://api.ashbyhq.com/posting-api/job-board/M-KOPA",
+          "status": 200,
+          "finalUrl": "https://api.ashbyhq.com/posting-api/job-board/M-KOPA",
+          "checkedAt": "2026-09-08T22:30:52.742Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://api.ashbyhq.com/posting-api/job-board/M-KOPA",
+          "fields": {
+            "title": "Strategic Finance Analyst",
+            "id": "4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+            "isListed": true,
+            "jobUrl": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+            "applyUrl": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a/application"
+          }
+        },
+        {
+          "url": "https://jobs.ashbyhq.com/M-KOPA/4c1ec047-2a19-4563-bbb2-2eb617ab1b5a",
+          "fields": {
+            "title": "Strategic Finance Analyst",
+            "identifier": {
+              "@type": "PropertyValue",
+              "name": "M-KOPA",
+              "value": "4c1ec047-2a19-4563-bbb2-2eb617ab1b5a"
+            },
+            "datePosted": "2026-08-17"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0165",
+      "title": "Associate Level",
+      "company": "Verdant Capital",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-level-verdant-capital-nairobi/",
+      "slug": "associate-level-verdant-capital-nairobi",
+      "displayedDeadline": null,
+      "applyUrl": "mailto:nomuntu.shongwe@verdant-cap.com?subject=Associate%20Level%20-%20Nairobi",
+      "sourceUrl": "https://www.linkedin.com/posts/verdant-capital_hiring-associate-investmentbanking-activity-7466898332796346368-SEIw",
+      "status": "Needs review",
+      "reason": "The original Verdant Capital hiring post remains accessible and specifies the same email address as the ACD mailto link. It gives no deadline or explicit current status. Targeted employer searches found the same post but no live requisition or subsequent closure confirmation. Email delivery and whether recruitment is still open cannot be verified without contacting the employer; no email was sent.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "mailto:nomuntu.shongwe@verdant-cap.com?subject=Associate%20Level%20-%20Nairobi",
+          "status": "mailto",
+          "finalUrl": null,
+          "checkedAt": null,
+          "title": null,
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-level-verdant-capital-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-level-verdant-capital-nairobi/",
+          "checkedAt": "2026-09-08T22:29:38.451Z",
+          "title": "Associate Level at Verdant Capital | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://www.linkedin.com/posts/verdant-capital_hiring-associate-investmentbanking-activity-7466898332796346368-SEIw",
+          "status": 200,
+          "finalUrl": "https://www.linkedin.com/posts/verdant-capital_hiring-associate-investmentbanking-activity-7466898332796346368-SEIw",
+          "checkedAt": "2026-09-08T22:29:38.363Z",
+          "title": "#hiring #associate #investmentbanking #corporatefinance #privatemarkets #nairobi #careers #verdantcapital | Verdant Capital",
+          "error": null
+        },
+        {
+          "kind": "current-vacancies",
+          "url": "https://verdant-cap.com/careers/",
+          "status": 404,
+          "finalUrl": "https://verdant-cap.com/careers/",
+          "checkedAt": "2026-09-08T22:31:47.965Z",
+          "title": "Page not found : Verdant Capital",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0162",
+      "title": "Associate Director, Deputy Head Egypt, Financial Institutions",
+      "company": "European Bank for Reconstruction and Development (EBRD)",
+      "location": "Cairo, Egypt",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-director-deputy-head-egypt-financial-institutions-ebrd-cairo/",
+      "slug": "associate-director-deputy-head-egypt-financial-institutions-ebrd-cairo",
+      "displayedDeadline": "7 Sep 2026",
+      "applyUrl": "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
+      "sourceUrl": "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
+      "status": "Removed locally",
+      "reason": "ACD displays 7 Sep 2026, which has passed. The official EBRD page independently states: \"Sorry, this position has been filled.\"",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
+          "status": 200,
+          "finalUrl": "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
+          "checkedAt": "2026-09-08T22:29:38.491Z",
+          "title": "Associate Director, Deputy Head Egypt, Financial Institutions Job Details | EBRD",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-director-deputy-head-egypt-financial-institutions-ebrd-cairo/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-director-deputy-head-egypt-financial-institutions-ebrd-cairo/",
+          "checkedAt": "2026-09-08T22:29:38.554Z",
+          "title": "Associate Director, Deputy Head Egypt, Financial Institutions at European Bank for Reconstruction and Development (EBRD) | Africa Career Desk",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0158",
+      "title": "Investment Associate",
+      "company": "ARM-Harith Infrastructure Investments",
+      "location": "Ikoyi, Lagos, Nigeria",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-arm-harith-lagos/",
+      "slug": "investment-associate-arm-harith-lagos",
+      "displayedDeadline": null,
+      "applyUrl": "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+      "sourceUrl": "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+      "status": "Needs review",
+      "reason": "The official job-description PDF is available and gives careers@armharith.com for applications, without a deadline. The current French vacancies page labels this role Active, while the English open-positions page lists only Head of Finance. The language versions conflict and no current application-status system is available. Keep unchanged; confirm whether the French list is current. This decision is not based on the PDF age.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-arm-harith-lagos/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-arm-harith-lagos/",
+          "checkedAt": "2026-09-08T22:29:38.631Z",
+          "title": "Investment Associate at ARM-Harith Infrastructure Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+          "status": 200,
+          "finalUrl": "https://armharith.com/wp-content/uploads/2026/02/Investment-Associate-Job-Description_Posting.pdf",
+          "checkedAt": "2026-09-08T22:29:38.570Z",
+          "title": null,
+          "error": null
+        },
+        {
+          "kind": "current-vacancies",
+          "url": "https://armharith.com/careers/",
+          "status": 404,
+          "finalUrl": "https://armharith.com/careers/",
+          "checkedAt": "2026-09-08T22:31:48.205Z",
+          "title": "Page Not Found - ArmHarith",
+          "error": null
+        },
+        {
+          "kind": "french-vacancies",
+          "url": "https://armharith.com/fr/postes-ouverts/",
+          "status": 200,
+          "finalUrl": "https://armharith.com/fr/postes-ouverts/",
+          "checkedAt": "2026-09-08T22:33:08.781Z",
+          "title": "Postes ouverts - ArmHarith",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0157",
+      "title": "Sustainability Manager",
+      "company": "ARM-Harith Infrastructure Investments",
+      "location": "Ikoyi, Lagos, Nigeria",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/sustainability-manager-arm-harith-lagos/",
+      "slug": "sustainability-manager-arm-harith-lagos",
+      "displayedDeadline": null,
+      "applyUrl": "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
+      "sourceUrl": "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
+      "status": "Needs review",
+      "reason": "The official job-description PDF is available and gives careers@armharith.com for applications, without a deadline. The current French vacancies page labels this role Active, while the English open-positions page lists only Head of Finance. The language versions conflict and no current application-status system is available. Keep unchanged; confirm whether the French list is current. This decision is not based on the PDF age.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/sustainability-manager-arm-harith-lagos/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/sustainability-manager-arm-harith-lagos/",
+          "checkedAt": "2026-09-08T22:29:38.684Z",
+          "title": "Sustainability Manager at ARM-Harith Infrastructure Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
+          "status": 200,
+          "finalUrl": "https://armharith.com/wp-content/uploads/2026/02/Sustainability-Manager-Job-Description_Posting.pdf",
+          "checkedAt": "2026-09-08T22:29:38.664Z",
+          "title": null,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0151",
+      "title": "Senior Investment Officer for Financial Institutions Debt Financing",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-officer-financial-institutions-debt-financing-responsability-cape-town/",
+      "slug": "senior-investment-officer-financial-institutions-debt-financing-responsability-cape-town",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Application/New/2",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Description/2?DesignID=00",
+      "status": "Confirmed active",
+      "reason": "The exact responsAbility Umantis role description and matching application form load successfully. The role also appears on the official current vacancies list. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-officer-financial-institutions-debt-financing-responsability-cape-town/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-officer-financial-institutions-debt-financing-responsability-cape-town/",
+          "checkedAt": "2026-09-08T22:29:38.822Z",
+          "title": "Senior Investment Officer for Financial Institutions Debt Financing at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Application/New/2",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Application/New/2",
+          "checkedAt": "2026-09-08T22:29:38.714Z",
+          "title": "Senior Investment Officer for Financial Institutions Debt Financing - Application | eRecruiting responsAbility",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Description/2?DesignID=00",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2268/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:38.802Z",
+          "title": "Senior Investment Officer for Financial Institutions Debt Financing",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0150",
+      "title": "Investment Officer in Financial Inclusion Debt",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-officer-financial-inclusion-debt-responsability-cape-town/",
+      "slug": "investment-officer-financial-inclusion-debt-responsability-cape-town",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Application/New/2",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2?DesignID=00",
+      "status": "Needs review",
+      "reason": "Both the responsAbility Umantis description and application for vacancy 2272 return HTTP 403 Invalid permission. The error template lists an old link or insufficient permission as possible causes; it does not explicitly say this vacancy closed. The official current list contains other Cape Town roles but not 2272; an alternate description URL and targeted search did not resolve it. Keep unchanged pending confirmation.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-officer-financial-inclusion-debt-responsability-cape-town/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-officer-financial-inclusion-debt-responsability-cape-town/",
+          "checkedAt": "2026-09-08T22:29:38.952Z",
+          "title": "Investment Officer in Financial Inclusion Debt at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2?DesignID=00",
+          "status": 403,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:38.902Z",
+          "title": "403 - Invalid permission | umantis Talent Management",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Application/New/2",
+          "status": 403,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Application/New/2",
+          "checkedAt": "2026-09-08T22:29:38.834Z",
+          "title": "403 - Invalid permission | umantis Talent Management",
+          "error": null
+        },
+        {
+          "kind": "vacancies",
+          "url": "https://recruitingapp-2830.umantis.com/Jobs/All",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Jobs/All",
+          "checkedAt": "2026-09-08T22:30:52.765Z",
+          "title": "eRecruiting responsAbility Job board",
+          "error": null
+        },
+        {
+          "kind": "public-description",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2",
+          "status": 403,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2272/Description/2",
+          "checkedAt": "2026-09-08T22:31:47.719Z",
+          "title": "403 - Invalid permission | umantis Talent Management",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0149",
+      "title": "Director, Treasury & Markets (Resource Mobilisation)",
+      "company": "Afreximbank",
+      "location": "Cairo, Egypt",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/director-treasury-markets-resource-mobilisation-afreximbank-cairo/",
+      "slug": "director-treasury-markets-resource-mobilisation-afreximbank-cairo",
+      "displayedDeadline": null,
+      "applyUrl": "https://apply.workable.com/afreximbank/j/2993C85B66/",
+      "sourceUrl": "https://apply.workable.com/afreximbank/j/2993C85B66/",
+      "status": "Confirmed active",
+      "reason": "The official Workable vacancy API resolves the current ACD requisition URL to the matching role with state=published and a full description. No closing date or closure signal was found.",
+      "note": "The old shortcode 2993C85B66 resolves to published shortcode CDC5C2F331 for the same role; the canonical URL also loads.",
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/director-treasury-markets-resource-mobilisation-afreximbank-cairo/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/director-treasury-markets-resource-mobilisation-afreximbank-cairo/",
+          "checkedAt": "2026-09-08T22:29:39.065Z",
+          "title": "Director, Treasury & Markets (Resource Mobilisation) at Afreximbank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://apply.workable.com/afreximbank/j/2993C85B66/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/2993C85B66/",
+          "checkedAt": "2026-09-08T22:29:39.023Z",
+          "title": "Director, Treasury & Markets (Resource Mobilisation) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/2993C85B66",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/2993C85B66",
+          "checkedAt": "2026-09-08T22:30:51.433Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "canonical",
+          "url": "https://apply.workable.com/afreximbank/j/CDC5C2F331/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/CDC5C2F331/",
+          "checkedAt": "2026-09-08T22:33:08.854Z",
+          "title": "Director, Treasury & Markets (Resource Mobilisation) - Afreximbank",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/2993C85B66",
+          "fields": {
+            "title": "Director, Treasury & Markets (Resource Mobilisation)",
+            "id": 5981274,
+            "state": "published",
+            "shortcode": "CDC5C2F331"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0148",
+      "title": "Assistant Manager, Treasury & Markets Division (Treasury Client Solutions)",
+      "company": "Afreximbank",
+      "location": "Cairo, Egypt",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/assistant-manager-treasury-markets-division-treasury-client-solutions-afreximbank-cairo/",
+      "slug": "assistant-manager-treasury-markets-division-treasury-client-solutions-afreximbank-cairo",
+      "displayedDeadline": null,
+      "applyUrl": "https://apply.workable.com/afreximbank/j/10B4DBB343/",
+      "sourceUrl": "https://apply.workable.com/afreximbank/j/10B4DBB343/",
+      "status": "Confirmed active",
+      "reason": "The official Workable vacancy API resolves the current ACD requisition URL to the matching role with state=published and a full description. No closing date or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://apply.workable.com/afreximbank/j/10B4DBB343/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/10B4DBB343/",
+          "checkedAt": "2026-09-08T22:29:39.131Z",
+          "title": "Assistant Manager, Treasury & Markets Division (Treasury Client Solutions) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/assistant-manager-treasury-markets-division-treasury-client-solutions-afreximbank-cairo/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/assistant-manager-treasury-markets-division-treasury-client-solutions-afreximbank-cairo/",
+          "checkedAt": "2026-09-08T22:29:39.159Z",
+          "title": "Assistant Manager, Treasury & Markets Division (Treasury Client Solutions) at Afreximbank | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/10B4DBB343",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/10B4DBB343",
+          "checkedAt": "2026-09-08T22:30:51.642Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/10B4DBB343",
+          "fields": {
+            "title": "Assistant Manager, Treasury & Markets Division (Treasury Client Solutions)",
+            "id": 5981108,
+            "state": "published",
+            "shortcode": "10B4DBB343"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0142",
+      "title": "Investment Manager",
+      "company": "Fund for Export Development in Africa (FEDA)",
+      "location": "Kigali, Rwanda",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-manager-fund-for-export-development-in-africa-feda-kigali/",
+      "slug": "investment-manager-fund-for-export-development-in-africa-feda-kigali",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
+      "sourceUrl": "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
+      "status": "Needs review",
+      "reason": "The CA Global role-specific advert and embedded application invitation remain available, but its Apply now link to iSmartRecruit returns HTTP 403 with a JavaScript/cookie challenge. No official employer confirmation or independently verified working requisition was found. Keep unchanged because this does not prove expiry.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-manager-fund-for-export-development-in-africa-feda-kigali/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-manager-fund-for-export-development-in-africa-feda-kigali/",
+          "checkedAt": "2026-09-08T22:29:39.228Z",
+          "title": "Investment Manager at Fund for Export Development in Africa (FEDA) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
+          "status": 200,
+          "finalUrl": "https://www.caglobalint.com/recruitmentafrica/job/feda-investment-manager-kigali-rwanda/",
+          "checkedAt": "2026-09-08T22:29:39.214Z",
+          "title": "FEDA: Investment Manager &#x2013; Kigali, Rwanda | CA Global",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://app.ismartrecruit.com/jobDescription?x=E7pY2FnbG9iYWxpbnQuY29tXzE0MjA4NjU5X1NFTEZTRVJWSUNFUE9SVEFMX2VuQ9e",
+          "status": 403,
+          "finalUrl": "https://app.ismartrecruit.com/jobDescription?x=E7pY2FnbG9iYWxpbnQuY29tXzE0MjA4NjU5X1NFTEZTRVJWSUNFUE9SVEFMX2VuQ9e",
+          "checkedAt": "2026-09-08T22:31:47.716Z",
+          "title": "Just a moment...",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0141",
+      "title": "Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund)",
+      "company": "Fund for Export Development in Africa (FEDA)",
+      "location": "Kigali, Rwanda",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-strategic-initiatives-and-afcfta-adjustment-fund-fund-for-export-development-in-africa-feda-kigali/",
+      "slug": "assistant-investment-manager-strategic-initiatives-and-afcfta-adjustment-fund-fund-for-export-development-in-africa-feda-kigali",
+      "displayedDeadline": null,
+      "applyUrl": "https://apply.workable.com/afreximbank/j/1518D569F4",
+      "sourceUrl": "https://apply.workable.com/afreximbank/j/1518D569F4",
+      "status": "Confirmed active",
+      "reason": "The official Workable vacancy API resolves the current ACD requisition URL to the matching role with state=published and a full description. No closing date or closure signal was found.",
+      "note": "The old shortcode 1518D569F4 resolves to published shortcode FE8EBB2061 for the same role; the canonical URL also loads.",
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://apply.workable.com/afreximbank/j/1518D569F4",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/1518D569F4",
+          "checkedAt": "2026-09-08T22:29:39.266Z",
+          "title": "Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-strategic-initiatives-and-afcfta-adjustment-fund-fund-for-export-development-in-africa-feda-kigali/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-strategic-initiatives-and-afcfta-adjustment-fund-fund-for-export-development-in-africa-feda-kigali/",
+          "checkedAt": "2026-09-08T22:29:39.288Z",
+          "title": "Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund) at Fund for Export Development in Africa (FEDA) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/1518D569F4",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/1518D569F4",
+          "checkedAt": "2026-09-08T22:30:51.669Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "canonical",
+          "url": "https://apply.workable.com/afreximbank/j/FE8EBB2061/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/FE8EBB2061/",
+          "checkedAt": "2026-09-08T22:33:08.855Z",
+          "title": "Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund) - Afreximbank",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/1518D569F4",
+          "fields": {
+            "title": "Assistant Investment Manager (Strategic Initiatives and AfCFTA Adjustment Fund)",
+            "id": 6028354,
+            "state": "published",
+            "shortcode": "FE8EBB2061"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0140",
+      "title": "Assistant Investment Manager (Bilingual)",
+      "company": "Fund for Export Development in Africa (FEDA)",
+      "location": "Kigali, Rwanda",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-bilingual-fund-for-export-development-in-africa-feda-kigali/",
+      "slug": "assistant-investment-manager-bilingual-fund-for-export-development-in-africa-feda-kigali",
+      "displayedDeadline": null,
+      "applyUrl": "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
+      "sourceUrl": "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
+      "status": "Confirmed active",
+      "reason": "The official Workable vacancy API resolves the current ACD requisition URL to the matching role with state=published and a full description. No closing date or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/4FBE8D147C/",
+          "checkedAt": "2026-09-08T22:29:39.356Z",
+          "title": "Assistant Investment Manager (Bilingual) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-bilingual-fund-for-export-development-in-africa-feda-kigali/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/assistant-investment-manager-bilingual-fund-for-export-development-in-africa-feda-kigali/",
+          "checkedAt": "2026-09-08T22:29:39.401Z",
+          "title": "Assistant Investment Manager (Bilingual) at Fund for Export Development in Africa (FEDA) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/4FBE8D147C",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/4FBE8D147C",
+          "checkedAt": "2026-09-08T22:30:51.795Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/4FBE8D147C",
+          "fields": {
+            "title": "Assistant Investment Manager (Bilingual)",
+            "id": 6028331,
+            "state": "published",
+            "shortcode": "4FBE8D147C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0139",
+      "title": "Investment Associate / Senior Investment Associate – CrossBoundary Energy",
+      "company": "CrossBoundary Group",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-senior-investment-associate-crossboundary-energy-crossboundary-group-nairobi/",
+      "slug": "investment-associate-senior-investment-associate-crossboundary-energy-crossboundary-group-nairobi",
+      "displayedDeadline": null,
+      "applyUrl": "https://crossboundary.applytojob.com/apply/UNsmDvSMBR/Investment-Analyst-And-Associate-CrossBoundary-Energy",
+      "sourceUrl": "https://crossboundary.com/jobs/investment-analyst-and-associate-crossboundary-energy/",
+      "status": "Removed locally",
+      "reason": "The exact CrossBoundary ATS requisition returns HTTP 410 and states: \"This position is no longer available.\" The separate company source URL also returns 404.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://crossboundary.applytojob.com/apply/UNsmDvSMBR/Investment-Analyst-And-Associate-CrossBoundary-Energy",
+          "status": 410,
+          "finalUrl": "https://crossboundary.applytojob.com/apply/UNsmDvSMBR/Investment-Analyst-And-Associate-CrossBoundary-Energy",
+          "checkedAt": "2026-09-08T22:29:39.410Z",
+          "title": "Investment Associate/Senior Associate - CrossBoundary Energy - CrossBoundary - Career Page",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-senior-investment-associate-crossboundary-energy-crossboundary-group-nairobi/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-senior-investment-associate-crossboundary-energy-crossboundary-group-nairobi/",
+          "checkedAt": "2026-09-08T22:29:39.542Z",
+          "title": "Investment Associate / Senior Investment Associate – CrossBoundary Energy at CrossBoundary Group | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://crossboundary.com/jobs/investment-analyst-and-associate-crossboundary-energy/",
+          "status": 404,
+          "finalUrl": "https://crossboundary.com/jobs/investment-analyst-and-associate-crossboundary-energy/",
+          "checkedAt": "2026-09-08T22:29:39.488Z",
+          "title": "Page not found - CrossBoundary Group",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0138",
+      "title": "Associate Director, Development",
+      "company": "Africa50 Mobility",
+      "location": "Abidjan, Côte d'Ivoire",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/associate-director-development-africa50-mobility-abidjan/",
+      "slug": "associate-director-development-africa50-mobility-abidjan",
+      "displayedDeadline": null,
+      "applyUrl": "https://intranet.africa50-group.com/candidate/request/3320",
+      "sourceUrl": "https://a50mobility.com/associate-director-development/",
+      "status": "Confirmed active",
+      "reason": "The Africa50 Mobility official job description is available and the ACD Apply link opens application form 3320 for Associate Director - Development (Mobility Platform), with candidate fields and Submit Application.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/associate-director-development-africa50-mobility-abidjan/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/associate-director-development-africa50-mobility-abidjan/",
+          "checkedAt": "2026-09-08T22:29:39.682Z",
+          "title": "Associate Director, Development at Africa50 Mobility | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://intranet.africa50-group.com/candidate/request/3320",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3320",
+          "checkedAt": "2026-09-08T22:29:39.569Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://a50mobility.com/associate-director-development/",
+          "status": 200,
+          "finalUrl": "https://a50mobility.com/associate-director-development/",
+          "checkedAt": "2026-09-08T22:29:39.633Z",
+          "title": "Associate Director Development &#8211; Africa50 Mobility",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0106",
+      "title": "Portfolio Performance Intern",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/portfolio-performance-intern-africa50-casablanca/",
+      "slug": "portfolio-performance-intern-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
+          "checkedAt": "2026-09-08T22:29:39.719Z",
+          "title": "Portfolio Performance Intern - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/portfolio-performance-intern-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/portfolio-performance-intern-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:39.787Z",
+          "title": "Portfolio Performance Intern at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3433",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3433",
+          "checkedAt": "2026-09-08T22:30:51.812Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0105",
+      "title": "(Senior) Portfolio Performance Analyst",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-portfolio-performance-analyst-africa50-casablanca/",
+      "slug": "senior-portfolio-performance-analyst-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-portfolio-performance-analyst/",
+          "checkedAt": "2026-09-08T22:29:39.864Z",
+          "title": "(Senior) Portfolio Performance Analyst - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-portfolio-performance-analyst-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-portfolio-performance-analyst-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:39.872Z",
+          "title": "(Senior) Portfolio Performance Analyst at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3432",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3432",
+          "checkedAt": "2026-09-08T22:30:51.849Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0083",
+      "title": "Private Equity Intern, Africa50 Infrastructure Acceleration Fund",
+      "company": "Africa50",
+      "location": "Casablanca, Morocco",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco/",
+      "slug": "private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
+          "checkedAt": "2026-09-08T22:29:39.885Z",
+          "title": "Private Equity Intern, Africa50 Infrastructure Acceleration Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco/",
+          "checkedAt": "2026-09-08T22:29:39.983Z",
+          "title": "Private Equity Intern, Africa50 Infrastructure Acceleration Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3383",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3383",
+          "checkedAt": "2026-09-08T22:30:51.865Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0082",
+      "title": "Infrastructure Advisory – Senior Associate",
+      "company": "KPMG",
+      "location": "Nairobi, Kenya",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/infrastructure-advisory-senior-associate-kpmg-nairobi-kenya/",
+      "slug": "infrastructure-advisory-senior-associate-kpmg-nairobi-kenya",
+      "displayedDeadline": null,
+      "applyUrl": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+      "sourceUrl": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+      "status": "Confirmed active",
+      "reason": "The official KPMG role page remains available and explicitly invites applications on a rolling basis, using a candidate-summary form plus talentrecruit@kpmg.co.ke. The form redirects to Microsoft Forms and needs JavaScript; form submission was not tested. No expiry or closure is shown.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/infrastructure-advisory-senior-associate-kpmg-nairobi-kenya/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/infrastructure-advisory-senior-associate-kpmg-nairobi-kenya/",
+          "checkedAt": "2026-09-08T22:29:40.064Z",
+          "title": "Infrastructure Advisory – Senior Associate at KPMG | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+          "status": 200,
+          "finalUrl": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+          "checkedAt": "2026-09-08T22:29:40.027Z",
+          "title": "Infrastructure Advisory – Senior Associate",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=uyT_3okgAESMjvceaAN4sh1k4J22pCZCgPnzy0RiYFNURUFaR0o5QjVUSENKUUpRTTRBNkE4R0o4Ny4u",
+          "status": 200,
+          "finalUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=uyT_3okgAESMjvceaAN4sh1k4J22pCZCgPnzy0RiYFNURUFaR0o5QjVUSENKUUpRTTRBNkE4R0o4Ny4u",
+          "checkedAt": "2026-09-08T22:31:47.648Z",
+          "title": "Microsoft Forms",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0078",
+      "title": "Portfolio Monitoring Manager",
+      "company": "TLG Capital",
+      "location": "London / Mauritius / Africa-based",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/portfolio-monitoring-manager-tlg-capital-london-mauritius-africa-based-africa-portfolio-coverage/",
+      "slug": "portfolio-monitoring-manager-tlg-capital-london-mauritius-africa-based-africa-portfolio-coverage",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.avca.africa/news-insights/job-board/tlg-capital-portfolio-monitoring-manager/",
+      "sourceUrl": "https://www.avca.africa/news-insights/job-board/tlg-capital-portfolio-monitoring-manager/",
+      "status": "Needs review",
+      "reason": "The AVCA role-specific advert remains available, but its Google Forms application link returns HTTP 401 with cookie/sign-in requirements; the second web reader also failed. A check of TLG Capital and targeted searches did not establish whether that specific form still accepts applications. No deadline or explicit closure was found. Keep unchanged.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/portfolio-monitoring-manager-tlg-capital-london-mauritius-africa-based-africa-portfolio-coverage/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/portfolio-monitoring-manager-tlg-capital-london-mauritius-africa-based-africa-portfolio-coverage/",
+          "checkedAt": "2026-09-08T22:29:40.186Z",
+          "title": "Portfolio Monitoring Manager at TLG Capital | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://www.avca.africa/news-insights/job-board/tlg-capital-portfolio-monitoring-manager/",
+          "status": 200,
+          "finalUrl": "https://www.avca.africa/news-insights/job-board/tlg-capital-portfolio-monitoring-manager/",
+          "checkedAt": "2026-09-08T22:29:40.126Z",
+          "title": "AVCA | TLG Capital: Portfolio Monitoring Manager",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdpz6sjTyXmikNJMNXugSPgRymL8vgBoY8HLmvwQrPwRb6Mng/viewform",
+          "status": 401,
+          "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdpz6sjTyXmikNJMNXugSPgRymL8vgBoY8HLmvwQrPwRb6Mng/viewform",
+          "checkedAt": "2026-09-08T22:31:47.715Z",
+          "title": "",
+          "error": null
+        },
+        {
+          "kind": "employer",
+          "url": "https://www.tlgcapital.com/",
+          "status": 200,
+          "finalUrl": "https://www.tlgcapital.com/",
+          "checkedAt": "2026-09-08T22:33:08.849Z",
+          "title": "TLG Capital",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0041",
+      "title": "Senior Investment Officer in Climate Finance, Sub-Saharan Africa",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-officer-in-climate-finance-sub-saharan-africa-responsability-investments-cape-town/",
+      "slug": "senior-investment-officer-in-climate-finance-sub-saharan-africa-responsability-investments-cape-town",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Description/2?DesignID=00",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Description/2?DesignID=00",
+      "status": "Confirmed active",
+      "reason": "The exact responsAbility Umantis role description and matching application form load successfully. The role also appears on the official current vacancies list. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-officer-in-climate-finance-sub-saharan-africa-responsability-investments-cape-town/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-officer-in-climate-finance-sub-saharan-africa-responsability-investments-cape-town/",
+          "checkedAt": "2026-09-08T22:29:40.226Z",
+          "title": "Senior Investment Officer in Climate Finance, Sub-Saharan Africa at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Description/2?DesignID=00",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:40.220Z",
+          "title": "Senior Investment Officer in Climate Finance, Sub-Saharan Africa",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Application/New/2",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2267/Application/New/2",
+          "checkedAt": "2026-09-08T22:30:51.888Z",
+          "title": "Senior Investment Officer in Climate Finance, Sub-Saharan Africa - Application | eRecruiting responsAbility",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0039",
+      "title": "Junior Transaction Officer",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/junior-transaction-officer-responsability-investments-cape-town-south-africa/",
+      "slug": "junior-transaction-officer-responsability-investments-cape-town-south-africa",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Description/2?DesignID=00",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Description/2?DesignID=00",
+      "status": "Confirmed active",
+      "reason": "The exact responsAbility Umantis role description and matching application form load successfully. The role also appears on the official current vacancies list. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Description/2?DesignID=00",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:40.255Z",
+          "title": "Junior Transaction Officer",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/junior-transaction-officer-responsability-investments-cape-town-south-africa/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/junior-transaction-officer-responsability-investments-cape-town-south-africa/",
+          "checkedAt": "2026-09-08T22:29:40.413Z",
+          "title": "Junior Transaction Officer at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Application/New/2",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2276/Application/New/2",
+          "checkedAt": "2026-09-08T22:30:51.900Z",
+          "title": "Junior Transaction Officer - Application | eRecruiting responsAbility",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0038",
+      "title": "Investment Associate in Financial Inclusion Debt",
+      "company": "responsAbility Investments",
+      "location": "Cape Town, South Africa",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-in-financial-inclusion-debt-responsability-investments-cape-town-south-africa/",
+      "slug": "investment-associate-in-financial-inclusion-debt-responsability-investments-cape-town-south-africa",
+      "displayedDeadline": null,
+      "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Description/2?DesignID=00",
+      "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Description/2?DesignID=00",
+      "status": "Confirmed active",
+      "reason": "The exact responsAbility Umantis role description and matching application form load successfully. The role also appears on the official current vacancies list. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-in-financial-inclusion-debt-responsability-investments-cape-town-south-africa/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-in-financial-inclusion-debt-responsability-investments-cape-town-south-africa/",
+          "checkedAt": "2026-09-08T22:29:40.451Z",
+          "title": "Investment Associate in Financial Inclusion Debt at responsAbility Investments | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Description/2?DesignID=00",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Description/2?DesignID=00",
+          "checkedAt": "2026-09-08T22:29:40.440Z",
+          "title": "Investment Associate in Financial Inclusion Debt",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Application/New/2",
+          "status": 200,
+          "finalUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2282/Application/New/2",
+          "checkedAt": "2026-09-08T22:30:52.064Z",
+          "title": "Investment Associate in Financial Inclusion Debt - Application | eRecruiting responsAbility",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0035",
+      "title": "Senior Transaction Leader",
+      "company": "Open Capital Advisors",
+      "location": "Multiple countries",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-transaction-leader-open-capital-advisors-multiple-countries/",
+      "slug": "senior-transaction-leader-open-capital-advisors-multiple-countries",
+      "displayedDeadline": null,
+      "applyUrl": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+      "sourceUrl": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+      "status": "Confirmed active",
+      "reason": "The exact employer ATS posting contains the role description and an open application form with required candidate fields and Submit Application. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-transaction-leader-open-capital-advisors-multiple-countries/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-transaction-leader-open-capital-advisors-multiple-countries/",
+          "checkedAt": "2026-09-08T22:29:40.624Z",
+          "title": "Senior Transaction Leader at Open Capital Advisors | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+          "status": 200,
+          "finalUrl": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+          "checkedAt": "2026-09-08T22:29:40.589Z",
+          "title": "Senior Transaction Leader - Open Capital Advisors - Career Page",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+          "fields": {
+            "title": "Senior Transaction Leader",
+            "datePosted": "2026-08-21",
+            "validThrough": "2026-11-19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACD-0023",
+      "title": "Senior Associate - Guinea",
+      "company": "CrossBoundary Group",
+      "location": "Conakry",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-associate-guinea-crossboundary-group-conakry/",
+      "slug": "senior-associate-guinea-crossboundary-group-conakry",
+      "displayedDeadline": null,
+      "applyUrl": "https://crossboundary.applytojob.com/apply/SacHg7gDEI/Senior-Associate",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/SacHg7gDEI/Senior-Associate",
+      "status": "Confirmed active",
+      "reason": "The exact employer ATS posting contains the role description and an open application form with required candidate fields and Submit Application. No expired deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://crossboundary.applytojob.com/apply/SacHg7gDEI/Senior-Associate",
+          "status": 200,
+          "finalUrl": "https://crossboundary.applytojob.com/apply/SacHg7gDEI/Senior-Associate",
+          "checkedAt": "2026-09-08T22:29:40.698Z",
+          "title": "Senior Associate - CrossBoundary - Career Page",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-associate-guinea-crossboundary-group-conakry/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-associate-guinea-crossboundary-group-conakry/",
+          "checkedAt": "2026-09-08T22:29:40.712Z",
+          "title": "Senior Associate - Guinea at CrossBoundary Group | Africa Career Desk",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0018",
+      "title": "Head of Finance",
+      "company": "ARM-Harith Infrastructure Investment Limited",
+      "location": "Lagos, Nigeria",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/head-of-finance-arm-harith-infrastructure-investment-limited-lagos-nigeria/",
+      "slug": "head-of-finance-arm-harith-infrastructure-investment-limited-lagos-nigeria",
+      "displayedDeadline": null,
+      "applyUrl": "https://armharith.com/open-positions/",
+      "sourceUrl": "https://armharith.com/open-positions/",
+      "status": "Confirmed active",
+      "reason": "The official ARM-Harith open-positions page explicitly labels Head of Finance Status: Active and links a matching job-description PDF with email/LinkedIn application instructions. No deadline is given.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/head-of-finance-arm-harith-infrastructure-investment-limited-lagos-nigeria/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/head-of-finance-arm-harith-infrastructure-investment-limited-lagos-nigeria/",
+          "checkedAt": "2026-09-08T22:29:40.734Z",
+          "title": "Head of Finance at ARM-Harith Infrastructure Investment Limited | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "apply",
+          "url": "https://armharith.com/open-positions/",
+          "status": 200,
+          "finalUrl": "https://armharith.com/open-positions/",
+          "checkedAt": "2026-09-08T22:29:40.729Z",
+          "title": "Open Positions - ArmHarith",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0016",
+      "title": "Senior Investment Director, Africa50 Infrastructure Acceleration Fund",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+      "slug": "senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+          "checkedAt": "2026-09-08T22:29:40.743Z",
+          "title": "Senior Investment Director, Africa50 Infrastructure Acceleration Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:40.754Z",
+          "title": "Senior Investment Director, Africa50 Infrastructure Acceleration Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3377",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3377",
+          "checkedAt": "2026-09-08T22:30:52.163Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0014",
+      "title": "Senior Investment Associate, Project Development (AGIA)",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-agia-africa50-casablanca/",
+      "slug": "senior-investment-associate-project-development-agia-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
+          "checkedAt": "2026-09-08T22:29:40.805Z",
+          "title": "Senior Investment Associate, Project Development (AGIA) - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-agia-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-associate-project-development-agia-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:40.895Z",
+          "title": "Senior Investment Associate, Project Development (AGIA) at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3321",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3321",
+          "checkedAt": "2026-09-08T22:30:52.177Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0012",
+      "title": "Senior Investment Analyst, Project Development",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-africa50-casablanca/",
+      "slug": "senior-investment-analyst-project-development-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+          "checkedAt": "2026-09-08T22:29:40.953Z",
+          "title": "Senior Investment Analyst, Project Development - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/senior-investment-analyst-project-development-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:40.966Z",
+          "title": "Senior Investment Analyst, Project Development at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3269",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3269",
+          "checkedAt": "2026-09-08T22:30:52.193Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0009",
+      "title": "Investment Director, DRE Africa Platform",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-director-dre-africa-platform-africa50-casablanca/",
+      "slug": "investment-director-dre-africa-platform-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-director-dre-africa-platfrom/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-director-dre-africa-platfrom/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-director-dre-africa-platfrom/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-director-dre-africa-platfrom/",
+          "checkedAt": "2026-09-08T22:29:40.986Z",
+          "title": "Investment Director, DRE Africa Platfrom - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-director-dre-africa-platform-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-director-dre-africa-platform-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:40.994Z",
+          "title": "Investment Director, DRE Africa Platform at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3241",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3241",
+          "checkedAt": "2026-09-08T22:30:52.220Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0008",
+      "title": "Investment Director, Africa50 Project Development",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-director-africa50-project-development-africa50-casablanca/",
+      "slug": "investment-director-africa50-project-development-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-director-africa50-project-development/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-director-africa50-project-development/",
+      "status": "Needs review",
+      "reason": "The specific Africa50 job description is live and the role remains under Our Latest Vacancies, but its Apply Now destination https://africa50.odoo.com/candidate/request/60 returns HTTP 404. The current official vacancy index and targeted search still point to the same advert, with no verified replacement form. Conflicting positive vacancy evidence and a broken downstream form do not establish closure.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-director-africa50-project-development/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-director-africa50-project-development/",
+          "checkedAt": "2026-09-08T22:29:40.998Z",
+          "title": "Investment Director, Africa50 Project Development - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-director-africa50-project-development-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-director-africa50-project-development-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:41.074Z",
+          "title": "Investment Director, Africa50 Project Development at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://africa50.odoo.com/candidate/request/60",
+          "status": 404,
+          "finalUrl": "https://africa50.odoo.com/candidate/request/60",
+          "checkedAt": "2026-09-08T22:30:52.269Z",
+          "title": "Odoo",
+          "error": null
+        },
+        {
+          "kind": "current-vacancies",
+          "url": "https://www.africa50.com/working-with-us/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/",
+          "checkedAt": "2026-09-08T22:31:47.718Z",
+          "title": "Working with us - Africa50",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0007",
+      "title": "Investment Associate, Project Development (AGIA)",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-agia-africa50-casablanca/",
+      "slug": "investment-associate-project-development-agia-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
+          "checkedAt": "2026-09-08T22:29:41.102Z",
+          "title": "Investment Associate, Project Development (AGIA) - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-agia-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-agia-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:41.145Z",
+          "title": "Investment Associate, Project Development (AGIA) at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3355",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3355",
+          "checkedAt": "2026-09-08T22:30:52.406Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0006",
+      "title": "Investment Associate, Project Development",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-africa50-casablanca/",
+      "slug": "investment-associate-project-development-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+          "checkedAt": "2026-09-08T22:29:41.153Z",
+          "title": "Investment Associate, Project Development - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-project-development-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:41.187Z",
+          "title": "Investment Associate, Project Development at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3354",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3354",
+          "checkedAt": "2026-09-08T22:30:52.580Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0005",
+      "title": "Investment Associate, Africa50 Infrastructure Acceleration Fund",
+      "company": "Africa50",
+      "location": "Casablanca",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+      "slug": "investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca",
+      "displayedDeadline": null,
+      "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+      "status": "Confirmed active",
+      "reason": "The exact Africa50 role description loads and its linked application form opens with the matching job name, required candidate fields and Submit Application. No deadline or closure signal was found.",
+      "note": "The official application form expands the title to Investment Associate / Senior Investment Associate, IAF. The original role description remains live.",
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+          "status": 200,
+          "finalUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+          "checkedAt": "2026-09-08T22:29:41.196Z",
+          "title": "Investment Associate, Africa50 Infrastructure Acceleration Fund - Africa50",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca/",
+          "checkedAt": "2026-09-08T22:29:41.263Z",
+          "title": "Investment Associate, Africa50 Infrastructure Acceleration Fund at Africa50 | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "application-form",
+          "url": "https://intranet.africa50-group.com/candidate/request/3380/",
+          "status": 200,
+          "finalUrl": "https://intranet.africa50-group.com/candidate/request/3380",
+          "checkedAt": "2026-09-08T22:30:52.595Z",
+          "title": "Candidate: check a Candidate | Africa50 Intranet",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ACD-0004",
+      "title": "Relationship Manager – ARISE Implant (China Corridor)",
+      "company": "African Export-Import Bank (Afreximbank)",
+      "location": "Cotonou, Benin",
+      "acdUrl": "https://www.africacareerdesk.com/jobs/relationship-manager-arise-implant-china-corridor-afreximbank-cotonou/",
+      "slug": "relationship-manager-arise-implant-china-corridor-afreximbank-cotonou",
+      "displayedDeadline": null,
+      "applyUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF/apply/",
+      "sourceUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF",
+      "status": "Confirmed active",
+      "reason": "The official Workable vacancy API resolves the current ACD requisition URL to the matching role with state=published and a full description. No closing date or closure signal was found.",
+      "note": null,
+      "checks": [
+        {
+          "kind": "apply",
+          "url": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF/apply/",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF/apply/",
+          "checkedAt": "2026-09-08T22:29:41.286Z",
+          "title": "Relationship Manager - ARISE Implant (China Corridor) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "source",
+          "url": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF",
+          "checkedAt": "2026-09-08T22:29:41.293Z",
+          "title": "Relationship Manager - ARISE Implant (China Corridor) - Afreximbank",
+          "error": null
+        },
+        {
+          "kind": "acd",
+          "url": "https://www.africacareerdesk.com/jobs/relationship-manager-arise-implant-china-corridor-afreximbank-cotonou/",
+          "status": 200,
+          "finalUrl": "https://www.africacareerdesk.com/jobs/relationship-manager-arise-implant-china-corridor-afreximbank-cotonou/",
+          "checkedAt": "2026-09-08T22:29:41.305Z",
+          "title": "Relationship Manager – ARISE Implant (China Corridor) at African Export-Import Bank (Afreximbank) | Africa Career Desk",
+          "error": null
+        },
+        {
+          "kind": "api",
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/9BCDA5C8EF",
+          "status": 200,
+          "finalUrl": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/9BCDA5C8EF",
+          "checkedAt": "2026-09-08T22:30:52.637Z",
+          "title": "",
+          "error": null
+        }
+      ],
+      "officialSignals": [
+        {
+          "url": "https://apply.workable.com/api/v2/accounts/afreximbank/jobs/9BCDA5C8EF",
+          "fields": {
+            "title": "Relationship Manager - ARISE Implant (China Corridor)",
+            "id": 5956650,
+            "state": "published",
+            "shortcode": "9BCDA5C8EF"
+          }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "All 70 live slugs, displayed deadlines and Apply URLs matched the local pre-audit inventory.",
+      "All 70 roles have exactly one audit outcome: 6 removed locally, 55 confirmed active, 9 needs review.",
+      "Exactly 64 retained job objects and their ordering are unchanged from the pre-audit snapshot.",
+      "All six removed slugs return undefined from getJobBySlug; the existing page invokes notFound for these.",
+      "Sitemap includes every retained job and no excluded job; existing non-job sitemap entries remain present.",
+      "ESLint passed for src/data/opportunities.ts and src/app/sitemap.ts.",
+      "TypeScript project check (tsc --noEmit) passed.",
+      "git diff --check passed."
+    ],
+    "buildRun": false,
+    "deployRun": false
+  },
+  "recordContext": "Historical expiry audit followed by editor-approved cleanup. Original outcomes below describe the initial audit; approvedCleanup records the final instructions and implementation.",
+  "approvedCleanup": {
+    "approvedAtDate": "2026-09-09",
+    "approvedBy": "Site owner in this conversation",
+    "removedIds": [
+      "ACD-0139",
+      "ACD-0162",
+      "ACD-0167",
+      "ACD-0168",
+      "ACD-0189",
+      "ACD-0199",
+      "ACD-0150",
+      "ACD-0158",
+      "ACD-0157",
+      "ACD-0078",
+      "ACD-0165"
+    ],
+    "manualRemovedIds": [
+      "ACD-0150",
+      "ACD-0158",
+      "ACD-0157",
+      "ACD-0078",
+      "ACD-0165"
+    ],
+    "removalReasonById": {
+      "ACD-0139": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0162": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0167": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0168": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0189": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0199": "Explicit official closure evidence from the initial audit; removal approved by editor.",
+      "ACD-0150": "Explicit editor instruction; initial audit uncertainty is preserved, not relabelled as proven expiry.",
+      "ACD-0158": "Explicit editor instruction; initial audit uncertainty is preserved, not relabelled as proven expiry.",
+      "ACD-0157": "Explicit editor instruction; initial audit uncertainty is preserved, not relabelled as proven expiry.",
+      "ACD-0078": "Explicit editor instruction; initial audit uncertainty is preserved, not relabelled as proven expiry.",
+      "ACD-0165": "Explicit editor instruction; initial audit uncertainty is preserved, not relabelled as proven expiry."
+    },
+    "retainedCount": 59,
+    "confirmedActiveRetainedCount": 55,
+    "needsReviewRetainedIds": [
+      "ACD-0210",
+      "ACD-0200",
+      "ACD-0008",
+      "ACD-0142"
+    ],
+    "proparco": {
+      "id": "ACD-0210",
+      "retained": true,
+      "deadlineDisplayRemoved": true,
+      "deadlineClaimRemovedFromApplicationNotes": true,
+      "otherFieldsUnchanged": true
+    },
+    "validation": {
+      "passed": true,
+      "approvedRemovedIds": [
+        "ACD-0139",
+        "ACD-0162",
+        "ACD-0167",
+        "ACD-0168",
+        "ACD-0189",
+        "ACD-0199",
+        "ACD-0150",
+        "ACD-0158",
+        "ACD-0157",
+        "ACD-0078",
+        "ACD-0165"
+      ],
+      "originalLiveJobs": 70,
+      "retainedJobs": 59,
+      "otherRetainedJobsUnchanged": 58,
+      "proparcoRetainedWithoutDeadline": true,
+      "otherNeedsReviewUnchanged": [
+        "ACD-0200",
+        "ACD-0008",
+        "ACD-0142"
+      ],
+      "allOtherOpportunityRecordsUnchanged": true,
+      "programmesUnchanged": 5,
+      "openApplicationsUnchanged": 14,
+      "removedSlugsNotFound": true,
+      "sitemapPassed": true,
+      "unrelatedExistingFilesPreserved": 32,
+      "scopedEslintPassed": true,
+      "typescriptPassed": true,
+      "productionBuild": "passed",
+      "generatedJobRoutes": 59,
+      "generatedProparcoPageWithoutDeadline": true,
+      "generatedSitemapExcludesAllApprovedRemovals": true
+    },
+    "publication": "Approved for commit, push and production deployment after validation. Deployment verification will be reported with the final commit hash."
+  }
+}

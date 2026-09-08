@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { OPPORTUNITIES } from "@/data/opportunities";
+import { JOBS, OPPORTUNITIES } from "@/data/opportunities";
 
 const BASE = "https://www.africacareerdesk.com";
 
@@ -48,7 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const opportunityPages: MetadataRoute.Sitemap = OPPORTUNITIES.map((opp) => ({
+  const listedJobIds = new Set(JOBS.map((job) => job.id));
+  const opportunityPages: MetadataRoute.Sitemap = OPPORTUNITIES.filter(
+    (opp) => opp.boardSection !== "Jobs" || listedJobIds.has(opp.id)
+  ).map((opp) => ({
     url: `${BASE}/jobs/${opp.slug}/`,
     lastModified: parseLastChecked(opp.lastChecked),
     changeFrequency: "weekly",
