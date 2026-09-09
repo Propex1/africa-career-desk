@@ -5826,6 +5826,494 @@
                           "manualReviewNotes":  "Government-backed infrastructure investment fund; relevant for project finance and investment roles. Official website confirms infrastructure investment fund; career source to verify.",
                           "workbookId":  155,
                           "workbookSource":  "100 Company Source List"
+                      },
+                      {
+                          "id": "employer-156-globeleq",
+                          "displayName": "Globeleq",
+                          "aliases": [
+                              "Globeleq"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Globeleq official website",
+                              "Globeleq careers jobs",
+                              "Globeleq investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-157-infracredit",
+                          "displayName": "InfraCredit",
+                          "aliases": [
+                              "InfraCredit"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "InfraCredit official website",
+                              "InfraCredit careers jobs",
+                              "InfraCredit investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-158-chapel-hill-denham",
+                          "displayName": "Chapel Hill Denham",
+                          "aliases": [
+                              "Chapel Hill Denham"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Chapel Hill Denham official website",
+                              "Chapel Hill Denham careers jobs",
+                              "Chapel Hill Denham investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-159-efg-hermes-efg-holding",
+                          "displayName": "EFG Hermes / EFG Holding",
+                          "aliases": [
+                              "EFG Hermes / EFG Holding",
+                              "EFG Hermes",
+                              "EFG Holding"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "EFG Hermes / EFG Holding official website",
+                              "EFG Hermes / EFG Holding careers jobs",
+                              "EFG Hermes / EFG Holding investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-160-public-investment-corporation-pic",
+                          "displayName": "Public Investment Corporation (PIC)",
+                          "aliases": [
+                              "Public Investment Corporation (PIC)",
+                              "Public Investment Corporation",
+                              "PIC"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Public Investment Corporation (PIC) official website",
+                              "Public Investment Corporation (PIC) careers jobs",
+                              "Public Investment Corporation (PIC) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-161-standard-chartered-cib",
+                          "displayName": "Standard Chartered CIB",
+                          "aliases": [
+                              "Standard Chartered CIB"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Standard Chartered CIB official website",
+                              "Standard Chartered CIB careers jobs",
+                              "Standard Chartered CIB investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-162-atidi",
+                          "displayName": "ATIDI",
+                          "aliases": [
+                              "ATIDI"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "ATIDI official website",
+                              "ATIDI careers jobs",
+                              "ATIDI investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-163-fsd-africa-fsd-africa-investments",
+                          "displayName": "FSD Africa / FSD Africa Investments",
+                          "aliases": [
+                              "FSD Africa / FSD Africa Investments",
+                              "FSD Africa",
+                              "FSD Africa Investments"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "FSD Africa / FSD Africa Investments official website",
+                              "FSD Africa / FSD Africa Investments careers jobs",
+                              "FSD Africa / FSD Africa Investments investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-164-norsad-capital",
+                          "displayName": "Norsad Capital",
+                          "aliases": [
+                              "Norsad Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Norsad Capital official website",
+                              "Norsad Capital careers jobs",
+                              "Norsad Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-165-tlg-capital",
+                          "displayName": "TLG Capital",
+                          "aliases": [
+                              "TLG Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "TLG Capital official website",
+                              "TLG Capital careers jobs",
+                              "TLG Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-166-fonsis",
+                          "displayName": "FONSIS",
+                          "aliases": [
+                              "FONSIS"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "FONSIS official website",
+                              "FONSIS careers jobs",
+                              "FONSIS investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-167-the-sovereign-fund-of-egypt",
+                          "displayName": "The Sovereign Fund of Egypt",
+                          "aliases": [
+                              "The Sovereign Fund of Egypt"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "The Sovereign Fund of Egypt official website",
+                              "The Sovereign Fund of Egypt careers jobs",
+                              "The Sovereign Fund of Egypt investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-168-fonds-mohammed-vi-pour-l-investissement",
+                          "displayName": "Fonds Mohammed VI pour l’Investissement",
+                          "aliases": [
+                              "Fonds Mohammed VI pour l’Investissement"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Fonds Mohammed VI pour l’Investissement official website",
+                              "Fonds Mohammed VI pour l’Investissement careers jobs",
+                              "Fonds Mohammed VI pour l’Investissement investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-169-ithmar-capital",
+                          "displayName": "Ithmar Capital",
+                          "aliases": [
+                              "Ithmar Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Ithmar Capital official website",
+                              "Ithmar Capital careers jobs",
+                              "Ithmar Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-170-apis-partners",
+                          "displayName": "Apis Partners",
+                          "aliases": [
+                              "Apis Partners"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Apis Partners official website",
+                              "Apis Partners careers jobs",
+                              "Apis Partners investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-171-alta-semper",
+                          "displayName": "Alta Semper",
+                          "aliases": [
+                              "Alta Semper"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Alta Semper official website",
+                              "Alta Semper careers jobs",
+                              "Alta Semper investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-172-exeo-capital",
+                          "displayName": "EXEO Capital",
+                          "aliases": [
+                              "EXEO Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "EXEO Capital official website",
+                              "EXEO Capital careers jobs",
+                              "EXEO Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-173-acre-impact-capital",
+                          "displayName": "Acre Impact Capital",
+                          "aliases": [
+                              "Acre Impact Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Acre Impact Capital official website",
+                              "Acre Impact Capital careers jobs",
+                              "Acre Impact Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-174-mcb-group-corporate-investment-banking",
+                          "displayName": "MCB Group / Corporate & Investment Banking",
+                          "aliases": [
+                              "MCB Group / Corporate & Investment Banking",
+                              "MCB Group",
+                              "MCB Corporate & Investment Banking"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "MCB Group / Corporate & Investment Banking official website",
+                              "MCB Group / Corporate & Investment Banking careers jobs",
+                              "MCB Group / Corporate & Investment Banking investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-175-shelter-afrique-development-bank",
+                          "displayName": "Shelter Afrique Development Bank",
+                          "aliases": [
+                              "Shelter Afrique Development Bank"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-09",
+                          "geography": "To verify",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Shelter Afrique Development Bank official website",
+                              "Shelter Afrique Development Bank careers jobs",
+                              "Shelter Afrique Development Bank investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
                       }
                   ]
 }

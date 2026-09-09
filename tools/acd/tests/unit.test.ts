@@ -33,10 +33,45 @@ test("normalizes URLs and cautious duplicate keys", () => {
 });
 
 test("included employers have stable 20-employer batches without reshuffling", () => {
-  assert.equal(employerRegistry.employers.length, 142);
-  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 2]);
+  assert.equal(employerRegistry.employers.length, 162);
+  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 2, 20]);
   assert.equal(new Set(batches.flatMap((batch) => batch.employerIds)).size, employerRegistry.employers.length);
   assert.equal(BATCH_SIZE, 20);
+  assert.deepEqual(batches.find((batch) => batch.id === "batch-08")?.employerIds, [
+    "employer-154-nigeria-sovereign-investment-authority-nsia",
+    "employer-155-ghana-infrastructure-investment-fund-giif",
+  ]);
+});
+
+test("Batch 9 includes the requested employers equally and prepares without starting research", () => {
+  const expected = [
+    "Globeleq", "InfraCredit", "Chapel Hill Denham", "EFG Hermes / EFG Holding",
+    "Public Investment Corporation (PIC)", "Standard Chartered CIB", "ATIDI",
+    "FSD Africa / FSD Africa Investments", "Norsad Capital", "TLG Capital", "FONSIS",
+    "The Sovereign Fund of Egypt", "Fonds Mohammed VI pour l’Investissement",
+    "Ithmar Capital", "Apis Partners", "Alta Semper", "EXEO Capital",
+    "Acre Impact Capital", "MCB Group / Corporate & Investment Banking",
+    "Shelter Afrique Development Bank",
+  ];
+  const employers = employerRegistry.employers.filter((employer) => employer.batchId === "batch-09");
+  assert.deepEqual(employers.map((employer) => employer.displayName), expected);
+  for (const employer of employers) {
+    assert.equal(employer.inclusionDecision, "Include");
+    assert.equal(employer.priority, undefined);
+    assert.equal(employer.workbookId, undefined);
+    assert.equal(employer.workbookSource, undefined);
+    assert.equal(employer.sourceStatus, "Not researched");
+    assert.deepEqual(employer.otherVerifiedSources, []);
+  }
+  const root = mkdtempSync(join(tmpdir(), "acd-batch09-preview-"));
+  try {
+    const preview = prepareResearchBatch(root, { batchId: "batch-09", batchRunId: "batch-09-fixture-preview", dryRun: true });
+    assert.equal(preview.task.scope, "full_batch");
+    assert.deepEqual(preview.task.employers.map((employer) => employer.displayName), expected);
+    assert.deepEqual(preview.task.selectedEmployerIds, employers.map((employer) => employer.id));
+    assert.equal(preview.created, false);
+    assert.equal(existsSync(join(root, "data")), false);
+  } finally { removeTemp(root); }
 });
 
 function limitedResearchResult(batchRunId: string, taskId: string, employer: ResearchTaskEmployer): EmployerResearchResult {
@@ -298,7 +333,11 @@ test("research batches overview is read-only and shows pilot metrics with honest
     const preserved = baseline.addVacancy(baselineRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     baseline.completeRun(baselineRun); baseline.decide(preserved, "deferred", {});
     const empty = baseline.researchBatchesOverview();
-    assert.equal(empty.totalEmployers, 142); assert.equal(empty.totalBatches, 8); assert.equal(empty.batches.length, batches.length);
+    assert.equal(empty.totalEmployers, 162); assert.equal(empty.totalBatches, 9); assert.equal(empty.batches.length, batches.length);
+    const newBatch = empty.batches.find((batch) => batch.id === "batch-09");
+    assert.ok(newBatch);
+    assert.equal(newBatch.employerCount, 20); assert.equal(newBatch.firmsExpected, 20); assert.equal(newBatch.firmsChecked, 0);
+    assert.equal(newBatch.researchStatus, "Not researched"); assert.equal(newBatch.runId, null); assert.equal(newBatch.lastResearchedAt, null);
     assert.equal(empty.batches.find((batch) => batch.id === "batch-07")?.researchStatus, "Not researched");
     assert.equal(empty.batches.find((batch) => batch.id === "batch-07")?.lastResearchedAt, null);
     assert.equal(empty.lastPublicationAt, null); baseline.close();

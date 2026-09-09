@@ -8,7 +8,7 @@ export interface RegistryEmployer {
   displayName: string;
   aliases: string[];
   inclusionDecision: "Include";
-  priority: string;
+  priority?: string;
   batchId: string;
   geography: string;
   opportunityTypes: string[];
@@ -21,8 +21,8 @@ export interface RegistryEmployer {
   otherVerifiedSources: Array<{ id: string; type: "official_careers" | "other_verified"; url: string; required: boolean; accessMethod: "web_page" }>;
   sourceStatus: string;
   manualReviewNotes: string;
-  workbookId: number;
-  workbookSource: string;
+  workbookId?: number;
+  workbookSource?: string;
 }
 
 interface RegistryFile { batchSize: number; employers: RegistryEmployer[]; sourceWorkbook: string; sourceSheet: string; }
@@ -38,7 +38,8 @@ export const batches = [...new Set(employerRegistry.employers.map((employer) => 
 export function validateBatches() {
   const assigned = batches.flatMap((batch) => batch.employerIds);
   if (new Set(assigned).size !== employerRegistry.employers.length || assigned.length !== employerRegistry.employers.length) throw new Error("Every included employer must belong to exactly one batch.");
-  if (batches.some((batch, index) => batch.employerIds.length > BATCH_SIZE || (index < batches.length - 1 && batch.employerIds.length !== BATCH_SIZE))) throw new Error("Only the final batch may contain fewer than 20 employers.");
+  // Explicit membership stays stable when a new batch follows a partially filled historical batch.
+  if (batches.some((batch) => batch.employerIds.length < 1 || batch.employerIds.length > BATCH_SIZE)) throw new Error("Each batch must contain between 1 and 20 employers.");
 }
 
 validateBatches();
