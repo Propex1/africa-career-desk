@@ -3985,6 +3985,177 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     lastChecked: "10 Sep 2026",
     status: "Active",
   },
+
+  // Programme additions approved for publication on 10 Sep 2026.
+  {
+    id: "ACD-0234",
+    slug: "actis-associate-programme-global-growth-markets",
+    title: "Actis — Associate Programme",
+    company: "Actis",
+    companyInitials: "Ac",
+    logoUrl: "/logos/actis-ga.png",
+    boardSection: "Programmes",
+    roleType: "Infrastructure & Project Finance",
+    experienceBucket: "Associate",
+    region: "Global",
+    locationDisplay: "Global / Growth Markets",
+    summary:
+      "Actis' primary route for junior Investment Professionals combines permanent and Summer Associates in one annual class, with structured training, mentoring and exposure to live investments.",
+    aboutRole:
+      "Associates gain experience in infrastructure investments, investment strategies and new projects across Actis' global growth markets. The Summer Associate route lasts 10 weeks and may lead to a permanent offer the following year.",
+    requirements: [
+      "First-year MBA students are eligible for Summer Associate roles.",
+      "Permanent Associate roles welcome second-year MBAs and the wider candidate market; an MBA is not a prerequisite.",
+    ],
+    applicationNotes:
+      "Recurring Associate Programme. Consult Actis' careers page and linked jobs board for current recruitment opportunities. The programme page does not state an application deadline.",
+    sourceDescription:
+      "Official Actis careers page describing the annual Associate Programme and Summer Associate route, checked on 10 Sep 2026.",
+    applyUrl: "https://www.act.is/people/careers/",
+    sourceUrl: "https://www.act.is/people/careers/",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0235",
+    slug: "world-bank-group-young-professionals-program-washington-global",
+    title: "World Bank Group — Young Professionals Program",
+    company: "World Bank Group",
+    companyInitials: "WB",
+    logoUrl: "/logos/world-bank-group.svg",
+    boardSection: "Programmes",
+    roleType: "Development Finance & Multilaterals",
+    city: "Washington, DC",
+    country: "United States",
+    region: "Global",
+    locationDisplay: "Washington, DC / Global",
+    deadlineDisplay: "30 Sep 2026, 23:59 UTC",
+    summary:
+      "A two-year global development programme with rotations across the World Bank, IFC and MIGA, including opportunities in investment, infrastructure finance, climate and other development sectors.",
+    aboutRole:
+      "The programme starts in Washington, DC and includes three eight-month rotations, with cross-institutional experience and at least one country-office rotation. Participants receive leadership and technical training, coaching and mentorship.",
+    requirements: [
+      "A graduate-level degree or higher in a relevant field, completed before the September start date.",
+      "Two to six years of relevant professional experience, subject to the official eligibility rules.",
+      "Excellent spoken and written English.",
+    ],
+    applicationNotes:
+      "The official programme page states applications close on 30 Sep 2026 at 23:59 UTC for the cohort starting in September 2027. Use the World Bank Group portal to select a Young Professional opening and review the full eligibility rules.",
+    sourceDescription:
+      "Official World Bank Group YPP information page and careers portal, including current Young Professional openings, checked on 10 Sep 2026.",
+    applyUrl: "https://worldbankgroup.csod.com/ux/ats/careersite/1/home?c=worldbankgroup&country=us",
+    sourceUrl: "https://www.worldbank.org/ext/en/careers/talent-programs/young-professionals-program",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0236",
+    slug: "symbiotics-markets-team-internship-cape-town",
+    title: "Symbiotics — Markets Team Internship, Cape Town",
+    company: "Symbiotics",
+    companyInitials: "Sy",
+    logoUrl: "/logos/symbiotics.svg",
+    boardSection: "Programmes",
+    roleType: "Climate & Impact Investing",
+    experienceBucket: "Intern / Graduate",
+    city: "Cape Town",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Cape Town, South Africa",
+    summary:
+      "Three-month internship supporting Symbiotics' Markets Team in Cape Town with research, investee analysis and Investment Committee preparation for impact investing in Sub-Saharan Africa.",
+    aboutRole:
+      "The intern supports country and market research, potential investee analysis, financial statement analysis, administrative work and anti-money-laundering reporting, working with the Sub-Saharan Associate and Regional Manager.",
+    requirements: [
+      "Enrolment in a degree programme in South Africa: a master's in Economics, Development Finance, Accounting or equivalent.",
+      "French knowledge, including work with financial statements published in French.",
+      "Interest in microfinance, impact investing and development finance.",
+    ],
+    applicationNotes:
+      "The official vacancy confirms a three-month internship and does not publish a deadline. Its application button opens a personal-details form.",
+    sourceDescription:
+      "Official Symbiotics recruitment portal; vacancy details and application form checked on 10 Sep 2026.",
+    applyUrl: "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=71205f72-e4be-4fdc-a2b1-c553eb858335",
+    sourceUrl: "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=71205f72-e4be-4fdc-a2b1-c553eb858335",
+    sourceType: "Official ATS",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0237",
+    slug: "chapel-hill-denham-internship-programme-lagos",
+    title: "Chapel Hill Denham — Internship Programme",
+    company: "Chapel Hill Denham",
+    companyInitials: "CH",
+    logoUrl: "/logos/chapel-hill-denham.png",
+    boardSection: "Programmes",
+    roleType: "Investment Banking & Advisory",
+    experienceBucket: "Intern / Graduate",
+    city: "Lagos",
+    country: "Nigeria",
+    region: "West Africa",
+    locationDisplay: "Lagos, Nigeria",
+    summary:
+      "An evergreen internship pathway for students and graduates across Investment Banking, Investment Management, Securities Trading, Sales and Research.",
+    aboutRole:
+      "Interns receive meaningful responsibilities and practical exposure to Chapel Hill Denham's investment businesses, working with experienced professionals to bridge academic learning and employment.",
+    requirements: [
+      "Students and graduates from diverse academic backgrounds.",
+    ],
+    applicationNotes:
+      "Evergreen internship pathway; the official page does not specify a cohort, duration or application deadline. Its Apply Now link gives hrgroup@chapelhilldenham.com.",
+    sourceDescription: "Official Chapel Hill Denham internships page and its application link, checked on 10 Sep 2026.",
+    applyUrl: "https://chapelhilldenham.com/careers/internships/",
+    sourceUrl: "https://chapelhilldenham.com/careers/internships/",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0238",
+    slug: "mckinsey-young-leaders-program-nairobi",
+    title: "McKinsey — Young Leaders Program",
+    company: "McKinsey & Company",
+    companyInitials: "Mc",
+    logoUrl: "/logos/mckinsey.svg",
+    boardSection: "Programmes",
+    roleType: "Corporate Development, M&A & Strategy",
+    experienceBucket: "Intern / Graduate",
+    city: "Nairobi",
+    country: "Kenya",
+    region: "East Africa",
+    locationDisplay: "Nairobi, Kenya",
+    summary:
+      "A two-year consulting programme in Nairobi combining client projects with structured training, coaching and mentorship. High-performing fellows can progress to Business Analyst roles.",
+    aboutRole:
+      "The underlying role is Fellow — Young Leaders Program (15122). Fellows work on analysis, problem solving, client recommendations and implementation alongside consulting teams. The programme develops young local Kenyan talent.",
+    requirements: [
+      "Undergraduate or master's degree with an excellent academic record.",
+      "Less than one year of continuous work experience in any industry.",
+      "Leadership, analytical problem-solving and collaboration skills, with effective communication in English.",
+    ],
+    applicationNotes:
+      "Submit a one-page CV showing cumulative university GPA or ranking and high-school mean grade through McKinsey's official recruitment system. No application deadline is stated.",
+    sourceDescription:
+      "Official McKinsey vacancy 15122 and its linked recruitment system checked on 10 Sep 2026. The vacancy data marks the role active and its application route offers registration and CV upload.",
+    applyUrl: "https://www.mckinsey.com/careers/search-jobs/jobs/fellow-youngleadersprogram-15122",
+    sourceUrl: "https://www.mckinsey.com/careers/search-jobs/jobs/fellow-youngleadersprogram-15122",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
 ];
 
 export const OPPORTUNITIES: Opportunity[] = [
