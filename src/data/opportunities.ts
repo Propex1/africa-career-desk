@@ -985,8 +985,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English"],
     summary:
       "15-month Sahel Capital graduate programme in Lagos for early-career ECOWAS investment professionals.",
-    applyUrl:
-      "mailto:careers@sahelcp.com?subject=Sahel%20Capital%20Graduate%20Program",
+    applyUrl: "https://sahelcapital.com/careers/",
     sourceUrl: "https://sahelcapital.com/careers/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
@@ -2802,36 +2801,6 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 
   // ── V2 PROGRAMMES ─────────────────────────────────────────────────────────
 
-  {
-    id: "ACD-0170",
-    slug: "vacation-analyst-nedbank-cib-johannesburg",
-    title: "Vacation Analyst 1",
-    company: "Nedbank Corporate and Investment Banking",
-    companyInitials: "Ne",
-    logoUrl: "/logos/nedbank-logo-png-transparent.png",
-    boardSection: "Programmes",
-    roleType: "Investment Banking & Advisory",
-    experienceBucket: "Intern / Graduate",
-    city: "Johannesburg",
-    country: "South Africa",
-    region: "Southern Africa",
-    locationDisplay: "Johannesburg, South Africa",
-    language: "English",
-    languageTags: ["English"],
-    summary:
-      "Nedbank CIB vacation-analyst programme providing exposure to investment research, quantitative and qualitative analysis, investment recommendations and fund and investment performance work.",
-    requirements: [
-      "3rd-year undergraduate, honours student or candidate currently pursuing a full-time master's degree; South African citizenship required",
-    ],
-    applyUrl:
-      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
-    sourceUrl:
-      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
-    sourceType: "Official ATS",
-    applyButtonText: "Apply on company site",
-    lastChecked: "26 Aug 2026",
-    status: "Active",
-  },
   {
     id: "ACD-0178",
     slug: "charge-investissement-junior-ip-abidjan",
