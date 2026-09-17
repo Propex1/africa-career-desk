@@ -1,6 +1,7 @@
 ﻿import type { Opportunity, RoleType } from "@/types";
 
 import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
+import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
 import { sortByFirstPublication } from "@/lib/opportunity-publication";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
@@ -4130,6 +4131,8 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 export const OPPORTUNITIES: Opportunity[] = [
   ...EXISTING_OPPORTUNITIES,
   ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
+  // JOBS_BASELINE reverses source order; preserve the approved order within this publication.
+  ...[...APPROVED_JOBS_2026_09_16].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
