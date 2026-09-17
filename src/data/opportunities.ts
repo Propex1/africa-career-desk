@@ -4165,6 +4165,35 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0157",
   "ACD-0078",
   "ACD-0165",
+  // Evidence-based freshness removals approved by the editor on 17 Sep 2026.
+  // Evidence: docs/audits/2026-09-17-job-freshness-audit.md.
+  "ACD-0233",
+  "ACD-0226",
+  "ACD-0225",
+  "ACD-0224",
+  "ACD-0223",
+  "ACD-0222",
+  "ACD-0220",
+  "ACD-0219",
+  "ACD-0217",
+  "ACD-0215",
+  "ACD-0214",
+  "ACD-0213",
+  "ACD-0212",
+  "ACD-0210",
+  "ACD-0205",
+  "ACD-0208",
+  "ACD-0206",
+  "ACD-0149",
+  "ACD-0148",
+  "ACD-0141",
+  "ACD-0140",
+  // Additional editorial removals approved on 17 Sep 2026; closure remains unconfirmed.
+  "ACD-0218",
+  "ACD-0200",
+  "ACD-0142",
+  "ACD-0038",
+  "ACD-0008",
 ]);
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
