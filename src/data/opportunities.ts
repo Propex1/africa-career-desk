@@ -4225,7 +4225,7 @@ const ORDERED_JOBS_BASELINE = [
 ];
 const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
 // Preserve the editor-approved leading positions without changing first-publication dates.
-const PINNED_JOB_IDS = ["ACD-0260", "ACD-0263"];
+const PINNED_JOB_IDS = ["ACD-0266", "ACD-0260", "ACD-0263"];
 export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),

@@ -229,7 +229,7 @@ export default async function JobDetailPage({ params }: Props) {
             </span>
 
             {/* Details */}
-            <div className="mt-5 flex flex-col gap-[15px]">
+            <div className="mt-5 flex flex-col gap-5">
               <div>
                 <p className="m-0 text-[12px] tracking-[0.5px] uppercase text-acd-dimest font-semibold">
                   Source
@@ -237,11 +237,6 @@ export default async function JobDetailPage({ params }: Props) {
                 <p className="m-0 mt-1 text-[15px] text-acd-navy font-semibold">
                   {job.sourceType}
                 </p>
-                {job.sourceDescription && (
-                  <p className="m-0 mt-[6px] text-[13px] leading-snug text-acd-dim">
-                    {job.sourceDescription}
-                  </p>
-                )}
               </div>
               <div>
                 <p className="m-0 text-[12px] tracking-[0.5px] uppercase text-acd-dimest font-semibold">
