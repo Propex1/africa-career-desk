@@ -4194,6 +4194,15 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0142",
   "ACD-0038",
   "ACD-0008",
+  // Eight editorial removals approved on 20 Sep 2026.
+  "ACD-0240",
+  "ACD-0241",
+  "ACD-0243",
+  "ACD-0232",
+  "ACD-0209",
+  "ACD-0187",
+  "ACD-0018",
+  "ACD-0190",
 ]);
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
