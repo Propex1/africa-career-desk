@@ -2,6 +2,7 @@
 
 import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
 import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
+import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
 import { sortByFirstPublication } from "@/lib/opportunity-publication";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
@@ -4133,6 +4134,7 @@ export const OPPORTUNITIES: Opportunity[] = [
   ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
   // JOBS_BASELINE reverses source order; preserve the approved order within this publication.
   ...[...APPROVED_JOBS_2026_09_16].reverse(),
+  ...[...APPROVED_JOBS_2026_09_20].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
@@ -4203,6 +4205,9 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0187",
   "ACD-0018",
   "ACD-0190",
+  // Remaining removals approved in the 20 Sep 2026 editorial manifest.
+  "ACD-0242",
+  "ACD-0259",
 ]);
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
@@ -4218,7 +4223,13 @@ const ORDERED_JOBS_BASELINE = [
   ...JOBS_DISPLAY_PRIORITY.flatMap((slug) => JOBS_BASELINE.filter((job) => job.slug === slug)),
   ...JOBS_BASELINE.filter((job) => !JOBS_DISPLAY_PRIORITY.includes(job.slug)),
 ];
-export const JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
+const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
+// Preserve the editor-approved leading positions without changing first-publication dates.
+const PINNED_JOB_IDS = ["ACD-0260", "ACD-0263"];
+export const JOBS = [
+  ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
+  ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
+];
 export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes"));
 export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications"));
 
