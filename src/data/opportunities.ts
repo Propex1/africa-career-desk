@@ -3,6 +3,7 @@
 import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
 import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
 import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
+import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data/approved-content-2026-09-23";
 import { sortByFirstPublication } from "@/lib/opportunity-publication";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
@@ -4130,11 +4131,15 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 export const OPPORTUNITIES: Opportunity[] = [
-  ...EXISTING_OPPORTUNITIES,
+  ...EXISTING_OPPORTUNITIES.map((opportunity) => {
+    const refreshed = REACTIVATED_JOBS_2026_09_23.find((job) => job.id === opportunity.id);
+    return refreshed ? { ...opportunity, ...refreshed, publishedAt: opportunity.publishedAt } : opportunity;
+  }),
   ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
   // JOBS_BASELINE reverses source order; preserve the approved order within this publication.
   ...[...APPROVED_JOBS_2026_09_16].reverse(),
   ...[...APPROVED_JOBS_2026_09_20].reverse(),
+  ...[...APPROVED_CONTENT_2026_09_23].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
@@ -4155,7 +4160,7 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0201",
   "ACD-0202",
   "ACD-0203",
-  "ACD-0139",
+  // ACD-0139 was explicitly approved for reactivation on 23 Sep 2026.
   "ACD-0162",
   "ACD-0167",
   "ACD-0168",
@@ -4208,6 +4213,13 @@ const REMOVED_JOB_IDS = new Set([
   // Remaining removals approved in the 20 Sep 2026 editorial manifest.
   "ACD-0242",
   "ACD-0259",
+  // Confirmed expired removals approved in the 23 Sep 2026 editorial manifest.
+  "ACD-0239",
+  "ACD-0255",
+  "ACD-0256",
+  // Additional deadline-expired removals approved by the editor on 24 Sep 2026.
+  "ACD-0244",
+  "ACD-0249",
 ]);
 
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.

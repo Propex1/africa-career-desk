@@ -48,9 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Programmes and Open Applications use outbound cards, not Job detail routes.
   const listedJobIds = new Set(JOBS.map((job) => job.id));
   const opportunityPages: MetadataRoute.Sitemap = OPPORTUNITIES.filter(
-    (opp) => opp.boardSection !== "Jobs" || listedJobIds.has(opp.id)
+    (opp) => opp.boardSection === "Jobs" && listedJobIds.has(opp.id)
   ).map((opp) => ({
     url: `${BASE}/jobs/${opp.slug}/`,
     lastModified: parseLastChecked(opp.lastChecked),
