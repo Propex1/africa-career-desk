@@ -4128,6 +4128,53 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     lastChecked: "10 Sep 2026",
     status: "Active",
   },
+  {
+    "id": "ACD-0292",
+    "slug": "chargee-programme-acceleration-ip-abidjan",
+    "title": "Chargé.e de Programme Accélération",
+    "company": "I&P Accélération (Investisseurs & Partenaires)",
+    "companyInitials": "IP",
+    "logoUrl": "/logos/ip.png",
+    "boardSection": "Jobs",
+    "roleType": "Climate & Impact Investing",
+    "experienceBucket": "Mid-level",
+    "city": "Abidjan",
+    "country": "Côte d'Ivoire",
+    "region": "West Africa",
+    "locationDisplay": "Abidjan, Côte d’Ivoire",
+    "language": "French and English",
+    "languageTags": [
+      "French",
+      "English"
+    ],
+    "deadlineDisplay": "30 Nov 2026",
+    "summary": "Coordinate impact-focused acceleration programmes supporting African startups and SMEs as they prepare for investment.",
+    "aboutRole": "Report to the Head of Acceleration Programmes, coordinating delivery, donor relationships and impact reporting across existing and new programmes.",
+    "responsibilities": [
+      "Track programme objectives, seed-financing disbursements and technical assistance.",
+      "Monitor budgets, grant agreements and company performance.",
+      "Coordinate donor reporting and steering committees in French and English.",
+      "Share sector knowledge and support new programme development."
+    ],
+    "requirements": [
+      "BAC+4/5 business or engineering qualification; entrepreneurship, finance, management or strategy preferred.",
+      "At least five years in SME support, SME financing or donor-funded development programmes.",
+      "Several years of professional or personal experience in Africa.",
+      "Fluent French, strong professional English, project management and financial-analysis skills."
+    ],
+    "niceToHave": [
+      "Knowledge of climate and green sectors."
+    ],
+    "applicationNotes": "Full-time permanent contract (CDI), starting from November 2026; four to six international trips annually. Email a CV and cover letter by 30 November to recrutement@ietp.com, b.adolehoume@ietp.com and r.dumont@ietp.com. Subject: “Chargé(e) de programme accélération (F/H)”.",
+    "sourceDescription": "Official vacancy and recruitment board checked 25 Sep 2026. Employer posting date: 24 Sep 2026. No requisition number stated. Classification reflects impact-programme delivery; this is a staff vacancy, not an early-career programme.",
+    "applyUrl": "https://www.ietp.com/en/content/chargee-de-programme-acceleration-abidjan",
+    "sourceUrl": "https://www.ietp.com/en/content/chargee-de-programme-acceleration-abidjan",
+    "sourceType": "Company website",
+    "applyButtonText": "View role and apply",
+    "publishedAt": "2026-09-25",
+    "lastChecked": "25 Sep 2026",
+    "status": "Active"
+  },
 ];
 
 export const OPPORTUNITIES: Opportunity[] = [
@@ -4237,7 +4284,7 @@ const ORDERED_JOBS_BASELINE = [
 ];
 const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
 // Preserve the editor-approved leading positions without changing first-publication dates.
-const PINNED_JOB_IDS = ["ACD-0266", "ACD-0260", "ACD-0263"];
+const PINNED_JOB_IDS = ["ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263"];
 export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
