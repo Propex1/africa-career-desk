@@ -1,0 +1,72 @@
+name: Daily production freshness
+
+on:
+  schedule:
+    - cron: '17 1 * * *' # Daily at 01:17 UTC; avoids the busiest minute.
+  workflow_dispatch:
+
+# No checkout, repository writes, package installation or editorial commands.
+permissions: {}
+
+concurrency:
+  group: acd-production-freshness
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: >-
+      vars.ACD_DAILY_FRESHNESS_ENABLED == 'true' &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Request a fresh production build
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          node <<'NODE'
+          const { setTimeout: delay } = require('node:timers/promises');
+
+          async function refresh() {
+            let hook;
+            try { hook = new URL(process.env.VERCEL_DEPLOY_HOOK_URL); }
+            catch { throw new Error('Configure the VERCEL_DEPLOY_HOOK_URL Actions secret.'); }
+
+            // Bind this automation to ACD's existing Vercel project.
+            if (hook.origin !== 'https://api.vercel.com' || hook.username || hook.password || hook.hash ||
+                !/^\/v1\/integrations\/deploy\/prj_0sk1RDyLWr9wAwHT4nVJR58MiFoQ\/[A-Za-z0-9_-]+$/.test(hook.pathname)) {
+              throw new Error('Expected an ACD Vercel Deploy Hook URL.');
+            }
+            hook.search = '?buildCache=false';
+
+            for (let attempt = 1; attempt <= 3; attempt++) {
+              let response;
+              try {
+                response = await fetch(hook, {
+                  method: 'POST', redirect: 'error', signal: AbortSignal.timeout(20000),
+                });
+              } catch {
+                if (attempt === 3) throw new Error('Deploy Hook request failed after three attempts.');
+                await delay(5000);
+                continue;
+              }
+              if ((response.status === 429 || response.status >= 500) && attempt < 3) {
+                await delay(5000);
+                continue;
+              }
+              if (!response.ok) throw new Error(`Deploy Hook returned HTTP ${response.status}.`);
+              const result = await response.json().catch(() => null);
+              if (!result?.job?.id || !['PENDING', 'RUNNING', 'SUCCEEDED'].includes(result.job.state)) {
+                throw new Error('Vercel did not acknowledge a deployment job.');
+              }
+              console.log('Rebuild accepted. Confirm production build success in the Vercel dashboard.');
+              return;
+            }
+          }
+
+          refresh().catch((error) => {
+            // Never print the secret URL, provider body or raw network exception.
+            console.error(error.message);
+            process.exitCode = 1;
+          });
+          NODE

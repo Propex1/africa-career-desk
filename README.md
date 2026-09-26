@@ -87,7 +87,7 @@ ACD publication date and must never be copied into `employerPostedAt`.
 - During publication preparation, set `publishedAt` once to the actual ACD publication day (`YYYY-MM-DD`) using `withFirstPublicationDate`. Never replace an existing value when editing, rechecking or correcting a listing. The public listings sort dated entries newest first, preserve stable same-date/source order, and show a `New` badge for the first seven calendar days only.
 - Keep every removed job record in the static `OPPORTUNITIES` collection and its ID in `REMOVED_JOB_IDS`. The derived `publicationStatus` and `lifecycleStatus` distinguish live, needs-verification, and closed records. A passed or unparseable deadline without verified hard-deadline provenance requests verification; it does not automatically remove a role from `JOBS`.
 - Automatic deadline expiry is allowed only for IDs in the verified hard-deadline evidence map in `src/data/opportunities.ts`. The stated deadline date is inclusive through 23:59:59 UTC; expiry starts on the following UTC calendar date. A deadline display string or normalized date without verified employer/official-ATS provenance does not expire a job. A newer verified extension replaces the current evidence-map entry.
-- Because the public site is statically pre-rendered, the expiry projection changes on the next production build/deployment after the UTC deadline date, not through a runtime timer. Schedule the normal static build/deploy process to run daily if expiry must be reflected promptly.
+- Because the public site is statically pre-rendered, the expiry projection changes on the next production build/deployment after the UTC deadline date, not through a runtime timer. The opt-in [daily production freshness workflow](docs/production-freshness.md) requests a rebuild at 01:17 UTC once configured.
 - The local ignored SQLite database is a review aid, not the authoritative public history. Version-controlled opportunity records and the expiry audit preserve the checked-in publication history; do not delete removed records to clean the live board.
 
 The R1 reconciliation combines the approved editorial history through `f0dade0`
@@ -105,6 +105,9 @@ After editing, run `npm run build` to confirm TypeScript is clean and all 48+ pa
 ## Deploy to Vercel
 
 This is a static Next.js site. No server or database is required.
+
+For automatic expiry updates, configure [daily production freshness](docs/production-freshness.md).
+It rebuilds the approved production Git branch; it never runs discovery or publication tooling.
 
 **Steps:**
 
@@ -147,7 +150,7 @@ Add a new newsletter or alerts component later once an email provider is selecte
 
 | | |
 |---|---|
-| Framework | Next.js 16.2.9 (App Router, static export) |
+| Framework | Next.js 16.2.9 (App Router, pre-rendered pages) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 (CSS-based config via `@theme`) |
 | Fonts | Newsreader (serif) + IBM Plex Sans (sans) via `next/font/google` |
