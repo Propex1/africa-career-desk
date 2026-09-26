@@ -45,10 +45,13 @@ export default function LogoContainer({
   // Intrinsic hint for Next.js image optimisation — use the largest display size
   const intrinsicW = size === "sm" ? 62 : size === "lg" ? 104 : 84;
   const intrinsicH = size === "sm" ? 62 : size === "lg" ? 72 : 84;
+  const frameCls = logoUrl === "/logos/bii.svg"
+    ? "border-transparent bg-transparent"
+    : "border-[#ECEDE6] bg-acd-logo-bg";
 
   return (
     <div
-      className={`${containerCls} border border-[#ECEDE6] bg-acd-logo-bg flex items-center justify-center shrink-0 overflow-hidden font-serif font-semibold tracking-[0.3px] text-acd-green-mid`}
+      className={`${containerCls} border ${frameCls} flex items-center justify-center shrink-0 overflow-hidden font-serif font-semibold tracking-[0.3px] text-acd-green-mid`}
     >
       {logoUrl && !imgError ? (
         <Image

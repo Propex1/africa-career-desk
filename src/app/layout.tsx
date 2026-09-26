@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DemoBanner from "@/components/DemoBanner";
+import { ACD_SITE_URL } from "@/lib/seo";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(ACD_SITE_URL),
   title: "Africa Career Desk",
   description:
     "Curated Africa-focused jobs, internships and programmes in finance, investment, infrastructure, climate, strategy and venture capital.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import OpenAppCard from "@/components/OpenAppCard";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { OPEN_APPLICATIONS } from "@/data/opportunities";
+import { canonicalPath } from "@/lib/seo";
 
 const OPEN_APPLICATIONS_DESCRIPTION =
   "Discover official open application channels and talent pipelines for Africa-focused roles in private equity, infrastructure, DFI, climate, VC and strategy.";
@@ -9,6 +10,7 @@ const OPEN_APPLICATIONS_DESCRIPTION =
 export const metadata: Metadata = {
   title: "Open Applications | Africa Career Desk",
   description: OPEN_APPLICATIONS_DESCRIPTION,
+  alternates: { canonical: canonicalPath("/open-applications/") },
   openGraph: {
     siteName: "Africa Career Desk",
     type: "website",

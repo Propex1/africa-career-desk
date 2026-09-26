@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NO_INDEX_ROBOTS } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Subscription confirmed | Africa Career Desk",
   description: "Your Africa Career Desk newsletter subscription is confirmed.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  robots: NO_INDEX_ROBOTS,
 };
 
 export default function NewsletterConfirmedPage() {

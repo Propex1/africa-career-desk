@@ -52,6 +52,11 @@ Each entry follows the `Opportunity` type defined in `src/types/index.ts`.
 | `lastChecked` | Date string, e.g. `"23 Jun 2026"` |
 | `status` | Always `"Active"` |
 
+The public projection resolves `employerId` from exact labels in
+`src/data/employer-identities.ts`. Unresolved or combined employer labels stay
+unmapped; do not force a parent/subsidiary identity. `publishedAt` remains the
+ACD publication date and must never be copied into `employerPostedAt`.
+
 **Optional fields — only include when clean and verified:**
 
 | Field | Notes |
@@ -64,6 +69,11 @@ Each entry follows the `Opportunity` type defined in `src/types/index.ts`.
 | `country` | Omit if the role is regional/remote |
 | `region` | One of the values used in the existing data |
 | `logoUrl` | Company logo URL. If omitted, `companyInitials` is shown instead. |
+| `employerPostedAt` | Verified employer/source posting date as `YYYY-MM-DD`; omit unless the source states the date explicitly |
+| `deadlineDate` | Optional normalized deadline as `YYYY-MM-DD`; only exact, unambiguous `deadlineDisplay` dates are normalized |
+| `locations` | Optional array with `city`, `country`, `region`, or `multi_market` scope; do not infer a work location from employer headquarters |
+| `workArrangement` | Optional verified `onsite`, `hybrid`, or `remote` value |
+| `employmentType` | Optional verified controlled value such as `full-time`, `contract`, or `internship`; retain source wording in `employmentTypeDisplay` when useful |
 
 **Public copy rules:**
 - Never show salary, N/A, Unknown, or empty placeholders.
@@ -75,6 +85,18 @@ Each entry follows the `Opportunity` type defined in `src/types/index.ts`.
 - For Open Applications, make the primary action the official webpage containing the application instructions whenever one exists. Mention the official email address in the copy when relevant; use a `mailto:` action only when no official instructions webpage is available, and state that limitation clearly.
 - For Jobs and Programmes, click through the employer's careers index to the individual official listing before publishing. Use that role-specific page for the application URL, factual source, description, responsibilities, requirements, contract type and deadline. A generic careers or vacancies index does not satisfy publication readiness; if no individual page exists, record that limitation instead of presenting the index as a direct listing.
 - During publication preparation, set `publishedAt` once to the actual ACD publication day (`YYYY-MM-DD`) using `withFirstPublicationDate`. Never replace an existing value when editing, rechecking or correcting a listing. The public listings sort dated entries newest first, preserve stable same-date/source order, and show a `New` badge for the first seven calendar days only.
+- Keep every removed job record in the static `OPPORTUNITIES` collection and its ID in `REMOVED_JOB_IDS`. The derived `publicationStatus` and `lifecycleStatus` distinguish live, needs-verification, and closed records. A passed or unparseable deadline without verified hard-deadline provenance requests verification; it does not automatically remove a role from `JOBS`.
+- Automatic deadline expiry is allowed only for IDs in the verified hard-deadline evidence map in `src/data/opportunities.ts`. The stated deadline date is inclusive through 23:59:59 UTC; expiry starts on the following UTC calendar date. A deadline display string or normalized date without verified employer/official-ATS provenance does not expire a job. A newer verified extension replaces the current evidence-map entry.
+- Because the public site is statically pre-rendered, the expiry projection changes on the next production build/deployment after the UTC deadline date, not through a runtime timer. Schedule the normal static build/deploy process to run daily if expiry must be reflected promptly.
+- The local ignored SQLite database is a review aid, not the authoritative public history. Version-controlled opportunity records and the expiry audit preserve the checked-in publication history; do not delete removed records to clean the live board.
+
+The R1 reconciliation combines the approved editorial history through `f0dade0`
+with the accepted SEO/lifecycle work. See `docs/audits/2026-09-26-r1-reconciliation.json`
+for the commit ledger, stable-ID inventory and reviewed deadline evidence.
+ACD-0139's approved 23 September reactivation supersedes its earlier closure;
+ACD-0170 remains historical but is excluded from live Programmes. JobPosting
+`validThrough` uses the same verified deadline provenance gate as automatic expiry.
+Run `npm run acd:test` for the discovery, SEO, category and lifecycle suites together.
 
 After editing, run `npm run build` to confirm TypeScript is clean and all 48+ pages pre-render.
 

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BeehiivNewsletterSection from "@/components/BeehiivNewsletterSection";
 import { JOBS } from "@/data/opportunities";
+import { canonicalPath } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About | Africa Career Desk",
   description:
     "Africa Career Desk is a curated discovery platform for high-quality, Africa-focused roles in finance, investment, infrastructure, private capital, venture capital, climate finance and strategy.",
+  alternates: { canonical: canonicalPath("/about/") },
 };
 
 const FOCUS_AREAS = [

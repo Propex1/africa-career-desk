@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ProgrammeCard from "@/components/ProgrammeCard";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { PROGRAMMES } from "@/data/opportunities";
+import { canonicalPath } from "@/lib/seo";
 
 const PROGRAMMES_DESCRIPTION =
   "Explore Africa-focused graduate programmes, fellowships, internships and early-career pathways in finance, investment, development finance, infrastructure and strategy.";
@@ -9,6 +10,7 @@ const PROGRAMMES_DESCRIPTION =
 export const metadata: Metadata = {
   title: "Programmes | Africa Career Desk",
   description: PROGRAMMES_DESCRIPTION,
+  alternates: { canonical: canonicalPath("/programmes/") },
   openGraph: {
     siteName: "Africa Career Desk",
     type: "website",

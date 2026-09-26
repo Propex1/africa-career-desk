@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JobsBoard from "@/components/JobsBoard";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
+import { canonicalPath } from "@/lib/seo";
 import {
   JOBS,
   JOB_REGIONS,
@@ -16,6 +17,7 @@ const HOME_DESCRIPTION =
 export const metadata: Metadata = {
   title: "Africa Career Desk | Curated Africa-Focused Career Opportunities",
   description: HOME_DESCRIPTION,
+  alternates: { canonical: canonicalPath("/") },
   openGraph: {
     siteName: "Africa Career Desk",
     type: "website",

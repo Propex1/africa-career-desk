@@ -1,6 +1,13 @@
 ﻿import type { Opportunity, RoleType } from "@/types";
 
 import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
+import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
+import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
+import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data/approved-content-2026-09-23";
+import { EMPLOYER_ID_BY_COMPANY } from "@/data/employer-identities";
+import { buildOpportunityProjection, getLiveJobs } from "@/lib/opportunity-data";
+import type { VerifiedOpportunityFields } from "@/lib/opportunity-data";
+import type { VerifiedDeadlineEvidence } from "@/types";
 import { sortByFirstPublication } from "@/lib/opportunity-publication";
 
 // To add a logo for an employer, place the file in public/logos/ and set:
@@ -9,6 +16,40 @@ import { sortByFirstPublication } from "@/lib/opportunity-publication";
 // Do not set logoUrl until the file exists in public/logos/.
 
 const EXISTING_OPPORTUNITIES: Opportunity[] = [
+  // Removed by approved commit 147c57b; retained here solely as historical data.
+  {
+    id: "ACD-0170",
+    slug: "vacation-analyst-nedbank-cib-johannesburg",
+    title: "Vacation Analyst 1",
+    company: "Nedbank Corporate and Investment Banking",
+    companyInitials: "Ne",
+    logoUrl: "/logos/nedbank-logo-png-transparent.png",
+    boardSection: "Programmes",
+    roleType: "Investment Banking & Advisory",
+    experienceBucket: "Intern / Graduate",
+    city: "Johannesburg",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Johannesburg, South Africa",
+    language: "English",
+    languageTags: ["English"],
+    summary:
+      "Nedbank CIB vacation-analyst programme providing exposure to investment research, quantitative and qualitative analysis, investment recommendations and fund and investment performance work.",
+    requirements: [
+      "3rd-year undergraduate, honours student or candidate currently pursuing a full-time master's degree; South African citizenship required",
+    ],
+    applyUrl:
+      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
+    sourceUrl:
+      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
+    sourceType: "Official ATS",
+    applyButtonText: "Apply on company site",
+    lastChecked: "26 Aug 2026",
+    status: "Active",
+    publicationStatus: "removed",
+    lifecycleStatus: "needs_verification",
+    lifecycleReason: "manual_removal",
+  },
   // ── JOBS ─────────────────────────────────────────────────────────────────
 
   {
@@ -985,8 +1026,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     languageTags: ["English"],
     summary:
       "15-month Sahel Capital graduate programme in Lagos for early-career ECOWAS investment professionals.",
-    applyUrl:
-      "mailto:careers@sahelcp.com?subject=Sahel%20Capital%20Graduate%20Program",
+    applyUrl: "https://sahelcapital.com/careers/",
     sourceUrl: "https://sahelcapital.com/careers/",
     sourceType: "Email application",
     applyButtonText: "Apply on company site",
@@ -2803,36 +2843,6 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   // ── V2 PROGRAMMES ─────────────────────────────────────────────────────────
 
   {
-    id: "ACD-0170",
-    slug: "vacation-analyst-nedbank-cib-johannesburg",
-    title: "Vacation Analyst 1",
-    company: "Nedbank Corporate and Investment Banking",
-    companyInitials: "Ne",
-    logoUrl: "/logos/nedbank-logo-png-transparent.png",
-    boardSection: "Programmes",
-    roleType: "Investment Banking & Advisory",
-    experienceBucket: "Intern / Graduate",
-    city: "Johannesburg",
-    country: "South Africa",
-    region: "Southern Africa",
-    locationDisplay: "Johannesburg, South Africa",
-    language: "English",
-    languageTags: ["English"],
-    summary:
-      "Nedbank CIB vacation-analyst programme providing exposure to investment research, quantitative and qualitative analysis, investment recommendations and fund and investment performance work.",
-    requirements: [
-      "3rd-year undergraduate, honours student or candidate currently pursuing a full-time master's degree; South African citizenship required",
-    ],
-    applyUrl:
-      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
-    sourceUrl:
-      "https://jobs.nedbank.co.za/job/Johannesburg-Vacation-Analyst-1/1421404633/",
-    sourceType: "Official ATS",
-    applyButtonText: "Apply on company site",
-    lastChecked: "26 Aug 2026",
-    status: "Active",
-  },
-  {
     id: "ACD-0178",
     slug: "charge-investissement-junior-ip-abidjan",
     title: "Chargé.e d'investissement junior – Abidjan",
@@ -2854,12 +2864,12 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
       "Master 2, engineering degree or US bachelor's; a first experience of at least 6 months in private equity, investment banking, audit or consulting is preferred",
     ],
     applyUrl:
-      "mailto:Recrutement.ci@ietp.com?subject=Charg%C3%A9.e%20d%27investissement%20junior%20-%20Abidjan",
+      "https://ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae",
     sourceUrl:
-      "https://www.ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae",
-    sourceType: "Email application",
+      "https://ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae",
+    sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "26 Aug 2026",
+    lastChecked: "10 Sep 2026",
     status: "Active",
   },
 
@@ -3732,16 +3742,494 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     id: "ACD-0208", slug: "head-credit-origination-dbsa-midrand", title: "Head: Credit Origination", company: "Development Bank of Southern Africa (DBSA)", companyInitials: "DB", logoUrl: "/logos/dbsa.svg", boardSection: "Jobs", roleType: "Legal, Risk & Compliance", experienceBucket: "Leadership", city: "Midrand", country: "South Africa", region: "Southern Africa", locationDisplay: "Midrand, Gauteng, South Africa", deadlineDisplay: "9 Sep 2026",
     summary: "Lead DBSA's credit origination and structuring for complex African infrastructure and public-sector transactions.", aboutRole: "DBSA is recruiting a Head of Credit Origination to lead the assessment and structuring of complex credit transactions across infrastructure, sovereign, sub-sovereign and public-sector investments in South Africa and the rest of Africa. The postholder will lead credit due diligence, financial modelling, risk mitigation, committee submissions, policy governance and a specialist credit-origination team.", responsibilities: ["Lead credit origination, assessment and transaction structuring.", "Oversee due diligence, financial modelling and risk-mitigation strategies.", "Lead the credit-origination unit and present recommendations to investment committees."], requirements: ["Postgraduate degree in finance, economics, accounting, credit or risk management, or related field.", "At least 12 years of relevant credit-risk, portfolio-monitoring or financial-analysis experience.", "At least five years of senior credit-risk leadership experience."], applicationNotes: "Permanent Midrand position. Reference DBS260824-1; apply before 9 Sep 2026.", sourceDescription: "Official DBSA vacancy DBS260824-1", applyUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1", sourceUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1", sourceType: "Official ATS", applyButtonText: "View role and apply", publishedAt: "2026-09-04", lastChecked: "4 Sep 2026", status: "Active",
   },
+  // 10 Sep 2026 publication: reverse storage order preserves the approved display order in JOBS_BASELINE.
+  {
+    id: "ACD-0233",
+    slug: "pmv-associate-isibaya-readvertisement-pic-pretoria",
+    title: "PMV Associate (Isibaya) — Readvertisement",
+    company: "Public Investment Corporation (PIC)",
+    companyInitials: "PIC",
+    logoUrl: "/logos/Public_Investment_Corporation_logo.svg",
+    boardSection: "Jobs",
+    roleType: "Private Equity, VC & Private Credit",
+    experienceBucket: "Associate",
+    city: "Pretoria",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Pretoria, Gauteng, South Africa",
+    deadlineDisplay: "11 Sep 2026",
+    summary:
+      "Manage and monitor unlisted investments within PIC's Isibaya platform, supporting investment performance, portfolio-company value creation and successful exits.",
+    aboutRole:
+      "PIC is recruiting a PMV Associate to maximise the value of assets under management through active portfolio monitoring and post-investment management. The role combines financial and credit analysis, portfolio actions and engagement with investee companies. This is the current readvertisement for reference PMVAI090226, grade D1–D5.",
+    responsibilities: [
+      "Develop post-investment plans and manage portfolio actions, including restructurings, follow-on investments and debt conversions.",
+      "Analyse financial and non-financial performance, monitor compliance and identify risks requiring remedial action.",
+      "Build relationships with investee companies, support value creation and prepare investment exit plans.",
+      "Prepare portfolio reports, financial models and returns and scenario analysis to support investment decisions.",
+    ],
+    requirements: [
+      "Relevant commerce or engineering degree, including finance or legal disciplines.",
+      "Four to five years of relevant unlisted-investment experience in deal making or advisory.",
+      "Investment and credit-risk assessment, financial analysis, investment analysis and financial modelling experience.",
+      "Negotiation, deal-structuring and post-investment portfolio-management skills.",
+      "FAIS RE5 certificate.",
+    ],
+    niceToHave: ["Relevant postgraduate degree, CA or CFA qualification."],
+    applicationNotes:
+      "Full-time role. Complete the official screening form and email your CV to recruitment6@pic.gov.za, quoting PMVAI090226 in the email subject. The form states that applications cannot be considered without the emailed CV. Apply by 11 Sep 2026.",
+    sourceDescription:
+      "Official PIC careers advert dated 4 Sep 2026 and its linked application form, reference PMVAI090226; both checked on 10 Sep 2026.",
+    applyUrl: "https://www.pic.gov.za/careers",
+    sourceUrl: "https://www.pic.gov.za/careers",
+    sourceType: "Company website",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0232",
+    slug: "fund-principal-property-deals-transactions-pic-pretoria",
+    title: "Fund Principal: Property Deals and Transactions",
+    company: "Public Investment Corporation (PIC)",
+    companyInitials: "PIC",
+    logoUrl: "/logos/Public_Investment_Corporation_logo.svg",
+    boardSection: "Jobs",
+    roleType: "Fund Management, Treasury & Investor Relations",
+    experienceBucket: "Senior",
+    city: "Pretoria",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Pretoria, South Africa",
+    deadlineDisplay: "19 Sep 2026",
+    summary:
+      "Lead PIC Properties' investment pipeline across property developments, acquisitions, disposals, debt, equity and indirect investments.",
+    aboutRole:
+      "PIC is seeking a Fund Principal to originate, structure and execute property transactions that support portfolio growth, rental income and investment returns. The role combines investment leadership, deal execution and oversight of opportunities within the existing property portfolio. Reference FP001; grade E4–F1.",
+    responsibilities: [
+      "Generate and oversee new property investment opportunities and evaluate acquisitions, disposals and value-creation options.",
+      "Structure equity and debt transactions and prepare committee reports and investment motivations.",
+      "Lead sales and acquisitions and close transactions in line with client mandates and portfolio objectives.",
+      "Build investment networks and maintain pipeline, board and transaction-status reporting.",
+    ],
+    requirements: [
+      "Honours degree or equivalent in finance, property or real estate, plus certification or a diploma in property law and sales.",
+      "Ten to twelve years of property investment and deal experience, including five years in senior management with direct reports.",
+      "Expertise in equity and debt structuring, financial modelling, corporate finance and property risk.",
+      "FAIS RE5 certificate, or ability to obtain it within six months of employment.",
+    ],
+    niceToHave: ["MSc in Real Estate, MBA, CA(SA) or CFA qualification."],
+    applicationNotes:
+      "Full-time role. Email a comprehensive CV to Recruitment4@pic.gov.za, quoting the position and reference FP001. Apply by 19 Sep 2026.",
+    sourceDescription:
+      "Official PIC careers advert dated 7 Sep 2026, reference FP001; deadline and email application instructions checked on 10 Sep 2026.",
+    applyUrl: "https://www.pic.gov.za/careers",
+    sourceUrl: "https://www.pic.gov.za/careers",
+    sourceType: "Company website",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0231",
+    slug: "portfolio-officer-fasa-ip",
+    title: "Portfolio Officer",
+    company: "FASA / Investisseurs & Partenaires (I&P)",
+    companyInitials: "IP",
+    logoUrl: "/logos/ip.png",
+    boardSection: "Jobs",
+    roleType: "Fund Management, Treasury & Investor Relations",
+    experienceBucket: "Mid-level",
+    region: "Pan-African",
+    locationDisplay: "Ghana / Kenya / Côte d’Ivoire / Senegal",
+    language: "English",
+    languageTags: ["English"],
+    summary:
+      "Support FASA's fund-of-funds portfolio through monitoring, financial analysis, reporting, governance and investment-process coordination across African fund managers.",
+    aboutRole:
+      "FASA and I&P are recruiting a Portfolio Officer to support the fund's financial and operational management. Reporting to the Finance & Operations Manager, the postholder will coordinate portfolio information, valuation methodology, treasury and governance processes. The role may be based in Ghana, Kenya, Côte d'Ivoire or Senegal.",
+    responsibilities: [
+      "Maintain monitoring frameworks, KPI tools and dashboards, and analyse financial information from fund managers.",
+      "Prepare periodic financial and narrative reports and governance materials.",
+      "Support accounting, treasury, capital drawdowns, compliance and KYC processes.",
+      "Maintain valuation methodology and fund-level risk registers, and coordinate with the investment team.",
+    ],
+    requirements: [
+      "Master's degree in finance, accounting, audit, international development finance or a related discipline.",
+      "Three to six years of relevant experience in fund operations, portfolio monitoring, financial management or donor compliance and reporting.",
+      "Professional English and strong Excel, Word and PowerPoint skills.",
+      "Strong organisational skills, attention to detail and discipline in managing operational processes.",
+    ],
+    niceToHave: ["Prior exposure to investment activities."],
+    applicationNotes:
+      "Full-time permanent contract (CDI). Send a CV of no more than two pages and a cover letter of no more than one page to recrutement@ietp.com and a.thirouin@ietp.com, with subject 'Portfolio Officer — FASA — LAST NAME'. The official vacancy page does not state a deadline.",
+    sourceDescription:
+      "Official I&P/FASA vacancy published on 7 Sep 2026; role and application instructions checked on 10 Sep 2026.",
+    applyUrl: "https://ietp.com/fr/content/fasa-portfolio-officer",
+    sourceUrl: "https://ietp.com/fr/content/fasa-portfolio-officer",
+    sourceType: "Company website",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0229",
+    slug: "esg-impact-officer-sawari-ventures-cairo",
+    title: "ESG & Impact Officer",
+    company: "Sawari Ventures",
+    companyInitials: "SV",
+    logoUrl: "/logos/sawari-ventures.png",
+    boardSection: "Jobs",
+    roleType: "Climate & Impact Investing",
+    city: "Cairo",
+    country: "Egypt",
+    region: "North Africa",
+    locationDisplay: "Cairo, Egypt",
+    summary:
+      "Support Sawari Ventures' impact strategy, monitoring and reporting, ESG work and development of its portfolio climate strategy in Cairo.",
+    aboutRole:
+      "Sawari Ventures is seeking an ESG & Impact Officer to help implement its impact strategy and strengthen ESG and climate work across its venture portfolio. The Cairo-based position supports impact monitoring, reporting and sustainable development.",
+    responsibilities: [
+      "Support implementation of the firm's impact strategy.",
+      "Contribute to impact monitoring and reporting.",
+      "Support ESG work and development of the firm's climate strategy.",
+    ],
+    requirements: ["Interest in sustainable development and impact investing."],
+    applicationNotes:
+      "Send your CV and cover letter to hr@sawariventures.com. The employer's hiring post does not specify a deadline, contract type, degree, years of experience or language requirements.",
+    sourceDescription:
+      "Official Sawari Ventures company hiring post on LinkedIn; Cairo location and email application instructions checked on 10 Sep 2026.",
+    applyUrl: "https://www.linkedin.com/posts/sawari-ventures_were-hiring-activity-7499815798564278272-pwmJ/",
+    sourceUrl: "https://eg.linkedin.com/company/sawari-ventures",
+    sourceType: "LinkedIn company post",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0228",
+    slug: "investment-principal-enza-capital-nairobi",
+    title: "Investment Principal",
+    company: "Enza Capital",
+    companyInitials: "EC",
+    logoUrl: "/logos/enza-capital.svg",
+    boardSection: "Jobs",
+    roleType: "Private Equity, VC & Private Credit",
+    experienceBucket: "Senior",
+    city: "Nairobi",
+    country: "Kenya",
+    region: "East Africa",
+    locationDisplay: "Nairobi, Kenya",
+    deadlineDisplay: "28 Sep 2026",
+    summary:
+      "Lead investments from origination through closing, support portfolio companies and help build Enza Capital as it launches its AI Africa Fund.",
+    aboutRole:
+      "Enza Capital is recruiting an Investment Principal to lead transactions and build relationships with founders and co-investors. The role combines investment leadership, portfolio-company support and firm development across African technology businesses, including new AI Africa Fund investments.",
+    responsibilities: [
+      "Originate opportunities and build a strong founder, investor and market network.",
+      "Lead due diligence, investment structuring, negotiations and transaction closing.",
+      "Support portfolio strategy, hiring, market entry, fundraising and exits, including board-level engagement.",
+      "Contribute to investment theses, team development and the firm's strategy.",
+    ],
+    requirements: [
+      "At least six years of relevant investment experience in venture capital, private equity, hedge funds, advisory or investment banking.",
+      "Experience making direct investments in privately held African businesses and serving as a board observer or director.",
+      "Operating experience in an African venture-backed technology company.",
+      "Strong transaction leadership, investment judgement and understanding of product and technology.",
+    ],
+    applicationNotes:
+      "Full-time permanent role, based in Nairobi. Apply through Enza's official Principal application form by 28 Sep 2026 and provide the requested work-authorisation or relocation information. Enza asks candidates to apply for only one of its posted roles.",
+    sourceDescription:
+      "Official Enza careers page, Principal job description and linked first-party application form, checked on 10 Sep 2026. Employer posting date: 9 Sep 2026.",
+    applyUrl: "https://enza.capital/careers",
+    sourceUrl: "https://enza.capital/careers",
+    sourceType: "Company website",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0227",
+    slug: "investment-associate-enza-capital-nairobi",
+    title: "Investment Associate",
+    company: "Enza Capital",
+    companyInitials: "EC",
+    logoUrl: "/logos/enza-capital.svg",
+    boardSection: "Jobs",
+    roleType: "Private Equity, VC & Private Credit",
+    experienceBucket: "Associate",
+    city: "Nairobi",
+    country: "Kenya",
+    region: "East Africa",
+    locationDisplay: "Nairobi, Kenya",
+    deadlineDisplay: "28 Sep 2026",
+    summary:
+      "Support Enza Capital's investment pipeline, analysis, Investment Committee work and portfolio companies across Funds I and II and the new AI Africa Fund.",
+    aboutRole:
+      "Enza Capital is recruiting an Investment Associate to evaluate African technology businesses and support investments from first engagement through closing. The role combines sourcing and investment research with portfolio-company support as the firm expands its technology and AI investing activity.",
+    responsibilities: [
+      "Cover the investment pipeline, engage with founders and develop market and sector research.",
+      "Prepare financial and business analysis and materials for Investment Committee discussions.",
+      "Support due diligence, transaction execution and the development of investment theses.",
+      "Work with portfolio companies on reporting, performance analysis and operational support.",
+    ],
+    requirements: [
+      "At least three years of relevant venture-capital, private-equity, investment-banking or consulting experience, or an operating role in African technology.",
+      "Strong research, analytical and communication skills, with sound investment judgement.",
+      "Interest in technology and AI in Africa, a collaborative approach and willingness to travel.",
+    ],
+    applicationNotes:
+      "Full-time permanent role, based in Nairobi. Apply through Enza's official Associate application form by 28 Sep 2026 and provide the requested work-authorisation or relocation information. Enza asks candidates to apply for only one of its posted roles.",
+    sourceDescription:
+      "Official Enza careers page, Associate job description and linked first-party application form, checked on 10 Sep 2026. Employer posting date: 9 Sep 2026.",
+    applyUrl: "https://enza.capital/careers",
+    sourceUrl: "https://enza.capital/careers",
+    sourceType: "Company website",
+    applyButtonText: "View role and apply",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+
+  // Programme additions approved for publication on 10 Sep 2026.
+  {
+    id: "ACD-0234",
+    slug: "actis-associate-programme-global-growth-markets",
+    title: "Actis — Associate Programme",
+    company: "Actis",
+    companyInitials: "Ac",
+    logoUrl: "/logos/actis-ga.png",
+    boardSection: "Programmes",
+    roleType: "Infrastructure & Project Finance",
+    experienceBucket: "Associate",
+    region: "Global",
+    locationDisplay: "Global / Growth Markets",
+    summary:
+      "Actis' primary route for junior Investment Professionals combines permanent and Summer Associates in one annual class, with structured training, mentoring and exposure to live investments.",
+    aboutRole:
+      "Associates gain experience in infrastructure investments, investment strategies and new projects across Actis' global growth markets. The Summer Associate route lasts 10 weeks and may lead to a permanent offer the following year.",
+    requirements: [
+      "First-year MBA students are eligible for Summer Associate roles.",
+      "Permanent Associate roles welcome second-year MBAs and the wider candidate market; an MBA is not a prerequisite.",
+    ],
+    applicationNotes:
+      "Recurring Associate Programme. Consult Actis' careers page and linked jobs board for current recruitment opportunities. The programme page does not state an application deadline.",
+    sourceDescription:
+      "Official Actis careers page describing the annual Associate Programme and Summer Associate route, checked on 10 Sep 2026.",
+    applyUrl: "https://www.act.is/people/careers/",
+    sourceUrl: "https://www.act.is/people/careers/",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0235",
+    slug: "world-bank-group-young-professionals-program-washington-global",
+    title: "World Bank Group — Young Professionals Program",
+    company: "World Bank Group",
+    companyInitials: "WB",
+    logoUrl: "/logos/world-bank-group.svg",
+    boardSection: "Programmes",
+    roleType: "Development Finance & Multilaterals",
+    city: "Washington, DC",
+    country: "United States",
+    region: "Global",
+    locationDisplay: "Washington, DC / Global",
+    deadlineDisplay: "30 Sep 2026, 23:59 UTC",
+    summary:
+      "A two-year global development programme with rotations across the World Bank, IFC and MIGA, including opportunities in investment, infrastructure finance, climate and other development sectors.",
+    aboutRole:
+      "The programme starts in Washington, DC and includes three eight-month rotations, with cross-institutional experience and at least one country-office rotation. Participants receive leadership and technical training, coaching and mentorship.",
+    requirements: [
+      "A graduate-level degree or higher in a relevant field, completed before the September start date.",
+      "Two to six years of relevant professional experience, subject to the official eligibility rules.",
+      "Excellent spoken and written English.",
+    ],
+    applicationNotes:
+      "The official programme page states applications close on 30 Sep 2026 at 23:59 UTC for the cohort starting in September 2027. Use the World Bank Group portal to select a Young Professional opening and review the full eligibility rules.",
+    sourceDescription:
+      "Official World Bank Group YPP information page and careers portal, including current Young Professional openings, checked on 10 Sep 2026.",
+    applyUrl: "https://worldbankgroup.csod.com/ux/ats/careersite/1/home?c=worldbankgroup&country=us",
+    sourceUrl: "https://www.worldbank.org/ext/en/careers/talent-programs/young-professionals-program",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0236",
+    slug: "symbiotics-markets-team-internship-cape-town",
+    title: "Symbiotics — Markets Team Internship, Cape Town",
+    company: "Symbiotics",
+    companyInitials: "Sy",
+    logoUrl: "/logos/symbiotics.svg",
+    boardSection: "Programmes",
+    roleType: "Climate & Impact Investing",
+    experienceBucket: "Intern / Graduate",
+    city: "Cape Town",
+    country: "South Africa",
+    region: "Southern Africa",
+    locationDisplay: "Cape Town, South Africa",
+    summary:
+      "Three-month internship supporting Symbiotics' Markets Team in Cape Town with research, investee analysis and Investment Committee preparation for impact investing in Sub-Saharan Africa.",
+    aboutRole:
+      "The intern supports country and market research, potential investee analysis, financial statement analysis, administrative work and anti-money-laundering reporting, working with the Sub-Saharan Associate and Regional Manager.",
+    requirements: [
+      "Enrolment in a degree programme in South Africa: a master's in Economics, Development Finance, Accounting or equivalent.",
+      "French knowledge, including work with financial statements published in French.",
+      "Interest in microfinance, impact investing and development finance.",
+    ],
+    applicationNotes:
+      "The official vacancy confirms a three-month internship and does not publish a deadline. Its application button opens a personal-details form.",
+    sourceDescription:
+      "Official Symbiotics recruitment portal; vacancy details and application form checked on 10 Sep 2026.",
+    applyUrl: "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=71205f72-e4be-4fdc-a2b1-c553eb858335",
+    sourceUrl: "https://careers.symbioticsgroup.com/vacancies/apply_process/?id=71205f72-e4be-4fdc-a2b1-c553eb858335",
+    sourceType: "Official ATS",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0237",
+    slug: "chapel-hill-denham-internship-programme-lagos",
+    title: "Chapel Hill Denham — Internship Programme",
+    company: "Chapel Hill Denham",
+    companyInitials: "CH",
+    logoUrl: "/logos/chapel-hill-denham.png",
+    boardSection: "Programmes",
+    roleType: "Investment Banking & Advisory",
+    experienceBucket: "Intern / Graduate",
+    city: "Lagos",
+    country: "Nigeria",
+    region: "West Africa",
+    locationDisplay: "Lagos, Nigeria",
+    summary:
+      "An evergreen internship pathway for students and graduates across Investment Banking, Investment Management, Securities Trading, Sales and Research.",
+    aboutRole:
+      "Interns receive meaningful responsibilities and practical exposure to Chapel Hill Denham's investment businesses, working with experienced professionals to bridge academic learning and employment.",
+    requirements: [
+      "Students and graduates from diverse academic backgrounds.",
+    ],
+    applicationNotes:
+      "Evergreen internship pathway; the official page does not specify a cohort, duration or application deadline. Its Apply Now link gives hrgroup@chapelhilldenham.com.",
+    sourceDescription: "Official Chapel Hill Denham internships page and its application link, checked on 10 Sep 2026.",
+    applyUrl: "https://chapelhilldenham.com/careers/internships/",
+    sourceUrl: "https://chapelhilldenham.com/careers/internships/",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    id: "ACD-0238",
+    slug: "mckinsey-young-leaders-program-nairobi",
+    title: "McKinsey — Young Leaders Program",
+    company: "McKinsey & Company",
+    companyInitials: "Mc",
+    logoUrl: "/logos/mckinsey.svg",
+    boardSection: "Programmes",
+    roleType: "Corporate Development, M&A & Strategy",
+    experienceBucket: "Intern / Graduate",
+    city: "Nairobi",
+    country: "Kenya",
+    region: "East Africa",
+    locationDisplay: "Nairobi, Kenya",
+    summary:
+      "A two-year consulting programme in Nairobi combining client projects with structured training, coaching and mentorship. High-performing fellows can progress to Business Analyst roles.",
+    aboutRole:
+      "The underlying role is Fellow — Young Leaders Program (15122). Fellows work on analysis, problem solving, client recommendations and implementation alongside consulting teams. The programme develops young local Kenyan talent.",
+    requirements: [
+      "Undergraduate or master's degree with an excellent academic record.",
+      "Less than one year of continuous work experience in any industry.",
+      "Leadership, analytical problem-solving and collaboration skills, with effective communication in English.",
+    ],
+    applicationNotes:
+      "Submit a one-page CV showing cumulative university GPA or ranking and high-school mean grade through McKinsey's official recruitment system. No application deadline is stated.",
+    sourceDescription:
+      "Official McKinsey vacancy 15122 and its linked recruitment system checked on 10 Sep 2026. The vacancy data marks the role active and its application route offers registration and CV upload.",
+    applyUrl: "https://www.mckinsey.com/careers/search-jobs/jobs/fellow-youngleadersprogram-15122",
+    sourceUrl: "https://www.mckinsey.com/careers/search-jobs/jobs/fellow-youngleadersprogram-15122",
+    sourceType: "Company website",
+    applyButtonText: "View programme",
+    publishedAt: "2026-09-10",
+    lastChecked: "10 Sep 2026",
+    status: "Active",
+  },
+  {
+    "id": "ACD-0292",
+    "slug": "chargee-programme-acceleration-ip-abidjan",
+    "title": "Chargé.e de Programme Accélération",
+    "company": "I&P Accélération (Investisseurs & Partenaires)",
+    "companyInitials": "IP",
+    "logoUrl": "/logos/ip.png",
+    "boardSection": "Jobs",
+    "roleType": "Climate & Impact Investing",
+    "experienceBucket": "Mid-level",
+    "city": "Abidjan",
+    "country": "Côte d'Ivoire",
+    "region": "West Africa",
+    "locationDisplay": "Abidjan, Côte d’Ivoire",
+    "language": "French and English",
+    "languageTags": [
+      "French",
+      "English"
+    ],
+    "deadlineDisplay": "30 Nov 2026",
+    "summary": "Coordinate impact-focused acceleration programmes supporting African startups and SMEs as they prepare for investment.",
+    "aboutRole": "Report to the Head of Acceleration Programmes, coordinating delivery, donor relationships and impact reporting across existing and new programmes.",
+    "responsibilities": [
+      "Track programme objectives, seed-financing disbursements and technical assistance.",
+      "Monitor budgets, grant agreements and company performance.",
+      "Coordinate donor reporting and steering committees in French and English.",
+      "Share sector knowledge and support new programme development."
+    ],
+    "requirements": [
+      "BAC+4/5 business or engineering qualification; entrepreneurship, finance, management or strategy preferred.",
+      "At least five years in SME support, SME financing or donor-funded development programmes.",
+      "Several years of professional or personal experience in Africa.",
+      "Fluent French, strong professional English, project management and financial-analysis skills."
+    ],
+    "niceToHave": [
+      "Knowledge of climate and green sectors."
+    ],
+    "applicationNotes": "Full-time permanent contract (CDI), starting from November 2026; four to six international trips annually. Email a CV and cover letter by 30 November to recrutement@ietp.com, b.adolehoume@ietp.com and r.dumont@ietp.com. Subject: “Chargé(e) de programme accélération (F/H)”.",
+    "sourceDescription": "Official vacancy and recruitment board checked 25 Sep 2026. Employer posting date: 24 Sep 2026. No requisition number stated. Classification reflects impact-programme delivery; this is a staff vacancy, not an early-career programme.",
+    "applyUrl": "https://www.ietp.com/en/content/chargee-de-programme-acceleration-abidjan",
+    "sourceUrl": "https://www.ietp.com/en/content/chargee-de-programme-acceleration-abidjan",
+    "sourceType": "Company website",
+    "applyButtonText": "View role and apply",
+    "publishedAt": "2026-09-25",
+    "lastChecked": "25 Sep 2026",
+    "status": "Active"
+  },
 ];
 
-export const OPPORTUNITIES: Opportunity[] = [
-  ...EXISTING_OPPORTUNITIES,
+const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...EXISTING_OPPORTUNITIES.map((opportunity) => {
+    const refreshed = REACTIVATED_JOBS_2026_09_23.find((job) => job.id === opportunity.id);
+    return refreshed ? { ...opportunity, ...refreshed, publishedAt: opportunity.publishedAt } : opportunity;
+  }),
   ...BATCH_3_6_PREVIEW_OPPORTUNITIES,
+  // JOBS_BASELINE reverses source order; preserve the approved order within this publication.
+  ...[...APPROVED_JOBS_2026_09_16].reverse(),
+  ...[...APPROVED_JOBS_2026_09_20].reverse(),
+  ...[...APPROVED_CONTENT_2026_09_23].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
 // Evidence and approval: docs/audits/2026-09-09-job-expiry-audit.md.
-const REMOVED_JOB_IDS = new Set([
+export const REMOVED_JOB_IDS = new Set([
   "ACD-0060",
   "ACD-0143",
   "ACD-0144",
@@ -3757,7 +4245,7 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0201",
   "ACD-0202",
   "ACD-0203",
-  "ACD-0139",
+  // ACD-0139 was explicitly approved for reactivation on 23 Sep 2026.
   "ACD-0162",
   "ACD-0167",
   "ACD-0168",
@@ -3769,12 +4257,390 @@ const REMOVED_JOB_IDS = new Set([
   "ACD-0157",
   "ACD-0078",
   "ACD-0165",
+  // Evidence-based freshness removals approved by the editor on 17 Sep 2026.
+  // Evidence: docs/audits/2026-09-17-job-freshness-audit.md.
+  "ACD-0233",
+  "ACD-0226",
+  "ACD-0225",
+  "ACD-0224",
+  "ACD-0223",
+  "ACD-0222",
+  "ACD-0220",
+  "ACD-0219",
+  "ACD-0217",
+  "ACD-0215",
+  "ACD-0214",
+  "ACD-0213",
+  "ACD-0212",
+  "ACD-0210",
+  "ACD-0205",
+  "ACD-0208",
+  "ACD-0206",
+  "ACD-0149",
+  "ACD-0148",
+  "ACD-0141",
+  "ACD-0140",
+  // Additional editorial removals approved on 17 Sep 2026; closure remains unconfirmed.
+  "ACD-0218",
+  "ACD-0200",
+  "ACD-0142",
+  "ACD-0038",
+  "ACD-0008",
+  // Eight editorial removals approved on 20 Sep 2026.
+  "ACD-0240",
+  "ACD-0241",
+  "ACD-0243",
+  "ACD-0232",
+  "ACD-0209",
+  "ACD-0187",
+  "ACD-0018",
+  "ACD-0190",
+  // Remaining removals approved in the 20 Sep 2026 editorial manifest.
+  "ACD-0242",
+  "ACD-0259",
+  // Confirmed expired removals approved in the 23 Sep 2026 editorial manifest.
+  "ACD-0239",
+  "ACD-0255",
+  "ACD-0256",
+  // Additional deadline-expired removals approved by the editor on 24 Sep 2026.
+  "ACD-0244",
+  "ACD-0249",
 ]);
 
+const CONFIRMED_CLOSURES = {
+  // ACD-0139: the 9 Sep closure is superseded by the approved 23 Sep reactivation.
+  // Original closure evidence remains in docs/audits/2026-09-09-job-expiry-audit.*.
+  "ACD-0162": {
+    verifiedAt: "2026-09-09",
+    reason: "Official EBRD vacancy page stated that the position had been filled.",
+    evidence: "https://jobs.ebrd.com/job/Cairo-Associate-Director%2C-Deputy-Head-Egypt%2C-Financial-Institutions/1427528433/",
+  },
+  "ACD-0167": {
+    verifiedAt: "2026-09-09",
+    reason: "Official SmartRecruiters vacancy page stated that the job had expired.",
+    evidence: "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+  },
+  "ACD-0168": {
+    verifiedAt: "2026-09-09",
+    reason: "Official SmartRecruiters vacancy page stated that the job had expired.",
+    evidence: "https://jobs.smartrecruiters.com/StandardBankGroup/744000144717989-real-estate-equity-finance-and-investments-vice-president-investment-banking",
+  },
+  "ACD-0189": {
+    verifiedAt: "2026-09-09",
+    reason: "Official vacancy destination returned HTTP 410 and a role-unavailable page.",
+    evidence: "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+  },
+  "ACD-0199": {
+    verifiedAt: "2026-09-09",
+    reason: "Official EBRD vacancy page stated that the position had been filled.",
+    evidence: "https://jobs.ebrd.com/search//job/Dakar-Analyst%2C-ASB/1399851333/",
+  },
+  "ACD-0226": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"has either been closed or the job has been filled\"",
+    "evidence": "https://jobs.nedbank.co.za/job/Johannesburg-Chief-of-Staff/1433079633/"
+  },
+  "ACD-0225": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 10 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 12 result(s), none for R-15990452.",
+    "evidence": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Umhlanga/Senior-Valuer-CPF-Valuations-VP_R-15990452"
+  },
+  "ACD-0224": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 10 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 8 result(s), none for R-15990715-1.",
+    "evidence": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Manager_R-15990715-1"
+  },
+  "ACD-0223": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 10 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 0 result(s), none for R-15990716.",
+    "evidence": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Senior-Investment-Dealer_R-15990716"
+  },
+  "ACD-0222": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 10 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 0 result(s), none for R-15990717-1.",
+    "evidence": "https://absa.wd3.myworkdayjobs.com/en-US/ABSAcareersite/job/Investment-Dealer_R-15990717-1"
+  },
+  "ACD-0220": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 10 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 10 result(s), none for R-15990640.",
+    "evidence": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640"
+  },
+  "ACD-0219": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 9 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 31 result(s), none for JR-83521.",
+    "evidence": "https://oldmutual.wd3.myworkdayjobs.com/Old_Mutual_Careers/job/Harare/Investment-Analyst_JR-83521"
+  },
+  "ACD-0217": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"Sorry, this job has expired\"",
+    "evidence": "https://jobs.smartrecruiters.com/StandardBankGroup/744000146957239-vice-president-energy-infrastructure-investment-banking"
+  },
+  "ACD-0215": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official ATS: \"The page you are looking for doesn't exist.\" Current employer-board search for \"Debt Financing\" returns zero vacancies; requisition R50641 is absent. The displayed deadline is today (17 Sep), so a date-only assumption was not used.",
+    "evidence": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Lagos-Central/Debt-Financing-Solutions-Senior-Transactor_R50641"
+  },
+  "ACD-0214": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 12 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 0 result(s), none for R46553.",
+    "evidence": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Structurer_R46553"
+  },
+  "ACD-0213": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 12 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 0 result(s), none for R53087.",
+    "evidence": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Analyst--Real-Estate_R53087"
+  },
+  "ACD-0212": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Published ACD deadline: 12 Sep 2026. Official ATS: \"The page you are looking for doesn't exist.\" Complete current-board search returned 1 result(s), none for R53283.",
+    "evidence": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/TWC-Transactor_R53283"
+  },
+  "ACD-0210": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is not available.\" Its current official JobPosting metadata also gives ValidThrough=2026-09-08T23:59:59, now unambiguously in the past.",
+    "evidence": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10665?c=afd"
+  },
+  "ACD-0205": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is not available.\" Its current official JobPosting metadata also gives ValidThrough=2026-09-09T23:59:59, now unambiguously in the past.",
+    "evidence": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10644?c=afd&lang=en-US"
+  },
+  "ACD-0208": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"Closed and no longer receiving applications.\"",
+    "evidence": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1"
+  },
+  "ACD-0149": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is no longer available.\"",
+    "evidence": "https://apply.workable.com/afreximbank/j/2993C85B66/"
+  },
+  "ACD-0148": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is no longer available.\"",
+    "evidence": "https://apply.workable.com/afreximbank/j/10B4DBB343/"
+  },
+  "ACD-0141": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is no longer available.\"",
+    "evidence": "https://apply.workable.com/afreximbank/j/1518D569F4"
+  },
+  "ACD-0140": {
+    "verifiedAt": "2026-09-17",
+    "reason": "Official Apply page: \"This job is no longer available.\"",
+    "evidence": "https://apply.workable.com/afreximbank/j/4FBE8D147C/"
+  },
+} as const;
+
+const VERIFIED_HARD_DEADLINES: Readonly<Record<string, VerifiedDeadlineEvidence>> = {
+  "ACD-0227": {
+    "deadlineDate": "2026-09-28",
+    "authority": "employer",
+    "sourceUrl": "https://enza.capital/careers",
+    "verifiedAt": "2026-09-17",
+    "statement": "Official Enza careers page names the Investment Associate and Investment Principal roles and states: Applications close Monday, 28 September. Both employer-linked forms were checked. Evidence preserved in the 17 Sep freshness audit and R1 reconciliation audit."
+  },
+  "ACD-0228": {
+    "deadlineDate": "2026-09-28",
+    "authority": "employer",
+    "sourceUrl": "https://enza.capital/careers",
+    "verifiedAt": "2026-09-17",
+    "statement": "Official Enza careers page names the Investment Associate and Investment Principal roles and states: Applications close Monday, 28 September. Both employer-linked forms were checked. Evidence preserved in the 17 Sep freshness audit and R1 reconciliation audit."
+  },
+  "ACD-0254": {
+    "deadlineDate": "2026-10-01",
+    "authority": "employer",
+    "sourceUrl": "https://za.linkedin.com/jobs/view/senior-relationship-manager-metals-and-minerals-at-mcb-4463471428",
+    "verifiedAt": "2026-09-17",
+    "statement": "Official MCB employer advert 4463471428 for Senior Relationship Manager, Metals and Minerals states: Closing date for applications: 01 October 2026. Captured role-specific source text is preserved in the R1 reconciliation audit."
+  },
+  "ACD-0206": {
+    deadlineDate: "2026-09-15",
+    authority: "official_ats",
+    sourceUrl: "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1303",
+    verifiedAt: "2026-09-04",
+    statement: "Official requisition 1303. Apply before 15 Sep 2026.",
+  },
+  "ACD-0207": {
+    deadlineDate: "2026-09-25",
+    authority: "official_ats",
+    sourceUrl: "https://career2.successfactors.eu/career?career_company=ESATDB&career_ns=job_listing&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id=1302",
+    verifiedAt: "2026-09-04",
+    statement: "Official requisition 1302. Apply before 25 Sep 2026.",
+  },
+  "ACD-0208": {
+    deadlineDate: "2026-09-09",
+    authority: "official_ats",
+    sourceUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260824-1",
+    verifiedAt: "2026-09-04",
+    statement: "Reference DBS260824-1; apply before 9 Sep 2026.",
+  },
+  "ACD-0232": {
+    deadlineDate: "2026-09-19",
+    authority: "employer",
+    sourceUrl: "https://www.pic.gov.za/careers",
+    verifiedAt: "2026-09-10",
+    statement: "Official PIC advert, reference FP001; apply by 19 Sep 2026.",
+  },
+  "ACD-0233": {
+    deadlineDate: "2026-09-11",
+    authority: "employer",
+    sourceUrl: "https://www.pic.gov.za/careers",
+    verifiedAt: "2026-09-10",
+    statement: "Official PIC advert and linked application form, reference PMVAI090226; apply by 11 Sep 2026.",
+  },
+  "ACD-0243": {
+    deadlineDate: "2026-09-18",
+    authority: "official_ats",
+    sourceUrl: "https://absa.wd3.myworkdayjobs.com/ABSAcareersite/job/Sandton/Mergers---Acquisitions-Integration-Lead---Inorganic-Growth-Execution_R-15990043-1",
+    verifiedAt: "2026-09-16",
+    statement: "Official Absa Workday advert; apply by 18 September 2026, reference R-15990043.",
+  },
+  "ACD-0245": {
+    deadlineDate: "2026-09-25",
+    authority: "official_ats",
+    sourceUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260911-2",
+    verifiedAt: "2026-09-16",
+    statement: "Official DBSA vacancy DBS260911-2; applications close on 25 September 2026.",
+  },
+  "ACD-0246": {
+    deadlineDate: "2026-09-25",
+    authority: "official_ats",
+    sourceUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260910-1",
+    verifiedAt: "2026-09-16",
+    statement: "Official DBSA vacancy DBS260910-1; applications close on 25 September 2026.",
+  },
+  "ACD-0247": {
+    deadlineDate: "2026-09-24",
+    authority: "official_ats",
+    sourceUrl: "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260908-1",
+    verifiedAt: "2026-09-16",
+    statement: "Official DBSA vacancy DBS260908-1; applications close on 24 September 2026.",
+  },
+  "ACD-0248": {
+    deadlineDate: "2026-09-24",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16915&jobTitle=Turnaround+and+Business+Rescue+Analyst",
+    verifiedAt: "2026-09-16",
+    statement: "Official IDC advert IDC00811 / job 16915; apply by 24 September 2026.",
+  },
+  "ACD-0249": {
+    deadlineDate: "2026-09-23",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16894&jobTitle=Senior+Associate%3A+Development+Debt+",
+    verifiedAt: "2026-09-16",
+    statement: "Official IDC advert IDC00712 / job 16894; applications close on 23 September 2026.",
+  },
+  "ACD-0251": {
+    deadlineDate: "2026-09-24",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16908&jobTitle=Management+Consulting+Analyst",
+    verifiedAt: "2026-09-16",
+    statement: "Official IDC advert IDC00810 / job 16908; apply by 24 September 2026.",
+  },
+  "ACD-0255": {
+    deadlineDate: "2026-09-21",
+    authority: "employer",
+    sourceUrl: "https://mu.linkedin.com/jobs/view/credit-manager-specialised-lending-at-mcb-4464202157",
+    verifiedAt: "2026-09-16",
+    statement: "Official MCB employer LinkedIn advert; applications close on 21 September 2026.",
+  },
+  "ACD-0256": {
+    deadlineDate: "2026-09-21",
+    authority: "employer",
+    sourceUrl: "https://mu.linkedin.com/jobs/view/investment-executive-at-mcb-4463986609",
+    verifiedAt: "2026-09-16",
+    statement: "Official MCB employer LinkedIn advert; apply by 21 September 2026.",
+  },
+};
+
+const VERIFIED_EMPLOYER_POSTED_AT: Readonly<Record<string, string>> = {
+  "ACD-0209": "2026-09-04",
+  "ACD-0227": "2026-09-09",
+  "ACD-0228": "2026-09-09",
+  "ACD-0239": "2026-09-14",
+  "ACD-0240": "2026-09-11",
+  "ACD-0241": "2026-09-14",
+  "ACD-0243": "2026-09-09",
+  "ACD-0244": "2026-09-09",
+  "ACD-0245": "2026-09-11",
+  "ACD-0246": "2026-09-11",
+  "ACD-0247": "2026-09-10",
+  "ACD-0248": "2026-09-14",
+  "ACD-0249": "2026-09-13",
+  "ACD-0251": "2026-09-14",
+  "ACD-0254": "2026-09-10",
+  "ACD-0255": "2026-09-11",
+  "ACD-0256": "2026-09-11",
+  "ACD-0257": "2026-09-13",
+  "ACD-0258": "2026-09-10",
+  "ACD-0259": "2026-08-31",
+  "ACD-0260": "2026-09-16",
+  "ACD-0262": "2026-08-05",
+  "ACD-0263": "2026-09-02",
+  "ACD-0264": "2026-08-27",
+};
+
+const VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID: Readonly<Record<string, VerifiedOpportunityFields>> = {
+  "ACD-0166": {
+    locations: [
+      { scope: "city", city: "Cape Town", country: "South Africa" },
+      { scope: "city", city: "Johannesburg", country: "South Africa" },
+    ],
+    workArrangement: "remote",
+  },
+  "ACD-0190": {
+    locations: [{ scope: "region", region: "Africa" }],
+    workArrangement: "remote",
+  },
+  "ACD-0204": { employmentType: "full-time", employmentTypeDisplay: "Full-time" },
+  "ACD-0209": { employmentType: "contract", employmentTypeDisplay: "Fixed-term, two-year contract" },
+  "ACD-0211": { employmentType: "full-time", employmentTypeDisplay: "Full-time, unlimited contract" },
+  "ACD-0220": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time hybrid role",
+  },
+  "ACD-0222": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time hybrid Kenya role",
+  },
+  "ACD-0223": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time hybrid Kenya role",
+  },
+  "ACD-0224": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time hybrid Kenya role",
+  },
+  "ACD-0225": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time hybrid role",
+  },
+  "ACD-0227": { employmentType: "full-time", employmentTypeDisplay: "Full-time permanent role" },
+  "ACD-0228": { employmentType: "full-time", employmentTypeDisplay: "Full-time permanent role" },
+  "ACD-0243": {
+    workArrangement: "hybrid",
+    employmentType: "full-time",
+    employmentTypeDisplay: "Full-time, hybrid",
+  },
+};
+
+export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS, {
+  employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
+  removedJobIds: REMOVED_JOB_IDS,
+  confirmedClosures: CONFIRMED_CLOSURES,
+  verifiedDeadlinesByJobId: VERIFIED_HARD_DEADLINES,
+  employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
+  verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
+});
+
 // One-time historical baseline correction. Future dated publications still lead via the shared sorter.
-const JOBS_BASELINE = [...OPPORTUNITIES.filter(
-  (opportunity) => opportunity.boardSection === "Jobs" && !REMOVED_JOB_IDS.has(opportunity.id)
-)].reverse();
+const JOBS_BASELINE = [...getLiveJobs(OPPORTUNITIES)].reverse();
 const JOBS_DISPLAY_PRIORITY = [
   "private-equity-professional-fund-of-funds-responsability-cape-town",
   "via-chargee-affaires-financement-mas-proparco-abidjan",
@@ -3784,9 +4650,15 @@ const ORDERED_JOBS_BASELINE = [
   ...JOBS_DISPLAY_PRIORITY.flatMap((slug) => JOBS_BASELINE.filter((job) => job.slug === slug)),
   ...JOBS_BASELINE.filter((job) => !JOBS_DISPLAY_PRIORITY.includes(job.slug)),
 ];
-export const JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
-export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes"));
-export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications"));
+const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
+// Preserve the editor-approved leading positions without changing first-publication dates.
+const PINNED_JOB_IDS = ["ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263"];
+export const JOBS = [
+  ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
+  ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
+];
+export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
+export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications" && o.publicationStatus === "live"));
 
 export function getJobBySlug(slug: string): Opportunity | undefined {
   return JOBS.find((o) => o.slug === slug);

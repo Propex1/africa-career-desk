@@ -1,0 +1,1011 @@
+{
+  "baseHead": "a4b3cfee5f6675d80301441c3d73bd2953596a74",
+  "storedOrigin": "f0dade0fd70365c92e6c1848ccd36ae85111f855",
+  "reconciliationDate": "2026-09-26",
+  "commits": [
+    {
+      "hash": "dd58236ffd28b28ab49a33a207f3f502ef0a99ee",
+      "purpose": "Publish six approved jobs and correct I&P programme link",
+      "files": [
+        "A\tpublic/logos/enza-capital.svg",
+        "A\tpublic/logos/sawari-ventures.png",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [
+          "ACD-0227",
+          "ACD-0228",
+          "ACD-0229",
+          "ACD-0231",
+          "ACD-0232",
+          "ACD-0233"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": [
+          {
+            "id": "ACD-0178",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "mailto:Recrutement.ci@ietp.com?subject=Charg%C3%A9.e%20d%27investissement%20junior%20-%20Abidjan",
+                "after": "https://ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae"
+              },
+              {
+                "field": "sourceUrl",
+                "before": "https://www.ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae",
+                "after": "https://ietp.com/fr/content/stage-charge-investissement-junior-abidjan-ipae"
+              },
+              {
+                "field": "sourceType",
+                "before": "Email application",
+                "after": "Company website"
+              },
+              {
+                "field": "lastChecked",
+                "before": "26 Aug 2026",
+                "after": "10 Sep 2026"
+              }
+            ]
+          }
+        ]
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "bff586e09df23bb73b66cbb7becd0838d9848dbf",
+      "purpose": "Update five job Apply links to approved employer pages",
+      "files": [
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [],
+        "changed": [
+          {
+            "id": "ACD-0227",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://talent.enza.capital/associate",
+                "after": "https://enza.capital/careers"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0228",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://talent.enza.capital/principal",
+                "after": "https://enza.capital/careers"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0229",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "mailto:hr@sawariventures.com",
+                "after": "https://www.linkedin.com/posts/sawari-ventures_were-hiring-activity-7499815798564278272-pwmJ/"
+              },
+              {
+                "field": "applyButtonText",
+                "before": "Apply by email",
+                "after": "View role and apply"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0232",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "mailto:Recruitment4@pic.gov.za",
+                "after": "https://www.pic.gov.za/careers"
+              },
+              {
+                "field": "applyButtonText",
+                "before": "Apply by email",
+                "after": "View role and apply"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0233",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=XrL9BoynGEijBFYgB_12Gxlff2oYRUVOhT7hR68mGYJUMk1USjRBNVFGRlBTRUZEVERWTElZNDc3VC4u",
+                "after": "https://www.pic.gov.za/careers"
+              },
+              {
+                "field": "applyButtonText",
+                "before": "Complete application form",
+                "after": "View role and apply"
+              }
+            ]
+          }
+        ]
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "9bf2d25e12e49f1351d83693326fcf9e9dd61cab",
+      "purpose": "Publish five approved early-career programmes",
+      "files": [
+        "A\tpublic/logos/chapel-hill-denham.png",
+        "A\tpublic/logos/mckinsey.svg",
+        "A\tpublic/logos/symbiotics.svg",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "programmes": {
+        "added": [
+          "ACD-0234",
+          "ACD-0235",
+          "ACD-0236",
+          "ACD-0237",
+          "ACD-0238"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "147c57b028942fc4f894ae3711e750dbcf940ad1",
+      "purpose": "Correct Sahel programme CTA and remove obsolete Nedbank programme",
+      "files": [
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [
+          "ACD-0170"
+        ],
+        "changed": [
+          {
+            "id": "ACD-0045",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "mailto:careers@sahelcp.com?subject=Sahel%20Capital%20Graduate%20Program",
+                "after": "https://sahelcapital.com/careers/"
+              }
+            ]
+          }
+        ]
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "2ec0fb09e0f206fcfd644f4c71e7d4541647477b",
+      "purpose": "Publish 26 approved Jobs with reviewed links and logos",
+      "files": [
+        "A\tpublic/logos/attijariwafa-bank.png",
+        "A\tpublic/logos/attijariwafa-ventures.png",
+        "A\tpublic/logos/bmce-capital.jpg",
+        "A\tpublic/logos/cfg-bank.webp",
+        "A\tpublic/logos/ithmar-capital.png",
+        "A\tpublic/logos/mcb.jpg",
+        "A\tpublic/logos/nedbank-logo.png",
+        "A\tsrc/data/approved-jobs-2026-09-16.ts",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [
+          "ACD-0260",
+          "ACD-0263",
+          "ACD-0239",
+          "ACD-0240",
+          "ACD-0241",
+          "ACD-0242",
+          "ACD-0243",
+          "ACD-0244",
+          "ACD-0245",
+          "ACD-0246",
+          "ACD-0247",
+          "ACD-0248",
+          "ACD-0249",
+          "ACD-0250",
+          "ACD-0251",
+          "ACD-0252",
+          "ACD-0253",
+          "ACD-0254",
+          "ACD-0255",
+          "ACD-0256",
+          "ACD-0257",
+          "ACD-0258",
+          "ACD-0259",
+          "ACD-0261",
+          "ACD-0262",
+          "ACD-0264"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "2cacbbf8f12ac32b481a91e64d0481c8dc6da7c8",
+      "purpose": "Remove 26 approved Jobs after freshness review",
+      "files": [
+        "A\tdocs/audits/2026-09-17-job-freshness-audit.json",
+        "A\tdocs/audits/2026-09-17-job-freshness-audit.md",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [
+          "ACD-0233",
+          "ACD-0226",
+          "ACD-0225",
+          "ACD-0224",
+          "ACD-0223",
+          "ACD-0222",
+          "ACD-0220",
+          "ACD-0219",
+          "ACD-0218",
+          "ACD-0217",
+          "ACD-0215",
+          "ACD-0214",
+          "ACD-0213",
+          "ACD-0212",
+          "ACD-0210",
+          "ACD-0205",
+          "ACD-0208",
+          "ACD-0206",
+          "ACD-0200",
+          "ACD-0149",
+          "ACD-0148",
+          "ACD-0142",
+          "ACD-0141",
+          "ACD-0140",
+          "ACD-0038",
+          "ACD-0008"
+        ],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "1a28c6d957b97691583986b9d10440b6badd9639",
+      "purpose": "Remove eight Jobs at editorial request",
+      "files": [
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [
+          "ACD-0240",
+          "ACD-0241",
+          "ACD-0243",
+          "ACD-0232",
+          "ACD-0209",
+          "ACD-0190",
+          "ACD-0187",
+          "ACD-0018"
+        ],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "b3c57982a84b7785042e6c0eb5f493975ebd1029",
+      "purpose": "Publish 16 approved jobs and apply remaining editorial removals",
+      "files": [
+        "A\tsrc/data/approved-jobs-2026-09-20.ts",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [
+          "ACD-0265",
+          "ACD-0266",
+          "ACD-0267",
+          "ACD-0268",
+          "ACD-0269",
+          "ACD-0270",
+          "ACD-0271",
+          "ACD-0272",
+          "ACD-0273",
+          "ACD-0274",
+          "ACD-0275",
+          "ACD-0276",
+          "ACD-0277",
+          "ACD-0278",
+          "ACD-0279",
+          "ACD-0280"
+        ],
+        "removed": [
+          "ACD-0242",
+          "ACD-0259"
+        ],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "005afda7ef7139cc56580253557a9cda029f745e",
+      "purpose": "Refine approved job links, BII display and source panels",
+      "files": [
+        "A\tpublic/logos/bii.svg",
+        "M\tsrc/app/jobs/[slug]/page.tsx",
+        "M\tsrc/components/LogoContainer.tsx",
+        "M\tsrc/data/approved-jobs-2026-09-20.ts",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [],
+        "removed": [],
+        "changed": [
+          {
+            "id": "ACD-0266",
+            "fields": [
+              {
+                "field": "logoUrl",
+                "after": "/logos/bii.svg"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0271",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://jobs.smartrecruiters.com/StandardBankGroup/744000149878956-client-coverage-associate-public-sector?oga=true",
+                "after": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000149878956"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0274",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://jobs.smartrecruiters.com/StandardBankGroup/744000149508439-manager-investments?oga=true",
+                "after": "https://www.linkedin.com/jobs/view/manager-investments-at-stanbic-bank-kenya-4467486113/"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0275",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://emea3.recruitmentplatform.com/apply-app/pages/application-form?jobId=PD4FK026203F3VBQB6868QWCT-16969&langCode=en_GB",
+                "after": "https://careers.idc.co.za/details.html?jobId=16969&jobTitle=Business+Analyst"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0276",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://emea3.recruitmentplatform.com/apply-app/pages/application-form?jobId=PD4FK026203F3VBQB6868QWCT-16948&langCode=en_GB",
+                "after": "https://careers.idc.co.za/details.html?jobId=16948&jobTitle=Corporate+Finance+Analyst+%2F+M%26A+Analyst"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0277",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://emea3.recruitmentplatform.com/apply-app/pages/application-form?jobId=PD4FK026203F3VBQB6868QWCT-16942&langCode=en_GB",
+                "after": "https://careers.idc.co.za/details.html?jobId=16942&jobTitle=Regional+Manager+-+Mpumulanga+"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0278",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://emea3.recruitmentplatform.com/apply-app/pages/application-form?jobId=PD4FK026203F3VBQB6868QWCT-16928&langCode=en_GB",
+                "after": "https://careers.idc.co.za/details.html?jobId=16928&jobTitle=Dealmaker+-+Agro"
+              }
+            ]
+          },
+          {
+            "id": "ACD-0279",
+            "fields": [
+              {
+                "field": "applyUrl",
+                "before": "https://emea3.recruitmentplatform.com/apply-app/pages/application-form?jobId=PD4FK026203F3VBQB6868QWCT-16988&langCode=en_GB",
+                "after": "https://careers.idc.co.za/details.html?jobId=16988&jobTitle=Senior+Manager%3A+Enterprise+Development+Programme+%28EDP%29+-+Tirisano+Construction+Fund"
+              }
+            ]
+          }
+        ]
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    },
+    {
+      "hash": "3a0837273396ab3932431bc5b88999e5bc8125b2",
+      "purpose": "Publish approved September jobs and OMIG programme",
+      "files": [
+        "A\tpublic/logos/ashburton-investments.png",
+        "M\tsrc/app/sitemap.ts",
+        "A\tsrc/data/approved-content-2026-09-23.ts",
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [
+          "ACD-0281",
+          "ACD-0282",
+          "ACD-0283",
+          "ACD-0284",
+          "ACD-0285",
+          "ACD-0287",
+          "ACD-0288",
+          "ACD-0289",
+          "ACD-0290",
+          "ACD-0139"
+        ],
+        "removed": [
+          "ACD-0239",
+          "ACD-0244",
+          "ACD-0249",
+          "ACD-0255",
+          "ACD-0256"
+        ],
+        "changed": []
+      },
+      "programmes": {
+        "added": [
+          "ACD-0291"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": [
+        "ACD-0139"
+      ]
+    },
+    {
+      "hash": "f0dade0fd70365c92e6c1848ccd36ae85111f855",
+      "purpose": "Add I&P acceleration programme officer as first job",
+      "files": [
+        "M\tsrc/data/opportunities.ts"
+      ],
+      "jobs": {
+        "added": [
+          "ACD-0292"
+        ],
+        "removed": [],
+        "changed": []
+      },
+      "programmes": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "openApplications": {
+        "added": [],
+        "removed": [],
+        "changed": []
+      },
+      "reactivated": []
+    }
+  ],
+  "deadlineEvidenceReviewed": [
+    {
+      "ids": [
+        "ACD-0254"
+      ],
+      "sourceUrl": "https://za.linkedin.com/jobs/view/senior-relationship-manager-metals-and-minerals-at-mcb-4463471428",
+      "checkedAt": "2026-09-17T01:43:43.803Z",
+      "text": "LinkedIn respects your privacy\n\nLinkedIn and 3rd parties use essential and non-essential cookies to provide, secure, analyze and improve our Services, and to show you relevant ads (including professional and job ads) on and off LinkedIn. Learn more in our Cookie Policy.\n\nSelect Accept to consent or Reject to decline non-essential cookies for this use. You can update your choices at any time in your settings.\n\nAccept Reject\nSkip to main content\nLinkedIn\nJobs\nClear text\nClear text\nJoin now\nSign in\nSenior Relationship Manager, Metals and Minerals\nMCB  City of Johannesburg, Gauteng, South Africa\n6 days ago  84 applicants\n  \n\nSee who MCB has hired for this role\n\nApply \nSave\nUse AI to assess how you fit\n\nGet AI-powered advice on this job and more exclusive features.\n\nAm I a good fit for this job?\nTailor my resume\n\nSenior Relationship Manager – Metals & Minerals\n\n\n\n\nLocation: MCB Johannesburg office, South Africa\n\n\n\n\nJoin our Commodity Trade Finance team\n\n\n\n\nEmbark on a journey within the Commodity Trade Finance (\"CTF\") segment of the Energy, Infrastructure and Commodities (\"EIC\") team.\n\n\n\n\nThe Commodity Trade Finance (\"CTF\") team provides structured trade and working capital solutions to participants across global commodity value chains. Through a combination of sector expertise, strong execution capabilities and comprehensive risk management frameworks, the team supports leading commodity traders, producers, processors and distributors operating in the Oil & Gas and Metals & Minerals sectors.\n\n\n\n\nAs part of its growth strategy, the Bank is seeking an experienced Senior Relationship Manager to support the development of its Metals & Minerals activities. Based in Johannesburg, you will play a leading role in driving the origination strategy, developing client relationships across the sector and expanding the Bank's footprint in the sector.\n\n\n\n\nPurpose of the role\n\n\n\n\nReporting directly to the Head of Commodity Trade Finance, you will be responsible for driving the origination and development strategy of the Bank's Metals & Minerals portfolio and establishing the Bank as a recognised financing partner for participants operating across this value chain.\n\nYou will be expected to identify and originate new relationships, deepen existing client engagements, develop strategic market intelligence, proactively identify financing opportunities and contribute to the growth and profitability of the Metals & Minerals portfolio in line with the Bank's risk appetite and strategic objectives.\n\nYou will also be expected to provide guidance, coaching and practical support to members of the wider CTF team on industry dynamics, trade flows, transaction structures, market practices, logistics considerations and emerging sector trends.\n\nWorking closely with the Head of Commodity Trade Finance and internal stakeholders across Collateral Management team, Credit Risk, Legal, Compliance and Operations, you will contribute to ensuring that business growth is achieved in a disciplined manner and in line with the Bank’s risk appetite framework.\n\n\n\n\nIn this role, you will:\n\nOrigination and business development\n\n\n\n\nLead the execution of the Bank's Metals & Minerals origination strategy across Africa and selected international markets.\nIdentify, originate and develop new client relationships aligned with the strategic objectives of the CTF platform.\nEstablish and maintain relationships with key market participants within the Metals & Minerals value chain.\nDevelop and maintain a robust origination pipeline and actively work to materialise opportunities from initial identification through onboarding and execution with a prompt turn around time.\nWork closely with the Head of Commodity Trade Finance to identify priority markets, sectors, counterparties and strategic opportunities.\nRepresent the Bank at client meetings, industry events, conferences and other relevant market forums to enhance the visibility and reputation of the CTF franchise.\nDevelop strategic relationships with key industry participants to strengthen market access and support future business development efforts.\n\n\n\n\nPortfolio development and commercial management\n\nDrive the growth, profitability and diversification of the Metals & Minerals portfolio while ensuring alignment with approved strategic and risk objectives.\nIdentify opportunities to increase wallet share and deepen relationships with existing clients.\nMonitor portfolio utilisation levels and support initiatives aimed at improving revenues, client penetration and overall relationship profitability.\nContribute actively to the formulation and execution of the broader CTF business development strategy.\nIdentify opportunities for product expansion, cross-selling and collaboration with other business lines across the Bank.\n\n\n\n\nMarket intelligence and sector leadership\n\nDevelop and maintain a deep understanding of the global Metals & Minerals markets, including key trade flows, supply chains, logistics corridors, market participants and financing structures.\nMonitor commodity market developments, geopolitical events, regulatory changes and industry trends which may impact clients, transactions or portfolio performance.\nShare relevant market intelligence in a timely manner with the Head of Commodity Trade Finance and other stakeholders to support strategic decision-making.\nProduce and contribute to sector reviews, market updates, presentations and strategic papers relating to the Metals & Minerals sector.\nAct as a recognised subject matter expert within the organisation on Metals & Minerals financing and related market developments.\nSupport the identification of emerging opportunities within adjacent segments and new commodity groups.\n\n\n\n\nCredit and risk management\n\nEnsure that prospective and existing client relationships remain aligned with the Bank's risk appetite, compliance requirements and strategic objectives.\nContribute to the assessment of potential counterparties and provide views on business models, management quality, operational capabilities, logistics arrangements, market positioning and sector risks.\nSupport the onboarding of new counterparties by working closely with Credit Risk, Credit Analysis, Compliance and other relevant functions.\nEnsure that transactions are structured in a manner consistent with approved risk frameworks and internal policies.\nEscalate material risks, emerging concerns and adverse developments promptly to the Head of Commodity Trade Finance and relevant stakeholders.\nMonitor market developments and sector-specific risks that could impact the portfolio and contribute to appropriate risk mitigation strategies.\nAssist in defending and presenting transactions before internal governance committees when required.\n\n\n\n\nTransaction structuring and execution\n\nWork closely with clients and internal stakeholders to structure financing solutions that appropriately address client requirements while protecting the interests of the Bank.\nProvide guidance on transaction structures, collateral arrangements, security packages and risk mitigation tools relevant to the Metals & Minerals sector.\nSupport the negotiation of financing structures, commercial terms and key transaction parameters.\nCollaborate with Credit Analysts, Legal, Compliance, Middle Office and Operations teams to facilitate efficient execution of transactions.\nContribute to the continuous enhancement of transaction structuring standards and best practices across the CTF platform.\n\n\n\n\nTeam development and knowledge transfer\n\nAct as a mentor and coach to Relationship Managers, Credit Analysts and other team members involved in the Metals & Minerals sector.\nShare practical market knowledge and provide guidance on commodity trade flows, transaction structures, client engagement approaches and sector-specific risks.\nSupport the development of technical expertise across the CTF team through coaching, knowledge-sharing sessions and ongoing collaboration.\nContribute to the development of sector-specific training materials and internal knowledge resources.\nFoster a culture of collaboration, accountability, professionalism and continuous learning.\n\n\n\n\nStakeholder management\n\nBuild strong working relationships with internal stakeholders across Credit Risk, Credit Analysis, Compliance, Legal, Middle Office, Operations and Coverage.\nMaintain open and regular communication with senior management regarding market developments, origination opportunities and portfolio performance.\nSupport strategic discussions relating to the development of the broader CTF franchise.\n\n\n\n\nAdditional Information\n\n\n\n\nThe full job description, including role requirements, experience criteria and key competencies, is available on our careers website. Please click \"Apply\" to review the complete vacancy and submit your application.\n\n\n\n\nClosing date for applications: 01 October 2026.\n\n\n\n\nPlease ensure your application includes an up-to-date CV and all required information.\n\n\n\n\nThe Management reserves the right not to appoint anyone following this advert.\n\nShow more \nSeniority level\nNot Applicable\nEmployment type\nFull-time\nJob function\nBusiness Development\nIndustries\nFinancial Services\n  \n\nReferrals increase your chances of interviewing at MCB by 2x\n\nSee who you know\n\nGet notified about new Senior Relationship Manager jobs in City of Johannesburg, Gauteng, South Africa.\n\nSign in to create job alert\nSimilar jobs\nSenior Regional Manager Southern Africa, Metals & Minerals\nSenior Regional Manager Southern Africa, Metals & Minerals\nCotecna\nJohannesburg Metropolitan Area\n1 week ago\nEEMEA Business Development Director Geochemistry\nEEMEA Business Development Director Geochemistry\nSGS\nSandton, Gauteng, South Africa\n3 weeks ago\nIndustry Sales Manager - Mining\nIndustry Sales Manager - Mining\nSulzer\nJohannesburg, Gauteng, South Africa\n2 weeks ago\nKey Account Manager\nKey Account Manager\nGRTS\nJohannesburg Metropolitan Area\n1 week ago\nSenior Sales Engineer\nSenior Sales Engineer\nKennametal\nJohannesburg Metropolitan Area\n1 week ago\nSales Manager\nSales Manager\nFluor Corporation\nJohannesburg, Gauteng, South Africa\n1 week ago\nShow more jobs like this \nPeople also viewed\nExports Commercial Manager\nExports Commercial Manager\n\nSaint-Gobain Africa\n\nMidrand, Gauteng, South Africa\n1 week ago\nDirector: Operations and Maintenance (Mineral Processing)\nDirector: Operations and Maintenance (Mineral Processing)\n\nSTELO GROUP\n\nJohannesburg, Gauteng, South Africa\n2 months ago\nSenior Commercial Manager - Southern & Eastern Africa\nSenior Commercial Manager - Southern & Eastern Africa\n\nRoll Group\n\nJohannesburg Metropolitan Area\n2 weeks ago\nSales Leader - South and East Africa\nSales Leader - South and East Africa\n\nAVEVA\n\nJohannesburg, Gauteng, South Africa\n1 week ago\nGroup Project Manager\nGroup Project Manager\n\nAssore Group\n\nCity of Johannesburg, Gauteng, South Africa\n1 week ago\nTechnical Sales Representative (UTT)\nTechnical Sales Representative (UTT)\n\nMapei\n\nJohannesburg Metropolitan Area\n1 week ago\nStrategic Growth Lead: Planning and Advisory\nStrategic Growth Lead: Planning and Advisory\n\nWSP in Africa\n\nMidrand, Gauteng, South Africa\n1 week ago\nTrade Non-Energy Manager South Africa\nTrade Non-Energy Manager South Africa\n\nSGS\n\nSandton, Gauteng, South Africa\n3 weeks ago\nServices & Support Manager, SNA (Southern Africa)\nServices & Support Manager, SNA (Southern Africa)\n\nHexagon Mining\n\nJohannesburg, Gauteng, South Africa\n3 weeks ago\nProject Manager\nProject Manager\n\nCA Mining\n\nJohannesburg Metropolitan Area\n3 weeks ago\nSimilar Searches\nKey Account Manager Retail jobs\n97 open jobs\nBranch Sales Manager jobs\n594 open jobs\nFailure Analysis Engineer jobs\n154 open jobs\nHead of Banking jobs\n47 open jobs\nPrivate Banker jobs\n227 open jobs\nGroup Chief Executive Officer jobs\n22 open jobs\nSenior Key Account Manager jobs\n397 open jobs\nWealth Management Advisor jobs\n170 open jobs\nBusiness Banker jobs\n195 open jobs\nHead of Corporate Banking jobs\n35 open jobs\nBroadcast Manager jobs\n73 open jobs\nCredit Portfolio Manager jobs\n32 open jobs\nShow more \nMore searches \nLinkedIn\n© 2026\nAbout\nAccessibility\nUser Agreement\nPrivacy Policy\nCookie Policy\nCopyright Policy\nBrand Policy\nGuest Controls\nCommunity Guidelines\nLanguage"
+    },
+    {
+      "ids": [
+        "ACD-0227",
+        "ACD-0228"
+      ],
+      "sourceUrl": "https://enza.capital/careers",
+      "checkedAt": "2026-09-17T01:44:07.592Z",
+      "text": "Portfolio\nCareers\nCareers\n\nWe are building our team and hiring two investment roles. Applications close Monday, 28 September.\n\nEnza Capital has spent seven years backing founders using technology to solve large and meaningful problems across Africa. We are now in the advanced stages of launching our next fund, the AI Africa Fund, and we are hiring two fantastic colleagues to build with us through this cycle.\n\nJoining us means you will work across the whole firm, on our existing partnership in Fund I and Fund II portfolios, as well as on new investments from our AI Africa Fund.\n\nInvestment Principal\n\nAn experienced investor to originate opportunities, lead transactions, support our portfolio companies and help build the firm. Read the full job description.\n\nApply for this role\nInvestment Associate\n\nAdvancing in your investing career to cover the pipeline, build the analysis our decisions rest on, and work closely with the companies we have already backed. Read the full job description.\n\nApply for this role\n\nApplications close on Monday, 28 September. We will contact shortlisted candidates as applications come through, and we will let everyone else know within two weeks of the close.\n\nPlease apply for the one role that best suits your experience. \n\nAny questions, please write to talent@enza.capital.\n\nPrivacy\nLinkedIn\nTwitter\n© 2026 Enza Capital"
+    }
+  ],
+  "supersededClosure": {
+    "id": "ACD-0139",
+    "previousVerifiedAt": "2026-09-09",
+    "reactivatedAt": "2026-09-23",
+    "commit": "3a08372",
+    "note": "Approved reactivation of the same ID/slug; preserve original publication-date state. Advert validity is not automatically treated as a hard application deadline."
+  },
+  "historicalProgramme": {
+    "id": "ACD-0170",
+    "removalCommit": "147c57b",
+    "note": "Preserved historically, excluded from public Programmes."
+  },
+  "assets": [
+    {
+      "file": "public/logos/enza-capital.svg",
+      "action": "preserved local asset; only line endings differ"
+    },
+    {
+      "file": "public/logos/sawari-ventures.png",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/chapel-hill-denham.png",
+      "action": "recovered approved asset"
+    },
+    {
+      "file": "public/logos/mckinsey.svg",
+      "action": "recovered approved asset"
+    },
+    {
+      "file": "public/logos/symbiotics.svg",
+      "action": "recovered approved asset"
+    },
+    {
+      "file": "public/logos/attijariwafa-bank.png",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/attijariwafa-ventures.png",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/bmce-capital.jpg",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/cfg-bank.webp",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/ithmar-capital.png",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/mcb.jpg",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/nedbank-logo.png",
+      "action": "preserved identical local asset"
+    },
+    {
+      "file": "public/logos/bii.svg",
+      "action": "recovered approved asset"
+    },
+    {
+      "file": "public/logos/ashburton-investments.png",
+      "action": "recovered approved asset"
+    }
+  ],
+  "inventory": {
+    "historical": 168,
+    "liveJobs": 71,
+    "removedJobs": 72,
+    "programmes": 10,
+    "openApplications": 14,
+    "approvedLiveJobIds": [
+      "ACD-0292",
+      "ACD-0266",
+      "ACD-0260",
+      "ACD-0263",
+      "ACD-0281",
+      "ACD-0282",
+      "ACD-0283",
+      "ACD-0284",
+      "ACD-0285",
+      "ACD-0287",
+      "ACD-0288",
+      "ACD-0289",
+      "ACD-0290",
+      "ACD-0265",
+      "ACD-0267",
+      "ACD-0268",
+      "ACD-0269",
+      "ACD-0270",
+      "ACD-0271",
+      "ACD-0272",
+      "ACD-0273",
+      "ACD-0274",
+      "ACD-0275",
+      "ACD-0276",
+      "ACD-0277",
+      "ACD-0278",
+      "ACD-0279",
+      "ACD-0280",
+      "ACD-0245",
+      "ACD-0246",
+      "ACD-0247",
+      "ACD-0248",
+      "ACD-0250",
+      "ACD-0251",
+      "ACD-0252",
+      "ACD-0253",
+      "ACD-0254",
+      "ACD-0257",
+      "ACD-0258",
+      "ACD-0261",
+      "ACD-0262",
+      "ACD-0264",
+      "ACD-0227",
+      "ACD-0228",
+      "ACD-0229",
+      "ACD-0231",
+      "ACD-0211",
+      "ACD-0221",
+      "ACD-0216",
+      "ACD-0204",
+      "ACD-0207",
+      "ACD-0198",
+      "ACD-0197",
+      "ACD-0196",
+      "ACD-0195",
+      "ACD-0194",
+      "ACD-0193",
+      "ACD-0166",
+      "ACD-0151",
+      "ACD-0139",
+      "ACD-0138",
+      "ACD-0106",
+      "ACD-0105",
+      "ACD-0083",
+      "ACD-0082",
+      "ACD-0041",
+      "ACD-0039",
+      "ACD-0035",
+      "ACD-0023",
+      "ACD-0016",
+      "ACD-0014",
+      "ACD-0012",
+      "ACD-0009",
+      "ACD-0007",
+      "ACD-0006",
+      "ACD-0005",
+      "ACD-0004"
+    ],
+    "liveJobIds": [
+      "ACD-0292",
+      "ACD-0266",
+      "ACD-0260",
+      "ACD-0263",
+      "ACD-0281",
+      "ACD-0282",
+      "ACD-0283",
+      "ACD-0284",
+      "ACD-0285",
+      "ACD-0287",
+      "ACD-0288",
+      "ACD-0289",
+      "ACD-0290",
+      "ACD-0265",
+      "ACD-0267",
+      "ACD-0268",
+      "ACD-0269",
+      "ACD-0270",
+      "ACD-0271",
+      "ACD-0272",
+      "ACD-0273",
+      "ACD-0274",
+      "ACD-0275",
+      "ACD-0276",
+      "ACD-0277",
+      "ACD-0278",
+      "ACD-0279",
+      "ACD-0280",
+      "ACD-0250",
+      "ACD-0252",
+      "ACD-0253",
+      "ACD-0254",
+      "ACD-0257",
+      "ACD-0258",
+      "ACD-0261",
+      "ACD-0262",
+      "ACD-0264",
+      "ACD-0227",
+      "ACD-0228",
+      "ACD-0229",
+      "ACD-0231",
+      "ACD-0211",
+      "ACD-0221",
+      "ACD-0216",
+      "ACD-0204",
+      "ACD-0198",
+      "ACD-0197",
+      "ACD-0196",
+      "ACD-0195",
+      "ACD-0194",
+      "ACD-0193",
+      "ACD-0166",
+      "ACD-0151",
+      "ACD-0139",
+      "ACD-0138",
+      "ACD-0106",
+      "ACD-0105",
+      "ACD-0083",
+      "ACD-0082",
+      "ACD-0041",
+      "ACD-0039",
+      "ACD-0035",
+      "ACD-0023",
+      "ACD-0016",
+      "ACD-0014",
+      "ACD-0012",
+      "ACD-0009",
+      "ACD-0007",
+      "ACD-0006",
+      "ACD-0005",
+      "ACD-0004"
+    ],
+    "programmeIds": [
+      "ACD-0291",
+      "ACD-0234",
+      "ACD-0235",
+      "ACD-0236",
+      "ACD-0237",
+      "ACD-0238",
+      "ACD-0042",
+      "ACD-0045",
+      "ACD-0102",
+      "ACD-0178"
+    ],
+    "openApplicationIds": [
+      "ACD-0192",
+      "ACD-0047",
+      "ACD-0049",
+      "ACD-0051",
+      "ACD-0052",
+      "ACD-0053",
+      "ACD-0054",
+      "ACD-0055",
+      "ACD-0153",
+      "ACD-0154",
+      "ACD-0164",
+      "ACD-0176",
+      "ACD-0177",
+      "ACD-0188"
+    ],
+    "addedToLocal": [
+      "ACD-0292",
+      "ACD-0266",
+      "ACD-0281",
+      "ACD-0282",
+      "ACD-0283",
+      "ACD-0284",
+      "ACD-0285",
+      "ACD-0287",
+      "ACD-0288",
+      "ACD-0289",
+      "ACD-0290",
+      "ACD-0265",
+      "ACD-0267",
+      "ACD-0268",
+      "ACD-0269",
+      "ACD-0270",
+      "ACD-0271",
+      "ACD-0272",
+      "ACD-0273",
+      "ACD-0274",
+      "ACD-0275",
+      "ACD-0276",
+      "ACD-0277",
+      "ACD-0278",
+      "ACD-0279",
+      "ACD-0280",
+      "ACD-0139"
+    ],
+    "removedFromLocal": [
+      "ACD-0239",
+      "ACD-0240",
+      "ACD-0241",
+      "ACD-0242",
+      "ACD-0244",
+      "ACD-0259",
+      "ACD-0226",
+      "ACD-0225",
+      "ACD-0224",
+      "ACD-0223",
+      "ACD-0222",
+      "ACD-0220",
+      "ACD-0219",
+      "ACD-0218",
+      "ACD-0217",
+      "ACD-0215",
+      "ACD-0214",
+      "ACD-0213",
+      "ACD-0212",
+      "ACD-0210",
+      "ACD-0209",
+      "ACD-0205",
+      "ACD-0200",
+      "ACD-0190",
+      "ACD-0187",
+      "ACD-0149",
+      "ACD-0148",
+      "ACD-0142",
+      "ACD-0141",
+      "ACD-0140",
+      "ACD-0038",
+      "ACD-0018",
+      "ACD-0008"
+    ],
+    "reactivated": [
+      "ACD-0139"
+    ],
+    "expiredFromApprovedBaseline": [
+      "ACD-0245",
+      "ACD-0246",
+      "ACD-0247",
+      "ACD-0248",
+      "ACD-0251",
+      "ACD-0207"
+    ],
+    "categories": {
+      "private-equity-venture-capital": 5,
+      "development-finance": 7,
+      "infrastructure-project-finance": 18,
+      "investment-banking": 14,
+      "climate-impact-investing": 7
+    }
+  },
+  "preservation": {
+    "preExistingFilesChecked": 196,
+    "intentionallyChanged": [
+      "src/data/approved-jobs-2026-09-16.ts",
+      "src/data/employer-identities.ts",
+      "src/lib/opportunity-data.ts",
+      "src/lib/seo.ts",
+      "tools/acd/tests/opportunity-data.test.ts",
+      "tools/acd/tests/seo.test.ts",
+      "README.md",
+      "src/app/jobs/[slug]/page.tsx",
+      "src/components/LogoContainer.tsx",
+      "src/data/opportunities.ts",
+      "tools/acd/tests/run.ts"
+    ],
+    "unchanged": 185,
+    "missing": []
+  },
+  "validation": {
+    "acdTests": {
+      "passed": 67,
+      "failed": 0
+    },
+    "lint": {
+      "errors": 0,
+      "existingWarnings": 23
+    },
+    "typescript": "passed; restored real September modules resolve archived snapshot imports",
+    "productionBuild": "passed; 88 generated pages including 71 job paths and 5 category paths",
+    "diffCheck": "passed",
+    "browser": {
+      "passed": true,
+      "pageVisits": 42,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "javascriptErrors": 0,
+      "sitemapUrls": 80,
+      "checks": [
+        "homepage exact job IDs/order and search",
+        "five categories exact job IDs/counts, canonicals, OG URLs and no JobPosting",
+        "seven representative live details including reactivation and pending verification",
+        "three removed/expired details return 404 and noindex",
+        "unapproved category returns 404",
+        "Programmes and Open Applications exact Apply URLs",
+        "About",
+        "newsletter confirmation noindex",
+        "mobile navigation",
+        "no horizontal overflow",
+        "representative logos loaded",
+        "factual application-link helper text"
+      ]
+    }
+  },
+  "remainingLimitations": [
+    "Nine live records retain needs_verification rather than being removed without accepted evidence.",
+    "Static expiry appears on the next build/deployment; scheduling remains out of scope.",
+    "The reconciled files use stored origin/main f0dade0; no remote fetch, commit, merge, reset, push or deployment was performed."
+  ]
+}

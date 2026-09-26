@@ -13,3 +13,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Never use `git add .` or `git add -A`.
 - After completing a task, report the files changed and the validation performed.
 - Do not commit or push unless I explicitly authorize it.
+
+## Africa Career Desk product principles
+
+- Build for long-term editorial quality, trust and maintainability from the perspective of Africa Career Desk users.
+- Keep workflows clear, efficient, accessible, responsive and consistent; prefer reliable, modern, well-supported methods.
+- Prioritise official, verifiable sources and never hide uncertainty, failed sources or incomplete coverage.
+- Keep discovery and selection separate, optimise discovery for recall, and require human approval before publication or removal.
+- Avoid unnecessary complexity, but do not create clear long-term technical debt for a short-term gain.

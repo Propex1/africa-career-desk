@@ -1,10 +1,14 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getJobBySlug, JOBS } from "@/data/opportunities";
+import Link from "next/link";
 import LogoContainer from "@/components/LogoContainer";
 import BackButton from "@/components/BackButton";
 import ApplyLink from "@/components/analytics/ApplyLink";
 import JobDetailTracker from "@/components/analytics/JobDetailTracker";
+import JobPostingJsonLd from "@/components/seo/JobPostingJsonLd";
+import { getEnabledJobCategoryForRoleType } from "@/lib/job-categories";
+import { jobPageMetadata, NO_INDEX_ROBOTS } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -17,17 +21,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const job = getJobBySlug(slug);
-  if (!job) return { title: "Role not found | Africa Career Desk" };
-  return {
-    title: `${job.title} at ${job.company} | Africa Career Desk`,
-    description: job.summary,
-  };
+  if (!job) return { title: "Role not found | Africa Career Desk", robots: NO_INDEX_ROBOTS };
+  return jobPageMetadata(job);
 }
 
 export default async function JobDetailPage({ params }: Props) {
   const { slug } = await params;
   const job = getJobBySlug(slug);
   if (!job) notFound();
+  const categoryPage = getEnabledJobCategoryForRoleType(job.roleType);
+  const needsVerification = job.lifecycleStatus === "needs_verification";
 
   const metaItems = [
     { label: "Role type", value: job.roleType },
@@ -39,6 +42,7 @@ export default async function JobDetailPage({ params }: Props) {
   return (
     <section className="max-w-[1180px] mx-auto px-5 md:px-8 py-9 pb-[72px]">
       <JobDetailTracker job={job} />
+      <JobPostingJsonLd job={job} />
 
       {/* Back */}
       <BackButton jobSlug={job.slug} />
@@ -93,6 +97,14 @@ export default async function JobDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
+
+          {categoryPage && (
+            <p className="m-0 mt-3 text-[13px] text-acd-muted">
+              <Link href={`/jobs/category/${categoryPage.slug}/`} className="font-semibold text-acd-green no-underline hover:underline">
+                {categoryPage.detailLinkLabel}
+              </Link>
+            </p>
+          )}
 
           {/* Summary */}
           <h2 className="mt-[38px] m-0 font-serif font-semibold text-[23px] text-acd-navy">
@@ -225,11 +237,11 @@ export default async function JobDetailPage({ params }: Props) {
                 <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
-              Source verified
+              {needsVerification ? "Verification pending" : "Source verified"}
             </span>
 
             {/* Details */}
-            <div className="mt-5 flex flex-col gap-[15px]">
+            <div className="mt-5 flex flex-col gap-5">
               <div>
                 <p className="m-0 text-[12px] tracking-[0.5px] uppercase text-acd-dimest font-semibold">
                   Source
@@ -237,11 +249,6 @@ export default async function JobDetailPage({ params }: Props) {
                 <p className="m-0 mt-1 text-[15px] text-acd-navy font-semibold">
                   {job.sourceType}
                 </p>
-                {job.sourceDescription && (
-                  <p className="m-0 mt-[6px] text-[13px] leading-snug text-acd-dim">
-                    {job.sourceDescription}
-                  </p>
-                )}
               </div>
               <div>
                 <p className="m-0 text-[12px] tracking-[0.5px] uppercase text-acd-dimest font-semibold">
@@ -257,7 +264,7 @@ export default async function JobDetailPage({ params }: Props) {
                 </p>
                 <p className="m-0 mt-1 text-[15px] text-acd-green font-semibold flex items-center gap-[7px]">
                   <span className="w-[7px] h-[7px] rounded-full bg-acd-green" />
-                  Active
+                  {needsVerification ? "Application status needs verification" : "Active"}
                 </p>
               </div>
             </div>
@@ -286,7 +293,7 @@ export default async function JobDetailPage({ params }: Props) {
             <p className="mt-[15px] text-[12.5px] text-acd-dimest text-center leading-snug">
               {job.applyUrl.startsWith("mailto:")
                 ? "Opens your email client to contact the employer."
-                : "Opens the official employer page in a new tab."}
+                : "Opens the linked application page in a new tab."}
             </p>
           </div>
         </aside>
