@@ -1,5 +1,9 @@
 export type BoardSection = "Jobs" | "Programmes" | "Open Applications";
 
+/** Controlled editorial discovery metadata; never inferred from role content. */
+export const DISCOVERY_THEMES = ["private-markets"] as const;
+export type DiscoveryTheme = (typeof DISCOVERY_THEMES)[number];
+
 export type RoleType =
   | "Private Equity, VC & Private Credit"
   | "Infrastructure & Project Finance"
@@ -53,6 +57,8 @@ export type Opportunity = {
   logoUrl?: string;
   boardSection: BoardSection;
   roleType: RoleType;
+  /** Explicitly approved secondary relevance; does not replace the primary roleType. */
+  discoveryThemes?: DiscoveryTheme[];
   experienceBucket?: string;
   city?: string;
   country?: string;

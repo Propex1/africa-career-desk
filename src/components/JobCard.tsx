@@ -5,6 +5,7 @@ import LogoContainer from "./LogoContainer";
 import NewOpportunityBadge from "./NewOpportunityBadge";
 import type { Opportunity } from "@/types";
 import { trackJobCardClicked } from "@/lib/analytics";
+import { deadlinePresentation } from "@/lib/deadline-presentation";
 
 interface JobCardProps {
   job: Opportunity;
@@ -12,6 +13,7 @@ interface JobCardProps {
 
 export default function JobCard({ job }: JobCardProps) {
   const onClick = () => trackJobCardClicked(job);
+  const deadline = deadlinePresentation(job.deadlineDisplay);
 
   const otherTags = [job.experienceBucket, job.language].filter(Boolean) as string[];
 
@@ -75,11 +77,11 @@ export default function JobCard({ job }: JobCardProps) {
 
       {/* Deadline */}
       <div className="w-auto md:w-[126px] md:text-right shrink-0">
-        {job.deadlineDisplay && (
+        {deadline && (
           <p className="m-0 text-[12.5px] text-acd-dimmer">
-            Closes{" "}
+            {deadline.label}{" "}
             <span className="text-acd-green-body2 font-semibold">
-              {job.deadlineDisplay}
+              {deadline.value}
             </span>
           </p>
         )}

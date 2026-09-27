@@ -175,15 +175,21 @@ const confirmedClosures = readObjectVariable("CONFIRMED_CLOSURES", "src/data/opp
 const employerPostedAtByJobId = readObjectVariable("VERIFIED_EMPLOYER_POSTED_AT", "src/data/opportunities.ts") as Record<string, string>;
 const verifiedFieldsByJobId = readObjectVariable("VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID", "src/data/opportunities.ts") as Record<string, VerifiedOpportunityFields>;
 const verifiedDeadlinesByJobId = readObjectVariable("VERIFIED_HARD_DEADLINES", "src/data/opportunities.ts") as Record<string, VerifiedDeadlineEvidence>;
+const batch2cIds = ["ACD-0281", "ACD-0269", "ACD-0275", "ACD-0277", "ACD-0278"];
+const before2cDeadlines = Object.fromEntries(Object.entries(verifiedDeadlinesByJobId).filter(([id]) => !batch2cIds.includes(id)));
+const before2cClosures = Object.fromEntries(Object.entries(confirmedClosures).filter(([id]) => !batch2cIds.includes(id)));
 const projectionOptions = {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
   removedJobIds,
   confirmedClosures,
   employerPostedAtByJobId,
   verifiedFieldsByJobId,
-  today: "2026-09-26",
+  today: "2026-09-27",
 };
-const projectionBeforeDeadlineRule = buildOpportunityProjection(rawRecords, projectionOptions);
+const projectionBeforeDeadlineRule = buildOpportunityProjection(rawRecords, { ...projectionOptions, confirmedClosures: before2cClosures });
+const projectionBefore2c = buildOpportunityProjection(rawRecords, {
+  ...projectionOptions, confirmedClosures: before2cClosures, verifiedDeadlinesByJobId: before2cDeadlines,
+});
 const projectedRecords = buildOpportunityProjection(rawRecords, {
   ...projectionOptions,
   verifiedDeadlinesByJobId,
@@ -205,11 +211,11 @@ test("public source snapshots have stable unique IDs and every employer label is
 });
 
 test("projection validates identity, dates, locations, lifecycle and retained removals", () => {
-  validateOpportunityRecords(projectedRecords, removedJobIds, "2026-09-26");
+  validateOpportunityRecords(projectedRecords, removedJobIds, "2026-09-27");
   assert.equal(projectedRecords.length, rawRecords.length);
   assert.equal(projectedRecords.filter((record) => record.employerId).length, 159);
   assert.equal(projectedRecords.filter((record) => record.employerPostedAt).length, 24);
-  assert.equal(projectedRecords.filter((record) => record.deadlineDate).length, 61);
+  assert.equal(projectedRecords.filter((record) => record.deadlineDate).length, 63);
   assert.equal(projectedRecords.filter((record) => record.locations?.length).length, 121);
   assert.equal(projectedRecords.filter((record) => record.workArrangement).length, 8);
   assert.equal(projectedRecords.filter((record) => record.employmentType).length, 11);
@@ -218,23 +224,23 @@ test("projection validates identity, dates, locations, lifecycle and retained re
     .map((record) => record.id)
     .sort();
   const expectedDeadlineExpiredIds = [
-    "ACD-0207", "ACD-0245", "ACD-0246", "ACD-0247", "ACD-0248", "ACD-0251",
+    "ACD-0207", "ACD-0245", "ACD-0246", "ACD-0247", "ACD-0248", "ACD-0251", "ACD-0269", "ACD-0281",
   ];
   assert.deepEqual(deadlineExpiredIds, expectedDeadlineExpiredIds);
-  assert.equal(Object.keys(verifiedDeadlinesByJobId).length, 17);
-  assert.equal(projectedRecords.filter((record) => record.publicationStatus === "removed").length, removedJobIds.size + 6 + 1);
-  assert.equal(projectedRecords.filter((record) => record.lifecycleStatus === "closed").length, 30);
+  assert.equal(Object.keys(verifiedDeadlinesByJobId).length, 22);
+  assert.equal(projectedRecords.filter((record) => record.publicationStatus === "removed").length, removedJobIds.size + 11 + 1);
+  assert.equal(projectedRecords.filter((record) => record.lifecycleStatus === "closed").length, 35);
 
   const sourceJobs = rawRecords.filter((record) => record.boardSection === "Jobs");
   const liveBeforeDeadlineRule = getLiveJobs(projectionBeforeDeadlineRule);
   const liveJobs = getLiveJobs(projectedRecords);
   assert.equal(liveBeforeDeadlineRule.length, 77);
-  assert.equal(liveJobs.length, 71);
+  assert.equal(liveJobs.length, 66);
   assert.equal(liveBeforeDeadlineRule.length + removedJobIds.size, sourceJobs.length);
   assert.deepEqual(liveJobs.filter((record) => !liveBeforeDeadlineRule.some((prior) => prior.id === record.id)), []);
   assert.deepEqual(
     liveBeforeDeadlineRule.map((record) => record.id).filter((id) => !liveJobs.some((record) => record.id === id)).sort(),
-    deadlineExpiredIds,
+    [...deadlineExpiredIds, "ACD-0275", "ACD-0277", "ACD-0278"].sort(),
   );
   assert.equal(new Set(liveJobs.map((record) => record.id)).size, liveJobs.length);
   assert.ok(liveJobs.every((record) => record.publicationStatus === "live"));
@@ -265,12 +271,13 @@ test("ACD publication dates never populate employerPostedAt and only exact deadl
   assert.equal(isIsoCalendarDate("2026-02-30"), false);
 });
 
-test("R1 preserves the approved ID set, reactivation and programme removal", () => {
+test("R1 history and reactivation are preserved while Batch 2C removes only the five reviewed live IDs", () => {
   const audit = JSON.parse(readFileSync(resolve(root, "docs/audits/2026-09-26-r1-reconciliation.json"), "utf8")) as {
     inventory: { approvedLiveJobIds: string[]; liveJobIds: string[]; programmeIds: string[]; openApplicationIds: string[] };
   };
   const liveJobs = getLiveJobs(projectedRecords);
-  assert.deepEqual(liveJobs.map((job) => job.id).sort(), [...audit.inventory.liveJobIds].sort());
+  assert.deepEqual(getLiveJobs(projectionBefore2c).map((job) => job.id).sort(), [...audit.inventory.liveJobIds].sort());
+  assert.deepEqual(liveJobs.map((job) => job.id).sort(), audit.inventory.liveJobIds.filter((id) => !batch2cIds.includes(id)).sort());
   assert.deepEqual(getLiveJobs(projectionBeforeDeadlineRule).map((job) => job.id).sort(), [...audit.inventory.approvedLiveJobIds].sort());
   const reactivated = projectedRecords.find((job) => job.id === "ACD-0139")!;
   assert.equal(reactivated.publicationStatus, "live");
@@ -283,7 +290,7 @@ test("R1 preserves the approved ID set, reactivation and programme removal", () 
   for (const [section, expected] of [["Programmes", audit.inventory.programmeIds], ["Open Applications", audit.inventory.openApplicationIds]] as const) {
     assert.deepEqual(projectedRecords.filter((record) => record.boardSection === section && record.publicationStatus === "live").map((record) => record.id).sort(), [...expected].sort());
   }
-  assert.equal(projectedRecords.find((record) => record.id === "ACD-0281")?.publicationStatus, "live", "a retained search-firm deadline is not employer/official-ATS expiry provenance");
+  assert.equal(projectedRecords.find((record) => record.id === "ACD-0281")?.publicationStatus, "removed", "PIDG's own employer advert now supplies verified expiry provenance");
 });
 
 test("reviewed Enza and MCB deadlines share schema and inclusive expiry evidence", () => {
@@ -299,6 +306,96 @@ test("reviewed Enza and MCB deadlines share schema and inclusive expiry evidence
     const expired = buildOpportunityProjection([source], { ...projectionOptions, removedJobIds: new Set(), verifiedDeadlinesByJobId, today: afterDeadline })[0];
     assert.equal(expired.lifecycleReason, "deadline_passed");
     assert.equal(createJobPostingJsonLd(expired), null);
+  }
+});
+
+test("Batch 2C evidence is tied to five exact requisitions and preserves original cutoff wording", () => {
+  const expected = [
+    ["ACD-0281", "2026-09-24", "employer", "4458988023"],
+    ["ACD-0269", "2026-09-25", "official_ats", "R53657"],
+    ["ACD-0275", "2026-09-26", "official_ats", "16969"],
+    ["ACD-0277", "2026-09-26", "official_ats", "16942"],
+    ["ACD-0278", "2026-09-26", "official_ats", "16928"],
+  ];
+  for (const [id, date, authority, requisition] of expected) {
+    const evidence = verifiedDeadlinesByJobId[id];
+    assert.equal(evidence.deadlineDate, date);
+    assert.equal(evidence.authority, authority);
+    assert.equal(evidence.verifiedAt, "2026-09-27");
+    assert.ok(evidence.sourceUrl.includes(requisition));
+    assert.ok(evidence.statement.includes(requisition));
+    assert.ok(!removedJobIds.has(id), "Batch 2C must not hard-code manual removals");
+  }
+  assert.match(verifiedDeadlinesByJobId["ACD-0281"].statement, /23:59 GMT\+1/);
+  assert.match(verifiedDeadlinesByJobId["ACD-0269"].statement, /not accepted on 26\/09\/26 or afterwards/);
+  assert.equal(rawRecords.find((record) => record.id === "ACD-0269")?.deadlineDisplay, "Before 26 Sep 2026");
+  for (const id of ["ACD-0275", "ACD-0277", "ACD-0278"]) {
+    assert.match(verifiedDeadlinesByJobId[id].statement, /2026-09-26T23:59:59\+02:00/);
+    assert.equal(confirmedClosures[id].verifiedAt, "2026-09-27");
+    assert.match(confirmedClosures[id].reason, /POSTING HAS ALREADY EXPIRED/);
+    assert.equal(confirmedClosures[id].evidence, verifiedDeadlinesByJobId[id].sourceUrl);
+  }
+  assert.equal(confirmedClosures["ACD-0269"], undefined, "An unavailable page alone is not confirmed closure");
+  assert.equal(confirmedClosures["ACD-0281"], undefined, "An SRI 404 alone is not confirmed closure");
+});
+
+test("Batch 2C deadline boundaries retain inclusive dates and exclude RMB on the entire 26th", () => {
+  // Exercise the existing date-granularity rule without the later IDC closure override.
+  for (const [id, lastEligibleDay, firstExpiredDay] of [
+    ["ACD-0281", "2026-09-24", "2026-09-25"],
+    ["ACD-0269", "2026-09-25", "2026-09-26"],
+    ["ACD-0275", "2026-09-26", "2026-09-27"],
+    ["ACD-0277", "2026-09-26", "2026-09-27"],
+    ["ACD-0278", "2026-09-26", "2026-09-27"],
+  ]) {
+    const source = rawRecords.find((record) => record.id === id)!;
+    const project = (today: string) => buildOpportunityProjection([source], {
+      ...projectionOptions, removedJobIds: new Set(), confirmedClosures: {}, verifiedDeadlinesByJobId, today,
+    })[0];
+    assert.equal(project(lastEligibleDay).publicationStatus, "live", id);
+    assert.equal(project(firstExpiredDay).publicationStatus, "removed", id);
+    assert.equal(project(firstExpiredDay).lifecycleReason, "deadline_passed", id);
+  }
+});
+
+test("Batch 2C retains every historical field and leaves all unrelated records unchanged", () => {
+  assert.equal(projectionBefore2c.length, 168);
+  assert.equal(projectedRecords.length, 168);
+  assert.equal(getLiveJobs(projectionBefore2c).length, 71);
+  assert.equal(getLiveJobs(projectedRecords).length, 66);
+  const changedFields = new Set([
+    "deadlineDate", "verifiedDeadline", "publicationStatus", "lifecycleStatus", "lifecycleReason",
+    "closureVerifiedAt", "closureReason", "closureEvidence",
+  ]);
+  for (const before of projectionBefore2c) {
+    const after = projectedRecords.find((record) => record.id === before.id)!;
+    assert.ok(after, before.id);
+    if (!batch2cIds.includes(before.id)) {
+      assert.deepEqual(after, before, before.id);
+      continue;
+    }
+    const originalFields = (record: Opportunity) => Object.fromEntries(Object.entries(record).filter(([key]) => !changedFields.has(key)));
+    assert.deepEqual(originalFields(after), originalFields(before), before.id);
+    assert.equal(after.publicationStatus, "removed");
+    assert.equal(after.lifecycleStatus, "closed");
+    assert.equal(after.lifecycleReason, confirmedClosures[before.id] ? "verified_closed" : "deadline_passed");
+    assert.ok(after.verifiedDeadline);
+  }
+});
+
+test("Batch 2C expired jobs are excluded from live discovery, sitemap and JobPosting", () => {
+  const liveJobs = getLiveJobs(projectedRecords);
+  const sitemap = buildSitemap(liveJobs);
+  assert.equal(sitemap.length, 70, "66 job URLs plus four core routes; categories are added separately");
+  for (const id of batch2cIds) {
+    const historical = projectedRecords.find((record) => record.id === id)!;
+    assert.ok(!liveJobs.some((record) => record.id === id));
+    assert.ok(!liveJobs.find((record) => record.slug === historical.slug), "The detail lookup receives only live JOBS");
+    assert.ok(!sitemap.some(({ url }) => url === `${ACD_SITE_URL}/jobs/${historical.slug}/`));
+    assert.equal(createJobPostingJsonLd(historical), null);
+    for (const category of ENABLED_JOB_CATEGORY_PAGES) {
+      assert.ok(!filterJobsForCategory(liveJobs, category).some((record) => record.id === id));
+    }
   }
 });
 
@@ -539,7 +636,7 @@ test("only jobs with verified dates, live lifecycle, stable identity and visible
   })), null);
 });
 
-test("enabled category counts exactly cover their matching current live Jobs records", () => {
+test("enabled category counts cover unique current live Jobs including approved secondary discovery", () => {
   const liveJobs = getLiveJobs(projectedRecords);
   const counts = Object.fromEntries(ENABLED_JOB_CATEGORY_PAGES.map((category) => [
     category.slug,
@@ -547,10 +644,78 @@ test("enabled category counts exactly cover their matching current live Jobs rec
   ]));
 
   assert.deepEqual(counts, {
-    "private-equity-venture-capital": 5,
-    "development-finance": 7,
-    "infrastructure-project-finance": 18,
-    "investment-banking": 14,
+    "private-equity-venture-capital": 11,
+    "development-finance": 4,
+    "infrastructure-project-finance": 17,
+    "investment-banking": 13,
     "climate-impact-investing": 7,
   });
+});
+
+const privateMarketsAssignments: Record<string, Opportunity["roleType"]> = {
+  "ACD-0005": "Infrastructure & Project Finance",
+  "ACD-0009": "Climate & Impact Investing",
+  "ACD-0016": "Infrastructure & Project Finance",
+  "ACD-0041": "Climate & Impact Investing",
+  "ACD-0083": "Infrastructure & Project Finance",
+  "ACD-0151": "Climate & Impact Investing",
+};
+
+test("the private-markets pilot is limited to six approved live roles with unchanged primary categories", () => {
+  const themed = projectedRecords.filter((record) => record.discoveryThemes?.length);
+  assert.deepEqual(themed.map(({ id }) => id).sort(), Object.keys(privateMarketsAssignments).sort());
+  const liveJobs = getLiveJobs(projectedRecords);
+  for (const record of themed) {
+    assert.deepEqual(record.discoveryThemes, ["private-markets"]);
+    assert.equal(record.roleType, privateMarketsAssignments[record.id]);
+    assert.ok(liveJobs.includes(record));
+    const primaryPage = ENABLED_JOB_CATEGORY_PAGES.find((category) => category.roleType === record.roleType)!;
+    assert.ok(filterJobsForCategory(liveJobs, primaryPage).includes(record));
+  }
+  for (const category of ENABLED_JOB_CATEGORY_PAGES.filter((category) => !category.discoveryTheme)) {
+    assert.deepEqual(filterJobsForCategory(liveJobs, category), liveJobs.filter((job) => job.roleType === category.roleType));
+  }
+});
+
+test("the PE page retains its five primary jobs and adds only the six approved secondary jobs", () => {
+  const liveJobs = getLiveJobs(projectedRecords);
+  const pe = ENABLED_JOB_CATEGORY_PAGES.find((category) => category.slug === "private-equity-venture-capital")!;
+  const primaryIds = ["ACD-0211", "ACD-0227", "ACD-0228", "ACD-0252", "ACD-0263"];
+  const expectedIds = [...primaryIds, ...Object.keys(privateMarketsAssignments)].sort();
+  const matches = filterJobsForCategory(liveJobs, pe);
+  assert.deepEqual(matches.map(({ id }) => id).sort(), expectedIds);
+  assert.equal(new Set(matches.map(({ id }) => id)).size, 11);
+  assert.deepEqual(matches, liveJobs.filter((record) => expectedIds.includes(record.id)), "Keep underlying board order");
+  for (const id of ["ACD-0266", "ACD-0285", "ACD-0139", "ACD-0281"]) {
+    assert.equal(projectedRecords.find((record) => record.id === id)?.discoveryThemes, undefined);
+    assert.ok(!matches.some((record) => record.id === id), "Medium-confidence and expired candidates remain excluded");
+  }
+});
+
+test("discovery themes do not change canonical job URLs, sitemap entries or JobPosting data", () => {
+  const liveJobs = getLiveJobs(projectedRecords);
+  const withoutThemes = liveJobs.map((record) => ({ ...record, discoveryThemes: undefined }));
+  assert.deepEqual(buildSitemap(liveJobs), buildSitemap(withoutThemes));
+  for (const record of liveJobs) {
+    assert.deepEqual(createJobPostingJsonLd(record), createJobPostingJsonLd({ ...record, discoveryThemes: undefined }));
+  }
+  const pe = ENABLED_JOB_CATEGORY_PAGES.find((category) => category.discoveryTheme)!;
+  const matches = filterJobsForCategory(liveJobs, pe);
+  for (const id of Object.keys(privateMarketsAssignments)) {
+    const record = liveJobs.find((record) => record.id === id)!;
+    const primaryPage = ENABLED_JOB_CATEGORY_PAGES.find((category) => category.roleType === record.roleType)!;
+    assert.strictEqual(matches.find((item) => item.id === id), record);
+    assert.strictEqual(filterJobsForCategory(liveJobs, primaryPage).find((item) => item.id === id), record);
+    assert.equal(buildSitemap(liveJobs).filter(({ url }) => url === `${ACD_SITE_URL}/jobs/${record.slug}/`).length, 1);
+  }
+});
+
+test("discovery metadata accepts only the controlled array at compile time and runtime", () => {
+  assert.doesNotThrow(() => validateOpportunityRecords([fixture({ discoveryThemes: ["private-markets"] })]));
+  assert.doesNotThrow(() => validateOpportunityRecords([fixture({ discoveryThemes: [] })]));
+  // @ts-expect-error Arbitrary free text is not an editorial discovery theme.
+  const arbitrary: Opportunity["discoveryThemes"] = ["private-equity"];
+  for (const value of [arbitrary, ["private-markets", "anything"], "private-markets", null, [42], ["private-markets", "private-markets"]]) {
+    assert.throws(() => validateOpportunityRecords([fixture({ discoveryThemes: value as Opportunity["discoveryThemes"] })]), /controlled discovery themes/);
+  }
 });

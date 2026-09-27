@@ -48,7 +48,7 @@ test("only the five editorially enabled categories have route definitions", () =
   assert.equal(getEnabledJobCategoryForRoleType("Corporate Development, M&A & Strategy"), undefined);
 });
 
-test("category filters use exact existing roleType and exclude non-live or other sections", () => {
+test("unthemed category filters use exact existing roleType and exclude non-live or other sections", () => {
   const category = getEnabledJobCategory("private-equity-venture-capital");
   assert.ok(category);
   const jobs = [
@@ -62,6 +62,51 @@ test("category filters use exact existing roleType and exclude non-live or other
   assert.deepEqual(filterJobsForCategory(jobs, category).map(({ id }) => id), ["ACD-1", "ACD-3"]);
 });
 
+test("private-markets discovery preserves board order and unique IDs across both match mechanisms", () => {
+  const category = getEnabledJobCategory("private-equity-venture-capital")!;
+  const secondary = job({ id: "secondary", roleType: "Infrastructure & Project Finance", discoveryThemes: ["private-markets"] });
+  const both = job({ id: "both", discoveryThemes: ["private-markets"] });
+  const primary = job({ id: "primary" });
+  const jobs = [secondary, both, primary, { ...both }, { ...secondary }];
+  const before = structuredClone(jobs);
+
+  const matches = filterJobsForCategory(jobs, category);
+  assert.deepEqual(matches.map(({ id }) => id), ["secondary", "both", "primary"]);
+  assert.equal(matches.length, new Set(matches.map(({ id }) => id)).size);
+  assert.strictEqual(matches[0], secondary, "Discovery keeps the original record and primary category");
+  assert.deepEqual(jobs, before, "Filtering must not mutate the shared board records");
+  assert.ok(filterJobsForCategory(jobs, getEnabledJobCategory("infrastructure-project-finance")!).includes(secondary));
+});
+
+test("secondary themes never bypass publication, lifecycle or board-section eligibility", () => {
+  const themed = (overrides: Partial<Opportunity>) => job({
+    roleType: "Climate & Impact Investing", discoveryThemes: ["private-markets"], ...overrides,
+  });
+  const jobs = [
+    themed({ id: "live" }),
+    themed({ id: "verification", lifecycleStatus: "needs_verification" }),
+    themed({ id: "expired", publicationStatus: "removed", lifecycleStatus: "closed", lifecycleReason: "deadline_passed" }),
+    themed({ id: "removed", publicationStatus: "removed" }),
+    themed({ id: "closed", lifecycleStatus: "closed" }),
+    themed({ id: "programme", boardSection: "Programmes" }),
+    themed({ id: "open-application", boardSection: "Open Applications" }),
+    themed({ id: "unapproved", discoveryThemes: undefined, title: "Private Equity Investment Director", company: "Africa50" }),
+  ];
+  assert.deepEqual(filterJobsForCategory(jobs, getEnabledJobCategory("private-equity-venture-capital")!).map(({ id }) => id), ["live", "verification"]);
+});
+
+test("only the PE page opts into the pilot; other pages keep exact primary-category matching", () => {
+  assert.deepEqual(ENABLED_JOB_CATEGORY_PAGES.filter((category) => category.discoveryTheme).map(({ slug, discoveryTheme }) => ({ slug, discoveryTheme })), [
+    { slug: "private-equity-venture-capital", discoveryTheme: "private-markets" },
+  ]);
+  const jobs = ENABLED_JOB_CATEGORY_PAGES.map((category) => job({
+    id: category.slug, roleType: category.roleType, discoveryThemes: ["private-markets"],
+  }));
+  for (const category of ENABLED_JOB_CATEGORY_PAGES.filter((category) => !category.discoveryTheme)) {
+    assert.deepEqual(filterJobsForCategory(jobs, category), jobs.filter((item) => item.roleType === category.roleType));
+  }
+});
+
 test("category metadata has unique descriptions and trailing-slash canonicals", () => {
   const metadata = ENABLED_JOB_CATEGORY_PAGES.map(jobCategoryMetadata);
   const titles = metadata.map((item) => item.title);
@@ -73,7 +118,9 @@ test("category metadata has unique descriptions and trailing-slash canonicals", 
   assert.deepEqual(canonicals, ENABLED_JOB_CATEGORY_PAGES.map((category) => `/jobs/category/${category.slug}/`));
   assert.ok(metadata.every((item) => item.openGraph?.url?.toString().endsWith(item.alternates?.canonical as string)));
   assert.ok(metadata.every((item) => item.openGraph?.title === item.title));
+  assert.ok(metadata.every((item) => item.openGraph?.description === item.description));
   assert.ok(metadata.every((item) => item.twitter?.title === item.title));
+  assert.ok(metadata.every((item) => item.twitter?.description === item.description));
   assert.deepEqual(ENABLED_JOB_CATEGORY_PAGES.map(({ detailLinkLabel }) => detailLinkLabel), [
     "More Private Equity, VC & Private Credit opportunities",
     "More Development Finance opportunities",
@@ -81,8 +128,24 @@ test("category metadata has unique descriptions and trailing-slash canonicals", 
     "More Investment Banking & Advisory opportunities",
     "More Climate & Impact opportunities",
   ]);
-  assert.ok(ENABLED_JOB_CATEGORY_PAGES[0].title.includes("private credit"));
-  assert.ok(ENABLED_JOB_CATEGORY_PAGES[4].title.includes("Climate finance"));
+  assert.deepEqual(ENABLED_JOB_CATEGORY_PAGES.map(({ title }) => title), [
+    "Private Equity & Venture Capital Jobs in Africa",
+    "Development Finance & DFI Jobs in Africa",
+    "Infrastructure & Project Finance Jobs in Africa",
+    "Investment Banking & Corporate Finance Jobs in Africa",
+    "Climate Finance & Impact Investing Jobs in Africa",
+  ]);
+  assert.ok(ENABLED_JOB_CATEGORY_PAGES.every((category) => category.metaTitle === `${category.title} | Africa Career Desk`));
+  assert.match(ENABLED_JOB_CATEGORY_PAGES[0].description, /private credit/);
+  assert.match(ENABLED_JOB_CATEGORY_PAGES[0].metaDescription, /private credit/);
+  assert.match(ENABLED_JOB_CATEGORY_PAGES[1].description, /development finance institutions \(DFIs\)/);
+  assert.match(ENABLED_JOB_CATEGORY_PAGES[3].description, /transaction advisory/);
+  assert.match(ENABLED_JOB_CATEGORY_PAGES[4].description, /ESG/);
+  for (const { description } of ENABLED_JOB_CATEGORY_PAGES) {
+    const words = description.split(/\s+/).length;
+    assert.ok(words >= 20 && words <= 35, "Intros stay concise");
+    assert.equal((description.match(/[.!?]/g) ?? []).length, 1, "Intros stay one sentence");
+  }
   assert.ok(ENABLED_JOB_CATEGORY_PAGES.every((category) => !/thousands|best jobs|#1|leading job board/i.test(`${category.title} ${category.description} ${category.metaTitle} ${category.metaDescription}`)));
 });
 

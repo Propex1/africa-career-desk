@@ -17,13 +17,22 @@ export function filterJobsForCategory(
   jobs: readonly Opportunity[],
   category: JobCategoryPageDefinition,
 ): Opportunity[] {
-  return jobs.filter((job) =>
-    job.boardSection === "Jobs" &&
-    job.status === "Active" &&
-    (job.publicationStatus ?? "live") === "live" &&
-    (job.lifecycleStatus ?? "active") !== "closed" &&
-    job.roleType === category.roleType,
-  );
+  const seenIds = new Set<string>();
+  return jobs.filter((job) => {
+    const matches = job.roleType === category.roleType ||
+      Boolean(category.discoveryTheme && job.discoveryThemes?.includes(category.discoveryTheme));
+    if (
+      job.boardSection !== "Jobs" ||
+      job.status !== "Active" ||
+      (job.publicationStatus ?? "live") !== "live" ||
+      (job.lifecycleStatus ?? "active") === "closed" ||
+      !matches || seenIds.has(job.id)
+    ) return false;
+
+    // Filter in the board's existing order, irrespective of how a job matched.
+    seenIds.add(job.id);
+    return true;
+  });
 }
 
 export function jobCategoryMetadata(category: JobCategoryPageDefinition): Metadata {

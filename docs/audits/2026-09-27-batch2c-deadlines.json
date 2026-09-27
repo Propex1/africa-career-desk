@@ -1,0 +1,378 @@
+{
+  "batch": "2C",
+  "reviewDate": "2026-09-27",
+  "baseCommit": "0f247b5770cdd15a1651b048048923184588cdf2",
+  "scope": "Only five existing live opportunities; no classification, theme, design, engine or source-copy changes.",
+  "before": {
+    "jobs": 71,
+    "programmes": 10,
+    "open": 14,
+    "records": 168,
+    "categories": {
+      "private-equity-venture-capital": 5,
+      "development-finance": 7,
+      "infrastructure-project-finance": 18,
+      "investment-banking": 14,
+      "climate-impact-investing": 7
+    }
+  },
+  "after": {
+    "jobs": 66,
+    "programmes": 10,
+    "open": 14,
+    "records": 168,
+    "categories": {
+      "private-equity-venture-capital": 5,
+      "development-finance": 4,
+      "infrastructure-project-finance": 17,
+      "investment-banking": 13,
+      "climate-impact-investing": 7
+    }
+  },
+  "boundaryPolicy": "Existing UTC date-granularity engine is unchanged. PIDG and IDC exact time/timezone statements are preserved as evidence, not implemented as intraday timers. This batch corrects already-passed deadlines; source-time precision is not silently claimed for engine execution.",
+  "cases": [
+    {
+      "id": "ACD-0281",
+      "title": "Head of Special Assets",
+      "employer": "PIDG",
+      "slug": "head-of-special-assets-pidg",
+      "primaryCategory": "Infrastructure & Project Finance",
+      "sourceCutoff": "24 September 2026, 23:59 GMT+1",
+      "authority": "employer",
+      "savedReviewDate": "2026-09-23",
+      "savedFiles": [
+        {
+          "path": "data/acd-runtime/publication-previews/approved-content-2026-09-23/sources/B3-20260923-001-apply.txt",
+          "sha256": "ee2b175310df22985cc0164182f50a82276a0a79e639a3f9c8a893c6fda3f6ab"
+        },
+        {
+          "path": "data/acd-runtime/publication-previews/approved-content-2026-09-23/sources/B3-20260923-001-evidence.txt",
+          "sha256": "1881a885cdd4e6c67970e7b0807336e80b2129cf440cc55e70a23129007db750"
+        }
+      ],
+      "currentReview": {
+        "employerUrl": "https://uk.linkedin.com/jobs/view/head-of-special-assets-at-the-private-infrastructure-development-group-pidg-4458988023",
+        "employerResult": "Retrieved employer advert still gives the same explicit application-form cutoff; research-tool content can be cached.",
+        "sriUrl": "https://www.sri-executive.com/opportunities/head-of-special-assets/",
+        "sriHttp": 404,
+        "interpretation": "404 is not proof of closure; rely on employer-backed hard deadline."
+      },
+      "supersedingEvidence": "No extension or reposting found in the accessible official evidence.",
+      "decision": "Encode employer-backed deadline; existing date-based lifecycle expires it.",
+      "timeEvidence": "23:59 GMT+1 is 22:59 UTC at the source's stated minute precision; no new closing time is invented.",
+      "before": {
+        "deadlineDisplay": "24 Sep 2026, 23:59 GMT+1",
+        "deadlineDate": null,
+        "verifiedDeadline": null,
+        "publicationStatus": "live",
+        "lifecycleStatus": "needs_verification"
+      },
+      "after": {
+        "deadlineDisplay": "24 Sep 2026, 23:59 GMT+1",
+        "deadlineDate": "2026-09-24",
+        "verifiedDeadline": {
+          "deadlineDate": "2026-09-24",
+          "authority": "employer",
+          "sourceUrl": "https://uk.linkedin.com/jobs/view/head-of-special-assets-at-the-private-infrastructure-development-group-pidg-4458988023",
+          "verifiedAt": "2026-09-27",
+          "statement": "PIDG's employer advert 4458988023 explicitly requires the application form by 24 September 2026 at 23:59 GMT+1 (22:59 UTC). The retained SRI Executive role capture from 23 Sep independently confirms the cutoff and exclusive mandate. The employer advert still carries this cutoff on the 27 Sep review; SRI now returns 404, which is not itself closure evidence. No superseding extension was found. Exact timezone evidence and recheck limitations are preserved in docs/audits/2026-09-27-batch2c-deadlines.json."
+        },
+        "publicationStatus": "removed",
+        "lifecycleStatus": "closed",
+        "lifecycleReason": "deadline_passed",
+        "closureVerifiedAt": null,
+        "closureReason": null,
+        "closureEvidence": null
+      }
+    },
+    {
+      "id": "ACD-0269",
+      "title": "TWC Transactor",
+      "employer": "RMB / Rand Merchant Bank",
+      "slug": "twc-transactor-rmb-johannesburg-r53657",
+      "primaryCategory": "Investment Banking & Advisory",
+      "sourceCutoff": "Before 26 September 2026; applications not accepted on that date or afterwards",
+      "authority": "official_ats",
+      "requisition": "R53657",
+      "savedReviewDate": "2026-09-20",
+      "savedFiles": [
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/final-source-evidence/05-source.txt",
+          "sha256": "d829b63fa31627d89c03f1219c8f9b03ed69f1014167c5db27435de875e5e0ec"
+        },
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/final-source-checks.json",
+          "sha256": "5bc637f7582803f82bde40aee6f5749e7cdce051983441a052a831ff5c0e0b89"
+        }
+      ],
+      "currentReview": {
+        "id": "rmb",
+        "url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/TWC-Transactor_R53657",
+        "finalUrl": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/TWC-Transactor_R53657",
+        "status": 200,
+        "checkedAt": "2026-09-27T10:55:29.010Z",
+        "title": "Careers",
+        "lines": [],
+        "jsonLd": [],
+        "length": 437,
+        "message": "The page you are looking for doesn't exist.",
+        "dataEndpointHttp": 403,
+        "interpretation": "Unavailable current page is not independently treated as confirmed closure. Saved explicit cutoff remains the removal authority; indexed official advert also retains the original wording."
+      },
+      "supersedingEvidence": "No extension or reposting found; current role body cannot be freshly verified.",
+      "decision": "Encode inclusive last-eligible date 2026-09-25; preserve Before 26 Sep display.",
+      "boundary": {
+        "sourceDate": "2026-09-26",
+        "exclusive": true,
+        "encodedLastEligibleDate": "2026-09-25",
+        "firstExcludedProjectionDate": "2026-09-26",
+        "sourceTimezone": null,
+        "engineConvention": "Existing inclusive UTC calendar-day comparison; no employer-local timezone or clock time inferred."
+      },
+      "before": {
+        "deadlineDisplay": "Before 26 Sep 2026",
+        "deadlineDate": null,
+        "verifiedDeadline": null,
+        "publicationStatus": "live",
+        "lifecycleStatus": "needs_verification"
+      },
+      "after": {
+        "deadlineDisplay": "Before 26 Sep 2026",
+        "deadlineDate": "2026-09-25",
+        "verifiedDeadline": {
+          "deadlineDate": "2026-09-25",
+          "authority": "official_ats",
+          "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/TWC-Transactor_R53657",
+          "verifiedAt": "2026-09-27",
+          "statement": "Official FirstRand Workday requisition R53657, captured 20 Sep, explicitly says applications are not accepted on 26/09/26 or afterwards. Original wording: Before 26 Sep 2026. The inclusive-date lifecycle therefore uses 2026-09-25 as the last eligible day and excludes this role from 2026-09-26; this is not an apply-by-26-Sep deadline. No source timezone is asserted. Current Workday page is unavailable, not proof of closure; no superseding extension was found. Evidence and the UTC-date convention are documented in docs/audits/2026-09-27-batch2c-deadlines.json."
+        },
+        "publicationStatus": "removed",
+        "lifecycleStatus": "closed",
+        "lifecycleReason": "deadline_passed",
+        "closureVerifiedAt": null,
+        "closureReason": null,
+        "closureEvidence": null
+      }
+    },
+    {
+      "id": "ACD-0275",
+      "title": "Business Analyst",
+      "employer": "Industrial Development Corporation of South Africa (IDC)",
+      "slug": "business-analyst-idc-sandton-idc00806",
+      "primaryCategory": "Development Finance & Multilaterals",
+      "sourceCutoff": "26 September 2026",
+      "authority": "official_ats",
+      "requisition": "IDC00806",
+      "atsJobId": "16969",
+      "savedReviewDate": "2026-09-20",
+      "sourceValidThrough": "2026-09-26T23:59:59+02:00",
+      "savedFiles": [
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/source-evidence/11-source.txt",
+          "sha256": "7b80fdd2a342e9af73f6d2df74c239bd4baa1945bd718721d86f9927cfad65ff"
+        },
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/final-source-checks.json",
+          "sha256": "5bc637f7582803f82bde40aee6f5749e7cdce051983441a052a831ff5c0e0b89"
+        }
+      ],
+      "currentReview": {
+        "id": "idc-16969",
+        "url": "https://careers.idc.co.za/details.html?jobId=16969",
+        "finalUrl": "https://careers.idc.co.za/details.html?jobId=16969",
+        "status": 200,
+        "checkedAt": "2026-09-27T10:55:33.029Z",
+        "title": "IDC Careers",
+        "lines": [
+          "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED."
+        ],
+        "jsonLd": [],
+        "length": 1109,
+        "message": "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED.",
+        "capture": {
+          "path": "C:/Users/Armel/AppData/Local/Temp/acd-batch2c-evidence-mJetBO/idc-16969-browser.txt",
+          "sha256": "c16be1a64ec9a20cf98befbf84485b3e420270d37c626808ec87c7f260a67ad3"
+        }
+      },
+      "supersedingEvidence": "Exact requisition now explicitly expired; no extension or reposting found in reviewed official sources.",
+      "decision": "Preserve verified deadline and use stronger, newly observed explicit closure through existing CONFIRMED_CLOSURES.",
+      "before": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": null,
+        "publicationStatus": "live",
+        "lifecycleStatus": "needs_verification"
+      },
+      "after": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": {
+          "deadlineDate": "2026-09-26",
+          "authority": "official_ats",
+          "sourceUrl": "https://careers.idc.co.za/details.html?jobId=16969&jobTitle=Business+Analyst",
+          "verifiedAt": "2026-09-27",
+          "statement": "IDC Business Analyst, requisition IDC00806 / job 16969. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json."
+        },
+        "publicationStatus": "removed",
+        "lifecycleStatus": "closed",
+        "lifecycleReason": "verified_closed",
+        "closureVerifiedAt": "2026-09-27",
+        "closureReason": "Official IDC Business Analyst page, IDC00806 / job 16969: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+        "closureEvidence": "https://careers.idc.co.za/details.html?jobId=16969&jobTitle=Business+Analyst"
+      }
+    },
+    {
+      "id": "ACD-0277",
+      "title": "Regional Manager — Mpumalanga",
+      "employer": "Industrial Development Corporation of South Africa (IDC)",
+      "slug": "regional-manager-mpumalanga-idc-idc00813",
+      "primaryCategory": "Development Finance & Multilaterals",
+      "sourceCutoff": "26 September 2026",
+      "authority": "official_ats",
+      "requisition": "IDC00813",
+      "atsJobId": "16942",
+      "savedReviewDate": "2026-09-20",
+      "sourceValidThrough": "2026-09-26T23:59:59+02:00",
+      "savedFiles": [
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/source-evidence/13-source.txt",
+          "sha256": "f2c74db34d0629e4d165465354cca17405f768d76d649151d53291ed90e43d9c"
+        },
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/final-source-checks.json",
+          "sha256": "5bc637f7582803f82bde40aee6f5749e7cdce051983441a052a831ff5c0e0b89"
+        }
+      ],
+      "currentReview": {
+        "id": "idc-16942",
+        "url": "https://careers.idc.co.za/details.html?jobId=16942",
+        "finalUrl": "https://careers.idc.co.za/details.html?jobId=16942",
+        "status": 200,
+        "checkedAt": "2026-09-27T10:55:32.997Z",
+        "title": "IDC Careers",
+        "lines": [
+          "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED."
+        ],
+        "jsonLd": [],
+        "length": 1109,
+        "message": "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED.",
+        "capture": {
+          "path": "C:/Users/Armel/AppData/Local/Temp/acd-batch2c-evidence-mJetBO/idc-16942-browser.txt",
+          "sha256": "c16be1a64ec9a20cf98befbf84485b3e420270d37c626808ec87c7f260a67ad3"
+        }
+      },
+      "supersedingEvidence": "Exact requisition now explicitly expired; no extension or reposting found in reviewed official sources.",
+      "decision": "Preserve verified deadline and use stronger, newly observed explicit closure through existing CONFIRMED_CLOSURES.",
+      "before": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": null,
+        "publicationStatus": "live",
+        "lifecycleStatus": "needs_verification"
+      },
+      "after": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": {
+          "deadlineDate": "2026-09-26",
+          "authority": "official_ats",
+          "sourceUrl": "https://careers.idc.co.za/details.html?jobId=16942&jobTitle=Regional+Manager+-+Mpumulanga+",
+          "verifiedAt": "2026-09-27",
+          "statement": "IDC Regional Manager - Mpumulanga, requisition IDC00813 / job 16942. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json."
+        },
+        "publicationStatus": "removed",
+        "lifecycleStatus": "closed",
+        "lifecycleReason": "verified_closed",
+        "closureVerifiedAt": "2026-09-27",
+        "closureReason": "Official IDC Regional Manager - Mpumulanga page, IDC00813 / job 16942: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+        "closureEvidence": "https://careers.idc.co.za/details.html?jobId=16942&jobTitle=Regional+Manager+-+Mpumulanga+"
+      }
+    },
+    {
+      "id": "ACD-0278",
+      "title": "Dealmaker — Agro",
+      "employer": "Industrial Development Corporation of South Africa (IDC)",
+      "slug": "dealmaker-agro-idc-gauteng-idc00812",
+      "primaryCategory": "Development Finance & Multilaterals",
+      "sourceCutoff": "26 September 2026",
+      "authority": "official_ats",
+      "requisition": "IDC00812",
+      "atsJobId": "16928",
+      "savedReviewDate": "2026-09-20",
+      "sourceValidThrough": "2026-09-26T23:59:59+02:00",
+      "savedFiles": [
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/source-evidence/14-source.txt",
+          "sha256": "510978ce9b8f69a686dbfb851aeb225429fbeb008d367ab7d768ac9c52255c2f"
+        },
+        {
+          "path": "data/acd-runtime/publication-previews/approved-jobs-2026-09-20/final-source-checks.json",
+          "sha256": "5bc637f7582803f82bde40aee6f5749e7cdce051983441a052a831ff5c0e0b89"
+        }
+      ],
+      "currentReview": {
+        "id": "idc-16928",
+        "url": "https://careers.idc.co.za/details.html?jobId=16928",
+        "finalUrl": "https://careers.idc.co.za/details.html?jobId=16928",
+        "status": 200,
+        "checkedAt": "2026-09-27T10:55:32.993Z",
+        "title": "IDC Careers",
+        "lines": [
+          "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED."
+        ],
+        "jsonLd": [],
+        "length": 1109,
+        "message": "SORRY, THIS JOB POSTING HAS ALREADY EXPIRED.",
+        "capture": {
+          "path": "C:/Users/Armel/AppData/Local/Temp/acd-batch2c-evidence-mJetBO/idc-16928-browser.txt",
+          "sha256": "c16be1a64ec9a20cf98befbf84485b3e420270d37c626808ec87c7f260a67ad3"
+        }
+      },
+      "supersedingEvidence": "Exact requisition now explicitly expired; no extension or reposting found in reviewed official sources.",
+      "decision": "Preserve verified deadline and use stronger, newly observed explicit closure through existing CONFIRMED_CLOSURES.",
+      "before": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": null,
+        "publicationStatus": "live",
+        "lifecycleStatus": "needs_verification"
+      },
+      "after": {
+        "deadlineDisplay": "26 Sep 2026",
+        "deadlineDate": "2026-09-26",
+        "verifiedDeadline": {
+          "deadlineDate": "2026-09-26",
+          "authority": "official_ats",
+          "sourceUrl": "https://careers.idc.co.za/details.html?jobId=16928&jobTitle=Dealmaker+-+Agro",
+          "verifiedAt": "2026-09-27",
+          "statement": "IDC Dealmaker - Agro, requisition IDC00812 / job 16928. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json."
+        },
+        "publicationStatus": "removed",
+        "lifecycleStatus": "closed",
+        "lifecycleReason": "verified_closed",
+        "closureVerifiedAt": "2026-09-27",
+        "closureReason": "Official IDC Dealmaker - Agro page, IDC00812 / job 16928: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+        "closureEvidence": "https://careers.idc.co.za/details.html?jobId=16928&jobTitle=Dealmaker+-+Agro"
+      }
+    }
+  ],
+  "verification": {
+    "allFiveAbsentFromLive": true,
+    "retainedAmongTargets": [],
+    "historicalRecordCount": 168,
+    "unrelatedHistoricalRecordsUnchanged": 163,
+    "manualRemovalIdsUnchanged": true,
+    "engineUnchanged": true,
+    "batch2bUnchanged": true,
+    "testsPassed": 79,
+    "typescript": "passed",
+    "lint": "passed (tracked source plus Batch 2B additions; ignored runtime excluded)",
+    "productionBuild": "passed, 83 generated pages",
+    "detailHttp": "all five 404 with noindex and no JobPosting",
+    "homepageJobs": 66,
+    "sitemapUrls": 75,
+    "push": false,
+    "deployment": false,
+    "batch3Activated": false
+  }
+}

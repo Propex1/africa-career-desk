@@ -114,6 +114,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0005",
+    discoveryThemes: ["private-markets"],
     slug: "investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca",
     title: "Investment Associate, Africa50 Infrastructure Acceleration Fund",
     company: "Africa50",
@@ -329,6 +330,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0009",
+    discoveryThemes: ["private-markets"],
     slug: "investment-director-dre-africa-platform-africa50-casablanca",
     title: "Investment Director, DRE Africa Platform",
     company: "Africa50",
@@ -489,6 +491,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0016",
+    discoveryThemes: ["private-markets"],
     slug: "senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca",
     title: "Senior Investment Director, Africa50 Infrastructure Acceleration Fund",
     company: "Africa50",
@@ -804,6 +807,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0041",
+    discoveryThemes: ["private-markets"],
     slug: "senior-investment-officer-in-climate-finance-sub-saharan-africa-responsability-investments-cape-town",
     title: "Senior Investment Officer in Climate Finance, Sub-Saharan Africa",
     company: "responsAbility Investments",
@@ -1089,6 +1093,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0083",
+    discoveryThemes: ["private-markets"],
     slug: "private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco",
     title: "Private Equity Intern, Africa50 Infrastructure Acceleration Fund",
     company: "Africa50",
@@ -1965,6 +1970,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   },
   {
     id: "ACD-0151",
+    discoveryThemes: ["private-markets"],
     slug: "senior-investment-officer-financial-institutions-debt-financing-responsability-cape-town",
     title: "Senior Investment Officer for Financial Institutions Debt Financing",
     company: "responsAbility Investments",
@@ -4308,6 +4314,21 @@ export const REMOVED_JOB_IDS = new Set([
 ]);
 
 const CONFIRMED_CLOSURES = {
+  "ACD-0275": {
+    verifiedAt: "2026-09-27",
+    reason: "Official IDC Business Analyst page, IDC00806 / job 16969: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+    evidence: "https://careers.idc.co.za/details.html?jobId=16969&jobTitle=Business+Analyst",
+  },
+  "ACD-0277": {
+    verifiedAt: "2026-09-27",
+    reason: "Official IDC Regional Manager - Mpumulanga page, IDC00813 / job 16942: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+    evidence: "https://careers.idc.co.za/details.html?jobId=16942&jobTitle=Regional+Manager+-+Mpumulanga+",
+  },
+  "ACD-0278": {
+    verifiedAt: "2026-09-27",
+    reason: "Official IDC Dealmaker - Agro page, IDC00812 / job 16928: SORRY, THIS JOB POSTING HAS ALREADY EXPIRED. Browser rechecked 27 Sep 2026; its own saved deadline is also retained.",
+    evidence: "https://careers.idc.co.za/details.html?jobId=16928&jobTitle=Dealmaker+-+Agro",
+  },
   // ACD-0139: the 9 Sep closure is superseded by the approved 23 Sep reactivation.
   // Original closure evidence remains in docs/audits/2026-09-09-job-expiry-audit.*.
   "ACD-0162": {
@@ -4433,6 +4454,44 @@ const CONFIRMED_CLOSURES = {
 } as const;
 
 const VERIFIED_HARD_DEADLINES: Readonly<Record<string, VerifiedDeadlineEvidence>> = {
+  // Batch 2C: role-specific authoritative cutoffs; original displays remain intact.
+  // The existing lifecycle compares inclusive UTC dates, not intraday timestamps.
+  "ACD-0281": {
+    deadlineDate: "2026-09-24",
+    authority: "employer",
+    sourceUrl: "https://uk.linkedin.com/jobs/view/head-of-special-assets-at-the-private-infrastructure-development-group-pidg-4458988023",
+    verifiedAt: "2026-09-27",
+    statement: "PIDG's employer advert 4458988023 explicitly requires the application form by 24 September 2026 at 23:59 GMT+1 (22:59 UTC). The retained SRI Executive role capture from 23 Sep independently confirms the cutoff and exclusive mandate. The employer advert still carries this cutoff on the 27 Sep review; SRI now returns 404, which is not itself closure evidence. No superseding extension was found. Exact timezone evidence and recheck limitations are preserved in docs/audits/2026-09-27-batch2c-deadlines.json.",
+  },
+  "ACD-0269": {
+    // Before 26 Sep excludes the whole 26th: 25 Sep is the final eligible date.
+    deadlineDate: "2026-09-25",
+    authority: "official_ats",
+    sourceUrl: "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/TWC-Transactor_R53657",
+    verifiedAt: "2026-09-27",
+    statement: "Official FirstRand Workday requisition R53657, captured 20 Sep, explicitly says applications are not accepted on 26/09/26 or afterwards. Original wording: Before 26 Sep 2026. The inclusive-date lifecycle therefore uses 2026-09-25 as the last eligible day and excludes this role from 2026-09-26; this is not an apply-by-26-Sep deadline. No source timezone is asserted. Current Workday page is unavailable, not proof of closure; no superseding extension was found. Evidence and the UTC-date convention are documented in docs/audits/2026-09-27-batch2c-deadlines.json.",
+  },
+  "ACD-0275": {
+    deadlineDate: "2026-09-26",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16969&jobTitle=Business+Analyst",
+    verifiedAt: "2026-09-27",
+    statement: "IDC Business Analyst, requisition IDC00806 / job 16969. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json.",
+  },
+  "ACD-0277": {
+    deadlineDate: "2026-09-26",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16942&jobTitle=Regional+Manager+-+Mpumulanga+",
+    verifiedAt: "2026-09-27",
+    statement: "IDC Regional Manager - Mpumulanga, requisition IDC00813 / job 16942. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json.",
+  },
+  "ACD-0278": {
+    deadlineDate: "2026-09-26",
+    authority: "official_ats",
+    sourceUrl: "https://careers.idc.co.za/details.html?jobId=16928&jobTitle=Dealmaker+-+Agro",
+    verifiedAt: "2026-09-27",
+    statement: "IDC Dealmaker - Agro, requisition IDC00812 / job 16928. The official 20 Sep role-specific capture shows posting end date 26 Sep 2026 and JobPosting validThrough 2026-09-26T23:59:59+02:00. Its exact official page explicitly reports the posting expired on the 27 Sep browser recheck. Evidence preserved in docs/audits/2026-09-27-batch2c-deadlines.json.",
+  },
   "ACD-0227": {
     "deadlineDate": "2026-09-28",
     "authority": "employer",

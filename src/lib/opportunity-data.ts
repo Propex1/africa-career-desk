@@ -8,6 +8,7 @@ import type {
   OpportunityWorkArrangement,
   VerifiedDeadlineEvidence,
 } from "@/types";
+import { DISCOVERY_THEMES } from "../types/index.ts";
 
 const MONTHS: Record<string, number> = {
   Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6,
@@ -170,6 +171,15 @@ export function validateOpportunityRecords(
     ids.add(opportunity.id);
     slugs.add(opportunity.slug);
     foundIds.add(opportunity.id);
+
+    const themes = opportunity.discoveryThemes;
+    if (themes !== undefined && (
+      !Array.isArray(themes) ||
+      themes.some((theme) => !DISCOVERY_THEMES.includes(theme)) ||
+      new Set(themes).size !== themes.length
+    )) {
+      throw new Error(`${opportunity.id}: discoveryThemes must contain distinct controlled discovery themes.`);
+    }
 
     if (opportunity.employerId && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(opportunity.employerId)) {
       throw new Error(`${opportunity.id}: invalid employerId "${opportunity.employerId}".`);
