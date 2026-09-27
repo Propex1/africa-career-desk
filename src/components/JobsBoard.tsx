@@ -5,6 +5,7 @@ import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
 import JobCard from "./JobCard";
 import { trackFilterUsed, trackSearchUsed } from "@/lib/analytics";
+import { filterJobsForBoard, type JobBoardFilters as Filters } from "@/lib/job-filters";
 
 // ── Filter Dropdown ───────────────────────────────────────────────────────────
 
@@ -320,14 +321,6 @@ interface JobsBoardProps {
   languages: string[];
 }
 
-type Filters = {
-  region: string[];
-  country: string[];
-  roleType: string[];
-  experience: string[];
-  language: string[];
-};
-
 export default function JobsBoard({
   jobs,
   regions,
@@ -391,21 +384,7 @@ export default function JobsBoard({
 
   const q = search.trim().toLowerCase();
 
-  const filtered = activeJobs
-    .filter((j) => {
-      if (filters.region.length && !filters.region.includes(j.region ?? "")) return false;
-      if (filters.country.length && !filters.country.includes(j.country ?? "")) return false;
-      if (filters.roleType.length && !filters.roleType.includes(j.roleType)) return false;
-      if (filters.experience.length && !filters.experience.includes(j.experienceBucket ?? "")) return false;
-      if (filters.language.length && !(j.languageTags ?? []).some((t) => filters.language.includes(t))) return false;
-      if (q) {
-        const hay = [j.title, j.company, j.city ?? "", j.country ?? "", j.region ?? "", j.roleType]
-          .join(" ")
-          .toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
-      return true;
-    })
+  const filtered = filterJobsForBoard(activeJobs, filters, search)
     .sort((a, b) => {
       if (sort === "deadline") return deadlineMs(a.deadlineDisplay) - deadlineMs(b.deadlineDisplay);
       return 0;

@@ -24,6 +24,7 @@ import {
 } from "../../../src/data/employer-identities.ts";
 import { ENABLED_JOB_CATEGORY_PAGES } from "../../../src/data/job-categories.ts";
 import { filterJobsForCategory } from "../../../src/lib/job-categories.ts";
+import { filterJobsForBoard, type JobBoardFilters } from "../../../src/lib/job-filters.ts";
 
 const root = process.cwd();
 const publicSourceFiles = [
@@ -718,4 +719,97 @@ test("discovery metadata accepts only the controlled array at compile time and r
   for (const value of [arbitrary, ["private-markets", "anything"], "private-markets", null, [42], ["private-markets", "private-markets"]]) {
     assert.throws(() => validateOpportunityRecords([fixture({ discoveryThemes: value as Opportunity["discoveryThemes"] })]), /controlled discovery themes/);
   }
+});
+
+const peBoardFilters = (overrides: Partial<JobBoardFilters> = {}): JobBoardFilters => ({
+  region: [], country: [], roleType: ["Private Equity, VC & Private Credit"],
+  experience: [], language: [], ...overrides,
+});
+
+test("Jobs-board PE discovery returns the same eleven primary and approved secondary records as the category page", () => {
+  const liveJobs = getLiveJobs(projectedRecords);
+  const category = ENABLED_JOB_CATEGORY_PAGES.find((category) => category.discoveryTheme)!;
+  const results = filterJobsForBoard(liveJobs, peBoardFilters());
+  assert.deepEqual(results, filterJobsForCategory(liveJobs, category));
+  assert.deepEqual(results.map(({ id }) => id).sort(), [
+    "ACD-0005", "ACD-0009", "ACD-0016", "ACD-0041", "ACD-0083", "ACD-0151",
+    "ACD-0211", "ACD-0227", "ACD-0228", "ACD-0252", "ACD-0263",
+  ]);
+  assert.equal(results.length, 11);
+  for (const [id, roleType] of Object.entries(privateMarketsAssignments)) {
+    const result = results.find((job) => job.id === id)!;
+    assert.equal(result.roleType, roleType);
+    assert.strictEqual(result, liveJobs.find((job) => job.id === id));
+  }
+  for (const id of ["ACD-0266", "ACD-0285", "ACD-0139", "ACD-0281"]) {
+    assert.ok(!results.some((job) => job.id === id), "Unapproved or expired roles stay excluded");
+  }
+});
+
+test("Jobs-board discovery deduplicates stable IDs and retains order without mutating records", () => {
+  const both = fixture({ id: "both", discoveryThemes: ["private-markets"] });
+  const secondary = fixture({ id: "secondary", roleType: "Climate & Impact Investing", discoveryThemes: ["private-markets"] });
+  const primary = fixture({ id: "primary" });
+  const jobs = [secondary, both, { ...both }, primary, { ...secondary }];
+  const before = structuredClone(jobs);
+  assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters()).map(({ id }) => id), ["secondary", "both", "primary"]);
+  assert.deepEqual(jobs, before);
+});
+
+test("Jobs-board PE themes cannot bypass verified expiry, removal or board-section eligibility", () => {
+  const stale = batch2cIds.map((id) => ({
+    ...projectedRecords.find((job) => job.id === id)!, discoveryThemes: ["private-markets"] as Opportunity["discoveryThemes"],
+  }));
+  const themed = (overrides: Partial<Opportunity>) => fixture({
+    roleType: "Infrastructure & Project Finance", discoveryThemes: ["private-markets"], ...overrides,
+  });
+  const jobs = [
+    ...stale,
+    themed({ id: "removed", publicationStatus: "removed" }),
+    themed({ id: "closed", lifecycleStatus: "closed" }),
+    themed({ id: "programme", boardSection: "Programmes" }),
+    themed({ id: "open", boardSection: "Open Applications" }),
+    themed({ id: "verification", lifecycleStatus: "needs_verification" }),
+  ];
+  assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters()).map(({ id }) => id), ["verification"]);
+});
+
+const peCombinationCases: { name: string; filters: Partial<JobBoardFilters>; search?: string; ids: string[] }[] = [
+  { name: "country", filters: { country: ["South Africa"] }, ids: ["ACD-0041", "ACD-0151", "ACD-0211"] },
+  { name: "region", filters: { region: ["North Africa"] }, ids: ["ACD-0252", "ACD-0263"] },
+  { name: "experience", filters: { experience: ["Leadership"] }, ids: ["ACD-0009", "ACD-0016"] },
+  { name: "language", filters: { language: ["French"] }, ids: ["ACD-0005", "ACD-0016", "ACD-0083", "ACD-0151", "ACD-0252"] },
+  { name: "keyword", filters: {}, search: "  AFRICA50  ", ids: ["ACD-0005", "ACD-0009", "ACD-0016", "ACD-0083"] },
+  { name: "all filter dimensions together", filters: { country: ["Morocco"], region: ["Pan-African"], experience: ["Leadership"], language: ["French"] }, search: "Africa50", ids: ["ACD-0016"] },
+];
+for (const combination of peCombinationCases) {
+  test(`Jobs-board PE plus ${combination.name} preserves existing narrowing semantics`, () => {
+    assert.deepEqual(
+      filterJobsForBoard(getLiveJobs(projectedRecords), peBoardFilters(combination.filters), combination.search).map(({ id }) => id).sort(),
+      combination.ids,
+    );
+  });
+}
+
+test("other Jobs-board role types remain primary-only and clearing selections restores all live jobs", () => {
+  const jobs = getLiveJobs(projectedRecords);
+  assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters({ roleType: [] })), jobs);
+  for (const roleType of new Set(jobs.map((job) => job.roleType))) {
+    if (roleType === "Private Equity, VC & Private Credit") continue;
+    assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters({ roleType: [roleType] })), jobs.filter((job) => job.roleType === roleType));
+  }
+  assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters({ roleType: ["Unapproved role type"] })), []);
+});
+
+test("Jobs-board multiselect remains OR within a filter and AND between filters", () => {
+  const jobs = getLiveJobs(projectedRecords);
+  const pe = new Set(filterJobsForBoard(jobs, peBoardFilters()).map(({ id }) => id));
+  const filters = peBoardFilters({ roleType: ["Private Equity, VC & Private Credit", "Infrastructure & Project Finance"], country: ["Morocco", "South Africa"] });
+  const results = filterJobsForBoard(jobs, filters);
+  assert.deepEqual(results, jobs.filter((job) =>
+    (pe.has(job.id) || job.roleType === "Infrastructure & Project Finance") &&
+    (job.country === "Morocco" || job.country === "South Africa"),
+  ));
+  assert.equal(new Set(results.map(({ id }) => id)).size, results.length);
+  assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters({ country: ["Kenya"], language: ["French"] })), []);
 });

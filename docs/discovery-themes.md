@@ -4,6 +4,14 @@ Batch 2D, 27 September 2026. This pilot improves discovery on the existing
 `/jobs/category/private-equity-venture-capital/` page. It does not change ACD's
 primary taxonomy or create another landing page.
 
+Batch 2E aligns the main Jobs-board `Private Equity, VC & Private Credit` filter
+with the same approved discovery universe. Both consumers use the shared
+`filterJobsForDiscovery` rule in `src/lib/job-filters.ts`. Country, region,
+experience, language and keyword filters further narrow board results using
+their existing semantics: OR within a selection and AND between filter groups.
+Other Role Type selections remain primary-only. No URL, filter-state, sorting,
+card-label or design changes accompany this alignment.
+
 ## Model and editorial rules
 
 An opportunity retains exactly one primary `roleType`. Its optional
