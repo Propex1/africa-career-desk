@@ -42,7 +42,11 @@ export default function ProgrammesPage() {
 
       <div className="mt-[42px] flex flex-col gap-[14px]">
         {PROGRAMMES.map((p) => (
-          <ProgrammeCard key={p.id} programme={p} />
+          <ProgrammeCard
+            key={p.id}
+            programme={p}
+            showDetails={p.id === "ACD-0295" || p.id === "ACD-0308"}
+          />
         ))}
       </div>
 

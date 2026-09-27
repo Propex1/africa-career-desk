@@ -4,6 +4,7 @@ import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opport
 import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
 import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
 import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data/approved-content-2026-09-23";
+import { APPROVED_CONTENT_2026_09_27 } from "@/data/approved-content-2026-09-27";
 import { EMPLOYER_ID_BY_COMPANY } from "@/data/employer-identities";
 import { buildOpportunityProjection, getLiveJobs } from "@/lib/opportunity-data";
 import type { VerifiedOpportunityFields } from "@/lib/opportunity-data";
@@ -2932,7 +2933,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
   {
     id: "ACD-0051",
     slug: "analyst-application-career-portal-lorax-capital-partners-cairo",
-    title: "Analyst application / career portal",
+    title: "Career Portal / Open Application",
     company: "Lorax Capital Partners",
     companyInitials: "LC",
     logoUrl: "/logos/lorax.jpeg",
@@ -2941,16 +2942,14 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
     city: "Cairo",
     country: "Egypt",
     region: "North Africa",
-    locationDisplay: "Cairo",
-    language: "English / Arabic helpful",
-    languageTags: ["English", "Arabic"],
+    locationDisplay: "Cairo, Egypt / North Africa",
     summary:
-      "Official Lorax Capital career portal and analyst application route for future private equity opportunities.",
+      "Lorax Capital Partners’ Cairo career portal accepts expressions of interest through an online form. Candidates can provide contact details, the position of interest, an available start date, a LinkedIn profile and an uploaded CV or other supporting file. The position field currently displays Analyst, but the portal does not provide a vacancy specification, experience threshold or internship criteria. Use this standing route to introduce your profile to the private-equity firm for consideration when a suitable opportunity arises.",
     applyUrl: "https://loraxcapitalpartners.com/careers/",
     sourceUrl: "https://loraxcapitalpartners.com/careers/",
     sourceType: "Company website",
     applyButtonText: "Apply on company site",
-    lastChecked: "26 Aug 2026",
+    lastChecked: "28 Sep 2026",
     status: "Active",
   },
   {
@@ -4231,6 +4230,7 @@ const OPPORTUNITY_RECORDS: Opportunity[] = [
   ...[...APPROVED_JOBS_2026_09_16].reverse(),
   ...[...APPROVED_JOBS_2026_09_20].reverse(),
   ...[...APPROVED_CONTENT_2026_09_23].reverse(),
+  ...[...APPROVED_CONTENT_2026_09_27].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
@@ -4710,14 +4710,27 @@ const ORDERED_JOBS_BASELINE = [
   ...JOBS_BASELINE.filter((job) => !JOBS_DISPLAY_PRIORITY.includes(job.slug)),
 ];
 const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
+// Display-only refresh priority; Lorax keeps its original publication history.
+const SEPTEMBER_27_REFRESH_IDS = new Set([
+  ...APPROVED_CONTENT_2026_09_27.map((opportunity) => opportunity.id),
+  "ACD-0051",
+]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
-const PINNED_JOB_IDS = ["ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263"];
+const PINNED_JOB_IDS = [
+  "ACD-0293", // Meridiam VIE leads the approved September refresh.
+  ...CHRONOLOGICAL_JOBS.filter((job) => SEPTEMBER_27_REFRESH_IDS.has(job.id) && job.id !== "ACD-0293").map((job) => job.id),
+  "ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263",
+];
 export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
 ];
 export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
-export const OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications" && o.publicationStatus === "live"));
+const CHRONOLOGICAL_OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications" && o.publicationStatus === "live"));
+export const OPEN_APPLICATIONS = [
+  ...CHRONOLOGICAL_OPEN_APPLICATIONS.filter((opportunity) => SEPTEMBER_27_REFRESH_IDS.has(opportunity.id)),
+  ...CHRONOLOGICAL_OPEN_APPLICATIONS.filter((opportunity) => !SEPTEMBER_27_REFRESH_IDS.has(opportunity.id)),
+];
 
 export function getJobBySlug(slug: string): Opportunity | undefined {
   return JOBS.find((o) => o.slug === slug);

@@ -25,8 +25,11 @@ import {
 import { ENABLED_JOB_CATEGORY_PAGES } from "../../../src/data/job-categories.ts";
 import { filterJobsForCategory } from "../../../src/lib/job-categories.ts";
 import { filterJobsForBoard, type JobBoardFilters } from "../../../src/lib/job-filters.ts";
+import { APPROVED_CONTENT_2026_09_27 } from "../../../src/data/approved-content-2026-09-27.ts";
 
 const root = process.cwd();
+// Keep the accepted pre-refresh cohort for the existing architecture regression tests.
+// The full September refresh is projected and checked separately below.
 const publicSourceFiles = [
   "src/data/opportunities.ts",
   "src/data/batch-3-6-preview-opportunities.ts",
@@ -205,7 +208,7 @@ test("public source snapshots have stable unique IDs and every employer label is
   assert.equal(new Set(rawRecords.map((record) => record.id)).size, rawRecords.length);
   assert.equal(new Set(rawRecords.map((record) => record.slug)).size, rawRecords.length);
   assert.equal(companies.length, 89);
-  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 73);
+  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 82);
   assert.ok(companies.every((company) => mapped.has(normalizeEmployerName(company)) || unresolved.has(normalizeEmployerName(company))));
   assert.ok(UNRESOLVED_EMPLOYER_LABELS.every((company) => !mapped.has(normalizeEmployerName(company))));
   validateEmployerIdentityMap(EMPLOYER_ID_BY_COMPANY);
@@ -812,4 +815,96 @@ test("Jobs-board multiselect remains OR within a filter and AND between filters"
   ));
   assert.equal(new Set(results.map(({ id }) => id)).size, results.length);
   assert.deepEqual(filterJobsForBoard(jobs, peBoardFilters({ country: ["Kenya"], language: ["French"] })), []);
+});
+
+const refreshedRecords = buildOpportunityProjection([...rawRecords, ...APPROVED_CONTENT_2026_09_27], {
+  ...projectionOptions,
+  verifiedDeadlinesByJobId,
+});
+
+test("September refresh adds only 16 Jobs, two Programmes and three Open Applications, reusing Lorax", () => {
+  assert.equal(APPROVED_CONTENT_2026_09_27.length, 21);
+  assert.equal(refreshedRecords.length, 189);
+  assert.equal(new Set(refreshedRecords.map(({ id }) => id)).size, 189);
+  assert.equal(new Set(refreshedRecords.map(({ slug }) => slug)).size, 189);
+  assert.equal(getLiveJobs(refreshedRecords).length, 82);
+  assert.equal(refreshedRecords.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live").length, 12);
+  assert.equal(refreshedRecords.filter((o) => o.boardSection === "Open Applications" && o.publicationStatus === "live").length, 17);
+  const lorax = refreshedRecords.filter((o) => o.applyUrl === "https://loraxcapitalpartners.com/careers/");
+  assert.equal(lorax.length, 1);
+  assert.equal(lorax[0].id, "ACD-0051");
+  assert.equal(lorax[0].slug, "analyst-application-career-portal-lorax-capital-partners-cairo");
+  assert.equal(lorax[0].publishedAt, undefined);
+  for (const record of APPROVED_CONTENT_2026_09_27) {
+    assert.ok(EMPLOYER_ID_BY_COMPANY[record.company], record.company);
+    assert.equal(record.publishedAt, "2026-09-27");
+    assert.equal(record.discoveryThemes, undefined);
+    assert.ok(!rawRecords.some((o) => o.id === record.id || o.slug === record.slug));
+    assert.ok(!rawRecords.some((o) => o.company === record.company && o.title === record.title && o.country === record.country));
+    assert.ok(!rawRecords.some((o) => o.applyUrl === record.applyUrl && new URL(record.applyUrl).pathname !== "/careers"));
+  }
+});
+
+test("September refresh preserves approved application identities and verified locations", () => {
+  const byId = (id: string) => APPROVED_CONTENT_2026_09_27.find((o) => o.id === id)!;
+  for (const [id, jobId] of [["ACD-0296", "744000149549665"], ["ACD-0297", "744000149553928"], ["ACD-0298", "744000149056460"], ["ACD-0299", "744000149539850"]]) {
+    const job = byId(id);
+    assert.equal(job.applyUrl, `https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=${jobId}`);
+    assert.equal(job.sourceUrl, job.applyUrl);
+    assert.equal(EMPLOYER_ID_BY_COMPANY[job.company], EMPLOYER_ID_BY_COMPANY["Standard Bank CIB"]);
+  }
+  assert.equal(byId("ACD-0299").city, "Cape Town");
+  assert.equal(byId("ACD-0305").city, undefined);
+  assert.equal(byId("ACD-0305").country, "South Africa");
+  assert.equal(byId("ACD-0306").city, "Pretoria");
+  assert.equal(byId("ACD-0307").city, "Pretoria");
+  assert.equal(byId("ACD-0294").applyUrl, "https://f6vc.bamboohr.com/careers/40?source=aWQ9NA%3D%3D");
+  assert.equal(byId("ACD-0301").applyUrl, "https://www.linkedin.com/posts/privateequity-investment-hiring-share-7505596269009158144-dBM8/");
+});
+
+test("September verified deadlines expire through existing lifecycle rules without losing history", () => {
+  const expected = new Map([
+    ["ACD-0295", "2026-09-30"], ["ACD-0302", "2026-10-09"],
+    ["ACD-0303", "2026-10-30"], ["ACD-0304", "2026-10-30"],
+    ["ACD-0305", "2026-09-30"], ["ACD-0306", "2026-10-02"],
+    ["ACD-0307", "2026-10-02"], ["ACD-0308", "2026-09-30"],
+  ]);
+  for (const record of APPROVED_CONTENT_2026_09_27) {
+    assert.equal(record.deadlineDate, expected.get(record.id));
+    assert.equal(record.verifiedDeadline?.deadlineDate, expected.get(record.id));
+    if (expected.has(record.id)) {
+      const deadline = record.verifiedDeadline!;
+      assert.ok(deadline.statement && deadline.sourceUrl && deadline.verifiedAt);
+    } else {
+      assert.equal(record.deadlineDisplay, undefined);
+    }
+  }
+  const expired = buildOpportunityProjection(APPROVED_CONTENT_2026_09_27, {
+    ...projectionOptions, removedJobIds: new Set(), confirmedClosures: {}, today: "2026-10-31",
+  });
+  assert.equal(expired.length, 21);
+  assert.deepEqual(expired.filter((o) => o.lifecycleStatus === "closed").map((o) => o.id).sort(), [...expected.keys()].sort());
+  assert.ok(expired.filter((o) => expected.has(o.id)).every((o) => o.publicationStatus === "removed" && o.lifecycleReason === "deadline_passed"));
+});
+
+test("September refresh uses existing category discovery, sitemap and conservative JobPosting eligibility", () => {
+  const jobs = getLiveJobs(refreshedRecords);
+  const counts: Record<string, number> = {
+    "private-equity-venture-capital": 16, "development-finance": 4,
+    "infrastructure-project-finance": 21, "investment-banking": 16, "climate-impact-investing": 7,
+  };
+  assert.equal(ENABLED_JOB_CATEGORY_PAGES.length, 5);
+  for (const category of ENABLED_JOB_CATEGORY_PAGES) {
+    assert.equal(filterJobsForCategory(jobs, category).length, counts[category.slug]);
+  }
+  const category = ENABLED_JOB_CATEGORY_PAGES.find((c) => c.slug === "private-equity-venture-capital")!;
+  const board = filterJobsForBoard(jobs, { region: [], country: [], roleType: [category.roleType], experience: [], language: [] });
+  assert.deepEqual(board.map((o) => o.id), filterJobsForCategory(jobs, category).map((o) => o.id));
+  assert.equal(buildSitemap(jobs).length, 86);
+  for (const record of APPROVED_CONTENT_2026_09_27) {
+    // An ACD publication date is not an employer posting date.
+    assert.equal(createJobPostingJsonLd(record), null);
+  }
+  const source = readFileSync(resolve(root, "src/data/opportunities.ts"), "utf8");
+  assert.match(source, /\.\.\.\[\.\.\.APPROVED_CONTENT_2026_09_27\]\.reverse\(\)/);
 });

@@ -87,6 +87,18 @@ export const EMPLOYER_ID_BY_COMPANY: Readonly<Record<string, string>> = {
   "Ashburton Investments": "acd-employer-ashburton-investments",
   "Standard Bank CIB": "employer-096-standard-bank-corporate-investment-banking",
   "PIDG": "employer-041-private-infrastructure-development-group-pidg",
+  // Approved September refresh; reuse existing research identities and CIB aliases.
+  // BMCE subsidiaries are distinct businesses, consistent with Gestion and Markets.
+  "Standard Bank": "employer-096-standard-bank-corporate-investment-banking",
+  "AgDevCo": "employer-084-agdevco",
+  "F6 Ventures": "employer-077-flat6labs",
+  "Ezdehar Management": "employer-111-ezdehar-management",
+  "FONSIS": "employer-166-fonsis",
+  "BMCE Capital Investments": "acd-employer-bmce-capital-investments",
+  "BMCE Capital Conseil": "acd-employer-bmce-capital-conseil",
+  "BOA Capital Asset Management": "acd-employer-boa-capital-asset-management",
+  "Attijari Finances Corp": "employer-183-attijari-finances-corp",
+  "Ekuity Capital": "employer-178-ekuity-capital",
 };
 
 export const UNRESOLVED_EMPLOYER_LABELS = [
