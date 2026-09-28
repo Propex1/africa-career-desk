@@ -8,6 +8,7 @@ import ApplyLink from "@/components/analytics/ApplyLink";
 import JobDetailTracker from "@/components/analytics/JobDetailTracker";
 import JobPostingJsonLd from "@/components/seo/JobPostingJsonLd";
 import { getEnabledJobCategoryForRoleType } from "@/lib/job-categories";
+import { getEnabledJobCountriesForJob } from "@/lib/job-countries";
 import { jobPageMetadata, NO_INDEX_ROBOTS } from "@/lib/seo";
 
 interface Props {
@@ -30,6 +31,7 @@ export default async function JobDetailPage({ params }: Props) {
   const job = getJobBySlug(slug);
   if (!job) notFound();
   const categoryPage = getEnabledJobCategoryForRoleType(job.roleType);
+  const countryPages = getEnabledJobCountriesForJob(job);
   const needsVerification = job.lifecycleStatus === "needs_verification";
 
   const metaItems = [
@@ -105,6 +107,14 @@ export default async function JobDetailPage({ params }: Props) {
               </Link>
             </p>
           )}
+
+          {countryPages.map((country) => (
+            <p key={country.slug} className="m-0 mt-3 text-[13px] text-acd-muted">
+              <Link href={`/jobs/country/${country.slug}/`} className="font-semibold text-acd-green no-underline hover:underline">
+                More investment &amp; finance jobs in {country.country}
+              </Link>
+            </p>
+          ))}
 
           {/* Summary */}
           <h2 className="mt-[38px] m-0 font-serif font-semibold text-[23px] text-acd-navy">
