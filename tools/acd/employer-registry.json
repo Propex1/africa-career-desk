@@ -3,6 +3,7 @@
     "sourceSheet":  "100 Company Source List",
     "generatedFromIncludedEmployers":  142,
     "batchSize":  20,
+    "batchNames": {"batch-10":"Batch 10 — North Africa"},
     "employers":  [
                       {
                           "id":  "employer-001-actis",
@@ -6837,6 +6838,418 @@
                           "otherVerifiedSources": [],
                           "sourceStatus": "Not researched",
                           "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Nigeria-focused energy / climate impact investment platform, as approved in the editorial review."
+                      },
+                      {
+                          "id": "employer-176-rmbv",
+                          "displayName": "RMBV",
+                          "aliases": [
+                              "RMBV"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Private equity, transaction execution and portfolio value creation. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "RMBV official careers jobs",
+                              "RMBV investment finance recruitment",
+                              "site:linkedin.com RMBV careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-176-rmbv-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://www.rmbv.net/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. Keep RMBV distinct from RMB / Rand Merchant Bank. No dedicated recruitment channel verified; careers and ATS metadata remain unverified."
+                      },
+                      {
+                          "id": "employer-177-cdg-invest-growth",
+                          "displayName": "CDG Invest Growth",
+                          "aliases": [
+                              "CDG Invest Growth",
+                              "CDG Invest Growth (CIG)"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Private-equity investing, portfolio management and value creation. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "https://www.linkedin.com/company/cdg-invest-growth-cig/",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "CDG Invest Growth official careers jobs",
+                              "CDG Invest Growth investment finance recruitment",
+                              "site:linkedin.com CDG Invest Growth careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-177-cdg-invest-growth-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://cig.pe/fr/about-us/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. No dedicated recruitment channel verified; careers and ATS metadata remain unverified."
+                      },
+                      {
+                          "id": "employer-178-ekuity-capital",
+                          "displayName": "Ekuity Capital",
+                          "aliases": [
+                              "Ekuity Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Direct investment, investment analysis, transaction execution and portfolio management. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://www.ekuitycapital.com/fr/carriere/",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "https://www.linkedin.com/company/ekuity-capital/about/",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Ekuity Capital official careers jobs",
+                              "Ekuity Capital investment finance recruitment",
+                              "site:linkedin.com Ekuity Capital careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-178-ekuity-capital-official-source",
+                                  "type": "official_careers",
+                                  "url": "https://www.ekuitycapital.com/fr/carriere/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. Ekuity Capital in Tunisia; do not conflate with Ekuity Holding in Egypt. UNVERIFIED RESEARCH LEAD (user supplied): Ekuity Capital — spontaneous application. Intended section: Open Applications, not a named Job. Verify the current official application route and duplicates during the next research run; do not create a publication-ready record or decision card."
+                      },
+                      {
+                          "id": "employer-179-al-ahly-capital-holding",
+                          "displayName": "Al Ahly Capital Holding",
+                          "aliases": [
+                              "Al Ahly Capital Holding",
+                              "Al Ahly Capital",
+                              "Al Ahly Pharos"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Private equity and direct investment. Include related Al Ahly Pharos investment banking and relevant research, preserving the actual hiring entity. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "https://www.linkedin.com/company/alahly-capital-holding",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Al Ahly Capital Holding official careers jobs",
+                              "Al Ahly Capital Holding investment finance recruitment",
+                              "site:linkedin.com Al Ahly Capital Holding careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-179-al-ahly-capital-holding-al-ahly-pharos-related-source",
+                                  "type": "other_verified",
+                                  "url": "https://alahlycapital.com/capital-markets/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. Al Ahly Pharos is a related sourcing entity within this single approved entry, not a thirteenth employer. The official capital-markets page confirms the relationship and research/investment-banking coverage. Preserve the actual hiring entity in every future result. No dedicated recruitment channel verified."
+                      },
+                      {
+                          "id": "employer-180-hassan-allam-utilities",
+                          "displayName": "Hassan Allam Utilities",
+                          "aliases": [
+                              "Hassan Allam Utilities",
+                              "HA Utilities"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Infrastructure investment, project finance, M&A and transaction-focused development. Exclude the wider Hassan Allam group’s general construction recruitment. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://www.hassanallam.com/careers",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Hassan Allam Utilities official careers jobs",
+                              "Hassan Allam Utilities investment finance recruitment",
+                              "site:linkedin.com Hassan Allam Utilities careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-180-hassan-allam-utilities-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://www.hassanallam.com/subsidiaries/ha-utilities",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              },
+                              {
+                                  "id": "employer-180-hassan-allam-utilities-careers",
+                                  "type": "official_careers",
+                                  "url": "https://www.hassanallam.com/careers",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The linked careers page is shared with Hassan Allam Holding. Only include the Utilities investment/development entity and approved transaction roles; the wider group and construction roles are not approved sourcing entries. Preserve the actual hiring entity."
+                      },
+                      {
+                          "id": "employer-181-infinity-power",
+                          "displayName": "Infinity Power",
+                          "aliases": [
+                              "Infinity Power"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Africa; verify and preserve each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Renewable-energy investment, project finance, M&A and commercial structuring. Preserve each opportunity’s actual location; do not automatically classify roles as North Africa. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Infinity Power official careers jobs",
+                              "Infinity Power investment finance recruitment",
+                              "site:linkedin.com Infinity Power careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-181-infinity-power-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://weareinfinitypower.com/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The North Africa batch label is a sourcing grouping, not a role-location default. Infinity Power operates across Africa; verify and preserve each opportunity’s actual location. No dedicated recruitment channel verified."
+                      },
+                      {
+                          "id": "employer-182-cfg-bank-cfg-finance",
+                          "displayName": "CFG Bank / CFG Finance",
+                          "aliases": [
+                              "CFG Bank / CFG Finance",
+                              "CFG Bank",
+                              "CFG Finance"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Corporate finance, M&A and capital-markets execution. Exclude retail banking. Preserve CFG Finance as the actual hiring entity when applicable. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://carrieres.cfgbank.com/jobs",
+                          "atsProvider": "Teamtailor",
+                          "linkedInCompanyUrl": "https://www.linkedin.com/company/cfg-bank/",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "CFG Bank / CFG Finance official careers jobs",
+                              "CFG Bank / CFG Finance investment finance recruitment",
+                              "site:linkedin.com CFG Bank / CFG Finance careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-182-cfg-bank-cfg-finance-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://www.cfgbank.com/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              },
+                              {
+                                  "id": "employer-182-cfg-bank-cfg-finance-careers",
+                                  "type": "official_careers",
+                                  "url": "https://carrieres.cfgbank.com/jobs",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The official CFG Bank website links to its Teamtailor recruitment channel, which also covers out-of-scope bank roles. UNVERIFIED RESEARCH LEADS (user supplied): CFG Finance — Associate, Finance d’Entreprise; CFG Finance — Directeur Finance d’Entreprise. Both require live vacancy, application-route and duplicate checks during the next research run. These notes do not confirm either vacancy is open; do not create publication-ready records or decision cards."
+                      },
+                      {
+                          "id": "employer-183-attijari-finances-corp",
+                          "displayName": "Attijari Finances Corp",
+                          "aliases": [
+                              "Attijari Finances Corp"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Investment banking, M&A, equity/debt capital markets and infrastructure finance. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://www.attijarifinancescorp.com/fr/carrieres",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Attijari Finances Corp official careers jobs",
+                              "Attijari Finances Corp investment finance recruitment",
+                              "site:linkedin.com Attijari Finances Corp careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-183-attijari-finances-corp-official-source",
+                                  "type": "official_careers",
+                                  "url": "https://www.attijarifinancescorp.com/fr/carrieres",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. Use the dedicated Attijari Finances Corp source; do not broaden coverage to unrelated parent-bank recruitment."
+                      },
+                      {
+                          "id": "employer-184-bmce-capital",
+                          "displayName": "BMCE Capital",
+                          "aliases": [
+                              "BMCE Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Corporate finance, investment management, substantive investment research and relevant markets roles. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://bmcecapital-cand.talent-soft.com/",
+                          "atsProvider": "Talentsoft",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "BMCE Capital official careers jobs",
+                              "BMCE Capital investment finance recruitment",
+                              "site:linkedin.com BMCE Capital careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-184-bmce-capital-official-source",
+                                  "type": "other_verified",
+                                  "url": "https://www.bmcecapital.com/en/Careers/our-hr-vision",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              },
+                              {
+                                  "id": "employer-184-bmce-capital-careers",
+                                  "type": "official_careers",
+                                  "url": "https://bmcecapital-cand.talent-soft.com/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The official BMCE Capital careers context is corroborated by indexed first-party content; direct website access failed TLS certificate validation in this environment. The branded Talentsoft recruitment channel returned HTTP 200. Recheck official-site access and application usability during research; registration does not establish live vacancies."
+                      },
+                      {
+                          "id": "employer-185-ci-capital",
+                          "displayName": "CI Capital",
+                          "aliases": [
+                              "CI Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Investment banking, private equity, investment management and substantive research. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://www.cicapital.com/careers/",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "CI Capital official careers jobs",
+                              "CI Capital investment finance recruitment",
+                              "site:linkedin.com CI Capital careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-185-ci-capital-official-source",
+                                  "type": "official_careers",
+                                  "url": "https://www.cicapital.com/careers/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The official careers URL is corroborated by indexed first-party CI Capital content. Direct access failed TLS certificate validation in this environment; recheck access and application usability during research. Do not infer current vacancies or complete coverage from indexed content."
+                      },
+                      {
+                          "id": "employer-186-beltone-holding",
+                          "displayName": "Beltone Holding",
+                          "aliases": [
+                              "Beltone Holding"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Investment banking, asset management, investment research and own-team investing. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://www.beltoneholding.com/en/careers",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "https://www.linkedin.com/company/beltoneholding/",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "Beltone Holding official careers jobs",
+                              "Beltone Holding investment finance recruitment",
+                              "site:linkedin.com Beltone Holding careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-186-beltone-holding-official-source",
+                                  "type": "official_careers",
+                                  "url": "https://www.beltoneholding.com/en/careers",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. Keep Beltone Holding distinct from BPE Partners / B Partners / B&Partners. Own-team investing is in scope; do not infer approval for unrelated portfolio-company recruitment."
+                      },
+                      {
+                          "id": "employer-187-ni-capital",
+                          "displayName": "NI Capital",
+                          "aliases": [
+                              "NI Capital",
+                              "NI-Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "North Africa sourcing coverage; verify each opportunity’s actual location",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Private equity, investment banking, investment management and investment-related advisory. Any future publication requires verified official evidence, application-route and duplicate checks, and human editorial approval.",
+                          "careersUrl": "https://nicapital.com.eg/careers/",
+                          "atsProvider": "Unverified",
+                          "linkedInCompanyUrl": "",
+                          "linkedInJobsUrl": "",
+                          "googleQueries": [
+                              "NI Capital official careers jobs",
+                              "NI Capital investment finance recruitment",
+                              "site:linkedin.com NI Capital careers"
+                          ],
+                          "otherVerifiedSources": [
+                              {
+                                  "id": "employer-187-ni-capital-official-source",
+                                  "type": "official_careers",
+                                  "url": "https://nicapital.com.eg/careers/",
+                                  "required": true,
+                                  "accessMethod": "web_page"
+                              }
+                          ],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The official careers URL is corroborated by indexed first-party content; the direct check returned HTTP 500 (Database Error). Recheck availability during research. UNVERIFIED RESEARCH LEAD (user supplied): NI Capital — open application. Intended section: Open Applications, not a named Job. Verify the current official application route and duplicates during the next research run; do not create a publication-ready record or decision card."
                       }
                   ]
 }

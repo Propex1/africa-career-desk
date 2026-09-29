@@ -25,7 +25,7 @@ export interface RegistryEmployer {
   workbookSource?: string;
 }
 
-interface RegistryFile { batchSize: number; employers: RegistryEmployer[]; sourceWorkbook: string; sourceSheet: string; }
+interface RegistryFile { batchSize: number; batchNames?: Record<string, string>; employers: RegistryEmployer[]; sourceWorkbook: string; sourceSheet: string; }
 
 export const employerRegistry = JSON.parse(readFileSync(resolve(import.meta.dirname, "employer-registry.json"), "utf8")) as RegistryFile;
 

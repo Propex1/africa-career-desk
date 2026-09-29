@@ -33,8 +33,8 @@ test("normalizes URLs and cautious duplicate keys", () => {
 });
 
 test("included employers have stable explicit batches without reshuffling", () => {
-  assert.equal(employerRegistry.employers.length, 183);
-  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 23, 20]);
+  assert.equal(employerRegistry.employers.length, 195);
+  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 23, 20, 12]);
   assert.equal(new Set(batches.flatMap((batch) => batch.employerIds)).size, employerRegistry.employers.length);
   assert.equal(BATCH_SIZE, 20);
   assert.deepEqual(batches.find((batch) => batch.id === "batch-08")?.employerIds.slice(0, 2), [
@@ -141,6 +141,86 @@ test("Batch 9 includes the requested employers equally and prepares without star
     assert.deepEqual(preview.task.selectedEmployerIds, employers.map((employer) => employer.id));
     assert.equal(preview.created, false);
     assert.equal(existsSync(join(root, "data")), false);
+  } finally { removeTemp(root); }
+});
+
+test("Batch 10 preserves approved scope and unverified leads in a twelve-employer task preview", () => {
+  const expected = [
+    "RMBV", "CDG Invest Growth", "Ekuity Capital", "Al Ahly Capital Holding",
+    "Hassan Allam Utilities", "Infinity Power", "CFG Bank / CFG Finance",
+    "Attijari Finances Corp", "BMCE Capital", "CI Capital", "Beltone Holding", "NI Capital",
+  ];
+  const added = employerRegistry.employers.filter((employer) => employer.batchId === "batch-10");
+  assert.deepEqual(added.map((employer) => employer.displayName), expected);
+  const normalizeAlias = (value: string) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const previousAliases = new Set(employerRegistry.employers.filter((employer) => employer.batchId !== "batch-10").flatMap((employer) => [employer.displayName, ...employer.aliases]).map(normalizeAlias));
+  for (const employer of added) {
+    assert.equal(employer.priority, undefined);
+    assert.equal(employer.sourceStatus, "Not researched");
+    assert.ok(employer.aliases.every((alias) => !previousAliases.has(normalizeAlias(alias))));
+    assert.ok(employer.otherVerifiedSources.length > 0);
+    assert.ok(employer.otherVerifiedSources.every((source) => new URL(source.url).protocol === "https:"));
+  }
+  const root = mkdtempSync(join(tmpdir(), "acd-batch10-preview-"));
+  try {
+    const preview = prepareResearchBatch(root, { batchId: "batch-10", batchRunId: "batch-10-fixture-preview", dryRun: true });
+    assert.deepEqual(preview.task.employers.map((employer) => employer.displayName), expected);
+    assert.equal(preview.task.scope, "full_batch");
+    assert.equal(preview.created, false);
+    assert.equal(existsSync(join(root, "data")), false);
+    const employer = (name: string) => preview.task.employers.find((item) => item.displayName === name)!;
+    for (const item of added) assert.equal(employer(item.displayName).inclusionRule, item.inclusionRule);
+    assert.match(employer("RMBV").manualReviewNotes, /distinct from RMB \/ Rand Merchant Bank/);
+    assert.match(employer("Beltone Holding").manualReviewNotes, /distinct from BPE Partners/);
+    assert.match(employer("Al Ahly Capital Holding").inclusionRule, /Al Ahly Pharos.*actual hiring entity/);
+    assert.ok(employer("Al Ahly Capital Holding").sources.some((source) => source.id.includes("al-ahly-pharos-related-source")));
+    assert.match(employer("Hassan Allam Utilities").inclusionRule, /Exclude.*general construction recruitment/);
+    assert.match(employer("Infinity Power").inclusionRule, /actual location.*do not automatically classify/);
+    assert.match(employer("CFG Bank / CFG Finance").inclusionRule, /Exclude retail banking/);
+    const cfgNotes = employer("CFG Bank / CFG Finance").manualReviewNotes;
+    assert.match(cfgNotes, /UNVERIFIED RESEARCH LEADS/);
+    assert.match(cfgNotes, /Associate, Finance d’Entreprise/);
+    assert.match(cfgNotes, /Directeur Finance d’Entreprise/);
+    assert.match(cfgNotes, /live vacancy, application-route and duplicate checks/);
+    for (const name of ["Ekuity Capital", "NI Capital"]) {
+      assert.match(employer(name).manualReviewNotes, /UNVERIFIED RESEARCH LEAD/);
+      assert.match(employer(name).manualReviewNotes, /Open Applications, not a named Job/);
+      assert.match(employer(name).manualReviewNotes, /do not create a publication-ready record or decision card/);
+    }
+  } finally { removeTemp(root); }
+});
+
+test("Batch 10 registration stays unresearched and completion uses twelve actual members", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-batch10-dashboard-"));
+  try {
+    mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
+    for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
+    const database = new AcdDatabase(root);
+    try {
+      const overview = database.researchBatchesOverview();
+      const northAfrica = overview.batches.find((batch) => batch.id === "batch-10")!;
+      assert.equal(employerRegistry.batchNames?.["batch-10"], "Batch 10 — North Africa");
+      assert.equal(northAfrica.employerCount, 12);
+      assert.equal(northAfrica.firmsExpected, 12);
+      assert.equal(northAfrica.firmsChecked, 0);
+      assert.equal(northAfrica.researchStatus, "Not researched");
+      assert.equal(northAfrica.runId, null);
+      assert.equal(northAfrica.lastResearchedAt, null);
+      assert.equal(northAfrica.activeOpportunities, 0);
+      assert.equal(northAfrica.reviewable, 0);
+      assert.ok(northAfrica.employers.every((employer) => employer.status === "Not researched" && employer.lastChecked === null));
+      assert.deepEqual(overview.batches.slice(0, 9).map((batch) => batch.name), Array.from({ length: 9 }, (_, i) => `Research batch ${i + 1}`));
+      for (const table of ["runs", "research_imports", "vacancies", "decisions", "source_checks", "publication_manifests"]) {
+        assert.equal(Number((database.db.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get() as { count: number }).count), 0);
+      }
+      assert.throws(() => database.completeBatch("batch-10"), /12 employer source-coverage/);
+      const ids = batches.find((batch) => batch.id === "batch-10")!.employerIds;
+      const complete = database.db.prepare("UPDATE employer_research SET status='Complete' WHERE batch_id='batch-10' AND employer_id=?");
+      for (const id of ids.slice(0, 11)) complete.run(id);
+      assert.throws(() => database.completeBatch("batch-10"), /1 employer source-coverage/);
+      complete.run(ids[11]);
+      assert.doesNotThrow(() => database.completeBatch("batch-10"));
+    } finally { database.close(); }
   } finally { removeTemp(root); }
 });
 
@@ -403,7 +483,7 @@ test("research batches overview is read-only and shows pilot metrics with honest
     const preserved = baseline.addVacancy(baselineRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     baseline.completeRun(baselineRun); baseline.decide(preserved, "deferred", {});
     const empty = baseline.researchBatchesOverview();
-    assert.equal(empty.totalEmployers, 183); assert.equal(empty.totalBatches, 9); assert.equal(empty.batches.length, batches.length);
+    assert.equal(empty.totalEmployers, 195); assert.equal(empty.totalBatches, 10); assert.equal(empty.batches.length, batches.length);
     const newBatch = empty.batches.find((batch) => batch.id === "batch-09");
     assert.ok(newBatch);
     assert.equal(newBatch.employerCount, 20); assert.equal(newBatch.firmsExpected, 20); assert.equal(newBatch.firmsChecked, 0);
