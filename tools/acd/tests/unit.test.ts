@@ -33,8 +33,8 @@ test("normalizes URLs and cautious duplicate keys", () => {
 });
 
 test("included employers have stable explicit batches without reshuffling", () => {
-  assert.equal(employerRegistry.employers.length, 195);
-  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 23, 20, 12]);
+  assert.equal(employerRegistry.employers.length, 206);
+  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 23, 20, 23]);
   assert.equal(new Set(batches.flatMap((batch) => batch.employerIds)).size, employerRegistry.employers.length);
   assert.equal(BATCH_SIZE, 20);
   assert.deepEqual(batches.find((batch) => batch.id === "batch-08")?.employerIds.slice(0, 2), [
@@ -51,7 +51,7 @@ test("Batch 8 adds only the approved Nigeria identities and prepares all 23 with
     "Cordros Capital", "Parthian Partners", "Zedcrest Group", "FSDH Group / FSDH Capital", "Norrenberger",
     "AIICO Capital", "FCMB Capital Markets", "All On",
   ];
-  const added = employerRegistry.employers.filter((employer) => Number(employer.id.split("-")[1]) >= 188);
+  const added = employerRegistry.employers.filter((employer) => Number(employer.id.split("-")[1]) >= 188 && Number(employer.id.split("-")[1]) <= 208);
   assert.deepEqual(added.map((employer) => employer.displayName), expected);
   assert.deepEqual(added.map((employer) => Number(employer.id.split("-")[1])), Array.from({ length: 21 }, (_, i) => 188 + i));
   assert.doesNotThrow(validateBatches);
@@ -144,13 +144,13 @@ test("Batch 9 includes the requested employers equally and prepares without star
   } finally { removeTemp(root); }
 });
 
-test("Batch 10 preserves approved scope and unverified leads in a twelve-employer task preview", () => {
+test("Batch 10 preserves the original twelve employers' scope and leads in the expanded task preview", () => {
   const expected = [
     "RMBV", "CDG Invest Growth", "Ekuity Capital", "Al Ahly Capital Holding",
     "Hassan Allam Utilities", "Infinity Power", "CFG Bank / CFG Finance",
     "Attijari Finances Corp", "BMCE Capital", "CI Capital", "Beltone Holding", "NI Capital",
   ];
-  const added = employerRegistry.employers.filter((employer) => employer.batchId === "batch-10");
+  const added = employerRegistry.employers.filter((employer) => employer.batchId === "batch-10").slice(0, 12);
   assert.deepEqual(added.map((employer) => employer.displayName), expected);
   const normalizeAlias = (value: string) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
   const previousAliases = new Set(employerRegistry.employers.filter((employer) => employer.batchId !== "batch-10").flatMap((employer) => [employer.displayName, ...employer.aliases]).map(normalizeAlias));
@@ -164,7 +164,8 @@ test("Batch 10 preserves approved scope and unverified leads in a twelve-employe
   const root = mkdtempSync(join(tmpdir(), "acd-batch10-preview-"));
   try {
     const preview = prepareResearchBatch(root, { batchId: "batch-10", batchRunId: "batch-10-fixture-preview", dryRun: true });
-    assert.deepEqual(preview.task.employers.map((employer) => employer.displayName), expected);
+    assert.deepEqual(preview.task.employers.slice(0, 12).map((employer) => employer.displayName), expected);
+    assert.equal(preview.task.employers.length, 23);
     assert.equal(preview.task.scope, "full_batch");
     assert.equal(preview.created, false);
     assert.equal(existsSync(join(root, "data")), false);
@@ -190,7 +191,96 @@ test("Batch 10 preserves approved scope and unverified leads in a twelve-employe
   } finally { removeTemp(root); }
 });
 
-test("Batch 10 registration stays unresearched and completion uses twelve actual members", () => {
+test("Batch 10 adds exactly eleven Egypt identities with no new collisions and preserves the two inherited collisions", () => {
+  const expected = [
+    ["HC Securities & Investment", "employer-209-hc-securities-investment"],
+    ["Prime Holding", "employer-210-prime-holding"],
+    ["NAEEM Holding", "employer-211-naeem-holding"],
+    ["Qalaa Holdings", "employer-212-qalaa-holdings"],
+    ["Compass Capital", "employer-213-compass-capital"],
+    ["Egypt Ventures", "employer-214-egypt-ventures"],
+    ["DisrupTech Ventures", "employer-215-disruptech-ventures"],
+    ["Camel Ventures", "employer-216-camel-ventures"],
+    ["Foundation Ventures", "employer-217-foundation-ventures"],
+    ["Falak Startups", "employer-218-falak-startups"],
+    ["A15", "employer-219-a15"],
+  ];
+  const added = employerRegistry.employers.filter((employer) => expected.some(([, id]) => id === employer.id));
+  assert.deepEqual(added.map((employer) => [employer.displayName, employer.id]), expected);
+  assert.deepEqual(employerRegistry.employers.slice(195), added);
+  const batch = batches.find((item) => item.id === "batch-10")!;
+  assert.equal(batch.employerIds.length, 23);
+  assert.deepEqual(batch.employerIds.slice(12), added.map((employer) => employer.id));
+  assert.doesNotThrow(validateBatches);
+  assert.equal(new Set(employerRegistry.employers.map((employer) => employer.id)).size, 206);
+  assert.equal(new Set(employerRegistry.employers.map((employer) => employer.id.split("-")[1])).size, 206);
+  const normalizeAlias = (value: string) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  // Explicitly accepted baseline identities; Egypt must introduce no additional collision.
+  const inherited = [
+    ["globeleq", ["employer-123-globeleq", "employer-156-globeleq"]],
+    ["infracredit", ["employer-124-infracredit", "employer-157-infracredit"]],
+  ];
+  for (const normalize of [normalizeText, normalizeAlias]) {
+    const owners = new Map<string, Set<string>>();
+    for (const employer of employerRegistry.employers) {
+      for (const alias of [employer.displayName, ...employer.aliases]) {
+        const key = normalize(alias);
+        if (!owners.has(key)) owners.set(key, new Set());
+        owners.get(key)!.add(employer.id);
+      }
+    }
+    const collisions = [...owners].filter(([, ids]) => ids.size > 1).map(([key, ids]) => [key, [...ids]]);
+    assert.deepEqual(collisions, inherited);
+    for (const employer of added) {
+      for (const alias of [employer.displayName, ...employer.aliases]) assert.deepEqual([...owners.get(normalize(alias))!], [employer.id]);
+    }
+  }
+  const aliasOwner = (alias: string) => employerRegistry.employers.find((employer) => employer.aliases.some((name) => normalizeText(name) === normalizeText(alias)))?.id;
+  assert.equal(aliasOwner("Citadel Capital"), "employer-212-qalaa-holdings");
+  assert.equal(aliasOwner("Egypt Ventures"), "employer-214-egypt-ventures");
+  assert.equal(aliasOwner("Falak Startups"), "employer-218-falak-startups");
+  for (const held of ["B Investments Holding", "B Investments", "Acasia Ventures", "EdVentures", "Catalyst Partners Middle East", "Catalyst Capital Egypt", "Endure Capital"]) assert.equal(aliasOwner(held), undefined);
+  for (const employer of added) {
+    assert.equal(employer.batchId, "batch-10");
+    assert.equal(employer.inclusionDecision, "Include");
+    assert.equal(employer.sourceStatus, "Not researched");
+    assert.equal(employer.priority, undefined);
+    assert.equal(employer.workbookId, undefined);
+    assert.equal(employer.workbookSource, undefined);
+    assert.deepEqual(employer.otherVerifiedSources, []);
+    assert.equal(employer.careersUrl, "");
+  }
+  const root = mkdtempSync(join(tmpdir(), "acd-batch10-egypt-preview-"));
+  try {
+    const preview = prepareResearchBatch(root, { batchId: "batch-10", batchRunId: "batch-10-egypt-preview", dryRun: true });
+    assert.equal(preview.task.scope, "full_batch");
+    assert.deepEqual(preview.task.selectedEmployerIds, batch.employerIds);
+    assert.deepEqual(preview.task.employers.slice(12).map((employer) => [employer.displayName, employer.id]), expected);
+    assert.equal(preview.created, false);
+    assert.equal(existsSync(join(root, "data")), false);
+  } finally { removeTemp(root); }
+});
+
+test("historical Batch 10 snapshots retain twelve employers after the Egypt expansion", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-batch10-history-"));
+  try {
+    const options = { batchId: "batch-10", batchRunId: "batch-10-historical-fixture" };
+    const preview = prepareResearchBatch(root, { ...options, dryRun: true });
+    const task = { ...preview.task, employers: preview.task.employers.slice(0, 12), selectedEmployerIds: preview.task.selectedEmployerIds.slice(0, 12) };
+    // Model the earlier roster only in a temporary fixture; repository history is never touched.
+    mkdirSync(join(preview.taskPath, "..", "results"), { recursive: true });
+    writeFileSync(preview.taskPath, `${JSON.stringify(task, null, 2)}\n`, { flag: "wx" });
+    const before = readFileSync(preview.taskPath, "utf8");
+    assert.equal(readResearchTask(root, options.batchRunId).employers.length, 12);
+    const validation = validateResearchBatch(root, options.batchRunId);
+    assert.equal(validation.expected, 12);
+    assert.deepEqual(validation.pendingEmployerIds, task.selectedEmployerIds);
+    assert.throws(() => prepareResearchBatch(root, options), /different immutable employer selection/);
+    assert.equal(readFileSync(preview.taskPath, "utf8"), before);
+  } finally { removeTemp(root); }
+});
+
+test("Batch 10 registration stays unresearched and completion requires all 23 actual members", () => {
   const root = mkdtempSync(join(tmpdir(), "acd-batch10-dashboard-"));
   try {
     mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
@@ -200,8 +290,8 @@ test("Batch 10 registration stays unresearched and completion uses twelve actual
       const overview = database.researchBatchesOverview();
       const northAfrica = overview.batches.find((batch) => batch.id === "batch-10")!;
       assert.equal(employerRegistry.batchNames?.["batch-10"], "Batch 10 — North Africa");
-      assert.equal(northAfrica.employerCount, 12);
-      assert.equal(northAfrica.firmsExpected, 12);
+      assert.equal(northAfrica.employerCount, 23);
+      assert.equal(northAfrica.firmsExpected, 23);
       assert.equal(northAfrica.firmsChecked, 0);
       assert.equal(northAfrica.researchStatus, "Not researched");
       assert.equal(northAfrica.runId, null);
@@ -213,12 +303,14 @@ test("Batch 10 registration stays unresearched and completion uses twelve actual
       for (const table of ["runs", "research_imports", "vacancies", "decisions", "source_checks", "publication_manifests"]) {
         assert.equal(Number((database.db.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get() as { count: number }).count), 0);
       }
-      assert.throws(() => database.completeBatch("batch-10"), /12 employer source-coverage/);
+      assert.throws(() => database.completeBatch("batch-10"), /23 employer source-coverage/);
       const ids = batches.find((batch) => batch.id === "batch-10")!.employerIds;
       const complete = database.db.prepare("UPDATE employer_research SET status='Complete' WHERE batch_id='batch-10' AND employer_id=?");
-      for (const id of ids.slice(0, 11)) complete.run(id);
+      for (const id of ids.slice(0, 12)) complete.run(id);
+      assert.throws(() => database.completeBatch("batch-10"), /11 employer source-coverage/);
+      for (const id of ids.slice(12, 22)) complete.run(id);
       assert.throws(() => database.completeBatch("batch-10"), /1 employer source-coverage/);
-      complete.run(ids[11]);
+      complete.run(ids[22]);
       assert.doesNotThrow(() => database.completeBatch("batch-10"));
     } finally { database.close(); }
   } finally { removeTemp(root); }
@@ -483,7 +575,7 @@ test("research batches overview is read-only and shows pilot metrics with honest
     const preserved = baseline.addVacancy(baselineRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     baseline.completeRun(baselineRun); baseline.decide(preserved, "deferred", {});
     const empty = baseline.researchBatchesOverview();
-    assert.equal(empty.totalEmployers, 195); assert.equal(empty.totalBatches, 10); assert.equal(empty.batches.length, batches.length);
+    assert.equal(empty.totalEmployers, 206); assert.equal(empty.totalBatches, 10); assert.equal(empty.batches.length, batches.length);
     const newBatch = empty.batches.find((batch) => batch.id === "batch-09");
     assert.ok(newBatch);
     assert.equal(newBatch.employerCount, 20); assert.equal(newBatch.firmsExpected, 20); assert.equal(newBatch.firmsChecked, 0);

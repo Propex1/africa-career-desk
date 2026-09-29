@@ -7250,6 +7250,271 @@
                           ],
                           "sourceStatus": "Not researched",
                           "manualReviewNotes": "Added to Batch 10 — North Africa at user request on 2026-09-11; not sourced from the workbook. Approved sourcing coverage only, without employer priority tiers. Source identity/channel setup only; no vacancy research or publication approval. Unknown metadata remains empty or explicitly unverified. The official careers URL is corroborated by indexed first-party content; the direct check returned HTTP 500 (Database Error). Recheck availability during research. UNVERIFIED RESEARCH LEAD (user supplied): NI Capital — open application. Intended section: Open Applications, not a named Job. Verify the current official application route and duplicates during the next research run; do not create a publication-ready record or decision card."
+                      },
+                      {
+                          "id": "employer-209-hc-securities-investment",
+                          "displayName": "HC Securities & Investment",
+                          "aliases": [
+                              "HC Securities & Investment"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "HC Securities & Investment official website",
+                              "HC Securities & Investment careers jobs",
+                              "HC Securities & Investment investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity includes its investment-banking, asset-management and brokerage divisions; do not create separate divisional employers. Preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-210-prime-holding",
+                          "displayName": "Prime Holding",
+                          "aliases": [
+                              "Prime Holding"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Prime Holding official website",
+                              "Prime Holding careers jobs",
+                              "Prime Holding investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity includes relevant investment-banking, asset-management and private-equity businesses; preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-211-naeem-holding",
+                          "displayName": "NAEEM Holding",
+                          "aliases": [
+                              "NAEEM Holding"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "NAEEM Holding official website",
+                              "NAEEM Holding careers jobs",
+                              "NAEEM Holding investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity; do not create separate subsidiary employers without an explicit identity decision. Preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-212-qalaa-holdings",
+                          "displayName": "Qalaa Holdings",
+                          "aliases": [
+                              "Qalaa Holdings",
+                              "Citadel Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Qalaa Holdings official website",
+                              "Qalaa Holdings careers jobs",
+                              "Qalaa Holdings investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Citadel Capital is the historical employer name, verified against https://qalaaholdings.com/en/our-heritage. Do not create a separate predecessor record."
+                      },
+                      {
+                          "id": "employer-213-compass-capital",
+                          "displayName": "Compass Capital",
+                          "aliases": [
+                              "Compass Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Compass Capital official website",
+                              "Compass Capital careers jobs",
+                              "Compass Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Preserve the approved Compass Capital identity; no existing registry aliases or historical canonical records were found."
+                      },
+                      {
+                          "id": "employer-214-egypt-ventures",
+                          "displayName": "Egypt Ventures",
+                          "aliases": [
+                              "Egypt Ventures"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Egypt Ventures official website",
+                              "Egypt Ventures careers jobs",
+                              "Egypt Ventures investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Keep distinct from Falak Startups despite institutional links; each has a separate approved research-employer identity."
+                      },
+                      {
+                          "id": "employer-215-disruptech-ventures",
+                          "displayName": "DisrupTech Ventures",
+                          "aliases": [
+                              "DisrupTech Ventures"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "DisrupTech Ventures official website",
+                              "DisrupTech Ventures careers jobs",
+                              "DisrupTech Ventures investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Use the approved DisrupTech Ventures identity."
+                      },
+                      {
+                          "id": "employer-216-camel-ventures",
+                          "displayName": "Camel Ventures",
+                          "aliases": [
+                              "Camel Ventures"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Camel Ventures official website",
+                              "Camel Ventures careers jobs",
+                              "Camel Ventures investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Do not broaden this identity to unrelated camel-branded companies."
+                      },
+                      {
+                          "id": "employer-217-foundation-ventures",
+                          "displayName": "Foundation Ventures",
+                          "aliases": [
+                              "Foundation Ventures"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Foundation Ventures official website",
+                              "Foundation Ventures careers jobs",
+                              "Foundation Ventures investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Use the approved Foundation Ventures identity."
+                      },
+                      {
+                          "id": "employer-218-falak-startups",
+                          "displayName": "Falak Startups",
+                          "aliases": [
+                              "Falak Startups"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Falak Startups official website",
+                              "Falak Startups careers jobs",
+                              "Falak Startups investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Keep distinct from Egypt Ventures despite institutional links; each has a separate approved research-employer identity."
+                      },
+                      {
+                          "id": "employer-219-a15",
+                          "displayName": "A15",
+                          "aliases": [
+                              "A15"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-10",
+                          "geography": "Egypt",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "A15 official website",
+                              "A15 careers jobs",
+                              "A15 investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 10 following the user-approved Egypt employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Preserve the canonical name and capitalization exactly as A15."
                       }
                   ]
 }
