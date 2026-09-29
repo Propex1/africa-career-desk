@@ -38,8 +38,11 @@ export const batches = [...new Set(employerRegistry.employers.map((employer) => 
 export function validateBatches() {
   const assigned = batches.flatMap((batch) => batch.employerIds);
   if (new Set(assigned).size !== employerRegistry.employers.length || assigned.length !== employerRegistry.employers.length) throw new Error("Every included employer must belong to exactly one batch.");
-  // Explicit membership stays stable when a new batch follows a partially filled historical batch.
-  if (batches.some((batch) => batch.employerIds.length < 1 || batch.employerIds.length > BATCH_SIZE)) throw new Error("Each batch must contain between 1 and 20 employers.");
+  // Batch 8 has an explicitly approved 23-employer roster; other batches retain the default cap.
+  for (const batch of batches) {
+    const limit = batch.id === "batch-08" ? 23 : BATCH_SIZE;
+    if (batch.employerIds.length < 1 || batch.employerIds.length > limit) throw new Error(`${batch.id} must contain between 1 and ${limit} employers.`);
+  }
 }
 
 validateBatches();

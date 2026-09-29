@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { classify } from "../classifier.ts";
 import { findDuplicates } from "../dedupe.ts";
-import { duplicateKey, normalizeUrl } from "../normalize.ts";
+import { duplicateKey, normalizeText, normalizeUrl } from "../normalize.ts";
 import { AcdDatabase } from "../db.ts";
 import { collectSource, workableHumanUrl } from "../collectors.ts";
 import { existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -16,7 +16,7 @@ import { normalizeLocation } from "../location.ts";
 import { assessFreshness, confirmationIsValid, isGenuineRepost } from "../freshness.ts";
 import { assessReadiness } from "../readiness.ts";
 import { isNewlyPublished, sortByFirstPublication, withFirstPublicationDate } from "../../../src/lib/opportunity-publication.ts";
-import { BATCH_SIZE, batches, employerRegistry } from "../batches.ts";
+import { BATCH_SIZE, batches, employerRegistry, validateBatches } from "../batches.ts";
 import { prepareResearchBatch, readResearchTask, saveEmployerResearchResult, validateEmployerResearchResult, validateResearchBatch } from "../research.ts";
 import { previewResearchImport } from "../import-preview.ts";
 import { importResearchRun } from "../research-import.ts";
@@ -32,15 +32,85 @@ test("normalizes URLs and cautious duplicate keys", () => {
   assert.equal(duplicateKey("pula", "Investment Manager", "Nairobi"), duplicateKey("pula", " investment-manager ", " Nairobi "));
 });
 
-test("included employers have stable 20-employer batches without reshuffling", () => {
-  assert.equal(employerRegistry.employers.length, 162);
-  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 2, 20]);
+test("included employers have stable explicit batches without reshuffling", () => {
+  assert.equal(employerRegistry.employers.length, 183);
+  assert.deepEqual(batches.map((batch) => batch.employerIds.length), [20, 20, 20, 20, 20, 20, 20, 23, 20]);
   assert.equal(new Set(batches.flatMap((batch) => batch.employerIds)).size, employerRegistry.employers.length);
   assert.equal(BATCH_SIZE, 20);
-  assert.deepEqual(batches.find((batch) => batch.id === "batch-08")?.employerIds, [
+  assert.deepEqual(batches.find((batch) => batch.id === "batch-08")?.employerIds.slice(0, 2), [
     "employer-154-nigeria-sovereign-investment-authority-nsia",
     "employer-155-ghana-infrastructure-investment-fund-giif",
   ]);
+});
+
+test("Batch 8 adds only the approved Nigeria identities and prepares all 23 without research", () => {
+  const expected = [
+    "Bank of Industry (BOI)", "Development Bank of Nigeria (DBN)", "Nigerian Export-Import Bank (NEXIM)",
+    "Ministry of Finance Incorporated (MOFI)", "Family Homes Funds (FHFL)", "Afrinvest", "United Capital",
+    "Vetiva", "Quest Merchant Bank", "First Asset Management", "AVA Capital", "Argentil Group", "Meristem",
+    "Cordros Capital", "Parthian Partners", "Zedcrest Group", "FSDH Group / FSDH Capital", "Norrenberger",
+    "AIICO Capital", "FCMB Capital Markets", "All On",
+  ];
+  const added = employerRegistry.employers.filter((employer) => Number(employer.id.split("-")[1]) >= 188);
+  assert.deepEqual(added.map((employer) => employer.displayName), expected);
+  assert.deepEqual(added.map((employer) => Number(employer.id.split("-")[1])), Array.from({ length: 21 }, (_, i) => 188 + i));
+  assert.doesNotThrow(validateBatches);
+  const normalizeAlias = (value: string) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const normalize of [normalizeText, normalizeAlias]) {
+    for (const employer of added) {
+      const others = new Set(employerRegistry.employers.filter((other) => other.id !== employer.id).flatMap((other) => [other.displayName, ...other.aliases]).map(normalize));
+      assert.ok(employer.aliases.every((alias) => !others.has(normalize(alias))), employer.displayName);
+    }
+  }
+  const byName = (name: string) => added.find((employer) => employer.displayName === name)!;
+  assert.ok(byName("Quest Merchant Bank").aliases.includes("FBNQuest Merchant Bank"));
+  assert.ok(byName("First Asset Management").aliases.includes("FBNQuest Asset Management"));
+  assert.ok(byName("AVA Capital").aliases.includes("AVA Global Asset Managers"));
+  for (const alias of ["Argentil Capital", "Argentil Capital Management"]) assert.ok(byName("Argentil Group").aliases.includes(alias));
+  for (const alias of ["FSDH Merchant Bank", "FSDH Asset Management"]) assert.ok(byName("FSDH Group / FSDH Capital").aliases.includes(alias));
+  const names = new Set(employerRegistry.employers.flatMap((employer) => [employer.displayName, ...employer.aliases]).map(normalizeAlias));
+  for (const held of ["NIRSAL Plc", "Consonance Investment Managers", "EchoVC", "Greenhouse Capital", "Microtraction", "Synergy Capital Managers", "Comercio Partners"]) assert.ok(!names.has(normalizeAlias(held)));
+  for (const employer of added) {
+    assert.equal(employer.batchId, "batch-08");
+    assert.equal(employer.sourceStatus, "Not researched");
+    assert.equal(employer.inclusionDecision, "Include");
+    assert.equal(employer.priority, undefined);
+    assert.equal(employer.workbookId, undefined);
+    assert.deepEqual(employer.otherVerifiedSources, []);
+    assert.equal(employer.careersUrl, "");
+  }
+  const root = mkdtempSync(join(tmpdir(), "acd-batch08-preview-"));
+  try {
+    const preview = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "batch-08-expanded-preview", dryRun: true });
+    assert.equal(preview.task.employers.length, 23);
+    assert.equal(preview.task.scope, "full_batch");
+    assert.deepEqual(preview.task.employers.slice(2).map((employer) => employer.displayName), expected);
+    assert.equal(preview.created, false);
+    assert.equal(existsSync(join(root, "data")), false);
+  } finally { removeTemp(root); }
+});
+
+// Preserve the original two-employer full-batch fixtures for historical-run validation/import tests.
+// These snapshots are written only under each test's temporary root, never into repository history.
+function prepareHistoricalBatch8Fixture(root: string, options: Parameters<typeof prepareResearchBatch>[1]) {
+  const preview = prepareResearchBatch(root, { ...options, dryRun: true });
+  const task = { ...preview.task, employers: preview.task.employers.slice(0, 2), selectedEmployerIds: preview.task.selectedEmployerIds.slice(0, 2) };
+  mkdirSync(join(preview.taskPath, "..", "results"), { recursive: true });
+  writeFileSync(preview.taskPath, `${JSON.stringify(task, null, 2)}\n`, { flag: "wx" });
+  return { ...preview, task, created: true };
+}
+
+test("historical Batch 8 snapshots retain two employers after the registry expansion", () => {
+  const root = mkdtempSync(join(tmpdir(), "acd-batch08-history-"));
+  try {
+    const options = { batchId: "batch-08", batchRunId: "batch-08-historical-fixture" };
+    const historical = prepareHistoricalBatch8Fixture(root, options);
+    const before = readFileSync(historical.taskPath, "utf8");
+    assert.equal(readResearchTask(root, options.batchRunId).employers.length, 2);
+    assert.equal(validateResearchBatch(root, options.batchRunId).expected, 2);
+    assert.throws(() => prepareResearchBatch(root, options), /different immutable employer selection/);
+    assert.equal(readFileSync(historical.taskPath, "utf8"), before);
+  } finally { removeTemp(root); }
 });
 
 test("Batch 9 includes the requested employers equally and prepares without starting research", () => {
@@ -124,7 +194,7 @@ test("research handoff snapshots are immutable, results resume independently, an
   const root = mkdtempSync(join(tmpdir(), "acd-research-"));
   try {
     const preview = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "fixture-preview", dryRun: true, now: new Date("2026-08-29T12:00:00Z") });
-    assert.equal(preview.task.employers.length, 2);
+    assert.equal(preview.task.employers.length, 23);
     assert.equal(existsSync(preview.taskPath), false);
     const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "fixture-batch-run", now: new Date("2026-08-29T12:00:00Z") });
     assert.equal(prepared.created, true);
@@ -133,13 +203,13 @@ test("research handoff snapshots are immutable, results resume independently, an
     saveEmployerResearchResult(root, first);
     let validation = validateResearchBatch(root, prepared.task.batchRunId);
     assert.equal(validation.completed, 1);
-    assert.deepEqual(validation.pendingEmployerIds, [prepared.task.employers[1].id]);
+    assert.deepEqual(validation.pendingEmployerIds, prepared.task.employers.slice(1).map((employer) => employer.id));
     assert.throws(() => saveEmployerResearchResult(root, { ...first, limitationSummary: "Changed result." }), /immutable/);
     for (const employer of prepared.task.employers.slice(1)) saveEmployerResearchResult(root, limitedResearchResult(prepared.task.batchRunId, prepared.task.taskId, employer));
     validation = validateResearchBatch(root, prepared.task.batchRunId);
     assert.equal(validation.valid, true);
-    assert.equal(validation.completed, 2);
-    assert.equal(validation.summary.schemaVersions["1.0.0"], 2);
+    assert.equal(validation.completed, 23);
+    assert.equal(validation.summary.schemaVersions["1.0.0"], 23);
     assert.equal(validation.summary.structurallyReadyForFutureImport, false);
   } finally { removeTemp(root); }
 });
@@ -158,7 +228,7 @@ test("research results cannot claim complete coverage with unchecked required so
 test("research result v1.1 keeps structured editorial, freshness, source, and closure evidence import-ready", () => {
   const root = mkdtempSync(join(tmpdir(), "acd-research-v11-"));
   try {
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "fixture-v11" });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: "fixture-v11" });
     const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
     assert.equal(first.schemaVersion, "1.1.0");
     assert.equal(first.activeCandidates[0].location, "Lome, Togo");
@@ -185,7 +255,7 @@ test("research result v1.1 keeps structured editorial, freshness, source, and cl
 test("research import preview rejects legacy results and never creates a SQLite database", () => {
   const root = mkdtempSync(join(tmpdir(), "acd-preview-legacy-"));
   try {
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "preview-legacy" });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: "preview-legacy" });
     for (const employer of prepared.task.employers) saveEmployerResearchResult(root, limitedResearchResult(prepared.task.batchRunId, prepared.task.taskId, employer));
     assert.throws(() => previewResearchImport(root, prepared.task.batchRunId), /v1.1 or newer/);
     assert.equal(existsSync(join(root, "data/acd-runtime/acd.sqlite")), false);
@@ -195,7 +265,7 @@ test("research import preview rejects legacy results and never creates a SQLite 
 test("research import preview is deterministic, read-only, and distinguishes duplicate and readiness outcomes", () => {
   const root = mkdtempSync(join(tmpdir(), "acd-preview-"));
   const createRun = (id: string, mutate?: (result: EmployerResearchResultV1_1) => void) => {
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: id });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: id });
     const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
     mutate?.(first);
     const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]);
@@ -247,7 +317,7 @@ test("research import is explicit, transactional, idempotent, and preserves exis
     const db = new AcdDatabase(root); const existingRun = db.createRun();
     const existingVacancy = db.addVacancy(existingRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     db.completeRun(existingRun); db.decide(existingVacancy, "deferred", {}); db.close();
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "import-fixture" });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: "import-fixture" });
     const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
     const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]); second.activeCandidates = []; second.expiredFindings = []; second.discoveredSources = [];
     saveEmployerResearchResult(root, first); saveEmployerResearchResult(root, second); previewResearchImport(root, prepared.task.batchRunId, { writeReport: true });
@@ -280,7 +350,7 @@ test("research import retains exact cross-run duplicate evidence without claimin
   try {
     mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
     for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "import-duplicate" });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: "import-duplicate" });
     const db = new AcdDatabase(root); const existingRun = db.createRun();
     db.addVacancy(existingRun, { sourceKey: "existing-requisition", employerId: prepared.task.employers[0].id, sourceId: "pula-bamboohr", title: "Existing role", requisitionId: "REQ-DUP", applicationRouteStatus: "available", applyUrl: "https://example.test/jobs/req-dup", sourceUrl: "https://example.test/jobs/req-dup", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     db.completeRun(existingRun); db.close();
@@ -301,7 +371,7 @@ test("expired import corrections preserve decision and lineage while removing th
   try {
     mkdirSync(join(root, "tools/acd/migrations"), { recursive: true });
     for (const id of ["001_initial", "002_add_department", "003_add_freshness", "004_batches", "005_research_imports"]) writeFileSync(join(root, `tools/acd/migrations/${id}.sql`), readFileSync(join(import.meta.dirname, `../migrations/${id}.sql`)));
-    const prepared = prepareResearchBatch(root, { batchId: "batch-08", batchRunId: "expiry-correction" });
+    const prepared = prepareHistoricalBatch8Fixture(root, { batchId: "batch-08", batchRunId: "expiry-correction" });
     const first = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[0]);
     first.activeCandidates[0] = { ...first.activeCandidates[0], title: "Responsable Amor\u00e7age - Madagascar", opportunityType: "Job", applicationUrl: "https://example.test/jobs/amorcage", evidenceUrl: "https://example.test/jobs/amorcage", officialDeadline: "2099-01-01", freshnessStatus: "verified_active", freshnessReason: "Fixture current." };
     const second = structuredResearchResult(prepared.task.batchRunId, prepared.task.taskId, prepared.task.employers[1]); second.activeCandidates = []; second.expiredFindings = []; second.discoveredSources = [];
@@ -333,7 +403,7 @@ test("research batches overview is read-only and shows pilot metrics with honest
     const preserved = baseline.addVacancy(baselineRun, { sourceKey: "preserved", employerId: "pula", sourceId: "pula-bamboohr", title: "Preserved review", applicationRouteStatus: "available", sourceUrl: "https://example.test", sourceType: "fixture", evidence: "fixture", discoveredAt: "2026-08-29T12:00:00.000Z" }, { outcome: "borderline", section: "Job", confidence: 0.5, reasons: ["fixture"], missingFields: [], blocking: false });
     baseline.completeRun(baselineRun); baseline.decide(preserved, "deferred", {});
     const empty = baseline.researchBatchesOverview();
-    assert.equal(empty.totalEmployers, 162); assert.equal(empty.totalBatches, 9); assert.equal(empty.batches.length, batches.length);
+    assert.equal(empty.totalEmployers, 183); assert.equal(empty.totalBatches, 9); assert.equal(empty.batches.length, batches.length);
     const newBatch = empty.batches.find((batch) => batch.id === "batch-09");
     assert.ok(newBatch);
     assert.equal(newBatch.employerCount, 20); assert.equal(newBatch.firmsExpected, 20); assert.equal(newBatch.firmsChecked, 0);

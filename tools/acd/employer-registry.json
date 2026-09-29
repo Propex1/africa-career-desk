@@ -6314,6 +6314,529 @@
                           "otherVerifiedSources": [],
                           "sourceStatus": "Not researched",
                           "manualReviewNotes": "Added to Batch 9 at user request on 2026-09-09; not sourced from the workbook. No vacancy research performed. Geography, opportunity types and official website, careers, ATS and LinkedIn sources require verification during a future research run."
+                      },
+                      {
+                          "id": "employer-188-bank-of-industry-boi",
+                          "displayName": "Bank of Industry (BOI)",
+                          "aliases": [
+                              "Bank of Industry (BOI)",
+                              "Bank of Industry",
+                              "BOI"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Bank of Industry (BOI) official website",
+                              "Bank of Industry (BOI) careers jobs",
+                              "Bank of Industry (BOI) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-189-development-bank-of-nigeria-dbn",
+                          "displayName": "Development Bank of Nigeria (DBN)",
+                          "aliases": [
+                              "Development Bank of Nigeria (DBN)",
+                              "Development Bank of Nigeria",
+                              "DBN"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Development Bank of Nigeria (DBN) official website",
+                              "Development Bank of Nigeria (DBN) careers jobs",
+                              "Development Bank of Nigeria (DBN) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-190-nigerian-export-import-bank-nexim",
+                          "displayName": "Nigerian Export-Import Bank (NEXIM)",
+                          "aliases": [
+                              "Nigerian Export-Import Bank (NEXIM)",
+                              "Nigerian Export-Import Bank",
+                              "NEXIM"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Nigerian Export-Import Bank (NEXIM) official website",
+                              "Nigerian Export-Import Bank (NEXIM) careers jobs",
+                              "Nigerian Export-Import Bank (NEXIM) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-191-ministry-of-finance-incorporated-mofi",
+                          "displayName": "Ministry of Finance Incorporated (MOFI)",
+                          "aliases": [
+                              "Ministry of Finance Incorporated (MOFI)",
+                              "Ministry of Finance Incorporated",
+                              "MOFI"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Ministry of Finance Incorporated (MOFI) official website",
+                              "Ministry of Finance Incorporated (MOFI) careers jobs",
+                              "Ministry of Finance Incorporated (MOFI) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-192-family-homes-funds-fhfl",
+                          "displayName": "Family Homes Funds (FHFL)",
+                          "aliases": [
+                              "Family Homes Funds (FHFL)",
+                              "Family Homes Funds",
+                              "FHFL"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Family Homes Funds (FHFL) official website",
+                              "Family Homes Funds (FHFL) careers jobs",
+                              "Family Homes Funds (FHFL) investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-193-afrinvest",
+                          "displayName": "Afrinvest",
+                          "aliases": [
+                              "Afrinvest"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Afrinvest official website",
+                              "Afrinvest careers jobs",
+                              "Afrinvest investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-194-united-capital",
+                          "displayName": "United Capital",
+                          "aliases": [
+                              "United Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "United Capital official website",
+                              "United Capital careers jobs",
+                              "United Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-195-vetiva",
+                          "displayName": "Vetiva",
+                          "aliases": [
+                              "Vetiva"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Vetiva official website",
+                              "Vetiva careers jobs",
+                              "Vetiva investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-196-quest-merchant-bank",
+                          "displayName": "Quest Merchant Bank",
+                          "aliases": [
+                              "Quest Merchant Bank",
+                              "FBNQuest Merchant Bank"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Quest Merchant Bank official website",
+                              "Quest Merchant Bank careers jobs",
+                              "Quest Merchant Bank investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Current canonical name supplied by the editorial review; FBNQuest Merchant Bank is a historical alias. Keep distinct from First Asset Management / FBNQuest Asset Management."
+                      },
+                      {
+                          "id": "employer-197-first-asset-management",
+                          "displayName": "First Asset Management",
+                          "aliases": [
+                              "First Asset Management",
+                              "FBNQuest Asset Management"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "First Asset Management official website",
+                              "First Asset Management careers jobs",
+                              "First Asset Management investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Current canonical asset-management identity supplied by the editorial review; FBNQuest Asset Management is a historical alias. Keep distinct from Quest Merchant Bank."
+                      },
+                      {
+                          "id": "employer-198-ava-capital",
+                          "displayName": "AVA Capital",
+                          "aliases": [
+                              "AVA Capital",
+                              "AVA Global Asset Managers"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "AVA Capital official website",
+                              "AVA Capital careers jobs",
+                              "AVA Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity; AVA Global Asset Managers is a related entity under this research record. Preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-199-argentil-group",
+                          "displayName": "Argentil Group",
+                          "aliases": [
+                              "Argentil Group",
+                              "Argentil Capital",
+                              "Argentil Capital Management"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Argentil Group official website",
+                              "Argentil Group careers jobs",
+                              "Argentil Group investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity; related Argentil entities share this research record. Preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-200-meristem",
+                          "displayName": "Meristem",
+                          "aliases": [
+                              "Meristem"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Meristem official website",
+                              "Meristem careers jobs",
+                              "Meristem investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-201-cordros-capital",
+                          "displayName": "Cordros Capital",
+                          "aliases": [
+                              "Cordros Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Cordros Capital official website",
+                              "Cordros Capital careers jobs",
+                              "Cordros Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-202-parthian-partners",
+                          "displayName": "Parthian Partners",
+                          "aliases": [
+                              "Parthian Partners"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Parthian Partners official website",
+                              "Parthian Partners careers jobs",
+                              "Parthian Partners investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-203-zedcrest-group",
+                          "displayName": "Zedcrest Group",
+                          "aliases": [
+                              "Zedcrest Group"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Zedcrest Group official website",
+                              "Zedcrest Group careers jobs",
+                              "Zedcrest Group investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-204-fsdh-group-fsdh-capital",
+                          "displayName": "FSDH Group / FSDH Capital",
+                          "aliases": [
+                              "FSDH Group / FSDH Capital",
+                              "FSDH Group",
+                              "FSDH Capital",
+                              "FSDH Merchant Bank",
+                              "FSDH Asset Management"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "FSDH Group / FSDH Capital official website",
+                              "FSDH Group / FSDH Capital careers jobs",
+                              "FSDH Group / FSDH Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Employer-family identity; FSDH Merchant Bank and FSDH Asset Management are related entities under this research record. Preserve the actual hiring entity in future research."
+                      },
+                      {
+                          "id": "employer-205-norrenberger",
+                          "displayName": "Norrenberger",
+                          "aliases": [
+                              "Norrenberger"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "Norrenberger official website",
+                              "Norrenberger careers jobs",
+                              "Norrenberger investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged."
+                      },
+                      {
+                          "id": "employer-206-aiico-capital",
+                          "displayName": "AIICO Capital",
+                          "aliases": [
+                              "AIICO Capital"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "AIICO Capital official website",
+                              "AIICO Capital careers jobs",
+                              "AIICO Capital investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Scope is AIICO Capital specifically; do not substitute AIICO Insurance."
+                      },
+                      {
+                          "id": "employer-207-fcmb-capital-markets",
+                          "displayName": "FCMB Capital Markets",
+                          "aliases": [
+                              "FCMB Capital Markets"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "FCMB Capital Markets official website",
+                              "FCMB Capital Markets careers jobs",
+                              "FCMB Capital Markets investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Scope is the investment-banking / capital-markets platform specifically; do not substitute generic FCMB or FCMB Bank."
+                      },
+                      {
+                          "id": "employer-208-all-on",
+                          "displayName": "All On",
+                          "aliases": [
+                              "All On"
+                          ],
+                          "inclusionDecision": "Include",
+                          "batchId": "batch-08",
+                          "geography": "Nigeria",
+                          "opportunityTypes": [],
+                          "inclusionRule": "Publish only investment, private capital, DFI, project finance, corporate development, strategy, portfolio/value creation or research roles. Exclude audit/admin/accounting/procurement/general operations.",
+                          "careersUrl": "",
+                          "atsProvider": "To identify",
+                          "linkedInCompanyUrl": null,
+                          "linkedInJobsUrl": null,
+                          "googleQueries": [
+                              "All On official website",
+                              "All On careers jobs",
+                              "All On investment finance infrastructure strategy legal programme"
+                          ],
+                          "otherVerifiedSources": [],
+                          "sourceStatus": "Not researched",
+                          "manualReviewNotes": "Added to Batch 8 following the user-approved Nigeria employer-universe review on 2026-09-29; not sourced from the workbook. Registry inclusion only; no vacancy research or publication approval. Official website, careers, ATS and LinkedIn sources require verification during a future research run. Historical research snapshots remain unchanged. Nigeria-focused energy / climate impact investment platform, as approved in the editorial review."
                       }
                   ]
 }
