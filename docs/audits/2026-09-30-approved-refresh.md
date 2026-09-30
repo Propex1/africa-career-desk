@@ -114,3 +114,9 @@ The ignored evidence directory is additional local validation material, not webs
 Release baseline: branch `main`, HEAD `ab36f05524c55e0546913fcdb3c9ae1985d52795`. The final commit/deployment verification is saved in the local release evidence. Unrelated pre-existing work is excluded from the commit.
 
 Recommendation: **KEEP**. Missing Batch 7–10 decisions remain an explicitly documented scope limitation; no speculative opportunities were added.
+
+## Production verification follow-up
+
+Refresh commit `b8d71aa429344ebeba5e80fe8e99a1173bbd3bd7` was pushed to `origin/main` and successfully deployed by the existing Vercel Git integration. Production confirmed all nine approved/restored job routes and Apply destinations, and all six removals. It exposed a pre-existing date-sensitive badge hydration defect: Vercel rendered on 30 September UTC while a Zurich browser rendered on 1 October. UTC browser checks had no error; Zurich reproduced React hydration error 418.
+
+A narrowly scoped follow-up makes the server and first client badge render identical; the existing effect then applies the reader's local calendar date and retains the midnight timer. No opportunity data, layout, styling or ordering is changed. This component was clean before the task and does not contain unrelated user edits. The follow-up is validated and deployed separately without rewriting the refresh commit. Final production evidence is saved in `production-release-check.json` and timezone regression evidence alongside it.
