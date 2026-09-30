@@ -4722,6 +4722,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
 const PINNED_JOB_IDS = [
+  ...APPROVED_CONTENT_2026_09_30.map((job) => job.id),
   "ACD-0293", // Meridiam VIE leads the approved September refresh.
   ...CHRONOLOGICAL_JOBS.filter((job) => SEPTEMBER_27_REFRESH_IDS.has(job.id) && job.id !== "ACD-0293").map((job) => job.id),
   "ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263",
