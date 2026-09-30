@@ -5,6 +5,7 @@ import { APPROVED_JOBS_2026_09_16 } from "@/data/approved-jobs-2026-09-16";
 import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
 import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data/approved-content-2026-09-23";
 import { APPROVED_CONTENT_2026_09_27 } from "@/data/approved-content-2026-09-27";
+import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "@/data/approved-content-2026-09-30";
 import { EMPLOYER_ID_BY_COMPANY } from "@/data/employer-identities";
 import { buildOpportunityProjection, getLiveJobs } from "@/lib/opportunity-data";
 import type { VerifiedOpportunityFields } from "@/lib/opportunity-data";
@@ -4231,6 +4232,7 @@ const OPPORTUNITY_RECORDS: Opportunity[] = [
   ...[...APPROVED_JOBS_2026_09_20].reverse(),
   ...[...APPROVED_CONTENT_2026_09_23].reverse(),
   ...[...APPROVED_CONTENT_2026_09_27].reverse(),
+  ...[...APPROVED_CONTENT_2026_09_30].reverse(),
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
@@ -4689,10 +4691,13 @@ const VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID: Readonly<Record<string, VerifiedOppo
   },
 };
 
-export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS, {
+export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map((record) => ({
+  ...record,
+  ...REFRESHED_FIELDS_2026_09_30[record.id],
+})), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
-  removedJobIds: REMOVED_JOB_IDS,
-  confirmedClosures: CONFIRMED_CLOSURES,
+  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30]),
+  confirmedClosures: { ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30 },
   verifiedDeadlinesByJobId: VERIFIED_HARD_DEADLINES,
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,

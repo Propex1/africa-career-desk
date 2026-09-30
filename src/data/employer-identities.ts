@@ -99,6 +99,8 @@ export const EMPLOYER_ID_BY_COMPANY: Readonly<Record<string, string>> = {
   "BOA Capital Asset Management": "acd-employer-boa-capital-asset-management",
   "Attijari Finances Corp": "employer-183-attijari-finances-corp",
   "Ekuity Capital": "employer-178-ekuity-capital",
+  "Partech Africa": "employer-063-partech-africa",
+  "Absa": "employer-108-absa-corporate-investment-banking",
 };
 
 export const UNRESOLVED_EMPLOYER_LABELS = [

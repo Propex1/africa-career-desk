@@ -26,6 +26,9 @@ import { ENABLED_JOB_CATEGORY_PAGES } from "../../../src/data/job-categories.ts"
 import { filterJobsForCategory } from "../../../src/lib/job-categories.ts";
 import { filterJobsForBoard, type JobBoardFilters } from "../../../src/lib/job-filters.ts";
 import { APPROVED_CONTENT_2026_09_27 } from "../../../src/data/approved-content-2026-09-27.ts";
+import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "../../../src/data/approved-content-2026-09-30.ts";
+import { filterJobsForCountry } from "../../../src/lib/job-countries.ts";
+import { ENABLED_JOB_COUNTRY_PAGES } from "../../../src/data/job-countries.ts";
 
 const root = process.cwd();
 // Keep the accepted pre-refresh cohort for the existing architecture regression tests.
@@ -199,6 +202,90 @@ const projectedRecords = buildOpportunityProjection(rawRecords, {
   verifiedDeadlinesByJobId,
 });
 
+const september30Source = [...rawRecords, ...APPROVED_CONTENT_2026_09_27];
+const september30Options = { ...projectionOptions, verifiedDeadlinesByJobId, today: "2026-10-01" };
+const september30Before = buildOpportunityProjection(september30Source, september30Options);
+const september30After = buildOpportunityProjection([...september30Source, ...APPROVED_CONTENT_2026_09_30].map((record) => ({
+  ...record, ...REFRESHED_FIELDS_2026_09_30[record.id],
+})), {
+  ...september30Options,
+  removedJobIds: new Set([...removedJobIds, ...REMOVED_JOB_IDS_2026_09_30]),
+  confirmedClosures: { ...confirmedClosures, ...CONFIRMED_CLOSURES_2026_09_30 },
+});
+
+test("30 September refresh adds eight distinct approved roles without changing unaffected records", () => {
+  assert.equal(september30After.length, 197);
+  const changed = new Set(["ACD-0242", "ACD-0270", ...REMOVED_JOB_IDS_2026_09_30]);
+  for (const old of september30Before) {
+    const current = september30After.find((job) => job.id === old.id);
+    assert.ok(current, `History missing: ${old.id}`);
+    if (!changed.has(old.id)) assert.deepEqual(current, old);
+  }
+  for (const record of APPROVED_CONTENT_2026_09_30) {
+    assert.ok(EMPLOYER_ID_BY_COMPANY[record.company]);
+    assert.ok(!september30Source.some((job) => job.id === record.id || job.slug === record.slug || job.applyUrl === record.applyUrl));
+    assert.equal(record.boardSection, "Jobs");
+    assert.equal(record.publishedAt, "2026-10-01");
+  }
+  assert.equal(getLiveJobs(september30After).length - getLiveJobs(september30Before).length, 6);
+});
+
+test("30 September approved removals disappear from discovery and sitemap while retaining history", () => {
+  const removed = ["ACD-0227", "ACD-0228", "ACD-0242", "ACD-0244", ...REMOVED_JOB_IDS_2026_09_30];
+  const filters: JobBoardFilters = {region: [], country: [], roleType: [], experience: [], language: []};
+  for (const id of removed) {
+    const record = september30After.find((job) => job.id === id)!;
+    assert.ok(record);
+    assert.equal(record.publicationStatus, "removed");
+    assert.ok(!filterJobsForBoard(september30After, filters, record.title).some((job) => job.id === id));
+    assert.ok(!buildSitemap(getLiveJobs(september30After)).some((entry) => entry.url.includes(`/jobs/${record.slug}/`)));
+  }
+  assert.equal(september30After.find((job) => job.id === "ACD-0242")?.lifecycleReason, "verified_closed");
+});
+
+test("restored RMB R53633 retains its identity and expires before the employer's exclusive closing date", () => {
+  const previous = september30Before.find((job) => job.id === "ACD-0270")!;
+  const restored = september30After.find((job) => job.id === "ACD-0270")!;
+  assert.equal(restored.publicationStatus, "live");
+  assert.equal(restored.lifecycleStatus, "active");
+  for (const key of ["id", "slug", "publishedAt", "applyUrl", "employerId"] as const) assert.equal(restored[key], previous[key]);
+  assert.equal(restored.deadlineDisplay, "Before 5 Oct 2026");
+  assert.equal(restored.deadlineDate, "2026-10-04");
+  assert.ok(buildSitemap(getLiveJobs(september30After)).some((entry) => entry.url.includes(`/jobs/${restored.slug}/`)));
+  const options = { employerIdByCompany: EMPLOYER_ID_BY_COMPANY, removedJobIds: new Set<string>(), confirmedClosures: {} };
+  assert.equal(buildOpportunityProjection([restored], { ...options, today: "2026-10-04" })[0].publicationStatus, "live");
+  const expired = buildOpportunityProjection([restored], { ...options, today: "2026-10-05" })[0];
+  assert.equal(expired.publicationStatus, "removed");
+  assert.equal(expired.lifecycleReason, "deadline_passed");
+});
+
+test("approved multi-location internship and separate finance levels retain distinct identities", () => {
+  const partech = september30After.find((job) => job.id === "ACD-0317")!;
+  assert.equal(partech.employerId, "employer-063-partech-africa");
+  assert.equal(partech.employmentType, "internship");
+  assert.equal(partech.locations?.length, 2);
+  for (const name of ["Kenya", "Nigeria"]) {
+    const country = ENABLED_JOB_COUNTRY_PAGES.find((entry) => entry.country === name)
+      ?? { country: name, slug: "nigeria", description: "", metaDescription: "" };
+    assert.deepEqual(filterJobsForCountry([partech], country).map((job) => job.id), [partech.id]);
+  }
+  const nedbank = APPROVED_CONTENT_2026_09_30.filter((job) => job.company.startsWith("Nedbank"));
+  assert.equal(nedbank.length, 2);
+  assert.equal(new Set(nedbank.map((job) => job.applyUrl)).size, 2);
+  assert.ok(september30After.some((job) => job.id === "ACD-0298"));
+  assert.ok(september30After.some((job) => job.id === "ACD-0318"));
+  assert.equal(september30After.find((job) => job.id === "ACD-0199")?.publicationStatus, "removed");
+});
+
+test("30 September verified deadlines expire automatically without inventing deadlines for undated roles", () => {
+  const projected = buildOpportunityProjection(APPROVED_CONTENT_2026_09_30, {
+    employerIdByCompany: EMPLOYER_ID_BY_COMPANY, removedJobIds: new Set(), confirmedClosures: {}, today: "2026-10-14",
+  });
+  assert.equal(projected.filter((job) => job.lifecycleReason === "deadline_passed").length, 6);
+  assert.deepEqual(getLiveJobs(projected).map((job) => job.id), ["ACD-0317", "ACD-0318"]);
+  assert.ok(projected.filter((job) => !job.verifiedDeadline).every((job) => !job.deadlineDate && !job.deadlineDisplay));
+});
+
 test("public source snapshots have stable unique IDs and every employer label is mapped or explicitly unresolved", () => {
   const companies = [...new Set(rawRecords.map((record) => record.company))];
   const mapped = new Set(Object.keys(EMPLOYER_ID_BY_COMPANY).map(normalizeEmployerName));
@@ -208,7 +295,7 @@ test("public source snapshots have stable unique IDs and every employer label is
   assert.equal(new Set(rawRecords.map((record) => record.id)).size, rawRecords.length);
   assert.equal(new Set(rawRecords.map((record) => record.slug)).size, rawRecords.length);
   assert.equal(companies.length, 89);
-  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 82);
+  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 83);
   assert.ok(companies.every((company) => mapped.has(normalizeEmployerName(company)) || unresolved.has(normalizeEmployerName(company))));
   assert.ok(UNRESOLVED_EMPLOYER_LABELS.every((company) => !mapped.has(normalizeEmployerName(company))));
   validateEmployerIdentityMap(EMPLOYER_ID_BY_COMPANY);
