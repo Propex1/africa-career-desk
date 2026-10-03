@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JobsBoard from "@/components/JobsBoard";
+import ExploreOpportunities from "@/components/ExploreOpportunities";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { canonicalPath } from "@/lib/seo";
 import {
@@ -36,6 +37,7 @@ export default function JobsPage() {
     <>
       <SectionViewTracker section="Jobs" />
       <JobsBoard
+        explore={<ExploreOpportunities />}
         jobs={JOBS}
         regions={JOB_REGIONS}
         countries={JOB_COUNTRIES}

@@ -5,6 +5,7 @@ export interface JobCategoryPageDefinition {
   roleType: RoleType;
   discoveryTheme?: DiscoveryTheme;
   detailLinkLabel: string;
+  exploreLabel: string;
   title: string;
   description: string;
   metaTitle: string;
@@ -18,6 +19,7 @@ export const JOB_CATEGORY_PAGES: readonly JobCategoryPageDefinition[] = [
     roleType: "Private Equity, VC & Private Credit",
     discoveryTheme: "private-markets",
     detailLinkLabel: "More Private Equity, VC & Private Credit opportunities",
+    exploreLabel: "Private Equity & VC",
     title: "Private Equity & Venture Capital Jobs in Africa",
     description: "Explore private equity, venture capital and private credit opportunities with investment funds, private-markets teams and investors focused on African markets.",
     metaTitle: "Private Equity & Venture Capital Jobs in Africa | Africa Career Desk",
@@ -28,6 +30,7 @@ export const JOB_CATEGORY_PAGES: readonly JobCategoryPageDefinition[] = [
     slug: "development-finance",
     roleType: "Development Finance & Multilaterals",
     detailLinkLabel: "More Development Finance opportunities",
+    exploreLabel: "Development Finance",
     title: "Development Finance & DFI Jobs in Africa",
     description: "Explore roles with development finance institutions (DFIs), multilateral organisations and investment teams financing businesses, infrastructure and economic development across African markets.",
     metaTitle: "Development Finance & DFI Jobs in Africa | Africa Career Desk",
@@ -38,6 +41,7 @@ export const JOB_CATEGORY_PAGES: readonly JobCategoryPageDefinition[] = [
     slug: "infrastructure-project-finance",
     roleType: "Infrastructure & Project Finance",
     detailLinkLabel: "More Infrastructure & Project Finance opportunities",
+    exploreLabel: "Infrastructure",
     title: "Infrastructure & Project Finance Jobs in Africa",
     description: "Explore infrastructure investment and project finance opportunities, including investment, project development and advisory roles with employers focused on African markets.",
     metaTitle: "Infrastructure & Project Finance Jobs in Africa | Africa Career Desk",
@@ -48,6 +52,7 @@ export const JOB_CATEGORY_PAGES: readonly JobCategoryPageDefinition[] = [
     slug: "investment-banking",
     roleType: "Investment Banking & Advisory",
     detailLinkLabel: "More Investment Banking & Advisory opportunities",
+    exploreLabel: "Investment Banking",
     title: "Investment Banking & Corporate Finance Jobs in Africa",
     description: "Explore investment banking, corporate finance and transaction advisory opportunities, alongside related financing and client coverage roles serving businesses across African markets.",
     metaTitle: "Investment Banking & Corporate Finance Jobs in Africa | Africa Career Desk",
@@ -58,6 +63,7 @@ export const JOB_CATEGORY_PAGES: readonly JobCategoryPageDefinition[] = [
     slug: "climate-impact-investing",
     roleType: "Climate & Impact Investing",
     detailLinkLabel: "More Climate & Impact opportunities",
+    exploreLabel: "Climate & Impact",
     title: "Climate Finance & Impact Investing Jobs in Africa",
     description: "Explore climate finance, impact investing and ESG opportunities with investment managers, development institutions and teams supporting businesses and projects across African markets.",
     metaTitle: "Climate Finance & Impact Investing Jobs in Africa | Africa Career Desk",

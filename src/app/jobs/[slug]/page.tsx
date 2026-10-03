@@ -7,7 +7,7 @@ import BackButton from "@/components/BackButton";
 import ApplyLink from "@/components/analytics/ApplyLink";
 import JobDetailTracker from "@/components/analytics/JobDetailTracker";
 import JobPostingJsonLd from "@/components/seo/JobPostingJsonLd";
-import { getEnabledJobCategoryForRoleType } from "@/lib/job-categories";
+import { getEnabledJobCategoriesForJob } from "@/lib/job-categories";
 import { getEnabledJobCountriesForJob } from "@/lib/job-countries";
 import { jobPageMetadata, NO_INDEX_ROBOTS } from "@/lib/seo";
 
@@ -30,7 +30,7 @@ export default async function JobDetailPage({ params }: Props) {
   const { slug } = await params;
   const job = getJobBySlug(slug);
   if (!job) notFound();
-  const categoryPage = getEnabledJobCategoryForRoleType(job.roleType);
+  const categoryPages = getEnabledJobCategoriesForJob(job);
   const countryPages = getEnabledJobCountriesForJob(job);
   const needsVerification = job.lifecycleStatus === "needs_verification";
 
@@ -100,13 +100,13 @@ export default async function JobDetailPage({ params }: Props) {
             ))}
           </div>
 
-          {categoryPage && (
-            <p className="m-0 mt-3 text-[13px] text-acd-muted">
+          {categoryPages.map((categoryPage) => (
+            <p key={categoryPage.slug} className="m-0 mt-3 text-[13px] text-acd-muted">
               <Link href={`/jobs/category/${categoryPage.slug}/`} className="font-semibold text-acd-green no-underline hover:underline">
                 {categoryPage.detailLinkLabel}
               </Link>
             </p>
-          )}
+          ))}
 
           {countryPages.map((country) => (
             <p key={country.slug} className="m-0 mt-3 text-[13px] text-acd-muted">

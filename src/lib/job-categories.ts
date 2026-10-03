@@ -21,6 +21,13 @@ export function filterJobsForCategory(
   return filterJobsForDiscovery(jobs, [category]);
 }
 
+/** Primary destination first, followed by approved secondary discovery destinations. */
+export function getEnabledJobCategoriesForJob(job: Opportunity): JobCategoryPageDefinition[] {
+  return ENABLED_JOB_CATEGORY_PAGES
+    .filter((category) => filterJobsForCategory([job], category).length > 0)
+    .sort((a, b) => Number(b.roleType === job.roleType) - Number(a.roleType === job.roleType));
+}
+
 export function jobCategoryMetadata(category: JobCategoryPageDefinition): Metadata {
   const path = canonicalPath(`/jobs/category/${category.slug}`);
   const url = new URL(path, ACD_SITE_URL).toString();

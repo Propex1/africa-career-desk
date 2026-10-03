@@ -176,7 +176,7 @@ test("category routes are static allowlist-only and contain no JobPosting schema
 
 test("job detail linking only resolves enabled category definitions", () => {
   const source = readFileSync(new URL("../../../src/app/jobs/[slug]/page.tsx", import.meta.url), "utf8");
-  assert.match(source, /getEnabledJobCategoryForRoleType\(job\.roleType\)/);
+  assert.match(source, /getEnabledJobCategoriesForJob\(job\)/);
   assert.match(source, /jobs\/category\/\$\{categoryPage\.slug\}/);
   assert.equal(getEnabledJobCategoryForRoleType("Legal, Risk & Compliance"), undefined);
 });

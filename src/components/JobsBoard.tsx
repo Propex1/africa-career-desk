@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { Fragment, useState, useRef, useEffect, useCallback } from "react";
 import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
 import JobCard from "./JobCard";
@@ -313,6 +313,7 @@ const LangIcon = (
 // ── Main board ────────────────────────────────────────────────────────────────
 
 interface JobsBoardProps {
+  explore: React.ReactNode;
   jobs: Opportunity[];
   regions: string[];
   countries: string[];
@@ -322,6 +323,7 @@ interface JobsBoardProps {
 }
 
 export default function JobsBoard({
+  explore,
   jobs,
   regions,
   countries,
@@ -546,7 +548,12 @@ export default function JobsBoard({
       {/* Job cards */}
       <div className="mt-[18px] flex flex-col gap-[14px]">
         {filtered.length > 0 ? (
-          filtered.map((job) => <JobCard key={job.id} job={job} />)
+          filtered.map((job, index) => (
+            <Fragment key={job.id}>
+              <JobCard job={job} />
+              {index === 2 && explore}
+            </Fragment>
+          ))
         ) : (
           <div className="text-center py-[60px] px-5 text-acd-dimmer">
             <p className="font-serif text-[22px] text-acd-navy-mid m-0 mb-[6px]">
@@ -565,6 +572,8 @@ export default function JobsBoard({
           </div>
         )}
       </div>
+
+      {filtered.length < 3 && explore}
 
       {/* Footer note */}
       <p className="mt-[30px] text-center text-[14px] text-acd-dimmer flex items-center justify-center gap-[9px]">
