@@ -193,9 +193,13 @@ test("actual current JOBS drive country membership without changing inventory or
     assert.equal(new Set(matches.map(({ id }) => id)).size, matches.length);
     for (const match of matches) assert.strictEqual(match, jobs.find(({ id }) => id === match.id));
   }
-  for (const id of ["ACD-0250", "ACD-0231", "ACD-0204", "ACD-0035"]) {
+  for (const id of ["ACD-0250", "ACD-0231", "ACD-0035"]) {
     const ambiguous = jobs.find((job) => job.id === id);
     if (ambiguous) assert.deepEqual(getEnabledJobCountriesForJob(ambiguous), []);
   }
+  // The approved October reconciliation replaces ambiguous display-only geography
+  // with the official vacancy's named locations, including Nairobi.
+  const powerInfrastructure = jobs.find((job) => job.id === "ACD-0204");
+  if (powerInfrastructure) assert.deepEqual(getEnabledJobCountriesForJob(powerInfrastructure).map(({ slug }) => slug), ["kenya"]);
   assert.deepEqual(jobs, before);
 });

@@ -45,7 +45,7 @@ export default function ProgrammesPage() {
           <ProgrammeCard
             key={p.id}
             programme={p}
-            showDetails={p.id === "ACD-0295" || p.id === "ACD-0308"}
+            showDetails={["ACD-0295", "ACD-0308", "ACD-0329", "ACD-0338", "ACD-0339"].includes(p.id)}
           />
         ))}
       </div>

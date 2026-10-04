@@ -26,6 +26,7 @@ import { ENABLED_JOB_CATEGORY_PAGES } from "../../../src/data/job-categories.ts"
 import { filterJobsForCategory } from "../../../src/lib/job-categories.ts";
 import { filterJobsForBoard, type JobBoardFilters } from "../../../src/lib/job-filters.ts";
 import { APPROVED_CONTENT_2026_09_27 } from "../../../src/data/approved-content-2026-09-27.ts";
+import { APPROVED_CONTENT_2026_10_04, REFRESHED_FIELDS_2026_10_04, REFRESH_JOB_IDS_2026_10_04 } from "../../../src/data/approved-content-2026-10-04.ts";
 import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "../../../src/data/approved-content-2026-09-30.ts";
 import { filterJobsForCountry } from "../../../src/lib/job-countries.ts";
 import { ENABLED_JOB_COUNTRY_PAGES } from "../../../src/data/job-countries.ts";
@@ -295,7 +296,7 @@ test("public source snapshots have stable unique IDs and every employer label is
   assert.equal(new Set(rawRecords.map((record) => record.id)).size, rawRecords.length);
   assert.equal(new Set(rawRecords.map((record) => record.slug)).size, rawRecords.length);
   assert.equal(companies.length, 89);
-  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 83);
+  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 84); // Goodwell now has an approved public opportunity.
   assert.ok(companies.every((company) => mapped.has(normalizeEmployerName(company)) || unresolved.has(normalizeEmployerName(company))));
   assert.ok(UNRESOLVED_EMPLOYER_LABELS.every((company) => !mapped.has(normalizeEmployerName(company))));
   validateEmployerIdentityMap(EMPLOYER_ID_BY_COMPANY);
@@ -994,4 +995,80 @@ test("September refresh uses existing category discovery, sitemap and conservati
   }
   const source = readFileSync(resolve(root, "src/data/opportunities.ts"), "utf8");
   assert.match(source, /\.\.\.\[\.\.\.APPROVED_CONTENT_2026_09_27\]\.reverse\(\)/);
+});
+
+test("October refresh reconciles the existing Power and Infrastructure requisition and adds only approved records", () => {
+  const additions = APPROVED_CONTENT_2026_10_04;
+  assert.equal(additions.length, 18);
+  assert.equal(additions.filter((o) => o.boardSection === "Jobs").length, 15);
+  assert.equal(additions.filter((o) => o.boardSection === "Programmes").length, 3);
+  assert.ok(additions.every((o) => o.boardSection !== "Open Applications"));
+  assert.deepEqual(additions.map((o) => o.id), Array.from({ length: 18 }, (_, i) => `ACD-${String(322 + i).padStart(4, "0")}`));
+  const all = [...rawRecords, ...APPROVED_CONTENT_2026_09_27, ...APPROVED_CONTENT_2026_09_30, ...additions];
+  assert.equal(new Set(all.map((o) => o.id)).size, all.length);
+  assert.equal(new Set(all.map((o) => o.slug)).size, all.length);
+  assert.deepEqual(Object.keys(REFRESHED_FIELDS_2026_10_04), ["ACD-0204"]);
+  const original = rawRecords.find((o) => o.id === "ACD-0204")!;
+  const reconciled = { ...original, ...REFRESHED_FIELDS_2026_10_04[original.id] };
+  for (const key of ["id", "slug", "publishedAt"] as const) assert.equal(reconciled[key], original[key]);
+  assert.equal(EMPLOYER_ID_BY_COMPANY[reconciled.company], "employer-091-crossboundary-group");
+  assert.equal(reconciled.language, undefined);
+  assert.equal(reconciled.languageTags, undefined);
+  const byId = (id: string) => all.find((o) => o.id === id)!;
+  const crossBoundary = [byId("ACD-0322"), byId("ACD-0323"), byId("ACD-0324"), reconciled];
+  assert.deepEqual(crossBoundary.map((o) => new URL(o.applyUrl).pathname.split("/")[2]), ["H5AR9vjMfA", "XwOeUO2FLt", "Ha2mIKdhAN", "XF8MGrTZmV"]);
+  assert.equal(REFRESH_JOB_IDS_2026_10_04.length, 16);
+  assert.equal(new Set(REFRESH_JOB_IDS_2026_10_04).size, 16);
+  assert.deepEqual(REFRESH_JOB_IDS_2026_10_04.slice(0, 4), crossBoundary.map((o) => o.id));
+});
+
+test("October application destinations, employer identities and substantive eligibility remain intact", () => {
+  const byId = (id: string) => APPROVED_CONTENT_2026_10_04.find((o) => o.id === id)!;
+  assert.equal(byId("ACD-0336").applyUrl, "https://www.pic.gov.za/careers");
+  assert.equal(byId("ACD-0329").applyUrl, "https://targetapply.bii.targetconnect.com/c/bii?utm_source=linkedin");
+  assert.match(byId("ACD-0329").requirements!.join(" "), /Permanent right to work in the UK/);
+  assert.match(byId("ACD-0329").summary, /Graduate and Student visas are not accepted/);
+  for (const [id, jobId] of [["ACD-0330", "744000152670306"], ["ACD-0331", "744000152741449"], ["ACD-0332", "744000152337259"]]) {
+    assert.equal(byId(id).applyUrl, `https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=${jobId}`);
+  }
+  assert.equal(byId("ACD-0333").employmentType, "contract");
+  assert.match(byId("ACD-0333").employmentTypeDisplay!, /Independent/);
+  assert.equal(byId("ACD-0332").city, "London");
+  assert.equal(byId("ACD-0332").region, "Pan-African");
+  assert.equal(byId("ACD-0334").applyUrl, "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS251126-1");
+  assert.equal(byId("ACD-0337").applyUrl, "https://jobs.mcbgroup.com/#en/sites/CX/job/2447");
+  assert.equal(byId("ACD-0339").applyUrl, "https://afdb.jobs2web.com/job/Abidjan-2027-INTERNSHIP-PROGRAM-SESSION-1/1441963333/");
+  assert.match(byId("ACD-0339").requirements!.join(" "), /no older than 30/);
+  assert.match(byId("ACD-0339").requirements!.join(" "), /member country/);
+  assert.match(byId("ACD-0339").requirements!.join(" "), /within one year/);
+  for (const record of APPROVED_CONTENT_2026_10_04) {
+    assert.ok(EMPLOYER_ID_BY_COMPANY[record.company], record.company);
+    assert.equal(record.publishedAt, record.id === "ACD-0339" ? "2026-10-05" : "2026-10-04");
+    assert.equal(record.discoveryThemes, undefined);
+    const words = [record.summary, record.aboutRole, ...(record.responsibilities ?? []), ...(record.requirements ?? [])].filter(Boolean).join(" ").split(/\s+/).length;
+    assert.ok(words >= 180, `${record.id}: ${words} words`);
+    assert.ok(readFileSync(resolve(root, "public", record.logoUrl!.slice(1))).length > 0);
+  }
+});
+
+test("October verified deadlines use existing expiry rules and retain historical records", () => {
+  const expected = new Map([
+    ["ACD-0325", "2026-10-15"], ["ACD-0326", "2026-10-15"],
+    ["ACD-0327", "2026-10-08"], ["ACD-0328", "2026-10-14"],
+    ["ACD-0334", "2026-10-16"], ["ACD-0335", "2026-10-14"],
+    ["ACD-0336", "2026-10-06"], ["ACD-0337", "2026-10-05"],
+    ["ACD-0339", "2026-10-12"],
+  ]);
+  for (const record of APPROVED_CONTENT_2026_10_04) {
+    assert.equal(record.deadlineDate, expected.get(record.id));
+    assert.equal(record.verifiedDeadline?.deadlineDate, expected.get(record.id));
+    if (expected.has(record.id)) assert.ok(record.verifiedDeadline?.statement && record.verifiedDeadline.sourceUrl && record.verifiedDeadline.verifiedAt);
+  }
+  const options = { ...projectionOptions, removedJobIds: new Set<string>(), confirmedClosures: {} };
+  const current = buildOpportunityProjection(APPROVED_CONTENT_2026_10_04, { ...options, today: "2026-10-04" });
+  assert.ok(current.every((o) => o.publicationStatus === "live" && o.lifecycleStatus === "active"));
+  const expired = buildOpportunityProjection(APPROVED_CONTENT_2026_10_04, { ...options, today: "2026-10-17" });
+  assert.equal(expired.length, APPROVED_CONTENT_2026_10_04.length);
+  assert.deepEqual(expired.filter((o) => o.lifecycleStatus === "closed").map((o) => o.id).sort(), [...expected.keys()].sort());
+  assert.ok(expired.filter((o) => expected.has(o.id)).every((o) => o.publicationStatus === "removed" && o.lifecycleReason === "deadline_passed"));
 });

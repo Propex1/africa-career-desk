@@ -29,6 +29,8 @@ export const EMPLOYER_ID_BY_COMPANY: Readonly<Record<string, string>> = {
   "CFG Finance": "acd-employer-cfg-finance",
   "CrossBoundary Energy": "employer-043-crossboundary-energy",
   "CrossBoundary Group": "employer-091-crossboundary-group",
+  "CrossBoundary Advisory": "employer-091-crossboundary-group",
+  "Goodwell Investments": "employer-082-goodwell-investments",
   "Development Bank of Southern Africa": "employer-151-development-bank-of-southern-africa-dbsa",
   "Development Bank of Southern Africa (DBSA)": "employer-151-development-bank-of-southern-africa-dbsa",
   "Enza Capital": "employer-068-enza-capital",
@@ -90,6 +92,7 @@ export const EMPLOYER_ID_BY_COMPANY: Readonly<Record<string, string>> = {
   // Approved September refresh; reuse existing research identities and CIB aliases.
   // BMCE subsidiaries are distinct businesses, consistent with Gestion and Markets.
   "Standard Bank": "employer-096-standard-bank-corporate-investment-banking",
+  "Stanbic IBTC / Standard Bank Group": "employer-096-standard-bank-corporate-investment-banking",
   "AgDevCo": "employer-084-agdevco",
   "F6 Ventures": "employer-077-flat6labs",
   "Ezdehar Management": "employer-111-ezdehar-management",
