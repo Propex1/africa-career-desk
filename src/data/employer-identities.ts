@@ -104,6 +104,9 @@ export const EMPLOYER_ID_BY_COMPANY: Readonly<Record<string, string>> = {
   "Ekuity Capital": "employer-178-ekuity-capital",
   "Partech Africa": "employer-063-partech-africa",
   "Absa": "employer-108-absa-corporate-investment-banking",
+  "Prime Securities Brokerage / Prime Holding": "employer-210-prime-holding",
+  "NAEEM Holding": "employer-211-naeem-holding",
+  "Qalaa Holdings": "employer-212-qalaa-holdings",
 };
 
 export const UNRESOLVED_EMPLOYER_LABELS = [

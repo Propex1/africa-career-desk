@@ -7,6 +7,7 @@ import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data
 import { APPROVED_CONTENT_2026_09_27 } from "@/data/approved-content-2026-09-27";
 import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "@/data/approved-content-2026-09-30";
 import { APPROVED_CONTENT_2026_10_04, REFRESHED_FIELDS_2026_10_04, REFRESH_JOB_IDS_2026_10_04 } from "@/data/approved-content-2026-10-04";
+import { APPROVED_CONTENT_2026_10_08 } from "@/data/approved-content-2026-10-08";
 import { EMPLOYER_ID_BY_COMPANY } from "@/data/employer-identities";
 import { buildOpportunityProjection, getLiveJobs } from "@/lib/opportunity-data";
 import type { VerifiedOpportunityFields } from "@/lib/opportunity-data";
@@ -4235,6 +4236,7 @@ const OPPORTUNITY_RECORDS: Opportunity[] = [
   ...[...APPROVED_CONTENT_2026_09_27].reverse(),
   ...[...APPROVED_CONTENT_2026_09_30].reverse(),
   ...APPROVED_CONTENT_2026_10_04,
+  ...APPROVED_CONTENT_2026_10_08,
 ];
 
 // Expired jobs and editor-approved removals; historical records remain intact.
@@ -4725,6 +4727,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
 const PINNED_JOB_IDS = [
+  ...APPROVED_CONTENT_2026_10_08.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
   ...REFRESH_JOB_IDS_2026_10_04,
   ...APPROVED_CONTENT_2026_09_30.map((job) => job.id),
   "ACD-0293", // Meridiam VIE leads the approved September refresh.

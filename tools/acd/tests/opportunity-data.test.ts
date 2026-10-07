@@ -27,6 +27,7 @@ import { filterJobsForCategory } from "../../../src/lib/job-categories.ts";
 import { filterJobsForBoard, type JobBoardFilters } from "../../../src/lib/job-filters.ts";
 import { APPROVED_CONTENT_2026_09_27 } from "../../../src/data/approved-content-2026-09-27.ts";
 import { APPROVED_CONTENT_2026_10_04, REFRESHED_FIELDS_2026_10_04, REFRESH_JOB_IDS_2026_10_04 } from "../../../src/data/approved-content-2026-10-04.ts";
+import { APPROVED_CONTENT_2026_10_08 } from "../../../src/data/approved-content-2026-10-08.ts";
 import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "../../../src/data/approved-content-2026-09-30.ts";
 import { filterJobsForCountry } from "../../../src/lib/job-countries.ts";
 import { ENABLED_JOB_COUNTRY_PAGES } from "../../../src/data/job-countries.ts";
@@ -296,7 +297,7 @@ test("public source snapshots have stable unique IDs and every employer label is
   assert.equal(new Set(rawRecords.map((record) => record.id)).size, rawRecords.length);
   assert.equal(new Set(rawRecords.map((record) => record.slug)).size, rawRecords.length);
   assert.equal(companies.length, 89);
-  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 84); // Goodwell now has an approved public opportunity.
+  assert.equal(new Set(Object.values(EMPLOYER_ID_BY_COMPANY)).size, 87); // Prime, NAEEM and Qalaa reuse the research registry identities.
   assert.ok(companies.every((company) => mapped.has(normalizeEmployerName(company)) || unresolved.has(normalizeEmployerName(company))));
   assert.ok(UNRESOLVED_EMPLOYER_LABELS.every((company) => !mapped.has(normalizeEmployerName(company))));
   validateEmployerIdentityMap(EMPLOYER_ID_BY_COMPANY);
@@ -1071,4 +1072,48 @@ test("October verified deadlines use existing expiry rules and retain historical
   assert.equal(expired.length, APPROVED_CONTENT_2026_10_04.length);
   assert.deepEqual(expired.filter((o) => o.lifecycleStatus === "closed").map((o) => o.id).sort(), [...expected.keys()].sort());
   assert.ok(expired.filter((o) => expected.has(o.id)).every((o) => o.publicationStatus === "removed" && o.lifecycleReason === "deadline_passed"));
+});
+
+test("8 October publishes only seven verified Jobs and two open channels, preserving Standard Bank holds", () => {
+  const additions = APPROVED_CONTENT_2026_10_08;
+  assert.equal(additions.filter((o) => o.boardSection === "Jobs").length, 7);
+  assert.equal(additions.filter((o) => o.boardSection === "Open Applications").length, 2);
+  assert.equal(additions.filter((o) => o.boardSection === "Programmes").length, 0);
+  const all = [...rawRecords, ...APPROVED_CONTENT_2026_09_27, ...APPROVED_CONTENT_2026_09_30, ...APPROVED_CONTENT_2026_10_04, ...additions];
+  for (const key of ["id", "slug"] as const) assert.equal(new Set(all.map((o) => o[key])).size, all.length);
+  assert.ok(all.every((o) => !/744000153742579|744000153832039/.test(o.applyUrl)));
+  const byId = (id: string) => additions.find((o) => o.id === id)!;
+  assert.match(byId("ACD-0340").applyUrl, /1445133033/);
+  assert.match(byId("ACD-0341").applyUrl, /1445135633/);
+  assert.equal(byId("ACD-0346").applyUrl, "mailto:hr@primegroup.org");
+  assert.equal(byId("ACD-0347").applyUrl, "mailto:careers@naeemholding.com");
+  assert.equal(byId("ACD-0348").applyUrl, "mailto:careers@qalaaholdings.com");
+  assert.equal(additions.filter((o) => /4614325/.test(o.applyUrl)).length, 1);
+  assert.match(byId("ACD-0343").requirements!.join(" "), /seven years/);
+  assert.match(byId("ACD-0346").requirements!.join(" "), /CFA qualification is mandatory/);
+  for (const record of additions) {
+    assert.ok(EMPLOYER_ID_BY_COMPANY[record.company]);
+    assert.equal(record.discoveryThemes, undefined);
+    assert.equal(record.publishedAt, "2026-10-08");
+    assert.ok(readFileSync(resolve(root, "public", record.logoUrl!.slice(1))).length > 0);
+  }
+});
+
+test("8 October uses BOAD deadline provenance without inventing deadlines for the other additions", () => {
+  const options = { ...projectionOptions, removedJobIds: new Set<string>(), confirmedClosures: {} };
+  const current = buildOpportunityProjection(APPROVED_CONTENT_2026_10_08, { ...options, today: "2026-10-08" });
+  assert.ok(current.every((o) => o.publicationStatus === "live" && o.lifecycleStatus === "active"));
+  for (const record of current) {
+    if (record.company === "West African Development Bank (BOAD)") {
+      assert.equal(record.deadlineDate, "2026-10-31");
+      assert.equal(record.verifiedDeadline?.sourceUrl, record.applyUrl);
+      assert.equal(record.verifiedDeadline?.verifiedAt, "2026-10-08");
+    } else {
+      assert.equal(record.deadlineDate, undefined);
+      assert.equal(record.employerPostedAt, undefined);
+    }
+  }
+  const expired = buildOpportunityProjection(APPROVED_CONTENT_2026_10_08, { ...options, today: "2026-11-01" });
+  assert.equal(expired.length, 9);
+  assert.deepEqual(expired.filter((o) => o.lifecycleReason === "deadline_passed").map((o) => o.id), ["ACD-0342", "ACD-0343", "ACD-0344", "ACD-0345"]);
 });
