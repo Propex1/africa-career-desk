@@ -183,7 +183,10 @@ const removedJobIds = readRemovedIds();
 const confirmedClosures = readObjectVariable("CONFIRMED_CLOSURES", "src/data/opportunities.ts") as Record<string, ConfirmedClosure>;
 const employerPostedAtByJobId = readObjectVariable("VERIFIED_EMPLOYER_POSTED_AT", "src/data/opportunities.ts") as Record<string, string>;
 const verifiedFieldsByJobId = readObjectVariable("VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID", "src/data/opportunities.ts") as Record<string, VerifiedOpportunityFields>;
-const verifiedDeadlinesByJobId = readObjectVariable("VERIFIED_HARD_DEADLINES", "src/data/opportunities.ts") as Record<string, VerifiedDeadlineEvidence>;
+const allVerifiedDeadlines = readObjectVariable("VERIFIED_HARD_DEADLINES", "src/data/opportunities.ts") as Record<string, VerifiedDeadlineEvidence>;
+// Keep the September architecture snapshots historical; test the October reconciliation separately.
+const october11DeadlineIds = ["ACD-0265","ACD-0276","ACD-0279","ACD-0285","ACD-0287","ACD-0288","ACD-0289","ACD-0273"];
+const verifiedDeadlinesByJobId = Object.fromEntries(Object.entries(allVerifiedDeadlines).filter(([id]) => !october11DeadlineIds.includes(id)));
 const batch2cIds = ["ACD-0281", "ACD-0269", "ACD-0275", "ACD-0277", "ACD-0278"];
 const before2cDeadlines = Object.fromEntries(Object.entries(verifiedDeadlinesByJobId).filter(([id]) => !batch2cIds.includes(id)));
 const before2cClosures = Object.fromEntries(Object.entries(confirmedClosures).filter(([id]) => !batch2cIds.includes(id)));
@@ -1116,4 +1119,31 @@ test("8 October uses BOAD deadline provenance without inventing deadlines for th
   const expired = buildOpportunityProjection(APPROVED_CONTENT_2026_10_08, { ...options, today: "2026-11-01" });
   assert.equal(expired.length, 9);
   assert.deepEqual(expired.filter((o) => o.lifecycleReason === "deadline_passed").map((o) => o.id), ["ACD-0342", "ACD-0343", "ACD-0344", "ACD-0345"]);
+});
+
+
+test("October expiry audit connects seven evidenced deadlines without deleting history or expiring the extended RMB role", () => {
+  const expected = { "ACD-0265": "2026-10-02", "ACD-0276": "2026-09-27", "ACD-0279": "2026-10-02",
+    "ACD-0285": "2026-10-01", "ACD-0287": "2026-10-06", "ACD-0288": "2026-10-05", "ACD-0289": "2026-10-07" };
+  assert.equal(Object.keys(allVerifiedDeadlines).length, 30);
+  for (const [id, date] of Object.entries(expected)) {
+    const source = rawRecords.find(record => record.id === id)!;
+    assert.ok(source, id);
+    const original = JSON.stringify(source);
+    assert.equal(allVerifiedDeadlines[id].deadlineDate, date);
+    const project = (today: string) => buildOpportunityProjection([source], {
+      ...projectionOptions, removedJobIds: new Set(), confirmedClosures: {}, verifiedDeadlinesByJobId: allVerifiedDeadlines, today,
+    });
+    assert.equal(getLiveJobs(project(date)).length, 1, id + " stays live through its UTC date");
+    const result = project("2026-10-11");
+    assert.equal(result.length, 1); assert.equal(result[0].id, id); assert.equal(result[0].publishedAt, source.publishedAt);
+    assert.equal(result[0].lifecycleReason, "deadline_passed"); assert.equal(getLiveJobs(result).length, 0);
+    assert.equal(buildSitemap(getLiveJobs(result)).some(entry => entry.url.includes(source.slug)), false);
+    assert.equal(JSON.stringify(source), original);
+  }
+  const extended = rawRecords.find(record => record.id === "ACD-0273")!;
+  const projected = buildOpportunityProjection([extended], { ...projectionOptions, removedJobIds: new Set(), confirmedClosures: {}, verifiedDeadlinesByJobId: allVerifiedDeadlines, today: "2026-10-11" });
+  assert.equal(projected[0].deadlineDate, "2026-10-16"); assert.equal(getLiveJobs(projected).length, 1);
+  assert.equal(projected[0].publishedAt, extended.publishedAt);
+
 });

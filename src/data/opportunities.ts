@@ -4462,6 +4462,63 @@ const CONFIRMED_CLOSURES = {
 } as const;
 
 const VERIFIED_HARD_DEADLINES: Readonly<Record<string, VerifiedDeadlineEvidence>> = {
+  // Authoritative deadline evidence reconciled 11 October 2026; historical records retained.
+  "ACD-0265": {
+    "deadlineDate": "2026-10-02",
+    "authority": "official_ats",
+    "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38359?c=worldbankgroup",
+    "verifiedAt": "2026-09-20",
+    "statement": "Official IFC req38359 capture: Closing Date 10/2/2026 (MM/DD/YYYY) at 11:59pm UTC. Historical source evidence re-audited 11 October; current page is a JavaScript shell, not evidence of closure."
+  },
+  "ACD-0276": {
+    "deadlineDate": "2026-09-27",
+    "authority": "official_ats",
+    "sourceUrl": "https://careers.idc.co.za/details.html?jobId=16948&jobTitle=Corporate+Finance+Analyst+%2F+M%26A+Analyst",
+    "verifiedAt": "2026-09-20",
+    "statement": "Official IDC00816 / job 16948 capture: Posting End Date 27 Sept 2026; JobPosting validThrough agrees. Historical source evidence re-audited 11 October; no closure inferred from the current response."
+  },
+  "ACD-0279": {
+    "deadlineDate": "2026-10-02",
+    "authority": "official_ats",
+    "sourceUrl": "https://careers.idc.co.za/details.html?jobId=16988&jobTitle=Senior+Manager%3A+Enterprise+Development+Programme+%28EDP%29+-+Tirisano+Construction+Fund",
+    "verifiedAt": "2026-09-20",
+    "statement": "Official IDC00820 / job 16988 capture: Posting End Date 2 Oct 2026; JobPosting validThrough agrees. Historical source evidence re-audited 11 October; no closure inferred from the current response."
+  },
+  "ACD-0285": {
+    "deadlineDate": "2026-10-01",
+    "authority": "official_ats",
+    "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Credit-Research-Head_R50244",
+    "verifiedAt": "2026-09-23",
+    "statement": "Official FirstRand R50244 capture: End Date 1 October 2026; applications must precede that date. Historical evidence re-audited 11 October. The current API denial is not closure evidence. Existing conservative calendar-day UTC expiry applies."
+  },
+  "ACD-0287": {
+    "deadlineDate": "2026-10-06",
+    "authority": "official_ats",
+    "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260922-1",
+    "verifiedAt": "2026-09-23",
+    "statement": "Official DBSA DBS260922-1 capture: Closing Date 2026/10/06. The same official URL explicitly states Closed and no longer receiving applications on 11 October."
+  },
+  "ACD-0288": {
+    "deadlineDate": "2026-10-05",
+    "authority": "official_ats",
+    "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS260918-1",
+    "verifiedAt": "2026-09-23",
+    "statement": "Official DBSA DBS260918-1 capture: Closing Date 2026/10/05. The same official URL explicitly states Closed and no longer receiving applications on 11 October."
+  },
+  "ACD-0289": {
+    "deadlineDate": "2026-10-07",
+    "authority": "official_ats",
+    "sourceUrl": "https://jobs.standardchartered.com/job/Trade-Product-Manager/62835-en_GB/",
+    "verifiedAt": "2026-09-23",
+    "statement": "Official Standard Chartered requisition 62835: Posting End Date 07/10/2026. Saved official capture re-audited and official page independently checked 11 October."
+  },
+  "ACD-0273": {
+    "deadlineDate": "2026-10-16",
+    "authority": "official_ats",
+    "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Lagos-Central/Private-Wealth-Associate_R53659",
+    "verifiedAt": "2026-10-11",
+    "statement": "Official FirstRand Workday R53659 now has endDate 2026-10-16, posted=true and canApply=true. This replaces the obsolete 2 October date; the description requires submission before 16 October."
+  },
   // Batch 2C: role-specific authoritative cutoffs; original displays remain intact.
   // The existing lifecycle compares inclusive UTC dates, not intraday timestamps.
   "ACD-0281": {
@@ -4701,6 +4758,11 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
   ...record,
   ...REFRESHED_FIELDS_2026_09_30[record.id],
   ...REFRESHED_FIELDS_2026_10_04[record.id],
+  ...(record.id === "ACD-0273" ? {
+    deadlineDisplay: "Before 16 Oct 2026",
+    applicationNotes: "Full-time; requisition R53659. The official Workday feed rechecked 11 October extends the deadline to 16 October 2026 and accepts applications. Submit before that date; FirstRand does not accept applications on or after the stated closing date.",
+    lastChecked: "11 Oct 2026",
+  } : {}),
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
   removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30]),
