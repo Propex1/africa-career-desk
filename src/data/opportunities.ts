@@ -1,3 +1,5 @@
+import lifecycleData from '@/data/job-lifecycle.json';
+import { lifecycleOverrides } from '@/lib/job-lifecycle';
 ﻿import type { Opportunity, RoleType } from "@/types";
 
 import { BATCH_3_6_PREVIEW_OPPORTUNITIES } from "@/data/batch-3-6-preview-opportunities";
@@ -4803,6 +4805,8 @@ const VERIFIED_APPLY_LINKS_2026_10_11: Readonly<Record<string, Partial<Opportuni
   }
 };
 
+const automatedLifecycle = lifecycleOverrides(lifecycleData, OPPORTUNITY_RECORDS);
+
 export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map((record) => ({
   ...record,
   ...REFRESHED_FIELDS_2026_09_30[record.id],
@@ -4813,11 +4817,12 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
     applicationNotes: "Full-time; requisition R53659. The official Workday feed rechecked 11 October extends the deadline to 16 October 2026 and accepts applications. Submit before that date; FirstRand does not accept applications on or after the stated closing date.",
     lastChecked: "11 Oct 2026",
   } : {}),
+  ...automatedLifecycle.fields[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
   removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30]),
-  confirmedClosures: { ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11 },
-  verifiedDeadlinesByJobId: VERIFIED_HARD_DEADLINES,
+  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11 },
+  verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...automatedLifecycle.deadlines },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
 });

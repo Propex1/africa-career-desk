@@ -1,105 +1,34 @@
-import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
-import { test } from "node:test";
-import vm from "node:vm";
-
-const workflow = readFileSync(new URL("../../../.github/workflows/production-freshness.yml", import.meta.url), "utf8").replace(/\r\n/g, "\n");
-// Exercise the actual inline workflow program; no real hook is ever contacted.
-const script = workflow.split("node <<'NODE'\n")[1]?.split("          NODE")[0]
-  ?.replace(/^          /gm, "");
-assert.ok(script, "Workflow must contain its runnable Node program.");
-const hook = "https://api.vercel.com/v1/integrations/deploy/prj_0sk1RDyLWr9wAwHT4nVJR58MiFoQ/test-secret";
-
-type Reply = { status: number; body?: unknown } | Error;
-async function execute(url: string | undefined, replies: Reply[]) {
-  const calls: { url: URL; options: RequestInit }[] = [];
-  const logs: string[] = [];
-  const delays: number[] = [];
-  const processMock = { env: { VERCEL_DEPLOY_HOOK_URL: url }, exitCode: 0 };
-  await vm.runInNewContext(script!, {
-    URL,
-    AbortSignal,
-    process: processMock,
-    console: { log: (s: string) => logs.push(s), error: (s: string) => logs.push(s) },
-    require: (name: string) => {
-      assert.equal(name, "node:timers/promises");
-      return { setTimeout: async (ms: number) => { delays.push(ms); } };
-    },
-    fetch: async (url: URL, options: RequestInit) => {
-      calls.push({ url, options });
-      const reply = replies.shift();
-      assert.ok(reply, "Unexpected additional deployment request.");
-      if (reply instanceof Error) throw reply;
-      return {
-        status: reply.status,
-        ok: reply.status >= 200 && reply.status < 300,
-        json: async () => reply.body,
-      };
-    },
-  });
-  assert.ok(logs.every((s) => !s.includes("test-secret") && !s.includes("api.vercel.com")), "Logs must not expose the hook.");
-  return { calls, logs, delays, exitCode: processMock.exitCode };
-}
-
-const accepted = () => ({ status: 200, body: { job: { id: "test-job", state: "PENDING" } } });
-
-test("daily refresh is opt-in, default-branch-only and has no editorial or repository write steps", () => {
-  assert.match(workflow, /cron: '17 1 \* \* \*'/);
-  assert.match(workflow, /workflow_dispatch:/);
-  assert.match(workflow, /permissions: \{\}/);
-  assert.match(workflow, /vars\.ACD_DAILY_FRESHNESS_ENABLED == 'true'/);
-  assert.match(workflow, /github\.ref == format\('refs\/heads\/\{0\}', github\.event\.repository\.default_branch\)/);
-  assert.match(workflow, /cancel-in-progress: false/);
-  assert.match(workflow, /timeout-minutes: 5/);
-  assert.doesNotMatch(workflow, /^\s*(?:push|pull_request|pull_request_target|uses):/m);
-  assert.doesNotMatch(workflow, /npm |git (?:push|commit)|acd:(?:discover|research|review)|NEXT_PUBLIC_/);
-  assert.equal((workflow.match(/\brun: \|/g) ?? []).length, 1);
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { test } from 'node:test';
+import { productionFreshness } from '../../../src/lib/production-freshness.ts';
+import { buildOpportunityProjection } from '../../../src/lib/opportunity-data.ts';
+import type { Opportunity } from '../../../src/types/index.ts';
+const raw={id:'ACD-test',slug:'test',title:'Test',company:'Test',boardSection:'Jobs',locationDisplay:'Test',publishedAt:'2026-09-01'} as Opportunity;
+const opts={employerIdByCompany:{},removedJobIds:new Set<string>(),confirmedClosures:{},today:'2026-10-01'};
+test('freshness fingerprint reflects public content, independent of build timestamp and Vercel variables',()=>{
+  const rows=buildOpportunityProjection([raw],opts),a=productionFreshness(rows,'2026-10-01T01:00:00Z'),b=productionFreshness(rows,'2026-10-02T01:00:00Z');
+  assert.equal(a.fingerprint,b.fingerprint);assert.equal(a.activeJobCount,1);
+  assert.notEqual(a.fingerprint,productionFreshness([{...rows[0],applyUrl:'https://example.com/new'}],b.builtAt).fingerprint);
+  assert.doesNotMatch(JSON.stringify(a),/applicationNotes|credentials|environment/);
 });
-
-test("refresh fails closed for missing, foreign or credential-bearing hook URLs", async () => {
-  for (const url of [undefined, "", "not-a-url", hook.replace("https:", "http:"),
-    hook.replace("api.vercel.com", "example.test"), hook.replace("prj_0sk1RDyLWr9wAwHT4nVJR58MiFoQ", "prj_other"),
-    hook.replace("https://", "https://user:password@"), `${hook}#fragment`]) {
-    const result = await execute(url, []);
-    assert.equal(result.exitCode, 1);
-    assert.equal(result.calls.length, 0);
-  }
+test('only authoritative deadlines expire at the inclusive UTC calendar-day boundary, preserving records',()=>{
+  const verifiedDeadline={deadlineDate:'2026-10-01',verifiedAt:'2026-09-20',authority:'employer' as const,sourceUrl:'https://example.com/job',statement:'Applications close 1 October'};
+  const record={...raw,verifiedDeadline};
+  assert.equal(productionFreshness(buildOpportunityProjection([record],opts),'2026-10-01').activeJobCount,1);
+  const expired=buildOpportunityProjection([record],{...opts,today:'2026-10-02'});
+  assert.equal(expired.length,1);assert.equal(expired[0].publishedAt,raw.publishedAt);
+  assert.deepEqual(productionFreshness(expired,'2026-10-02').removed,[{id:'ACD-test',slug:'test'}]);
+  assert.equal(productionFreshness(buildOpportunityProjection([{...raw,deadlineDisplay:'1 October 2021'}],opts),'2026-10-02').activeJobCount,1);
 });
-
-test("refresh requests one uncached rebuild without a payload and forbids redirects", async () => {
-  const result = await execute(`${hook}?buildCache=true`, [accepted()]);
-  assert.equal(result.exitCode, 0);
-  assert.equal(result.calls.length, 1);
-  assert.equal(result.calls[0].url.search, "?buildCache=false");
-  assert.equal(result.calls[0].options.method, "POST");
-  assert.equal(result.calls[0].options.redirect, "error");
-  assert.equal(result.calls[0].options.body, undefined);
-  assert.ok(result.calls[0].options.signal instanceof AbortSignal);
-  assert.match(result.logs.join("\n"), /Rebuild accepted/);
-});
-
-test("refresh retries transient errors within a bounded budget and hides network secrets", async () => {
-  const recovered = await execute(hook, [new Error(`Network error at ${hook}`), { status: 503 }, accepted()]);
-  assert.equal(recovered.exitCode, 0);
-  assert.equal(recovered.calls.length, 3);
-  assert.deepEqual(recovered.delays, [5000, 5000]);
-  const limited = await execute(hook, [{ status: 429 }, accepted()]);
-  assert.equal(limited.exitCode, 0);
-  const failed = await execute(hook, Array.from({ length: 3 }, () => new Error(hook)));
-  assert.equal(failed.exitCode, 1);
-  assert.equal(failed.calls.length, 3);
-  assert.match(failed.logs.join("\n"), /failed after three attempts/);
-  const unavailable = await execute(hook, [{ status: 503 }, { status: 503 }, { status: 503 }]);
-  assert.equal(unavailable.exitCode, 1);
-  assert.equal(unavailable.calls.length, 3);
-});
-
-test("refresh reports HTTP and acknowledgement failures without printing provider content", async () => {
-  for (const reply of [{ status: 401, body: hook }, { status: 302, body: hook },
-    { status: 200, body: hook }, { status: 200, body: { job: { id: "test", state: "ERROR" } } }]) {
-    const result = await execute(hook, [reply]);
-    assert.equal(result.exitCode, 1);
-    assert.equal(result.calls.length, 1);
-    assert.ok(!result.logs.join("\n").includes("Rebuild accepted"));
-  }
+test('workflow has opt-in gates, bounded schedules, shared concurrency and only the update job can write',()=>{
+  const y=fs.readFileSync('.github/workflows/production-freshness.yml','utf8');
+  assert.match(y,/17 1 \* \* \*/);assert.match(y,/17 3 \* \* 2,5/);
+  assert.match(y,/permissions: \{\}/);assert.match(y,/ACD_LIFECYCLE_ENABLED/);assert.match(y,/ACD_LIFECYCLE_WRITES_ENABLED/);
+  assert.match(y,/group: acd-production-freshness/);assert.match(y,/cancel-in-progress: false/);
+  assert.equal((y.match(/contents: write/g)||[]).length,1);
+  assert.doesNotMatch(y.split('  update:')[0],/contents: write|VERCEL_DEPLOY_HOOK_URL/);
+  assert.doesNotMatch(y,/^\s+(push|pull_request|pull_request_target):/m);
+  assert.ok([...y.matchAll(/^\s+- uses: ([^\s]+)/gm)].every(m=>/@[a-f0-9]{40}$/.test(m[1])));
+  assert.match(y,/statuses: write/);assert.match(y,/lock-failure/);assert.match(y,/ACD_LIFECYCLE_MAX_REMOVALS/);assert.match(y,/retention-days: 30/);assert.match(y,/timeout-minutes: 25/);
 });

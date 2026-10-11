@@ -19,7 +19,8 @@ const cache = new Map<string, { exports: Record<string, unknown> }>();
 function load(file: string): Record<string, unknown> {
   file = resolve(file);
   if (!extname(file)) file += existsSync(`${file}.tsx`) ? ".tsx" : ".ts";
-  if (cache.has(file)) return cache.get(file)!.exports;
+  if (file.endsWith(".json")) return JSON.parse(readFileSync(file, "utf8"));
+    if (cache.has(file)) return cache.get(file)!.exports;
   const loaded = { exports: {} }; cache.set(file, loaded);
   const code = ts.transpileModule(readFileSync(file, "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022,

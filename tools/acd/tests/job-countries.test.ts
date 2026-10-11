@@ -172,10 +172,11 @@ test("actual current JOBS drive country membership without changing inventory or
   const cache = new Map<string, { exports: Record<string, unknown> }>();
   function load(file: string): Record<string, unknown> {
     file = resolve(file); if (!extname(file)) file += ".ts";
+    if (file.endsWith(".json")) return JSON.parse(readFileSync(file, "utf8"));
     if (cache.has(file)) return cache.get(file)!.exports;
     const loadedModule = { exports: {} }; cache.set(file, loadedModule);
     const code = ts.transpileModule(readFileSync(file, "utf8"), {
-      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true },
     }).outputText;
     const requireSource = (name: string) => {
       if (name.startsWith("@/")) return load(`src/${name.slice(2)}`);

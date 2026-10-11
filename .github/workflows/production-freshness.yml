@@ -1,72 +1,105 @@
-name: Daily production freshness
+name: Public job lifecycle
 
 on:
   schedule:
-    - cron: '17 1 * * *' # Daily at 01:17 UTC; avoids the busiest minute.
+    - cron: '17 1 * * *' # Verified deadline expiry, daily at 01:17 UTC.
+    - cron: '17 3 * * 2,5' # Every active job, Tuesday and Friday at 03:17 UTC.
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Lifecycle check scope
+        type: choice
+        options: [deadlines, availability]
+        default: availability
 
-# No checkout, repository writes, package installation or editorial commands.
 permissions: {}
-
 concurrency:
   group: acd-production-freshness
   cancel-in-progress: false
 
+env:
+  ACD_LIFECYCLE_LOCK_SHA: ${{ vars.ACD_LIFECYCLE_LOCK_SHA }}
+  ACD_LIFECYCLE_MAX_REMOVALS: ${{ vars.ACD_LIFECYCLE_MAX_REMOVALS || '3' }}
+  ACD_LIFECYCLE_ENABLED: ${{ vars.ACD_LIFECYCLE_ENABLED }}
+  ACD_LIFECYCLE_WRITES_ENABLED: ${{ vars.ACD_LIFECYCLE_WRITES_ENABLED }}
+  LIFECYCLE_MODE: ${{ github.event_name == 'schedule' && (github.event.schedule == '17 3 * * 2,5' && 'availability' || 'deadlines') || inputs.mode }}
+  LIFECYCLE_OUTPUT: lifecycle-output
+
 jobs:
-  refresh:
-    if: >-
-      vars.ACD_DAILY_FRESHNESS_ENABLED == 'true' &&
-      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+  check:
+    if: vars.ACD_LIFECYCLE_ENABLED == 'true' && github.repository == 'Propex1/africa-career-desk' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      statuses: read
+    outputs:
+      needs_update: ${{ steps.scan.outputs.needs_update }}
     steps:
-      - name: Request a fresh production build
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Check every selected public vacancy and plan conservative changes
+        id: scan
         env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/acd/lifecycle/cli.mjs scan
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: lifecycle-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.LIFECYCLE_OUTPUT }}
+          retention-days: 30
+          if-no-files-found: error
+
+  update:
+    needs: check
+    if: needs.check.outputs.needs_update == 'true' && vars.ACD_LIFECYCLE_WRITES_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      deployments: read
+      statuses: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: lifecycle-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.LIFECYCLE_OUTPUT }}
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Validate immutable baseline and prepare only lifecycle data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/acd/lifecycle/cli.mjs prepare
+      - run: npm run acd:test
+      - run: node --test tools/acd/lifecycle/*.test.mjs
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm run build
+      - name: Publish justified data and verify actual Production deployment
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
           VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
-        run: |
-          node <<'NODE'
-          const { setTimeout: delay } = require('node:timers/promises');
-
-          async function refresh() {
-            let hook;
-            try { hook = new URL(process.env.VERCEL_DEPLOY_HOOK_URL); }
-            catch { throw new Error('Configure the VERCEL_DEPLOY_HOOK_URL Actions secret.'); }
-
-            // Bind this automation to ACD's existing Vercel project.
-            if (hook.origin !== 'https://api.vercel.com' || hook.username || hook.password || hook.hash ||
-                !/^\/v1\/integrations\/deploy\/prj_0sk1RDyLWr9wAwHT4nVJR58MiFoQ\/[A-Za-z0-9_-]+$/.test(hook.pathname)) {
-              throw new Error('Expected an ACD Vercel Deploy Hook URL.');
-            }
-            hook.search = '?buildCache=false';
-
-            for (let attempt = 1; attempt <= 3; attempt++) {
-              let response;
-              try {
-                response = await fetch(hook, {
-                  method: 'POST', redirect: 'error', signal: AbortSignal.timeout(20000),
-                });
-              } catch {
-                if (attempt === 3) throw new Error('Deploy Hook request failed after three attempts.');
-                await delay(5000);
-                continue;
-              }
-              if ((response.status === 429 || response.status >= 500) && attempt < 3) {
-                await delay(5000);
-                continue;
-              }
-              if (!response.ok) throw new Error(`Deploy Hook returned HTTP ${response.status}.`);
-              const result = await response.json().catch(() => null);
-              if (!result?.job?.id || !['PENDING', 'RUNNING', 'SUCCEEDED'].includes(result.job.state)) {
-                throw new Error('Vercel did not acknowledge a deployment job.');
-              }
-              console.log('Rebuild accepted. Confirm production build success in the Vercel dashboard.');
-              return;
-            }
-          }
-
-          refresh().catch((error) => {
-            // Never print the secret URL, provider body or raw network exception.
-            console.error(error.message);
-            process.exitCode = 1;
-          });
-          NODE
+        run: node tools/acd/lifecycle/cli.mjs publish
+      - name: Keep automatic writes locked after a critical update failure
+        if: failure() || cancelled()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/acd/lifecycle/cli.mjs lock-failure
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: lifecycle-production-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.LIFECYCLE_OUTPUT }}
+          retention-days: 30
+          if-no-files-found: error
