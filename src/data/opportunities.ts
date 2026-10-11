@@ -4754,10 +4754,60 @@ const VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID: Readonly<Record<string, VerifiedOppo
   },
 };
 
+// Availability audit of all 94 live jobs, 11 October 2026. Historical records stay intact.
+const VERIFIED_AVAILABILITY_CLOSURES_2026_10_11 = {
+  "ACD-0139": {
+    "verifiedAt": "2026-10-11",
+    "reason": "Hiring paused, not permanently closed. Official JazzHR vacancy UNsmDvSMBR explicitly states hiring for this position has been put on hold. Exact posting rechecked 11 October 2026; no application form is available. This supersedes the 23 September reactivation and the older structured-data validity date without erasing either historical record.",
+    "evidence": "https://crossboundary.applytojob.com/apply/UNsmDvSMBR/Investment-AssociateSenior-Associate-CrossBoundary-Energy"
+  },
+  "ACD-0266": {
+    "verifiedAt": "2026-10-11",
+    "reason": "The official BII Financial Services Debt Associate posting explicitly states that the vacancy is no longer available. The matched role requires French for the Francophone Africa pipeline; the original LinkedIn listing now redirects to an unrelated search, and the current official vacancy index contains no replacement for this role.",
+    "evidence": "https://isw.changeworknow.co.uk/bii/vms/e/careers/positions/b8KV-IcjTgBRGkchMFhxhR"
+  },
+  "ACD-0290": {
+    "verifiedAt": "2026-10-11",
+    "reason": "Official BMCE TalentSoft requisition 2026-605: the exact printable advert explicitly states that the requested offer does not or no longer exists on this site. The normal job URL redirects to the generic careers homepage and the official current vacancy list has no Trader Taux Devises posting. This is explicit ATS withdrawal evidence, not an HTTP failure inference.",
+    "evidence": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/imprimer-fiche-emploi-trader-taux-devises-h-f_605.aspx"
+  }
+} as const;
+
+const VERIFIED_APPLY_LINKS_2026_10_11: Readonly<Record<string, Partial<Opportunity>>> = {
+  "ACD-0257": {
+    "applyUrl": "https://carrieres.cfgbank.com/jobs/6479954-corporate-banker",
+    "sourceUrl": "https://carrieres.cfgbank.com/jobs/6479954-corporate-banker",
+    "sourceType": "Official ATS",
+    "lastChecked": "11 Oct 2026",
+    "applicationNotes": "Full-time in Casablanca. Apply using the role-specific form on CFG Bank's official careers website. No employer deadline is stated."
+  },
+  "ACD-0258": {
+    "applyUrl": "https://carrieres.cfgbank.com/jobs/6479900-senior-banker",
+    "sourceUrl": "https://carrieres.cfgbank.com/jobs/6479900-senior-banker",
+    "sourceType": "Official ATS",
+    "lastChecked": "11 Oct 2026",
+    "applicationNotes": "Full-time in Casablanca. Apply using the role-specific form on CFG Bank's official careers website. No closing date is published."
+  },
+  "ACD-0262": {
+    "applyUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-sales-h-f_597.aspx",
+    "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-sales-h-f_597.aspx",
+    "sourceType": "Official ATS",
+    "lastChecked": "11 Oct 2026",
+    "applicationNotes": "Permanent contract (CDI), Casablanca, one position. Apply through BMCE Capital's official ATS; candidate sign-in or registration is required. ATS reference: 2026-597. Original posting date remains 5 August 2026."
+  },
+  "ACD-0292": {
+    "applyUrl": "https://www.ietp.com/fr/content/chargee-de-programme-acceleration-abidjan",
+    "sourceUrl": "https://www.ietp.com/fr/content/chargee-de-programme-acceleration-abidjan",
+    "sourceType": "Company website",
+    "lastChecked": "11 Oct 2026"
+  }
+};
+
 export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map((record) => ({
   ...record,
   ...REFRESHED_FIELDS_2026_09_30[record.id],
   ...REFRESHED_FIELDS_2026_10_04[record.id],
+  ...VERIFIED_APPLY_LINKS_2026_10_11[record.id],
   ...(record.id === "ACD-0273" ? {
     deadlineDisplay: "Before 16 Oct 2026",
     applicationNotes: "Full-time; requisition R53659. The official Workday feed rechecked 11 October extends the deadline to 16 October 2026 and accepts applications. Submit before that date; FirstRand does not accept applications on or after the stated closing date.",
@@ -4766,7 +4816,7 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
   removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30]),
-  confirmedClosures: { ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30 },
+  confirmedClosures: { ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11 },
   verifiedDeadlinesByJobId: VERIFIED_HARD_DEADLINES,
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,

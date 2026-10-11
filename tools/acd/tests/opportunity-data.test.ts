@@ -1147,3 +1147,43 @@ test("October expiry audit connects seven evidenced deadlines without deleting h
   assert.equal(projected[0].publishedAt, extended.publishedAt);
 
 });
+
+
+test("11 October availability cleanup removes only three explicitly unavailable jobs and preserves history", () => {
+  const closures = readObjectVariable("VERIFIED_AVAILABILITY_CLOSURES_2026_10_11", "src/data/opportunities.ts") as Record<string, ConfirmedClosure>;
+  assert.deepEqual(Object.keys(closures), ["ACD-0139", "ACD-0266", "ACD-0290"]);
+  assert.match(closures["ACD-0139"].reason, /Hiring paused, not permanently closed/);
+  const options = { ...projectionOptions, removedJobIds: new Set<string>(), confirmedClosures: {}, today: "2026-10-11" };
+  const before = buildOpportunityProjection(september30Source, options);
+  const after = buildOpportunityProjection(september30Source, { ...options, confirmedClosures: closures });
+  assert.equal(after.length, before.length);
+  const live = getLiveJobs(after);
+  const filters: JobBoardFilters = { region: [], country: [], roleType: [], experience: [], language: [] };
+  for (const old of before) {
+    const current = after.find(job => job.id === old.id)!;
+    if (!closures[old.id]) { assert.deepEqual(current, old); continue; }
+    assert.equal(current.publicationStatus, "removed");
+    assert.equal(current.lifecycleReason, "verified_closed");
+    for (const key of ["id", "slug", "publishedAt", "summary", "aboutRole", "applyUrl"] as const) assert.deepEqual(current[key], old[key]);
+    assert.ok(!live.some(job => job.id === old.id));
+    assert.ok(!filterJobsForBoard(after, filters, old.title).some(job => job.id === old.id));
+    assert.ok(!buildSitemap(live).some(entry => entry.url.includes('/jobs/' + old.slug + '/')));
+    for (const category of ENABLED_JOB_CATEGORY_PAGES) assert.ok(!filterJobsForCategory(after, category).some(job => job.id === old.id));
+  }
+  for (const id of ["ACD-0009", "ACD-0039", "ACD-0082", "ACD-0166", "ACD-0211", "ACD-0272", "ACD-0333"]) assert.equal(closures[id], undefined, "Unavailable or blocked pages alone must not remove jobs");
+  const futureDated = fixture({ id: "ACD-0139", deadlineDisplay: "14 Dec 2026" });
+  assert.equal(buildOpportunityProjection([futureDated], { ...options, confirmedClosures: closures })[0].lifecycleReason, "verified_closed");
+});
+
+test("11 October verified Apply replacements preserve publication identity and role content", () => {
+  const replacements = readObjectVariable("VERIFIED_APPLY_LINKS_2026_10_11", "src/data/opportunities.ts") as Record<string, Partial<Opportunity>>;
+  assert.deepEqual(Object.keys(replacements), ["ACD-0257", "ACD-0258", "ACD-0262", "ACD-0292"]);
+  for (const [id, fields] of Object.entries(replacements)) {
+    const original = september30Source.find(job => job.id === id)!;
+    assert.ok(original, id);
+    const updated = { ...original, ...fields };
+    for (const key of ["id", "slug", "publishedAt", "title", "company", "aboutRole", "responsibilities", "deadlineDisplay"] as const) assert.deepEqual(updated[key], original[key]);
+    assert.equal(updated.sourceUrl, updated.applyUrl);
+    assert.equal(new URL(updated.applyUrl).protocol, "https:");
+  }
+});
