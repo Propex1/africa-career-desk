@@ -24,3 +24,24 @@ test('separate live application form cannot override detail closure and second c
  assert.equal(result.classification,'VERIFIED CLOSED');assert(result.confirmation);assert(n>=3);assert.equal(decision(j,result,'2026-10-15').events.length,1);
  let reads=0;const failed=await checkJob(job,async()=>++reads===1?page(fixture):{...page(''),http:403},'2026-10-15');assert.notEqual(failed.classification,'VERIFIED CLOSED');
 });
+// checkJob precedence is cross-provider: cover existing closure classifications,
+// separate open Apply HTML AND exact Workday API acceptance, not only EBRD.
+for(const scenario of [
+ {name:'BII',source:'https://isw.changeworknow.co.uk/bii/vms/e/careers/positions/abc123',text:'No Vacancy Found That vacancy is no longer available',kind:'closed'},
+ {name:'JazzHR filled',source:'https://example.applytojob.com/apply/1234567890/Investment-Associate',text:'Sorry, this position is no longer available.',kind:'closed'},
+ {name:'JazzHR paused',source:'https://example.applytojob.com/apply/1234567890/Investment-Associate',text:'Hiring for this position has been put on hold at this time.',kind:'paused'},
+])for(const failConfirmation of [false,true])test(scenario.name+' detail closure vs open Apply/API; confirmation '+(failConfirmation?'fails':'succeeds'),async()=>{
+ const apply='https://company.myworkdayjobs.com/en-US/Careers/job/City/Investment-Associate_R123';
+ const j={id:'ACD-regression',title:'Investment Associate',sourceUrl:scenario.source,applyUrl:apply};
+ let detailReads=0,apiReads=0;
+ const response=(u,body,http=200)=>({...page(body),url:u,finalUrl:u,http});
+ const result=await checkJob(j,async u=>{
+  if(u===scenario.source){detailReads++;return response(u,'<title>'+j.title+'</title>'+scenario.text+'<a href="'+apply+'">Apply</a>',failConfirmation&&detailReads>1?503:200);}
+  if(u.includes('/wday/cxs/')){apiReads++;return response(u,JSON.stringify({jobPostingInfo:{title:j.title,jobReqId:'R123',posted:true,canApply:true,endDate:'2026-11-15'}}));}
+  if(u===apply)return response(u,'<title>'+j.title+'</title>'+form);
+  throw new Error('Unexpected URL '+u);
+ },'2026-10-15');
+ assert.equal(apiReads,1); assert.equal(detailReads,2);
+ if(failConfirmation){assert.match(result.classification,/UNCERTAIN/);assert.equal(decision(j,result,'2026-10-15').events.length,0);}
+ else{assert.equal(result.classification,'VERIFIED CLOSED');assert.equal(result.kind,scenario.kind);assert(result.confirmation);assert.equal(decision(j,result,'2026-10-15').events[0].kind,scenario.kind);}
+});
