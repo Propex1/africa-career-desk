@@ -122,7 +122,12 @@ test("current private-markets jobs link back to PE with their primary labels and
   const jobs = load("src/data/opportunities.ts").JOBS as Opportunity[];
   const before = structuredClone(jobs);
   const secondary = jobs.filter((j) => j.discoveryThemes?.includes("private-markets") && j.roleType !== "Private Equity, VC & Private Credit");
-  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0009", "ACD-0016", "ACD-0041", "ACD-0083", "ACD-0151"]);
+  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0016", "ACD-0041", "ACD-0083", "ACD-0151"]);
+  // The October 17 check withdrew the broken DRE Director link, retaining its record.
+  const withdrawn = (load("src/data/opportunities.ts").OPPORTUNITIES as Opportunity[]).find((j) => j.id === "ACD-0009");
+  assert.equal(withdrawn?.publicationStatus, "removed");
+  assert.ok(!jobs.some((j) => j.id === "ACD-0009"));
+  assert.deepEqual(slugs(withdrawn!), []);
   for (const fixture of secondary) {
     assert.equal(slugs(fixture).filter((slug) => slug === "private-equity-venture-capital").length, 1);
     assert.equal(getEnabledJobCategoriesForJob(fixture)[0].roleType, fixture.roleType);

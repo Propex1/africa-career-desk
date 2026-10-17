@@ -12,7 +12,7 @@ interface ProgrammeCardProps {
 
 export default function ProgrammeCard({ programme, showDetails = false }: ProgrammeCardProps) {
   return (
-    <div className="relative bg-white border border-acd-border rounded-[18px] px-7 py-6 flex items-center gap-6 flex-wrap transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
+    <div id={`programme-${programme.slug}`} className="relative bg-white border border-acd-border rounded-[18px] px-7 py-6 flex items-center gap-6 flex-wrap transition-[border-color,box-shadow] duration-[180ms] hover:border-acd-border-hover hover:shadow-[0_8px_28px_-16px_rgba(20,43,63,0.22)]">
       <div className="absolute top-2 right-4 md:right-8">
         <NewOpportunityBadge publishedAt={programme.publishedAt} />
       </div>
@@ -36,6 +36,9 @@ export default function ProgrammeCard({ programme, showDetails = false }: Progra
         <p className="m-0 mt-2 text-[14px] text-acd-dim">
           {programme.locationDisplay}
         </p>
+        {programme.lifecycleStatus === "needs_verification" && (
+          <p className="mt-3 text-sm text-[#806000]">Current application intake needs confirmation.</p>
+        )}
       </div>
 
       {programme.deadlineDisplay && (
@@ -78,6 +81,12 @@ export default function ProgrammeCard({ programme, showDetails = false }: Progra
           <div className="mt-5 max-w-[780px] text-[16px] leading-[1.7]">
             <h2 className="font-serif font-semibold text-[23px] text-acd-navy">Summary</h2>
             <p className="mt-3">{programme.summary}</p>
+            {programme.aboutRole && (
+              <section className="mt-7">
+                <h3 className="font-serif font-semibold text-[21px] text-acd-navy">About the programme</h3>
+                <p className="mt-3">{programme.aboutRole}</p>
+              </section>
+            )}
             {([
               ["Programme experience", programme.responsibilities],
               ["Key requirements", programme.requirements],

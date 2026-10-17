@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_10_17, REFRESHED_FIELDS_2026_10_17, REMOVED_JOB_IDS_2026_10_17, CONFIRMED_CLOSURES_2026_10_17, VERIFIED_DEADLINES_2026_10_17 } from "@/data/approved-content-2026-10-17";
 import lifecycleData from '@/data/job-lifecycle.json';
 import { lifecycleOverrides } from '@/lib/job-lifecycle';
 ﻿import type { Opportunity, RoleType } from "@/types";
@@ -4227,6 +4228,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...APPROVED_CONTENT_2026_10_17,
   ...EXISTING_OPPORTUNITIES.map((opportunity) => {
     const refreshed = REACTIVATED_JOBS_2026_09_23.find((job) => job.id === opportunity.id);
     return refreshed ? { ...opportunity, ...refreshed, publishedAt: opportunity.publishedAt } : opportunity;
@@ -4817,12 +4819,13 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
     applicationNotes: "Full-time; requisition R53659. The official Workday feed rechecked 11 October extends the deadline to 16 October 2026 and accepts applications. Submit before that date; FirstRand does not accept applications on or after the stated closing date.",
     lastChecked: "11 Oct 2026",
   } : {}),
+  ...REFRESHED_FIELDS_2026_10_17[record.id],
   ...automatedLifecycle.fields[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
-  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30]),
-  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11 },
-  verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...automatedLifecycle.deadlines },
+  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17]),
+  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17 },
+  verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
 });
@@ -4846,6 +4849,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
 const PINNED_JOB_IDS = [
+  ...APPROVED_CONTENT_2026_10_17.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
   ...APPROVED_CONTENT_2026_10_11.map((opportunity) => opportunity.id),
   ...APPROVED_CONTENT_2026_10_08.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
   ...REFRESH_JOB_IDS_2026_10_04,
@@ -4858,7 +4862,12 @@ export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
 ];
-export const PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
+const OCTOBER_17_PROGRAMME_IDS = APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id);
+const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
+export const PROGRAMMES = [
+  ...OCTOBER_17_PROGRAMME_IDS.flatMap((id) => ALL_PROGRAMMES.filter((o) => o.id === id)),
+  ...ALL_PROGRAMMES.filter((o) => !OCTOBER_17_PROGRAMME_IDS.includes(o.id)),
+];
 const CHRONOLOGICAL_OPEN_APPLICATIONS = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Open Applications" && o.publicationStatus === "live"));
 export const OPEN_APPLICATIONS = [
   ...CHRONOLOGICAL_OPEN_APPLICATIONS.filter((opportunity) => SEPTEMBER_27_REFRESH_IDS.has(opportunity.id)),

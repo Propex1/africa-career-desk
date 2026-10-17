@@ -1,5 +1,14 @@
 # Employer Logos
 
+## Owner-supplied additions, 17 October 2026
+
+| Employer | Stored file | Use |
+|---|---|---|
+| HC Securities & Investment | `public/logos/hc-securities-investment.png` | `/logos/hc-securities-investment.png` |
+| African Trade & Investment Development Insurance (ATIDI) | `public/logos/atidi.png` | `/logos/atidi.png` |
+
+Copied unchanged from the owner's attached PNG files. The local accepted-preview generator sets these logos on the matching employer records. Do not replace these assets with screenshots of the website.
+
 ## Where to store logos
 
 Place all logo files in:

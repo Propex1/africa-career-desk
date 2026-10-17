@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {publicModules} from './lifecycle/public-data.mjs';
+import {getLiveJobs} from '../../src/lib/opportunity-data.ts';
+import {jobDescriptionQuality} from '../../src/lib/job-description-quality.ts';
+const {records}=publicModules();
+const visible=[...getLiveJobs(records),...records.filter(j=>j.boardSection==='Programmes'&&j.publicationStatus!=='removed'&&j.lifecycleStatus!=='closed')];
+const exceptions=JSON.parse(fs.readFileSync('src/data/job-description-exceptions.json','utf8'));
+const results=visible.map(j=>({id:j.id,title:j.title,...jobDescriptionQuality(j),exception:exceptions[j.id]??null}));
+const newEntries=results.filter(j=>j.id.startsWith('DRAFT-')),legacy=results.filter(j=>!j.id.startsWith('DRAFT-'));
+console.log(JSON.stringify({visible:results.length,newEntries:newEntries.length,newErrors:newEntries.filter(j=>j.errors.length||j.warnings.length&&!j.exception),documentedExceptions:newEntries.filter(j=>j.exception),legacyGaps:legacy.filter(j=>j.errors.length||j.warnings.length)},null,2));
+if(newEntries.some(j=>j.errors.length||j.warnings.length&&!j.exception))process.exitCode=1;

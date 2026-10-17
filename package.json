@@ -16,7 +16,8 @@
     "acd:research:validate": "node --experimental-strip-types tools/acd/cli.ts research:validate",
     "acd:research:preview": "node --experimental-strip-types tools/acd/cli.ts research:preview",
     "acd:research:import": "node --experimental-strip-types tools/acd/cli.ts research:import",
-    "acd:test": "node --experimental-strip-types tools/acd/tests/run.ts"
+    "acd:test": "node --experimental-strip-types tools/acd/tests/run.ts",
+    "acd:content:check": "node --experimental-strip-types tools/acd/content-check.mjs"
   },
   "dependencies": {
     "next": "16.2.9",
