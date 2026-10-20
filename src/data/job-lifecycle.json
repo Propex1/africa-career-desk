@@ -1,1 +1,70 @@
-{ "schemaVersion": 1, "events": [] }
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "jobId": "ACD-0216",
+      "kind": "deadline",
+      "authority": "official_ats",
+      "value": "2026-10-31",
+      "checkedAt": "2026-10-20T08:31:59.693Z",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/wday/cxs/firstrand/FRB/job/Johannesburg/Credit-Analyst_R52770",
+      "reason": "Official Workday endDate 2026-10-31; exclusive employer wording retained; conservative UTC calendar-day expiry applies.",
+      "evidenceHashes": [
+        "4ad30330582e604a3537fda40cf05415f234a3edf372793281f2eda9d816d8da",
+        "4ad30330582e604a3537fda40cf05415f234a3edf372793281f2eda9d816d8da"
+      ]
+    },
+    {
+      "jobId": "DRAFT-423529c4a0a4",
+      "kind": "deadline",
+      "authority": "official_ats",
+      "value": "2026-10-21",
+      "checkedAt": "2026-10-20T08:32:25.922Z",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Sandton/Structured-Solutions-Sales-Specialist_R-15992068",
+      "reason": "Official Workday endDate 2026-10-21; exclusive employer wording retained; conservative UTC calendar-day expiry applies.",
+      "evidenceHashes": [
+        "1c2c2f94e0f7c5f2b84ed19dd73905ec50a85020698797143299a9c5979b141c",
+        "1c2c2f94e0f7c5f2b84ed19dd73905ec50a85020698797143299a9c5979b141c"
+      ]
+    },
+    {
+      "jobId": "DRAFT-6cfa85bedf05",
+      "kind": "deadline",
+      "authority": "official_ats",
+      "value": "2026-10-21",
+      "checkedAt": "2026-10-20T08:32:35.659Z",
+      "sourceUrl": "https://absa.wd3.myworkdayjobs.com/wday/cxs/absa/ABSAcareersite/job/Johannesburg/Analyst-Liquidity-Risk_R-15991949",
+      "reason": "Official Workday endDate 2026-10-21; exclusive employer wording retained; conservative UTC calendar-day expiry applies.",
+      "evidenceHashes": [
+        "65cabf88da99f237839c8424eece90fabb5a338b92d58f679abb02efdfed777e",
+        "65cabf88da99f237839c8424eece90fabb5a338b92d58f679abb02efdfed777e"
+      ]
+    },
+    {
+      "jobId": "DRAFT-8ac3abb0c0af",
+      "kind": "deadline",
+      "authority": "official_ats",
+      "value": "2026-10-30",
+      "checkedAt": "2026-10-20T08:32:38.846Z",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261015-2",
+      "reason": "Official labelled application/posting closing date: 2026-10-30. Existing calendar-day UTC rule applies.",
+      "evidenceHashes": [
+        "29943d0000925c7a8ea875b6a5d1c048b47207f4839787738541fa11da9f7ce5",
+        "c7bcc1eec3850d9a1a4f24587a673560212d85cee138bab92af2d504e863a553"
+      ]
+    },
+    {
+      "jobId": "DRAFT-ce91b68e0efa",
+      "kind": "deadline",
+      "authority": "official_ats",
+      "value": "2026-11-01",
+      "checkedAt": "2026-10-20T08:32:49.648Z",
+      "sourceUrl": "https://jobs.ebrd.com/job/Tunis-Analyst%2C-Banking/1448616133",
+      "reason": "Official labelled application/posting closing date: 2026-11-01. Existing calendar-day UTC rule applies.",
+      "evidenceHashes": [
+        "46f277e51575b9bbb64b8ffe427ad90b1d6e5ee9ac5d196547e63b47d026b3e3",
+        "89623fd79d0a82419e8e9735ca9f8a96383f7ca7e743b5c4e211e3103520aa65"
+      ]
+    }
+  ]
+}
