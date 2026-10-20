@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_10_20, REFRESHED_FIELDS_2026_10_20, CONFIRMED_CLOSURES_2026_10_20, DISPLAY_PRIORITY_2026_10_20 } from "@/data/approved-content-2026-10-20";
 import { APPROVED_CONTENT_2026_10_17, REFRESHED_FIELDS_2026_10_17, REMOVED_JOB_IDS_2026_10_17, CONFIRMED_CLOSURES_2026_10_17, VERIFIED_DEADLINES_2026_10_17 } from "@/data/approved-content-2026-10-17";
 import lifecycleData from '@/data/job-lifecycle.json';
 import { lifecycleOverrides } from '@/lib/job-lifecycle';
@@ -4228,6 +4229,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...APPROVED_CONTENT_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17,
   ...EXISTING_OPPORTUNITIES.map((opportunity) => {
     const refreshed = REACTIVATED_JOBS_2026_09_23.find((job) => job.id === opportunity.id);
@@ -4820,11 +4822,12 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
     lastChecked: "11 Oct 2026",
   } : {}),
   ...REFRESHED_FIELDS_2026_10_17[record.id],
+  ...REFRESHED_FIELDS_2026_10_20[record.id],
   ...automatedLifecycle.fields[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
   removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17]),
-  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17 },
+  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17, ...CONFIRMED_CLOSURES_2026_10_20 },
   verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
@@ -4848,7 +4851,8 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
   "ACD-0051",
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
-const PINNED_JOB_IDS = [
+const PINNED_JOB_IDS = [...new Set([
+  ...DISPLAY_PRIORITY_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
   ...APPROVED_CONTENT_2026_10_11.map((opportunity) => opportunity.id),
   ...APPROVED_CONTENT_2026_10_08.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
@@ -4857,7 +4861,7 @@ const PINNED_JOB_IDS = [
   "ACD-0293", // Meridiam VIE leads the approved September refresh.
   ...CHRONOLOGICAL_JOBS.filter((job) => SEPTEMBER_27_REFRESH_IDS.has(job.id) && job.id !== "ACD-0293").map((job) => job.id),
   "ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263",
-];
+])];
 export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
