@@ -5,7 +5,7 @@ import type { ConfirmedClosure } from "@/lib/opportunity-data";
 export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   {
     "id": "DRAFT-a4a8f09ce53e",
-    "slug": "draft-a4a8f09ce53e166336f80c87017e68f434ab206bb1c68c351df8c7fe7b486565",
+    "slug": "senior-director-portfolio-management-and-performance-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "Senior Director, Portfolio Management and Performance",
     "company": "Africa50",
@@ -55,7 +55,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-8ac3abb0c0af",
-    "slug": "draft-8ac3abb0c0af454266aa71d04dd0f3098296e5e51fc95fe8abb14372c0c4b835",
+    "slug": "investment-officer-x2-corporate-finance-and-lending-roa-dbsa-midrand",
     "employerId": "employer-151-development-bank-of-southern-africa-dbsa",
     "title": "Investment Officer X2 (Corporate Finance and Lending ROA)",
     "company": "Development Bank of Southern Africa (DBSA)",
@@ -107,7 +107,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-ce91b68e0efa",
-    "slug": "draft-ce91b68e0efa1d9e8b45d228d4cf14bc8bf480cbd2b2c92cec0c153cfbcf5560",
+    "slug": "analyst-banking-ebrd-tunis",
     "employerId": "employer-058-european-bank-for-reconstruction-and-development-ebrd",
     "title": "Analyst, Banking",
     "company": "European Bank for Reconstruction and Development (EBRD)",
@@ -159,7 +159,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-81fd6ba3b028",
-    "slug": "draft-81fd6ba3b028f76da79c0777b22620cb632d9a28c97416a51c9f5edfa7ac7b21",
+    "slug": "senior-investment-officer-finance-du-developpement-bio-invest-abidjan",
     "employerId": "employer-056-bio-invest",
     "title": "Senior Investment Officer – Finance du développement",
     "company": "BIO Invest",
@@ -261,7 +261,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-5395a25c86b3",
-    "slug": "draft-5395a25c86b39e6e9209a74d759b73b13d16542fd337473b3bd7569b8162c8c8",
+    "slug": "gestor-de-solucoes-de-divida-standard-bank-luanda",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Gestor de Soluções de Dívida",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -311,7 +311,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-9fc7accde92d",
-    "slug": "draft-9fc7accde92ddedce7470d2cbcfc4d8eefb4ffc63b34f8990895ab8313df3c8e",
+    "slug": "eoi-individual-consultant-for-trade-finance-origination-pifd-afdb-nairobi",
     "employerId": "employer-047-african-development-bank-afdb",
     "title": "EOI - Individual Consultant for trade finance origination - PIFD",
     "company": "African Development Bank (AfDB)",
@@ -364,7 +364,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-d61ea9e1060a",
-    "slug": "draft-d61ea9e1060a1327423e56e3bb27611ed1d4b743a7c3083f63c927a5bff64921",
+    "slug": "tdb-group-early-mid-career-programme-2026-tdb-group-regional-offices-across-africa-placement-dependent",
     "employerId": "employer-060-trade-and-development-bank-group-tdb-group",
     "title": "TDB Group Early/Mid-Career Programme 2026",
     "company": "Trade and Development Bank Group (TDB Group)",
@@ -402,7 +402,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-0774e8cefcf4",
-    "slug": "draft-0774e8cefcf4260e9e88788b893ca55a312af33c18679d32e4c60d27d4ccd20a",
+    "slug": "eoi-individual-senior-consultant-capital-markets-operations-pifd-afdb-abidjan",
     "employerId": "employer-047-african-development-bank-afdb",
     "title": "EOI - Individual Senior Consultant – Capital Markets Operations - PIFD",
     "company": "African Development Bank (AfDB)",
@@ -455,7 +455,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-d6779bde4a22",
-    "slug": "draft-d6779bde4a22ea745059fe2f8534bcdd691e187dee7095a9022b13029220c01d",
+    "slug": "principal-property-finance-africa-nedbank-johannesburg",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Principal: Property Finance Africa",
     "company": "Nedbank",
@@ -505,7 +505,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-38f9483d5fb6",
-    "slug": "draft-38f9483d5fb6e1ca14c3314a6ebcc0ca1bac3b446463a843f41aec7076445ab1",
+    "slug": "associate-advisory-standard-bank-lagos",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Associate, Advisory",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -554,7 +554,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-a77c2f9007f3",
-    "slug": "draft-a77c2f9007f36655ee531ecc5b5b5338164db26c1b1d400ee522d025c139d237",
+    "slug": "head-equity-capital-markets-ecm-nedbank-johannesburg",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Head: Equity Capital Markets (ECM)",
     "company": "Nedbank",
@@ -604,7 +604,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-c29e55facad2",
-    "slug": "draft-c29e55facad2d9e8be462b2095d3a623697ecec7809f36b4557e58b6462bdf0c",
+    "slug": "rmbs-class-of-programme-rmb-johannesburg",
     "employerId": "employer-095-rmb-rand-merchant-bank",
     "title": "RMB's Class Of Programme",
     "company": "RMB / Rand Merchant Bank",
@@ -660,7 +660,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-6bb3111a2df5",
-    "slug": "draft-6bb3111a2df59624822c838734a048101e182001b5d93055718b6fe1c016b9b4",
+    "slug": "senior-associate-equity-capital-markets-ecm-nedbank-johannesburg",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Senior Associate: Equity Capital Markets (ECM)",
     "company": "Nedbank",
@@ -710,7 +710,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-ce299976d97d",
-    "slug": "draft-ce299976d97de01a1870af2acf084c116689a2786f529e12ee91bc0a0583ba15",
+    "slug": "head-product-structured-trade-and-commodity-finance-standard-bank-johannesburg",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Head, Product, Structured Trade & Commodity Finance",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -760,7 +760,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-55a077ca9063",
-    "slug": "draft-55a077ca906329c68d88c56bb65d179085e770d234ae90a05e26a30e768178f7",
+    "slug": "the-afrinvest-analyst-program-taap-27-afrinvest-ikoyi",
     "employerId": "employer-193-afrinvest",
     "title": "The Afrinvest Analyst Program (TAAP 27)",
     "company": "Afrinvest",
@@ -801,7 +801,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-d92f1e1b7fe9",
-    "slug": "draft-d92f1e1b7fe962413ddf053a07287734d2e3937c4644e168ade559e51710e065",
+    "slug": "investment-banking-associate-agency-front-office-standard-bank-johannesburg",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Investment Banking Associate, Agency Front Office",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -851,7 +851,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-73fb5e70327c",
-    "slug": "draft-73fb5e70327cc033992906ca03ae2b0955d6874d4963afa49b639ec53b7cebda",
+    "slug": "assistant-vice-president-hc-securities-and-investment",
     "employerId": "employer-209-hc-securities-investment",
     "title": "Assistant Vice President",
     "company": "HC Securities & Investment",
@@ -891,7 +891,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-dde05e62fdc1",
-    "slug": "draft-dde05e62fdc1900619ce929183e578e8c748a9db491c5c43cf725a4bd073303d",
+    "slug": "intern-special-assistant-ceos-office-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "Intern, Special Assistant, CEO’s Office",
     "company": "Africa50",
@@ -939,7 +939,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-f6a56f7c01b5",
-    "slug": "draft-f6a56f7c01b5b249b032b7fa9e6815ee301f03d3a9b4f46a7448c9eb2e111ad7",
+    "slug": "2027-mo-ibrahim-foundation-leadership-fellowship-program-afdb-abidjan",
     "employerId": "employer-047-african-development-bank-afdb",
     "title": "2027 MO IBRAHIM FOUNDATION LEADERSHIP FELLOWSHIP PROGRAM",
     "company": "African Development Bank (AfDB)",
@@ -991,7 +991,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-cf443ede7841",
-    "slug": "draft-cf443ede78410ecd931fbe63f6bcf7d894a570c84911992d910080f561989505",
+    "slug": "impact-assessment-officer-atidi-nairobi",
     "employerId": "employer-162-atidi",
     "title": "Impact Assessment Officer",
     "company": "ATIDI",
@@ -1043,7 +1043,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-c07abbd13795",
-    "slug": "draft-c07abbd1379574f8ff79d723b320f1a550b584ab72525fc4458810ac8aa06900",
+    "slug": "esg-coordinator-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "ESG Coordinator",
     "company": "Africa50",
@@ -1093,7 +1093,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-d29729e873ff",
-    "slug": "draft-d29729e873ff2a1171fd0e6d2d3aef35b7ca13695f2a306a2c52c7cc83571273",
+    "slug": "portfolio-implementation-analyst-ninety-one-cape-town",
     "employerId": "employer-045-ninety-one",
     "title": "Portfolio Implementation Analyst",
     "company": "Ninety One",
@@ -1143,7 +1143,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-455105805118",
-    "slug": "draft-4551058051184978135c89ae3e0ca6b7100e6e5e4b41f88e33468da324a392d8",
+    "slug": "equity-research-analyst-nedbank-private-wealth-cape-town",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Equity Research Analyst",
     "company": "Nedbank Private Wealth",
@@ -1195,7 +1195,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-6a41d156c5d6",
-    "slug": "draft-6a41d156c5d612e2c3f493026c4b3fbeb33c2ddd62e5057727c19b0156b068cd",
+    "slug": "strategy-enablement-manager-global-markets-africa-regions-standard-bank-johannesburg",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Strategy Enablement Manager, Global Markets Africa Regions",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -1245,7 +1245,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-423529c4a0a4",
-    "slug": "draft-423529c4a0a4dd1b30d580376bb900e1b64e70bbddccdbe07127f13b15d8a514",
+    "slug": "structured-solutions-sales-specialist-absa-cib-sandton",
     "employerId": "employer-108-absa-corporate-investment-banking",
     "title": "Structured Solutions Sales Specialist",
     "company": "Absa Corporate and Investment Banking",
@@ -1295,7 +1295,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-9fe8bfbbe223",
-    "slug": "draft-9fe8bfbbe223e61181e6dc5377538fccc4b0134070a60aa3bb614c81cc53b4cd",
+    "slug": "gestor-de-mercado-de-capitais-standard-invest-standard-invest-luanda",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Gestor de Mercado de Capitais - Standard Invest",
     "company": "Standard Invest",
@@ -1345,7 +1345,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-9180aac64603",
-    "slug": "draft-9180aac64603e7bddb328521deedb93c5c77003bbc57b321e4d401817f89d0c8",
+    "slug": "trader-fx-and-interest-rate-trading-standard-bank-lusaka",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Trader - FX & Interest Rate Trading",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -1395,7 +1395,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-efee22b90e25",
-    "slug": "draft-efee22b90e2595abe918ac8dc4d8f94b7a07d3330338076fb7d04a18cf6b5842",
+    "slug": "deputy-money-market-dealer-treasury-rmb-grand-baie",
     "employerId": "employer-095-rmb-rand-merchant-bank",
     "title": "Deputy Money Market Dealer - Treasury",
     "company": "RMB / Rand Merchant Bank",
@@ -1454,7 +1454,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-a15a2625ec1b",
-    "slug": "draft-a15a2625ec1b8020685430dd942a928a9cc58121d42b71c681dfbda10d9f65c5",
+    "slug": "client-analyst-standard-bank-lagos",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Client Analyst",
     "company": "Standard Bank Corporate & Investment Banking",
@@ -1504,7 +1504,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-b833dc5375d8",
-    "slug": "draft-b833dc5375d847827f67779ed20be5626ffbe3dfe57cf461e77ca09e5f818e34",
+    "slug": "manager-credit-large-nedbank-south-africa",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Manager Credit - Large",
     "company": "Nedbank",
@@ -1553,7 +1553,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-82f781ef0bfe",
-    "slug": "draft-82f781ef0bfef52a2709d12b9a12d56bce0163cea613ea6bad89cee69b10cd61",
+    "slug": "executive-credit-and-market-risk-nedbank-windhoek",
     "employerId": "employer-109-nedbank-corporate-investment-banking",
     "title": "Executive: Credit and Market Risk",
     "company": "Nedbank",
@@ -1605,7 +1605,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-6cfa85bedf05",
-    "slug": "draft-6cfa85bedf0555cda4c0993e319b634a35ab0b3eac772709f72ba3c1bf5af4bf",
+    "slug": "analyst-liquidity-risk-absa-group-johannesburg",
     "employerId": "employer-108-absa-corporate-investment-banking",
     "title": "Analyst Liquidity Risk",
     "company": "Absa Group",
@@ -1655,7 +1655,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
   },
   {
     "id": "DRAFT-4142b13c28a8",
-    "slug": "draft-4142b13c28a8fbc3f30a1a7ed06e7def9992e29052475db8c805eae8ec90d71d",
+    "slug": "senior-legal-counsel-principal-counsel-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "Senior Legal Counsel / Principal Counsel",
     "company": "Africa50",

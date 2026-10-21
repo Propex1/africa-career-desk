@@ -209,6 +209,9 @@ export function validateOpportunityRecords(
 
     const publicationStatus = opportunity.publicationStatus ?? "live";
     const lifecycleStatus = opportunity.lifecycleStatus ?? "active";
+    if (publicationStatus === "live" && opportunity.slug.startsWith("draft-")) {
+      throw new Error(`${opportunity.id}: allocate a readable website slug before publication.`);
+    }
     if (!PUBLICATION_STATUSES.has(publicationStatus) || !LIFECYCLE_STATUSES.has(lifecycleStatus)) {
       throw new Error(`${opportunity.id}: unsupported publication or lifecycle status.`);
     }

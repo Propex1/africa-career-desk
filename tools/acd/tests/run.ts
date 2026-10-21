@@ -7,3 +7,4 @@ import "./production-freshness.test.ts";
 import "./deadline-presentation.test.ts";
 import "./discovery-links.test.ts";
 import "./job-description-quality.test.ts";
+import "./job-urls.test.ts";

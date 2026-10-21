@@ -5,7 +5,7 @@ import type { ConfirmedClosure } from "@/lib/opportunity-data";
 export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   {
     "id": "DRAFT-67126d9575f2",
-    "slug": "draft-67126d9575f239be344d24dc276f978741f30e2f06c6ff58b0244d74b7167aa2",
+    "slug": "principal-deal-originator-mining-and-critical-minerals-dbsa-midrand",
     "employerId": "employer-151-development-bank-of-southern-africa-dbsa",
     "title": "Principal Deal Originator Mining & Critical Minerals",
     "company": "Development Bank of Southern Africa (DBSA)",
@@ -66,7 +66,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-5509d5a1a37c",
-    "slug": "draft-5509d5a1a37ca8126f27a5759750d9777d8d5ed82c4e1f409d0aacea26b5aa1b",
+    "slug": "head-water-and-sanitation-dbsa-midrand",
     "employerId": "employer-151-development-bank-of-southern-africa-dbsa",
     "title": "Head: Water & Sanitation",
     "company": "Development Bank of Southern Africa (DBSA)",
@@ -127,7 +127,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-f0d87087bbb1",
-    "slug": "draft-f0d87087bbb11a630cbf033bb21b3144f909fc970e087d38562eae54989117dc",
+    "slug": "senior-associate-fundraising-and-investor-relations-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "Senior Associate, Fundraising and Investor Relations",
     "company": "Africa50",
@@ -178,7 +178,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-ea8985adc2c3",
-    "slug": "draft-ea8985adc2c3d34ee2a063c8b3cacc2263a8fce7baa8cfe29fd3bb521a7b1850",
+    "slug": "associate-fundraising-and-investor-relations-africa50-casablanca",
     "employerId": "employer-030-africa50",
     "title": "Associate, Fundraising and Investor Relations",
     "company": "Africa50",
@@ -229,7 +229,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-edd409e088ff",
-    "slug": "draft-edd409e088ff7e38b5874fd55329d9a5516de039340362a16f135a2aaf6496e7",
+    "slug": "sub-sector-head-consumer-packaged-goods-cpg-absa-cib-sandton",
     "employerId": "employer-108-absa-corporate-investment-banking",
     "title": "Sub-Sector Head: Consumer Packaged Goods (CPG)",
     "company": "Absa Corporate and Investment Banking",
@@ -281,7 +281,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-d3d0672600c3",
-    "slug": "draft-d3d0672600c320686241423e81701d5c6cb230ea9bb79387035960415fed5d6d",
+    "slug": "transaction-banking-sales-manager-standard-chartered-abidjan",
     "employerId": "acd-employer-standard-chartered-cib",
     "title": "Transaction Banking Sales Manager",
     "company": "Standard Chartered Corporate & Investment Banking",
@@ -339,7 +339,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-84fd2b525f27",
-    "slug": "draft-84fd2b525f278d70a8e9abb470a94a285f16b7f61200f1caa99495375cf6823c",
+    "slug": "working-capital-and-trade-solutions-manager-standard-bank-namibia-windhoek",
     "employerId": "employer-096-standard-bank-corporate-investment-banking",
     "title": "Working Capital & Trade Solutions Manager",
     "company": "Standard Bank Namibia",
@@ -390,7 +390,7 @@ export const APPROVED_CONTENT_2026_10_20: Opportunity[] = [
   },
   {
     "id": "DRAFT-05ee5f9ef575",
-    "slug": "draft-05ee5f9ef57556cb044188066c379098aeaa28af9645b1f93c2bcb082ce9e555",
+    "slug": "senior-analyst-business-intelligence-public-sector-absa-cib-sandton",
     "employerId": "employer-108-absa-corporate-investment-banking",
     "title": "Senior Analyst: Business Intelligence: Public Sector",
     "company": "Absa Corporate and Investment Banking",
