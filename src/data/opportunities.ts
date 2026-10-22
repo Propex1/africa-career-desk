@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_10_22, REFRESHED_FIELDS_2026_10_22, REMOVED_JOB_IDS_2026_10_22, CONFIRMED_CLOSURES_2026_10_22, VERIFIED_DEADLINES_2026_10_22, DISPLAY_PRIORITY_2026_10_22, PROGRAMME_PRIORITY_2026_10_22 } from "@/data/approved-content-2026-10-22";
 import { APPROVED_CONTENT_2026_10_20, REFRESHED_FIELDS_2026_10_20, CONFIRMED_CLOSURES_2026_10_20, DISPLAY_PRIORITY_2026_10_20 } from "@/data/approved-content-2026-10-20";
 import { APPROVED_CONTENT_2026_10_17, REFRESHED_FIELDS_2026_10_17, REMOVED_JOB_IDS_2026_10_17, CONFIRMED_CLOSURES_2026_10_17, VERIFIED_DEADLINES_2026_10_17 } from "@/data/approved-content-2026-10-17";
 import lifecycleData from '@/data/job-lifecycle.json';
@@ -4229,6 +4230,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...APPROVED_CONTENT_2026_10_22,
   ...APPROVED_CONTENT_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17,
   ...EXISTING_OPPORTUNITIES.map((opportunity) => {
@@ -4823,12 +4825,13 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
   } : {}),
   ...REFRESHED_FIELDS_2026_10_17[record.id],
   ...REFRESHED_FIELDS_2026_10_20[record.id],
+  ...REFRESHED_FIELDS_2026_10_22[record.id],
   ...automatedLifecycle.fields[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
-  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17]),
-  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17, ...CONFIRMED_CLOSURES_2026_10_20 },
-  verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines },
+  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17, ...REMOVED_JOB_IDS_2026_10_22]),
+  confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17, ...CONFIRMED_CLOSURES_2026_10_20, ...CONFIRMED_CLOSURES_2026_10_22 },
+  verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines, ...VERIFIED_DEADLINES_2026_10_22 },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
 });
@@ -4852,6 +4855,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
 const PINNED_JOB_IDS = [...new Set([
+  ...DISPLAY_PRIORITY_2026_10_22,
   ...DISPLAY_PRIORITY_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
   ...APPROVED_CONTENT_2026_10_11.map((opportunity) => opportunity.id),
@@ -4866,7 +4870,7 @@ export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
 ];
-const OCTOBER_17_PROGRAMME_IDS = APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id);
+const OCTOBER_17_PROGRAMME_IDS = [...new Set([...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
 const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
 export const PROGRAMMES = [
   ...OCTOBER_17_PROGRAMME_IDS.flatMap((id) => ALL_PROGRAMMES.filter((o) => o.id === id)),
