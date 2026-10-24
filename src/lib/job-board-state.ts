@@ -27,6 +27,8 @@ export const EMPTY_JOB_BOARD_FILTERS: JobBoardFilters = {
 const RETURN_URL_KEY = "acd_job_board_return_url";
 const RETURN_SCROLL_KEY = "acd_job_board_return_scroll_y";
 const RETURN_ANCHOR_KEY = "acd_job_board_return_anchor";
+const RETURN_SAVED_AT_KEY = "acd_job_board_return_saved_at";
+const HISTORY_RETURN_MAX_AGE_MS = 2 * 60 * 60 * 1000;
 
 function uniqueAllowedValues(
   values: string[],
@@ -91,6 +93,7 @@ export function rememberJobBoardPosition(jobSlug: string): void {
       String(Math.max(0, Math.round(window.scrollY)))
     );
     window.sessionStorage.setItem(RETURN_ANCHOR_KEY, jobSlug);
+    window.sessionStorage.setItem(RETURN_SAVED_AT_KEY, String(Date.now()));
   } catch {
     // Browsing still works when storage is blocked.
   }
@@ -109,6 +112,38 @@ export function getJobBoardReturnHref(fallbackJobSlug: string): string {
     return `${returnUrl}#job-${encodeURIComponent(anchor)}`;
   } catch {
     return fallback;
+  }
+}
+
+export function canUseNativeJobBoardHistoryReturn(jobSlug: string): boolean {
+  if (typeof window === "undefined" || window.history.length <= 1) return false;
+
+  try {
+    const returnUrl = window.sessionStorage.getItem(RETURN_URL_KEY);
+    const anchor = window.sessionStorage.getItem(RETURN_ANCHOR_KEY);
+    const rawSavedAt = window.sessionStorage.getItem(RETURN_SAVED_AT_KEY);
+    const savedAt = rawSavedAt === null ? NaN : Number(rawSavedAt);
+
+    return (
+      Boolean(returnUrl?.startsWith("/")) &&
+      anchor === jobSlug &&
+      Number.isFinite(savedAt) &&
+      Date.now() - savedAt <= HISTORY_RETURN_MAX_AGE_MS
+    );
+  } catch {
+    return false;
+  }
+}
+
+export function prepareNativeJobBoardHistoryReturn(): void {
+  if (typeof window === "undefined") return;
+
+  try {
+    // Let the browser restore the previous history entry's exact scroll position.
+    // Removing our delayed manual scroll prevents the visible second jump.
+    window.sessionStorage.removeItem(RETURN_SCROLL_KEY);
+  } catch {
+    // Native history still works when storage is blocked.
   }
 }
 
