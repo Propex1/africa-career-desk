@@ -34,6 +34,7 @@ import {
 const BEEHIIV_FORM_ID = "b98884b7-cae6-4cf4-ba4d-b6ede81fec89";
 const BEEHIIV_ORIGIN = "https://subscribe-forms.beehiiv.com";
 const BEEHIIV_SCRIPT_SRC = `${BEEHIIV_ORIGIN}/v3/loader.js`;
+const MOBILE_MEDIA_QUERY = "(max-width: 639px)";
 const RECENT_INTERACTION_GRACE_MS = 3_500;
 const AUTO_PROMPT_RETRY_MS = 4_000;
 
@@ -123,6 +124,10 @@ function isNewsletterPromptContext(
       candidate.placement === "header") &&
     candidate.trigger === "manual"
   );
+}
+
+function isMobileViewport(): boolean {
+  return window.matchMedia(MOBILE_MEDIA_QUERY).matches;
 }
 
 export default function NewsletterPromptProvider() {
@@ -378,7 +383,9 @@ export default function NewsletterPromptProvider() {
     };
   }, [isOpen, openNewsletter]);
 
-  // Load the official Beehiiv embed only when the form is needed.
+  // Load the official Beehiiv embed only when the form is needed. On phones the
+  // iframe stays intact, but its scroll viewport is positioned on the email row
+  // so the hosted form remains functional without filling the whole screen.
   useEffect(() => {
     if (!shouldPrepare) return;
 
@@ -388,7 +395,27 @@ export default function NewsletterPromptProvider() {
     setStatus("loading");
 
     let embeddedIframe: HTMLIFrameElement | null = null;
-    const handleIframeLoad = () => setStatus("ready");
+    let positionTimer: number | undefined;
+
+    const positionForm = () => {
+      if (positionTimer !== undefined) {
+        window.clearTimeout(positionTimer);
+      }
+
+      positionTimer = window.setTimeout(() => {
+        if (!isMobileViewport()) {
+          host.scrollTop = 0;
+          return;
+        }
+
+        host.scrollTop = Math.max(host.scrollHeight - host.clientHeight, 0);
+      }, 80);
+    };
+
+    const handleIframeLoad = () => {
+      setStatus("ready");
+      positionForm();
+    };
 
     const prepareIframe = () => {
       const iframe = host.querySelector<HTMLIFrameElement>("iframe");
@@ -403,12 +430,15 @@ export default function NewsletterPromptProvider() {
       iframe.style.width = "100%";
       iframe.style.maxWidth = "100%";
       iframe.style.border = "0";
+      iframe.style.display = "block";
 
-      if (embeddedIframe === iframe) return;
+      if (embeddedIframe !== iframe) {
+        embeddedIframe?.removeEventListener("load", handleIframeLoad);
+        embeddedIframe = iframe;
+        iframe.addEventListener("load", handleIframeLoad, { once: true });
+      }
 
-      embeddedIframe?.removeEventListener("load", handleIframeLoad);
-      embeddedIframe = iframe;
-      iframe.addEventListener("load", handleIframeLoad, { once: true });
+      positionForm();
     };
 
     const handleMessage = (event: MessageEvent) => {
@@ -427,6 +457,7 @@ export default function NewsletterPromptProvider() {
       ) {
         prepareIframe();
         setStatus("ready");
+        positionForm();
       }
 
       if (
@@ -440,6 +471,7 @@ export default function NewsletterPromptProvider() {
         writeStorage(localStorage, NEWSLETTER_SUBSCRIBED_KEY, "true");
         removeStorage(localStorage, NEWSLETTER_PROMPT_DISMISSED_AT_KEY);
         trackNewsletterSignupSubmitted(openContextRef.current);
+        focusReturnRef.current = null;
         setIsOpen(false);
         setShouldPrepare(false);
         setShowSuccessToast(true);
@@ -456,11 +488,14 @@ export default function NewsletterPromptProvider() {
     script.addEventListener("error", handleScriptError, { once: true });
     observer.observe(host, { childList: true, subtree: true });
     window.addEventListener("message", handleMessage);
+    window.addEventListener("resize", positionForm);
     host.appendChild(script);
 
     return () => {
+      if (positionTimer !== undefined) window.clearTimeout(positionTimer);
       observer.disconnect();
       window.removeEventListener("message", handleMessage);
+      window.removeEventListener("resize", positionForm);
       script.removeEventListener("error", handleScriptError);
       embeddedIframe?.removeEventListener("load", handleIframeLoad);
       host.replaceChildren();
@@ -539,11 +574,11 @@ export default function NewsletterPromptProvider() {
             aria-modal="true"
             aria-labelledby={titleId}
             aria-describedby={descriptionId}
-            className="relative max-h-[90vh] w-full max-w-[660px] overflow-y-auto rounded-t-[24px] border border-acd-border-light bg-white p-4 pb-6 shadow-[0_24px_70px_rgba(20,43,63,0.28)] sm:max-h-[calc(100vh-2rem)] sm:rounded-[20px] sm:p-5 md:max-h-[calc(100vh-4rem)]"
+            className="relative max-h-[78dvh] w-full max-w-[660px] overflow-y-auto rounded-t-[24px] border border-acd-border-light bg-white p-3 pb-4 shadow-[0_24px_70px_rgba(20,43,63,0.28)] sm:max-h-[calc(100vh-2rem)] sm:rounded-[20px] sm:p-5 md:max-h-[calc(100vh-4rem)]"
           >
             <div
               aria-hidden="true"
-              className="mx-auto mb-2 h-1 w-10 rounded-full bg-acd-border sm:hidden"
+              className="mx-auto mb-1.5 h-1 w-10 rounded-full bg-acd-border sm:hidden"
             />
             <h2 id={titleId} className="sr-only">
               Get weekly Africa investment job alerts
@@ -552,37 +587,54 @@ export default function NewsletterPromptProvider() {
               ref={closeButtonRef}
               type="button"
               onClick={() => closeNewsletter("close_button")}
-              className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-acd-border-light bg-white text-[24px] leading-none text-acd-navy shadow-[0_2px_8px_rgba(20,43,63,0.1)] transition-colors hover:border-acd-green hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green sm:right-4 sm:top-4"
+              className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-acd-border-light bg-white text-[23px] leading-none text-acd-navy shadow-[0_2px_8px_rgba(20,43,63,0.1)] transition-colors hover:border-acd-green hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green sm:right-4 sm:top-4 sm:h-11 sm:w-11 sm:text-[24px]"
               aria-label="Close newsletter signup"
             >
               <span aria-hidden="true">&times;</span>
             </button>
 
             <p id={descriptionId} className="sr-only">
-              The official Beehiiv signup form contains one email field and a
-              Get Weekly Job Alerts button.
+              Enter your email address to receive one curated Africa investment
+              jobs email each week.
             </p>
 
-            <div className="relative min-h-[567px] sm:min-h-[375px]">
+            <div className="px-7 pb-1 pt-7 text-center sm:hidden" aria-hidden="true">
+              <p className="m-0 text-[11px] font-semibold uppercase tracking-[2px] text-acd-green">
+                Free weekly job alerts
+              </p>
+              <p className="m-0 mt-2 font-serif text-[24px] font-medium leading-[1.08] tracking-[-0.3px] text-acd-navy">
+                Get the best Africa investment jobs every week
+              </p>
+              <p className="m-0 mt-2 text-[14px] leading-snug text-acd-muted">
+                One carefully selected email. No noise.
+              </p>
+            </div>
+
+            <div className="relative mt-2 h-[170px] sm:mt-0 sm:h-auto sm:min-h-[375px]">
               {status !== "error" && (
                 <div
                   aria-hidden="true"
-                  className={`absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center transition-opacity duration-150 ${
+                  className={`absolute inset-0 z-10 flex items-center justify-center px-4 text-center transition-opacity duration-150 ${
                     status === "loading"
                       ? "opacity-100"
                       : "pointer-events-none opacity-0"
                   }`}
                 >
-                  <p className="m-0 text-[12px] font-semibold uppercase tracking-[2.2px] text-acd-green">
-                    Free weekly job alerts
+                  <p className="m-0 text-[13px] text-acd-muted sm:hidden">
+                    Loading secure signup…
                   </p>
-                  <h3 className="m-0 mt-3 max-w-[540px] font-serif text-[27px] font-medium leading-[1.15] tracking-[-0.35px] text-acd-navy md:text-[32px]">
-                    Don&apos;t miss the next great Africa investment opportunity
-                  </h3>
-                  <p className="m-0 mt-4 max-w-[520px] text-[17px] leading-snug text-acd-muted md:text-[18px]">
-                    Get carefully selected finance, investment and development
-                    roles in one useful weekly email.
-                  </p>
+                  <div className="hidden flex-col items-center sm:flex">
+                    <p className="m-0 text-[12px] font-semibold uppercase tracking-[2.2px] text-acd-green">
+                      Free weekly job alerts
+                    </p>
+                    <h3 className="m-0 mt-3 max-w-[540px] font-serif text-[27px] font-medium leading-[1.15] tracking-[-0.35px] text-acd-navy md:text-[32px]">
+                      Don&apos;t miss the next great Africa investment opportunity
+                    </h3>
+                    <p className="m-0 mt-4 max-w-[520px] text-[17px] leading-snug text-acd-muted md:text-[18px]">
+                      Get carefully selected finance, investment and development
+                      roles in one useful weekly email.
+                    </p>
+                  </div>
                 </div>
               )}
 
@@ -595,7 +647,7 @@ export default function NewsletterPromptProvider() {
               {status === "error" && (
                 <p
                   role="alert"
-                  className="absolute inset-0 m-0 flex items-center justify-center px-10 text-center text-[14px] text-acd-muted"
+                  className="absolute inset-0 m-0 flex items-center justify-center px-8 text-center text-[14px] text-acd-muted"
                 >
                   The newsletter signup could not load. Close this window and
                   try again.
@@ -605,7 +657,7 @@ export default function NewsletterPromptProvider() {
               <div
                 ref={hostRef}
                 aria-busy={status === "loading"}
-                className={`min-h-[567px] transition-opacity duration-150 sm:min-h-[375px] ${
+                className={`newsletter-mobile-form-viewport h-[170px] overflow-y-auto overscroll-contain transition-opacity duration-150 sm:h-auto sm:min-h-[375px] sm:overflow-visible ${
                   status === "ready"
                     ? "delay-150 opacity-100"
                     : "pointer-events-none opacity-0"
@@ -613,11 +665,11 @@ export default function NewsletterPromptProvider() {
               />
             </div>
 
-            <div className="mt-1 flex justify-center">
+            <div className="mt-0.5 flex justify-center sm:mt-1">
               <button
                 type="button"
                 onClick={() => closeNewsletter("not_now")}
-                className="min-h-11 rounded-[10px] px-5 text-[14px] font-medium text-acd-muted transition-colors hover:bg-acd-green-pale hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green"
+                className="min-h-10 rounded-[10px] px-5 text-[14px] font-medium text-acd-muted transition-colors hover:bg-acd-green-pale hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green sm:min-h-11"
               >
                 Not now
               </button>
