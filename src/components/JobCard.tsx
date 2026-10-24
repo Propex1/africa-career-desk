@@ -33,7 +33,7 @@ export default function JobCard({ job }: JobCardProps) {
         logoUrl={job.logoUrl}
       />
 
-      <div className="flex-1 min-w-0 pr-12 md:min-w-[200px] md:pr-0">
+      <div className="flex-1 min-w-0 overflow-hidden pr-12 md:min-w-[200px] md:overflow-visible md:pr-0">
         <Link
           href={`/jobs/${job.slug}`}
           onClick={onClick}
@@ -41,12 +41,12 @@ export default function JobCard({ job }: JobCardProps) {
         >
           {job.title}
         </Link>
-        <p className="m-0 mt-1.5 flex flex-col items-start gap-1 text-[13px] leading-[1.35] text-acd-dim md:mt-2 md:flex-row md:items-center md:flex-wrap md:gap-1 md:text-[14px]">
+        <p className="m-0 mt-1.5 flex w-full min-w-0 flex-col items-start gap-1 text-[13px] leading-[1.35] text-acd-dim md:mt-2 md:flex-row md:items-center md:flex-wrap md:gap-1 md:text-[14px]">
           <span className="line-clamp-2 font-semibold text-acd-green-mid md:line-clamp-none">
             {job.company}
           </span>
           <span className="hidden text-[#C7CFD2] mx-2 md:inline">·</span>
-          <span className="inline-flex min-w-0 items-center gap-[5px]">
+          <span className="inline-flex w-full max-w-full min-w-0 items-start gap-[5px] overflow-hidden md:w-auto md:max-w-none md:items-center md:overflow-visible">
             <svg
               width="14"
               height="14"
@@ -56,12 +56,12 @@ export default function JobCard({ job }: JobCardProps) {
               strokeWidth="1.7"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="shrink-0"
+              className="mt-[1px] shrink-0 md:mt-0"
             >
               <path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z" />
               <circle cx="12" cy="11" r="2.2" />
             </svg>
-            <span className="truncate md:whitespace-normal">
+            <span className="min-w-0 flex-1 line-clamp-2 break-words md:line-clamp-none md:flex-none md:whitespace-normal">
               {job.locationDisplay}
             </span>
           </span>
