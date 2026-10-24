@@ -3,6 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { trackNewsletterCtaClicked } from "@/lib/analytics";
+import { NEWSLETTER_ENABLED } from "@/lib/features";
+import {
+  NEWSLETTER_PROMPT_OPEN_EVENT,
+  NEWSLETTER_PROMPT_PREPARE_EVENT,
+  type NewsletterPromptContext,
+} from "@/lib/newsletter-prompt";
 
 const NAV_LINKS = [
   { label: "Jobs", href: "/" },
@@ -35,6 +42,25 @@ export default function Header() {
     return pathname.startsWith(href);
   }
 
+  function prepareNewsletter() {
+    window.dispatchEvent(new Event(NEWSLETTER_PROMPT_PREPARE_EVENT));
+  }
+
+  function openNewsletter() {
+    const context: NewsletterPromptContext = {
+      placement: "header",
+      trigger: "manual",
+    };
+
+    trackNewsletterCtaClicked(context);
+    setMenuOpen(false);
+    window.dispatchEvent(
+      new CustomEvent<NewsletterPromptContext>(NEWSLETTER_PROMPT_OPEN_EVENT, {
+        detail: context,
+      })
+    );
+  }
+
   return (
     <header className="border-b border-acd-border sticky top-0 z-40 bg-[rgba(251,251,248,0.9)] backdrop-saturate-[140%] backdrop-blur-[6px]">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-8 py-[18px] flex items-center justify-between gap-3 sm:gap-6">
@@ -48,7 +74,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-[38px]">
+        <nav className="hidden lg:flex items-center gap-[30px]">
           {NAV_LINKS.map(({ label, href }) => (
             <Link
               key={label}
@@ -62,12 +88,26 @@ export default function Header() {
               {label}
             </Link>
           ))}
+          {NEWSLETTER_ENABLED && (
+            <button
+              type="button"
+              onClick={openNewsletter}
+              onMouseEnter={prepareNewsletter}
+              onFocus={prepareNewsletter}
+              onPointerDown={prepareNewsletter}
+              className="inline-flex min-h-[42px] items-center justify-center rounded-[10px] border border-acd-green bg-acd-green px-4 text-[14px] font-semibold text-white transition-colors hover:bg-acd-green-mid focus:outline-none focus:ring-2 focus:ring-acd-green focus:ring-offset-2"
+            >
+              Weekly Job Alerts
+            </button>
+          )}
         </nav>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
           className="lg:hidden flex items-center justify-center w-11 h-11 border border-acd-border-light rounded-[11px] bg-white text-acd-navy cursor-pointer focus:outline-none focus-visible:shadow-[0_0_0_2px_rgba(22,82,42,0.28)]"
         >
           {menuOpen ? (
@@ -84,7 +124,7 @@ export default function Header() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-acd-surface border-b border-acd-border shadow-[0_16px_32px_-18px_rgba(20,43,63,0.28)] px-4 pb-4 pt-2 flex flex-col gap-1 z-50">
+        <div id="mobile-navigation" className="lg:hidden absolute top-full left-0 right-0 bg-acd-surface border-b border-acd-border shadow-[0_16px_32px_-18px_rgba(20,43,63,0.28)] px-4 pb-4 pt-2 flex flex-col gap-1 z-50">
           {NAV_LINKS.map(({ label, href }) => (
             <Link
               key={label}
@@ -99,6 +139,17 @@ export default function Header() {
               {label}
             </Link>
           ))}
+          {NEWSLETTER_ENABLED && (
+            <button
+              type="button"
+              onClick={openNewsletter}
+              onFocus={prepareNewsletter}
+              onPointerDown={prepareNewsletter}
+              className="mt-2 inline-flex min-h-[46px] items-center justify-center rounded-[10px] border border-acd-green bg-acd-green px-4 text-[15px] font-semibold text-white transition-colors hover:bg-acd-green-mid focus:outline-none focus:ring-2 focus:ring-acd-green focus:ring-offset-2"
+            >
+              Get Weekly Job Alerts
+            </button>
+          )}
         </div>
       )}
     </header>
