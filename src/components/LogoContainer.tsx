@@ -8,7 +8,7 @@ interface LogoContainerProps {
   initials: string;
   logoUrl?: string;
   // sm  = 62 px square  — Programmes, Open Applications
-  // md  = 70 px mobile / 84 px desktop square  — Job cards (default)
+  // md  = 58 px mobile / 84 px desktop square  — Job cards (default)
   // lg  = 104 × 72 px  — Job detail page
   size?: "sm" | "md" | "lg";
 }
@@ -26,28 +26,29 @@ export default function LogoContainer({
       ? "w-[62px] h-[62px] rounded-[15px]"
       : size === "lg"
       ? "w-[104px] h-[72px] rounded-[12px]"
-      : "w-[70px] h-[70px] md:w-[84px] md:h-[84px] rounded-[14px]";
+      : "w-[58px] h-[58px] md:w-[84px] md:h-[84px] rounded-[13px] md:rounded-[14px]";
 
   const textCls =
     size === "sm"
       ? "text-[19px]"
       : size === "lg"
       ? "text-[15px]"
-      : "text-[18px] md:text-[22px]";
+      : "text-[16px] md:text-[22px]";
 
   const imgSizes =
     size === "sm"
       ? "62px"
       : size === "lg"
       ? "104px"
-      : "(max-width: 768px) 70px, 84px";
+      : "(max-width: 767px) 58px, 84px";
 
   // Intrinsic hint for Next.js image optimisation — use the largest display size
   const intrinsicW = size === "sm" ? 62 : size === "lg" ? 104 : 84;
   const intrinsicH = size === "sm" ? 62 : size === "lg" ? 72 : 84;
-  const frameCls = logoUrl === "/logos/bii.svg"
-    ? "border-transparent bg-transparent"
-    : "border-[#ECEDE6] bg-acd-logo-bg";
+  const frameCls =
+    logoUrl === "/logos/bii.svg"
+      ? "border-transparent bg-transparent"
+      : "border-[#ECEDE6] bg-acd-logo-bg";
 
   return (
     <div

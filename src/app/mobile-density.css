@@ -1,0 +1,32 @@
+/* Mobile-only refinements. Desktop and laptop layouts remain unchanged. */
+
+.newsletter-mobile-form-viewport {
+  scrollbar-width: none;
+}
+
+.newsletter-mobile-form-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /*
+   * JobsBoard renders: three jobs, newsletter, Explore, then the remaining jobs.
+   * On phones, keep the newsletter after job three but defer Explore until after
+   * job eight so visitors see a useful run of roles before another navigation block.
+   */
+  #newsletter {
+    order: 1;
+  }
+
+  #newsletter + * {
+    order: 3;
+  }
+
+  #newsletter ~ [id^="job-"] {
+    order: 2;
+  }
+
+  #newsletter ~ [id^="job-"]:nth-child(n + 11) {
+    order: 4;
+  }
+}
