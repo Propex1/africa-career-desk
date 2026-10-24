@@ -4,11 +4,13 @@ import { getJobBySlug, JOBS } from "@/data/opportunities";
 import Link from "next/link";
 import LogoContainer from "@/components/LogoContainer";
 import BackButton from "@/components/BackButton";
+import RelatedJobs from "@/components/RelatedJobs";
 import ApplyLink from "@/components/analytics/ApplyLink";
 import JobDetailTracker from "@/components/analytics/JobDetailTracker";
 import JobPostingJsonLd from "@/components/seo/JobPostingJsonLd";
 import { getEnabledJobCategoriesForJob } from "@/lib/job-categories";
 import { getEnabledJobCountriesForJob } from "@/lib/job-countries";
+import { getRelatedJobs } from "@/lib/related-jobs";
 import { jobPageMetadata, NO_INDEX_ROBOTS } from "@/lib/seo";
 
 interface Props {
@@ -32,6 +34,7 @@ export default async function JobDetailPage({ params }: Props) {
   if (!job) notFound();
   const categoryPages = getEnabledJobCategoriesForJob(job);
   const countryPages = getEnabledJobCountriesForJob(job);
+  const relatedJobs = getRelatedJobs(job, JOBS, 4);
   const needsVerification = job.lifecycleStatus === "needs_verification";
 
   const metaItems = [
@@ -46,13 +49,10 @@ export default async function JobDetailPage({ params }: Props) {
       <JobDetailTracker job={job} />
       <JobPostingJsonLd job={job} />
 
-      {/* Back */}
       <BackButton jobSlug={job.slug} />
 
       <div className="flex gap-10 items-start flex-wrap">
-        {/* ── Left content ── */}
         <div className="flex-1 min-w-[320px]">
-          {/* Header */}
           <div className="flex items-start gap-[22px] flex-wrap">
             <LogoContainer
               company={job.company}
@@ -86,7 +86,6 @@ export default async function JobDetailPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Meta grid */}
           <div className="mt-7 border border-acd-border rounded-[16px] px-[26px] py-0 bg-white grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
             {metaItems.map(({ label, value }) => (
               <div key={label} className="py-[18px]">
@@ -116,7 +115,6 @@ export default async function JobDetailPage({ params }: Props) {
             </p>
           ))}
 
-          {/* Summary */}
           <h2 className="mt-[38px] m-0 font-serif font-semibold text-[23px] text-acd-navy">
             Summary
           </h2>
@@ -124,7 +122,6 @@ export default async function JobDetailPage({ params }: Props) {
             {job.summary}
           </p>
 
-          {/* About the role */}
           {job.aboutRole && (
             <>
               <h2 className="mt-9 m-0 font-serif font-semibold text-[23px] text-acd-navy">
@@ -136,7 +133,6 @@ export default async function JobDetailPage({ params }: Props) {
             </>
           )}
 
-          {/* Responsibilities */}
           {job.responsibilities && job.responsibilities.length > 0 && (
             <>
               <h2 className="mt-9 m-0 font-serif font-semibold text-[23px] text-acd-navy">
@@ -155,7 +151,6 @@ export default async function JobDetailPage({ params }: Props) {
             </>
           )}
 
-          {/* Requirements */}
           {job.requirements && job.requirements.length > 0 && (
             <>
               <h2 className="mt-9 m-0 font-serif font-semibold text-[23px] text-acd-navy">
@@ -186,7 +181,6 @@ export default async function JobDetailPage({ params }: Props) {
             </>
           )}
 
-          {/* Nice to have */}
           {job.niceToHave && job.niceToHave.length > 0 && (
             <>
               <h2 className="mt-9 m-0 font-serif font-semibold text-[23px] text-acd-navy">
@@ -205,7 +199,6 @@ export default async function JobDetailPage({ params }: Props) {
             </>
           )}
 
-          {/* Application notes */}
           {job.applicationNotes && (
             <div className="mt-9 bg-acd-green-pale border border-acd-green-pale-border rounded-[14px] px-[22px] py-[18px] flex gap-[14px] items-start">
               <svg
@@ -229,10 +222,8 @@ export default async function JobDetailPage({ params }: Props) {
           )}
         </div>
 
-        {/* ── Apply card (sticky) ── */}
         <aside className="w-full md:w-[330px] shrink-0 md:sticky md:top-[104px]">
           <div className="bg-white border border-acd-border rounded-[18px] p-[26px] shadow-[0_10px_36px_-22px_rgba(20,43,63,0.3)]">
-            {/* Verified badge */}
             <span className="inline-flex items-center gap-2 bg-acd-verified-bg text-acd-green-mid text-[12.5px] font-semibold px-[13px] py-[7px] rounded-full">
               <svg
                 width="15"
@@ -250,7 +241,6 @@ export default async function JobDetailPage({ params }: Props) {
               {needsVerification ? "Verification pending" : "Source verified"}
             </span>
 
-            {/* Details */}
             <div className="mt-5 flex flex-col gap-5">
               <div>
                 <p className="m-0 text-[12px] tracking-[0.5px] uppercase text-acd-dimest font-semibold">
@@ -279,7 +269,6 @@ export default async function JobDetailPage({ params }: Props) {
               </div>
             </div>
 
-            {/* CTA */}
             <ApplyLink
               job={job}
               href={job.applyUrl}
@@ -308,6 +297,8 @@ export default async function JobDetailPage({ params }: Props) {
           </div>
         </aside>
       </div>
+
+      <RelatedJobs sourceJob={job} jobs={relatedJobs} />
     </section>
   );
 }
