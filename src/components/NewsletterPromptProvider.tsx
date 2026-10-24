@@ -69,8 +69,8 @@ function writeStorage(storage: Storage | null, key: string, value: string) {
   try {
     storage.setItem(key, value);
   } catch {
-    // Storage can be unavailable in strict privacy modes. The in-memory guard
-    // still prevents repeated prompts during the current component lifetime.
+    // Storage may be unavailable in strict privacy modes. The in-memory guard
+    // still prevents repetition during the current component lifetime.
   }
 }
 
@@ -119,7 +119,8 @@ function isNewsletterPromptContext(
   const candidate = value as Partial<NewsletterPromptContext>;
   return (
     (candidate.placement === "banner" ||
-      candidate.placement === "about_trigger") &&
+      candidate.placement === "about_trigger" ||
+      candidate.placement === "header") &&
     candidate.trigger === "manual"
   );
 }
@@ -229,8 +230,7 @@ export default function NewsletterPromptProvider() {
     return () => window.clearTimeout(timer);
   }, [showSuccessToast]);
 
-  // Automatic prompt: wait for meaningful engagement, then show once per
-  // browser session. A dismissal suppresses it for 14 days on this browser.
+  // Wait for meaningful engagement and never interrupt active interaction.
   useEffect(() => {
     if (!NEWSLETTER_AUTO_PROMPT_ENABLED || isOpen) return;
 
@@ -262,10 +262,9 @@ export default function NewsletterPromptProvider() {
       | null = null;
 
     const clearRetry = () => {
-      if (retryTimer !== undefined) {
-        window.clearTimeout(retryTimer);
-        retryTimer = undefined;
-      }
+      if (retryTimer === undefined) return;
+      window.clearTimeout(retryTimer);
+      retryTimer = undefined;
     };
 
     const scheduleRetry = (
@@ -324,6 +323,7 @@ export default function NewsletterPromptProvider() {
     };
 
     const handleScroll = () => {
+      lastInteractionAt = Date.now();
       if (
         !hasReachedNewsletterScrollThreshold({
           scrollY: window.scrollY,
@@ -334,7 +334,8 @@ export default function NewsletterPromptProvider() {
         return;
       }
 
-      attemptOpen("scroll");
+      // Debounce until the visitor has stopped actively scrolling.
+      scheduleRetry("scroll");
     };
 
     const markInteraction = () => {
@@ -365,8 +366,6 @@ export default function NewsletterPromptProvider() {
     window.addEventListener("keydown", markInteraction, true);
     document.addEventListener("focusout", retryAfterInteraction);
     document.addEventListener("visibilitychange", retryWhenVisible);
-
-    handleScroll();
 
     return () => {
       window.clearTimeout(timer);
@@ -441,7 +440,6 @@ export default function NewsletterPromptProvider() {
         writeStorage(localStorage, NEWSLETTER_SUBSCRIBED_KEY, "true");
         removeStorage(localStorage, NEWSLETTER_PROMPT_DISMISSED_AT_KEY);
         trackNewsletterSignupSubmitted(openContextRef.current);
-        focusReturnRef.current = null;
         setIsOpen(false);
         setShouldPrepare(false);
         setShowSuccessToast(true);
@@ -469,7 +467,7 @@ export default function NewsletterPromptProvider() {
     };
   }, [descriptionId, loadKey, shouldPrepare]);
 
-  // Accessible modal behavior: body scroll lock, Escape, focus trap, and focus
+  // Accessible modal behavior: scroll lock, Escape, focus trap, and focus
   // restoration for manually opened dialogs.
   useEffect(() => {
     if (!isOpen) return;
