@@ -69,3 +69,59 @@ export function trackSearchUsed(
 export function trackSectionViewed(boardSection: BoardSection) {
   capture("section_viewed", { boardSection });
 }
+
+export type NewsletterPlacement =
+  | "banner"
+  | "about_trigger"
+  | "automatic_popup";
+export type NewsletterPromptTrigger = "manual" | "timer" | "scroll";
+export type NewsletterDismissMethod =
+  | "close_button"
+  | "backdrop"
+  | "escape";
+
+export interface NewsletterPromptContext {
+  placement: NewsletterPlacement;
+  trigger: NewsletterPromptTrigger;
+}
+
+function newsletterProperties(
+  context: NewsletterPromptContext,
+  additional?: EventProps
+): EventProps {
+  return {
+    ...context,
+    promptVersion: "engagement_v1",
+    pagePath:
+      typeof window !== "undefined" ? window.location.pathname : undefined,
+    ...additional,
+  };
+}
+
+export function trackNewsletterCtaClicked(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_cta_clicked", newsletterProperties(context));
+}
+
+export function trackNewsletterPromptViewed(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_prompt_viewed", newsletterProperties(context));
+}
+
+export function trackNewsletterPromptDismissed(
+  context: NewsletterPromptContext,
+  dismissMethod: NewsletterDismissMethod
+) {
+  capture(
+    "newsletter_prompt_dismissed",
+    newsletterProperties(context, { dismissMethod })
+  );
+}
+
+export function trackNewsletterSignupSubmitted(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_signup_submitted", newsletterProperties(context));
+}
