@@ -9,6 +9,18 @@ export interface JobBoardFilters {
   language: string[];
 }
 
+export type JobBoardFilterKey = keyof JobBoardFilters;
+
+export interface JobFilterCounts {
+  all: number;
+  options: Record<string, number>;
+}
+
+export interface JobBoardRecoverySuggestion {
+  key: JobBoardFilterKey | "search";
+  count: number;
+}
+
 interface DiscoverySelection {
   roleType: string;
   discoveryTheme?: DiscoveryTheme;
@@ -63,4 +75,52 @@ export function filterJobsForBoard(
     }
     return true;
   });
+}
+
+export function getJobFilterCounts(
+  jobs: readonly Opportunity[],
+  filters: JobBoardFilters,
+  search: string,
+  filterKey: JobBoardFilterKey,
+  options: readonly string[],
+): JobFilterCounts {
+  const baseFilters = { ...filters, [filterKey]: [] } as JobBoardFilters;
+  const counts: Record<string, number> = {};
+
+  for (const option of options) {
+    const optionFilters = {
+      ...baseFilters,
+      [filterKey]: [option],
+    } as JobBoardFilters;
+    counts[option] = filterJobsForBoard(jobs, optionFilters, search).length;
+  }
+
+  return {
+    all: filterJobsForBoard(jobs, baseFilters, search).length,
+    options: counts,
+  };
+}
+
+export function getJobBoardRecoverySuggestions(
+  jobs: readonly Opportunity[],
+  filters: JobBoardFilters,
+  search: string,
+): JobBoardRecoverySuggestion[] {
+  const suggestions: JobBoardRecoverySuggestion[] = [];
+
+  if (search.trim()) {
+    const count = filterJobsForBoard(jobs, filters, "").length;
+    if (count > 0) suggestions.push({ key: "search", count });
+  }
+
+  (Object.keys(filters) as JobBoardFilterKey[]).forEach((key) => {
+    if (filters[key].length === 0) return;
+    const relaxedFilters = { ...filters, [key]: [] } as JobBoardFilters;
+    const count = filterJobsForBoard(jobs, relaxedFilters, search).length;
+    if (count > 0) suggestions.push({ key, count });
+  });
+
+  return suggestions
+    .sort((first, second) => second.count - first.count)
+    .slice(0, 3);
 }
