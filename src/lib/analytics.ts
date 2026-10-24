@@ -5,6 +5,7 @@
 // We deliberately only send curated, non-personal event properties.
 import posthog from "posthog-js";
 import type { BoardSection, Opportunity } from "@/types";
+import type { NewsletterPromptContext } from "./newsletter-prompt";
 
 type EventProps = Record<string, unknown>;
 
@@ -70,20 +71,11 @@ export function trackSectionViewed(boardSection: BoardSection) {
   capture("section_viewed", { boardSection });
 }
 
-export type NewsletterPlacement =
-  | "banner"
-  | "about_trigger"
-  | "automatic_popup";
-export type NewsletterPromptTrigger = "manual" | "timer" | "scroll";
 export type NewsletterDismissMethod =
   | "close_button"
+  | "not_now"
   | "backdrop"
   | "escape";
-
-export interface NewsletterPromptContext {
-  placement: NewsletterPlacement;
-  trigger: NewsletterPromptTrigger;
-}
 
 function newsletterProperties(
   context: NewsletterPromptContext,
