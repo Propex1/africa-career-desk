@@ -63,17 +63,13 @@ export default function BeehiivNewsletterSection({
     <section
       ref={sectionRef}
       id={variant === "banner" ? "newsletter" : undefined}
-      className={
-        variant === "banner"
-          ? "mb-[-16px] mt-5 md:mt-6"
-          : "contents"
-      }
+      className={variant === "banner" ? "my-1 md:my-2" : "contents"}
       aria-labelledby={variant === "banner" ? titleId : undefined}
     >
       {variant === "banner" ? (
-        <div className="relative overflow-hidden rounded-[20px] border border-acd-green bg-acd-green px-5 py-5 shadow-[0_18px_42px_-28px_rgba(20,43,63,0.6)] md:min-h-[164px] md:px-7 md:py-6">
+        <div className="relative overflow-hidden rounded-[20px] border border-acd-green bg-acd-green px-5 py-4 shadow-[0_18px_42px_-28px_rgba(20,43,63,0.6)] md:min-h-[136px] md:px-7 md:py-4">
           <div className="absolute -right-12 -top-12 h-[150px] w-[150px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.16),rgba(255,255,255,0))]" />
-          <div className="relative flex flex-col gap-5 md:min-h-[116px] md:flex-row md:items-center md:justify-between md:gap-8">
+          <div className="relative flex flex-col gap-4 md:min-h-[104px] md:flex-row md:items-center md:justify-between md:gap-8">
             <div className="max-w-[700px]">
               <p className="m-0 text-[12px] font-semibold uppercase tracking-[2.3px] text-white/70">
                 Free weekly job alerts
