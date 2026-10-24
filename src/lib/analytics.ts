@@ -5,6 +5,7 @@
 // We deliberately only send curated, non-personal event properties.
 import posthog from "posthog-js";
 import type { BoardSection, Opportunity } from "@/types";
+import type { NewsletterPromptContext } from "./newsletter-prompt";
 
 type EventProps = Record<string, unknown>;
 
@@ -68,4 +69,51 @@ export function trackSearchUsed(
 
 export function trackSectionViewed(boardSection: BoardSection) {
   capture("section_viewed", { boardSection });
+}
+
+export type NewsletterDismissMethod =
+  | "close_button"
+  | "not_now"
+  | "backdrop"
+  | "escape";
+
+function newsletterProperties(
+  context: NewsletterPromptContext,
+  additional?: EventProps
+): EventProps {
+  return {
+    ...context,
+    promptVersion: "engagement_v1",
+    pagePath:
+      typeof window !== "undefined" ? window.location.pathname : undefined,
+    ...additional,
+  };
+}
+
+export function trackNewsletterCtaClicked(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_cta_clicked", newsletterProperties(context));
+}
+
+export function trackNewsletterPromptViewed(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_prompt_viewed", newsletterProperties(context));
+}
+
+export function trackNewsletterPromptDismissed(
+  context: NewsletterPromptContext,
+  dismissMethod: NewsletterDismissMethod
+) {
+  capture(
+    "newsletter_prompt_dismissed",
+    newsletterProperties(context, { dismissMethod })
+  );
+}
+
+export function trackNewsletterSignupSubmitted(
+  context: NewsletterPromptContext
+) {
+  capture("newsletter_signup_submitted", newsletterProperties(context));
 }
