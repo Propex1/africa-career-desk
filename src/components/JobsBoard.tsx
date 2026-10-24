@@ -522,8 +522,6 @@ export default function JobsBoard({
         </div>
       )}
 
-      <BeehiivNewsletterSection />
-
       {/* Count + sort */}
       <div className="mt-[34px] flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-[14px]">
@@ -551,6 +549,7 @@ export default function JobsBoard({
           filtered.map((job, index) => (
             <Fragment key={job.id}>
               <JobCard job={job} />
+              {index === 2 && <BeehiivNewsletterSection />}
               {index === 2 && explore}
             </Fragment>
           ))
