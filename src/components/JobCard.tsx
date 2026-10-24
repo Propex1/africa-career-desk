@@ -6,13 +6,17 @@ import NewOpportunityBadge from "./NewOpportunityBadge";
 import type { Opportunity } from "@/types";
 import { trackJobCardClicked } from "@/lib/analytics";
 import { deadlinePresentation } from "@/lib/deadline-presentation";
+import { rememberJobBoardPosition } from "@/lib/job-board-state";
 
 interface JobCardProps {
   job: Opportunity;
 }
 
 export default function JobCard({ job }: JobCardProps) {
-  const onClick = () => trackJobCardClicked(job);
+  const onClick = () => {
+    rememberJobBoardPosition(job.slug);
+    trackJobCardClicked(job);
+  };
   const deadline = deadlinePresentation(job.deadlineDisplay);
   const otherTags = [job.experienceBucket, job.language].filter(
     Boolean

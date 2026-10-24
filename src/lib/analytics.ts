@@ -49,6 +49,19 @@ export function trackApplyClicked(job: Opportunity) {
   capture("apply_clicked", jobProperties(job));
 }
 
+export function trackRelatedJobClicked(
+  sourceJob: Opportunity,
+  targetJob: Opportunity
+) {
+  capture("related_job_clicked", {
+    ...jobProperties(targetJob),
+    sourceJobId: sourceJob.id,
+    sourceJobSlug: sourceJob.slug,
+    sourceCompany: sourceJob.company,
+    sourceRoleType: sourceJob.roleType,
+  });
+}
+
 export function trackFilterUsed(
   filterType: string,
   filterValue: string,
