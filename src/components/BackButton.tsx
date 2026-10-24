@@ -1,13 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getJobBoardReturnHref } from "@/lib/job-board-state";
+import { useRouter } from "next/navigation";
+import {
+  canUseNativeJobBoardHistoryReturn,
+  getJobBoardReturnHref,
+  prepareNativeJobBoardHistoryReturn,
+} from "@/lib/job-board-state";
 
 interface BackButtonProps {
   jobSlug: string;
 }
 
 export default function BackButton({ jobSlug }: BackButtonProps) {
+  const router = useRouter();
   const fallbackHref = `/#job-${encodeURIComponent(jobSlug)}`;
   const [href, setHref] = useState(fallbackHref);
 
@@ -15,9 +21,18 @@ export default function BackButton({ jobSlug }: BackButtonProps) {
     setHref(getJobBoardReturnHref(jobSlug));
   }, [jobSlug]);
 
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!canUseNativeJobBoardHistoryReturn(jobSlug)) return;
+
+    event.preventDefault();
+    prepareNativeJobBoardHistoryReturn();
+    router.back();
+  };
+
   return (
     <a
       href={href}
+      onClick={handleClick}
       className="inline-flex items-center gap-2 no-underline text-[14.5px] text-acd-dim hover:text-acd-green transition-colors mb-[30px] bg-transparent border-none cursor-pointer p-0"
     >
       <svg
