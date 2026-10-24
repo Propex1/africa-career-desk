@@ -1,11 +1,23 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { getJobBoardReturnHref } from "@/lib/job-board-state";
+
 interface BackButtonProps {
   jobSlug: string;
 }
 
 export default function BackButton({ jobSlug }: BackButtonProps) {
+  const fallbackHref = `/#job-${encodeURIComponent(jobSlug)}`;
+  const [href, setHref] = useState(fallbackHref);
+
+  useEffect(() => {
+    setHref(getJobBoardReturnHref(jobSlug));
+  }, [jobSlug]);
+
   return (
     <a
-      href={`/#job-${jobSlug}`}
+      href={href}
       className="inline-flex items-center gap-2 no-underline text-[14.5px] text-acd-dim hover:text-acd-green transition-colors mb-[30px] bg-transparent border-none cursor-pointer p-0"
     >
       <svg
