@@ -16,6 +16,7 @@ export const NEWSLETTER_AUTO_PROMPT_SCROLL_THRESHOLD = 0.55;
 export type NewsletterPlacement =
   | "banner"
   | "about_trigger"
+  | "header"
   | "automatic_popup";
 export type NewsletterPromptTrigger = "manual" | "timer" | "scroll";
 
