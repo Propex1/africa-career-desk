@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_10_25 } from "@/data/approved-content-2026-10-25";
 import { APPROVED_CONTENT_2026_10_22, REFRESHED_FIELDS_2026_10_22, REMOVED_JOB_IDS_2026_10_22, CONFIRMED_CLOSURES_2026_10_22, VERIFIED_DEADLINES_2026_10_22, DISPLAY_PRIORITY_2026_10_22, PROGRAMME_PRIORITY_2026_10_22 } from "@/data/approved-content-2026-10-22";
 import { APPROVED_CONTENT_2026_10_20, REFRESHED_FIELDS_2026_10_20, CONFIRMED_CLOSURES_2026_10_20, DISPLAY_PRIORITY_2026_10_20 } from "@/data/approved-content-2026-10-20";
 import { APPROVED_CONTENT_2026_10_17, REFRESHED_FIELDS_2026_10_17, REMOVED_JOB_IDS_2026_10_17, CONFIRMED_CLOSURES_2026_10_17, VERIFIED_DEADLINES_2026_10_17 } from "@/data/approved-content-2026-10-17";
@@ -4230,6 +4231,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...APPROVED_CONTENT_2026_10_25,
   ...APPROVED_CONTENT_2026_10_22,
   ...APPROVED_CONTENT_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17,
@@ -4855,6 +4857,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
 ]);
 // Preserve the editor-approved leading positions without changing first-publication dates.
 const PINNED_JOB_IDS = [...new Set([
+  ...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Jobs").map((o) => o.id),
   ...DISPLAY_PRIORITY_2026_10_22,
   ...DISPLAY_PRIORITY_2026_10_20,
   ...APPROVED_CONTENT_2026_10_17.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
@@ -4870,7 +4873,7 @@ export const JOBS = [
   ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
   ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
 ];
-const OCTOBER_17_PROGRAMME_IDS = [...new Set([...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
+const OCTOBER_17_PROGRAMME_IDS = [...new Set([...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Programmes").map((o) => o.id),...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
 const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
 export const PROGRAMMES = [
   ...OCTOBER_17_PROGRAMME_IDS.flatMap((id) => ALL_PROGRAMMES.filter((o) => o.id === id)),
