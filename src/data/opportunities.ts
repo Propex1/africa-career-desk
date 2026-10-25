@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_10_26 } from "@/data/approved-content-2026-10-26";
 import { BOARD_REMOVALS } from "./board-curation-2026-10-25";
 import { rankJobs } from "../lib/job-ranking";
 
@@ -4234,6 +4235,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+  ...APPROVED_CONTENT_2026_10_26,
   ...APPROVED_CONTENT_2026_10_25,
   ...APPROVED_CONTENT_2026_10_22,
   ...APPROVED_CONTENT_2026_10_20,

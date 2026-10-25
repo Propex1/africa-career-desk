@@ -1,0 +1,156 @@
+import type { Opportunity } from "@/types";
+
+// Owner-approved opportunities. Dates record first publication in UTC.
+export const APPROVED_CONTENT_2026_10_26: Opportunity[] = [
+  {
+    "id": "DRAFT-4c1b536a82bf",
+    "slug": "investment-officer-infrastructure-international-finance-corporation-ifc-dakar",
+    "employerId": "employer-046-international-finance-corporation-ifc",
+    "title": "Investment Officer, Infrastructure",
+    "boardSection": "Jobs",
+    "locationDisplay": "Dakar, Senegal",
+    "company": "International Finance Corporation (IFC)",
+    "companyInitials": "IFC",
+    "logoUrl": "/logos/ifc.svg",
+    "roleType": "Infrastructure & Project Finance",
+    "experienceBucket": "Mid-level",
+    "city": "Dakar",
+    "country": "Senegal",
+    "region": "West Africa",
+    "language": "English and French",
+    "languageTags": [
+      "English",
+      "French"
+    ],
+    "employmentTypeDisplay": "Open-ended staff · Local recruitment",
+    "summary": "Originate, structure and manage infrastructure investments with IFC’s Africa Infrastructure team in Dakar. Covering primarily West Africa, the role combines business development, credit analysis and transaction execution with portfolio work, helping deliver commercially viable projects with development impact across the investment lifecycle.",
+    "aboutRole": "The Africa Infrastructure department invests in energy, transport, digital infrastructure, oil and gas, mining, and municipal and environmental infrastructure. The officer works across upstream development, new transactions and existing investments, collaborating with clients, public counterparts and specialist teams. The vacancy is an open-ended staff position at grade GF, recruited locally in Dakar, with English and French required.",
+    "responsibilities": [
+      "Develop sector knowledge and relationships with private companies, public counterparts and development partners.",
+      "Originate an investment pipeline informed by market trends, sector fundamentals and country conditions.",
+      "Assess credit quality, commercial viability and development impact, and prepare recommendations for management.",
+      "Help evaluate, structure, negotiate and close debt and equity transactions within deal teams.",
+      "Coordinate environmental, social, technical, legal, insurance and governance risk work with IFC specialists.",
+      "Build client engagement plans, identify investment opportunities and support portfolio management throughout the investment lifecycle."
+    ],
+    "requirements": [
+      "Master’s degree or an equivalent professional qualification in business, finance, economics or another relevant field.",
+      "At least five years in sourcing, structuring, closing or supervising investments, including restructurings and negotiated exits.",
+      "Strong financial and credit analysis, with demonstrated ability to structure debt and equity instruments.",
+      "Knowledge of infrastructure sectors and West Africa’s market conditions, infrastructure challenges and local issues.",
+      "Strong business-development, relationship-building and cross-cultural stakeholder-management skills.",
+      "Excellent written and spoken English and French, high ethical standards and commitment to sustainable development. Relevant experience in fragile or conflict-affected contexts is encouraged."
+    ],
+    "applicationNotes": "Apply through IFC’s official World Bank Group careers portal for requisition req38884. Local recruitment; open-ended staff appointment. Closing date: 6 November 2026 at 23:59 UTC.",
+    "deadlineDate": "2026-11-06",
+    "deadlineDisplay": "6 Nov 2026",
+    "sourceType": "Official ATS",
+    "applyUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38884?c=worldbankgroup",
+    "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38884?c=worldbankgroup",
+    "applyButtonText": "View role and apply",
+    "employerPostedAt": "2026-10-23",
+    "verifiedDeadline": {
+      "deadlineDate": "2026-11-06",
+      "authority": "official_ats",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38884?c=worldbankgroup",
+      "verifiedAt": "2026-10-25",
+      "statement": "Closing Date: 11/6/2026 (MM/DD/YYYY) at 11:59pm UTC."
+    },
+    "lastChecked": "2026-10-25",
+    "status": "Active",
+    "publicationStatus": "live",
+    "lifecycleStatus": "active",
+    "publishedAt": "2026-10-25"
+  },
+  {
+    "id": "DRAFT-969eb31d14d7",
+    "slug": "associate-senior-associate-capital-formation-and-investor-relations-alterra-capital-partners-johannesburg",
+    "employerId": "employer-007-alterra-capital-partners",
+    "title": "Associate / Senior Associate, Capital Formation & Investor Relations",
+    "boardSection": "Jobs",
+    "locationDisplay": "Johannesburg, South Africa",
+    "company": "Alterra Capital Partners",
+    "companyInitials": "ACP",
+    "logoUrl": "/logos/alterra-capital-partners.jpg",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "discoveryThemes": [
+      "private-markets"
+    ],
+    "experienceBucket": "Associate",
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "region": "Southern Africa",
+    "employmentType": "full-time",
+    "summary": "Join Alterra Capital Partners’ capital formation and investor relations team in Johannesburg, supporting institutional fundraising for an Africa-focused private equity firm. Working closely with the partners, the Associate or Senior Associate helps build investor relationships, run fundraising processes and communicate portfolio performance and investment impact.",
+    "aboutRole": "Alterra was formed by members of Carlyle’s Africa team and backs profitable, mid-market businesses across the continent. Its team works from Johannesburg, Nairobi and Mauritius. This vacancy supports relationships with institutional investors across Africa, Europe, the Middle East, Asia and North America, combining fundraising execution, market intelligence and investor communications with direct exposure to the partners.",
+    "responsibilities": [
+      "Support the full capital-raising cycle, from identifying prospective investors through final fund close.",
+      "Research allocator appetite, competing fundraising activity and private-market trends to inform fundraising strategy.",
+      "Develop institutional investor relationships and act as a day-to-day contact for their investment teams.",
+      "Shape fundraising materials and explain Alterra’s investment case, track record and value-creation approach.",
+      "Lead investor due diligence, maintain the fundraising pipeline and CRM, and keep partners informed of progress.",
+      "Work with investment and ESG teams on portfolio-performance reporting, impact case studies and investor communications.",
+      "Help organise advisory committee meetings, the annual investor conference and participation in industry forums."
+    ],
+    "requirements": [
+      "Three to seven years in private equity, investment banking, a DFI, or fundraising at a general partner or placement agent; African experience is advantageous.",
+      "Working knowledge of private markets and fund-performance metrics, with strong writing and presentation skills.",
+      "Confident everyday use of AI tools for research, analysis and drafting.",
+      "Professional discretion with senior stakeholders, effective teamwork and the ability to manage competing priorities.",
+      "Degree in finance, economics or business; CFA or a postgraduate qualification is an advantage.",
+      "Willingness to travel internationally."
+    ],
+    "applicationNotes": "Apply through the employer’s LinkedIn posting; LinkedIn may request sign-in. The advert also accepts a CV and short cover note at jscheepers@alterracapital.com with “Capital Formation & IR” as the subject. No closing date is stated.",
+    "sourceType": "LinkedIn company post",
+    "applyUrl": "https://www.linkedin.com/jobs/view/associate-senior-associate-capital-formation-investor-relations-at-alterra-capital-partners-4481044289/",
+    "sourceUrl": "https://za.linkedin.com/jobs/view/associate-senior-associate-capital-formation-investor-relations-at-alterra-capital-partners-4481044289",
+    "applyButtonText": "View role and apply",
+    "employerPostedAt": "2026-10-24",
+    "lastChecked": "2026-10-25",
+    "status": "Active",
+    "publicationStatus": "live",
+    "lifecycleStatus": "active",
+    "publishedAt": "2026-10-25"
+  },
+  {
+    "id": "DRAFT-2a6f117b3786",
+    "slug": "foreign-exchange-trader-stanbic-bank-ghana-standard-bank-group-accra",
+    "employerId": "employer-096-standard-bank-corporate-investment-banking",
+    "title": "Foreign Exchange Trader",
+    "boardSection": "Jobs",
+    "locationDisplay": "Accra, Ghana",
+    "company": "Stanbic Bank Ghana (Standard Bank Group)",
+    "companyInitials": "SB",
+    "logoUrl": "/logos/standard_bank-logo_brandlogos.net_aqqyw.png",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "city": "Accra",
+    "country": "Ghana",
+    "region": "West Africa",
+    "employmentType": "full-time",
+    "summary": "Trade spot foreign exchange for Stanbic Bank Ghana’s Corporate & Investment Banking business in Accra. The role manages an assigned trading mandate, seeking trading-book profit within defined risk limits and market rules, and suits candidates with quantitative education and practical global-markets trading experience.",
+    "aboutRole": "This full-time position sits in Global Markets Trading and Market Making. The official advert identifies an assigned spot-FX product rather than a broad multi-asset mandate. It emphasises disciplined risk taking, market knowledge, trade execution and compliance with conduct standards and statutory regulations. The detailed task description is brief; the stated experience requirements are more extensive.",
+    "responsibilities": [
+      "Trade the assigned spot-FX product within the approved mandate to maximise trading-book profit.",
+      "Keep trading activity within defined risk levels, codes of conduct and statutory regulations.",
+      "Apply market analysis, product knowledge and risk–reward judgement to trade execution and opportunity creation."
+    ],
+    "requirements": [
+      "First degree in a quantitative field.",
+      "One to two years of relevant experience with Global Markets trading systems and the application of market knowledge, rules and norms.",
+      "Three to four years of demonstrated global-markets product trading experience, preferably within Standard Bank.",
+      "Understanding of relevant currencies, trading limits and the economic, regulatory and market drivers of the trading area.",
+      "Experience on Standard Bank’s FX graduate programme is strongly preferred; the advert also stresses analytical judgement, clear communication and teamwork."
+    ],
+    "applicationNotes": "Apply through Standard Bank’s official role page for Stanbic Bank Ghana, reference 80365697A-0001. The advert gives separate 1–2 year and 3–4 year experience criteria; review both. No closing date is stated.",
+    "sourceType": "Company website",
+    "applyUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000156857049",
+    "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000156857049",
+    "applyButtonText": "View role and apply",
+    "employerPostedAt": "2026-10-21",
+    "lastChecked": "2026-10-25",
+    "status": "Active",
+    "publicationStatus": "live",
+    "lifecycleStatus": "active",
+    "publishedAt": "2026-10-25"
+  }
+];

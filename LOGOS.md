@@ -166,3 +166,9 @@ Five clearer original assets are selected centrally by the shared component; leg
 BIO uses the current official 25th-anniversary header logo. EBRD uses its official compact header mark, avoiding the previous raster checkerboard background. EBRD and Ithmar use dark ACD frames for their original light artwork; MTN Yellow and Visa Blue remain unchanged. Rejected candidates (a different ARISE company, a white Amethis wordmark, and a less legible Lorax variation) were not installed.
 
 For a future asset, add reviewed bounds only after checking its full mark at mobile, card and detail sizes. Unlisted assets still receive ordinary proportional containment and missing files retain the initials fallback. The original source files are never stretched, recoloured or destructively cropped. New assets exceeding the preferred size budget are retained as supplied; Next image optimisation serves smaller raster responses.
+
+## Alterra Capital Partners
+
+- Asset: public/logos/alterra-capital-partners.jpg (100 × 100).
+- Source: employer logo on the [Alterra LinkedIn vacancy](https://www.linkedin.com/jobs/view/associate-senior-associate-capital-formation-investor-relations-at-alterra-capital-partners-4481044289/), verified 26 October 2026 local time.
+- Original image retained; display bounds remove blank margins for legibility. Used only to identify the employer.

@@ -122,7 +122,7 @@ test("current private-markets jobs link back to PE with their primary labels and
   const jobs = load("src/data/opportunities.ts").JOBS as Opportunity[];
   const before = structuredClone(jobs);
   const secondary = jobs.filter((j) => j.discoveryThemes?.includes("private-markets") && j.roleType !== "Private Equity, VC & Private Credit");
-  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0016", "ACD-0083", "ACD-0151"]);
+  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0016", "ACD-0083", "ACD-0151", "DRAFT-969eb31d14d7"]);
   // October 17 and 22 checks withdrew broken Apply links, retaining their records.
   for (const id of ["ACD-0009", "ACD-0041"]) {
     const withdrawn = (load("src/data/opportunities.ts").OPPORTUNITIES as Opportunity[]).find((j) => j.id === id);
@@ -132,7 +132,12 @@ test("current private-markets jobs link back to PE with their primary labels and
   }
   for (const fixture of secondary) {
     assert.equal(slugs(fixture).filter((slug) => slug === "private-equity-venture-capital").length, 1);
-    assert.equal(getEnabledJobCategoriesForJob(fixture)[0].roleType, fixture.roleType);
+    if (ENABLED_JOB_CATEGORY_PAGES.some((page) => page.roleType === fixture.roleType)) {
+      assert.equal(getEnabledJobCategoriesForJob(fixture)[0].roleType, fixture.roleType);
+    } else {
+      // Approved IR roles may link to PE without introducing a new public category route.
+      assert.deepEqual(slugs(fixture), ["private-equity-venture-capital"]);
+    }
     assert.ok(getEnabledJobCountriesForJob(fixture).length > 0);
   }
   assert.deepEqual(jobs, before);

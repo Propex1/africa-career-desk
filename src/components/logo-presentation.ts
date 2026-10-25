@@ -2,6 +2,7 @@
 // Aliases preserve historical logo paths while selecting clearer official assets.
 export interface LogoPresentation { src?: string; width: number; height: number; bounds: [number, number, number, number] }
 export const logoPresentation: Record<string, LogoPresentation> = {
+  "/logos/alterra-capital-partners.jpg": {"width":100,"height":100,"bounds":[0,0.28,1,0.4]},
   "/logos/absa logo.png": {"width":441,"height":382,"bounds":[0.1175,0.06369,0.7675,0.86828]},
   "/logos/accion.png": {"width":504,"height":288,"bounds":[0.05375,0.33011,0.8925,0.34197]},
   "/logos/actis-ga.png": {"width":1280,"height":451,"bounds":[0,0,1,1]},
