@@ -2,71 +2,66 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { logoPresentation } from "./logo-presentation";
 
 interface LogoContainerProps {
   company: string;
   initials: string;
   logoUrl?: string;
-  // sm  = 62 px square  — Programmes, Open Applications
-  // md  = 58 px mobile / 84 px desktop square  — Job cards (default)
-  // lg  = 104 × 72 px  — Job detail page
   size?: "sm" | "md" | "lg";
 }
 
-export default function LogoContainer({
-  company,
-  initials,
-  logoUrl,
-  size = "md",
-}: LogoContainerProps) {
-  const [imgError, setImgError] = useState(false);
+export default function LogoContainer({ company, initials, logoUrl, size = "md" }: LogoContainerProps) {
+  const [failedSrc, setFailedSrc] = useState<string>();
+  const profile = logoUrl ? logoPresentation[logoUrl] : undefined;
+  const src = profile?.src ?? logoUrl;
+  const containerCls = size === "sm"
+    ? "[--logo-w:90px] [--logo-h:64px] rounded-[13px]"
+    : size === "lg"
+    ? "[--logo-w:128px] [--logo-h:88px] rounded-[12px]"
+    : "[--logo-w:80px] [--logo-h:64px] md:[--logo-w:104px] md:[--logo-h:84px] rounded-[13px] md:rounded-[14px]";
+  const textCls = size === "sm" ? "text-[19px]" : size === "lg" ? "text-[20px]" : "text-[18px] md:text-[22px]";
+  const frameCls = src === "/logos/bii.svg"
+    ? "border-transparent bg-transparent"
+    : src === "/logos/mtn.svg"
+    ? "border-[#FFCB05] bg-[#FFCB05]"
+    : src === "/logos/visa-wordmark.png"
+    ? "border-[#1434CB] bg-[#1434CB]"
+    : src === "/logos/ebrd.svg" || src === "/logos/ithmar-capital-official.png"
+    ? "border-acd-navy bg-acd-navy"
+    : "border-[#ECEDE6] bg-white";
 
-  const containerCls =
-    size === "sm"
-      ? "w-[62px] h-[62px] rounded-[15px]"
-      : size === "lg"
-      ? "w-[104px] h-[72px] rounded-[12px]"
-      : "w-[58px] h-[58px] md:w-[84px] md:h-[84px] rounded-[13px] md:rounded-[14px]";
-
-  const textCls =
-    size === "sm"
-      ? "text-[19px]"
-      : size === "lg"
-      ? "text-[15px]"
-      : "text-[16px] md:text-[22px]";
-
-  const imgSizes =
-    size === "sm"
-      ? "62px"
-      : size === "lg"
-      ? "104px"
-      : "(max-width: 767px) 58px, 84px";
-
-  // Intrinsic hint for Next.js image optimisation — use the largest display size
-  const intrinsicW = size === "sm" ? 62 : size === "lg" ? 104 : 84;
-  const intrinsicH = size === "sm" ? 62 : size === "lg" ? 72 : 84;
-  const frameCls =
-    logoUrl === "/logos/bii.svg"
-      ? "border-transparent bg-transparent"
-      : "border-[#ECEDE6] bg-acd-logo-bg";
+  const [x, y, width, height] = profile?.bounds ?? [0, 0, 1, 1];
+  const aspect = profile ? profile.width / profile.height : 1;
+  // Fit the visible artwork, not its surrounding empty canvas. The full image
+  // retains its proportions; only blank margins can extend beyond the frame.
+  const imageStyle = profile ? {
+    width: "min(calc(var(--logo-w) * " + (0.9 / width) + "), calc(var(--logo-h) * " + (0.82 * aspect / height) + "))",
+    height: "auto",
+    aspectRatio: String(aspect),
+    maxWidth: "none",
+    maxHeight: "none",
+    transform: "translate(" + ((0.5 - x - width / 2) * 100) + "%, " + ((0.5 - y - height / 2) * 100) + "%)",
+  } : undefined;
+  // Request sufficient image resolution even for originals with large margins.
+  const renderedWidth = Math.ceil(Math.min(128 * 0.9 / width, 88 * 0.82 * aspect / height));
+  const intrinsicW = profile ? Math.min(profile.width, renderedWidth) : 128;
+  const intrinsicH = profile ? Math.round(intrinsicW / aspect) : 88;
 
   return (
-    <div
-      className={`${containerCls} border ${frameCls} flex items-center justify-center shrink-0 overflow-hidden font-serif font-semibold tracking-[0.3px] text-acd-green-mid`}
-    >
-      {logoUrl && !imgError ? (
+    <div className={containerCls + " w-[var(--logo-w)] h-[var(--logo-h)] border " + frameCls + " flex items-center justify-center shrink-0 overflow-hidden font-serif font-semibold tracking-[0.3px] text-acd-green-mid"}>
+      {src && failedSrc !== src ? (
         <Image
-          src={logoUrl}
+          src={src}
           alt={company}
           width={intrinsicW}
           height={intrinsicH}
-          sizes={imgSizes}
-          className="max-w-[84%] max-h-[76%] w-auto h-auto object-contain"
-          onError={() => setImgError(true)}
+          sizes={renderedWidth + "px"}
+          className="max-w-[90%] max-h-[82%] w-auto h-auto object-contain shrink-0"
+          style={imageStyle}
+          onError={() => setFailedSrc(src)}
         />
-      ) : (
-        <span className={textCls}>{initials}</span>
-      )}
+      ) : <span className={textCls}>{initials}</span>}
     </div>
   );
 }

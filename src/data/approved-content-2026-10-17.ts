@@ -765,6 +765,7 @@ export const APPROVED_CONTENT_2026_10_17: Opportunity[] = [
     "title": "The Afrinvest Analyst Program (TAAP 27)",
     "company": "Afrinvest",
     "companyInitials": "A",
+    "logoUrl": "/logos/afrinvest.svg",
     "boardSection": "Programmes",
     "roleType": "Investment Banking & Advisory",
     "locationDisplay": "Ikoyi, Lagos, Nigeria",

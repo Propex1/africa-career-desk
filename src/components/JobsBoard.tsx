@@ -8,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { recentJobs } from "@/lib/job-ranking";
 import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
 import JobCard from "./JobCard";
@@ -244,6 +245,7 @@ function SortDropdown({
   }, [open]);
 
   const options: { label: string; value: JobBoardSort }[] = [
+    { label: "Curated mix", value: "curated" },
     { label: "Most recent", value: "recent" },
     { label: "Closing soon", value: "deadline" },
   ];
@@ -383,7 +385,7 @@ export default function JobsBoard({
 }: JobsBoardProps) {
   const [search, setSearch] = useState("");
   const [filters, setFilters] = useState<Filters>(EMPTY_JOB_BOARD_FILTERS);
-  const [sort, setSort] = useState<JobBoardSort>("recent");
+  const [sort, setSort] = useState<JobBoardSort>("curated");
   const [urlStateReady, setUrlStateReady] = useState(false);
   const restoredScrollRef = useRef(false);
 
@@ -455,13 +457,16 @@ export default function JobsBoard({
   }, []);
 
   const filtered = useMemo(
-    () =>
-      filterJobsForBoard(activeJobs, filters, search).sort((first, second) => {
+    () => {
+      const matches = filterJobsForBoard(activeJobs, filters, search);
+      if (sort === "recent") return recentJobs(matches);
+      return matches.sort((first, second) => {
         if (sort === "deadline") {
           return deadlineMs(first.deadlineDisplay) - deadlineMs(second.deadlineDisplay);
         }
         return 0;
-      }),
+      });
+    },
     [activeJobs, filters, search, sort]
   );
 

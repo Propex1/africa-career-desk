@@ -1,6 +1,6 @@
 import type { JobBoardFilters } from "./job-filters";
 
-export type JobBoardSort = "recent" | "deadline";
+export type JobBoardSort = "curated" | "recent" | "deadline";
 
 export interface JobBoardState {
   search: string;
@@ -59,7 +59,7 @@ export function parseJobBoardState(
         allowed.languages
       ),
     },
-    sort: requestedSort === "deadline" ? "deadline" : "recent",
+    sort: requestedSort === "deadline" ? "deadline" : requestedSort === "recent" ? "recent" : "curated",
   };
 }
 
@@ -75,7 +75,7 @@ export function serializeJobBoardState(state: JobBoardState): URLSearchParams {
     params.append("experience", value)
   );
   state.filters.language.forEach((value) => params.append("language", value));
-  if (state.sort === "deadline") params.set("sort", "deadline");
+  if (state.sort !== "curated") params.set("sort", state.sort);
 
   return params;
 }

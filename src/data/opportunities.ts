@@ -1,6 +1,9 @@
+import { BOARD_REMOVALS } from "./board-curation-2026-10-25";
+import { rankJobs } from "../lib/job-ranking";
+
 import { APPROVED_CONTENT_2026_10_25 } from "@/data/approved-content-2026-10-25";
-import { APPROVED_CONTENT_2026_10_22, REFRESHED_FIELDS_2026_10_22, REMOVED_JOB_IDS_2026_10_22, CONFIRMED_CLOSURES_2026_10_22, VERIFIED_DEADLINES_2026_10_22, DISPLAY_PRIORITY_2026_10_22, PROGRAMME_PRIORITY_2026_10_22 } from "@/data/approved-content-2026-10-22";
-import { APPROVED_CONTENT_2026_10_20, REFRESHED_FIELDS_2026_10_20, CONFIRMED_CLOSURES_2026_10_20, DISPLAY_PRIORITY_2026_10_20 } from "@/data/approved-content-2026-10-20";
+import { APPROVED_CONTENT_2026_10_22, REFRESHED_FIELDS_2026_10_22, REMOVED_JOB_IDS_2026_10_22, CONFIRMED_CLOSURES_2026_10_22, VERIFIED_DEADLINES_2026_10_22, PROGRAMME_PRIORITY_2026_10_22 } from "@/data/approved-content-2026-10-22";
+import { APPROVED_CONTENT_2026_10_20, REFRESHED_FIELDS_2026_10_20, CONFIRMED_CLOSURES_2026_10_20 } from "@/data/approved-content-2026-10-20";
 import { APPROVED_CONTENT_2026_10_17, REFRESHED_FIELDS_2026_10_17, REMOVED_JOB_IDS_2026_10_17, CONFIRMED_CLOSURES_2026_10_17, VERIFIED_DEADLINES_2026_10_17 } from "@/data/approved-content-2026-10-17";
 import lifecycleData from '@/data/job-lifecycle.json';
 import { lifecycleOverrides } from '@/lib/job-lifecycle';
@@ -12,7 +15,7 @@ import { APPROVED_JOBS_2026_09_20 } from "@/data/approved-jobs-2026-09-20";
 import { APPROVED_CONTENT_2026_09_23, REACTIVATED_JOBS_2026_09_23 } from "@/data/approved-content-2026-09-23";
 import { APPROVED_CONTENT_2026_09_27 } from "@/data/approved-content-2026-09-27";
 import { APPROVED_CONTENT_2026_09_30, REMOVED_JOB_IDS_2026_09_30, CONFIRMED_CLOSURES_2026_09_30, REFRESHED_FIELDS_2026_09_30 } from "@/data/approved-content-2026-09-30";
-import { APPROVED_CONTENT_2026_10_04, REFRESHED_FIELDS_2026_10_04, REFRESH_JOB_IDS_2026_10_04 } from "@/data/approved-content-2026-10-04";
+import { APPROVED_CONTENT_2026_10_04, REFRESHED_FIELDS_2026_10_04 } from "@/data/approved-content-2026-10-04";
 import { APPROVED_CONTENT_2026_10_08 } from "@/data/approved-content-2026-10-08";
 import { APPROVED_CONTENT_2026_10_11 } from "@/data/approved-content-2026-10-11";
 import { EMPLOYER_ID_BY_COMPANY } from "@/data/employer-identities";
@@ -4831,48 +4834,21 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
   ...automatedLifecycle.fields[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
-  removedJobIds: new Set([...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17, ...REMOVED_JOB_IDS_2026_10_22]),
+  removedJobIds: new Set([...Object.keys(BOARD_REMOVALS), ...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17, ...REMOVED_JOB_IDS_2026_10_22]),
   confirmedClosures: { ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17, ...CONFIRMED_CLOSURES_2026_10_20, ...CONFIRMED_CLOSURES_2026_10_22 },
   verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines, ...VERIFIED_DEADLINES_2026_10_22 },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
   verifiedFieldsByJobId: VERIFIED_STRUCTURED_FIELDS_BY_JOB_ID,
 });
 
-// One-time historical baseline correction. Future dated publications still lead via the shared sorter.
-const JOBS_BASELINE = [...getLiveJobs(OPPORTUNITIES)].reverse();
-const JOBS_DISPLAY_PRIORITY = [
-  "private-equity-professional-fund-of-funds-responsability-cape-town",
-  "via-chargee-affaires-financement-mas-proparco-abidjan",
-  "associate-principal-power-infrastructure-crossboundary",
-];
-const ORDERED_JOBS_BASELINE = [
-  ...JOBS_DISPLAY_PRIORITY.flatMap((slug) => JOBS_BASELINE.filter((job) => job.slug === slug)),
-  ...JOBS_BASELINE.filter((job) => !JOBS_DISPLAY_PRIORITY.includes(job.slug)),
-];
-const CHRONOLOGICAL_JOBS = sortByFirstPublication(ORDERED_JOBS_BASELINE);
+const CHRONOLOGICAL_JOBS = sortByFirstPublication(getLiveJobs(OPPORTUNITIES));
 // Display-only refresh priority; Lorax keeps its original publication history.
 const SEPTEMBER_27_REFRESH_IDS = new Set([
   ...APPROVED_CONTENT_2026_09_27.map((opportunity) => opportunity.id),
   "ACD-0051",
 ]);
-// Preserve the editor-approved leading positions without changing first-publication dates.
-const PINNED_JOB_IDS = [...new Set([
-  ...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Jobs").map((o) => o.id),
-  ...DISPLAY_PRIORITY_2026_10_22,
-  ...DISPLAY_PRIORITY_2026_10_20,
-  ...APPROVED_CONTENT_2026_10_17.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
-  ...APPROVED_CONTENT_2026_10_11.map((opportunity) => opportunity.id),
-  ...APPROVED_CONTENT_2026_10_08.filter((opportunity) => opportunity.boardSection === "Jobs").map((opportunity) => opportunity.id),
-  ...REFRESH_JOB_IDS_2026_10_04,
-  ...APPROVED_CONTENT_2026_09_30.map((job) => job.id),
-  "ACD-0293", // Meridiam VIE leads the approved September refresh.
-  ...CHRONOLOGICAL_JOBS.filter((job) => SEPTEMBER_27_REFRESH_IDS.has(job.id) && job.id !== "ACD-0293").map((job) => job.id),
-  "ACD-0292", "ACD-0266", "ACD-0260", "ACD-0263",
-])];
-export const JOBS = [
-  ...PINNED_JOB_IDS.flatMap((id) => CHRONOLOGICAL_JOBS.filter((job) => job.id === id)),
-  ...CHRONOLOGICAL_JOBS.filter((job) => !PINNED_JOB_IDS.includes(job.id)),
-];
+// Unified, deterministic curation replaces permanent research-batch pinning.
+export const JOBS = rankJobs(CHRONOLOGICAL_JOBS);
 const OCTOBER_17_PROGRAMME_IDS = [...new Set([...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Programmes").map((o) => o.id),...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
 const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
 export const PROGRAMMES = [

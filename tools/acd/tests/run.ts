@@ -10,3 +10,4 @@ import "./job-description-quality.test.ts";
 import "./job-urls.test.ts";
 import "./newsletter-prompt.test.ts";
 import "./job-board-ux.test.ts";
+import "./job-ranking.test.ts";
