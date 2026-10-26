@@ -22,11 +22,30 @@ function apiUrl(job) {
 }
 function safeUrl(value){try{const u=new URL(value);for(const k of [...u.searchParams.keys()])if(!['jobID','jobId','id','job','lang'].includes(k))u.searchParams.delete(k);u.hash='';return u.href;}catch{return undefined;}}
 function evidence(page,reason) {return {sourceUrl:safeUrl(page.url),checkedAt:page.checkedAt,hash:page.hash,reason};}
+// The captured EBRD template binds its closure paragraph to #content[role=main]
+// and h1#job-title. A footer sentence or generic alert form is not role evidence.
+function ebrdContent(body) {
+  const tags=/<\/?div\b[^>]*>/gi;let start=-1,depth=0,match;
+  while((match=tags.exec(body))){const tag=match[0];
+    if(start<0){if(!/^<\//.test(tag)&&/\bid=["']content["']/i.test(tag)&&/\brole=["']main["']/i.test(tag)){start=tags.lastIndex;depth=1;}continue;}
+    depth+=/^<\//.test(tag)?-1:1;
+    if(depth===0)return body.slice(start,match.index);
+  }
+  return '';
+}
 export function inspectPage(job,page) {
   const base={classification:'UNCERTAIN / SOURCE INACCESSIBLE',reason:'No sufficient job-specific evidence of current acceptance.'};
   if(!page||![200,410].includes(page.http)||!page.hash)return {...base,reason:'Request failed or source inaccessible; not evidence of closure.'};
   if(!sameJobUrl(page.url,page.finalUrl))return {...base,reason:'Redirect to a different/generic destination; not evidence of closure.'};
   const u=new URL(page.url),body=page.text||'',title=(page.body||'').match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]||'';
+  if(u.hostname==='jobs.ebrd.com'&&/^\/job\/[^/]+\/\d+\/?$/.test(u.pathname)){
+    const main=ebrdContent(page.body||''),heading=main.match(/<h1\b[^>]*\bid=["']job-title["'][^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+    if(heading&&normalized(textOnly(heading))===normalized(job.title)
+      &&/<p\b[^>]*>\s*<strong\b[^>]*>\s*Sorry,\s*this position (?:has been filled|is no longer available)\.\s*<\/strong>\s*<\/p>/i.test(main)){
+      const reason='Exact official EBRD role main-content template explicitly states filled/no longer available; generic retained forms do not override closure.';
+      return {classification:'VERIFIED CLOSED',kind:'closed',reason,evidence:evidence(page,reason)};
+    }
+  }
   let closed;
   if(u.hostname.endsWith('.applytojob.com')&&/^\/apply\/[A-Za-z0-9]{10}\//.test(u.pathname)) {
     if(/Hiring for this position has been put on hold at this time\./i.test(body))closed={kind:'paused',reason:'Official job-specific JazzHR page explicitly states hiring is on hold.'};
@@ -68,9 +87,9 @@ export async function checkJob(job,read,today) {
   const observations=[];const get=async url=>{const r=await read(url);observations.push({url:safeUrl(r.url),finalUrl:safeUrl(r.finalUrl),http:r.http,error:r.error,hash:r.hash,checkedAt:r.checkedAt});return r;};
   let detail=await get(job.sourceUrl||job.applyUrl),apply=job.applyUrl===(job.sourceUrl||job.applyUrl)?detail:await get(job.applyUrl);
   let result=inspectPage(job,detail),fromApply=inspectPage(job,apply);
-  if(fromApply.classification==='VERIFIED CLOSED'||fromApply.classification==='VERIFIED OPEN'||fromApply.deadline)result=fromApply;
+  if(result.classification!=='VERIFIED CLOSED'&&(fromApply.classification==='VERIFIED CLOSED'||fromApply.classification==='VERIFIED OPEN'||fromApply.deadline))result=fromApply;
   let api;try{const url=apiUrl(job);if(url)api=inspectApi(job,await get(url));}catch{}
-  if(api&&(api.classification==='VERIFIED OPEN'||api.deadline))result={...result,...api};
+  if(result.classification!=='VERIFIED CLOSED'&&api&&(api.classification==='VERIFIED OPEN'||api.deadline))result={...result,...api};
   // Known TalentSoft redirect: query the exact requisition's print endpoint, not a guessed new job.
   if(new URL(job.applyUrl).hostname==='bmcecapital-cand.talent-soft.com'&&!sameJobUrl(apply.url,apply.finalUrl||apply.url)) {
     const p=await get(job.applyUrl.replace('/emploi-','/imprimer-fiche-emploi-'));const q=inspectPage(job,p);if(q.classification==='VERIFIED CLOSED')result=q;
