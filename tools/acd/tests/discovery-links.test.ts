@@ -122,9 +122,9 @@ test("current private-markets jobs link back to PE with their primary labels and
   const jobs = load("src/data/opportunities.ts").JOBS as Opportunity[];
   const before = structuredClone(jobs);
   const secondary = jobs.filter((j) => j.discoveryThemes?.includes("private-markets") && j.roleType !== "Private Equity, VC & Private Credit");
-  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0016", "ACD-0083", "ACD-0151", "DRAFT-969eb31d14d7"]);
-  // October 17 and 22 checks withdrew broken Apply links, retaining their records.
-  for (const id of ["ACD-0009", "ACD-0041"]) {
+  assert.deepEqual(secondary.map((j) => j.id).sort(), ["ACD-0005", "ACD-0016", "ACD-0083", "DRAFT-969eb31d14d7"]);
+  // October 17, 22 and 28 checks withdrew broken Apply links, retaining their records.
+  for (const id of ["ACD-0009", "ACD-0041", "ACD-0151"]) {
     const withdrawn = (load("src/data/opportunities.ts").OPPORTUNITIES as Opportunity[]).find((j) => j.id === id);
     assert.equal(withdrawn?.publicationStatus, "removed");
     assert.ok(!jobs.some((j) => j.id === id));
