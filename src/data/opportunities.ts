@@ -1,3 +1,4 @@
+import {REMOVED_2026_10_30,SURVIVING_ORDER_2026_10_30} from "@/data/availability-cleanup-2026-10-30";
 import { APPROVED_CONTENT_2026_10_30 } from "@/data/approved-content-2026-10-30";
 import { APPROVED_CONTENT_2026_10_28 } from "@/data/approved-content-2026-10-28";
 import { AVAILABILITY_FIELDS_2026_10_28, AVAILABILITY_REMOVALS_2026_10_28, AVAILABILITY_CLOSURES_2026_10_28, preserveAvailabilityOrder } from "@/data/availability-check-2026-10-28";
@@ -4842,7 +4843,7 @@ export const OPPORTUNITIES = buildOpportunityProjection(OPPORTUNITY_RECORDS.map(
   ...AVAILABILITY_FIELDS_2026_10_28[record.id],
 })), {
   employerIdByCompany: EMPLOYER_ID_BY_COMPANY,
-  removedJobIds: new Set([...AVAILABILITY_REMOVALS_2026_10_28, ...Object.keys(BOARD_REMOVALS), ...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17, ...REMOVED_JOB_IDS_2026_10_22]),
+  removedJobIds: new Set([...REMOVED_2026_10_30,...AVAILABILITY_REMOVALS_2026_10_28, ...Object.keys(BOARD_REMOVALS), ...REMOVED_JOB_IDS, ...REMOVED_JOB_IDS_2026_09_30, ...REMOVED_JOB_IDS_2026_10_17, ...REMOVED_JOB_IDS_2026_10_22]),
   confirmedClosures: { ...AVAILABILITY_CLOSURES_2026_10_28, ...automatedLifecycle.closures, ...CONFIRMED_CLOSURES, ...CONFIRMED_CLOSURES_2026_09_30, ...VERIFIED_AVAILABILITY_CLOSURES_2026_10_11, ...CONFIRMED_CLOSURES_2026_10_17, ...CONFIRMED_CLOSURES_2026_10_20, ...CONFIRMED_CLOSURES_2026_10_22, ...AVAILABILITY_CLOSURES_2026_10_28 },
   verifiedDeadlinesByJobId: { ...VERIFIED_HARD_DEADLINES, ...VERIFIED_DEADLINES_2026_10_17, ...automatedLifecycle.deadlines, ...VERIFIED_DEADLINES_2026_10_22 },
   employerPostedAtByJobId: VERIFIED_EMPLOYER_POSTED_AT,
@@ -4856,7 +4857,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
   "ACD-0051",
 ]);
 // Unified, deterministic curation replaces permanent research-batch pinning.
-export const JOBS = [...APPROVED_CONTENT_2026_10_30, ...preserveAvailabilityOrder(rankJobs(CHRONOLOGICAL_JOBS)).filter(j=>!APPROVED_CONTENT_2026_10_30.some(n=>n.id===j.id))];
+export const JOBS = SURVIVING_ORDER_2026_10_30.flatMap(slug=>CHRONOLOGICAL_JOBS.filter(j=>j.slug===slug));
 const OCTOBER_17_PROGRAMME_IDS = [...APPROVED_CONTENT_2026_10_28.filter(o => o.boardSection === "Programmes").map(o => o.id),...new Set([...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Programmes").map((o) => o.id),...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
 const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
 export const PROGRAMMES = [
