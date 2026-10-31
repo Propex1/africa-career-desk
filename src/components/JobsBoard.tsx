@@ -8,10 +8,10 @@ import {
   useRef,
   useState,
 } from "react";
-import { recentJobs } from "@/lib/job-ranking";
+import { addedWithin, visibleOnBoard } from "@/lib/job-freshness";
 import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
-import JobCard from "./JobCard";
+import CompactJobCard from "./CompactJobCard";
 import { trackFilterUsed, trackSearchUsed } from "@/lib/analytics";
 import {
   filterJobsForBoard,
@@ -26,7 +26,6 @@ import {
   EMPTY_JOB_BOARD_FILTERS,
   parseJobBoardState,
   serializeJobBoardState,
-  type JobBoardSort,
 } from "@/lib/job-board-state";
 
 interface FilterDropdownProps {
@@ -62,8 +61,10 @@ function FilterDropdown({
         setIsOpen(false);
       }
     }
+    const handleEscape = (event: KeyboardEvent) => {if(event.key === "Escape"){setIsOpen(false);ref.current?.querySelector("button")?.focus()}};
+    document.addEventListener("keydown", handleEscape);
     document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    return () => {document.removeEventListener("mousedown", handleClick);document.removeEventListener("keydown",handleEscape)};
   }, [isOpen]);
 
   const hasSelection = selected.length > 0;
@@ -223,104 +224,6 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
   );
 }
 
-function SortDropdown({
-  value,
-  onChange,
-}: {
-  value: JobBoardSort;
-  onChange: (value: JobBoardSort) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!open) return;
-    function handleClick(event: MouseEvent) {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, [open]);
-
-  const options: { label: string; value: JobBoardSort }[] = [
-    { label: "Curated mix", value: "curated" },
-    { label: "Most recent", value: "recent" },
-    { label: "Closing soon", value: "deadline" },
-  ];
-
-  return (
-    <div ref={ref} className="relative flex items-center gap-3">
-      <span className="text-[14px] text-acd-dimmer">Sort by</span>
-      <button
-        type="button"
-        onClick={() => setOpen((current) => !current)}
-        className="flex items-center gap-3 bg-white border-[1.5px] border-acd-border-light rounded-[10px] px-[15px] py-[11px] text-[14px] text-acd-navy font-medium cursor-pointer font-sans min-w-[150px] justify-between hover:border-acd-border-hover transition-colors"
-      >
-        {options.find((option) => option.value === value)?.label}
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#9AA6AB"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={`transition-transform duration-150 ${open ? "rotate-180" : ""}`}
-        >
-          <path d="M6 9l6 6 6-6" />
-        </svg>
-      </button>
-      {open && (
-        <div className="absolute top-[calc(100%+8px)] right-0 bg-white border border-acd-border-dropdown rounded-[14px] shadow-[0_14px_34px_-16px_rgba(20,43,63,0.22)] p-[7px] z-50 min-w-[160px]">
-          {options.map((option) => (
-            <button
-              type="button"
-              key={option.value}
-              onClick={() => {
-                onChange(option.value);
-                setOpen(false);
-              }}
-              className={`w-full text-left border-0 rounded-[8px] px-[11px] py-2 text-[13.5px] cursor-pointer font-sans hover:bg-[#F0F4F0] transition-colors ${
-                value === option.value
-                  ? "bg-[#EEF4EF] text-acd-green font-semibold"
-                  : "bg-transparent text-acd-green-body font-medium"
-              }`}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-const MONTHS: Record<string, number> = {
-  Jan: 0,
-  Feb: 1,
-  Mar: 2,
-  Apr: 3,
-  May: 4,
-  Jun: 5,
-  Jul: 6,
-  Aug: 7,
-  Sep: 8,
-  Oct: 9,
-  Nov: 10,
-  Dec: 11,
-};
-
-function deadlineMs(value?: string): number {
-  if (!value) return Infinity;
-  const [day, month, year] = value.split(" ");
-  const monthNumber = MONTHS[month];
-  if (monthNumber === undefined) return Infinity;
-  return new Date(parseInt(year), monthNumber, parseInt(day)).getTime();
-}
-
 const RegionIcon = (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16522A" strokeWidth="1.6">
     <circle cx="12" cy="12" r="9" />
@@ -372,6 +275,7 @@ interface JobsBoardProps {
   roleTypes: string[];
   experienceBuckets: string[];
   languages: string[];
+  initialToday: string;
 }
 
 export default function JobsBoard({
@@ -382,16 +286,20 @@ export default function JobsBoard({
   roleTypes,
   experienceBuckets,
   languages,
+  initialToday,
 }: JobsBoardProps) {
   const [search, setSearch] = useState("");
   const [filters, setFilters] = useState<Filters>(EMPTY_JOB_BOARD_FILTERS);
-  const [sort, setSort] = useState<JobBoardSort>("curated");
+  const [today, setToday] = useState(initialToday);
+  const [addedDays, setAddedDays] = useState(0);
+  const [limit, setLimit] = useState(25);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [urlStateReady, setUrlStateReady] = useState(false);
   const restoredScrollRef = useRef(false);
 
   const activeJobs = useMemo(
-    () => jobs.filter((job) => job.status === "Active"),
-    [jobs]
+    () => jobs.filter((job) => visibleOnBoard(job, today)),
+    [jobs, today]
   );
 
   useEffect(() => {
@@ -404,23 +312,29 @@ export default function JobsBoard({
     });
     setSearch(parsed.search);
     setFilters(parsed.filters);
-    setSort(parsed.sort);
+    const params = new URLSearchParams(window.location.search);
+    setAddedDays([7,14].includes(Number(params.get("added"))) ? Number(params.get("added")) : 0);
+    setLimit(Math.min(jobs.length || 25, Math.max(25, Number(params.get("shown")) || 25)));
+    setToday(new Date().toISOString().slice(0,10));
     setUrlStateReady(true);
   }, [countries, experienceBuckets, languages, regions, roleTypes]);
 
   useEffect(() => {
     if (!urlStateReady) return;
-    const params = serializeJobBoardState({ search, filters, sort });
+    const params = serializeJobBoardState({ search, filters, sort: "curated" });
+    if (addedDays) params.set("added", String(addedDays));
+    if (limit > 25) params.set("shown", String(limit));
     const queryString = params.toString();
     const nextUrl = `${window.location.pathname}${queryString ? `?${queryString}` : ""}${window.location.hash}`;
     const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (nextUrl !== currentUrl) {
       window.history.replaceState(window.history.state, "", nextUrl);
     }
-  }, [filters, search, sort, urlStateReady]);
+  }, [filters, search, addedDays, limit, urlStateReady]);
 
   const toggle = useCallback(
     (key: JobBoardFilterKey, value: string) => {
+      setLimit(25);
       setFilters((previous) => {
         const selected = previous[key];
         return {
@@ -436,39 +350,27 @@ export default function JobsBoard({
   );
 
   const clearFilter = useCallback((key: JobBoardFilterKey) => {
+    setLimit(25);
     setFilters((previous) => ({ ...previous, [key]: [] }));
   }, []);
 
   const clearAll = useCallback(() => {
+    setLimit(25);
+    setAddedDays(0);
     setFilters(EMPTY_JOB_BOARD_FILTERS);
     setSearch("");
   }, []);
 
   const removeChip = useCallback((key: JobBoardFilterKey, value: string) => {
+    setLimit(25);
     setFilters((previous) => ({
       ...previous,
       [key]: previous[key].filter((item) => item !== value),
     }));
   }, []);
 
-  const handleSort = useCallback((value: JobBoardSort) => {
-    setSort(value);
-    trackFilterUsed("sort", value, "Jobs");
-  }, []);
-
-  const filtered = useMemo(
-    () => {
-      const matches = filterJobsForBoard(activeJobs, filters, search);
-      if (sort === "recent") return recentJobs(matches);
-      return matches.sort((first, second) => {
-        if (sort === "deadline") {
-          return deadlineMs(first.deadlineDisplay) - deadlineMs(second.deadlineDisplay);
-        }
-        return 0;
-      });
-    },
-    [activeJobs, filters, search, sort]
-  );
+  const dateJobs = useMemo(() => activeJobs.filter(job => addedWithin(job, addedDays, today)), [activeJobs, addedDays, today]);
+  const filtered = useMemo(() => filterJobsForBoard(dateJobs, filters, search), [dateJobs, filters, search]);
 
   useEffect(() => {
     if (!urlStateReady || restoredScrollRef.current) return;
@@ -499,30 +401,30 @@ export default function JobsBoard({
 
   const filterCounts = useMemo(
     () => ({
-      region: getJobFilterCounts(activeJobs, filters, search, "region", regions),
+      region: getJobFilterCounts(dateJobs, filters, search, "region", regions),
       country: getJobFilterCounts(
-        activeJobs,
+        dateJobs,
         filters,
         search,
         "country",
         countries
       ),
       roleType: getJobFilterCounts(
-        activeJobs,
+        dateJobs,
         filters,
         search,
         "roleType",
         roleTypes
       ),
       experience: getJobFilterCounts(
-        activeJobs,
+        dateJobs,
         filters,
         search,
         "experience",
         experienceBuckets
       ),
       language: getJobFilterCounts(
-        activeJobs,
+        dateJobs,
         filters,
         search,
         "language",
@@ -530,7 +432,7 @@ export default function JobsBoard({
       ),
     }),
     [
-      activeJobs,
+      dateJobs,
       countries,
       experienceBuckets,
       filters,
@@ -542,25 +444,21 @@ export default function JobsBoard({
   );
 
   const recoverySuggestions = useMemo(
-    () => getJobBoardRecoverySuggestions(activeJobs, filters, search),
-    [activeJobs, filters, search]
+    () => getJobBoardRecoverySuggestions(dateJobs, filters, search),
+    [dateJobs, filters, search]
   );
 
   const query = search.trim().toLowerCase();
   const anyFilter =
-    Object.values(filters).some((values) => values.length > 0) || query.length > 0;
+    Object.values(filters).some((values) => values.length > 0) || query.length > 0 || addedDays > 0;
   const chips: { key: JobBoardFilterKey; value: string }[] = [];
   (Object.keys(filters) as JobBoardFilterKey[]).forEach((key) => {
     filters[key].forEach((value) => chips.push({ key, value }));
   });
 
-  const employerCount = new Set(jobs.map((job) => job.company)).size;
-  const countryCount = new Set(
-    jobs.flatMap((job) => (job.country ? [job.country] : []))
-  ).size;
-
   const applyRecoverySuggestion = (key: JobBoardFilterKey | "search") => {
     if (key === "search") {
+      setLimit(25);
       setSearch("");
       return;
     }
@@ -568,33 +466,14 @@ export default function JobsBoard({
   };
 
   return (
-    <section className="max-w-[1180px] mx-auto px-5 py-[48px_20px] md:px-8 md:py-[48px_32px]">
-      <div className="xl:grid xl:grid-cols-[minmax(0,760px)_1fr] xl:items-end xl:gap-12">
-        <div>
-          <p className="m-0 mb-4 text-[13px] font-semibold tracking-[2.4px] text-acd-green uppercase">
-            Africa Finance &amp; Investment Careers
-          </p>
-          <h1 className="m-0 font-serif font-medium text-[clamp(36px,6vw,58px)] leading-[1.04] tracking-[-1px] text-acd-navy max-w-[760px]">
-            Curated Africa finance &amp; investment opportunities
-          </h1>
-          <p className="mt-[22px] text-[18px] leading-relaxed text-acd-muted max-w-[620px]">
-            Private equity, infrastructure, development finance and climate finance roles from leading Africa-focused employers.
-          </p>
-          <p className="mt-3 text-[14px] leading-relaxed text-acd-muted max-w-[620px]">
-            Reviewed opportunities &middot; Official application sources &middot; Updated regularly
-          </p>
-        </div>
-        <div className="hidden border-l border-acd-border-green pl-7 pb-1 xl:block">
-          <p className="m-0 text-[11px] font-semibold uppercase tracking-[2px] text-acd-green">
-            Live on ACD
-          </p>
-          <p className="m-0 mt-2 text-[14px] leading-relaxed text-acd-muted">
-            {jobs.length} roles &middot; {employerCount} employers &middot; {countryCount} countries
-          </p>
-        </div>
+    <section className="jobs-page">
+      <div className="jobs-hero">
+        <p className="jobs-eyebrow">Africa Finance &amp; Investment Careers</p>
+        <h1>Curated Africa finance &amp; investment opportunities</h1>
+        <p className="jobs-description">Private equity, investment banking, infrastructure, development finance, corporate strategy &amp; more.</p>
       </div>
 
-      <div className="mt-10 relative">
+      <div className="jobs-search relative">
         <span className="absolute left-6 top-1/2 -translate-y-1/2 text-acd-green flex">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="7" />
@@ -604,13 +483,15 @@ export default function JobsBoard({
         <input
           type="search"
           value={search}
-          onChange={(event) => setSearch(event.target.value)}
+          aria-label="Search jobs, companies or keywords"
+          onChange={(event) => {setLimit(25);setSearch(event.target.value)}}
           placeholder="Search job title, company or keyword"
           className="w-full border-[1.5px] border-acd-border-light bg-white rounded-[16px] py-[21px] pl-[60px] pr-6 text-[17px] text-acd-navy font-sans outline-none shadow-[0_1px_2px_rgba(20,43,63,0.04)] focus:border-acd-border-hover transition-colors"
         />
       </div>
 
-      <div className="mt-[18px] flex flex-col gap-3 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:flex-wrap">
+      <button className="jobs-filter-toggle" aria-expanded={filtersOpen} aria-controls="jobs-filters" onClick={()=>setFiltersOpen(!filtersOpen)}>Filters {chips.length + (addedDays ? 1 : 0) > 0 && <span>({chips.length + (addedDays ? 1 : 0)})</span>}</button>
+      <div id="jobs-filters" className={`jobs-filters ${filtersOpen ? "is-open" : ""}`}>
         <FilterDropdown
           label="Region"
           icon={RegionIcon}
@@ -660,8 +541,8 @@ export default function JobsBoard({
           counts={filterCounts.language}
           onToggle={(value) => toggle("language", value)}
           onClear={() => clearFilter("language")}
-          className="sm:col-span-2 lg:col-span-1"
         />
+        <select className="jobs-added" aria-label="Added date" value={addedDays} onChange={e=>{setLimit(25);setAddedDays(Number(e.target.value))}}><option value={0}>Added date · All</option><option value={7}>Last 7 days</option><option value={14}>Last 14 days</option></select>
       </div>
 
       {chips.length > 0 && (
@@ -676,7 +557,7 @@ export default function JobsBoard({
         </div>
       )}
 
-      <div className="mt-[34px] flex items-center justify-between gap-4 flex-wrap">
+      <div className="jobs-resultsbar">
         <div className="flex items-center gap-[14px]">
           <p className="m-0 text-[16px] font-semibold text-acd-navy flex items-center gap-[9px]">
             {anyFilter
@@ -694,16 +575,15 @@ export default function JobsBoard({
             </button>
           )}
         </div>
-        <SortDropdown value={sort} onChange={handleSort} />
+        {addedDays > 0 && <ActiveChip label={`Last ${addedDays} days`} onRemove={()=>{setLimit(25);setAddedDays(0)}}/>}
       </div>
 
-      <div className="mt-[18px] flex flex-col gap-[14px]">
+      <div className="jobs-list">
         {filtered.length > 0 ? (
-          filtered.map((job, index) => (
+          filtered.slice(0,limit).map((job, index) => (
             <Fragment key={job.id}>
-              <JobCard job={job} />
-              {index === 2 && <BeehiivNewsletterSection />}
-              {index === 2 && explore}
+              <CompactJobCard job={job} today={today} />
+              {index === 7 && <BeehiivNewsletterSection />}
             </Fragment>
           ))
         ) : (
@@ -733,14 +613,15 @@ export default function JobsBoard({
                 onClick={clearAll}
                 className="rounded-[10px] bg-acd-green px-4 py-2.5 text-[13.5px] font-semibold text-white transition-colors hover:bg-acd-green-dark"
               >
-                Show all {activeJobs.length} roles
+                Clear filters
               </button>
             </div>
           </div>
         )}
       </div>
 
-      {filtered.length < 3 && explore}
+      {filtered.length > 0 && <div className="jobs-pagination"><p aria-live="polite">Showing {Math.min(limit,filtered.length)} of {filtered.length} roles</p>{limit < filtered.length && <button onClick={()=>setLimit(current=>current+25)}>Show more jobs</button>}</div>}
+      <div className="jobs-explore">{explore}</div>
 
       <p className="mt-[30px] text-center text-[14px] text-acd-dimmer flex items-center justify-center gap-[9px]">
         <svg

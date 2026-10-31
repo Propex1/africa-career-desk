@@ -599,15 +599,7 @@ export default function NewsletterPromptProvider() {
             <h2 id={titleId} className="sr-only">
               Get weekly Africa investment job alerts
             </h2>
-            <button
-              ref={closeButtonRef}
-              type="button"
-              onClick={() => closeNewsletter("close_button")}
-              className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-acd-border-light bg-white text-[23px] leading-none text-acd-navy shadow-[0_2px_8px_rgba(20,43,63,0.1)] transition-colors hover:border-acd-green hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green sm:right-4 sm:top-4 sm:h-11 sm:w-11 sm:text-[24px]"
-              aria-label="Close newsletter signup"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+
 
             <p id={descriptionId} className="sr-only">
               Enter your email address to receive one curated Africa investment
@@ -693,6 +685,7 @@ export default function NewsletterPromptProvider() {
             <div className="mt-0.5 flex justify-center sm:mt-1">
               <button
                 type="button"
+                ref={closeButtonRef}
                 onClick={() => closeNewsletter("not_now")}
                 className="min-h-10 rounded-[10px] px-5 text-[14px] font-medium text-acd-muted transition-colors hover:bg-acd-green-pale hover:text-acd-green focus:outline-none focus:ring-2 focus:ring-acd-green sm:min-h-11"
               >

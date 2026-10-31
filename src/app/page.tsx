@@ -38,6 +38,7 @@ export default function JobsPage() {
       <SectionViewTracker section="Jobs" />
       <JobsBoard
         explore={<ExploreOpportunities />}
+        initialToday={new Date().toISOString().slice(0,10)}
         jobs={JOBS}
         regions={JOB_REGIONS}
         countries={JOB_COUNTRIES}
