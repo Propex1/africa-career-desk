@@ -21,3 +21,14 @@ export function visibleOnBoard(job: Opportunity, today: string): boolean {
   const deadline = publicationDay(job.deadlineDate), now = publicationDay(today);
   return job.status === "Active" && (job.publicationStatus ?? "live") === "live" && job.lifecycleStatus !== "closed" && (deadline === null || now === null || deadline >= now);
 }
+
+/** Original ACD publication date only. Same-day jobs retain their existing order. */
+export function newestJobs(items: readonly Opportunity[]): Opportunity[] {
+  return [...items].sort((a, b) => {
+    const left = publicationDay(a.publishedAt), right = publicationDay(b.publishedAt);
+    if (left === right) return 0;
+    if (left === null) return 1;
+    if (right === null) return -1;
+    return right - left;
+  });
+}

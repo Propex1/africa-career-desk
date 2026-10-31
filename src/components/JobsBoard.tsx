@@ -542,7 +542,7 @@ export default function JobsBoard({
           onToggle={(value) => toggle("language", value)}
           onClear={() => clearFilter("language")}
         />
-        <select className="jobs-added" aria-label="Added date" value={addedDays} onChange={e=>{setLimit(25);setAddedDays(Number(e.target.value))}}><option value={0}>Added date · All</option><option value={7}>Last 7 days</option><option value={14}>Last 14 days</option></select>
+        <select className="jobs-added" aria-label="Date added" value={addedDays} onChange={e=>{setLimit(25);setAddedDays(Number(e.target.value))}}><option value={0}>Any time</option><option value={7}>Last 7 days</option><option value={14}>Last 14 days</option></select>
       </div>
 
       {chips.length > 0 && (
