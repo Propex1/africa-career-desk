@@ -34,6 +34,7 @@ import {
 const BEEHIIV_FORM_ID = "b98884b7-cae6-4cf4-ba4d-b6ede81fec89";
 const BEEHIIV_ORIGIN = "https://subscribe-forms.beehiiv.com";
 const BEEHIIV_SCRIPT_SRC = `${BEEHIIV_ORIGIN}/v3/loader.js`;
+const EMBED_LOAD_TIMEOUT_MS = 12_000;
 const MOBILE_MEDIA_QUERY = "(max-width: 639px)";
 const RECENT_INTERACTION_GRACE_MS = 3_500;
 const AUTO_PROMPT_RETRY_MS = 4_000;
@@ -396,6 +397,7 @@ export default function NewsletterPromptProvider() {
 
     let embeddedIframe: HTMLIFrameElement | null = null;
     let positionTimer: number | undefined;
+    const loadTimer = window.setTimeout(() => setStatus("error"), EMBED_LOAD_TIMEOUT_MS);
 
     const positionForm = () => {
       if (positionTimer !== undefined) {
@@ -413,6 +415,7 @@ export default function NewsletterPromptProvider() {
     };
 
     const handleIframeLoad = () => {
+      window.clearTimeout(loadTimer);
       setStatus("ready");
       positionForm();
     };
@@ -438,12 +441,17 @@ export default function NewsletterPromptProvider() {
         iframe.addEventListener("load", handleIframeLoad, { once: true });
       }
 
+      // The loader may finish before our observer attaches the load listener.
+      // Its sizing acknowledgement is also evidence that the form is ready.
+      if (iframe.dataset.bhvSized === "true") handleIframeLoad();
+
       positionForm();
     };
 
     const handleMessage = (event: MessageEvent) => {
       if (
         event.origin !== BEEHIIV_ORIGIN ||
+        event.source !== host.querySelector("iframe")?.contentWindow ||
         !event.data ||
         typeof event.data !== "object" ||
         !("type" in event.data)
@@ -456,8 +464,7 @@ export default function NewsletterPromptProvider() {
         event.data.type === "beehiiv:styles"
       ) {
         prepareIframe();
-        setStatus("ready");
-        positionForm();
+        handleIframeLoad();
       }
 
       if (
@@ -480,18 +487,27 @@ export default function NewsletterPromptProvider() {
 
     const observer = new MutationObserver(prepareIframe);
     const script = document.createElement("script");
-    const handleScriptError = () => setStatus("error");
+    const handleScriptError = () => {
+      window.clearTimeout(loadTimer);
+      setStatus("error");
+    };
 
     script.async = true;
     script.src = BEEHIIV_SCRIPT_SRC;
     script.dataset.beehiivForm = BEEHIIV_FORM_ID;
     script.addEventListener("error", handleScriptError, { once: true });
-    observer.observe(host, { childList: true, subtree: true });
+    observer.observe(host, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["data-bhv-sized"],
+    });
     window.addEventListener("message", handleMessage);
     window.addEventListener("resize", positionForm);
     host.appendChild(script);
 
     return () => {
+      window.clearTimeout(loadTimer);
       if (positionTimer !== undefined) window.clearTimeout(positionTimer);
       observer.disconnect();
       window.removeEventListener("message", handleMessage);
@@ -645,13 +661,22 @@ export default function NewsletterPromptProvider() {
               )}
 
               {status === "error" && (
-                <p
+                <div
                   role="alert"
-                  className="absolute inset-0 m-0 flex items-center justify-center px-8 text-center text-[14px] text-acd-muted"
+                  className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 px-8 text-center text-[14px] text-acd-muted"
                 >
-                  The newsletter signup could not load. Close this window and
-                  try again.
-                </p>
+                  <p>The signup form is taking longer than expected. Please try again.</p>
+                  <button
+                    type="button"
+                    onClick={() => { setStatus("loading"); setLoadKey((current) => current + 1); }}
+                    className="min-h-11 rounded-[10px] bg-acd-green px-5 py-2 font-medium text-white"
+                  >
+                    Retry signup
+                  </button>
+                  <a className="underline" href={`${BEEHIIV_ORIGIN}/v3/forms/${BEEHIIV_FORM_ID}`} target="_blank" rel="noopener noreferrer">
+                    Open signup form directly
+                  </a>
+                </div>
               )}
 
               <div
