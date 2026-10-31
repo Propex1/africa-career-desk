@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { cardLocation } from "@/lib/card-location";
 import LogoContainer from "./LogoContainer";
 import NewOpportunityBadge from "./NewOpportunityBadge";
 import type { Opportunity } from "@/types";
@@ -66,7 +67,7 @@ export default function JobCard({ job }: JobCardProps) {
               <circle cx="12" cy="11" r="2.2" />
             </svg>
             <span className="min-w-0 flex-1 line-clamp-2 break-words md:line-clamp-none md:flex-none md:whitespace-normal">
-              {job.locationDisplay}
+              {cardLocation(job)}
             </span>
           </span>
         </p>

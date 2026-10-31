@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { cardLocation } from "@/lib/card-location";
 import type { Opportunity } from "@/types";
 import LogoContainer from "./LogoContainer";
 import { trackRelatedJobClicked } from "@/lib/analytics";
@@ -60,7 +61,7 @@ export default function RelatedJobs({ sourceJob, jobs }: RelatedJobsProps) {
                 {job.company}
               </p>
               <p className="m-0 mt-1 line-clamp-1 text-[13px] text-acd-dim">
-                {job.locationDisplay}
+                {cardLocation(job)}
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 <span className="max-w-full rounded-[7px] bg-acd-tag-green-bg px-2.5 py-1 text-[11px] font-semibold leading-[1.25] text-acd-tag-green-text">
