@@ -65,6 +65,50 @@
         "46f277e51575b9bbb64b8ffe427ad90b1d6e5ee9ac5d196547e63b47d026b3e3",
         "89623fd79d0a82419e8e9735ca9f8a96383f7ca7e743b5c4e211e3103520aa65"
       ]
+    },
+    {
+      "jobId": "ACD-0342",
+      "kind": "closed",
+      "checkedAt": "2026-10-31T18:30:45.460Z",
+      "sourceUrl": "https://jobs.boad.org/fr/annonce/4616641-un1-gestionnaire-financier-charge-de-la-mobilisation-des-ressources-de-marches-lome",
+      "reason": "Manually verified under user-authorized cleanup: the exact BOAD application URL redirects to the official career.index.notify_job_ad_close notice stating the offer is no longer online, confirmed by two independent GET requests. The advertised 31 October 2026 17:30 UTC cutoff has also passed.",
+      "evidenceHashes": [
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d",
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d"
+      ]
+    },
+    {
+      "jobId": "ACD-0343",
+      "kind": "closed",
+      "checkedAt": "2026-10-31T18:30:46.524Z",
+      "sourceUrl": "https://jobs.boad.org/fr/annonce/4616959-un-01-specialiste-financement-de-projets-dadaptation-lome",
+      "reason": "Manually verified under user-authorized cleanup: the exact BOAD application URL redirects to the official career.index.notify_job_ad_close notice stating the offer is no longer online, confirmed by two independent GET requests. The advertised 31 October 2026 17:30 UTC cutoff has also passed.",
+      "evidenceHashes": [
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d",
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d"
+      ]
+    },
+    {
+      "jobId": "ACD-0344",
+      "kind": "closed",
+      "checkedAt": "2026-10-31T18:30:47.558Z",
+      "sourceUrl": "https://jobs.boad.org/fr/annonce/4614419-un-01-charge-de-relation-investisseurs-1172-lome",
+      "reason": "Manually verified under user-authorized cleanup: the exact BOAD application URL redirects to the official career.index.notify_job_ad_close notice stating the offer is no longer online, confirmed by two independent GET requests. The advertised 31 October 2026 17:30 UTC cutoff has also passed.",
+      "evidenceHashes": [
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d",
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d"
+      ]
+    },
+    {
+      "jobId": "ACD-0345",
+      "kind": "closed",
+      "checkedAt": "2026-10-31T18:30:48.633Z",
+      "sourceUrl": "https://jobs.boad.org/fr/annonce/4614325-deux-02-cadres-charges-de-partenariats-internationaux-lome",
+      "reason": "Manually verified under user-authorized cleanup: the exact BOAD application URL redirects to the official career.index.notify_job_ad_close notice stating the offer is no longer online, confirmed by two independent GET requests. The advertised 31 October 2026 17:30 UTC cutoff has also passed.",
+      "evidenceHashes": [
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d",
+        "80f85b04965d1ee0dfd7f090ee6e2025433e0712f267df40cf8cf416b4299e9d"
+      ]
     }
   ]
 }
