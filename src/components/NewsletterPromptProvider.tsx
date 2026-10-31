@@ -33,7 +33,7 @@ import {
 
 const BEEHIIV_FORM_ID = "b98884b7-cae6-4cf4-ba4d-b6ede81fec89";
 const BEEHIIV_ORIGIN = "https://subscribe-forms.beehiiv.com";
-const BEEHIIV_SCRIPT_SRC = `${BEEHIIV_ORIGIN}/v3/loader.js`;
+const BEEHIIV_FORM_URL = `${BEEHIIV_ORIGIN}/v3/forms/${BEEHIIV_FORM_ID}`;
 const EMBED_LOAD_TIMEOUT_MS = 12_000;
 const MOBILE_MEDIA_QUERY = "(max-width: 639px)";
 const RECENT_INTERACTION_GRACE_MS = 3_500;
@@ -127,9 +127,6 @@ function isNewsletterPromptContext(
   );
 }
 
-function isMobileViewport(): boolean {
-  return window.matchMedia(MOBILE_MEDIA_QUERY).matches;
-}
 
 export default function NewsletterPromptProvider() {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -384,99 +381,37 @@ export default function NewsletterPromptProvider() {
     };
   }, [isOpen, openNewsletter]);
 
-  // Load the official Beehiiv embed only when the form is needed. On phones the
-  // iframe stays intact, but its scroll viewport is positioned on the email row
-  // so the hosted form remains functional without filling the whole screen.
+  // ACD owns popup timing. Load the real form directly so the separate Beehiiv
+  // loader cannot suppress it based on its own subscriber cookies or triggers.
   useEffect(() => {
-    if (!shouldPrepare) return;
-
+    if (!shouldPrepare || !hostRef.current) return;
     const host = hostRef.current;
-    if (!host) return;
-
     setStatus("loading");
-
-    let embeddedIframe: HTMLIFrameElement | null = null;
-    let positionTimer: number | undefined;
-    const loadTimer = window.setTimeout(() => setStatus("error"), EMBED_LOAD_TIMEOUT_MS);
-
-    const positionForm = () => {
-      if (positionTimer !== undefined) {
-        window.clearTimeout(positionTimer);
-      }
-
-      positionTimer = window.setTimeout(() => {
-        if (!isMobileViewport()) {
-          host.scrollTop = 0;
-          return;
-        }
-
-        host.scrollTop = Math.max(host.scrollHeight - host.clientHeight, 0);
-      }, 80);
-    };
-
-    const handleIframeLoad = () => {
-      window.clearTimeout(loadTimer);
-      setStatus("ready");
-      positionForm();
-    };
-
-    const prepareIframe = () => {
-      const iframe = host.querySelector<HTMLIFrameElement>("iframe");
-      if (!iframe) return;
-
-      iframe.title = "Africa Career Desk newsletter signup form";
-      iframe.setAttribute(
-        "aria-label",
-        "Africa Career Desk weekly job alerts signup form with one email field and a Get Weekly Job Alerts button."
-      );
-      iframe.setAttribute("aria-describedby", descriptionId);
-      iframe.style.width = "100%";
-      iframe.style.maxWidth = "100%";
-      iframe.style.border = "0";
-      iframe.style.display = "block";
-
-      if (embeddedIframe !== iframe) {
-        embeddedIframe?.removeEventListener("load", handleIframeLoad);
-        embeddedIframe = iframe;
-        iframe.addEventListener("load", handleIframeLoad, { once: true });
-      }
-
-      // The loader may finish before our observer attaches the load listener.
-      // Its sizing acknowledgement is also evidence that the form is ready.
-      if (iframe.dataset.bhvSized === "true") handleIframeLoad();
-
-      positionForm();
-    };
-
+    const iframe = document.createElement("iframe");
+    iframe.title = "Africa Career Desk newsletter signup form";
+    iframe.style.cssText = "display:block;width:100%;height:200px;border:0;";
+    // Keep the frame visible, including slow loads and HUMAN verification pages.
+    const timeout = window.setTimeout(() => setStatus("error"), EMBED_LOAD_TIMEOUT_MS);
+    const ready = () => { window.clearTimeout(timeout); setStatus("ready"); };
+    const send = (type: string) => iframe.contentWindow?.postMessage({ type, payload: { handlesRedirect: false } }, BEEHIIV_ORIGIN);
+    const onLoad = () => { ready(); send("beehiiv:parent-loaded"); };
+    const onError = () => { window.clearTimeout(timeout); setStatus("error"); };
+    const resize = () => send("beehiiv:resize");
     const handleMessage = (event: MessageEvent) => {
-      if (
-        event.origin !== BEEHIIV_ORIGIN ||
-        event.source !== host.querySelector("iframe")?.contentWindow ||
-        !event.data ||
-        typeof event.data !== "object" ||
-        !("type" in event.data)
-      ) {
-        return;
+      if (event.origin !== BEEHIIV_ORIGIN || event.source !== iframe.contentWindow || !event.data || typeof event.data !== "object") return;
+      const { type, payload } = event.data;
+      if (type === "beehiiv:child-loaded") { ready(); send("beehiiv:parent-loaded"); }
+      if (type === "beehiiv:styles" || type === "beehiiv:challenge") {
+        ready();
+        const height = Number.parseFloat(String(payload?.height ?? ""));
+        if (Number.isFinite(height) && height > 0) iframe.style.height = Math.min(2000, Math.max(type === "beehiiv:challenge" ? 400 : 120, height)) + "px";
       }
-
-      if (
-        event.data.type === "beehiiv:child-loaded" ||
-        event.data.type === "beehiiv:styles"
-      ) {
-        prepareIframe();
-        handleIframeLoad();
-      }
-
-      if (
-        event.data.type === "beehiiv:submitted" ||
-        event.data.type === "beehiiv:success-toast"
-      ) {
+      if (type === "beehiiv:challenge-resolved") resize();
+      if (type === "beehiiv:submitted" || type === "beehiiv:success-toast") {
         if (successHandledRef.current) return;
-
         successHandledRef.current = true;
-        const localStorage = getLocalStorage();
-        writeStorage(localStorage, NEWSLETTER_SUBSCRIBED_KEY, "true");
-        removeStorage(localStorage, NEWSLETTER_PROMPT_DISMISSED_AT_KEY);
+        writeStorage(getLocalStorage(), NEWSLETTER_SUBSCRIBED_KEY, "true");
+        removeStorage(getLocalStorage(), NEWSLETTER_PROMPT_DISMISSED_AT_KEY);
         trackNewsletterSignupSubmitted(openContextRef.current);
         focusReturnRef.current = null;
         setIsOpen(false);
@@ -484,39 +419,21 @@ export default function NewsletterPromptProvider() {
         setShowSuccessToast(true);
       }
     };
-
-    const observer = new MutationObserver(prepareIframe);
-    const script = document.createElement("script");
-    const handleScriptError = () => {
-      window.clearTimeout(loadTimer);
-      setStatus("error");
-    };
-
-    script.async = true;
-    script.src = BEEHIIV_SCRIPT_SRC;
-    script.dataset.beehiivForm = BEEHIIV_FORM_ID;
-    script.addEventListener("error", handleScriptError, { once: true });
-    observer.observe(host, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["data-bhv-sized"],
-    });
+    iframe.addEventListener("load", onLoad);
+    iframe.addEventListener("error", onError);
     window.addEventListener("message", handleMessage);
-    window.addEventListener("resize", positionForm);
-    host.appendChild(script);
-
+    window.addEventListener("resize", resize);
+    iframe.src = `${BEEHIIV_FORM_URL}?layout=slim`;
+    host.appendChild(iframe);
     return () => {
-      window.clearTimeout(loadTimer);
-      if (positionTimer !== undefined) window.clearTimeout(positionTimer);
-      observer.disconnect();
+      window.clearTimeout(timeout);
+      iframe.removeEventListener("load", onLoad);
+      iframe.removeEventListener("error", onError);
       window.removeEventListener("message", handleMessage);
-      window.removeEventListener("resize", positionForm);
-      script.removeEventListener("error", handleScriptError);
-      embeddedIframe?.removeEventListener("load", handleIframeLoad);
-      host.replaceChildren();
+      window.removeEventListener("resize", resize);
+      iframe.remove();
     };
-  }, [descriptionId, loadKey, shouldPrepare]);
+  }, [loadKey, shouldPrepare]);
 
   // Accessible modal behavior: scroll lock, Escape, focus trap, and focus
   // restoration for manually opened dialogs.
@@ -596,91 +513,26 @@ export default function NewsletterPromptProvider() {
               aria-hidden="true"
               className="mx-auto mb-1.5 h-1 w-10 rounded-full bg-acd-border sm:hidden"
             />
-            <h2 id={titleId} className="sr-only">
-              Get weekly Africa investment job alerts
+            <h2 id={titleId} className="mx-auto mb-3 mt-8 max-w-[520px] px-3 text-center font-serif text-[26px] leading-tight text-acd-navy sm:text-[30px]">
+              Africa-focused career opportunities, straight to your inbox
             </h2>
 
 
-            <p id={descriptionId} className="sr-only">
-              Enter your email address to receive one curated Africa investment
-              jobs email each week.
+            <p id={descriptionId} className="mx-auto mb-5 max-w-[480px] px-3 text-center text-[15px] text-acd-muted">
+              Get curated roles, deadline alerts and practical career intelligence.
             </p>
 
-            <div className="px-7 pb-1 pt-7 text-center sm:hidden" aria-hidden="true">
-              <p className="m-0 text-[11px] font-semibold uppercase tracking-[2px] text-acd-green">
-                Free weekly job alerts
-              </p>
-              <p className="m-0 mt-2 font-serif text-[24px] font-medium leading-[1.08] tracking-[-0.3px] text-acd-navy">
-                Get the best Africa investment jobs every week
-              </p>
-              <p className="m-0 mt-2 text-[14px] leading-snug text-acd-muted">
-                One carefully selected email. No noise.
-              </p>
-            </div>
-
-            <div className="relative mt-2 h-[170px] sm:mt-0 sm:h-auto sm:min-h-[375px]">
-              {status !== "error" && (
-                <div
-                  aria-hidden="true"
-                  className={`absolute inset-0 z-10 flex items-center justify-center px-4 text-center transition-opacity duration-150 ${
-                    status === "loading"
-                      ? "opacity-100"
-                      : "pointer-events-none opacity-0"
-                  }`}
-                >
-                  <p className="m-0 text-[13px] text-acd-muted sm:hidden">
-                    Loading secure signup…
-                  </p>
-                  <div className="hidden flex-col items-center sm:flex">
-                    <p className="m-0 text-[12px] font-semibold uppercase tracking-[2.2px] text-acd-green">
-                      Free weekly job alerts
-                    </p>
-                    <h3 className="m-0 mt-3 max-w-[540px] font-serif text-[27px] font-medium leading-[1.15] tracking-[-0.35px] text-acd-navy md:text-[32px]">
-                      Don&apos;t miss the next great Africa investment opportunity
-                    </h3>
-                    <p className="m-0 mt-4 max-w-[520px] text-[17px] leading-snug text-acd-muted md:text-[18px]">
-                      Get carefully selected finance, investment and development
-                      roles in one useful weekly email.
-                    </p>
-                  </div>
+            {status === "loading" && <p role="status" className="m-0 py-2 text-center text-[13px] text-acd-muted">Loading secure signup…</p>}
+            {status === "error" && (
+              <div role="status" className="mb-3 rounded-lg bg-acd-green-pale p-4 text-center text-[14px] text-acd-muted">
+                <p className="m-0">Having trouble loading the form? Open the secure signup page or retry here.</p>
+                <div className="mt-3 flex flex-wrap justify-center gap-4">
+                  <a className="font-semibold underline" href={BEEHIIV_FORM_URL} target="_blank" rel="noopener noreferrer">Open signup form directly</a>
+                  <button type="button" className="underline" onClick={() => { setStatus("loading"); setLoadKey(current => current + 1); }}>Retry signup</button>
                 </div>
-              )}
-
-              {status === "loading" && (
-                <span role="status" className="sr-only">
-                  Loading newsletter signup...
-                </span>
-              )}
-
-              {status === "error" && (
-                <div
-                  role="alert"
-                  className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 px-8 text-center text-[14px] text-acd-muted"
-                >
-                  <p>The signup form is taking longer than expected. Please try again.</p>
-                  <button
-                    type="button"
-                    onClick={() => { setStatus("loading"); setLoadKey((current) => current + 1); }}
-                    className="min-h-11 rounded-[10px] bg-acd-green px-5 py-2 font-medium text-white"
-                  >
-                    Retry signup
-                  </button>
-                  <a className="underline" href={`${BEEHIIV_ORIGIN}/v3/forms/${BEEHIIV_FORM_ID}`} target="_blank" rel="noopener noreferrer">
-                    Open signup form directly
-                  </a>
-                </div>
-              )}
-
-              <div
-                ref={hostRef}
-                aria-busy={status === "loading"}
-                className={`newsletter-mobile-form-viewport h-[170px] overflow-y-auto overscroll-contain transition-opacity duration-150 sm:h-auto sm:min-h-[375px] sm:overflow-visible ${
-                  status === "ready"
-                    ? "delay-150 opacity-100"
-                    : "pointer-events-none opacity-0"
-                }`}
-              />
-            </div>
+              </div>
+            )}
+            <div ref={hostRef} className="w-full" />
 
             <div className="mt-0.5 flex justify-center sm:mt-1">
               <button
