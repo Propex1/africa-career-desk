@@ -394,7 +394,7 @@ export default function NewsletterPromptProvider() {
     const timeout = window.setTimeout(() => setStatus("error"), EMBED_LOAD_TIMEOUT_MS);
     const ready = () => { window.clearTimeout(timeout); setStatus("ready"); };
     const send = (type: string) => iframe.contentWindow?.postMessage({ type, payload: { handlesRedirect: false } }, BEEHIIV_ORIGIN);
-    const onLoad = () => { ready(); send("beehiiv:parent-loaded"); };
+    const onLoad = () => send("beehiiv:parent-loaded");
     const onError = () => { window.clearTimeout(timeout); setStatus("error"); };
     const resize = () => send("beehiiv:resize");
     const handleMessage = (event: MessageEvent) => {
