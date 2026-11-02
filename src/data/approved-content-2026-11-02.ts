@@ -61,6 +61,7 @@ export const APPROVED_CONTENT_2026_11_02:Opportunity[] = [
     "employerId": "employer-205-norrenberger",
     "title": "Corporate Finance and Portfolio Manager",
     "company": "Norrenberger",
+    "logoUrl": "/logos/norrenberger.png",
     "companyInitials": "N",
     "boardSection": "Jobs",
     "locationDisplay": "Abuja, Nigeria",

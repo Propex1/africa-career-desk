@@ -172,3 +172,8 @@ For a future asset, add reviewed bounds only after checking its full mark at mob
 - Asset: public/logos/alterra-capital-partners.jpg (100 × 100).
 - Source: employer logo on the [Alterra LinkedIn vacancy](https://www.linkedin.com/jobs/view/associate-senior-associate-capital-formation-investor-relations-at-alterra-capital-partners-4481044289/), verified 26 October 2026 local time.
 - Original image retained; display bounds remove blank margins for legibility. Used only to identify the employer.
+
+
+## Norrenberger — 2 November 2026
+
+`public/logos/norrenberger.png` is the original, unmodified logo supplied by the owner. Display bounds remove blank canvas optically while retaining the complete orange symbol and wordmark, proportions and colours. It is used on the Norrenberger job card and detail page.
