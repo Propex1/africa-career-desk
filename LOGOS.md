@@ -177,3 +177,8 @@ For a future asset, add reviewed bounds only after checking its full mark at mob
 ## Norrenberger — 2 November 2026
 
 `public/logos/norrenberger.png` is the original, unmodified logo supplied by the owner. Display bounds remove blank canvas optically while retaining the complete orange symbol and wordmark, proportions and colours. It is used on the Norrenberger job card and detail page.
+
+
+## Melville Douglas — 5 November 2026
+
+`public/logos/melville-douglas.png` is used by the employer’s job cards and detail pages. The matching employer entry and accepted-preview source retain `/logos/melville-douglas.png`. The 735 × 300 PNG is a high-resolution rendering of the unaltered logo from the first-page header of an official Melville Douglas document: https://www.melvilledouglas.co.za/sites/default/files/0nshhfcq_melville_douglas_stanlib_sa_equity_fund_b3.pdf . The original header artwork and wordmark are preserved; optical bounds use the existing proportional logo display. The current homepage PNG was inspected but was less legible.
