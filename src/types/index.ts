@@ -1,3 +1,5 @@
+import type { CareerClassification } from "../lib/career-classification.ts";
+
 export type BoardSection = "Jobs" | "Programmes" | "Open Applications";
 
 /** Controlled editorial discovery metadata; never inferred from role content. */
@@ -57,6 +59,8 @@ export type Opportunity = {
   logoUrl?: string;
   boardSection: BoardSection;
   roleType: RoleType;
+  /** Additive ACD 2.0 metadata; legacy publishing records remain valid. */
+  careerClassification?: CareerClassification;
   /** Explicitly approved secondary relevance; does not replace the primary roleType. */
   discoveryThemes?: DiscoveryTheme[];
   experienceBucket?: string;

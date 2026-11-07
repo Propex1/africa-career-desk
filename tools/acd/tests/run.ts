@@ -1,4 +1,5 @@
 import "./unit.test.ts";
+import "./career-taxonomy.test.ts";
 import "./seo.test.ts";
 import "./job-categories.test.ts";
 import "./job-countries.test.ts";
