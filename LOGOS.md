@@ -182,3 +182,8 @@ For a future asset, add reviewed bounds only after checking its full mark at mob
 ## Melville Douglas — 5 November 2026
 
 `public/logos/melville-douglas.png` is used by the employer’s job cards and detail pages. The matching employer entry and accepted-preview source retain `/logos/melville-douglas.png`. The 735 × 300 PNG is a high-resolution rendering of the unaltered logo from the first-page header of an official Melville Douglas document: https://www.melvilledouglas.co.za/sites/default/files/0nshhfcq_melville_douglas_stanlib_sa_equity_fund_b3.pdf . The original header artwork and wordmark are preserved; optical bounds use the existing proportional logo display. The current homepage PNG was inspected but was less legible.
+
+
+## Acumen — 7 November 2026
+
+`public/logos/acumen.svg` contains the official full Acumen header logo from https://acumen.org/ . The original vector artwork and colours are preserved. Only page-specific presentation attributes and XML attribute casing were normalised for standalone rendering. It is used by the approved Senior Associate, Funding to Build job.
