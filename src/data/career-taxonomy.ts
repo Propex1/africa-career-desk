@@ -50,6 +50,36 @@ export type CareerSelection = {
 
 export const DEFAULT_EXPANDED_CAREER_AREA: CareerAreaId = "private-markets";
 
+export const CAREER_FILTER_OPTIONS: readonly string[] = [
+  ...CAREER_AREAS.flatMap(area => [area.id, ...area.subcategories.map(item => item.id)]),
+  "unclassified",
+];
+
+export function careerFilterLabel(id: string): string {
+  if (id === "unclassified") return "Awaiting classification";
+  for (const area of CAREER_AREAS) {
+    if (area.id === id) return area.label;
+    const subcategory = area.subcategories.find(item => item.id === id);
+    if (subcategory) return subcategory.label;
+  }
+  return id;
+}
+
+/** Parent selection includes every child; deselecting one child narrows that parent. */
+export function toggleCareerSelection(selected: readonly string[], id: string): string[] {
+  const area = CAREER_AREAS.find(item => item.id === id);
+  if (area) {
+    const children: readonly string[] = area.subcategories.map(item => item.id);
+    const allSelected = selected.includes(id) || children.every(child => selected.includes(child));
+    return [...selected.filter(item => item !== id && !children.includes(item)), ...(allSelected ? [] : [id])];
+  }
+  const parent = CAREER_AREAS.find(item => item.subcategories.some(child => child.id === id));
+  if (parent && selected.includes(parent.id)) {
+    return [...selected.filter(item => item !== parent.id), ...parent.subcategories.filter(item => item.id !== id).map(item => item.id)];
+  }
+  return selected.includes(id) ? selected.filter(item => item !== id) : [...selected, id];
+}
+
 export function isCareerSelection(value: unknown): value is CareerSelection {
   if (!value || typeof value !== "object") return false;
   const candidate = value as Record<string, unknown>;

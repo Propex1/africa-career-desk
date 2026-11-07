@@ -13,6 +13,15 @@ export type CareerClassification = CareerSelection & {
   | { status: "approved"; approvedBy: string; approvedAt: string }
 );
 
+export function getDiscoverableCareerClassification(
+  classification: CareerClassification | undefined,
+  allowProposals = false,
+): CareerClassification | undefined {
+  return getApprovedCareerClassification(classification) ??
+    (allowProposals && classification?.status === "proposed" && isCareerSelection(classification)
+      ? classification : undefined);
+}
+
 /** Validate imported records too: TypeScript cannot validate external data at runtime. */
 export function getApprovedCareerClassification(
   classification: unknown,

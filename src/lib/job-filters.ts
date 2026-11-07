@@ -1,5 +1,7 @@
 import type { DiscoveryTheme, Opportunity } from "../types/index.ts";
 import { ENABLED_JOB_CATEGORY_PAGES } from "../data/job-categories.ts";
+import { careerFilterLabel } from "../data/career-taxonomy.ts";
+import { getDiscoverableCareerClassification } from "./career-classification.ts";
 
 export interface JobBoardFilters {
   region: string[];
@@ -7,6 +9,7 @@ export interface JobBoardFilters {
   roleType: string[];
   experience: string[];
   language: string[];
+  career?: string[];
 }
 
 export type JobBoardFilterKey = keyof JobBoardFilters;
@@ -55,6 +58,7 @@ export function filterJobsForBoard(
   jobs: readonly Opportunity[],
   filters: JobBoardFilters,
   search = "",
+  allowCareerProposals = false,
 ): Opportunity[] {
   // Only explicitly configured categories can expand beyond primary roleType.
   const selections = filters.roleType.map((roleType) =>
@@ -63,12 +67,17 @@ export function filterJobsForBoard(
   const q = search.trim().toLowerCase();
 
   return filterJobsForDiscovery(jobs, selections).filter((job) => {
+    const classification = getDiscoverableCareerClassification(job.careerClassification, allowCareerProposals);
+    if (filters.career?.length && !filters.career.some(id =>
+      id === "unclassified" ? !classification :
+        classification && (id === classification.areaId || id === classification.subcategoryId))) return false;
     if (filters.region.length && !filters.region.includes(job.region ?? "")) return false;
     if (filters.country.length && !filters.country.includes(job.country ?? "")) return false;
     if (filters.experience.length && !filters.experience.includes(job.experienceBucket ?? "")) return false;
     if (filters.language.length && !(job.languageTags ?? []).some((tag) => filters.language.includes(tag))) return false;
     if (q) {
-      const hay = [job.title, job.company, job.city ?? "", job.country ?? "", job.region ?? "", job.roleType]
+      const hay = [job.title, job.company, job.city ?? "", job.country ?? "", job.region ?? "", job.roleType,
+        ...(classification ? [careerFilterLabel(classification.areaId), careerFilterLabel(classification.subcategoryId), ...classification.interestTags] : [])]
         .join(" ")
         .toLowerCase();
       if (!hay.includes(q)) return false;
@@ -83,8 +92,9 @@ export function getJobFilterCounts(
   search: string,
   filterKey: JobBoardFilterKey,
   options: readonly string[],
+  allowCareerProposals = false,
 ): JobFilterCounts {
-  const baseFilters = { ...filters, [filterKey]: [] } as JobBoardFilters;
+  const baseFilters = { ...filters, [filterKey]: [], ...(filterKey === "career" ? { roleType: [] } : {}) } as JobBoardFilters;
   const counts: Record<string, number> = {};
 
   for (const option of options) {
@@ -92,11 +102,11 @@ export function getJobFilterCounts(
       ...baseFilters,
       [filterKey]: [option],
     } as JobBoardFilters;
-    counts[option] = filterJobsForBoard(jobs, optionFilters, search).length;
+    counts[option] = filterJobsForBoard(jobs, optionFilters, search, allowCareerProposals).length;
   }
 
   return {
-    all: filterJobsForBoard(jobs, baseFilters, search).length,
+    all: filterJobsForBoard(jobs, baseFilters, search, allowCareerProposals).length,
     options: counts,
   };
 }
@@ -105,18 +115,19 @@ export function getJobBoardRecoverySuggestions(
   jobs: readonly Opportunity[],
   filters: JobBoardFilters,
   search: string,
+  allowCareerProposals = false,
 ): JobBoardRecoverySuggestion[] {
   const suggestions: JobBoardRecoverySuggestion[] = [];
 
   if (search.trim()) {
-    const count = filterJobsForBoard(jobs, filters, "").length;
+    const count = filterJobsForBoard(jobs, filters, "", allowCareerProposals).length;
     if (count > 0) suggestions.push({ key: "search", count });
   }
 
   (Object.keys(filters) as JobBoardFilterKey[]).forEach((key) => {
-    if (filters[key].length === 0) return;
+    if (!filters[key]?.length) return;
     const relaxedFilters = { ...filters, [key]: [] } as JobBoardFilters;
-    const count = filterJobsForBoard(jobs, relaxedFilters, search).length;
+    const count = filterJobsForBoard(jobs, relaxedFilters, search, allowCareerProposals).length;
     if (count > 0) suggestions.push({ key, count });
   });
 

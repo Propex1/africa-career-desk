@@ -8,6 +8,8 @@ import {
   useRef,
   useState,
 } from "react";
+import CareerAreaFilter from "./CareerAreaFilter";
+import { CAREER_FILTER_OPTIONS, careerFilterLabel, toggleCareerSelection } from "@/data/career-taxonomy";
 import { addedWithin, visibleOnBoard } from "@/lib/job-freshness";
 import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
@@ -239,13 +241,6 @@ const CountryIcon = (
   </svg>
 );
 
-const RoleIcon = (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16522A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="7" width="18" height="13" rx="2" />
-    <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
-  </svg>
-);
-
 const ExpIcon = (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16522A" strokeWidth="2" strokeLinecap="round">
     <path d="M5 20V11M12 20V4M19 20v-6" />
@@ -263,11 +258,13 @@ const FILTER_LABELS: Record<JobBoardFilterKey, string> = {
   region: "region",
   country: "country",
   roleType: "role type",
+  career: "career area",
   experience: "experience",
   language: "language",
 };
 
 interface JobsBoardProps {
+  careerPreview?: boolean;
   explore: React.ReactNode;
   jobs: Opportunity[];
   regions: string[];
@@ -279,6 +276,7 @@ interface JobsBoardProps {
 }
 
 export default function JobsBoard({
+  careerPreview = false,
   explore,
   jobs,
   regions,
@@ -303,21 +301,24 @@ export default function JobsBoard({
   );
 
   useEffect(() => {
-    const parsed = parseJobBoardState(new URLSearchParams(window.location.search), {
-      regions,
-      countries,
-      roleTypes,
-      experienceBuckets,
-      languages,
+    const frame = window.requestAnimationFrame(() => {
+      const parsed = parseJobBoardState(new URLSearchParams(window.location.search), {
+        regions,
+        countries,
+        roleTypes,
+        experienceBuckets,
+        languages,
+      });
+      setSearch(parsed.search);
+      setFilters(parsed.filters);
+      const params = new URLSearchParams(window.location.search);
+      setAddedDays([7,14].includes(Number(params.get("added"))) ? Number(params.get("added")) : 0);
+      setLimit(Math.min(jobs.length || 25, Math.max(25, Number(params.get("shown")) || 25)));
+      setToday(new Date().toISOString().slice(0,10));
+      setUrlStateReady(true);
     });
-    setSearch(parsed.search);
-    setFilters(parsed.filters);
-    const params = new URLSearchParams(window.location.search);
-    setAddedDays([7,14].includes(Number(params.get("added"))) ? Number(params.get("added")) : 0);
-    setLimit(Math.min(jobs.length || 25, Math.max(25, Number(params.get("shown")) || 25)));
-    setToday(new Date().toISOString().slice(0,10));
-    setUrlStateReady(true);
-  }, [countries, experienceBuckets, languages, regions, roleTypes]);
+    return () => window.cancelAnimationFrame(frame);
+  }, [countries, experienceBuckets, languages, regions, roleTypes, jobs.length]);
 
   useEffect(() => {
     if (!urlStateReady) return;
@@ -336,12 +337,13 @@ export default function JobsBoard({
     (key: JobBoardFilterKey, value: string) => {
       setLimit(25);
       setFilters((previous) => {
-        const selected = previous[key];
+        const selected = previous[key] ?? [];
         return {
           ...previous,
-          [key]: selected.includes(value)
+          [key]: key === "career" ? toggleCareerSelection(selected, value) : selected.includes(value)
             ? selected.filter((item) => item !== value)
             : [...selected, value],
+          ...(key === "career" ? { roleType: [] } : {}),
         };
       });
       trackFilterUsed(key, value, "Jobs");
@@ -365,12 +367,12 @@ export default function JobsBoard({
     setLimit(25);
     setFilters((previous) => ({
       ...previous,
-      [key]: previous[key].filter((item) => item !== value),
+      [key]: (previous[key] ?? []).filter((item) => item !== value),
     }));
   }, []);
 
   const dateJobs = useMemo(() => activeJobs.filter(job => addedWithin(job, addedDays, today)), [activeJobs, addedDays, today]);
-  const filtered = useMemo(() => filterJobsForBoard(dateJobs, filters, search), [dateJobs, filters, search]);
+  const filtered = useMemo(() => filterJobsForBoard(dateJobs, filters, search, careerPreview), [dateJobs, filters, search, careerPreview]);
 
   useEffect(() => {
     if (!urlStateReady || restoredScrollRef.current) return;
@@ -401,59 +403,56 @@ export default function JobsBoard({
 
   const filterCounts = useMemo(
     () => ({
-      region: getJobFilterCounts(dateJobs, filters, search, "region", regions),
+      region: getJobFilterCounts(dateJobs, filters, search, "region", regions, careerPreview),
       country: getJobFilterCounts(
         dateJobs,
         filters,
         search,
         "country",
-        countries
+        countries,
+        careerPreview
       ),
-      roleType: getJobFilterCounts(
-        dateJobs,
-        filters,
-        search,
-        "roleType",
-        roleTypes
-      ),
+      career: getJobFilterCounts(dateJobs, filters, search, "career", CAREER_FILTER_OPTIONS, careerPreview),
       experience: getJobFilterCounts(
         dateJobs,
         filters,
         search,
         "experience",
-        experienceBuckets
+        experienceBuckets,
+        careerPreview
       ),
       language: getJobFilterCounts(
         dateJobs,
         filters,
         search,
         "language",
-        languages
+        languages,
+        careerPreview
       ),
     }),
     [
       dateJobs,
+      careerPreview,
       countries,
       experienceBuckets,
       filters,
       languages,
       regions,
-      roleTypes,
       search,
     ]
   );
 
   const recoverySuggestions = useMemo(
-    () => getJobBoardRecoverySuggestions(dateJobs, filters, search),
-    [dateJobs, filters, search]
+    () => getJobBoardRecoverySuggestions(dateJobs, filters, search, careerPreview),
+    [dateJobs, filters, search, careerPreview]
   );
 
   const query = search.trim().toLowerCase();
   const anyFilter =
-    Object.values(filters).some((values) => values.length > 0) || query.length > 0 || addedDays > 0;
+    Object.values(filters).some((values) => (values?.length ?? 0) > 0) || query.length > 0 || addedDays > 0;
   const chips: { key: JobBoardFilterKey; value: string }[] = [];
   (Object.keys(filters) as JobBoardFilterKey[]).forEach((key) => {
-    filters[key].forEach((value) => chips.push({ key, value }));
+    (filters[key] ?? []).forEach((value) => chips.push({ key, value }));
   });
 
   const applyRecoverySuggestion = (key: JobBoardFilterKey | "search") => {
@@ -512,15 +511,11 @@ export default function JobsBoard({
           onToggle={(value) => toggle("country", value)}
           onClear={() => clearFilter("country")}
         />
-        <FilterDropdown
-          label="Role Type"
-          icon={RoleIcon}
-          options={roleTypes}
-          allLabel="All role types"
-          selected={filters.roleType}
-          counts={filterCounts.roleType}
-          onToggle={(value) => toggle("roleType", value)}
-          onClear={() => clearFilter("roleType")}
+        <CareerAreaFilter
+          selected={filters.career ?? []}
+          counts={filterCounts.career}
+          onToggle={(value) => toggle("career", value)}
+          onClear={() => { clearFilter("career"); clearFilter("roleType"); }}
         />
         <FilterDropdown
           label="Experience"
@@ -545,12 +540,14 @@ export default function JobsBoard({
         <select className="jobs-added" aria-label="Date added" value={addedDays} onChange={e=>{setLimit(25);setAddedDays(Number(e.target.value))}}><option value={0}>Any time</option><option value={7}>Last 7 days</option><option value={14}>Last 14 days</option></select>
       </div>
 
+      {careerPreview && <p className="career-review-note">Draft career classifications for review. Roles awaiting classification remain available under All career areas.</p>}
+
       {chips.length > 0 && (
         <div className="mt-[14px] flex flex-wrap gap-2 items-center">
           {chips.map(({ key, value }) => (
             <ActiveChip
               key={`${key}:${value}`}
-              label={value}
+              label={key === "career" ? careerFilterLabel(value) : value}
               onRemove={() => removeChip(key, value)}
             />
           ))}

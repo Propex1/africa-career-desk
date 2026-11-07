@@ -1,0 +1,978 @@
+{
+  "ACD-0005": {
+    "title": "Investment Associate, Africa50 Infrastructure Acceleration Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Africa50 Infrastructure Acceleration Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0006": {
+    "title": "Investment Associate, Project Development",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Project Development. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0007": {
+    "title": "Investment Associate, Project Development (AGIA)",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Project Development (AGIA). Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0012": {
+    "title": "Senior Investment Analyst, Project Development",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Analyst, Project Development. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0014": {
+    "title": "Senior Investment Associate, Project Development (AGIA)",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Associate, Project Development (AGIA). Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development-agia/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0016": {
+    "title": "Senior Investment Director, Africa50 Infrastructure Acceleration Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Director, Africa50 Infrastructure Acceleration Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0083": {
+    "title": "Private Equity Intern, Africa50 Infrastructure Acceleration Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Private Equity Intern, Africa50 Infrastructure Acceleration Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/private-equity-intern-africa50-infrastructure-acceleration-fund/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0194": {
+    "title": "Investment Analyst, Project Development Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Analyst, Project Development Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0195": {
+    "title": "Senior Investment Analyst, Project Development Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Analyst, Project Development Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-fund/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0196": {
+    "title": "Investment Associate, Project Development Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Project Development Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-2/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0197": {
+    "title": "Senior Investment Associate, Project Development Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Associate, Project Development Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0198": {
+    "title": "Associate Investment Director, Project Development Fund",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Investment Director, Project Development Fund. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/associate-investment-director-project-development-fund/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0293": {
+    "title": "VIE - Analyste Projets & Développement d'Infrastructures SAG - 2027",
+    "company": "Meridiam",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: VIE - Analyste Projets & Développement d'Infrastructures SAG - 2027. Requires editorial confirmation.",
+      "sourceUrl": "https://careers.meridiam.com/o/vie-analyste-projets-developpement-dinfrastructures-sag-2027",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0349": {
+    "title": "Investment Associate, DRE",
+    "company": "Africa50",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, DRE. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-dre/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0309": {
+    "title": "Chargé d'investissement Confirmé H/F",
+    "company": "BMCE Capital Investments",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "private-equity-growth",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Chargé d'investissement Confirmé H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-charge-d-investissement-confirme-h-f_467.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0301": {
+    "title": "Senior Analyst / Associate",
+    "company": "Ezdehar Management",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "private-equity-growth",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Analyst / Associate. Requires editorial confirmation.",
+      "sourceUrl": "https://www.linkedin.com/posts/privateequity-investment-hiring-share-7505596269009158144-dBM8/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0294": {
+    "title": "Senior Investment Associate",
+    "company": "F6 Ventures",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Associate. Requires editorial confirmation.",
+      "sourceUrl": "https://f6vc.bamboohr.com/careers/40?source=aWQ9NA%3D%3D",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0317": {
+    "title": "Investment Analyst Intern — January 2027",
+    "company": "Partech Africa",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Analyst Intern — January 2027. Requires editorial confirmation.",
+      "sourceUrl": "https://apply.workable.com/partechpartners/j/CA18A7180D/",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0352": {
+    "title": "Investment Analyst",
+    "company": "Falak Startups",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Analyst. Requires editorial confirmation.",
+      "sourceUrl": "https://www.falakstartups.com/careers/internal/47",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0353": {
+    "title": "Investment Intern",
+    "company": "Falak Startups",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Intern. Requires editorial confirmation.",
+      "sourceUrl": "https://www.falakstartups.com/careers/internal/20",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-4a6cd1c0a628": {
+    "title": "Associate Investment Officer-Manufacturing Industry",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Investment Officer-Manufacturing Industry. Requires editorial confirmation.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39265?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-acb3103bef82": {
+    "title": "Principal Investment Officer, Manufacturing & Services, East and Southern Africa (GH1)",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Principal Investment Officer, Manufacturing & Services, East and Southern Africa (GH1). Requires editorial confirmation.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39268?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-bb0a2db207f1": {
+    "title": "Investment Officer, Infrastructure",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Officer, Infrastructure. Requires editorial confirmation.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38911?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-5b617a83feb5": {
+    "title": "Investment Officer/Senior Investment Officer- Infrastructure",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Officer/Senior Investment Officer- Infrastructure. Requires editorial confirmation.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38931?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-51760136ae78": {
+    "title": "VIA – DOUALA – CHARGE-E D’INVESTISSEMENT CORPORATE PROPARCO - H/F",
+    "company": "Proparco",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: VIA – DOUALA – CHARGE-E D’INVESTISSEMENT CORPORATE PROPARCO - H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10760?c=afd&lang=fr-FR",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-81fd6ba3b028": {
+    "title": "Senior Investment Officer – Finance du développement",
+    "company": "BIO Invest",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Officer – Finance du développement. Requires editorial confirmation.",
+      "sourceUrl": "https://greysearchafrica.com/investment-officer-finance-developpement",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-f526d924e726": {
+    "title": "Associate Director, Senior Banker",
+    "company": "European Bank for Reconstruction and Development (EBRD)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Director, Senior Banker. Requires editorial confirmation.",
+      "sourceUrl": "https://jobs.ebrd.com/job/Lagos-Associate-Director%2C-Senior-Banker/1453316433",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-ca4a687a7760": {
+    "title": "Senior Investments Officer",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investments Officer. Requires editorial confirmation.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261030-1",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-afa78f47f959": {
+    "title": "Investment Professional - Anglophone West Africa - DFI",
+    "company": "CrossBoundary Advisory",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "development-blended-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Professional - Anglophone West Africa - DFI. Requires editorial confirmation.",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/HFvHU3UfRw/Investment-Professional-Anglophone-West-Africa-DFI",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-5cf56eb9c610": {
+    "title": "Associate / Senior Associate Consultant - Natural Capital",
+    "company": "CrossBoundary Advisory",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate / Senior Associate Consultant - Natural Capital. Requires editorial confirmation.",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/1bMcJmUHPG/Associate-Senior-Associate-Consultant-Natural-Capital",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-dff0a788f0c3": {
+    "title": "Senior Associate, Funding to Build",
+    "company": "Acumen",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Associate, Funding to Build. Requires editorial confirmation.",
+      "sourceUrl": "https://job-boards.greenhouse.io/acumen/jobs/8931880002",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-cf443ede7841": {
+    "title": "Impact Assessment Officer",
+    "company": "ATIDI",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Impact Assessment Officer. Requires editorial confirmation.",
+      "sourceUrl": "https://www.atidi.africa/wp-content/uploads/2026/10/Job-Description-Impact-Assessment-Officer-20261013.pdf",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-c07abbd13795": {
+    "title": "ESG Coordinator",
+    "company": "Africa50",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: ESG Coordinator. Requires editorial confirmation.",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0229": {
+    "title": "ESG & Impact Officer",
+    "company": "Sawari Ventures",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: ESG & Impact Officer. Requires editorial confirmation.",
+      "sourceUrl": "https://eg.linkedin.com/company/sawari-ventures",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0292": {
+    "title": "Chargé.e de Programme Accélération",
+    "company": "I&P Accélération (Investisseurs & Partenaires)",
+    "roleType": "Climate & Impact Investing",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "impact-climate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Chargé.e de Programme Accélération. Requires editorial confirmation.",
+      "sourceUrl": "https://www.ietp.com/fr/content/chargee-de-programme-acceleration-abidjan",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-4077ee21b87e": {
+    "title": "Transactor: Corporate Finance",
+    "company": "RMB",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Transactor: Corporate Finance. Requires editorial confirmation.",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Transactor--Corporate-Finance_R54737",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-6ef4c8a2af35": {
+    "title": "Transactor: Corporate Finance",
+    "company": "RMB",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Transactor: Corporate Finance. Requires editorial confirmation.",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Transactor--Corporate-Finance_R54736",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0310": {
+    "title": "Chargé d'Affaires M&A H/F",
+    "company": "BMCE Capital Conseil",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Chargé d'Affaires M&A H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-charge-d-affaires-m-a-h-f_525.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0035": {
+    "title": "Senior Transaction Leader",
+    "company": "Open Capital Advisors",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Transaction Leader. Requires editorial confirmation.",
+      "sourceUrl": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0322": {
+    "title": "Analyst — Senegal",
+    "company": "CrossBoundary Advisory",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Analyst — Senegal. Requires editorial confirmation.",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/H5AR9vjMfA/analyst-senegal",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0323": {
+    "title": "Associate — Gambia",
+    "company": "CrossBoundary Advisory",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate — Gambia. Requires editorial confirmation.",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/XwOeUO2FLt/associate-gambia",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0324": {
+    "title": "Associate Principal — Senegal",
+    "company": "CrossBoundary Advisory",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Principal — Senegal. Requires editorial confirmation.",
+      "sourceUrl": "https://crossboundary.applytojob.com/apply/Ha2mIKdhAN/Associate-Principal-Senegal",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-ed10d0ddbf80": {
+    "title": "Portfolio Manager Diversified",
+    "company": "Melville Douglas",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Manager Diversified. Requires editorial confirmation.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159387018",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-d29729e873ff": {
+    "title": "Portfolio Implementation Analyst",
+    "company": "Ninety One",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Implementation Analyst. Requires editorial confirmation.",
+      "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4436&jobTitle=Portfolio%20Implementation%20Analyst",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0261": {
+    "title": "Gérant Multi-Assets H/F",
+    "company": "BMCE Capital Gestion",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Gérant Multi-Assets H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/imprimer-fiche-emploi-gerant-multi-assets-h-f_582.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0267": {
+    "title": "Portfolio Specialist",
+    "company": "Ninety One",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Specialist. Requires editorial confirmation.",
+      "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4389&jobTitle=Portfolio%20Specialist",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0311": {
+    "title": "Gérant Analyste H/F",
+    "company": "BOA Capital Asset Management",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Gérant Analyste H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-gerant-analyste-h-f_585.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0346": {
+    "title": "Senior Equity Research",
+    "company": "Prime Securities Brokerage / Prime Holding",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "investment-research",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Equity Research. Requires editorial confirmation.",
+      "sourceUrl": "https://www.linkedin.com/posts/prime-holding_we-are-hiring-senior-equity-research-activity-7496105820561063936-EgUU",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-542bfcbb7027": {
+    "title": "Senior Fixed Income Dealer (D3)",
+    "company": "Nedbank",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "sales-trading",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Fixed Income Dealer (D3). Requires editorial confirmation.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Windhoek-Senior-Fixed-Income-Dealer-%28D3%29/1455052333",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-19549e6b35b6": {
+    "title": "Senior: Forex Dealer (D3)",
+    "company": "Nedbank",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "sales-trading",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior: Forex Dealer (D3). Requires editorial confirmation.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Windhoek-Senior-Forex-Dealer-%28D3%29/1452647333",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-afd673f177a7": {
+    "title": "Project Finance Associate H/F",
+    "company": "CFAO",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Project Finance Associate H/F. Requires editorial confirmation.",
+      "sourceUrl": "https://cfaocareers.talent-soft.com/job/job-project-finance-associate-h-f_4215.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0264": {
+    "title": "Project Manager (Financement de projets)",
+    "company": "Attijariwafa bank",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Project Manager (Financement de projets). Requires editorial confirmation.",
+      "sourceUrl": "https://ma.linkedin.com/jobs/view/project-manager-financement-de-projets-at-attijariwafa-bank-4426300108",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0082": {
+    "title": "Infrastructure Advisory – Senior Associate",
+    "company": "KPMG",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Infrastructure Advisory – Senior Associate. Requires editorial confirmation.",
+      "sourceUrl": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-4c8bec55ebdf": {
+    "title": "Associate Principal: Export Credit & Insurance Solutions",
+    "company": "Nedbank",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "trade-syndicated-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Principal: Export Credit & Insurance Solutions. Requires editorial confirmation.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Associate-Principal-Export-Credit-&-Insurance-Solutions/1453661233",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-ce299976d97d": {
+    "title": "Head, Product, Structured Trade & Commodity Finance",
+    "company": "Standard Bank Corporate & Investment Banking",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "trade-syndicated-finance",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Head, Product, Structured Trade & Commodity Finance. Requires editorial confirmation.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000154178184",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "ACD-0257": {
+    "title": "Corporate Banker",
+    "company": "CFG Bank",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Corporate Banker. Requires editorial confirmation.",
+      "sourceUrl": "https://carrieres.cfgbank.com/jobs/8571857-corporate-banker",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-ca156001edf2": {
+    "title": "Manager, Credit Origination",
+    "company": "Standard Bank Namibia",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Manager, Credit Origination. Requires editorial confirmation.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000158263340",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-aa4d33a969b6": {
+    "title": "Strategy Enablement Head",
+    "company": "Standard Bank of South Africa",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-investments-strategy",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Strategy Enablement Head. Requires editorial confirmation.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  },
+  "DRAFT-64faaeb3a173": {
+    "title": "Director Consulting",
+    "company": "Visa",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-investments-strategy",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Director Consulting. Requires editorial confirmation.",
+      "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/ZA---Johannesburg-South-Africa/Director-Consulting_REF078480W",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    }
+  }
+}

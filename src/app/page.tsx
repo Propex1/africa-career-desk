@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import JobsBoard from "@/components/JobsBoard";
 import ExploreOpportunities from "@/components/ExploreOpportunities";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
+import { withCareerPreviewProposals } from "@/lib/career-preview";
 import { canonicalPath } from "@/lib/seo";
 import {
   JOBS,
@@ -33,13 +34,15 @@ export const metadata: Metadata = {
 };
 
 export default function JobsPage() {
+  const careerPreview = process.env.VERCEL_ENV === "preview" && process.env.ACD_CAREER_PREVIEW === "true";
   return (
     <>
       <SectionViewTracker section="Jobs" />
       <JobsBoard
         explore={<ExploreOpportunities />}
         initialToday={new Date().toISOString().slice(0,10)}
-        jobs={JOBS}
+        jobs={careerPreview ? withCareerPreviewProposals(JOBS) : JOBS}
+        careerPreview={careerPreview}
         regions={JOB_REGIONS}
         countries={JOB_COUNTRIES}
         roleTypes={JOB_ROLE_TYPES}

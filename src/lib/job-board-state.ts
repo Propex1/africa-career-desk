@@ -1,4 +1,5 @@
 import type { JobBoardFilters } from "./job-filters";
+import { CAREER_FILTER_OPTIONS } from "../data/career-taxonomy.ts";
 
 export type JobBoardSort = "curated" | "recent" | "deadline";
 
@@ -58,6 +59,7 @@ export function parseJobBoardState(
         params.getAll("language"),
         allowed.languages
       ),
+      ...(params.has("career") ? { career: uniqueAllowedValues(params.getAll("career"), CAREER_FILTER_OPTIONS) } : {}),
     },
     sort: requestedSort === "deadline" ? "deadline" : requestedSort === "recent" ? "recent" : "curated",
   };
@@ -71,6 +73,7 @@ export function serializeJobBoardState(state: JobBoardState): URLSearchParams {
   state.filters.region.forEach((value) => params.append("region", value));
   state.filters.country.forEach((value) => params.append("country", value));
   state.filters.roleType.forEach((value) => params.append("role", value));
+  state.filters.career?.forEach((value) => params.append("career", value));
   state.filters.experience.forEach((value) =>
     params.append("experience", value)
   );
