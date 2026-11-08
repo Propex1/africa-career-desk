@@ -1,0 +1,27 @@
+name: ACD 2.0 validation
+on:
+  push:
+    branches: [acd-v2]
+  pull_request:
+    branches: [acd-v2]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run acd:v2:preflight
+      - run: npm run acd:test
+      - run: npm run acd:content:check
+      - run: npm run build
+        env:
+          VERCEL_ENV: preview
+          ACD_CAREER_PREVIEW: 'true'

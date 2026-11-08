@@ -579,7 +579,7 @@ export default function JobsBoard({
         {filtered.length > 0 ? (
           filtered.slice(0,limit).map((job, index) => (
             <Fragment key={job.id}>
-              <CompactJobCard job={job} today={today} />
+              <CompactJobCard job={job} today={today} careerPreview={careerPreview} />
               {index === 7 && <BeehiivNewsletterSection />}
             </Fragment>
           ))

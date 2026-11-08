@@ -77,7 +77,7 @@ export function filterJobsForBoard(
     if (filters.language.length && !(job.languageTags ?? []).some((tag) => filters.language.includes(tag))) return false;
     if (q) {
       const hay = [job.title, job.company, job.city ?? "", job.country ?? "", job.region ?? "", job.roleType,
-        ...(classification ? [careerFilterLabel(classification.areaId), careerFilterLabel(classification.subcategoryId), ...classification.interestTags] : [])]
+        ...(classification ? [careerFilterLabel(classification.areaId), careerFilterLabel(classification.subcategoryId), classification.jobFunction, classification.employerType ?? "", ...classification.interestTags] : [])]
         .join(" ")
         .toLowerCase();
       if (!hay.includes(q)) return false;

@@ -1,6 +1,7 @@
 import "./unit.test.ts";
 import "./career-taxonomy.test.ts";
 import "./career-filters.test.ts";
+import "./career-metadata.test.ts";
 import "./seo.test.ts";
 import "./job-categories.test.ts";
 import "./job-countries.test.ts";

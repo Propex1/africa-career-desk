@@ -3,13 +3,13 @@ import { test } from "node:test";
 import { CAREER_AREAS, DEFAULT_EXPANDED_CAREER_AREA, isCareerSelection, type CareerSelection } from "../../../src/data/career-taxonomy.ts";
 import { getApprovedCareerClassification } from "../../../src/lib/career-classification.ts";
 
-test("career registry has unique IDs, seven areas and twenty subcategories", () => {
+test("career registry has unique IDs, seven areas and twenty-three subcategories", () => {
   const areas = CAREER_AREAS.map(area => area.id);
   const subcategories = CAREER_AREAS.flatMap(area => area.subcategories.map(subcategory => subcategory.id));
   assert.equal(areas.length, 7);
   assert.equal(new Set(areas).size, 7);
-  assert.equal(subcategories.length, 20);
-  assert.equal(new Set(subcategories).size, 20);
+  assert.equal(subcategories.length, 23);
+  assert.equal(new Set(subcategories).size, 23);
   assert.equal(DEFAULT_EXPANDED_CAREER_AREA, "private-markets");
 });
 
@@ -27,7 +27,7 @@ test("investment and financing infrastructure classifications have distinct pare
 test("AI proposals require explicit human approval and complete provenance", () => {
   const proposal = {
     areaId: "private-markets", subcategoryId: "infrastructure-real-assets",
-    interestTags: ["infrastructure"], rationale: "Role involves equity investments.",
+    jobFunction: "Investment", interestTags: ["infrastructure"], rationale: "Role involves equity investments.",
     sourceUrl: "https://example.test/role", method: "ai-assisted",
     proposedBy: "classification-assistant", proposedAt: "2026-11-08", status: "proposed",
   };

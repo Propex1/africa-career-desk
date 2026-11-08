@@ -1,0 +1,68 @@
+[
+  {
+    "id": "DRAFT-e770d8631261",
+    "title": "IR Analyst",
+    "company": "Beltone Holding",
+    "proposedArea": "Corporate Development & Investments",
+    "proposedSubcategory": "No accurate existing subcategory",
+    "proposedFunction": "Fundraising & Investor Relations",
+    "reason": "Relevant corporate IR; Strategic Finance & Capital Allocation would be a loose fit for earnings/disclosures. Decide whether IR belongs there or needs its own subcategory.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  },
+  {
+    "id": "DRAFT-43904592e8cf",
+    "title": "Manager, Account Executive - Fintechs and Wallets Partners, Abidjan",
+    "company": "Visa",
+    "proposedArea": "Unresolved",
+    "proposedSubcategory": "Unresolved",
+    "proposedFunction": "Unresolved",
+    "reason": "Commercial fintech/wallet account sales and partnerships. Clarify whether the substantive financing/investment responsibility warrants a category; no removal proposed.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  },
+  {
+    "id": "DRAFT-22fd3e5c8b1f",
+    "title": "Program Manager-Satellite Business Management",
+    "company": "Orange Business",
+    "proposedArea": "Corporate Development & Investments (possible)",
+    "proposedSubcategory": "Strategic Investments & Strategy (possible)",
+    "proposedFunction": "Research & Analysis (possible)",
+    "reason": "Satellite strategy and partnerships versus presales/routine programme coordination. Need a stronger investment/strategic decision-support remit before assigning.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  },
+  {
+    "id": "DRAFT-b2b3e647c4a8",
+    "title": "Commercial Project Manager",
+    "company": "Siemens Energy",
+    "proposedArea": "Corporate Development & Investments (possible)",
+    "proposedSubcategory": "Strategic Finance & Capital Allocation (possible)",
+    "proposedFunction": "Strategic Finance (possible)",
+    "reason": "Commercial project profitability/accounting could qualify only if substantive financial decision support is central; existing description emphasises delivery/control.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  },
+  {
+    "id": "DRAFT-00fe1ab79fde",
+    "title": "Business Development Manager – Vendor Management Inventory M/F",
+    "company": "Africa Global Logistics",
+    "proposedArea": "Corporate & Structured Finance (possible)",
+    "proposedSubcategory": "Trade & Syndicated Finance (possible)",
+    "proposedFunction": "Financing & Origination (possible)",
+    "reason": "VMI logistics solution sales with trade-finance context; actual responsibility for structuring financing is unclear.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  },
+  {
+    "id": "DRAFT-d7c9cc824e36",
+    "title": "Responsable Développement Offre PME",
+    "company": "Africa Global Logistics",
+    "proposedArea": "Corporate Development & Investments (possible)",
+    "proposedSubcategory": "Strategic Investments & Strategy (possible)",
+    "proposedFunction": "Unresolved",
+    "reason": "SME logistics offer/product growth and digital rollout. A budget/ROI reference alone does not establish substantive strategic-finance work.",
+    "status": "editorial-review",
+    "publicationAction": "none"
+  }
+]

@@ -17,7 +17,7 @@ const job = (id: string, changes: Partial<Opportunity> = {}): Opportunity => ({
 });
 const proposal = {
   areaId: "private-markets", subcategoryId: "infrastructure-real-assets", status: "proposed",
-  method: "ai-assisted", interestTags: ["renewable energy"], rationale: "Infrastructure equity investing.",
+  jobFunction: "Investment", method: "ai-assisted", interestTags: ["renewable energy"], rationale: "Infrastructure equity investing.",
   sourceUrl: "https://example.test", proposedBy: "assistant", proposedAt: "2026-11-08",
 } as const;
 const approved = { ...proposal, status: "approved", approvedBy: "editor", approvedAt: "2026-11-08" } as const;
@@ -53,7 +53,7 @@ test("career facets and search use the same approved or explicitly preview-only 
 test("parent and child toggles avoid redundant selections and allow narrowing a parent", () => {
   assert.deepEqual(toggleCareerSelection(["private-equity-growth", "venture-capital"], "private-markets"), ["private-markets"]);
   const narrowed = toggleCareerSelection(["private-markets", "development-finance"], "venture-capital");
-  assert.deepEqual(narrowed, ["development-finance", "private-equity-growth", "private-credit", "infrastructure-real-assets"]);
+  assert.deepEqual(narrowed, ["development-finance", "private-equity-growth", "private-credit", "infrastructure-real-assets", "fund-investments-secondaries"]);
   assert.deepEqual(toggleCareerSelection(["private-markets"], "private-markets"), []);
 });
 
@@ -71,7 +71,7 @@ test("preview overlays preserve canonical records and reject stale proposals", (
     assert.ok(isCareerSelection(draft.classification));
   }
   const [id, draft] = Object.entries(proposals)[0];
-  const original = job(id, { title: draft.title, company: draft.company, roleType: draft.roleType as Opportunity["roleType"], sourceUrl: draft.classification.sourceUrl });
+  const original = job(id, { title: draft.title, company: draft.company, roleType: draft.roleType as Opportunity["roleType"], sourceUrl: draft.classification.sourceUrl, summary: draft.evidence.summary, aboutRole: draft.evidence.aboutRole, responsibilities: draft.evidence.responsibilities, requirements: draft.evidence.requirements });
   const before = structuredClone(original);
   assert.equal(withCareerPreviewProposals([original])[0].careerClassification?.status, "proposed");
   assert.deepEqual(original, before);

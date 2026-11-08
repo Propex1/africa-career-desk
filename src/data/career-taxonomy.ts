@@ -5,6 +5,7 @@ export const CAREER_AREAS = [
     { id: "venture-capital", label: "Venture Capital" },
     { id: "private-credit", label: "Private Credit" },
     { id: "infrastructure-real-assets", label: "Infrastructure & Real Assets" },
+    { id: "fund-investments-secondaries", label: "Fund Investments & Secondaries" },
   ] },
   { id: "development-finance", label: "Development Finance", subcategories: [
     { id: "dfi-investments", label: "DFI Investments" },
@@ -29,10 +30,12 @@ export const CAREER_AREAS = [
     { id: "corporate-banking", label: "Corporate Banking" },
     { id: "project-structured-finance", label: "Project & Structured Finance" },
     { id: "trade-syndicated-finance", label: "Trade & Syndicated Finance" },
+    { id: "treasury-funding-alm", label: "Treasury, Funding & ALM" },
   ] },
   { id: "corporate-development-investments", label: "Corporate Development & Investments", subcategories: [
     { id: "corporate-ma", label: "Corporate M&A" },
     { id: "strategic-investments-strategy", label: "Strategic Investments & Strategy" },
+    { id: "strategic-finance-capital-allocation", label: "Strategic Finance & Capital Allocation" },
   ] },
 ] as const;
 
