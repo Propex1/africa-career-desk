@@ -187,3 +187,9 @@ For a future asset, add reviewed bounds only after checking its full mark at mob
 ## Acumen — 7 November 2026
 
 `public/logos/acumen.svg` contains the official full Acumen header logo from https://acumen.org/ . The original vector artwork and colours are preserved. Only page-specific presentation attributes and XML attribute casing were normalised for standalone rendering. It is used by the approved Senior Associate, Funding to Build job.
+
+## Official logos added 13 November 2026
+
+- F6 Ventures — `public/logos/f6-ventures-official.png`. [Official source](https://f6.vc/f6-logo.png).
+- FNB Eswatini Ltd — `public/logos/fnb-eswatini.svg`. [Official source](https://www.fnbswaziland.co.sz/_assets/images/generic/skins/00/navigation/secondary-logo/header-logo_lrg.svg?v=1775959742000).
+- Safaricom — `public/logos/safaricom.svg`. [Official source](https://business.safaricom.co.ke/).

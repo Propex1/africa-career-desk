@@ -3,6 +3,7 @@ import JobsBoard from "@/components/JobsBoard";
 import ExploreOpportunities from "@/components/ExploreOpportunities";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { canonicalPath } from "@/lib/seo";
+import { localCalendarDay } from "@/lib/job-freshness";
 import {
   JOBS,
   JOB_REGIONS,
@@ -38,7 +39,7 @@ export default function JobsPage() {
       <SectionViewTracker section="Jobs" />
       <JobsBoard
         explore={<ExploreOpportunities />}
-        initialToday={new Date().toISOString().slice(0,10)}
+        initialToday={localCalendarDay()}
         jobs={JOBS}
         regions={JOB_REGIONS}
         countries={JOB_COUNTRIES}

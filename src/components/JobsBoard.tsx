@@ -8,7 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { addedWithin, visibleOnBoard } from "@/lib/job-freshness";
+import { addedWithin, localCalendarDay, visibleOnBoard } from "@/lib/job-freshness";
 import type { Opportunity } from "@/types";
 import BeehiivNewsletterSection from "./BeehiivNewsletterSection";
 import CompactJobCard from "./CompactJobCard";
@@ -315,7 +315,7 @@ export default function JobsBoard({
     const params = new URLSearchParams(window.location.search);
     setAddedDays([7,14].includes(Number(params.get("added"))) ? Number(params.get("added")) : 0);
     setLimit(Math.min(jobs.length || 25, Math.max(25, Number(params.get("shown")) || 25)));
-    setToday(new Date().toISOString().slice(0,10));
+    setToday(localCalendarDay());
     setUrlStateReady(true);
   }, [countries, experienceBuckets, languages, regions, roleTypes]);
 

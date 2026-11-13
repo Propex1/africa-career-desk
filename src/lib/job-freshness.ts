@@ -1,6 +1,13 @@
 import type { Opportunity } from "../types/index";
 
 const DAY = 86_400_000;
+export function localCalendarDay(now = new Date()): string {
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 export function publicationDay(value?: string): number | null {
   if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
   const time = Date.parse(`${value}T00:00:00Z`);
