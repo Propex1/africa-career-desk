@@ -6,7 +6,8 @@ export const JOB_FUNCTIONS = [
   "Financing & Origination",
   "Portfolio & Asset Management",
   "Strategic Finance",
-  "Fundraising & Investor Relations",
+  "Fundraising & Investor Relations", // Investment-fund capital raising and LP relations.
+  "Corporate Investor Relations", // Corporate earnings, disclosures and shareholder communications.
   "Risk & Underwriting",
   "Investment Legal",
   "Fund Finance & Operations",

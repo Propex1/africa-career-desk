@@ -67,7 +67,7 @@ test("career URLs round trip independently of existing role links and reject unk
 
 test("preview overlays preserve canonical records and reject stale proposals", () => {
   for (const draft of Object.values(proposals)) {
-    assert.equal(draft.classification.status, "proposed");
+    assert.ok(["proposed", "approved"].includes(draft.classification.status));
     assert.ok(isCareerSelection(draft.classification));
   }
   const [id, draft] = Object.entries(proposals)[0];

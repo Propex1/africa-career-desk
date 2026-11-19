@@ -36,6 +36,7 @@ export const CAREER_AREAS = [
     { id: "corporate-ma", label: "Corporate M&A" },
     { id: "strategic-investments-strategy", label: "Strategic Investments & Strategy" },
     { id: "strategic-finance-capital-allocation", label: "Strategic Finance & Capital Allocation" },
+    { id: "corporate-investor-relations", label: "Corporate Investor Relations" },
   ] },
 ] as const;
 

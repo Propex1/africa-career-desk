@@ -1,68 +1,386 @@
 [
   {
-    "id": "DRAFT-e770d8631261",
-    "title": "IR Analyst",
-    "company": "Beltone Holding",
-    "proposedArea": "Corporate Development & Investments",
-    "proposedSubcategory": "No accurate existing subcategory",
-    "proposedFunction": "Fundraising & Investor Relations",
-    "reason": "Relevant corporate IR; Strategic Finance & Capital Allocation would be a loose fit for earnings/disclosures. Decide whether IR belongs there or needs its own subcategory.",
-    "status": "editorial-review",
-    "publicationAction": "none"
-  },
-  {
     "id": "DRAFT-43904592e8cf",
     "title": "Manager, Account Executive - Fintechs and Wallets Partners, Abidjan",
     "company": "Visa",
-    "proposedArea": "Unresolved",
-    "proposedSubcategory": "Unresolved",
-    "proposedFunction": "Unresolved",
-    "reason": "Commercial fintech/wallet account sales and partnerships. Clarify whether the substantive financing/investment responsibility warrants a category; no removal proposed.",
-    "status": "editorial-review",
-    "publicationAction": "none"
+    "reason": "Commercial fintech/wallet account sales and partnerships; no substantive investment or financial structuring remit established. Owner recommends outside future scope.",
+    "status": "outside-future-scope-recommendation",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Develop Visa’s fintech and wallet partnerships from Abidjan, supporting payment-flow growth and market expansion. The role combines regional wallet strategy, commercial negotiations and new-solution launches, working with country leadership, digital teams and non-traditional payments partners across the region.",
+      "aboutRole": "Within Merchant Sales and Solutions, the manager translates local market needs into partner strategies and product propositions. Responsibilities include strategic deals, regulatory and pricing initiatives, and the rollout of mobile payment solutions. The position is hybrid, with office attendance confirmed by the hiring manager, and retains a strong commercial-sales and relationship-management component.",
+      "responsibilities": [
+        "Execute wallet and partner strategies to grow payment volumes and market share.",
+        "Secure fintech deals and support negotiations of major strategic partnerships.",
+        "Build senior partner relationships and communicate local market and regulatory needs.",
+        "Coordinate mobile-payment solution launches and go-to-market activity.",
+        "Work with digital and functional teams on new propositions and regional best practices."
+      ],
+      "requirements": [
+        "Basic qualification routes: five years with a bachelor’s degree, two with an advanced degree, or no prior experience with a PhD.",
+        "Preferred routes: six years with a bachelor’s, four with an advanced degree, or up to three with a PhD; the advert separately asks for five years of progressive payments leadership.",
+        "Knowledge of payments networks, processing, merchant acquiring and emerging mobile-payment models.",
+        "Strong business-to-business sales, negotiation, relationship-management and product-launch experience.",
+        "Ability to work across cultures, manage projects and communicate with senior stakeholders."
+      ]
+    },
+    "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/CI---Abidjan-Cote-DIvoire/Manager--Account-Executive---Fintechs-and-Wallets-Partners--Abidjan_REF082486W"
   },
   {
     "id": "DRAFT-22fd3e5c8b1f",
     "title": "Program Manager-Satellite Business Management",
     "company": "Orange Business",
-    "proposedArea": "Corporate Development & Investments (possible)",
-    "proposedSubcategory": "Strategic Investments & Strategy (possible)",
-    "proposedFunction": "Research & Analysis (possible)",
-    "reason": "Satellite strategy and partnerships versus presales/routine programme coordination. Need a stronger investment/strategic decision-support remit before assigning.",
-    "status": "editorial-review",
-    "publicationAction": "none"
+    "reason": "Satellite strategy, presales and programme coordination do not demonstrate substantial financial investment analysis or capital allocation. Include only if stronger responsibility evidence is supplied.",
+    "status": "conditional-evidence-required",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Help develop Orange’s satellite business across the Middle East and Africa, combining strategy, partnerships and programme execution. Based in Morocco, the role supports growth initiatives including Direct-to-Device and coordinates subsidiary needs with regional stakeholders and the wider satellite ecosystem.",
+      "aboutRole": "The position reports to the Satellite Business Management and Direct-to-Device programme director within Orange International Networks Infrastructures and Services. It works with Satellite Factory, Orange Business, wholesale and MEA teams. The mandate combines strategic coordination and market analysis with business development, presales and governance; occasional international travel is expected.",
+      "responsibilities": [
+        "Contribute to satellite strategy and coordinated action plans for the MEA region.",
+        "Prioritise subsidiary requirements and align them with Satellite Factory direction.",
+        "Identify satellite and Direct-to-Device growth opportunities and coordinate MEA presales.",
+        "Develop ecosystem relationships and support partnership discussions.",
+        "Track programme milestones, risks and performance, using market analysis to inform decisions."
+      ],
+      "requirements": [
+        "Experience coordinating cross-functional work in complex international environments.",
+        "Business-development capability and the ability to identify opportunities.",
+        "Strategic, commercial and financial understanding with strong stakeholder communication.",
+        "Proficiency in French and English and willingness to travel occasionally.",
+        "Telecommunications or satellite-ecosystem knowledge is appreciated; no degree or years-of-experience threshold is stated."
+      ]
+    },
+    "sourceUrl": "https://orange.jobs/gb/en/job/ICM-588096/Program-Manager-Satellite-Business-Management"
   },
   {
     "id": "DRAFT-b2b3e647c4a8",
     "title": "Commercial Project Manager",
     "company": "Siemens Energy",
-    "proposedArea": "Corporate Development & Investments (possible)",
-    "proposedSubcategory": "Strategic Finance & Capital Allocation (possible)",
-    "proposedFunction": "Strategic Finance (possible)",
-    "reason": "Commercial project profitability/accounting could qualify only if substantive financial decision support is central; existing description emphasises delivery/control.",
-    "status": "editorial-review",
-    "publicationAction": "none"
+    "reason": "Project delivery, contractual control, accounting and project profitability monitoring dominate; these do not establish investment appraisal or financing strategy.",
+    "status": "outside-future-scope-recommendation",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Manage the commercial and financial execution of Digital Grid projects at Siemens Energy in Cairo. The role combines project profitability, cash forecasting, contractual changes and risk management, working with project and regional teams to deliver complex customer engagements within agreed budgets.",
+      "aboutRole": "The position is within Grid Technologies and the finance organisation, with a regional Middle East remit. It works alongside project managers, bid teams, controllers and segment heads. Responsibilities cover financial and contractual oversight as well as administrative, tax and accounting requirements, making this a commercial project-delivery role rather than a project-investment origination position.",
+      "responsibilities": [
+        "Maintain project calculations, cost controls, financial reporting and free-cash-flow forecasts.",
+        "Manage guarantees, hedging, insurance and tax-related financial risks.",
+        "Lead variation-order discussions and assess price-indexation effects.",
+        "Track orders, invoicing, receivables and payments to protect project cash generation.",
+        "Coordinate project stakeholders and ensure compliance with commercial and financial controls."
+      ],
+      "requirements": [
+        "Bachelor’s degree in business administration, economics, finance or a related field.",
+        "At least three years managing complex external-customer projects, including international stakeholder interfaces.",
+        "Experience in commercial project management, financial controlling and contract administration.",
+        "Strong SAP financial-module, Excel, forecasting and risk-management skills.",
+        "The advert lists Certified Commercial Project Manager and PMP/IPMA certifications under professional qualifications."
+      ]
+    },
+    "sourceUrl": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/304446"
   },
   {
     "id": "DRAFT-00fe1ab79fde",
     "title": "Business Development Manager – Vendor Management Inventory M/F",
     "company": "Africa Global Logistics",
-    "proposedArea": "Corporate & Structured Finance (possible)",
-    "proposedSubcategory": "Trade & Syndicated Finance (possible)",
-    "proposedFunction": "Financing & Origination (possible)",
-    "reason": "VMI logistics solution sales with trade-finance context; actual responsibility for structuring financing is unclear.",
-    "status": "editorial-review",
-    "publicationAction": "none"
+    "reason": "VMI logistics solution sales and trade-finance context do not demonstrate responsibility for actual financial structuring.",
+    "status": "outside-future-scope-recommendation",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Develop vendor-managed inventory solutions that connect logistics, international trade and client working-capital needs. This AGL business-development role focuses on new opportunities, strategic client relationships and tailored supply-chain and trade-finance propositions, with responsibility for commercially sound execution and account performance.",
+      "aboutRole": "The position sits in the Vendor Managed Inventory division and works alongside logistics, operations, customs and compliance teams. Its commercial mandate includes existing accounts and targeted market sectors. Solutions aim to improve import and export flows, strengthen supply chains and build long-term client partnerships while managing account risk and trade-regulation requirements.",
+      "responsibilities": [
+        "Identify and secure vendor-managed inventory opportunities in existing and target accounts.",
+        "Develop client, supplier and strategic-partner relationships.",
+        "Prepare proposals, business cases and tailored trade-finance and supply-chain solutions.",
+        "Analyse market trends, competitor activity and expansion opportunities.",
+        "Coordinate delivery teams and monitor account performance, risk and regulatory compliance."
+      ],
+      "requirements": [
+        "At least five years in trade finance, supply-chain finance, logistics, freight forwarding or a related field.",
+        "Proven business-development and client-relationship experience.",
+        "Understanding of international trade, supply-chain operations and financial processes.",
+        "Strong negotiation, presentation, analytical and practical problem-solving skills."
+      ]
+    },
+    "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-business-development-manager-vendor-management-inventory-m-f_9897.aspx"
   },
   {
     "id": "DRAFT-d7c9cc824e36",
     "title": "Responsable Développement Offre PME",
     "company": "Africa Global Logistics",
-    "proposedArea": "Corporate Development & Investments (possible)",
-    "proposedSubcategory": "Strategic Investments & Strategy (possible)",
-    "proposedFunction": "Unresolved",
-    "reason": "SME logistics offer/product growth and digital rollout. A budget/ROI reference alone does not establish substantive strategic-finance work.",
-    "status": "editorial-review",
-    "publicationAction": "none"
+    "reason": "Logistics SME product development and commercial rollout dominate. Budget and ROI references alone do not establish a strategic-finance career.",
+    "status": "outside-future-scope-recommendation",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Develop AGL’s SME logistics offering and digital-service strategy in Côte d’Ivoire, including WeGoAfrica. This role combines product and commercial development, investment prioritisation and programme coordination, with responsibility for budgets, adoption, incremental margin and return on investment.",
+      "aboutRole": "The position coordinates commercial and operational teams, support functions and local partners around one SME and innovation roadmap. Its scope includes import/export consolidation, warehousing, cold-chain services and digital customer journeys. The manager reports progress to country leadership and balances immediate launches with longer-term investment and service-development priorities.",
+      "responsibilities": [
+        "Define and execute the SME service strategy and WeGoAfrica positioning.",
+        "Prioritise the local innovation roadmap using market needs, investment trade-offs and delivery readiness.",
+        "Coordinate steering committees, project governance and cross-functional delivery.",
+        "Develop service models, pricing and digital adoption with local and central teams.",
+        "Track budgets, usage, customer retention, incremental margin and investment returns."
+      ],
+      "requirements": [
+        "Bac+5 from a business school, engineering school or university, or equivalent training.",
+        "Seven to ten years in logistics, cross-functional programmes, digital or service development, or strategy and transformation consulting.",
+        "Excellent French communication; professional English is appreciated.",
+        "Ability to align diverse teams, manage change and deliver several projects under operational pressure."
+      ]
+    },
+    "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-responsable-developpement-offre-pme-_10370.aspx"
+  },
+  {
+    "id": "DRAFT-ac7c1fc547f6",
+    "title": "Business Performance Partner – Lines of Solution-Orange Wholesale Intl",
+    "company": "Orange Business",
+    "previousProposal": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-finance-capital-allocation",
+      "jobFunction": "Strategic Finance",
+      "interestTags": [
+        "strategic finance",
+        "business planning",
+        "capital allocation",
+        "financial modelling"
+      ],
+      "rationale": "Substantive financial modelling, business planning, investment/profitability analysis and financial decision support fit the approved broader strategic-finance remit.",
+      "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Corporate"
+    },
+    "status": "classification-evidence-required",
+    "reason": "Stored duties show revenue/margin reviews, forecast deviations, pricing assumptions, budgeting and KPI dashboards. Substantial investment appraisal, financing strategy or capital allocation is not demonstrated; hold Strategic Finance mapping.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Advise Orange’s wholesale business on profitability, growth and portfolio performance from Casablanca. The role combines commercial finance, market analysis and strategic planning, helping product, sales and finance leaders challenge assumptions and turn performance insights into better business decisions.",
+      "aboutRole": "The Business Performance Partner works across Lines of Solution and product teams, providing an independent view of revenue, margins, customer portfolios and market position. Its remit spans business reviews, forecasts and strategic plans, with close collaboration with analytics specialists to improve decision tools and performance governance across international activities.",
+      "responsibilities": [
+        "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
+        "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
+        "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
+        "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
+        "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
+      ],
+      "requirements": [
+        "Master’s degree in finance, economics, strategy or a related field is identified in the candidate profile.",
+        "Experience in P&L analysis, business reviews, forecasting, budgeting and strategic cycles.",
+        "Fluent French and English, with strong advisory and stakeholder-influencing skills.",
+        "Advanced Excel and familiarity with visualisation tools such as Power BI, Dataiku or ThinkCell.",
+        "Knowledge of B2B telecommunications, wholesale, infrastructure or digital services."
+      ]
+    },
+    "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl"
+  },
+  {
+    "id": "DRAFT-64faaeb3a173",
+    "title": "Director Consulting",
+    "company": "Visa",
+    "previousProposal": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-investments-strategy",
+      "interestTags": [],
+      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Director Consulting. Requires editorial confirmation.",
+      "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/ZA---Johannesburg-South-Africa/Director-Consulting_REF078480W",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "jobFunction": "Strategic Finance"
+    },
+    "status": "classification-evidence-required",
+    "reason": "Consulting sales proposals, commercial terms, programme governance and delivery do not by themselves establish substantive financial analysis or investment decision support.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Lead Visa Consulting & Analytics engagements for banks, merchants and fintechs across African markets. This Johannesburg director role combines consulting-business development, client strategy and implementation leadership, translating complex client needs into commercially sound programmes and measurable delivery outcomes.",
+      "aboutRole": "The team serves Southern and Eastern Africa as well as West and Central Africa. The director builds senior relationships, develops proposals and leads multidisciplinary consulting and implementation teams. A further part of the remit is improving the practice’s operating model, delivery standards and pipeline, with frequent travel and work at client sites.",
+      "responsibilities": [
+        "Build executive client relationships and convert strategic needs into proposals and commercial terms.",
+        "Structure consulting and implementation engagements with clear workplans and outcomes.",
+        "Lead regional and pan-African programmes, managing governance, resources and delivery risks.",
+        "Coordinate multidisciplinary Visa and client teams and maintain delivery quality.",
+        "Improve consulting methods, operating processes and opportunity-pipeline development."
+      ],
+      "requirements": [
+        "At least 10 years of relevant experience and a bachelor’s degree.",
+        "Strategy-house or Big Four consulting experience is preferred.",
+        "Strong understanding of digital payments, card operations, implementation and portfolio management.",
+        "Executive communication, programme management, commercial proposal and stakeholder-management capability.",
+        "African-market experience is strongly preferred; ability to travel frequently and work on client sites."
+      ]
+    },
+    "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/ZA---Johannesburg-South-Africa/Director-Consulting_REF078480W"
+  },
+  {
+    "id": "DRAFT-2d7b2c277bb4",
+    "title": "Chargé d’étude",
+    "company": "Africa Global Logistics",
+    "previousProposal": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-finance-capital-allocation",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [
+        "investment appraisal",
+        "business cases",
+        "financial analysis"
+      ],
+      "rationale": "Feasibility studies, business cases, budgets and investment/project-portfolio analysis provide substantive financial decision support.",
+      "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Corporate"
+    },
+    "status": "classification-evidence-required",
+    "reason": "Feasibility studies and business cases are potentially relevant, but portfolio schedules, budgets and PMO governance dominate the available evidence. Financial modelling or investment appraisal responsibility requires confirmation.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Produce feasibility studies, business cases and project-portfolio analysis for Africa Global Logistics in Côte d’Ivoire. Working under the PMO, the role helps management evaluate opportunities, understand project performance and make decisions using reliable data, budgets, risk information and governance reporting.",
+      "aboutRole": "The analyst supports both strategic and operational projects and consolidates information from project managers into management dashboards. The work combines market and opportunity studies with portfolio monitoring, documentation and improved project methods. Familiarity with transport, logistics and the African business context is valued, while the advert does not specify a city.",
+      "responsibilities": [
+        "Conduct market, opportunity and feasibility studies and prepare business cases.",
+        "Collect, validate and analyse data supporting project decisions.",
+        "Consolidate portfolio schedules, budgets, risks, milestones and performance indicators.",
+        "Prepare dashboards, executive reports and governance presentations.",
+        "Improve PMO methods, documentation quality and project-management standards."
+      ],
+      "requirements": [
+        "Bac+4/5 in project management, strategy, finance, economics, data or business analysis, engineering or equivalent.",
+        "Two to four years in studies, PMO, consulting, project oversight or strategy consulting.",
+        "Advanced Excel, PowerPoint and Power BI skills, with experience producing business cases and management dashboards.",
+        "Good English for international exchanges and English-language tools.",
+        "Knowledge of African or Ivorian markets and transport or logistics is advantageous."
+      ]
+    },
+    "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx"
+  },
+  {
+    "id": "DRAFT-a8b08d2fc2e3",
+    "title": "VIE Business Developer — Mauritania",
+    "company": "CMA CGM",
+    "previousProposal": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "strategic-investments-strategy",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [
+        "corporate strategy",
+        "investment appraisal"
+      ],
+      "rationale": "Opportunity research, project selection and investment-programme analysis support corporate strategy; proposed based on substantive published duties, not the business-development title alone.",
+      "sourceUrl": "https://jobs.cmacgm-group.com/job/VIE-Business-Developer-Mauritanie/587719-en_GB",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Corporate"
+    },
+    "status": "classification-evidence-required",
+    "reason": "Monitoring investment programmes, project proposals, strategic fit and delivery budgets does not establish financial investment appraisal. Do not infer investment responsibility from programme context.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Support CMA CGM’s growth in Mauritania through business-opportunity research, strategic partnerships and cross-functional projects. Reporting to the CEO in Nouakchott, this VIE assignment combines investment-programme monitoring, project selection, business planning and coordination with the agency’s management and headquarters.",
+      "aboutRole": "The role develops a portfolio of projects aligned with the agency’s strategy and monitors public-policy and investment developments. It links local departments with headquarters to secure project approvals, track budgets and report progress. Digital transformation and innovative solutions also form part of the assignment’s business-development and execution responsibilities.",
+      "responsibilities": [
+        "Monitor investment programmes, public-policy initiatives and potential business opportunities.",
+        "Develop project proposals and implementation plans aligned with agency priorities.",
+        "Assess project constraints, dependencies and strategic fit.",
+        "Coordinate governance meetings, approvals and cross-functional delivery.",
+        "Track budgets with Finance and prepare management reports and presentations."
+      ],
+      "requirements": [
+        "Master’s degree from a business school, engineering school or university, focused on business administration, management or entrepreneurship.",
+        "Very good written and spoken English.",
+        "Strong presentation, organisational and analytical skills, with proficiency in Microsoft Office.",
+        "Interest in digital tools; previous experience in Africa is an advantage."
+      ]
+    },
+    "sourceUrl": "https://jobs.cmacgm-group.com/job/VIE-Business-Developer-Mauritanie/587719-en_GB"
+  },
+  {
+    "id": "DRAFT-9fe8bfbbe223",
+    "title": "Gestor de Mercado de Capitais - Standard Invest",
+    "company": "Standard Invest",
+    "previousProposal": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "sales-trading",
+      "jobFunction": "Trading & Structuring",
+      "interestTags": [],
+      "rationale": "Client distribution of dealing-room investment products; sales function rather than research or discretionary portfolio management.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-08",
+      "method": "ai-assisted",
+      "status": "proposed"
+    },
+    "status": "function-evidence-required",
+    "reason": "Capital-market client investment proposals and financial analysis support Sales & Trading as a field, but the evidence does not establish a Trading & Structuring function. Hold rather than label investment sales as trading.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "evidence": {
+      "summary": "Develop capital-markets client relationships and investment-product sales for Standard Invest in Luanda. The role combines market analysis, commercial development and portfolio insight, matching financial solutions to client needs while meeting revenue objectives, risk limits and regulatory standards.",
+      "aboutRole": "Within the Standard Bank Group investment-services business, you manage a client portfolio and promote products offered by Standard Invest’s dealing room. The work ranges from understanding cash flows and investment objectives to preparing proposals and coordinating transactions and service requests. It also includes market commentary, digital-service adoption and collaboration with colleagues to improve products and client experience.",
+      "responsibilities": [
+        "Monitor financial markets, interest rates, asset prices and economic developments and turn findings into useful client insights.",
+        "Manage client relationships, prepare investment proposals and track portfolio activity, profitability and growth potential.",
+        "Identify new business and cross-selling opportunities and guide suitable solutions from initial discussion to transaction completion.",
+        "Analyse client financial statements, transaction histories and portfolios to identify investment or optimisation opportunities.",
+        "Coordinate operational and support teams to resolve client queries and maintain accurate, confidential client information.",
+        "Ensure transparent product communication and regulatory compliance while supporting digital channels and improvements in commercial processes."
+      ],
+      "requirements": [
+        "Bachelor’s degree in management, economics, finance, accounting, banking, financial markets or a related discipline.",
+        "At least three years in financial markets, investment banking, asset management, brokerage, treasury or a related area.",
+        "Demonstrated client management, business development and proposal-preparation experience.",
+        "Knowledge of financial products, preferably across multiple asset classes, and Angola’s financial and regulatory environment.",
+        "Ability to analyse financial and market information, communicate clearly and assess product risks and client needs.",
+        "Additional financial-markets or investment qualifications and English-language knowledge are advantageous."
+      ]
+    },
+    "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090"
+  },
+  {
+    "id": "DRAFT-8ef3f54f7385",
+    "title": "Senior Consultant, Country Engagement Lead - Natural Capital",
+    "company": "CrossBoundary Advisory",
+    "status": "classification-evidence-required",
+    "reason": "Natural-capital funding proposals and investment-readiness lead screening are relevant context, but engagement, consultations and coordination dominate the stored duties. Substantive financial analysis or funding structuring is not demonstrated; do not infer it from the employer.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-19",
+    "sourceUrl": "https://crossboundary.applytojob.com/apply/Afj3GbbrJC/Senior-Consultant-Country-Engagement-Lead-Natural-Capital",
+    "evidence": {
+      "summary": "Lead Côte d’Ivoire stakeholder engagement for a blended finance platform focused on regenerative agriculture and landscape resilience. The role shapes landscape investment plans, identifies early investment opportunities and works with CrossBoundary’s investment and structuring team.",
+      "aboutRole": "The Green Climate Fund supports the project preparation work, which could expand into Ghana and Nigeria. The assignment is an individual consultancy, initially about 1.5 to 2.5 days a week, with travel to priority landscapes and increased effort around consultations and key deadlines.",
+      "responsibilities": [
+        "Engage ministries and other authorities and support the funding proposal’s no-objection process.",
+        "Design national and landscape-level consultations and workshops.",
+        "Map agribusiness, producer, community and financial-sector stakeholders.",
+        "Coordinate landscape selection, validation and investment planning.",
+        "Assess early opportunities for investment readiness and pass qualified leads to the investment team.",
+        "Maintain engagement records and report monthly on progress and workplans."
+      ],
+      "requirements": [
+        "At least ten years of relevant government, stakeholder or ecosystem engagement experience.",
+        "Substantial Côte d’Ivoire experience and established local government, agribusiness and development relationships.",
+        "Full professional French fluency and strong professional English.",
+        "Experience leading stakeholder consultations and knowledge of agricultural value chains.",
+        "Ability to work independently and travel as needed. Ghana or Nigeria experience is preferred.",
+        "Climate-fund, regenerative agriculture or agricultural SME investment-readiness experience is valued."
+      ]
+    }
   }
 ]

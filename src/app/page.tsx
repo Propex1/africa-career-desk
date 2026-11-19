@@ -3,6 +3,7 @@ import JobsBoard from "@/components/JobsBoard";
 import ExploreOpportunities from "@/components/ExploreOpportunities";
 import SectionViewTracker from "@/components/analytics/SectionViewTracker";
 import { withCareerPreviewProposals } from "@/lib/career-preview";
+import { localCalendarDay } from "@/lib/job-freshness";
 import { canonicalPath } from "@/lib/seo";
 import {
   JOBS,
@@ -40,7 +41,7 @@ export default function JobsPage() {
       <SectionViewTracker section="Jobs" />
       <JobsBoard
         explore={<ExploreOpportunities />}
-        initialToday={new Date().toISOString().slice(0,10)}
+        initialToday={localCalendarDay()}
         jobs={careerPreview ? withCareerPreviewProposals(JOBS) : JOBS}
         careerPreview={careerPreview}
         regions={JOB_REGIONS}

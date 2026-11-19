@@ -27,6 +27,8 @@ export default function LogoContainer({ company, initials, logoUrl, size = "md" 
     ? "border-[#FFCB05] bg-[#FFCB05]"
     : src === "/logos/visa-wordmark.png"
     ? "border-[#1434CB] bg-[#1434CB]"
+    : src === "/logos/f6-ventures-official.png"
+    ? "border-black bg-black"
     : src === "/logos/ebrd.svg" || src === "/logos/ithmar-capital-official.png"
     ? "border-acd-navy bg-acd-navy"
     : "border-[#ECEDE6] bg-white";

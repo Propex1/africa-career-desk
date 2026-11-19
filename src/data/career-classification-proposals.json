@@ -491,13 +491,13 @@
       "interestTags": [
         "infrastructure"
       ],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: VIE - Analyste Projets & Développement d'Infrastructures SAG - 2027. Requires editorial confirmation.",
+      "rationale": "Asset monitoring, governance, financial models and lender reporting are primary, with new-investment support secondary.",
       "sourceUrl": "https://careers.meridiam.com/o/vie-analyste-projets-developpement-dinfrastructures-sag-2027",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Investment"
+      "jobFunction": "Portfolio & Asset Management"
     },
     "evidence": {
       "summary": "Meridiam’s Libreville team manages existing infrastructure investments and develops new projects in Gabon and Central Africa. This VIE works with the Central Africa Investment Director and the Société Autoroutière du Gabon on the Transgabonaise road concession, alongside other Gabonese assets. The work spans construction and operating performance, project finance, contractual obligations and investment analysis. The analyst will maintain financial models, support governance and lender reporting, and assess new opportunities with technical, legal, financial and ESG advisers. The assignment provides exposure to infrastructure projects from development and financing through operations and asset management.",
@@ -1161,13 +1161,13 @@
       "areaId": "development-finance",
       "subcategoryId": "impact-climate-finance",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Associate, Funding to Build. Requires editorial confirmation.",
+      "rationale": "Enterprise financial support, tranche disbursement monitoring and portfolio KPIs dominate alongside investment selection.",
       "sourceUrl": "https://job-boards.greenhouse.io/acumen/jobs/8931880002",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Investment"
+      "jobFunction": "Portfolio & Asset Management"
     },
     "evidence": {
       "summary": "Support a portfolio of early-stage green enterprises through Acumen Academy’s Funding to Build programme in Lagos. The Senior Associate combines enterprise finance advice, due diligence and funding-cycle support with relationship management and portfolio monitoring, helping entrepreneurs translate project funding into stronger business models and credible youth-employment outcomes.",
@@ -1232,16 +1232,16 @@
     "company": "Africa50",
     "roleType": "Climate & Impact Investing",
     "classification": {
-      "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: ESG Coordinator. Requires editorial confirmation.",
+      "rationale": "Infrastructure investment ESG due diligence, ESMS and portfolio ESG risks describe an investment-support risk function, not a separate climate-finance mandate.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Research & Analysis",
+      "jobFunction": "Risk & Underwriting",
       "employerType": "Investment Platform"
     },
     "evidence": {
@@ -1270,10 +1270,10 @@
     "company": "Sawari Ventures",
     "roleType": "Climate & Impact Investing",
     "classification": {
-      "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: ESG & Impact Officer. Requires editorial confirmation.",
+      "rationale": "VC employer context with ESG and impact analysis/monitoring; climate/impact support alone does not turn the underlying investment field into Development Finance.",
       "sourceUrl": "https://eg.linkedin.com/company/sawari-ventures",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -1300,15 +1300,15 @@
     "roleType": "Climate & Impact Investing",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
+      "subcategoryId": "development-blended-finance",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Chargé.e de Programme Accélération. Requires editorial confirmation.",
+      "rationale": "Seed-finance disbursements, technical assistance, company performance and donor reporting support a development/blended-finance portfolio function.",
       "sourceUrl": "https://www.ietp.com/fr/content/chargee-de-programme-acceleration-abidjan",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Research & Analysis"
+      "jobFunction": "Portfolio & Asset Management"
     },
     "evidence": {
       "summary": "Coordinate impact-focused acceleration programmes supporting African startups and SMEs as they prepare for investment.",
@@ -1690,13 +1690,13 @@
       "areaId": "asset-management-research",
       "subcategoryId": "portfolio-management",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Specialist. Requires editorial confirmation.",
+      "rationale": "Portfolio specialist translates investment views and performance analytics for clients; evidence does not show discretionary portfolio management.",
       "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4389&jobTitle=Portfolio%20Specialist",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Portfolio & Asset Management",
+      "jobFunction": "Research & Analysis",
       "employerType": "Investment Manager"
     },
     "evidence": {
@@ -1721,15 +1721,15 @@
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
       "areaId": "asset-management-research",
-      "subcategoryId": "portfolio-management",
+      "subcategoryId": "investment-research",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Gérant Analyste H/F. Requires editorial confirmation.",
+      "rationale": "Published duties centre on investment research, sector/economic studies, databases and analytical notes rather than discretionary portfolio allocation.",
       "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-gerant-analyste-h-f_585.aspx",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Portfolio & Asset Management",
+      "jobFunction": "Research & Analysis",
       "employerType": "Investment Manager"
     },
     "evidence": {
@@ -2152,41 +2152,6 @@
       ]
     }
   },
-  "DRAFT-64faaeb3a173": {
-    "title": "Director Consulting",
-    "company": "Visa",
-    "roleType": "Corporate Development, M&A & Strategy",
-    "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-investments-strategy",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Director Consulting. Requires editorial confirmation.",
-      "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/ZA---Johannesburg-South-Africa/Director-Consulting_REF078480W",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "jobFunction": "Strategic Finance"
-    },
-    "evidence": {
-      "summary": "Lead Visa Consulting & Analytics engagements for banks, merchants and fintechs across African markets. This Johannesburg director role combines consulting-business development, client strategy and implementation leadership, translating complex client needs into commercially sound programmes and measurable delivery outcomes.",
-      "aboutRole": "The team serves Southern and Eastern Africa as well as West and Central Africa. The director builds senior relationships, develops proposals and leads multidisciplinary consulting and implementation teams. A further part of the remit is improving the practice’s operating model, delivery standards and pipeline, with frequent travel and work at client sites.",
-      "responsibilities": [
-        "Build executive client relationships and convert strategic needs into proposals and commercial terms.",
-        "Structure consulting and implementation engagements with clear workplans and outcomes.",
-        "Lead regional and pan-African programmes, managing governance, resources and delivery risks.",
-        "Coordinate multidisciplinary Visa and client teams and maintain delivery quality.",
-        "Improve consulting methods, operating processes and opportunity-pipeline development."
-      ],
-      "requirements": [
-        "At least 10 years of relevant experience and a bachelor’s degree.",
-        "Strategy-house or Big Four consulting experience is preferred.",
-        "Strong understanding of digital payments, card operations, implementation and portfolio management.",
-        "Executive communication, programme management, commercial proposal and stakeholder-management capability.",
-        "African-market experience is strongly preferred; ability to travel frequently and work on client sites."
-      ]
-    }
-  },
   "DRAFT-779c39ac18df": {
     "title": "Senior Credit Manager, Natural Resources, Origination, CIB",
     "company": "Standard Bank of South Africa",
@@ -2419,10 +2384,10 @@
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
       "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-investments-strategy",
+      "subcategoryId": "strategic-finance-capital-allocation",
       "jobFunction": "Strategic Finance",
       "interestTags": [],
-      "rationale": "Internal group capital allocation, M&A evaluation and investments dominate a mixed treasury mandate.",
+      "rationale": "Group funding and capital planning, acquisition evaluation and treasury responsibilities fit strategic finance.",
       "sourceUrl": "https://norrenberger.seamlesshiring.com/job/view/11271",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -2820,43 +2785,6 @@
         "Clear written and verbal communication and the ability to prioritise competing transaction deadlines.",
         "Leadership and coaching skills, with willingness to develop a junior execution team.",
         "Understanding of professional ethics and the regulatory environment, alongside sound commercial judgement."
-      ]
-    }
-  },
-  "DRAFT-9fe8bfbbe223": {
-    "title": "Gestor de Mercado de Capitais - Standard Invest",
-    "company": "Standard Invest",
-    "roleType": "Fund Management, Treasury & Investor Relations",
-    "classification": {
-      "areaId": "global-markets-structuring",
-      "subcategoryId": "sales-trading",
-      "jobFunction": "Trading & Structuring",
-      "interestTags": [],
-      "rationale": "Client distribution of dealing-room investment products; sales function rather than research or discretionary portfolio management.",
-      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed"
-    },
-    "evidence": {
-      "summary": "Develop capital-markets client relationships and investment-product sales for Standard Invest in Luanda. The role combines market analysis, commercial development and portfolio insight, matching financial solutions to client needs while meeting revenue objectives, risk limits and regulatory standards.",
-      "aboutRole": "Within the Standard Bank Group investment-services business, you manage a client portfolio and promote products offered by Standard Invest’s dealing room. The work ranges from understanding cash flows and investment objectives to preparing proposals and coordinating transactions and service requests. It also includes market commentary, digital-service adoption and collaboration with colleagues to improve products and client experience.",
-      "responsibilities": [
-        "Monitor financial markets, interest rates, asset prices and economic developments and turn findings into useful client insights.",
-        "Manage client relationships, prepare investment proposals and track portfolio activity, profitability and growth potential.",
-        "Identify new business and cross-selling opportunities and guide suitable solutions from initial discussion to transaction completion.",
-        "Analyse client financial statements, transaction histories and portfolios to identify investment or optimisation opportunities.",
-        "Coordinate operational and support teams to resolve client queries and maintain accurate, confidential client information.",
-        "Ensure transparent product communication and regulatory compliance while supporting digital channels and improvements in commercial processes."
-      ],
-      "requirements": [
-        "Bachelor’s degree in management, economics, finance, accounting, banking, financial markets or a related discipline.",
-        "At least three years in financial markets, investment banking, asset management, brokerage, treasury or a related area.",
-        "Demonstrated client management, business development and proposal-preparation experience.",
-        "Knowledge of financial products, preferably across multiple asset classes, and Angola’s financial and regulatory environment.",
-        "Ability to analyse financial and market information, communicate clearly and assess product risks and client needs.",
-        "Additional financial-markets or investment qualifications and English-language knowledge are advantageous."
       ]
     }
   },
@@ -3339,7 +3267,7 @@
         "capital allocation",
         "financial modelling"
       ],
-      "rationale": "Substantive financial modelling, business planning, investment/profitability analysis and financial decision support fit the approved broader strategic-finance remit.",
+      "rationale": "Explicit capex appraisal using NPV, IRR and payback; post-investment reviews, driver-based scenario forecasts, funding needs and strategic market-entry/M&A analysis substantiate strategic finance beyond routine FP&A.",
       "sourceUrl": "https://careers.dangote.com/job/Head-Office-Lagos-Business-Planning-&-Performance-Management-Manager-Head/1373590757",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -3363,125 +3291,6 @@
         "At least 10 years in FP&A, business planning, corporate finance or performance management, including five in senior finance or strategic planning.",
         "Strong financial modelling, ERP, analytics, stakeholder-management and leadership skills.",
         "Manufacturing, cement, industrial or FMCG experience preferred; a relevant postgraduate qualification is advantageous."
-      ]
-    }
-  },
-  "DRAFT-ac7c1fc547f6": {
-    "title": "Business Performance Partner – Lines of Solution-Orange Wholesale Intl",
-    "company": "Orange Business",
-    "roleType": "Corporate Development, M&A & Strategy",
-    "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
-      "jobFunction": "Strategic Finance",
-      "interestTags": [
-        "strategic finance",
-        "business planning",
-        "capital allocation",
-        "financial modelling"
-      ],
-      "rationale": "Substantive financial modelling, business planning, investment/profitability analysis and financial decision support fit the approved broader strategic-finance remit.",
-      "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "employerType": "Corporate"
-    },
-    "evidence": {
-      "summary": "Advise Orange’s wholesale business on profitability, growth and portfolio performance from Casablanca. The role combines commercial finance, market analysis and strategic planning, helping product, sales and finance leaders challenge assumptions and turn performance insights into better business decisions.",
-      "aboutRole": "The Business Performance Partner works across Lines of Solution and product teams, providing an independent view of revenue, margins, customer portfolios and market position. Its remit spans business reviews, forecasts and strategic plans, with close collaboration with analytics specialists to improve decision tools and performance governance across international activities.",
-      "responsibilities": [
-        "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
-        "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
-        "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
-        "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
-        "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
-      ],
-      "requirements": [
-        "Master’s degree in finance, economics, strategy or a related field is identified in the candidate profile.",
-        "Experience in P&L analysis, business reviews, forecasting, budgeting and strategic cycles.",
-        "Fluent French and English, with strong advisory and stakeholder-influencing skills.",
-        "Advanced Excel and familiarity with visualisation tools such as Power BI, Dataiku or ThinkCell.",
-        "Knowledge of B2B telecommunications, wholesale, infrastructure or digital services."
-      ]
-    }
-  },
-  "DRAFT-a8b08d2fc2e3": {
-    "title": "VIE Business Developer — Mauritania",
-    "company": "CMA CGM",
-    "roleType": "Corporate Development, M&A & Strategy",
-    "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-investments-strategy",
-      "jobFunction": "Research & Analysis",
-      "interestTags": [
-        "corporate strategy",
-        "investment appraisal"
-      ],
-      "rationale": "Opportunity research, project selection and investment-programme analysis support corporate strategy; proposed based on substantive published duties, not the business-development title alone.",
-      "sourceUrl": "https://jobs.cmacgm-group.com/job/VIE-Business-Developer-Mauritanie/587719-en_GB",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "employerType": "Corporate"
-    },
-    "evidence": {
-      "summary": "Support CMA CGM’s growth in Mauritania through business-opportunity research, strategic partnerships and cross-functional projects. Reporting to the CEO in Nouakchott, this VIE assignment combines investment-programme monitoring, project selection, business planning and coordination with the agency’s management and headquarters.",
-      "aboutRole": "The role develops a portfolio of projects aligned with the agency’s strategy and monitors public-policy and investment developments. It links local departments with headquarters to secure project approvals, track budgets and report progress. Digital transformation and innovative solutions also form part of the assignment’s business-development and execution responsibilities.",
-      "responsibilities": [
-        "Monitor investment programmes, public-policy initiatives and potential business opportunities.",
-        "Develop project proposals and implementation plans aligned with agency priorities.",
-        "Assess project constraints, dependencies and strategic fit.",
-        "Coordinate governance meetings, approvals and cross-functional delivery.",
-        "Track budgets with Finance and prepare management reports and presentations."
-      ],
-      "requirements": [
-        "Master’s degree from a business school, engineering school or university, focused on business administration, management or entrepreneurship.",
-        "Very good written and spoken English.",
-        "Strong presentation, organisational and analytical skills, with proficiency in Microsoft Office.",
-        "Interest in digital tools; previous experience in Africa is an advantage."
-      ]
-    }
-  },
-  "DRAFT-2d7b2c277bb4": {
-    "title": "Chargé d’étude",
-    "company": "Africa Global Logistics",
-    "roleType": "Corporate Development, M&A & Strategy",
-    "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
-      "jobFunction": "Research & Analysis",
-      "interestTags": [
-        "investment appraisal",
-        "business cases",
-        "financial analysis"
-      ],
-      "rationale": "Feasibility studies, business cases, budgets and investment/project-portfolio analysis provide substantive financial decision support.",
-      "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "employerType": "Corporate"
-    },
-    "evidence": {
-      "summary": "Produce feasibility studies, business cases and project-portfolio analysis for Africa Global Logistics in Côte d’Ivoire. Working under the PMO, the role helps management evaluate opportunities, understand project performance and make decisions using reliable data, budgets, risk information and governance reporting.",
-      "aboutRole": "The analyst supports both strategic and operational projects and consolidates information from project managers into management dashboards. The work combines market and opportunity studies with portfolio monitoring, documentation and improved project methods. Familiarity with transport, logistics and the African business context is valued, while the advert does not specify a city.",
-      "responsibilities": [
-        "Conduct market, opportunity and feasibility studies and prepare business cases.",
-        "Collect, validate and analyse data supporting project decisions.",
-        "Consolidate portfolio schedules, budgets, risks, milestones and performance indicators.",
-        "Prepare dashboards, executive reports and governance presentations.",
-        "Improve PMO methods, documentation quality and project-management standards."
-      ],
-      "requirements": [
-        "Bac+4/5 in project management, strategy, finance, economics, data or business analysis, engineering or equivalent.",
-        "Two to four years in studies, PMO, consulting, project oversight or strategy consulting.",
-        "Advanced Excel, PowerPoint and Power BI skills, with experience producing business cases and management dashboards.",
-        "Good English for international exchanges and English-language tools.",
-        "Knowledge of African or Ivorian markets and transport or logistics is advantageous."
       ]
     }
   },
@@ -3629,6 +3438,523 @@
         "At least fifteen years in structured finance, credit origination, syndication or distribution.",
         "Advanced experience designing, pricing and executing bespoke financing solutions.",
         "Strong African credit and capital-markets track record, investor relationships and ability to manage complex stakeholders."
+      ]
+    }
+  },
+  "DRAFT-e770d8631261": {
+    "title": "IR Analyst",
+    "company": "Beltone Holding",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "corporate-development-investments",
+      "subcategoryId": "corporate-investor-relations",
+      "jobFunction": "Corporate Investor Relations",
+      "interestTags": [
+        "corporate investor relations",
+        "earnings communications"
+      ],
+      "rationale": "Owner explicitly approved corporate investor relations within scope. Earnings communications, investor materials and shareholder relations are corporate IR, not fund fundraising or capital allocation.",
+      "sourceUrl": "https://fa-epwu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/202609",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "approved",
+      "employerType": "Corporate",
+      "approvedBy": "Armel Wetchoko — explicit editorial instruction",
+      "approvedAt": "2026-11-19"
+    },
+    "evidence": {
+      "summary": "Support Beltone Holding’s investor-relations function in Egypt through financial analysis, market research and investor reporting. The analyst contributes to earnings releases, presentations and disclosures, helping turn internal performance data and external market insights into accurate, clear communications for investors and other stakeholders.",
+      "aboutRole": "The role supports the IR team’s preparation of quarterly communications and ongoing investor information. Responsibilities include analysing financial statements, maintaining subsidiary-performance information, tracking disclosures concerning Beltone shares and monitoring developments that may influence investor sentiment. Work is performed under the Associate’s direction and combines analytical support with awareness of Egyptian listing, disclosure and regulatory requirements. The employer seeks an early-career finance or business candidate.",
+      "responsibilities": [
+        "Prepare financial analysis and supporting materials for investor disclosures, presentations and reports.",
+        "Analyse financial statements and summarise insights for quarterly earnings releases.",
+        "Maintain the subsidiary-performance dashboard and reliable data sources used in stakeholder reporting.",
+        "Monitor market, industry and competitor developments that may affect investor messaging and sentiment.",
+        "Track Beltone-share disclosures and support accurate website updates and quarterly investor presentations.",
+        "Compile internal and external evidence for communications, apply listing and disclosure rules, and contribute to ad-hoc IR projects."
+      ],
+      "requirements": [
+        "Bachelor’s degree in business, economics, finance or a relevant discipline.",
+        "Zero to two years of experience in Investor Relations, Financial Analysis or Capital Markets.",
+        "Local and international experience in investment and finance, as stated in the employer’s profile.",
+        "Strong analytical and research skills, including interpretation of financial data.",
+        "Strong communication and coordination skills, with high attention to detail and reporting accuracy."
+      ]
+    }
+  },
+  "DRAFT-472a9bebe060": {
+    "title": "Senior Banker",
+    "company": "CFG Bank / CFG Finance",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Complex corporate financing execution, financing scenarios, transaction models and credit committee submissions establish a corporate banking financing remit.",
+      "sourceUrl": "https://carrieres.cfgbank.com/jobs/8691808-senior-banker",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead complex financing transactions for Moroccan SMEs and large companies from CFG Bank’s Casablanca team. The Senior Banker designs financing structures, runs financial scenarios and oversees transactions through credit review, documentation and execution.",
+      "aboutRole": "The role combines deal execution with responsibility for a strategic corporate client portfolio. It coordinates work across risk, legal, markets and operational teams, and includes coaching and managing junior colleagues. It is responsible for the quality of materials submitted to credit committees and for tracking the ongoing client relationship.",
+      "responsibilities": [
+        "Lead execution of complex financing transactions.",
+        "Structure financing and build scenarios tailored to corporate clients.",
+        "Conduct detailed financial and technical analysis and review transaction models.",
+        "Coordinate credit approval across risk, legal, markets and operations.",
+        "Oversee contract review and prepare financing and credit committee materials.",
+        "Develop key corporate relationships and mentor junior team members."
+      ],
+      "requirements": [
+        "Degree from a business or engineering school.",
+        "Five to six years of financing experience.",
+        "Prior substantive management experience.",
+        "Strong analytical skills, including financial modelling, evaluation and structuring.",
+        "Negotiation and relationship management skills, with the ability to work independently and accurately."
+      ]
+    }
+  },
+  "DRAFT-04bb3faf10bc": {
+    "title": "Analyst, Client Coverage Infrastructure",
+    "company": "Stanbic IBTC Bank",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [],
+      "rationale": "Infrastructure client coverage is supported by financial metrics, scenario models, credit analysis and covenant monitoring; analyst research supports financing rather than direct investment execution.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000161633659",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Support infrastructure client coverage in Stanbic IBTC’s corporate and investment banking business in Lagos. The analyst researches client and sector performance, supports credit applications and provides financial modelling and scenario analysis for client pitches and new opportunities.",
+      "aboutRole": "Work with the client service team, product specialists and credit risk to turn client discussions into opportunities. The role combines modelling and market research with portfolio reporting, covenant monitoring, and coordination across the bank. The analyst also helps prepare client visits and presents portfolio information to support forecasting and decisions about new opportunities.",
+      "responsibilities": [
+        "Analyse infrastructure clients’ financial metrics, business models and strategic priorities.",
+        "Build models and scenarios for pitches, proposals and client presentations.",
+        "Track the pipeline, profitability, and client and sector trends.",
+        "Support credit submissions, risk mitigation and internal approvals.",
+        "Monitor financial performance, information undertakings and covenant compliance.",
+        "Coordinate client meetings and follow up across product, operations and credit teams."
+      ],
+      "requirements": [
+        "First degree in Business Commerce.",
+        "The posting lists five total years of experience and a three-to-seven-year band for several specific competencies.",
+        "Client coverage, credit and risk experience.",
+        "Portfolio management experience covering reporting, compliance and internal coordination.",
+        "Experience working across teams and synthesising qualitative and quantitative research for client materials."
+      ]
+    }
+  },
+  "DRAFT-adb4aab0efa4": {
+    "title": "Business Development Officer - Structured Finance",
+    "company": "Norrenberger",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "derivatives-structured-products",
+      "jobFunction": "Trading & Structuring",
+      "interestTags": [],
+      "rationale": "Explicit help structuring income, capital-preservation and yield investments, product term sheets and underlying-asset execution distinguish this structured-product role from generic commercial sales.",
+      "sourceUrl": "https://norrenberger.seamlesshiring.com/job/view/9048",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Originate and distribute structured investment solutions for institutional, corporate and high-net-worth clients at Norrenberger in Lagos. The role combines business development with product structuring, client proposals and identifying underlying investment opportunities for structured products.",
+      "aboutRole": "The Structured Products team works with Investment Banking and Investment Management on income, capital preservation and yield-focused products. The officer supports new product execution and fundraising while maintaining a pipeline of clients and monitoring assets under management. The officer also tracks product performance and ensures compliance with internal governance and applicable regulations.",
+      "responsibilities": [
+        "Originate opportunities for structured products across institutional, corporate and private clients.",
+        "Develop client relationships and prepare pitches, proposals and term sheets.",
+        "Help structure and position income, capital preservation and yield-focused investments.",
+        "Work with investment teams on product execution and potential underlying assets.",
+        "Monitor market trends, competitors and investor behaviour.",
+        "Support fundraising and track pipeline, client activity and product performance."
+      ],
+      "requirements": [
+        "Bachelor’s degree in finance, economics, business administration or related field.",
+        "Three to six years in structured finance, credit structuring, risk, SME or corporate banking, or investment banking and deal execution.",
+        "Strong knowledge of financial markets, fixed income and investment products.",
+        "Financial modelling, analytical and problem-solving skills.",
+        "Proven business development and presentation ability, with strong stakeholder management."
+      ]
+    }
+  },
+  "DRAFT-a3efd54cc7c4": {
+    "title": "Senior Finance Manager, Corporate & Investment Banking",
+    "company": "Standard Bank of South Africa",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Although controls and accounting appear, stored duties explicitly include leading M&A/capital-markets evaluation and execution plus valuation and transaction-structuring models. Mapping relies on these substantive transaction duties.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000161475619",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Oversee complex financial work for Standard Bank’s Corporate & Investment Banking division in Johannesburg. This contract role covers financial modelling, valuation and transaction structuring, as well as the evaluation and execution of M&A and capital markets transactions.",
+      "aboutRole": "The manager provides financial advice to clients and internal teams while overseeing portfolio reporting and controls. The role coordinates execution with legal, compliance and operations, and includes developing junior finance staff and advising senior management. It also monitors market developments for planning and risk assessment, and reviews processes for financial governance.",
+      "responsibilities": [
+        "Oversee financial operations across corporate and investment banking portfolios.",
+        "Build models for valuations, structuring and investment decisions.",
+        "Lead evaluation and execution of M&A and capital markets transactions.",
+        "Analyse market and economic trends for planning and risk assessment.",
+        "Maintain controls and compliance with FSCA and JSE requirements.",
+        "Prepare reports for senior stakeholders and lead junior finance colleagues."
+      ],
+      "requirements": [
+        "The advert lists Matric, diploma or degree qualifications.",
+        "At least seven years in corporate finance, investment banking or related financial management.",
+        "Expertise in modelling, valuation and transaction structuring.",
+        "Knowledge of capital markets, M&A and South African financial regulation.",
+        "Ability to manage multiple complex deals and to lead finance teams.",
+        "CFA or CA(SA) and experience with finance systems or banking compliance are desirable."
+      ]
+    }
+  },
+  "DRAFT-977cf4916852": {
+    "title": "Credit Analyst",
+    "company": "Nedbank",
+    "roleType": "Legal, Risk & Compliance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "jobFunction": "Risk & Underwriting",
+      "interestTags": [],
+      "rationale": "Detailed credit recommendations, financial models, internal ratings and transaction-risk mitigants establish specialist financial underwriting, beyond generic administration.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Credit-Analyst/1457084333",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Assess creditworthiness and prepare lending recommendations for Nedbank’s large commercial banking clients in Gauteng. The analyst reviews financial statements and multi-entity structures, selects appropriate credit-rating models, and works with front-office and credit teams on transaction risks.",
+      "aboutRole": "The role sits in Commercial Banking’s Credit Management team. It provides risk analysis for credit decisions within bank policy and regulatory requirements, and translates ratings and return analysis into practical guidance for relationship and business managers. The advert places the position within the Gauteng commercial cluster and describes it as a professional role with individual responsibility.",
+      "responsibilities": [
+        "Prepare detailed credit recommendations backed by client financial and risk analysis.",
+        "Analyse annual financial statements and models for internal credit ratings.",
+        "Work with front-office teams to assess transaction structures and risk mitigants.",
+        "Validate model inputs with credit teams, model developers and other risk functions.",
+        "Explain rating and return results to business managers and other stakeholders."
+      ],
+      "requirements": [
+        "At least three years assessing large corporate creditworthiness in commercial lending.",
+        "At least three years in business or commercial banking, analysing detailed financials for high-value multi-entity structures.",
+        "NQF Level 6 or higher in financial management, accounting, credit risk analysis or a related field.",
+        "Commercial banking stakeholder and client relationship experience.",
+        "Willingness to travel when required."
+      ]
+    }
+  },
+  "DRAFT-70fa09fa7fbb": {
+    "title": "Principal Investment Officer: Corporate Finance and Lending SA",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "dfi-investments",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "DFI corporate lending appraisal, risk mitigants, negotiated financing terms, committee approvals and closings establish financing origination and execution.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS251128-1",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead the appraisal, structuring and closing of development lending transactions for DBSA’s South African corporate finance team. This Midrand role builds a pipeline of bankable projects, shapes financing terms and guides transactions through credit approval and negotiation.",
+      "aboutRole": "Working with the Transacting Head, you translate DBSA’s lending strategy into a viable investment pipeline and lead teams across the transaction lifecycle. The mandate brings together investment, treasury, legal and risk specialists. It also involves managing relationships with project sponsors, government officials, lenders and multilateral partners.",
+      "responsibilities": [
+        "Appraise commercial feasibility and fit with DBSA’s mandate.",
+        "Identify credit and transaction risks and design mitigants.",
+        "Prepare early-stage proposals and negotiate financing terms.",
+        "Lead committee submissions, credit approvals and closings.",
+        "Manage complex transaction documentation and coach investment officers."
+      ],
+      "requirements": [
+        "Postgraduate or equivalent qualification in business, finance, engineering or economics.",
+        "At least ten years appraising, negotiating, diligencing and closing project, corporate or structured finance transactions in a financial institution.",
+        "Track record securing infrastructure investments in South Africa or elsewhere in Africa.",
+        "Strong financial modelling, credit analysis and ability to lead multidisciplinary teams and manage senior stakeholders."
+      ]
+    }
+  },
+  "DRAFT-a01d6fba0e98": {
+    "title": "Principal: Infrastructure Finance",
+    "company": "Nedbank",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Infrastructure debt origination, pricing, structuring, negotiated terms and conditions precedent establish project-finance execution.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Principal-Infrastructure-Finance/1456451233",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Originate and execute infrastructure finance transactions for Nedbank’s Investment Banking team in Johannesburg. The mandate covers project finance, public-private partnerships and concession-backed structures in South Africa and selected African markets, with debt, equity and quasi-equity financing.",
+      "aboutRole": "The role combines lending with transaction-specific debt advisory and covers the full lifecycle from pitching and credit work to negotiation, implementation and monitoring. You work with clients, specialist teams and credit colleagues to deliver transactions within regulatory, environmental and internal risk requirements.",
+      "responsibilities": [
+        "Identify financing opportunities, develop client pitches and originate transactions.",
+        "Analyse, price and structure financing, and guide transactions through credit approval.",
+        "Negotiate deal terms and legal documentation and manage conditions precedent.",
+        "Monitor transaction performance, covenants and risk through reviews and client visits.",
+        "Share transaction expertise and train colleagues on deal execution and controls."
+      ],
+      "requirements": [
+        "Professional qualification or honours degree.",
+        "Eight to twelve years of relevant sector or industry experience.",
+        "CA(SA), CFA or a relevant master’s degree is preferred.",
+        "Knowledge of banking procedures, project management, applicable regulation and risk frameworks."
+      ]
+    }
+  },
+  "DRAFT-a645f0731e83": {
+    "title": "Investment Analyst, Egypt",
+    "company": "F6 Ventures",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "jobFunction": "Investment",
+      "interestTags": [],
+      "rationale": "Startup forecasts, valuations, diligence, investment memos, follow-on analysis and portfolio/fund metrics establish a venture investment analyst function.",
+      "sourceUrl": "https://f6vc.bamboohr.com/careers/42",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Support venture investments at F6 Ventures in Giza, Egypt. The analyst builds financial models, contributes to diligence and deal execution, and tracks startup and fund performance to inform investment decisions and reporting to limited partners.",
+      "aboutRole": "The role spans prospective investments and existing portfolio companies. You help maintain the fund’s reporting and investment records, coordinate with founders and counsel, and assist with follow-on financing and fundraising analysis. It offers exposure to both deal work and the operations behind a venture portfolio.",
+      "responsibilities": [
+        "Build financial forecasts, valuations and sensitivity analyses.",
+        "Review financial statements, projections and terms for diligence and investment memos.",
+        "Track portfolio KPIs and fund metrics such as IRR, MOIC, DPI and TVPI.",
+        "Maintain cap tables, equity movements, data rooms and investor reporting records.",
+        "Analyse follow-on funding, dilution, comparable startups and market trends."
+      ],
+      "requirements": [
+        "Bachelor’s degree in finance, economics or a related field.",
+        "Zero to two years in venture capital, private equity, investment banking or corporate finance.",
+        "Strong Excel or Google Sheets and financial modelling skills.",
+        "Strong written and spoken English and Arabic, with attention to data integrity.",
+        "Familiarity with the regional venture capital ecosystem is strongly preferred."
+      ]
+    }
+  },
+  "DRAFT-1c8bfc3decbd": {
+    "title": "Principal Programme Development Specialist (ICT)",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "development-blended-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "ICT project origination, feasibility and funding-structure development with project-preparation funding mobilisation support a development-finance project-preparation mandate.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261108-3",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead the origination and structuring of ICT infrastructure programmes at DBSA in Midrand. The role develops bankable projects, mobilises preparation funding and works with sponsors and public-sector partners to grow the bank’s investment pipeline across African markets.",
+      "aboutRole": "The remit spans ICT programme strategy and project preparation in South Africa, SADC and selected African markets. It combines sector research, feasibility, funding design and programme governance. The position also leads a team and works with investment divisions to turn preparation mandates and pilots into financeable opportunities.",
+      "responsibilities": [
+        "Design ICT programme frameworks and originate infrastructure projects.",
+        "Lead feasibility, safeguards, technical design and permitting workstreams.",
+        "Develop funding structures and mobilise project-preparation funding.",
+        "Negotiate programme agreements and present proposals to governance committees.",
+        "Oversee pilots, project risks and programme governance, and develop the team."
+      ],
+      "requirements": [
+        "Postgraduate degree in engineering, law, finance, accounting or a related field.",
+        "At least ten years in infrastructure programme development and financing, with deal origination, structuring and closing experience in South Africa and elsewhere in Africa.",
+        "Experience developing ICT infrastructure and working with senior public-sector stakeholders.",
+        "Experience with innovative financing models and public-private partnerships.",
+        "Project finance, private capital or multidisciplinary team leadership experience is desirable."
+      ]
+    }
+  },
+  "DRAFT-6c855559d56b": {
+    "title": "Project Development Specialist (Social Infrastructure)",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "development-blended-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Social-infrastructure origination, feasibility assessment and programme funding design create a financing pipeline; project preparation is the development-finance context.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261108-2",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Develop a pipeline of social infrastructure projects for DBSA from Midrand. The role originates programmes, assesses their feasibility and builds funding, governance and procurement models that can turn early concepts into bankable investment opportunities.",
+      "aboutRole": "The assignment focuses on social infrastructure across South Africa, SADC and selected African markets. You assess sector needs and regulatory constraints, design pilots and engage with sponsors and public institutions. The work reduces early project risk and can create lending and equity opportunities for DBSA.",
+      "responsibilities": [
+        "Map sector needs and originate social infrastructure projects.",
+        "Assess feasibility, regulation, community needs and programme risks.",
+        "Support governance, procurement and funding design for new programmes.",
+        "Prepare proposals for internal approval and test programme designs through pilots.",
+        "Develop sponsor relationships and support handover into delivery and financing."
+      ],
+      "requirements": [
+        "Bachelor’s degree in finance, business, law, accounting, engineering or economics.",
+        "At least eight years in infrastructure project development and financing, with a record of originating, structuring and closing investments in South Africa and elsewhere in Africa.",
+        "Relevant experience developing social infrastructure projects.",
+        "Experience engaging senior government and other stakeholders.",
+        "Postgraduate study, CA, CFA or MBA credentials, project finance or private capital experience are advantageous."
+      ]
+    }
+  },
+  "DRAFT-120473318960": {
+    "title": "Project Development Specialist (ICT)",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "development-blended-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "ICT commercial feasibility, programme funding structures and reduction of project risks explicitly create financing opportunities for the DFI.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261109-2",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Originate and prepare ICT infrastructure programmes for DBSA in Midrand. The specialist builds a pipeline of financeable projects by assessing sector opportunities, developing programme structures and supporting funding, procurement and governance arrangements across selected African markets.",
+      "aboutRole": "The position covers South Africa, SADC and selected other African markets. You work with sponsors and public stakeholders to identify viable ICT projects, test programme approaches and establish conditions for investment. Work progresses from market mapping and early feasibility through pilot projects and preparation for implementation.",
+      "responsibilities": [
+        "Identify ICT infrastructure gaps, market opportunities and sponsors.",
+        "Assess technical, commercial, environmental and regulatory feasibility.",
+        "Help structure programmes and standardise funding, governance and procurement approaches.",
+        "Develop pilots and prepare proposals for committee approval.",
+        "Reduce project risks and create financing opportunities for DBSA."
+      ],
+      "requirements": [
+        "Bachelor’s degree in finance, business, law, accounting, engineering or economics.",
+        "At least eight years in infrastructure project development and financing, including origination, structuring and closing investments in South Africa and elsewhere in Africa.",
+        "Relevant ICT project development and demonstrated business origination experience.",
+        "Experience engaging senior public-sector and other stakeholders.",
+        "Postgraduate study, CA, CFA or MBA credentials, project finance or private capital experience are advantageous."
+      ]
+    }
+  },
+  "DRAFT-e79f9fd00646": {
+    "title": "Transaction Management Analyst - Fixed Term Contract",
+    "company": "Ninety One",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "private-credit",
+      "jobFunction": "Portfolio & Asset Management",
+      "interestTags": [],
+      "rationale": "Post-close borrower/covenant monitoring, waivers, amendments and portfolio reporting establish private-credit portfolio oversight; settlement and KYC are supporting duties.",
+      "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4517&jobTitle=Transaction+Management+Analyst+-+Fixed+Term+Contract",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Support private-credit investment monitoring and transaction management at Ninety One in Cape Town on a nine-month fixed-term contract. The role combines covenant and borrower monitoring, transaction coordination and investment KYC with improvements to data, reporting and automation across the asset manager’s global Private Markets platform.",
+      "aboutRole": "You join a global Transaction Management team based in London and Cape Town, working with Investment Management, Legal, ESG, Compliance, Finance and Treasury colleagues. The team monitors private-market investments and investor obligations across Africa and other regions. Alongside core portfolio and transaction work, this role helps redesign monitoring and KYC workflows to reduce manual tasks and develop more structured, automation-ready information and reporting.",
+      "responsibilities": [
+        "Analyse waivers, consents and amendments and coordinate approvals with legal and investment teams, keeping documentation, deal economics and cash movements aligned.",
+        "Monitor borrower performance, covenants and reporting obligations and identify material changes, breaches or emerging risks.",
+        "Track conditions precedent, funding logistics, settlement and post-close setup for private-credit transactions.",
+        "Prepare information for fund committees, boards, investors and management and improve portfolio reporting.",
+        "Complete investment AML/KYC due diligence, review corporate structures and coordinate onboarding, refreshes and external KYC reporting.",
+        "Work with technology and investment colleagues to automate monitoring, reporting, escalation and lifecycle workflows."
+      ],
+      "requirements": [
+        "BCom, LLB, CA(SA) or a similar qualification.",
+        "Two to three years of relevant experience at a financial institution, bank, asset manager, DFI, professional-services, law, accounting or consulting firm.",
+        "High accuracy with data and operational detail, strong Excel skills and familiarity with modern data-handling tools.",
+        "Experience contributing to operational tools, dashboards or automation, with a systems-thinking and continuous-improvement mindset.",
+        "Python, VS Code, Power Automate or similar automation and AI tools are highly advantageous.",
+        "Strong written and verbal communication, collaboration, ownership and the ability to work across evolving processes and external counterparties."
+      ]
+    }
+  },
+  "DRAFT-f58827920969": {
+    "title": "Gestor de Soluções de Dívida",
+    "company": "Standard Bank Angola",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "corporate-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Energy/infrastructure debt origination, financial models, debt structuring, commitment terms and loan negotiations establish substantive structured financing.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000160815544",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-19",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead debt-financing solutions for energy and infrastructure clients at Standard Bank Angola in Luanda. The role combines origination, financial modelling and transaction execution with client advice and ongoing portfolio monitoring, structuring financing that meets client needs and the bank’s commercial, risk and regulatory requirements.",
+      "aboutRole": "Working within Corporate & Investment Banking, you manage debt transactions across their lifecycle and coordinate deal teams, corporate-banking colleagues and specialist risk functions. The mandate includes building the investment-banking pipeline, developing client relationships and leading financial models and financing documentation. After disbursement, you work with Coverage and the Transaction Management Unit to monitor financial performance, governance and changing credit exposures.",
+      "responsibilities": [
+        "Develop client and stakeholder relationships and originate energy and infrastructure financing opportunities.",
+        "Lead and test financial models to structure debt solutions aligned with client needs and the bank’s risk appetite.",
+        "Prepare financing documentation, including offering materials, commitment letters and transaction terms, and support loan-agreement negotiations.",
+        "Coordinate internal and external deal teams, satisfy contractual requirements and guide transactions through execution.",
+        "Monitor management accounts, transaction performance, exposures and emerging risks after disbursement.",
+        "Lead and develop team members, maintain pipeline information and deliver financial and client-service objectives."
+      ],
+      "requirements": [
+        "Bachelor’s degree in management, finance or accounting.",
+        "Five to seven years of relevant experience in debt solutions or investment banking, including corporate or leveraged-finance solutions.",
+        "Experience leading transaction teams, prioritising work and managing client relationships across origination, structuring and execution.",
+        "Knowledge of local and international debt products and the ability to develop and present financing solutions.",
+        "Experience working with specialist risk functions, regulatory frameworks and portfolio risk and exposure monitoring.",
+        "Strong financial-analysis, modelling, reporting and negotiation capability, supported by relevant sector or country knowledge."
       ]
     }
   }

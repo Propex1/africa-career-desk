@@ -8,8 +8,8 @@ test("career registry has unique IDs, seven areas and twenty-three subcategories
   const subcategories = CAREER_AREAS.flatMap(area => area.subcategories.map(subcategory => subcategory.id));
   assert.equal(areas.length, 7);
   assert.equal(new Set(areas).size, 7);
-  assert.equal(subcategories.length, 23);
-  assert.equal(new Set(subcategories).size, 23);
+  assert.equal(subcategories.length, 24);
+  assert.equal(new Set(subcategories).size, 24);
   assert.equal(DEFAULT_EXPANDED_CAREER_AREA, "private-markets");
 });
 
