@@ -1,0 +1,112 @@
+import type { Opportunity } from "@/types";
+export const APPROVED_CONTENT_2026_11_26: Opportunity[] = [
+  {
+    "id": "DRAFT-10b3c7a5e9dc",
+    "slug": "associate-investment-officer-manufacturing-and-services-east-and-southern-africa-international-finance-corporation-ifc-nairobi",
+    "employerId": "employer-046-international-finance-corporation-ifc",
+    "title": "(Associate) Investment Officer – Manufacturing & Services, East and Southern Africa",
+    "company": "International Finance Corporation (IFC)",
+    "companyInitials": "IFC",
+    "boardSection": "Jobs",
+    "status": "Active",
+    "publicationStatus": "live",
+    "lifecycleStatus": "active",
+    "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39604?c=worldbankgroup",
+    "applyUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39604?c=worldbankgroup",
+    "sourceType": "Official ATS",
+    "applyButtonText": "View role and apply",
+    "publishedAt": "2026-11-26",
+    "employerPostedAt": "2026-11-25",
+    "lastChecked": "2026-11-26",
+    "locationDisplay": "Nairobi, Kenya",
+    "roleType": "Development Finance & Multilaterals",
+    "experienceBucket": "Associate",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "region": "East Africa",
+    "logoUrl": "/logos/ifc.svg",
+    "summary": "Originate, structure and execute manufacturing and services investments across East and Southern Africa from IFC’s Nairobi office. The Associate Investment Officer / Investment Officer works on loan, equity and mezzanine transactions, combining commercial and credit analysis with development-impact assessment, client engagement and portfolio supervision.",
+    "aboutRole": "The position sits in IFC’s Manufacturing & Services Africa team and reports to the Manager of the Services unit. Its mandate spans tourism, retail, property, health care, education, industrial and manufacturing businesses. Working with regional colleagues and teams in Washington, DC, the officer supports the full investment cycle, from identifying clients and assessing opportunities to financing execution and ongoing supervision. This is a locally recruited, open-ended staff position requiring frequent regional travel.",
+    "responsibilities": [
+      "Identify and screen prospective clients and investments against market potential, financial strength, sponsor quality and strategic fit; develop relationships with private-sector clients and development partners.",
+      "Appraise investment opportunities with a focus on credit quality and development impact, preparing clear recommendations for IFC management.",
+      "Contribute to, and progressively lead, loan, equity and mezzanine financings through due diligence, structuring, negotiation, documentation, syndication and internal approvals.",
+      "Work with environmental, social, technical, legal, insurance and governance specialists to identify project risks and develop appropriate mitigation measures.",
+      "Monitor compliance with investment agreements, prepare supervision reports and identify early-warning signs; support workouts, restructurings or rescheduling where needed.",
+      "Support sector and country strategies and maintain high-quality client service from sourcing through portfolio supervision."
+    ],
+    "requirements": [
+      "An MBA or a master’s degree in Business and/or Finance.",
+      "At least four to seven years of relevant experience in investment or corporate banking, project or structured finance, private equity, or an international or development finance institution, with emerging-markets exposure.",
+      "Demonstrated sourcing, structuring, negotiation and closing experience in debt and/or equity investments, including credit analysis and financial modelling.",
+      "Sound commercial and credit judgement, financial-instrument structuring skills and the ability to build credible relationships with clients, partners and senior stakeholders.",
+      "Excellent written and spoken English; ability to work independently and in multicultural teams, deliver under pressure and travel frequently within the region.",
+      "African market, services/manufacturing investment, syndication, co-financing or blended-finance experience is desirable. The advert also asks for responsible use of commercially available AI tools, validation against primary sources and accountability for recommendations."
+    ],
+    "deadlineDate": "2026-12-09",
+    "applicationNotes": "Apply through IFC’s official World Bank Group vacancy page, requisition req39604. Applications close on 9 December 2026 at 23:59 UTC. The role is listed as Local Recruitment in Nairobi.",
+    "deadlineDisplay": "2026-12-09",
+    "verifiedDeadline": {
+      "deadlineDate": "2026-12-09",
+      "authority": "official_ats",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39604?c=worldbankgroup",
+      "verifiedAt": "2026-11-26",
+      "statement": "Apply through IFC’s official World Bank Group vacancy page, requisition req39604. Applications close on 9 December 2026 at 23:59 UTC. The role is listed as Local Recruitment in Nairobi."
+    }
+  },
+  {
+    "id": "DRAFT-fe436e09fa88",
+    "slug": "senior-quantitative-analyst-nedbank-johannesburg",
+    "employerId": "employer-109-nedbank-corporate-investment-banking",
+    "title": "Senior Quantitative Analyst",
+    "company": "Nedbank",
+    "companyInitials": "N",
+    "boardSection": "Jobs",
+    "status": "Active",
+    "publicationStatus": "live",
+    "lifecycleStatus": "active",
+    "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Senior-Quantitative-Analyst/1460609833",
+    "applyUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Senior-Quantitative-Analyst/1460609833",
+    "sourceType": "Official ATS",
+    "applyButtonText": "View role and apply",
+    "publishedAt": "2026-11-26",
+    "employerPostedAt": "2026-11-25",
+    "lastChecked": "2026-11-26",
+    "locationDisplay": "Johannesburg, South Africa",
+    "roleType": "Legal, Risk & Compliance",
+    "experienceBucket": "Senior",
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "region": "Southern Africa",
+    "logoUrl": "/logos/nedbank-logo-png-transparent.png",
+    "summary": "Develop quantitative models and portfolio insights for Nedbank’s Private Clients, Private Wealth and Small Business Services division in Johannesburg. The Senior Quantitative Analyst uses financial and statistical analysis to support portfolio performance, risk management and business decisions, working across Credit, Risk, Finance and business stakeholders.",
+    "aboutRole": "Based at 135 Rivonia Road in Sandown, this role sits in Nedbank’s quantitative career stream and supports the PWS business rather than a dedicated CIB transaction team. Work covers model development, data preparation, analytical reporting, model review and improvements across the model lifecycle. The advert calls for production-ready quantitative programming and knowledge of credit and market-risk measures, alongside the ability to explain complex findings to both technical and non-technical colleagues.",
+    "responsibilities": [
+      "Develop, maintain and enhance quantitative and statistical models supporting portfolio and business decisions; analyse complex data for trends, risks and opportunities.",
+      "Prepare, validate and quality-check data, using SAS, Python and SQL to build models and improve analytical processes.",
+      "Monitor portfolio performance and behaviour across Private Wealth and Small Business Services; investigate movements and translate findings into clear commercial insights.",
+      "Prepare accurate analytical reports and reporting packs, present results to stakeholders and respond to Credit, Risk, Finance and business analysis needs.",
+      "Monitor model performance, participate in reviews and analytical challenge sessions, and test and validate outputs before implementation or distribution.",
+      "Improve and automate models, analytical processes, reporting and data quality; share technical expertise and stay current with quantitative methods and financial-services analytics."
+    ],
+    "requirements": [
+      "Professional qualifications or an honours degree are listed as the essential qualification level. The advert’s preferred section also lists advanced diplomas or national first degrees.",
+      "At least five years of relevant quantitative-analytics experience in banking, financial services and/or insurance, including modelling, statistical analysis, portfolio or risk analytics, or decision support.",
+      "Hands-on experience preparing, analysing and interpreting complex datasets, with practical SAS, Python and SQL skills and strong quantitative programming capability.",
+      "Knowledge of statistical modelling, forecasting, production-ready model programming, model/software testing and the full model lifecycle; risk-model measures include PD/LGD, VaR, Expected Shortfall and EPE/PFE.",
+      "Ability to translate complex quantitative work into clear business insights and reporting, with advanced Excel and strong communication skills.",
+      "Credit, risk, finance or portfolio-analytics exposure is advantageous. Preferred capabilities include Power BI, explainable AI/machine learning and cloud analytics; generative-AI and LLM knowledge is advantageous."
+    ],
+    "deadlineDate": "2026-12-01",
+    "applicationNotes": "Apply through Nedbank’s official vacancy page. Closing date: 1 December 2026. The employer lists requisition 148807. This role supports Private Clients, Private Wealth and Small Business Services (PWS).",
+    "deadlineDisplay": "2026-12-01",
+    "verifiedDeadline": {
+      "deadlineDate": "2026-12-01",
+      "authority": "official_ats",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Senior-Quantitative-Analyst/1460609833",
+      "verifiedAt": "2026-11-26",
+      "statement": "Apply through Nedbank’s official vacancy page. Closing date: 1 December 2026. The employer lists requisition 148807. This role supports Private Clients, Private Wealth and Small Business Services (PWS)."
+    }
+  }
+];
+export const REVIEWED_ORDER_2026_11_26: string[] = ["associate-investment-officer-manufacturing-and-services-east-and-southern-africa-international-finance-corporation-ifc-nairobi","senior-quantitative-analyst-nedbank-johannesburg","senior-associate-property-finance-nedbank-cape-town","associate-investment-readiness-green-rise-africa-accelerator-program-acumen-nairobi-lagos","associate-business-readiness-green-rise-africa-accelerator-program-acumen-nairobi-lagos","valuations-specialist-private-markets-ninety-one-cape-town","distribution-and-syndication-associate-standard-bank-of-south-africa-johannesburg","regional-industry-director-fig-west-central-and-north-africa-international-finance-corporation-ifc-dakar","regional-industry-director-fig-east-and-southern-africa-international-finance-corporation-ifc-johannesburg","manager-balance-sheet-management-nedbank-windhoek","strategy-analyst-nedbank-johannesburg","transactor-rss-rmb-johannesburg","head-municipal-utility-reform-programme-murp-dbsa-midrand","analyst-economics-and-policy-ebrd-abidjan","trade-product-manager-mauritius-or-south-africa-standard-chartered-cib-mauritius-or-south-africa","partnerships-and-industrial-development-specialist-industrial-development-corporation-of-south-africa-idc-johannesburg","chief-finance-and-value-management-officer-standard-lesotho-bank-maseru","advisory-head-investment-banking-east-africa-stanbic-bank-kenya-nairobi","principal-banker-tmt-semed-ebrd-cairo","global-markets-analyst-stanbic-bank-kenya-nairobi","principal-investor-relations-officer-international-finance-corporation-ifc-johannesburg","principal-risk-management-officer-psf-psf-recruitment-hosted-by-afdb-abidjan","treasury-risk-analyst-ta-psf-psf-recruitment-hosted-by-afdb-abidjan","program-officer-ta-psf-psf-recruitment-hosted-by-afdb-abidjan","investment-officer-dbsa-midrand","senior-vice-president-mining-and-metals-stanbic-bank-ghana-accra","associate-director-of-risk-management-lendable-johannesburg","senior-banker-cfg-bank-cfg-finance-casablanca","analyst-client-coverage-infrastructure-stanbic-ibtc-bank-lagos","senior-finance-manager-corporate-and-investment-banking-standard-bank-of-south-africa-johannesburg","senior-consultant-country-engagement-lead-natural-capital-crossboundary-advisory-abidjan","investment-analyst-egypt-f6-ventures-giza","principal-programme-development-specialist-ict-dbsa-midrand","project-development-specialist-social-infrastructure-dbsa-midrand","project-development-specialist-ict-dbsa-midrand","transaction-management-analyst-fixed-term-contract-ninety-one-cape-town","gestor-de-solucoes-de-divida-standard-bank-angola-luanda","associate-senior-associate-consultant-natural-capital-crossboundary-advisory-nairobi","senior-credit-manager-natural-resources-origination-cib-standard-bank-of-south-africa-johannesburg","strategy-enablement-head-standard-bank-of-south-africa-johannesburg","investment-professional-anglophone-west-africa-dfi-crossboundary-advisory-lagos","senior-investments-officer-dbsa-midrand","associate-investment-officer-manufacturing-industry-international-finance-corporation-ifc-dakar","principal-investment-officer-manufacturing-and-services-east-and-southern-africa-gh1-international-finance-corporation-ifc-luanda","senior-country-risk-officer-dbsa-midrand","portfolio-manager-diversified-melville-douglas-johannesburg","monitoring-specialist-dbsa-midrand","associate-director-senior-banker-ebrd-lagos","corporate-finance-and-portfolio-manager-norrenberger-abuja","transactor-manager-standard-bank-of-south-africa-johannesburg","associate-star-venture-ebrd-abidjan","associate-star-venture-ebrd-nairobi","ir-analyst-beltone-holding-egypt","manager-credit-origination-standard-bank-namibia-windhoek-khomas-region-namibia","business-planning-and-performance-management-manager-dangote-industries-lagos","director-strategic-projects-and-infrastructure-h-f-africa-global-logistics-kinshasa","project-development-manager-totalenergies-cape-town","project-finance-associate-h-f-cfao","commercial-project-manager-siemens-energy-cairo","business-development-manager-vendor-management-inventory-m-f-africa-global-logistics-johannesburg","program-manager-satellite-business-management-orange-business-casablanca","charge-detude-africa-global-logistics-cote-divoire","director-consulting-visa-johannesburg","business-performance-partner-lines-of-solution-orange-wholesale-intl-orange-business-casablanca","responsable-developpement-offre-pme-africa-global-logistics-cote-divoire","responsable-finance-strategique-pilotage-and-financements-africa-global-logistics-conakry","asset-manager-renewables-cape-town-totalenergies-cape-town","senior-associate-fundraising-and-investor-relations-africa50-casablanca","associate-fundraising-and-investor-relations-africa50-casablanca","esg-coordinator-africa50-casablanca","senior-investment-officer-finance-du-developpement-bio-invest-abidjan","impact-assessment-officer-atidi-nairobi","assistant-vice-president-hc-securities-and-investment","senior-legal-counsel-principal-counsel-africa50-casablanca","gestor-de-mercado-de-capitais-standard-invest-standard-invest-luanda","client-analyst-standard-bank-lagos","senior-director-portfolio-management-and-performance-africa50-casablanca","head-product-structured-trade-and-commodity-finance-standard-bank-johannesburg","portfolio-implementation-analyst-ninety-one-cape-town","investment-associate-dre-africa50-casablanca","investment-analyst-falak-startups-cairo","investment-intern-falak-startups-cairo","senior-equity-research-prime-securities-giza","analyst-senegal-crossboundary-advisory-senegal","associate-gambia-crossboundary-advisory-gambia","associate-principal-senegal-crossboundary-advisory-dakar-senegal","structured-origination-lead-standard-bank-london-united-kingdom-african-and-international-markets","investment-analyst-intern-january-2027-partech-africa-nairobi-lagos","vie-analyste-projets-developpement-d-infrastructures-sag-2027-meridiam-libreville-gabon","senior-investment-associate-f6-ventures-giza-greater-cairo-egypt","senior-analyst-associate-ezdehar-management-greater-cairo-giza-area-egypt","charge-d-investissement-confirme-h-f-bmce-capital-investments-casablanca-morocco","charge-d-affaires-m-a-h-f-bmce-capital-conseil-casablanca-morocco","gerant-analyste-h-f-boa-capital-asset-management-abidjan-cote-d-ivoire","chargee-programme-acceleration-ip-abidjan","portfolio-specialist-ninety-one-cape-town-4389","legal-officer-fund-of-funds-structuration-ip-fasa","corporate-banker-cfg-bank-casablanca","gerant-multi-assets-bmce-capital-gestion-casablanca","esg-impact-officer-sawari-ventures-cairo","portfolio-officer-fasa-ip","chargee-suivi-financier-operations-ipdev-antananarivo","investment-analyst-project-development-fund-africa50-casablanca","senior-investment-analyst-project-development-fund-africa50-casablanca","investment-associate-project-development-fund-africa50-casablanca","senior-investment-associate-project-development-fund-africa50-casablanca","associate-investment-director-project-development-fund-africa50-casablanca","relationship-manager-arise-implant-china-corridor-afreximbank-cotonou","investment-associate-africa50-infrastructure-acceleration-fund-africa50-casablanca","investment-associate-project-development-africa50-casablanca","investment-associate-project-development-agia-africa50-casablanca","senior-investment-analyst-project-development-africa50-casablanca","senior-investment-associate-project-development-agia-africa50-casablanca","senior-investment-director-africa50-infrastructure-acceleration-fund-africa50-casablanca","senior-transaction-leader-open-capital-advisors-multiple-countries","infrastructure-advisory-senior-associate-kpmg-nairobi-kenya","private-equity-intern-africa50-infrastructure-acceleration-fund-casablanca-morocco","portfolio-performance-intern-africa50-casablanca","associate-director-development-africa50-mobility-abidjan"];

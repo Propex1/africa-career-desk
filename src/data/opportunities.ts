@@ -1,3 +1,4 @@
+import { APPROVED_CONTENT_2026_11_26, REVIEWED_ORDER_2026_11_26 } from "@/data/approved-content-2026-11-26";
 import { APPROVED_CONTENT_2026_11_25, REVIEWED_ORDER_2026_11_25 } from "@/data/approved-content-2026-11-25";
 import { APPROVED_CONTENT_2026_11_23_EVENING, REVIEWED_ORDER_2026_11_23_EVENING, VERIFIED_FIELDS_2026_11_23_EVENING } from "@/data/approved-content-2026-11-23-evening";
 import { APPROVED_CONTENT_2026_11_23, REVIEWED_ORDER_2026_11_23 } from "@/data/approved-content-2026-11-23";
@@ -4252,6 +4253,7 @@ const EXISTING_OPPORTUNITIES: Opportunity[] = [
 ];
 
 const OPPORTUNITY_RECORDS: Opportunity[] = [
+ ...APPROVED_CONTENT_2026_11_26,
  ...APPROVED_CONTENT_2026_11_25,
  ...APPROVED_CONTENT_2026_11_23_EVENING,
  ...APPROVED_CONTENT_2026_11_23,
@@ -4883,7 +4885,7 @@ const SEPTEMBER_27_REFRESH_IDS = new Set([
   "ACD-0051",
 ]);
 // Unified, deterministic curation replaces permanent research-batch pinning.
-export const JOBS = REVIEWED_ORDER_2026_11_25.flatMap(slug => CHRONOLOGICAL_JOBS.filter(job => job.slug === slug));
+export const JOBS = REVIEWED_ORDER_2026_11_26.flatMap(slug => CHRONOLOGICAL_JOBS.filter(job => job.slug === slug));
 const OCTOBER_17_PROGRAMME_IDS = [...APPROVED_CONTENT_2026_10_28.filter(o => o.boardSection === "Programmes").map(o => o.id),...new Set([...APPROVED_CONTENT_2026_10_25.filter((o) => o.boardSection === "Programmes").map((o) => o.id),...PROGRAMME_PRIORITY_2026_10_22, ...APPROVED_CONTENT_2026_10_17.filter((o) => o.boardSection === "Programmes").map((o) => o.id)])];
 const ALL_PROGRAMMES = sortByFirstPublication(OPPORTUNITIES.filter((o) => o.boardSection === "Programmes" && o.publicationStatus === "live"));
 export const PROGRAMMES = [
