@@ -1,0 +1,635 @@
+{
+  "schemaVersion": 1,
+  "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+  "recordCount": 505,
+  "recordShards": [
+    "reference-records-001.json",
+    "reference-records-002.json",
+    "reference-records-003.json",
+    "reference-records-004.json",
+    "reference-records-005.json",
+    "reference-records-006.json"
+  ],
+  "sourceTable": [
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "33a31090213789cb72e254cbcbac92a1a0b85ce8",
+      "commit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f6c414832390b66a2d2c8bbcef24663c32c7bbd5",
+      "commit": "fa1631f224fad5f8160f0afbce4bc4a7069c178c"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "da9b813d772d37900b902ce7ca9eeca696407ebd",
+      "commit": "a615a4b5f80e5196e1c27391d4c7162561e28fdb"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7c7c4185f78cef314e8015497c3ca4a12ac56a35",
+      "commit": "98eefb48870f3ca1be18e44cbfa8982ffe4159ee"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "8835f6bc320b84ad2381be241ecc108e7b32dd30",
+      "commit": "809bdd587aa4f7507d5d4990d8485303e157214c"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "61ba8f9ac294f6635630cca48b339e5c2cfbd828",
+      "commit": "46cbdd889ded6a6beafe7dbdd71e632c81934982"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "d4c60e1c28837c87b84d237b94036b09c203ab49",
+      "commit": "3470cb437b30b9292ffa736956fe778f8a2ea9ab"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "17cbaaa960b7000a9116b8a98c18d6eaedb2d50a",
+      "commit": "97145bd20c17ed02f8b150f9f631b6e0a98a4683"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "a7e6fd0137cd919f4e8222df61bc82e35f8de782",
+      "commit": "27f711261d2aa3098cb988e3d21c610581c3349b"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "10ab1a0618eccda3923db21089fcd35989e80165",
+      "commit": "8d8ca7a2fffb489000876459895e5b79f176e46a"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "6a944eb5e42d0814b8e2f14a497b2d0bb59af2ab",
+      "commit": "364822b70504e059750897fc70a58219acf2ab01"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "c7fd779f6f6e7723a540366454d5742c4c891970",
+      "commit": "63ccdf5966202731c9a8133c80f8722006ce0157"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7a23ee8910e4879a2646e2aee29d91cfe06b73e3",
+      "commit": "efa8ce36319f9092662bc1b784ba6bc4f176deac"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f97767b36b62efa15504fe01fe8dd3900398e5cb",
+      "commit": "36bbac7a59171f53526fd30550899db4dc5c06dc"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": null,
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "fe0a632d8bdcbc15cee9ad9087e064c3f077d7fe",
+      "commit": "4984817e0366e7d90847d3302f321f98a669ac4b"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "39a9c37ac8e0413362aa28ed0da3281bdc665c55",
+      "commit": "8c6feab588949cb73a0755de67406ce2f7c5d13c"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f3ed15622a9a91af3a05cf515516ab3da0899daf",
+      "commit": "eebe104b5db91ae655bd9791b40152019cc47c02"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "520f825634a4c1a28bf94e56e40c24b9afd4b3c0",
+      "commit": "d0ad20d07befc5beeb2de5e60dec5b0da9c1a69e"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "bc7330a1164021acbf173f86a3bbf3455c172557",
+      "commit": "29399d394c51646ddae6fc027315acb1eff805be"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "34c261b2a2e798e4a59615b20c3760234ad640da",
+      "commit": "a0eacbea4eca413ed6611011d529d43ecd3792a0"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f9976c1f2a91598ea88f8cef829e89c1413fc174",
+      "commit": "e7458e80348c8eb4830343acf4151f394b97eb2e"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "971e3c5ff3bfc36a4d9d836dd079b4ad664262a8",
+      "commit": "8cfb0bf55072ad5ee189df84289a001290efef37"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "c351c0a1484dd19a44c49bd6f31871465ed839b9",
+      "commit": "d18b561b16cb88d3020edbab0a0ae302e4fabcb6"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "e5657735b1b9b25658eeb2d62cff4ebd43703c54",
+      "commit": "6c89ea8d897edeba2417eabe5ecded85572b34fd"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "0922b70090beee5a5608c4d5956a06e6676a31ba",
+      "commit": "34487d72f0955bd730732ac6c4d090af632a382f"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "851a43907cd919afaee51cd4220b08ff9a05210a",
+      "commit": "84f836c259880b0f0e04d5494c83b4af19d4ceba"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f53516bd4714c201b18129910ac551a39101f1d0",
+      "commit": "4634e7782ae7174d96a60fff4c2cb1823c008305"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "a98922f48013ab138501ffdf16aa8a71bd0b7bdf",
+      "commit": "50297cc27113cabfbfaf6e12f31255c6757981c3"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "27c619d0d64a4e75fa409a3868f812df2146baef",
+      "commit": "ed3e11ae7210f2393ddb336cc94d4aaf0ba7d3a5"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "0c3f16bb14a9b5b73f7ba1f79490228b2fe82a17",
+      "commit": "128fa94c679e3b953d82b032550aaff4293d4ad7"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "4488f8e051fa59a6248a04d97a9f240bf047c279",
+      "commit": "2f4bfcf0318b3c05bdd0ff89fc3ea23f137089cd"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "22d670f9467a07dbc94b408cc8018d903df90100",
+      "commit": "0f0a63dcab5c1dcd49e320e4a8447688da885251"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "bf56f5292aff73c41ab684775a9dcd0c35ad8d0b",
+      "commit": "8aeb00c82405ca618ffd3ab21ca4ace10d4a11f1"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "613c689b771ef6719cab3d3011433ef1579b70b1",
+      "commit": "d7a6746bbda813eb53553749169dce8d2f74406a"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7d26cdc7ec6c509f29be9fe456ee5dc3921583e2",
+      "commit": "640b634943c8b45552bd91950f4f71159b8f162a"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7978cc3b08fdec9117f0def25ffcea7e3a48cef8",
+      "commit": "46601a850c4f473f56ca917a0631e79ec4a20458"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "9ab64b0eeef2b3ccba4c550dea167a7eebeb663d",
+      "commit": "bed1c009fd65e21e5e68294903d63913eed18031"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "35c42aeaf05412da71ccb8dc87abc6c1e04a53b7",
+      "commit": "a4b3cfee5f6675d80301441c3d73bd2953596a74"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "b119f9b618cb77b0fca423b3f0d82b1063348dc8",
+      "commit": "dd58236ffd28b28ab49a33a207f3f502ef0a99ee"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "57567bf60b875363e4983e34d7652270ad2e5ca1",
+      "commit": "bff586e09df23bb73b66cbb7becd0838d9848dbf"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "855f02f7c2f5047261e68e333f944c507db09f3a",
+      "commit": "9bf2d25e12e49f1351d83693326fcf9e9dd61cab"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7449b7571b23b858a834745f5bf67e74359d452c",
+      "commit": "147c57b028942fc4f894ae3711e750dbcf940ad1"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "9d4e831b86746091117b66723b576186cfb0aca0",
+      "commit": "2ec0fb09e0f206fcfd644f4c71e7d4541647477b"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "c15296dfb27ffc406381246e73370f214d143be5",
+      "commit": "2cacbbf8f12ac32b481a91e64d0481c8dc6da7c8"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "45303a81ed9ae0c2941a4a014acc077491cb5560",
+      "commit": "1a28c6d957b97691583986b9d10440b6badd9639"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "e288a99f1d5c47fc7d444c2793cc7b6f59f6291e",
+      "commit": "b3c57982a84b7785042e6c0eb5f493975ebd1029"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "8db4c8ab2f477ebecef50dbb3aa7b3f0edebea59",
+      "commit": "005afda7ef7139cc56580253557a9cda029f745e"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "5eebecbf810cb4244f8c835cc43256c2b05f8424",
+      "commit": "3a0837273396ab3932431bc5b88999e5bc8125b2"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "0d1a4970ed1244b3bc3e35d8e35808be02d05fdc",
+      "commit": "f0dade0fd70365c92e6c1848ccd36ae85111f855"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "046195e4c967f14bb6ecce7a57a0b7f0ac432618",
+      "commit": "0f247b5770cdd15a1651b048048923184588cdf2"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "e3384d577c4968f16c954703658dd152b5369af9",
+      "commit": "ad7afe3b7428054c643e92edde746726a6db1ed3"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "3faacf4c7944e056bdf38ff59269e19a1068eafa",
+      "commit": "ab36f05524c55e0546913fcdb3c9ae1985d52795"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "43994f4cd3cfd2fb055b358c4243ad6b96a80469",
+      "commit": "1e4e5a662fc51c4afb0ad512418797a9c441cba0"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "a932e29f4faad1de5f802f789dd0de251d41ba85",
+      "commit": "4d0da680955c5040631118b4b1670307087c5060"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "e1962d9b4689cb0337f81c1dd778a7c6834839c2",
+      "commit": "01b987a3dcbb71e076681dafeda8a36292188450"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "06bdd7265144e94d0760959876eae7430f57cc83",
+      "commit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "e29f5fc9dc3f4f0b2502169f529896afe8d69c1b",
+      "commit": "893a765d347b66819ac9401b1b3807d883f68e0b"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "25a0bd42522c7e6374fafa1f8ab122728ca37b7a",
+      "commit": "e1ea3ab94eb3559c7102fb91adf167960e0698a3"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "1c34b2d20ab2e5c1454190aa712583db6a606e07",
+      "commit": "1febdfe1e5d6746a219d7a4e4ef5ff8a7ac909f1"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "15b30d2b42638c2faee8b837a19cdf7955213cc9",
+      "commit": "bc2b48339883e95346e4e6288f2d810e6096e579"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "17d20954f3eabbcec2dd73a918539cbcaacb5a09",
+      "commit": "c9943521d2b8d7264c4c6c7f98aa177c99be7807"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "948d58cf5a86e0bd0f53ed8347cb343a126d1c08",
+      "commit": "c9de881d3a00b8c76df4f63e5fae177efc4c1604"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "05cdfcfcda4a30c2e0b55494c34003eb54bdfea9",
+      "commit": "0e7dbc5cbbde3ea7ccac76914e0d2ff87528c251"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "672f1f79a3be6e92075d3693bd46a8e2d21f63c8",
+      "commit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "5c8920d27906118a40765e0b3fc5231c29903466",
+      "commit": "2e21e2f6db5c9f7e2fb9d8b8c664de267331d2c4"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "027348b89f24eff38af0a1fa962e56dd38453110",
+      "commit": "9dc4744df22ff40bc1c1b5ef1d71e832f87451ad"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "cb82bc0bf472df6af9b16e7b212c7a3e565ab11f",
+      "commit": "74eb3cba57d293e41334c12910b32a9da3221931"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "b09a1b90c294ecf0f6ac9de4e675c6219dcbefe8",
+      "commit": "d7976b271e9eb66f562d6f03588bfb022b817474"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "b2e59f6b4e604f7b33fdeb0e4652ecc2a43f7973",
+      "commit": "19d47568381d8e2f0e18017f2fb4ac17c33b6355"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "59fa3977341497389787fd193e7be58e5c6396ae",
+      "commit": "88c53200f40ffc8a8961e8478bcfb97ae0841d66"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "154fb593f780a1c0a95e79df9fcf6ec3849fa2ff",
+      "commit": "c7a4a9e07e20c62842d249359a95e67dedad6c21"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "7887f1a6713c7fb3374441d8a7b6b0e9fd6e4f72",
+      "commit": "17640204cca744e1d0430fa8d1e4f998f60f159a"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "540b90d8d34eef62b6039d822aea8b045fad4885",
+      "commit": "af5f831e1293f090cf18fa17f232865dc2852fa8"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "4d3d6b2529a1374e22a4eb10304556a1552812b6",
+      "commit": "f19d8898d56816bf114908085313a1d79229d1f2"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "00f1ee47be1d085ab19c4c2ab46f47ddc20f10db",
+      "commit": "d33e8e2dee2d6fd3e366db9a04784aeab92ca8ed"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "91682cad87229d56c4e8a369f7fbc733045bdefe",
+      "commit": "7874c8dc741ce649822e01e2abf9a950e8f9d063"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "8f578ed32ab15153869b501edfe592a1538aad71",
+      "commit": "792e8948d21fe15052c0dd505b7a1b98b50dd211"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "f752b630aee7003d736222b67989b99ae8e845b4",
+      "commit": "706485aed643179ed91e7c17dcad6a69367d8d58"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "51cebcf9248d55cb611607e137800777f3ce1406",
+      "commit": "d496abff43150c257f3e77289c34ebf84ad3bc34"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "2ca01a4844368cd552769a1152c46b54fcc950dc",
+      "commit": "7f10559ffac0503d48d55ce185455f010e270516"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "16dad0744c8b5235ace0f3a4353fd0260cccd953",
+      "commit": "adf3afdf828c9663f2f482a9ac3e6bbc17210e23"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "0260382e5f25d35e929bae49898c49a25f0412f8",
+      "commit": "6081943d295bf646fef99bf55fb7086e37cb1ba3"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "4f52067ef9ce7b5acc72d0e91972cb13b5b1cfe1",
+      "commit": "e3200a6c802ab5577bc7a0f93ea32eef0f2897ab"
+    },
+    {
+      "path": "src/data/opportunities.ts",
+      "blob": "12b52a38b65b191f5d9e0700262d565fcbff716a",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-09-23.ts",
+      "blob": "859201283ba6b89706043e356b7ad2e15953efd8",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/batch-3-6-preview-opportunities.ts",
+      "blob": "bb13288d426c6a47c508e048b31bce4e9b241755",
+      "commit": "944a0ba2726a58cc9bd96cd350e8ed3af096c1b6"
+    },
+    {
+      "path": "src/data/batch-3-6-preview-opportunities.ts",
+      "blob": "f33d6937bf659005aea68a267d07e66c7697242b",
+      "commit": "bed1c009fd65e21e5e68294903d63913eed18031"
+    },
+    {
+      "path": "src/data/batch-3-6-preview-opportunities.ts",
+      "blob": "c639aa5fb73c1d20ba2f498587b6433e9c8ecc4d",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-jobs-2026-09-16.ts",
+      "blob": "63a6aa30e12c86b60b2b6eebc86e582f1e963e0b",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-20.ts",
+      "blob": "2bed0497f629060e9d9e30ea0e922b0e7d1b7534",
+      "commit": "b75b6dcedd1fca9f96532965bf2b0cdff0059860"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-20.ts",
+      "blob": "6d6daaa9b3cd43f370a5e796c4d5398903df79df",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-jobs-2026-09-20.ts",
+      "blob": "b64af751b877ef781eb9045561f29137752757cf",
+      "commit": "b3c57982a84b7785042e6c0eb5f493975ebd1029"
+    },
+    {
+      "path": "src/data/approved-jobs-2026-09-20.ts",
+      "blob": "94bf861480a9fd311f1bfbf7eb2d0be4b6352d58",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-09-27.ts",
+      "blob": "4a097dccc781ea7f9e3e3078dc1922fe3990600b",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-09-30.ts",
+      "blob": "26a1a982a02aa46782193f430795107a8638321d",
+      "commit": "4fea625d235fb7a12e170df55b76cce35dbc4af1"
+    },
+    {
+      "path": "src/data/approved-content-2026-09-30.ts",
+      "blob": "167dcc2be15fb12b0e1436087b25f131918c5840",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-04.ts",
+      "blob": "f508356092cf0f1d8439b84b6b305853d0d4d1c9",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-08.ts",
+      "blob": "4314b499971a3d0958c39d7b715a9d3b9da9c05a",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-11.ts",
+      "blob": "e5aa1ed7463972751870a0d13191508f43f2a873",
+      "commit": "84b0afcce8302f7d8b034d724d7740df412a3ba8"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-11.ts",
+      "blob": "4865d0874d2b33803c78d9a5ee9d8746ba29a167",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-25.ts",
+      "blob": "2d43321ebf5b3df1471a4f0895565677544adaee",
+      "commit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-25.ts",
+      "blob": "447ff92f18670809e3429b5ac74d40ac3524465a",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-23-evening.ts",
+      "blob": "f296d8acf5d6dccfc59e09e844525b4edadd5184",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-02.ts",
+      "blob": "e2e82910861cf54ebfaeec2713dc941fe253b7c3",
+      "commit": "d256debd15faef18b582284076233ff5c65c512f"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-02.ts",
+      "blob": "43c5a277dc7b216154647bcdf9067baa0e8a819a",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-15.ts",
+      "blob": "c6b21d68f0d81a9e87028d71dc2304ffb64a74f7",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-17.ts",
+      "blob": "b1f6b3bb0438e33f5cbf6f5f6c1d7644257deee5",
+      "commit": "b75b6dcedd1fca9f96532965bf2b0cdff0059860"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-17.ts",
+      "blob": "81f207edb36e650b04a8cdfc1dde6649c9bd978b",
+      "commit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-17.ts",
+      "blob": "0334d9dbe6904a930ccff81e8b85f8b17303f8f7",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-availability-2026-11-28.ts",
+      "blob": "272dc465aff7e9c59909503854a91b72f499cbe8",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-10.ts",
+      "blob": "9962f85a8070966ea8581c1fe750e9e37fdadedd",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-22.ts",
+      "blob": "7d4422050f2e44d84dda71353bfb79f4c399b70d",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-26.ts",
+      "blob": "19a4cad7c8476a9fe05925abf02ed4775ee24edb",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-13.ts",
+      "blob": "4959e41e7df3f5407dc37ba29789716ff982bb30",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-01.ts",
+      "blob": "42338069899f035353a960d03796f5468a2b2507",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-19.ts",
+      "blob": "60f5f67e0e88dcd552744afda648e49770b4d27c",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-05.ts",
+      "blob": "aa8b55c08f9556e9ac7b49f058fe1e2856593dc7",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-26.ts",
+      "blob": "c8bf504631ff7b7943e5ff16e4705fbee0ec843c",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-07.ts",
+      "blob": "d111e23b3eb0b0c06fe7a5b06068d5ed7eb2018f",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-30.ts",
+      "blob": "4c10f7a81ece7b19aa37c5965d8216f0819135da",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-10-28.ts",
+      "blob": "5c655dc77723968655469e72e2d7ed0974eda40b",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-23.ts",
+      "blob": "405f4d3ae159c4f23cd069654ef741e974946b54",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    },
+    {
+      "path": "src/data/approved-content-2026-11-25.ts",
+      "blob": "4b53d29e1f34f331601eaa94b7faac0a81b41444",
+      "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e"
+    }
+  ]
+}
