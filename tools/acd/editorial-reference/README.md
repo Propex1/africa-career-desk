@@ -63,3 +63,12 @@ npm run acd:v2:preflight
 ```
 
 The generator uses the fixed base by default. Do not casually relabel old source history when refreshing; bump the source base deliberately, preserve prior reference versions and review changed evidence. No public job record is imported or modified by these commands. No scheduler or automatic publisher is created.
+
+
+## Frozen initial eligibility framework v1
+
+The newer `framework-v1.ts` and `evaluate-framework-v1.mjs` implement the **initial offline evaluation** documented in [the framework](../../../docs/acd-v2/eligibility-framework-v1.md) and [initial report](../../../docs/acd-v2/initial-eligibility-evaluation-v1.md). They keep eligibility, classification and publication readiness separate. Direct Investment Legal candidates require editorial review. The old `policy.ts`, original reference shards and historical decisions remain unchanged as the comparison baseline.
+
+`framework-v1-evaluation.json` records counts, sparse confirmed metrics and provisional real-source disagreements. `framework-v1-assessments.json` retains all 505 inventory assessments; `framework-v1-workbook-assessments.json` retains 130 overlapping workbook candidate assessments with original decisions. These are unconfirmed review aids, not approved labels or publication instructions. Two provisional scope false-inclusion candidates and two primary-function disagreements remain explicitly reported. No record is publication-ready, no fresh source check is claimed and every publicationAction is none.
+
+Run `node --experimental-strip-types tools/acd/editorial-reference/evaluate-framework-v1.mjs` after recovery, and `node --experimental-strip-types tools/acd/editorial-reference/framework-v1.test.ts` for the separate seven-test framework suite. Shared test-runner registration remains a coordinator integration decision.

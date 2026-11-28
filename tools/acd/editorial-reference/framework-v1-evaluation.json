@@ -1,0 +1,636 @@
+{
+  "frameworkVersion": "eligibility/1.0.0",
+  "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+  "asOfDate": "2026-11-28",
+  "assessmentKind": "deterministic offline initial review; no fresh vacancy verification",
+  "populations": {
+    "inventory": 505,
+    "jobs": 451,
+    "nonJobContext": 54,
+    "workbookCandidates": 130,
+    "workbookLinkedToCanonical": 87,
+    "workbookWithDecisions": 41
+  },
+  "inventoryEligibility": {
+    "in-scope": 363,
+    "needs-review": 138,
+    "outside-future-scope": 4
+  },
+  "jobEligibility": {
+    "in-scope": 363,
+    "needs-review": 84,
+    "outside-future-scope": 4
+  },
+  "workbookEligibility": {
+    "needs-review": 130
+  },
+  "inventoryClassification": {
+    "mapped": 313,
+    "unresolved": 192
+  },
+  "jobClassification": {
+    "mapped": 313,
+    "unresolved": 138
+  },
+  "legalCandidates": [
+    {
+      "id": "ACD-0250",
+      "title": "Legal Officer — Fund of Funds & Structuration",
+      "legalStatus": "direct-investment-legal",
+      "eligibility": "needs-review",
+      "reviewRequired": true,
+      "readiness": "not-ready"
+    },
+    {
+      "id": "DRAFT-4142b13c28a8",
+      "title": "Senior Legal Counsel / Principal Counsel",
+      "legalStatus": "direct-investment-legal",
+      "eligibility": "needs-review",
+      "reviewRequired": true,
+      "readiness": "not-ready"
+    }
+  ],
+  "expiredClosedOrRemovedButEligible": 206,
+  "readiness": {
+    "requires-verification-and-approval": 130,
+    "not-ready": 375
+  },
+  "freshVerificationCount": 0,
+  "publicationActions": 0,
+  "confirmedMetrics": {
+    "eligibleExamples": 1,
+    "excludedUnconfirmed": 0,
+    "missingPredictions": 0,
+    "invalidSelections": 0,
+    "scope": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1
+    },
+    "subcategory": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1
+    }
+  },
+  "baselineEligibilityTransitions": {
+    "in-scope -> in-scope": 327,
+    "needs-review -> needs-review": 106,
+    "needs-review -> in-scope": 35,
+    "in-scope -> needs-review": 30,
+    "in-scope -> outside-future-scope": 2,
+    "outside-future-scope -> in-scope": 1,
+    "needs-review -> outside-future-scope": 1,
+    "outside-future-scope -> outside-future-scope": 1,
+    "outside-future-scope -> needs-review": 2
+  },
+  "disagreementCount": 273,
+  "provisionalChallenges": [
+    {
+      "id": "DRAFT-7eb93ecda65b",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment",
+      "reason": "Direct unlisted infrastructure appraisal/execution; NPV does not make this corporate FP&A.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "a5f0366a19e59a12228e8ba104e0bd10562a8a827cd80cf0a27b527fd04663b6",
+      "sourceUrl": "https://www.pic.gov.za/documents/publications/355/1f63a28bb1c94352bcedef10498f3ef2.pdf",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Investment",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "strategic-finance-investments",
+      "baselineFunction": "Strategic Finance",
+      "sourceEvidence": [
+        "Screen transactions and scope preliminary due diligence.",
+        "Prepare engagement letters, indicative term sheets and diligence reports.",
+        "Build financial models for returns, sensitivities and downside scenarios.",
+        "Maintain sector research and prepare investment appraisal materials.",
+        "Support transaction implementation and monitor performance, risk and ESG compliance.",
+        "Contribute to client reporting and mentor junior staff."
+      ]
+    },
+    {
+      "id": "ACD-0005",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment",
+      "reason": "Direct equity infrastructure fund investing; references to DFIs do not make the employer a DFI.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "7889256cd0bb5aa2cada46b330732ecb3aec8bc1c2a9da50a0a2cc3e43acbc08",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Impact & ESG",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Develop investment pipelines by identifying market trends using sector and country expertise",
+        "Execute financial modelling and investment valuations",
+        "Coordinate due diligence workstreams across financial, commercial, legal, technical and ESG disciplines",
+        "Engage in sponsor negotiations and support deal documentation",
+        "Create project materials for internal and external stakeholders",
+        "Monitor portfolio performance and assess exit opportunities"
+      ]
+    },
+    {
+      "id": "ACD-0006",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment",
+      "reason": "Project-finance modelling supports direct equity investment, not a bank-lending mandate.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "6ac350d1702f766e46dc964879e91969977972bbbcb6a8596950534b0b1049e8",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Investment",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "project-structured-finance",
+      "baselineFunction": "Financing & Origination",
+      "sourceEvidence": [
+        "Build and manage pipelines of investment opportunities using sector and market knowledge",
+        "Structure project development and equity investments",
+        "Conduct financial modelling and valuations",
+        "Coordinate due diligence across financial, commercial, legal, technical and ESG domains",
+        "Lead negotiations with sponsors, lenders and government entities",
+        "Drive portfolio projects toward bankability",
+        "Prepare project documentation for internal and external stakeholders",
+        "Cultivate relationships with infrastructure companies, banks and government officials",
+        "Supervise portfolio companies and mentor junior staff"
+      ]
+    },
+    {
+      "id": "ACD-0012",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment",
+      "reason": "Financial models, structuring and diligence support infrastructure investing.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "202e268d0759053f33e227a34b48aeca7b900b6cb9e872e0a9cc91ca3ef62fc4",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Impact & ESG",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "project-structured-finance",
+      "baselineFunction": "Financing & Origination",
+      "sourceEvidence": [
+        "Build and maintain complex project finance models with sensitivity and scenario analyses",
+        "Analyse capital structures, project financing and returns under various assumptions",
+        "Conduct industry, market and company research",
+        "Participate in all stages of Africa50’s project processing cycle from development through disbursement",
+        "Coordinate due diligence across financial, technical, commercial, legal and ESG workstreams",
+        "Support project development investments focused on achieving bankable outcomes",
+        "Assist senior team members in negotiations with sponsors, lenders and public authorities",
+        "Prepare project documentation for internal and external stakeholders"
+      ]
+    },
+    {
+      "id": "ACD-0016",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment",
+      "reason": "Infrastructure fund equity/quasi-equity investment and exits; DFI counterparties are not the primary activity.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "e597a7be86fbaa370a74d6a9756ccb716dd1f0b7058c77e82fb5b9f05d8d02bb",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Investment",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "investment-lending",
+      "baselineFunction": "Investment",
+      "sourceEvidence": [
+        "Build proprietary deal pipelines across priority infrastructure themes through networks with sponsors, governments and advisors; anticipate market trends and regulatory shifts",
+        "Lead equity and quasi-equity investment evaluations with a focus on high returns and downside protection",
+        "Hold board representation responsibility for portfolio companies; establish and monitor KPIs and value creation initiatives",
+        "Own exit strategy from entry; lead sell-side processes and manage co-shareholder alignment",
+        "Build senior relationships with co-investors, development finance institutions and government principals",
+        "Lead multi-disciplinary teams, set analytical standards and mentor investment professionals"
+      ]
+    },
+    {
+      "id": "DRAFT-c93d3acd7658",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "strategic-finance-investments",
+      "expectedFunction": "Strategic Finance",
+      "reason": "Capex NPV/IRR, funding needs and post-investment reviews substantiate strategic finance; Treasury collaboration is secondary.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "8be2a76b2de8a58574aea4227eb6a888396c204e3fd2e521d4aea2c462ca4af9",
+      "sourceUrl": "https://careers.dangote.com/job/Head-Office-Lagos-Business-Planning-&-Performance-Management-Manager-Head/1373590757",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "strategic-finance-investments",
+      "actualFunction": "Strategic Finance",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "treasury-funding-alm",
+      "baselineFunction": "Strategic Finance",
+      "sourceEvidence": [
+        "Lead annual budgets and three-to-five-year business plans, including consolidated Board submissions.",
+        "Develop driver-based forecasts, scenario analyses and performance scorecards.",
+        "Evaluate capital expenditure using NPV, IRR and payback analysis, and conduct post-investment reviews.",
+        "Partner with Treasury on cash forecasting, funding needs and working-capital improvement.",
+        "Provide strategic analysis for pricing, market entry, M&A and restructuring, while improving planning systems and coaching analysts."
+      ]
+    },
+    {
+      "id": "DRAFT-ac7c1fc547f6",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "fpa-finance-leadership",
+      "expectedFunction": "FP&A & Business Partnering",
+      "reason": "Revenue/margin analysis, challenged assumptions and corrective decisions qualify without M&A.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "43517174403966811180ab48c98a4895bcb14601a2cb38b777123d6e1cdcd825",
+      "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "fpa-finance-leadership",
+      "actualFunction": "FP&A & Business Partnering",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "fpa-finance-leadership",
+      "baselineFunction": "FP&A & Business Partnering",
+      "sourceEvidence": [
+        "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
+        "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
+        "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
+        "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
+        "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
+      ]
+    },
+    {
+      "id": "DRAFT-4142b13c28a8",
+      "expectedEligibility": "needs-review",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Investment Legal",
+      "reason": "Actual investment/exits/fund structuring legal duties support narrow eligibility, with required editorial review; fund formation alone is not fund-of-funds investing.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "dd1fbb443f3db139d5cca2a3519c42e045280c204310474e0171b15fbfe4a0fd",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/legal-counsel",
+      "actualEligibility": "needs-review",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Investment Legal",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "fund-investments-secondaries",
+      "baselineFunction": "Investment Legal",
+      "sourceEvidence": [
+        "Lead legal execution of investments and exits, negotiating purchase, shareholder, development, financing and other transaction agreements.",
+        "Manage due diligence, external counsel and closing processes, and advise investment teams on legal and commercial risks.",
+        "Structure and launch funds or other investment vehicles and negotiate offering, partnership, subscription and investor documentation.",
+        "Support fundraising, investor onboarding and regulatory compliance, including cross-border marketing, sanctions, AML/KYC and privacy considerations.",
+        "Oversee entity and fund governance, preparing approvals, board materials, resolutions and filings across the group.",
+        "Advise on portfolio matters, mentor junior colleagues and improve templates, policies and the organisation’s legal knowledge base."
+      ]
+    },
+    {
+      "id": "ACD-0250",
+      "expectedEligibility": "needs-review",
+      "expectedSubcategory": "fund-investments-secondaries",
+      "expectedFunction": "Investment Legal",
+      "reason": "Fund agreements, side letters and fund commitments are direct fund-of-funds legal support; mandatory initial review remains.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "7292bef9e0a992119fc0a88a49a8fd99a6b1f5d020876f6e9eac3f6c0653a7e5",
+      "sourceUrl": "https://www.ietp.com/fr/content/legal-officer-fund-of-funds",
+      "actualEligibility": "needs-review",
+      "actualSubcategory": "fund-investments-secondaries",
+      "actualFunction": "Investment Legal",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "fund-investments-secondaries",
+      "baselineFunction": "Investment Legal",
+      "sourceEvidence": [
+        "Review fund agreements, private-placement materials and side letters and coordinate legal due diligence.",
+        "Support investment-vehicle structuring and governance, including work involving Mauritius, Luxembourg and France.",
+        "Manage external counsel and legal documentation throughout fund commitments and related investment activity."
+      ]
+    },
+    {
+      "id": "DRAFT-c07abbd13795",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": "infrastructure-real-assets",
+      "expectedFunction": "Impact & ESG",
+      "reason": "Investment ESG due diligence and portfolio commitments are specialist support; the function is not primary Investment.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "7f259252aee35350f064ed0fd834c7b98495077cca5e7e72b2fd224bee4e8ea2",
+      "sourceUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "infrastructure-real-assets",
+      "actualFunction": "Impact & ESG",
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Help apply the ESMS during screening and due diligence, preparing ESG documentation and inputs for investment committee papers.",
+        "Track portfolio commitments, support site visits and audits, and document significant ESG incidents for escalation.",
+        "Collect and maintain environmental, climate, gender and impact data, checking its consistency and completeness.",
+        "Coordinate reporting inputs from investment teams, consultants and portfolio companies for internal and external disclosures.",
+        "Research ESG practices and improve monitoring tools, templates and the underlying management system.",
+        "Prepare presentations, knowledge materials and training support, and coordinate engagements with DFIs and other stakeholders."
+      ]
+    },
+    {
+      "id": "DRAFT-92837797fbe3",
+      "expectedEligibility": "in-scope",
+      "expectedSubcategory": null,
+      "expectedFunction": null,
+      "reason": "Substantive sovereign debt/credit risk can be eligible with no precise existing child category.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "067bd08cf7ef5e9676904b8187f964a6e3ee19500b3d2a9cddc6c85c6ac1a579",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/Country-Risk-Head_R55667-1",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": null,
+      "actualFunction": null,
+      "baselineEligibility": "in-scope",
+      "baselineSubcategory": "strategic-finance-investments",
+      "baselineFunction": "Strategic Finance",
+      "sourceEvidence": [
+        "Oversee sovereign debt sustainability, external liquidity, transfer and convertibility risk, scenario analysis and early-warning indicators.",
+        "Partners early with investment banking, regional and credit teams on cross-border transactions, growth plans and market exposure.",
+        "Provide leadership and accountability for the country and sovereign risk agenda across Broader Africa, shaping country risk strategy, appetite, governance and portfolio direction.",
+        "Country and sovereign credit strategy · Own and direct the country risk assessment and sovereign risk strategy across Broader Africa, including sovereign ratings, country limits and concentration insights. · Shape country risk appetite, limits and portfolio direction within approved governance and delegated authority. · Direct risk appetite interventions where sovereign, macroeconomic, credit conditions or geopolitical developments materially change the organisation's risk position. · Provide country-risk input into Credit EXCO and other executive governance decisions.",
+        "Economics and forward-looking risk intelligence · Integrate macroeconomic, fiscal, monetary, political and geopolitical developments into actionable credit assessments. · Oversee sovereign debt sustainability, external liquidity, transfer and convertibility risk, scenario analysis and early-warning indicators. · Explain implications for banks, corporates, households and sovereign counterparties across African markets.",
+        "Commercial advisory and business partnership · Partners early with investment banking, regional and credit teams on cross-border transactions, growth plans and market exposure. · Deliver independently, solutions-oriented challenge that balances commercial opportunity with credit discipline. · Translate complex risk analysis into clear recommendations for senior decision-makers."
+      ]
+    },
+    {
+      "id": "DRAFT-43904592e8cf",
+      "expectedEligibility": "outside-future-scope",
+      "expectedSubcategory": null,
+      "expectedFunction": null,
+      "reason": "Payment-volume growth, partnerships and go-to-market do not establish investment or financing responsibility.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "7e5022ce4e36a312990e789dfc7783706d5125a482a91f2cba9bb535bb59dd50",
+      "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/CI---Abidjan-Cote-DIvoire/Manager--Account-Executive---Fintechs-and-Wallets-Partners--Abidjan_REF082486W",
+      "actualEligibility": "outside-future-scope",
+      "actualSubcategory": null,
+      "actualFunction": null,
+      "baselineEligibility": "outside-future-scope",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Execute wallet and partner strategies to grow payment volumes and market share.",
+        "Secure fintech deals and support negotiations of major strategic partnerships.",
+        "Build senior partner relationships and communicate local market and regulatory needs.",
+        "Coordinate mobile-payment solution launches and go-to-market activity.",
+        "Work with digital and functional teams on new propositions and regional best practices."
+      ]
+    },
+    {
+      "id": "DRAFT-b2b3e647c4a8",
+      "expectedEligibility": "needs-review",
+      "expectedSubcategory": null,
+      "expectedFunction": null,
+      "reason": "Cash-flow/risk duties and project accounting mix require editorial clarification, not automatic inclusion.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "d6b852e89b530225d8c795790fe961066a9936a551fb7f10f111ac3d568abadc",
+      "sourceUrl": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/304446",
+      "actualEligibility": "needs-review",
+      "actualSubcategory": null,
+      "actualFunction": null,
+      "baselineEligibility": "needs-review",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Maintain project calculations, cost controls, financial reporting and free-cash-flow forecasts.",
+        "Manage guarantees, hedging, insurance and tax-related financial risks.",
+        "Lead variation-order discussions and assess price-indexation effects.",
+        "Track orders, invoicing, receivables and payments to protect project cash generation.",
+        "Coordinate project stakeholders and ensure compliance with commercial and financial controls."
+      ]
+    },
+    {
+      "id": "DRAFT-aa4d33a969b6",
+      "expectedEligibility": "needs-review",
+      "expectedSubcategory": null,
+      "expectedFunction": null,
+      "reason": "General strategy enablement and operating-model execution dominate; references to capital allocation require evidence of a substantive finance remit.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "aa8575290e621c1d07ffff027b2e0e4cdf8cb7df0239d0bc7efe8b2ad611ea6e",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": "strategic-finance-investments",
+      "actualFunction": "Strategic Finance",
+      "baselineEligibility": "needs-review",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Advise executives on market positioning, competitive advantage and strategic trade-offs, supported by research, foresight and scenario planning.",
+        "Shape strategic investment decisions and portfolio priorities and influence budgeting, investment planning and capital allocation.",
+        "Develop and refine strategic initiatives and establish resources, sequencing, execution standards and governance across geographies.",
+        "Diagnose internal-client problems, resolve execution barriers, escalate risks and align strategic committee agendas.",
+        "Prepare executive and Board narratives, leadership dialogues and communications that translate strategy into organisational action.",
+        "Track strategic KPIs, use product and performance data to refine strategy, and align business and operating models with customer needs.",
+        "Integrate strategic risk, regulatory responses, continuity and external knowledge partnerships into planning and execution."
+      ]
+    },
+    {
+      "id": "DRAFT-00fe1ab79fde",
+      "expectedEligibility": "needs-review",
+      "expectedSubcategory": null,
+      "expectedFunction": null,
+      "reason": "Logistics VMI sales and tailored trade-finance context do not establish ownership of financial structuring; retain editorial review.",
+      "labelAuthority": "provisional-analyst-challenge",
+      "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+      "sourceRevision": "70f7c0cf9572368873378ef284e9aaf0c40ee8c0236f5da9348fbe0b226a5da3",
+      "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-business-development-manager-vendor-management-inventory-m-f_9897.aspx",
+      "actualEligibility": "in-scope",
+      "actualSubcategory": null,
+      "actualFunction": null,
+      "baselineEligibility": "outside-future-scope",
+      "baselineSubcategory": null,
+      "baselineFunction": null,
+      "sourceEvidence": [
+        "Identify and secure vendor-managed inventory opportunities in existing and target accounts.",
+        "Develop client, supplier and strategic-partner relationships.",
+        "Prepare proposals, business cases and tailored trade-finance and supply-chain solutions.",
+        "Analyse market trends, competitor activity and expansion opportunities.",
+        "Coordinate delivery teams and monitor account performance, risk and regulatory compliance."
+      ]
+    }
+  ],
+  "categoryCoverage": [
+    {
+      "areaId": "private-markets",
+      "subcategoryId": "private-equity-growth",
+      "label": "Private Equity & Growth",
+      "proposedMappedCount": 5,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "private-markets",
+      "subcategoryId": "venture-capital",
+      "label": "Venture Capital",
+      "proposedMappedCount": 1,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "private-markets",
+      "subcategoryId": "private-credit",
+      "label": "Private Credit",
+      "proposedMappedCount": 4,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "private-markets",
+      "subcategoryId": "infrastructure-real-assets",
+      "label": "Infrastructure & Real Assets",
+      "proposedMappedCount": 34,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "private-markets",
+      "subcategoryId": "fund-investments-secondaries",
+      "label": "Fund Investments & Secondaries",
+      "proposedMappedCount": 4,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "label": "Investment & Lending",
+      "proposedMappedCount": 79,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "label": "Advisory & Capital Mobilisation",
+      "proposedMappedCount": 29,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "label": "M&A & Corporate Finance",
+      "proposedMappedCount": 7,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "transaction-restructuring-advisory",
+      "label": "Transaction & Restructuring Advisory",
+      "proposedMappedCount": 2,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "capital-markets",
+      "label": "Capital Markets",
+      "proposedMappedCount": 3,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "asset-management-research",
+      "subcategoryId": "portfolio-management",
+      "label": "Portfolio Management",
+      "proposedMappedCount": 5,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "asset-management-research",
+      "subcategoryId": "investment-research",
+      "label": "Investment Research",
+      "proposedMappedCount": 5,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "asset-management-research",
+      "subcategoryId": "investment-advisory-wealth-management",
+      "label": "Investment Advisory & Wealth Management",
+      "proposedMappedCount": 0,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "institutional-sales-trading",
+      "label": "Institutional Sales & Trading",
+      "proposedMappedCount": 8,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "structuring-financial-engineering",
+      "label": "Structuring & Financial Engineering",
+      "proposedMappedCount": 2,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "label": "Corporate Banking",
+      "proposedMappedCount": 46,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "label": "Project & Structured Finance",
+      "proposedMappedCount": 6,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "trade-syndicated-finance",
+      "label": "Trade & Syndicated Finance",
+      "proposedMappedCount": 6,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "treasury-funding-alm",
+      "label": "Treasury, Funding & ALM",
+      "proposedMappedCount": 2,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "corporate-ma",
+      "label": "Corporate M&A",
+      "proposedMappedCount": 2,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
+      "label": "Strategic Finance & Investments",
+      "proposedMappedCount": 11,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "fpa-finance-leadership",
+      "label": "FP&A & Finance Leadership",
+      "proposedMappedCount": 51,
+      "ownerConfirmedCount": 0
+    },
+    {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "corporate-investor-relations",
+      "label": "Corporate Investor Relations",
+      "proposedMappedCount": 1,
+      "ownerConfirmedCount": 1
+    }
+  ],
+  "limitations": [
+    "Eligibility false-inclusion/false-exclusion rates cannot be estimated from the one confirmed scope example and no confirmed negative set.",
+    "Historical acceptance/rejection or closure is not a new owner-confirmed taxonomy/eligibility label.",
+    "Provisional challenge disagreements are analyst judgements, not confirmed errors or measured model accuracy.",
+    "Synthetic 23-category controls test policy wiring, not historical accuracy or model generalisation.",
+    "Workbook candidates overlap canonical inventory; do not sum these populations.",
+    "Missing responsibilities, Africa mandate or source evidence remain review cases.",
+    "Historical availability exclusions and recorded expiry affect publication readiness, not inherent finance relevance.",
+    "The prior baseline and all original records/decisions are unchanged."
+  ]
+}
