@@ -4,11 +4,13 @@ import {
   Fragment,
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
 } from "react";
 import CareerAreaFilter from "./CareerAreaFilter";
+import FilterOption from "./JobFilterOption";
 import { CAREER_FILTER_OPTIONS, careerFilterLabel, toggleCareerSelection } from "@/data/career-taxonomy";
 import { addedWithin, localCalendarDay, visibleOnBoard } from "@/lib/job-freshness";
 import type { Opportunity } from "@/types";
@@ -55,6 +57,7 @@ function FilterDropdown({
 }: FilterDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const menuId = useId();
 
   useEffect(() => {
     if (!isOpen) return;
@@ -81,14 +84,17 @@ function FilterDropdown({
     <div
       ref={ref}
       className={`relative w-full sm:min-w-0 lg:flex-1 lg:min-w-[160px] ${className ?? ""}`}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setIsOpen(false);
+      }}
     >
       <button
         type="button"
-        aria-haspopup="listbox"
+        aria-controls={menuId}
         aria-expanded={isOpen}
-        aria-label={label}
+        aria-label={`${label}: ${selected.length ? selected.join(", ") : allLabel}`}
         onClick={() => setIsOpen((value) => !value)}
-        className={`w-full flex items-center justify-between gap-[10px] bg-white border-[1.5px] ${
+        className={`jobs-filter-trigger w-full flex items-center justify-between gap-[10px] bg-white border-[1.5px] ${
           hasSelection
             ? "border-acd-border-hover text-acd-green"
             : "border-acd-border-light text-acd-navy"
@@ -117,9 +123,10 @@ function FilterDropdown({
 
       {isOpen && (
         <div
-          role="listbox"
-          aria-multiselectable="true"
-          className="absolute top-[calc(100%+8px)] left-0 right-0 bg-white border border-acd-border-dropdown rounded-[14px] shadow-[0_14px_34px_-16px_rgba(20,43,63,0.22)] p-[7px] z-50 max-h-[300px] overflow-auto"
+          id={menuId}
+          role="group"
+          aria-label={`${label} filters`}
+          className="jobs-filter-menu absolute top-[calc(100%+8px)] left-0 right-0 bg-white border border-acd-border-dropdown rounded-[14px] shadow-[0_14px_34px_-16px_rgba(20,43,63,0.22)] p-[7px] z-50 max-h-[300px] overflow-auto"
           style={{ minWidth: "100%" }}
         >
           <FilterOption
@@ -135,6 +142,7 @@ function FilterDropdown({
               count={counts.options[option] ?? 0}
               selected={selected.includes(option)}
               onToggle={() => onToggle(option)}
+              disabled={(counts.options[option] ?? 0) === 0 && !selected.includes(option)}
             />
           ))}
         </div>
@@ -143,62 +151,6 @@ function FilterDropdown({
   );
 }
 
-function FilterOption({
-  label,
-  count,
-  selected,
-  onToggle,
-}: {
-  label: string;
-  count: number;
-  selected: boolean;
-  onToggle: () => void;
-}) {
-  const disabled = count === 0 && !selected;
-
-  return (
-    <button
-      type="button"
-      role="option"
-      aria-selected={selected}
-      disabled={disabled}
-      onClick={onToggle}
-      className={`w-full flex items-center gap-[11px] text-left bg-transparent border-0 rounded-[8px] px-[11px] py-2 text-[13.5px] font-sans transition-colors ${
-        disabled
-          ? "cursor-not-allowed text-acd-dimmer opacity-55"
-          : selected
-            ? "cursor-pointer text-acd-green font-semibold hover:bg-[#F0F4F0]"
-            : "cursor-pointer text-acd-green-body font-medium hover:bg-[#F0F4F0]"
-      }`}
-    >
-      <span
-        className={`w-[18px] h-[18px] rounded-[5px] border-[1.6px] flex items-center justify-center shrink-0 transition-colors ${
-          selected
-            ? "border-acd-green bg-acd-green"
-            : "border-[#CBD3CE] bg-white"
-        }`}
-      >
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          style={{ opacity: selected ? 1 : 0 }}
-        >
-          <path d="M20 6L9 17l-5-5" />
-        </svg>
-      </span>
-      <span className="min-w-0 flex-1">{label}</span>
-      <span className="shrink-0 rounded-full bg-acd-tag-muted-bg px-2 py-0.5 text-[11px] tabular-nums text-acd-tag-muted-text">
-        {count}
-      </span>
-    </button>
-  );
-}
 
 function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }) {
   return (
@@ -208,7 +160,7 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
         type="button"
         onClick={onRemove}
         aria-label={`Remove ${label}`}
-        className="w-[18px] h-[18px] flex items-center justify-center border-0 bg-acd-chip-remove rounded-full cursor-pointer text-acd-chip-text p-0 hover:bg-acd-border-hover transition-colors"
+        className="jobs-chip-remove w-8 h-8 flex items-center justify-center border-0 bg-acd-chip-remove rounded-full cursor-pointer text-acd-chip-text p-0 hover:bg-acd-border-hover transition-colors"
       >
         <svg
           width="11"
@@ -489,7 +441,7 @@ export default function JobsBoard({
         />
       </div>
 
-      <button className="jobs-filter-toggle" aria-expanded={filtersOpen} aria-controls="jobs-filters" onClick={()=>setFiltersOpen(!filtersOpen)}>Filters {chips.length + (addedDays ? 1 : 0) > 0 && <span>({chips.length + (addedDays ? 1 : 0)})</span>}</button>
+      <button type="button" className="jobs-filter-toggle" aria-expanded={filtersOpen} aria-controls="jobs-filters" onClick={()=>setFiltersOpen(!filtersOpen)}>Filters {chips.length + (addedDays ? 1 : 0) > 0 && <span>({chips.length + (addedDays ? 1 : 0)})</span>}</button>
       <div id="jobs-filters" className={`jobs-filters ${filtersOpen ? "is-open" : ""}`}>
         <FilterDropdown
           label="Region"
@@ -556,7 +508,7 @@ export default function JobsBoard({
 
       <div className="jobs-resultsbar">
         <div className="flex items-center gap-[14px]">
-          <p className="m-0 text-[16px] font-semibold text-acd-navy flex items-center gap-[9px]">
+          <p role="status" aria-live="polite" aria-atomic="true" className="m-0 text-[16px] font-semibold text-acd-navy flex items-center gap-[9px]">
             {anyFilter
               ? `${filtered.length} matching ${filtered.length === 1 ? "role" : "roles"}`
               : `${activeJobs.length} live roles`}
@@ -566,7 +518,7 @@ export default function JobsBoard({
             <button
               type="button"
               onClick={clearAll}
-              className="bg-transparent border-0 cursor-pointer font-sans text-[14px] text-acd-dim underline underline-offset-[3px] p-0 hover:text-acd-green transition-colors"
+              className="jobs-clear bg-transparent border-0 cursor-pointer font-sans text-[14px] text-acd-dim underline underline-offset-[3px] p-0 hover:text-acd-green transition-colors"
             >
               Clear all
             </button>
