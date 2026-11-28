@@ -18,7 +18,9 @@
     "acd:research:import": "node --experimental-strip-types tools/acd/cli.ts research:import",
     "acd:test": "node --experimental-strip-types tools/acd/tests/run.ts",
     "acd:content:check": "node --experimental-strip-types tools/acd/content-check.mjs",
-    "acd:v2:preflight": "node tools/acd/v2-preflight.mjs"
+    "acd:v2:preflight": "node tools/acd/v2-preflight.mjs",
+    "acd:backend:import": "tsx tools/acd/backend/import.ts",
+    "acd:backend:test": "tsx --test tools/acd/backend/phase1.test.ts"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -29,11 +31,14 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "pg": "^8.23.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
