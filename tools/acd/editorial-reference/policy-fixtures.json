@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "warning": "Synthetic policy regressions, never historical vacancies or measured model accuracy.",
+  "fixtures": [
+    {
+      "id": "synthetic-private-equity-growth",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "private-markets",
+        "subcategoryId": "private-equity-growth"
+      },
+      "input": {
+        "id": "synthetic-private-equity-growth",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/private-equity-growth",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An investment manager makes direct private equity investments in operating companies.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Build financial models, value companies, conduct due diligence and prepare investment memoranda."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-venture-capital",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "private-markets",
+        "subcategoryId": "venture-capital"
+      },
+      "input": {
+        "id": "synthetic-venture-capital",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/venture-capital",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A venture capital manager invests equity in early-stage startups.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Build financial models and perform due diligence on startup investment transactions."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-private-credit",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "private-markets",
+        "subcategoryId": "private-credit"
+      },
+      "input": {
+        "id": "synthetic-private-credit",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/private-credit",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A private credit fund makes direct lending investments.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Perform borrower credit assessment, cash-flow stress tests and covenant monitoring."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-infrastructure-real-assets",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets"
+      },
+      "input": {
+        "id": "synthetic-infrastructure-real-assets",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/infrastructure-real-assets",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An infrastructure investment fund makes direct equity investments in renewable assets.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Build financial models, conduct due diligence and prepare investment memoranda for infrastructure equity investments."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-fund-investments-secondaries",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "private-markets",
+        "subcategoryId": "fund-investments-secondaries"
+      },
+      "input": {
+        "id": "synthetic-fund-investments-secondaries",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/fund-investments-secondaries",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An institutional fund-of-funds commits capital to managers and purchases LP secondaries.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Analyse fund commitments, select fund managers and model expected fund cash flows and valuations."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-investment-lending",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "development-finance",
+        "subcategoryId": "investment-lending"
+      },
+      "input": {
+        "id": "synthetic-investment-lending",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/investment-lending",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A development finance institution makes loans and equity investments.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Execute loan investments, perform financial modelling and due diligence, negotiate finance agreements."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-advisory-capital-mobilisation",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "development-finance",
+        "subcategoryId": "advisory-capital-mobilisation"
+      },
+      "input": {
+        "id": "synthetic-advisory-capital-mobilisation",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/advisory-capital-mobilisation",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A development finance advisory team helps private enterprises raise finance.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Provide investment readiness advisory, build financial models and undertake investor sounding for capital mobilisation."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-ma-corporate-finance",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "ma-corporate-finance"
+      },
+      "input": {
+        "id": "synthetic-ma-corporate-finance",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/ma-corporate-finance",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An investment banking team provides M&A advisory for corporate clients.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Value clients, perform due diligence and negotiate acquisition transactions for clients."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-transaction-restructuring-advisory",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "transaction-restructuring-advisory"
+      },
+      "input": {
+        "id": "synthetic-transaction-restructuring-advisory",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/transaction-restructuring-advisory",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An advisory firm provides client financial due diligence and valuation advisory.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Perform client financial due diligence and transaction advisory analysis on earnings and working capital."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-capital-markets",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "capital-markets"
+      },
+      "input": {
+        "id": "synthetic-capital-markets",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/capital-markets",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An investment bank provides equity capital markets advisory and IPO execution.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Build financial models and advise clients on IPO valuation, issuance documentation and investor positioning."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-portfolio-management",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "asset-management-research",
+        "subcategoryId": "portfolio-management"
+      },
+      "input": {
+        "id": "synthetic-portfolio-management",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/portfolio-management",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An asset manager manages institutional discretionary investment portfolios.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Make portfolio allocation and manager selection decisions, rebalance exposures and assess investment risks."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-investment-research",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "asset-management-research",
+        "subcategoryId": "investment-research"
+      },
+      "input": {
+        "id": "synthetic-investment-research",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/investment-research",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "An asset manager produces equity research to inform investment decisions.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Build valuation models and publish investment research with buy and sell recommendations."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-investment-advisory-wealth-management",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "asset-management-research",
+        "subcategoryId": "investment-advisory-wealth-management"
+      },
+      "input": {
+        "id": "synthetic-investment-advisory-wealth-management",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/investment-advisory-wealth-management",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A specialist investment advisory firm advises sophisticated family office clients.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Prepare client investment proposals and portfolio recommendations supported by financial models and risk analysis."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-institutional-sales-trading",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "global-markets-structuring",
+        "subcategoryId": "institutional-sales-trading"
+      },
+      "input": {
+        "id": "synthetic-institutional-sales-trading",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/institutional-sales-trading",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A bank operates an institutional trading desk for bonds and FX.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Execute institutional bond trades, manage trading risk and produce market analysis."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-structuring-financial-engineering",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "global-markets-structuring",
+        "subcategoryId": "structuring-financial-engineering"
+      },
+      "input": {
+        "id": "synthetic-structuring-financial-engineering",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/structuring-financial-engineering",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A bank develops derivative and structured products for institutional clients.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Price derivative structures using financial engineering and valuation models."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-corporate-banking",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "corporate-banking"
+      },
+      "input": {
+        "id": "synthetic-corporate-banking",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/corporate-banking",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A corporate banking team arranges lending for large companies.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Perform corporate credit assessment, financial modelling and lending transaction analysis."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-project-structured-finance",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "project-structured-finance"
+      },
+      "input": {
+        "id": "synthetic-project-structured-finance",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/project-structured-finance",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A bank arranges project finance and structured lending for infrastructure sponsors.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Model project debt, structure bank loans and negotiate financing terms with lenders."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-trade-syndicated-finance",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "trade-syndicated-finance"
+      },
+      "input": {
+        "id": "synthetic-trade-syndicated-finance",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/trade-syndicated-finance",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A bank arranges trade finance and syndicated loans for corporate clients.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Perform credit assessment, structure trade finance and execute loan syndication."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-treasury-funding-alm",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "treasury-funding-alm"
+      },
+      "input": {
+        "id": "synthetic-treasury-funding-alm",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/treasury-funding-alm",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A bank treasury function manages funding, liquidity and balance-sheet risk.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Model asset-liability positions and liquidity buffers, design funding strategies and advise ALCO."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-corporate-ma",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "corporate-ma"
+      },
+      "input": {
+        "id": "synthetic-corporate-ma",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/corporate-ma",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A corporate acquisition team buys operating businesses for its own group.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Evaluate corporate acquisition targets, build valuation models and negotiate the acquisition of businesses."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-strategic-finance-investments",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "strategic-finance-investments"
+      },
+      "input": {
+        "id": "synthetic-strategic-finance-investments",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/strategic-finance-investments",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A corporate strategic finance team supports capital allocation decisions.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Perform investment appraisal using NPV and IRR, build financial models and recommend capital allocation."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-fpa-finance-leadership",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "fpa-finance-leadership"
+      },
+      "input": {
+        "id": "synthetic-fpa-finance-leadership",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/fpa-finance-leadership",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A finance business partnering team guides management financial decisions.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Challenge pricing and margin assumptions, lead budget forecasts and recommend financial decisions to executives."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-corporate-investor-relations",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "in-scope",
+      "expectedSelection": {
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "corporate-investor-relations"
+      },
+      "input": {
+        "id": "synthetic-corporate-investor-relations",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/corporate-investor-relations",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "A listed corporate investor relations team communicates earnings and disclosures.",
+        "aboutRole": "Synthetic regression example, not a historical or current vacancy.",
+        "responsibilities": [
+          "Analyse financial statements and prepare earnings releases and shareholder disclosures."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-routine-accounting",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "outside-future-scope",
+      "input": {
+        "id": "synthetic-routine-accounting",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/routine-accounting",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "This synthetic case tests routine operational duties rather than substantive specialist finance responsibilities.",
+        "aboutRole": "Not a historical job.",
+        "responsibilities": [
+          "Perform bookkeeping, invoice processing and accounts payable data entry."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-commercial-sales",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "outside-future-scope",
+      "input": {
+        "id": "synthetic-commercial-sales",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/commercial-sales",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "This synthetic case tests routine operational duties rather than substantive specialist finance responsibilities.",
+        "aboutRole": "Not a historical job.",
+        "responsibilities": [
+          "Lead commercial sales and logistics sales, manage go-to-market rollout and customer acquisition."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-operational-transformation",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "outside-future-scope",
+      "input": {
+        "id": "synthetic-operational-transformation",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/operational-transformation",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "This synthetic case tests routine operational duties rather than substantive specialist finance responsibilities.",
+        "aboutRole": "Not a historical job.",
+        "responsibilities": [
+          "Lead operational transformation, workshop coordination and general operating-model rollout."
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "id": "synthetic-retail-wealth-sales",
+      "labelAuthority": "synthetic-policy",
+      "expectedScope": "outside-future-scope",
+      "input": {
+        "id": "synthetic-retail-wealth-sales",
+        "company": "Synthetic policy organisation",
+        "sourceUrl": "https://example.test/policy/retail-wealth-sales",
+        "sourceRevision": "synthetic-policy-v1",
+        "summary": "This synthetic case tests routine operational duties rather than substantive specialist finance responsibilities.",
+        "aboutRole": "Not a historical job.",
+        "responsibilities": [
+          "Perform ordinary commercial sales of retail wealth products and meet branch sales targets."
+        ],
+        "requirements": []
+      }
+    }
+  ]
+}

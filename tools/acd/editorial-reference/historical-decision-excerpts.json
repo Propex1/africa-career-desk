@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+  "records": [
+    {
+      "path": "docs/audits/2026-10-04-approved-refresh.md",
+      "blob": "c2cabb54b6afe2228d6e3bc13c27d69035652b02",
+      "commit": "01b987a3dcbb71e076681dafeda8a36292188450",
+      "line": 81,
+      "text": "All explicit exclusions in the handoff remain excluded. No Batch 11 employer expansion, NI Capital or other rejected/HOLD opportunity was created.",
+      "authority": "unstructured historical report; requires interpretation, not an eligibility gold label"
+    },
+    {
+      "path": "docs/audits/2026-10-08-approved-refresh.md",
+      "blob": "afe89f73fa084c5bed482e7f01683bbbe08968a9",
+      "commit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5",
+      "line": 15,
+      "text": "| HOLD | — | Standard Bank — Investment Banking Analyst, Advisory | https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000153742579 |",
+      "authority": "unstructured historical report; requires interpretation, not an eligibility gold label"
+    },
+    {
+      "path": "docs/audits/2026-10-08-approved-refresh.md",
+      "blob": "afe89f73fa084c5bed482e7f01683bbbe08968a9",
+      "commit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5",
+      "line": 16,
+      "text": "| HOLD | — | Stanbic IBTC Capital — Associate, Advisory | https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000153832039 |",
+      "authority": "unstructured historical report; requires interpretation, not an eligibility gold label"
+    },
+    {
+      "path": "docs/audits/2026-10-08-approved-refresh.md",
+      "blob": "afe89f73fa084c5bed482e7f01683bbbe08968a9",
+      "commit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5",
+      "line": 27,
+      "text": "No IDs, public routes or employer additions were created for the two held Standard Bank vacancies. No candidate was classified as definitively closed. All other rejected/HOLD candidates, including RMB Private Wealth Associate, remain untouched.",
+      "authority": "unstructured historical report; requires interpretation, not an eligibility gold label"
+    },
+    {
+      "path": "docs/audits/2026-10-08-approved-refresh.md",
+      "blob": "afe89f73fa084c5bed482e7f01683bbbe08968a9",
+      "commit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5",
+      "line": 31,
+      "text": "- **Standard Bank:** both exact supplied URLs returned 200 and displayed the correct titles, locations, 6 October posting dates and job references (80401604A-0002 and 80446435A-0001). Their Apply Now links correctly identify the respective vacancies but redirect to blank HTTP 403 SmartRecruiters OneClick pages, including on an actual browser click. A functioning downstream application mechanism could not be reliably verified. Both are HOLD under the user's explicit safeguard; no substituted destination was published. This is a verification failure, not evidence that the roles closed.",
+      "authority": "unstructured historical report; requires interpretation, not an eligibility gold label"
+    }
+  ]
+}

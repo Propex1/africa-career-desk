@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+  "reviewDate": "2026-11-28",
+  "coverage": {
+    "commitsScanned": 160,
+    "dataSourceBlobs": 145,
+    "opportunityIds": 505,
+    "currentCanonical": 416,
+    "recoveredJobIds": 451,
+    "retainedProgrammeOrOpenApplicationIds": 54,
+    "historicalPublicProjectionIds": 451,
+    "currentClosed": 207,
+    "currentRemoved": 276,
+    "ownerConfirmedTaxonomyLabels": 1,
+    "legacyWorkbookCandidates": 130,
+    "legacyCandidatesWithRemovalReviewOrRejectionDecision": 41,
+    "structuredHistoricalDecisionObservations": 78,
+    "unstructuredDecisionExcerpts": 5
+  },
+  "projectionGaps": [
+    {
+      "commit": "c5e50ac532040e04c55d784e47c806a5bdfe62ba",
+      "error": "Missing tracked dependency src/data/opportunities.ts"
+    }
+  ],
+  "limitations": [
+    "Public projection membership is a recoverable system fact, not proof of an owner-approved ACD 2.0 label or a verified historic deployment.",
+    "Historical removal/rejection reasons may concern expiry or application verification rather than editorial suitability. They are never copied into current negative eligibility gold.",
+    "One initial commit predates the opportunity data file. Static source recovery still covers all available data blobs.",
+    "No private monitoring repository/system, external account, secret or local SQLite database was accessed.",
+    "Workbook source evidence does not establish a named human reviewer. Missing responsibility text remains missing. Review/removal sheets also contain programmes and monitoring leads; their entries are not all rejected individual vacancies.",
+    "A rule baseline and inherited AI proposals are review aids, not measured model accuracy. Confirmed-label evaluation is sparse.",
+    "Full raw source variants and workbook rows are reproducibly recovered under ignored generated/; original immutable Git blobs are unchanged."
+  ]
+}
