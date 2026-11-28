@@ -2,8 +2,7 @@ import { execFileSync } from "node:child_process";
 import { Pool } from "pg";
 import type { SourceSnapshot } from "./snapshot.ts";
 
-export function localPool(role?: "acd_phase1_reader" | "acd_phase1_proposer"): Pool {
-  const connectionString = process.env.ACD_PHASE1_DATABASE_URL;
+export function localPool(connectionString = process.env.ACD_PHASE1_DATABASE_URL): Pool {
   if (!connectionString) throw new Error("Set ACD_PHASE1_DATABASE_URL to the disposable acd_phase1 database");
   const url = new URL(connectionString);
   if (!["postgres:", "postgresql:"].includes(url.protocol)
@@ -11,7 +10,7 @@ export function localPool(role?: "acd_phase1_reader" | "acd_phase1_proposer"): P
     || url.pathname !== "/acd_phase1" || url.search || url.hash || !url.port) {
     throw new Error("Phase 1 requires a loopback PostgreSQL URL with an explicit port and database acd_phase1");
   }
-  return new Pool({ connectionString, connectionTimeoutMillis: 5000, options: role ? `-c role=${role}` : undefined });
+  return new Pool({ connectionString, connectionTimeoutMillis: 5000 });
 }
 
 export async function captureRepositorySnapshot(): Promise<SourceSnapshot> {

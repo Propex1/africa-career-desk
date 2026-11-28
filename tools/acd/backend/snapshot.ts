@@ -70,3 +70,11 @@ export async function importSnapshot(pool: Pool, source: SourceSnapshot) {
     return created;
   });
 }
+
+/** Explicit operator action. Importing or replaying a snapshot never activates it. */
+export async function selectActiveSnapshot(pool: Pool, snapshotId: string): Promise<void> {
+  await pool.query(`
+    INSERT INTO acd.active_snapshot (snapshot_id) VALUES ($1)
+    ON CONFLICT (singleton) DO UPDATE SET snapshot_id = EXCLUDED.snapshot_id
+  `, [snapshotId]);
+}
