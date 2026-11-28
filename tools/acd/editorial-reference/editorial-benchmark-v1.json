@@ -1,0 +1,3306 @@
+{
+  "version": "editorial-benchmark/1.0.0",
+  "sourceRef": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+  "asOfDate": "2026-11-28",
+  "cases": [
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-e770d8631261",
+        "title": "IR Analyst",
+        "company": "Beltone Holding",
+        "summary": "Support Beltone Holding’s investor-relations function in Egypt through financial analysis, market research and investor reporting. The analyst contributes to earnings releases, presentations and disclosures, helping turn internal performance data and external market insights into accurate, clear communications for investors and other stakeholders.",
+        "aboutRole": "The role supports the IR team’s preparation of quarterly communications and ongoing investor information. Responsibilities include analysing financial statements, maintaining subsidiary-performance information, tracking disclosures concerning Beltone shares and monitoring developments that may influence investor sentiment. Work is performed under the Associate’s direction and combines analytical support with awareness of Egyptian listing, disclosure and regulatory requirements. The employer seeks an early-career finance or business candidate.",
+        "responsibilities": [
+          "Prepare financial analysis and supporting materials for investor disclosures, presentations and reports.",
+          "Analyse financial statements and summarise insights for quarterly earnings releases.",
+          "Maintain the subsidiary-performance dashboard and reliable data sources used in stakeholder reporting.",
+          "Monitor market, industry and competitor developments that may affect investor messaging and sentiment.",
+          "Track Beltone-share disclosures and support accurate website updates and quarterly investor presentations.",
+          "Compile internal and external evidence for communications, apply listing and disclosure rules, and contribute to ad-hoc IR projects."
+        ],
+        "requirements": [
+          "Bachelor’s degree in business, economics, finance or a relevant discipline.",
+          "Zero to two years of experience in Investor Relations, Financial Analysis or Capital Markets.",
+          "Local and international experience in investment and finance, as stated in the employer’s profile.",
+          "Strong analytical and research skills, including interpretation of financial data.",
+          "Strong communication and coordination skills, with high attention to detail and reporting accuracy."
+        ],
+        "sourceUrl": "https://fa-epwu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/202609",
+        "applyUrl": "https://fa-epwu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/202609",
+        "country": "Egypt",
+        "region": "North Africa",
+        "locationDisplay": "Egypt",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "needs_verification",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "60fa9a6b7be19b6b7c37f73e88c4ce5eb278dc5bdc0d86a2de8c50354e89aa61",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "c7a4a9e07e20c62842d249359a95e67dedad6c21",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 23,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": {
+        "scope": "in-scope",
+        "selection": {
+          "areaId": "corporate-finance-strategy",
+          "subcategoryId": "corporate-investor-relations"
+        },
+        "function": "Corporate Investor Relations",
+        "approvedBy": "Armel Wetchoko — explicit editorial instruction",
+        "approvedAt": "2026-11-19"
+      },
+      "editorial": {
+        "authority": "owner-confirmed-existing",
+        "scope": "in-scope",
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "corporate-investor-relations",
+        "jobFunction": "Corporate Investor Relations",
+        "dutyNumbers": [
+          1,
+          2,
+          5
+        ],
+        "reason": "Earnings analysis and listed-company disclosures support corporate IR. Existing owner-confirmed anchor.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "ACD-0189",
+        "title": "Equity Research Associate",
+        "company": "Société Générale CIB",
+        "summary": "Casablanca-based equity-research role conducting international stock analysis, financial and economic modelling, valuation work and client-facing research within SG ATS/Bernstein.",
+        "aboutRole": "The Equity Research Associate will join SG Africa Technologies & Services in Casablanca and work closely with senior equity analysts based in London and Paris. The role supports Bernstein's international equity-research platform through company analysis, financial modelling, sector research, client publications and marketing materials.",
+        "responsibilities": [
+          "Conduct financial research and analysis on international listed companies",
+          "Support preparation of equity-research reports distributed to clients",
+          "Assist senior analysts with presentations, pitches and marketing campaigns",
+          "Develop sector expertise alongside senior analysts",
+          "Collect public information and verify the reliability of sources",
+          "Analyse company, sector and economic information",
+          "Build and maintain financial and economic models",
+          "Ensure models and research deliverables meet Group standards",
+          "Develop value-added approaches to data collection and analysis",
+          "Prepare regular publications covering sector and market developments",
+          "Comply with financial-research regulations and internal procedures",
+          "Respond to bespoke client-research requests within compliance requirements"
+        ],
+        "requirements": [
+          "Master's-equivalent degree from an engineering school, business school or university",
+          "Academic specialisation relevant to financial analysis",
+          "Strong interest in investment and equity analysis",
+          "Excellent quantitative and analytical skills",
+          "Strong written and spoken English and French",
+          "Intellectual curiosity and strong attention to detail",
+          "Proactive and critical-thinking approach",
+          "Ability to work effectively in a demanding, collaborative team",
+          "Strong interpersonal and communication skills"
+        ],
+        "sourceUrl": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+        "applyUrl": "https://careers.societegenerale.com/offres-d-emploi/equity-research-associate-260008IB-fr",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "f1d3a021ddd621b10db38b374cd9ea1f68582ea2d987866e9f146ff11715fd1d",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "8c6feab588949cb73a0755de67406ce2f7c5d13c",
+          "lastProjectionCommit": "bed1c009fd65e21e5e68294903d63913eed18031",
+          "projectionObservationCount": 39,
+          "sourceVariantCount": 6
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "asset-management-research",
+        "subcategoryId": "investment-research",
+        "jobFunction": "Research & Analysis",
+        "dutyNumbers": [
+          1,
+          2,
+          7
+        ],
+        "reason": "Listed-company modelling and research deliverables are substantive; Casablanca location satisfies geography.",
+        "missingEvidence": "Specific stock coverage is immaterial to eligibility."
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-dc90b4a89136",
+        "title": "Relationship Manager: Commercial Mid",
+        "company": "Nedbank",
+        "summary": "Selected complex commercial-bank credit and client coverage in the Boland/Stellenbosch area. Large multi-entity credit applications, deal structuring and corporate portfolios distinguish it from routine branch sales; retain the substantial acquisition/cross-sell component for owner review.",
+        "aboutRole": "Requisition Details & Talent Acquisition Contact REQ: 148825 Talent Acquisition Specialist: Lerato Sithole Location: Boland, Western Cape Job Family Sales and Service Career Stream Relationship Management Leadership Pipeline Manage Self: Professional (MSP) FAIS Affected FAIS Affected - Yes Job Purpose To grow commercial bank revenue through the management and cross sell to existing portfolio; as well as the acquisition of new to bank high revenue commercial customers in order to create and increase revenue and maximize economic profit to achieve the banks strategic objectives and create shareholder value. Why Join Our Team Join a high-performing Commercial Banking team where you will partner with leading commercial clients to drive growth and sustainable value. This role offers the opportunity to work in a relationship-driven environment, leverage industry expertise, and contribute to innovative financial solutions that support clients and the broader economy.",
+        "responsibilities": [
+          "Prepare and present large and complex credit applications consisting of multiple entities and shareholders and by incorporating specialised Industry knowledge and core Banking principles, including the pricing motivation of assets.",
+          "Partner with credit manager to manage credit risk of portfolio to minimize potential impairment risk.",
+          "Requisition Details & Talent Acquisition Contact REQ: 148825 Talent Acquisition Specialist: Lerato Sithole Location: Boland, Western Cape Job Family Sales and Service Career Stream Relationship Management Leadership Pipeline Manage Self: Professional (MSP) FAIS Affected FAIS Affected - Yes Job Purpose To grow commercial bank revenue through the management and cross sell to existing portfolio; as well as the acquisition of new to bank high revenue commercial customers in order to create and increase revenue and maximize economic profit to achieve the banks strategic objectives and create shareholder value.",
+          "Why Join Our Team Join a high-performing Commercial Banking team where you will partner with leading commercial clients to drive growth and sustainable value.",
+          "This role offers the opportunity to work in a relationship-driven environment, leverage industry expertise, and contribute to innovative financial solutions that support clients and the broader economy.",
+          "Be a trusted advisor to commercial clients in specialised industries (i.e., Agri; Franchise, Fintech, Manufacturing) through continuous professional development; exposure, experience, and personal up-skilling."
+        ],
+        "requirements": [
+          "An advanced diploma or national first degree; preferred qualifications include a BCom in Financial Management/Accounting or BSc Agriculture.",
+          "Seven to ten years of relationship-management experience in commercial banking.",
+          "Corporate-client sales and deal-origination experience, including complex credit analysis and transaction structuring.",
+          "Experience managing diverse commercial portfolios, with sector knowledge, strong client relationships and revenue-delivery capability."
+        ],
+        "sourceUrl": "https://jobs.nedbank.co.za/job/Stellenbosch-Relationship-Manager-Commercial-Mid/1460883833",
+        "applyUrl": "https://jobs.nedbank.co.za/job/Stellenbosch-Relationship-Manager-Commercial-Mid/1460883833",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Stellenbosch, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2027-01-01",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "340fb4d63e73cb0f9e9e68dde20b7de6c31836ffad41e1f490c019123de3d24a",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "c8e3b81ea217a2132359eef7acc0055f1c273945",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 2,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "corporate-banking",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "reason": "Commercial client origination includes complex multi-entity credit and pricing, even with sales targets.",
+        "missingEvidence": "Final credit approval authority is unspecified."
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-22fd3e5c8b1f",
+        "title": "Program Manager-Satellite Business Management",
+        "company": "Orange Business",
+        "summary": "Help develop Orange’s satellite business across the Middle East and Africa, combining strategy, partnerships and programme execution. Based in Morocco, the role supports growth initiatives including Direct-to-Device and coordinates subsidiary needs with regional stakeholders and the wider satellite ecosystem.",
+        "aboutRole": "The position reports to the Satellite Business Management and Direct-to-Device programme director within Orange International Networks Infrastructures and Services. It works with Satellite Factory, Orange Business, wholesale and MEA teams. The mandate combines strategic coordination and market analysis with business development, presales and governance; occasional international travel is expected.",
+        "responsibilities": [
+          "Contribute to satellite strategy and coordinated action plans for the MEA region.",
+          "Prioritise subsidiary requirements and align them with Satellite Factory direction.",
+          "Identify satellite and Direct-to-Device growth opportunities and coordinate MEA presales.",
+          "Develop ecosystem relationships and support partnership discussions.",
+          "Track programme milestones, risks and performance, using market analysis to inform decisions."
+        ],
+        "requirements": [
+          "Experience coordinating cross-functional work in complex international environments.",
+          "Business-development capability and the ability to identify opportunities.",
+          "Strategic, commercial and financial understanding with strong stakeholder communication.",
+          "Proficiency in French and English and willingness to travel occasionally.",
+          "Telecommunications or satellite-ecosystem knowledge is appreciated; no degree or years-of-experience threshold is stated."
+        ],
+        "sourceUrl": "https://orange.jobs/gb/en/job/ICM-588096/Program-Manager-Satellite-Business-Management",
+        "applyUrl": "https://orange.jobs/gb/en/job/ICM-588096/Program-Manager-Satellite-Business-Management",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "7eb36d2169725e9f76d409c97ee8027ffccec8ddd1b084775bf01d042f949465",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": {
+          "id": "DRAFT-22fd3e5c8b1f",
+          "title": "Program Manager-Satellite Business Management",
+          "company": "Orange Business",
+          "reason": "Satellite strategy, presales and programme coordination do not demonstrate substantial financial investment analysis or capital allocation. Include only if stronger responsibility evidence is supplied.",
+          "status": "conditional-evidence-required",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://orange.jobs/gb/en/job/ICM-588096/Program-Manager-Satellite-Business-Management"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "outside-future-scope",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          3,
+          5
+        ],
+        "reason": "Strategy, presales and programme delivery are the evidenced primary work.",
+        "missingEvidence": "No investment appraisal or financing responsibility."
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-43904592e8cf",
+        "title": "Manager, Account Executive - Fintechs and Wallets Partners, Abidjan",
+        "company": "Visa",
+        "summary": "Develop Visa’s fintech and wallet partnerships from Abidjan, supporting payment-flow growth and market expansion. The role combines regional wallet strategy, commercial negotiations and new-solution launches, working with country leadership, digital teams and non-traditional payments partners across the region.",
+        "aboutRole": "Within Merchant Sales and Solutions, the manager translates local market needs into partner strategies and product propositions. Responsibilities include strategic deals, regulatory and pricing initiatives, and the rollout of mobile payment solutions. The position is hybrid, with office attendance confirmed by the hiring manager, and retains a strong commercial-sales and relationship-management component.",
+        "responsibilities": [
+          "Execute wallet and partner strategies to grow payment volumes and market share.",
+          "Secure fintech deals and support negotiations of major strategic partnerships.",
+          "Build senior partner relationships and communicate local market and regulatory needs.",
+          "Coordinate mobile-payment solution launches and go-to-market activity.",
+          "Work with digital and functional teams on new propositions and regional best practices."
+        ],
+        "requirements": [
+          "Basic qualification routes: five years with a bachelor’s degree, two with an advanced degree, or no prior experience with a PhD.",
+          "Preferred routes: six years with a bachelor’s, four with an advanced degree, or up to three with a PhD; the advert separately asks for five years of progressive payments leadership.",
+          "Knowledge of payments networks, processing, merchant acquiring and emerging mobile-payment models.",
+          "Strong business-to-business sales, negotiation, relationship-management and product-launch experience.",
+          "Ability to work across cultures, manage projects and communicate with senior stakeholders."
+        ],
+        "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/CI---Abidjan-Cote-DIvoire/Manager--Account-Executive---Fintechs-and-Wallets-Partners--Abidjan_REF082486W",
+        "applyUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/CI---Abidjan-Cote-DIvoire/Manager--Account-Executive---Fintechs-and-Wallets-Partners--Abidjan_REF082486W",
+        "country": "Côte d’Ivoire",
+        "region": "West Africa",
+        "locationDisplay": "Abidjan, Côte d’Ivoire",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "7e5022ce4e36a312990e789dfc7783706d5125a482a91f2cba9bb535bb59dd50",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "d33e8e2dee2d6fd3e366db9a04784aeab92ca8ed",
+          "projectionObservationCount": 26,
+          "sourceVariantCount": 3
+        },
+        "priorReview": {
+          "id": "DRAFT-43904592e8cf",
+          "title": "Manager, Account Executive - Fintechs and Wallets Partners, Abidjan",
+          "company": "Visa",
+          "reason": "Commercial fintech/wallet account sales and partnerships; no substantive investment or financial structuring remit established. Owner recommends outside future scope.",
+          "status": "outside-future-scope-recommendation",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://visa.wd5.myworkdayjobs.com/Visa/job/CI---Abidjan-Cote-DIvoire/Manager--Account-Executive---Fintechs-and-Wallets-Partners--Abidjan_REF082486W"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "outside-future-scope",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          2,
+          4
+        ],
+        "reason": "Wallet adoption, account growth and launches establish a commercial remit.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-aa4d33a969b6",
+        "title": "Strategy Enablement Head",
+        "company": "Standard Bank of South Africa",
+        "summary": "Translate strategic ambition into coordinated initiatives for Standard Bank in Johannesburg. The Strategy Enablement Head advises executives on positioning, portfolio priorities and investment trade-offs, drives execution across business lines and geographies, and connects strategy with operating models, performance governance, budgeting and capital-allocation decisions.",
+        "aboutRole": "The mandate spans a business line, group function or region, embedding strategy into the organisation’s operating rhythm and decision-making. It combines research and scenario planning with early initiative design, execution governance, leadership engagement and performance analysis. The role prepares executive and Board narratives, removes systemic delivery barriers, guides business-model evolution and integrates strategic risk and continuity planning across multiple banking jurisdictions.",
+        "responsibilities": [
+          "Advise executives on market positioning, competitive advantage and strategic trade-offs, supported by research, foresight and scenario planning.",
+          "Shape strategic investment decisions and portfolio priorities and influence budgeting, investment planning and capital allocation.",
+          "Develop and refine strategic initiatives and establish resources, sequencing, execution standards and governance across geographies.",
+          "Diagnose internal-client problems, resolve execution barriers, escalate risks and align strategic committee agendas.",
+          "Prepare executive and Board narratives, leadership dialogues and communications that translate strategy into organisational action.",
+          "Track strategic KPIs, use product and performance data to refine strategy, and align business and operating models with customer needs.",
+          "Integrate strategic risk, regulatory responses, continuity and external knowledge partnerships into planning and execution."
+        ],
+        "requirements": [
+          "Postgraduate degree in Business Commerce, Finance and Accounting, Generic Management or Risk Management.",
+          "More than ten years of strategy experience in financial services.",
+          "More than ten years of experience managing a broad range of projects through to defined business objectives or metrics.",
+          "More than ten years of experience influencing transformational change and operational efficiency in banking across multiple jurisdictions.",
+          "A demonstrable track record contributing to strategic thinking and initiatives, with strong research, programme management and written-communication capabilities."
+        ],
+        "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
+        "applyUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "needs_verification",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "aa8575290e621c1d07ffff027b2e0e4cdf8cb7df0239d0bc7efe8b2ad611ea6e",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "14cbeff7ed90484c7545d9a9d5074b6da6fcd2ea",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 19,
+          "sourceVariantCount": 2
+        },
+        "priorReview": {
+          "id": "DRAFT-aa4d33a969b6",
+          "title": "Strategy Enablement Head",
+          "company": "Standard Bank of South Africa",
+          "status": "classification-evidence-required",
+          "reason": "Strategy enablement, execution governance, operating-model alignment, committee agendas and organisational change dominate. A reference to influencing capital allocation does not establish primary finance leadership or substantive financial modelling. Hold rather than automatically map general strategy into Strategic Finance.",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "reason": "Strategic influence on capital allocation is documented alongside substantial operating-model and execution governance work.",
+        "missingEvidence": "Clarify ownership of financial appraisal and capital-allocation recommendations."
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-00fe1ab79fde",
+        "title": "Business Development Manager – Vendor Management Inventory M/F",
+        "company": "Africa Global Logistics",
+        "summary": "Develop vendor-managed inventory solutions that connect logistics, international trade and client working-capital needs. This AGL business-development role focuses on new opportunities, strategic client relationships and tailored supply-chain and trade-finance propositions, with responsibility for commercially sound execution and account performance.",
+        "aboutRole": "The position sits in the Vendor Managed Inventory division and works alongside logistics, operations, customs and compliance teams. Its commercial mandate includes existing accounts and targeted market sectors. Solutions aim to improve import and export flows, strengthen supply chains and build long-term client partnerships while managing account risk and trade-regulation requirements.",
+        "responsibilities": [
+          "Identify and secure vendor-managed inventory opportunities in existing and target accounts.",
+          "Develop client, supplier and strategic-partner relationships.",
+          "Prepare proposals, business cases and tailored trade-finance and supply-chain solutions.",
+          "Analyse market trends, competitor activity and expansion opportunities.",
+          "Coordinate delivery teams and monitor account performance, risk and regulatory compliance."
+        ],
+        "requirements": [
+          "At least five years in trade finance, supply-chain finance, logistics, freight forwarding or a related field.",
+          "Proven business-development and client-relationship experience.",
+          "Understanding of international trade, supply-chain operations and financial processes.",
+          "Strong negotiation, presentation, analytical and practical problem-solving skills."
+        ],
+        "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-business-development-manager-vendor-management-inventory-m-f_9897.aspx",
+        "applyUrl": "https://acareerbyagl.talent-soft.com/job/job-business-development-manager-vendor-management-inventory-m-f_9897.aspx",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "70f7c0cf9572368873378ef284e9aaf0c40ee8c0236f5da9348fbe0b226a5da3",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": {
+          "id": "DRAFT-00fe1ab79fde",
+          "title": "Business Development Manager – Vendor Management Inventory M/F",
+          "company": "Africa Global Logistics",
+          "reason": "VMI logistics solution sales and trade-finance context do not demonstrate responsibility for actual financial structuring.",
+          "status": "outside-future-scope-recommendation",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-business-development-manager-vendor-management-inventory-m-f_9897.aspx"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          3,
+          5
+        ],
+        "reason": "VMI account acquisition and delivery dominate; trade-finance solutions appear in proposals.",
+        "missingEvidence": "Clarify who structures financing, assesses credit and negotiates financial terms."
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "ACD-0005",
+        "title": "Investment Associate, Africa50 Infrastructure Acceleration Fund",
+        "company": "Africa50",
+        "summary": "Africa50 infrastructure investment role based in Casablanca with a pan-African mandate across project development, project finance or infrastructure fund activities.",
+        "aboutRole": "Africa50 is a pan-African infrastructure investor and asset manager that has mobilised over US$1 billion from 33 African countries, regional development institutions and major pension funds. The Infrastructure Acceleration Fund (IAF) invests across Power & Energy, Water & Sanitation, Transport & Logistics, and Digital & Social Infrastructure. Associates work closely with senior team members and engage with management teams and external advisors across the full investment lifecycle.",
+        "responsibilities": [
+          "Develop investment pipelines by identifying market trends using sector and country expertise",
+          "Execute financial modelling and investment valuations",
+          "Coordinate due diligence workstreams across financial, commercial, legal, technical and ESG disciplines",
+          "Engage in sponsor negotiations and support deal documentation",
+          "Create project materials for internal and external stakeholders",
+          "Monitor portfolio performance and assess exit opportunities"
+        ],
+        "requirements": [
+          "6–10 years’ experience in investment banking, M&A or private equity",
+          "Advanced degree (MBA, MA or MSc)",
+          "Strong financial modelling and valuation capabilities",
+          "Emerging markets experience preferred",
+          "Fluent English; French advantageous"
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
+        "country": "Morocco",
+        "region": "Pan-African",
+        "locationDisplay": "Casablanca",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "7889256cd0bb5aa2cada46b330732ecb3aec8bc1c2a9da50a0a2cc3e43acbc08",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 159,
+          "sourceVariantCount": 7
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "reason": "Valuation, diligence, sponsor negotiations and exits establish direct infrastructure investing; ESG is one workstream.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "ACD-0012",
+        "title": "Senior Investment Analyst, Project Development",
+        "company": "Africa50",
+        "summary": "Africa50 infrastructure investment role based in Casablanca with a pan-African mandate across project development, project finance or infrastructure fund activities.",
+        "aboutRole": "Africa50 is a pan-African infrastructure investor and asset manager. This Senior Investment Analyst role supports infrastructure project development investments through financial modelling, research and analysis to facilitate sound investment decisions for bankable projects across Africa.",
+        "responsibilities": [
+          "Build and maintain complex project finance models with sensitivity and scenario analyses",
+          "Analyse capital structures, project financing and returns under various assumptions",
+          "Conduct industry, market and company research",
+          "Participate in all stages of Africa50’s project processing cycle from development through disbursement",
+          "Coordinate due diligence across financial, technical, commercial, legal and ESG workstreams",
+          "Support project development investments focused on achieving bankable outcomes",
+          "Assist senior team members in negotiations with sponsors, lenders and public authorities",
+          "Prepare project documentation for internal and external stakeholders"
+        ],
+        "requirements": [
+          "2–5 years’ experience in infrastructure project development or project finance",
+          "Experience from project finance teams at investment banks, power IPPs, DFIs, advisory firms or infrastructure private equity funds",
+          "Bachelor’s degree in Business or Engineering",
+          "Fluent English; French required, Portuguese advantageous",
+          "Strong financial modelling and valuation experience",
+          "Understanding of PPP structuring and project finance"
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
+        "country": "Morocco",
+        "region": "Pan-African",
+        "locationDisplay": "Casablanca",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "202e268d0759053f33e227a34b48aeca7b900b6cb9e872e0a9cc91ca3ef62fc4",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 159,
+          "sourceVariantCount": 6
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reason": "Models and lender negotiations serve the employer’s project-development investments; ESG is one diligence stream.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 1,
+      "input": {
+        "id": "DRAFT-b2b3e647c4a8",
+        "title": "Commercial Project Manager",
+        "company": "Siemens Energy",
+        "summary": "Manage the commercial and financial execution of Digital Grid projects at Siemens Energy in Cairo. The role combines project profitability, cash forecasting, contractual changes and risk management, working with project and regional teams to deliver complex customer engagements within agreed budgets.",
+        "aboutRole": "The position is within Grid Technologies and the finance organisation, with a regional Middle East remit. It works alongside project managers, bid teams, controllers and segment heads. Responsibilities cover financial and contractual oversight as well as administrative, tax and accounting requirements, making this a commercial project-delivery role rather than a project-investment origination position.",
+        "responsibilities": [
+          "Maintain project calculations, cost controls, financial reporting and free-cash-flow forecasts.",
+          "Manage guarantees, hedging, insurance and tax-related financial risks.",
+          "Lead variation-order discussions and assess price-indexation effects.",
+          "Track orders, invoicing, receivables and payments to protect project cash generation.",
+          "Coordinate project stakeholders and ensure compliance with commercial and financial controls."
+        ],
+        "requirements": [
+          "Bachelor’s degree in business administration, economics, finance or a related field.",
+          "At least three years managing complex external-customer projects, including international stakeholder interfaces.",
+          "Experience in commercial project management, financial controlling and contract administration.",
+          "Strong SAP financial-module, Excel, forecasting and risk-management skills.",
+          "The advert lists Certified Commercial Project Manager and PMP/IPMA certifications under professional qualifications."
+        ],
+        "sourceUrl": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/304446",
+        "applyUrl": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/304446",
+        "country": "Egypt",
+        "region": "North Africa",
+        "locationDisplay": "Cairo, Egypt",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "d6b852e89b530225d8c795790fe961066a9936a551fb7f10f111ac3d568abadc",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": {
+          "id": "DRAFT-b2b3e647c4a8",
+          "title": "Commercial Project Manager",
+          "company": "Siemens Energy",
+          "reason": "Cash-flow forecasts, hedging, guarantees and financial-risk management may fit the broader specialist FP&A remit, but invoicing, contractual control and project delivery also dominate. Earlier owner recommendation generally outside scope remains intact; clarify whether specialist finance or project accounting is the primary remit before mapping.",
+          "status": "editorial-scope-review",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/304446"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Risk tools and forecasting indicate meaningful finance alongside project controls and collections.",
+        "missingEvidence": "Clarify decision authority and relative weight of hedging, guarantees and financing work."
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "DRAFT-7eb93ecda65b",
+        "title": "Investment Associate: Unlisted Investments (Social Infrastructure)",
+        "company": "Public Investment Corporation (PIC)",
+        "summary": "Support PIC’s unlisted social infrastructure investments in Pretoria, from deal screening and due diligence through transaction execution and portfolio monitoring. The associate builds financial models, prepares investment materials, and helps assess returns, sensitivities, and risks.",
+        "aboutRole": "The Associate works with the Associate Principal and Fund Principal on transaction execution. The mandate spans deal appraisal, implementation, ongoing performance monitoring and ESG oversight, with additional responsibilities for client reporting and mentoring junior team members. PIC manages assets for public-sector funds including the Government Employees Pension Fund and the Unemployment Insurance Fund.",
+        "responsibilities": [
+          "Screen transactions and scope preliminary due diligence.",
+          "Prepare engagement letters, indicative term sheets and diligence reports.",
+          "Build financial models for returns, sensitivities and downside scenarios.",
+          "Maintain sector research and prepare investment appraisal materials.",
+          "Support transaction implementation and monitor performance, risk and ESG compliance.",
+          "Contribute to client reporting and mentor junior staff."
+        ],
+        "requirements": [
+          "The notice lists an honours degree in finance, engineering or law and refers to relevant commerce and engineering degrees.",
+          "Three to five years of related experience.",
+          "FAIS Representative status.",
+          "Advanced financial modelling and valuation skills, with experience in negotiation, structuring and sector research.",
+          "Postgraduate qualifications preferred. CFA or CA is advantageous."
+        ],
+        "sourceUrl": "https://www.pic.gov.za/documents/publications/355/1f63a28bb1c94352bcedef10498f3ef2.pdf",
+        "applyUrl": "https://www.pic.gov.za/documents/publications/355/1f63a28bb1c94352bcedef10498f3ef2.pdf",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Pretoria, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-11-16",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "a5f0366a19e59a12228e8ba104e0bd10562a8a827cd80cf0a27b527fd04663b6",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "d34fe2e9c24de3e42242628a8ef0acea323782ab",
+          "lastProjectionCommit": "d34fe2e9c24de3e42242628a8ef0acea323782ab",
+          "projectionObservationCount": 1,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "reason": "Unlisted social-infrastructure screening, appraisal and transaction execution establish direct investment. Deadline relates to readiness.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0006",
+        "title": "Investment Associate, Project Development",
+        "company": "Africa50",
+        "summary": "Africa50 infrastructure investment role based in Casablanca with a pan-African mandate across project development, project finance or infrastructure fund activities.",
+        "aboutRole": "Africa50 is a pan-African infrastructure investor and asset manager that has mobilised over US$1 billion from 33 African countries. This Investment Associate role focuses on identifying and executing project development investments in power and transport sectors, based in Casablanca with regular travel across the continent.",
+        "responsibilities": [
+          "Build and manage pipelines of investment opportunities using sector and market knowledge",
+          "Structure project development and equity investments",
+          "Conduct financial modelling and valuations",
+          "Coordinate due diligence across financial, commercial, legal, technical and ESG domains",
+          "Lead negotiations with sponsors, lenders and government entities",
+          "Drive portfolio projects toward bankability",
+          "Prepare project documentation for internal and external stakeholders",
+          "Cultivate relationships with infrastructure companies, banks and government officials",
+          "Supervise portfolio companies and mentor junior staff"
+        ],
+        "requirements": [
+          "6–10 years in project development, investment or project finance in power/transport sectors",
+          "Experience in utilities, investment banks, DFIs, advisory firms or infrastructure private equity funds",
+          "Project management background",
+          "Understanding of concession agreements, PPAs, EPCs and O&M contracts",
+          "Track record closing transactions",
+          "Bachelor’s degree from a top-tier institution; MBA/MSc preferred",
+          "Advanced financial modelling capabilities",
+          "Fluent English; French essential, Portuguese beneficial"
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
+        "country": "Morocco",
+        "region": "Pan-African",
+        "locationDisplay": "Casablanca",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "6ac350d1702f766e46dc964879e91969977972bbbcb6a8596950534b0b1049e8",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 159,
+          "sourceVariantCount": 6
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "reason": "Structures and values direct project development and equity investments; project finance is a method here.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0016",
+        "title": "Senior Investment Director, Africa50 Infrastructure Acceleration Fund",
+        "company": "Africa50",
+        "summary": "Africa50 infrastructure investment role based in Casablanca with a pan-African mandate across project development, project finance or infrastructure fund activities.",
+        "aboutRole": "Africa50 is a pan-African infrastructure investor and asset manager. This Senior Investment Director role operates at near-Partner level within the Infrastructure Acceleration Fund, leading the full private equity lifecycle including origination, underwriting, structuring, execution, portfolio value creation and exits. The role requires representing the Fund with C-suite executives, shareholders, regulators and investors.",
+        "responsibilities": [
+          "Build proprietary deal pipelines across priority infrastructure themes through networks with sponsors, governments and advisors; anticipate market trends and regulatory shifts",
+          "Lead equity and quasi-equity investment evaluations with a focus on high returns and downside protection",
+          "Hold board representation responsibility for portfolio companies; establish and monitor KPIs and value creation initiatives",
+          "Own exit strategy from entry; lead sell-side processes and manage co-shareholder alignment",
+          "Build senior relationships with co-investors, development finance institutions and government principals",
+          "Lead multi-disciplinary teams, set analytical standards and mentor investment professionals"
+        ],
+        "requirements": [
+          "15–20+ years in private equity or growth equity with PE discipline",
+          "Demonstrated track record leading transactions as principal deal lead, serving on boards and executing realisations",
+          "Expert-level valuation, modelling and investment structuring capabilities",
+          "Strong transaction documentation and negotiation expertise",
+          "Deep understanding of African regulatory and tax environments",
+          "Bachelor’s degree in Finance, Economics, Engineering or equivalent",
+          "Fluent English"
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
+        "country": "Morocco",
+        "region": "Pan-African",
+        "locationDisplay": "Casablanca",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "e597a7be86fbaa370a74d6a9756ccb716dd1f0b7058c77e82fb5b9f05d8d02bb",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 159,
+          "sourceVariantCount": 7
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Equity and quasi-equity deal evaluation, board representation and exits define the mandate; DFIs are counterparties.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0040",
+        "title": "Senior Analyst for Fund of Funds",
+        "company": "responsAbility Investments",
+        "summary": "Senior analyst role at responsAbility Investments in Cape Town supporting fund of funds investing, with a focus on financial analysis and asset management in emerging markets.",
+        "aboutRole": "responsAbility is a leading Swiss impact asset manager with deep expertise in private market investing across emerging markets, and part of M&G Investments since 2022. This Senior Analyst role joins the Private Equity Fund of Funds team in Cape Town, working alongside senior investment professionals on intermediated business investments across global emerging markets.",
+        "responsibilities": [
+          "Evaluate business plans and pitch materials, develop financial projections and perform comparative analysis",
+          "Engage in due diligence activities covering financial, commercial, tax and legal aspects",
+          "Facilitate fund structuring and fundraising coordination",
+          "Oversee and manage portfolio company monitoring",
+          "Create and maintain valuation models and financial forecasts",
+          "Execute product reporting, market analysis, marketing support and special projects"
+        ],
+        "requirements": [
+          "Bachelor’s degree from an accredited institution",
+          "5 years of professional experience in investment banking, private equity, venture capital or management consulting",
+          "Strong financial modelling capabilities",
+          "Superior analytical and communication competencies",
+          "Fluent English (written and spoken)",
+          "Readiness to travel as needed"
+        ],
+        "sourceUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2273/Description/2?DesignID=00",
+        "applyUrl": "https://recruitingapp-2830.umantis.com/Vacancies/2273/Description/2?DesignID=00",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Cape Town, South Africa",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "f50fac86564aca349c8e5ea3ab761294e61c0597dc1a17ced0aea5b50a966cbc",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "a0eacbea4eca413ed6611011d529d43ecd3792a0",
+          "line": 1028
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "a0eacbea4eca413ed6611011d529d43ecd3792a0",
+          "projectionObservationCount": 30,
+          "sourceVariantCount": 4
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "fund-investments-secondaries",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "reason": "Diligence and valuations support a fund-of-funds investment mandate identified in the retained context.",
+        "missingEvidence": "Primary source could specify how much work concerns fund commitments versus look-through portfolio monitoring."
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0101",
+        "title": "Investment Specialist - Private Credit",
+        "company": "Ninety One",
+        "summary": "Senior private-credit origination and execution role covering leveraged finance, structured credit, direct lending and infrastructure, primarily in South Africa with broader African exposure.",
+        "aboutRole": "Ninety One is an independent, active investment manager with a strong focus on emerging markets and Africa. This Investment Specialist role sits within the EM Alternative Credit (EMAC) platform, one of Ninety One's highest-growth investment businesses. The team deploys private credit across South Africa, the rest of Africa, broader emerging markets, and select developed market opportunities, investing across the capital structure in leveraged finance, infrastructure debt, direct lending, high yield, and structured credit. Investment professionals remain embedded in transactions from initial origination through close and ongoing portfolio management.",
+        "responsibilities": [
+          "Own end-to-end origination of private credit transactions across sector coverage, with a minimum 80% focus on the South African market and selective cross-border activity",
+          "Independently source, screen, and progress opportunities from first contact through investment committee approval",
+          "Build and maintain relationships with deal-sourcing counterparties including private equity sponsors, corporates, banks, intermediaries, and development finance institutions",
+          "Lead deal structuring, credit analysis, and transaction execution across leveraged finance, structured finance, and direct lending in consumer, services, real estate, industrials, and infrastructure sectors",
+          "Serve as deal lead and primary investment professional from origination through credit committee, documentation, and close",
+          "Prepare and present investment papers, credit committee materials, and portfolio monitoring reports to internal governance forums",
+          "Contribute to platform development including fund strategy, investor reporting, and sector views",
+          "Mentor and develop junior investment team members"
+        ],
+        "requirements": [
+          "7-10 years of relevant experience in leveraged finance, structured finance, principal credit investing, or a closely related discipline",
+          "Demonstrable track record of originating and closing privately negotiated credit transactions with genuinely portable relationships",
+          "Deep sector expertise across at least two of: consumer and retail, business services, real estate, industrials, or core infrastructure",
+          "Strong credit structuring skills including capital structure design, security packages, financial covenant setting, and relative value assessment",
+          "Experience working on South African transactions with understanding of local market dynamics and regulatory frameworks",
+          "Comfort operating across the full deal cycle from teaser review through documentation oversight"
+        ],
+        "sourceUrl": "https://za.linkedin.com/jobs/view/investment-specialist-%E2%80%93-private-credit-at-ninety-one-4430624479",
+        "applyUrl": "https://za.linkedin.com/jobs/view/investment-specialist-%E2%80%93-private-credit-at-ninety-one-4430624479",
+        "country": "South Africa",
+        "region": "Pan-African",
+        "locationDisplay": "Cape Town, South Africa",
+        "boardSection": "Jobs"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "f9a572864f8582008781ba6225ccfc16efcd0df3f963df299ce4ef56d09c758b",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "27f711261d2aa3098cb988e3d21c610581c3349b",
+          "line": 3028
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "8d8ca7a2fffb489000876459895e5b79f176e46a",
+          "line": 2992
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "364822b70504e059750897fc70a58219acf2ab01",
+          "line": 2549
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "63ccdf5966202731c9a8133c80f8722006ce0157",
+          "line": 2996
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "efa8ce36319f9092662bc1b784ba6bc4f176deac",
+          "line": 2965
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "line": 3111
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "46cbdd889ded6a6beafe7dbdd71e632c81934982",
+          "lastProjectionCommit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "projectionObservationCount": 12,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "private-credit",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "reason": "The investment professional owns the end-to-end private credit investment process through investment committee and closing.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0263",
+        "title": "Associate, Investment",
+        "company": "Attijariwafa Ventures",
+        "summary": "Source startup investments, support transaction execution and contribute to portfolio value creation at Attijariwafa Ventures.",
+        "aboutRole": "The investment associate will work across the venture-capital investment cycle, from ecosystem research and sourcing to due diligence and portfolio support. The hiring entity is Attijariwafa Ventures, the group’s venture-investment subsidiary, rather than Attijari Finances Corp.",
+        "responsibilities": [
+          "Identify investment prospects and analyse markets, business plans and financial models.",
+          "Prepare investment papers, coordinate external due diligence and support term-sheet and legal structuring work.",
+          "Monitor portfolio KPIs, contribute to value-creation plans and prepare investor and governance reporting."
+        ],
+        "requirements": [
+          "Master’s-level qualification from a business or engineering school or a strong university programme.",
+          "Three to five years in venture capital, M&A, transaction audit, strategy consulting or a startup.",
+          "Strong financial analysis and interest in African innovation ecosystems, with fluent English."
+        ],
+        "sourceUrl": "https://ma.linkedin.com/jobs/view/associate-investment-at-attijariwafa-ventures-4449456848",
+        "applyUrl": "https://ma.linkedin.com/jobs/view/associate-investment-at-attijariwafa-ventures-4449456848",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca-Settat, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "39f3f89e0836247aaba2fbe75561c6837fda4b50f7b463c69043be464d0934af",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "2ec0fb09e0f206fcfd644f4c71e7d4541647477b",
+          "lastProjectionCommit": "bc2b48339883e95346e4e6288f2d810e6096e579",
+          "projectionObservationCount": 30,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "venture-capital",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3
+        ],
+        "reason": "Startup sourcing, committee papers, terms and portfolio value creation support venture investing.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0017",
+        "title": "Investment Manager, AgDevCo Ventures",
+        "company": "AgDevCo",
+        "summary": "Investment manager role at AgDevCo Ventures based in Nairobi, leading mezzanine debt investments into early-stage agri-SMEs across East Africa within a newly launched $48 million impact vehicle.",
+        "aboutRole": "AgDevCo Ventures (AV) is a new impact investment vehicle established as a subsidiary of AgDevCo Ltd, a social impact investor with approximately $340 million under management. AV has raised $48 million to invest mezzanine debt into early-stage agri-SMEs across East Africa (Kenya, Ethiopia, Uganda, Rwanda and Tanzania), supporting business growth while creating jobs, improving food security, and boosting regional prosperity. Launching in 2026, this Investment Manager role is among the first hires to the AV team and reports to the Head of AgDevCo Ventures in Nairobi.",
+        "responsibilities": [
+          "Originate investment opportunities and perform initial screening and appraisal of new investments in East Africa",
+          "Participate in commercial negotiations on the structure and terms of potential investments alongside the Head of Ventures",
+          "Carry out due diligence of investment opportunities, including oversight of Analysts/Associates and liaison with third-party service providers",
+          "Prepare and write internal investment approval papers and present these to AV's Investment Committee",
+          "Oversee legal execution of approved transactions, working closely with internal and external legal counsel",
+          "Serve as primary point of contact for multiple AV portfolio investments",
+          "Monitor and evaluate investment performance against key targets, managing and reporting risks as they arise",
+          "Provide or procure investee support and technical assistance as required",
+          "Contribute to quarterly portfolio reporting to AV's IC/Board",
+          "Develop and maintain an active pipeline of investment opportunities in East Africa",
+          "Participate in budget and investment target setting and contribute to overall strategy and operational objectives",
+          "Monitor financial performance against agreed KPIs and contribute to external reporting"
+        ],
+        "requirements": [
+          "Minimum 6-8 years' experience in a relevant investment business (private equity, DFI, impact investor, SME investor, or commercial bank)",
+          "Experience working in Africa in an investment role",
+          "Excellent analytical, finance, and negotiation skills including familiarity with mezzanine debt instruments",
+          "Strong financial modelling skills including equity valuation models",
+          "Excellent oral and written communication skills",
+          "Collegiate working style with strong management capability",
+          "Ability to develop and manage strategic relationships with donors, peer organisations, and potential investees",
+          "Right to work in Kenya without need for sponsorship"
+        ],
+        "sourceUrl": "https://recruitment.cezannehr.com/shared/job/investment-manager-agdevco-ventures-86834",
+        "applyUrl": "https://recruitment.cezannehr.com/shared/job/investment-manager-agdevco-ventures-86834",
+        "country": "Kenya",
+        "region": "East Africa",
+        "locationDisplay": "Nairobi, Kenya",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "1e0fa4fde36d65b68f493bc72201cb9a8234c55f89ebcb9a985ded8d76bbb916",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "a0eacbea4eca413ed6611011d529d43ecd3792a0",
+          "line": 605
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "a0eacbea4eca413ed6611011d529d43ecd3792a0",
+          "projectionObservationCount": 30,
+          "sourceVariantCount": 4
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "private-credit",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "reason": "Mezzanine debt is the stated investment instrument; origination and committee submissions dominate budget and KPI work.",
+        "missingEvidence": "Confirm any material equity mandate beyond the retained mezzanine description."
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "DRAFT-c07abbd13795",
+        "title": "ESG Coordinator",
+        "company": "Africa50",
+        "summary": "Support ESG, climate and development-impact work across Africa50’s infrastructure investments. This Casablanca-based role combines investment due diligence, portfolio monitoring and data reporting, helping the ESG team apply consistent standards and turn environmental and social information into useful investment insights.",
+        "aboutRole": "Working with the Senior ESG Manager and the ESG, Climate & Sustainability team, the Coordinator supports Africa50’s Environmental and Social Management System across the investment lifecycle. The position connects investment teams, portfolio companies and external specialists, with a particular focus on reliable data and timely reporting across multiple vehicles. The employer describes flexible working arrangements and regular travel.",
+        "responsibilities": [
+          "Help apply the ESMS during screening and due diligence, preparing ESG documentation and inputs for investment committee papers.",
+          "Track portfolio commitments, support site visits and audits, and document significant ESG incidents for escalation.",
+          "Collect and maintain environmental, climate, gender and impact data, checking its consistency and completeness.",
+          "Coordinate reporting inputs from investment teams, consultants and portfolio companies for internal and external disclosures.",
+          "Research ESG practices and improve monitoring tools, templates and the underlying management system.",
+          "Prepare presentations, knowledge materials and training support, and coordinate engagements with DFIs and other stakeholders."
+        ],
+        "requirements": [
+          "Bachelor’s degree in environmental science, sustainability, engineering, finance, public policy or another relevant field.",
+          "At least three years in environment, climate, sustainability or governance in Africa or other emerging markets.",
+          "Understanding of ESG assessment, development impact, gender and climate topics, including emissions accounting and reporting frameworks.",
+          "Strong data and analytical skills using Excel, Power BI or equivalent tools, with careful attention to reporting accuracy.",
+          "Familiarity with ESG due diligence and standards such as IFC Performance Standards, AfDB Safeguards and Equator Principles; infrastructure or investment-sector exposure is an asset.",
+          "Strong English communication; French is highly desirable. A commitment to an Africa-focused career and willingness to travel are expected."
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "7f259252aee35350f064ed0fd834c7b98495077cca5e7e72b2fd224bee4e8ea2",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "9992c77ef69ad1b2f6ebc2e7655e84a7a270043f",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 59,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Impact & ESG",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "reason": "Investment ESG diligence, incidents, commitments and monitoring establish dedicated ESG support to infrastructure.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "DRAFT-4142b13c28a8",
+        "title": "Senior Legal Counsel / Principal Counsel",
+        "company": "Africa50",
+        "summary": "Provide senior legal support for Africa50’s infrastructure investments, investment vehicles and institutional activities. Based in Casablanca, the role combines complex transaction execution with fund formation, governance and regulatory advice, working closely with investment colleagues, external counsel and investors across multiple jurisdictions.",
+        "aboutRole": "As a senior member of the legal team, you advise the General Counsel and help translate commercial objectives into sound legal structures. The remit covers equity and quasi-equity transactions, platforms, co-investments, secondary deals and exits, as well as vehicles pooling third-party capital. It also includes ongoing investor obligations, group governance and the development of internal legal capabilities.",
+        "responsibilities": [
+          "Lead legal execution of investments and exits, negotiating purchase, shareholder, development, financing and other transaction agreements.",
+          "Manage due diligence, external counsel and closing processes, and advise investment teams on legal and commercial risks.",
+          "Structure and launch funds or other investment vehicles and negotiate offering, partnership, subscription and investor documentation.",
+          "Support fundraising, investor onboarding and regulatory compliance, including cross-border marketing, sanctions, AML/KYC and privacy considerations.",
+          "Oversee entity and fund governance, preparing approvals, board materials, resolutions and filings across the group.",
+          "Advise on portfolio matters, mentor junior colleagues and improve templates, policies and the organisation’s legal knowledge base."
+        ],
+        "requirements": [
+          "Qualification to practise law in at least one jurisdiction and at least 13 years of post-qualification experience.",
+          "Relevant experience with leading international law firms, private equity funds, asset managers, DFIs or financial institutions.",
+          "A record of leading complex cross-border equity investments, preferably infrastructure, and strong fund-formation or alternative-investment experience.",
+          "Strong drafting, negotiation and analytical ability, including assessment of legal, regulatory, commercial and operational risks.",
+          "Ability to manage competing transactions independently, advise senior stakeholders and mentor colleagues in a multicultural environment.",
+          "Excellent English; strong French is highly preferred. Willingness to travel extensively is required."
+        ],
+        "sourceUrl": "https://www.africa50.com/working-with-us/career/legal-counsel",
+        "applyUrl": "https://www.africa50.com/working-with-us/career/legal-counsel",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "dd1fbb443f3db139d5cca2a3519c42e045280c204310474e0171b15fbfe4a0fd",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "9992c77ef69ad1b2f6ebc2e7655e84a7a270043f",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 59,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": "private-markets",
+        "subcategoryId": "infrastructure-real-assets",
+        "jobFunction": "Investment Legal",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "reason": "Actual legal execution of infrastructure investments and exits supports the narrow function; fund formation alone does not imply FoF.",
+        "missingEvidence": "Mandatory initial editorial review and relative prominence of transaction versus general institutional work."
+      }
+    },
+    {
+      "batch": 2,
+      "input": {
+        "id": "ACD-0250",
+        "title": "Legal Officer — Fund of Funds & Structuration",
+        "company": "Investisseurs & Partenaires / FASA",
+        "summary": "Advise on FASA’s fund investments and I&P’s investment structures, with responsibility for legal due diligence, documentation and fund governance.",
+        "aboutRole": "Working with the CFO and FASA programme director, the legal officer will support fund-of-funds commitments and the structuring of I&P investment vehicles. The remit spans investment documentation, external counsel and governance across relevant European, US and Mauritian legal frameworks.",
+        "responsibilities": [
+          "Review fund agreements, private-placement materials and side letters and coordinate legal due diligence.",
+          "Support investment-vehicle structuring and governance, including work involving Mauritius, Luxembourg and France.",
+          "Manage external counsel and legal documentation throughout fund commitments and related investment activity."
+        ],
+        "requirements": [
+          "Law degree or qualification as an admitted lawyer, with around five years of post-qualification experience in relevant legal work.",
+          "Fund formation and investment-documentation experience, including relevant regulatory frameworks such as AIFMD.",
+          "Strong English; French is strongly preferred."
+        ],
+        "sourceUrl": "https://www.ietp.com/fr/content/legal-officer-fund-of-funds",
+        "applyUrl": "https://www.ietp.com/fr/content/legal-officer-fund-of-funds",
+        "country": "France / Côte d’Ivoire / Kenya",
+        "region": "Africa-focused / International",
+        "locationDisplay": "Paris, France; alternatively Abidjan, Côte d’Ivoire or Nairobi, Kenya",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "7292bef9e0a992119fc0a88a49a8fd99a6b1f5d020876f6e9eac3f6c0653a7e5",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "2ec0fb09e0f206fcfd644f4c71e7d4541647477b",
+          "lastProjectionCommit": "e3200a6c802ab5577bc7a0f93ea32eef0f2897ab",
+          "projectionObservationCount": 87,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": "private-markets",
+        "subcategoryId": "fund-investments-secondaries",
+        "jobFunction": "Investment Legal",
+        "dutyNumbers": [
+          1,
+          2,
+          3
+        ],
+        "reason": "Fund agreements, side letters and commitments evidence direct legal support of fund investments.",
+        "missingEvidence": "Mandatory initial editorial review; historical closure remains independent."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0077",
+        "title": "Infrastructure Finance Specialist",
+        "company": "DBSA",
+        "summary": "Infrastructure-finance specialist at DBSA supporting transaction structuring, financial modelling and investment-advisory work across Southern Africa and selected African markets.",
+        "aboutRole": "The Development Bank of Southern Africa (DBSA) is a development finance institution focused on building Africa's prosperity through infrastructure investment and financing across Southern Africa and selected African nations. This Infrastructure Finance Specialist role delivers financial modelling, transaction structuring, infrastructure financing, and investment advisory support for infrastructure projects and programmes.",
+        "responsibilities": [
+          "Build and maintain detailed project finance models using Excel and established financial methodologies",
+          "Structure and support infrastructure financing transactions and due diligence processes",
+          "Evaluate project feasibility and bankability for commercial sustainability",
+          "Provide advisory services to government and private-sector stakeholders on infrastructure financing solutions",
+          "Prepare investment reports, memoranda, and governance submissions"
+        ],
+        "requirements": [
+          "Postgraduate degree in Development Finance, Finance, Business, Engineering, or Economics",
+          "Minimum 8 years of experience in project finance and infrastructure finance",
+          "Demonstrated complex project finance modelling expertise",
+          "Infrastructure investment experience in emerging markets",
+          "Experience in project risk identification and mitigation",
+          "Transaction evaluation experience from early review through financial close",
+          "Knowledge of South African infrastructure regulations including the PFMA"
+        ],
+        "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS250617-1",
+        "applyUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS250617-1",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Midrand, South Africa",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "eedeed7954456b2a90c541e4e15cdcb17d43b62f6d1320b7e1a2c76bb03d7bc5",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "fa1631f224fad5f8160f0afbce4bc4a7069c178c",
+          "line": 2719
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "dbb84a06fbe1488773847e82b3787c191ee66911",
+          "lastProjectionCommit": "fa1631f224fad5f8160f0afbce4bc4a7069c178c",
+          "projectionObservationCount": 5,
+          "sourceVariantCount": 1
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "development-finance",
+        "subcategoryId": "advisory-capital-mobilisation",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "DFI feasibility, transaction structuring and government/private-client advisory support finance mobilisation.",
+        "missingEvidence": "Clarify how often the role executes DBSA principal lending versus advisory work."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0004",
+        "title": "Relationship Manager – ARISE Implant (China Corridor)",
+        "company": "African Export-Import Bank (Afreximbank)",
+        "summary": "Cotonou-based Relationship Manager role supporting Afreximbank's strategic partnership with ARISE IIP by originating, structuring and delivering export development finance solutions across ARISE's Special Economic Zone network, with a focus on the China Corridor.",
+        "aboutRole": "The successful candidate will support Afreximbank's strategic partnership with ARISE Integrated Industrial Platforms (ARISE IIP) by promoting, facilitating and delivering export development finance solutions across the ARISE network of Special Economic Zones. Working closely with clients, banks and financial institutions, the role holder will originate and structure financing solutions, facilitate client onboarding, coordinate transaction execution and strengthen relationships across the banking ecosystem. The role is instrumental in enabling access to financial services that support industrialisation, export growth and investment within the ARISE IIP network.",
+        "responsibilities": [
+          "Develop innovative and appropriate financing solutions tailored to client projects within ARISE IIP Special Economic Zones",
+          "Facilitate the provision of suitable banking and financial products while supporting client onboarding through effective processes and systems",
+          "Act as the primary liaison between banks, financial institutions and clients throughout the transaction lifecycle",
+          "Assist in evaluating, structuring, negotiating and closing financing transactions with banks and other financial institutions",
+          "Apply strong financial expertise and relationship management skills to achieve successful transaction outcomes",
+          "Ensure timely execution of transactions and availability of funding in accordance with banking requirements and approved timelines",
+          "Analyse the operational and financial performance of prospective clients, review investment proposals, assess transaction risks and opportunities, and provide recommendations to financial institutions",
+          "Manage end-to-end communication between clients and financial institutions, including information gathering, transaction coordination and post-transaction feedback",
+          "Build and maintain strong relationships with existing and prospective clients, commercial banks, development finance institutions and other stakeholders within the regional and global lending ecosystem",
+          "Foster effective collaboration across diverse teams and stakeholders to support the successful delivery of financing solutions",
+          "Understand and adhere to the Bank's AML, regulatory and conduct compliance policies and procedures"
+        ],
+        "requirements": [
+          "Postgraduate degree in Business Administration, Banking, Finance or a related discipline from a recognised university, or a recognised postgraduate professional qualification in Banking, Financial Services, Insurance or a related field",
+          "At least 8 years' experience as a Relationship Manager within the banking industry",
+          "Strong knowledge of banking practices across Africa and the ability to work effectively in a culturally diverse environment",
+          "Proven experience in structured trade finance, syndicated lending and project finance",
+          "In-depth knowledge of corporate banking products and financial solutions",
+          "Demonstrated experience in client relationship management and business development within corporate banking",
+          "Strong credit analysis, transaction documentation and relationship management skills",
+          "Ability to assess customer requirements and develop appropriate financing solutions",
+          "Strong people management and stakeholder engagement skills",
+          "Excellent written and verbal communication skills in English",
+          "Excellent organisational and time management skills with the ability to work effectively under tight deadlines"
+        ],
+        "sourceUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF",
+        "applyUrl": "https://apply.workable.com/afreximbank/j/9BCDA5C8EF/apply/",
+        "country": "Benin",
+        "region": "West Africa",
+        "locationDisplay": "Cotonou, Benin",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "0bdf09e1310911310f2acda517cde78d4e095a17b0c3a38c542789c650033629",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 159,
+          "sourceVariantCount": 7
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "development-finance",
+        "subcategoryId": "investment-lending",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "reason": "Origination, structuring, negotiating and closing export-development financing for Benin-based coverage support DFI financing.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0073",
+        "title": "Senior / Lead Investment Officer, Blended Finance",
+        "company": "FinDev Canada",
+        "summary": "Senior or lead blended finance officer at FinDev Canada structuring concessional capital transactions and building private-sector partnerships in emerging markets.",
+        "aboutRole": "FinDev Canada is Canada's development finance institution, working with and through the private sector to advance climate and nature action, gender equality, and market development in developing economies. Headquarters are in downtown Montreal; Ottawa or Toronto are considered for the right candidate under a hybrid working model (currently three in-office days per week). This Senior/Lead Investment Officer contributes to FinDev Canada's concessional capital pipeline and blended finance transactions, working across sectoral teams in Infrastructure, Funds, Agribusiness, and Financial Intermediaries. The role serves as the internal reference point on DFI Enhanced Blended Finance Principles and FinDev Canada's Concessional Facility Terms and Conditions.",
+        "responsibilities": [
+          "Contribute to pipeline development for FinDev Canada's blended finance programme by working closely with sectoral teams across Infrastructure, Funds, Agribusiness, and Financial Intermediaries",
+          "Support the sourcing of new concessional capital in coordination with internal teams",
+          "Structure and underwrite impactful blended finance transactions aligned with FinDev Canada's mission",
+          "Support the Portfolio Management and Funds teams in managing existing blended finance investments",
+          "Collaborate with financing partners to develop platforms and transactions that facilitate private-sector investment in emerging markets",
+          "Provide guidance to the Investment Team on the DFI Enhanced Blended Finance Principles and FinDev Canada's Concessional Facility Terms and Conditions",
+          "Coach and mentor team members, fostering a culture of continuous learning and innovation",
+          "Manage calculations and reporting related to blended finance activities, ensuring accuracy and transparency",
+          "Contribute to the development and implementation of a long-term blended finance strategy",
+          "Support capacity building of internal stakeholders on blended finance concepts and practices",
+          "Engage with the blended finance community; represent FinDev Canada at relevant external events and develop external partnerships"
+        ],
+        "requirements": [
+          "Masters degree with a specialisation in Business, Finance, Accounting, or equivalent",
+          "Minimum 8-12 years of experience in originating, structuring, and managing transactions in a DFI, MDB, or banking context",
+          "At least 5 years of experience specifically with blended finance transactions",
+          "Commercial understanding of risk/return assessment within a concessional capital context",
+          "Advanced knowledge of structuring commercial lending and/or equity investments in developing markets",
+          "Strong networking and relationship management skills",
+          "Excellent problem-solving, communication, and presentation skills",
+          "Strong English fluency; French strongly preferred",
+          "Willingness to travel"
+        ],
+        "sourceUrl": "https://apply.workable.com/findevcanada/j/9E44B10E5C",
+        "applyUrl": "https://apply.workable.com/findevcanada/j/9E44B10E5C",
+        "country": "Canada",
+        "region": "Pan-African",
+        "locationDisplay": "Montréal / Ottawa / Toronto (emerging-markets coverage)",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "d7b8ba707e347f7dda16856aa4930db97d293ad99126bc47b21569a371280ded",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "fa1631f224fad5f8160f0afbce4bc4a7069c178c",
+          "line": 2595
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "dbb84a06fbe1488773847e82b3787c191ee66911",
+          "lastProjectionCommit": "fa1631f224fad5f8160f0afbce4bc4a7069c178c",
+          "projectionObservationCount": 5,
+          "sourceVariantCount": 1
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": "development-finance",
+        "subcategoryId": "investment-lending",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Concessional-capital underwriting and portfolio support establish a proposed DFI activity; geography remains a separate gate.",
+        "missingEvidence": "Canada location and generic emerging-market wording leave Africa mandate unproven."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0090",
+        "title": "Investment Officer, MAS Africa Upstream and Advisory",
+        "company": "IFC",
+        "summary": "IFC investment officer role in MAS Africa Upstream & Advisory, focused on developing and executing upstream/advisory opportunities in Africa.",
+        "aboutRole": "The International Finance Corporation (IFC), a member of the World Bank Group, is the largest global development institution focused on the private sector in emerging markets. This Investment Officer role in the MAS Africa Upstream and Advisory team is based in either Windhoek, Namibia or Port Louis, Mauritius, focused on developing and executing upstream and advisory mandates to create investment opportunities across Africa's manufacturing, agribusiness, and services sectors.",
+        "responsibilities": [],
+        "requirements": [
+          "Experience in investment, upstream advisory, market creation, project development, transaction structuring, and business development",
+          "Strong track record in originating and executing private-sector investment mandates",
+          "Excellent written and verbal communication skills in English"
+        ],
+        "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37326?c=worldbankgroup",
+        "applyUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/37326?c=worldbankgroup",
+        "country": "Namibia / Mauritius",
+        "region": "Southern Africa",
+        "locationDisplay": "Windhoek, Namibia or Port Louis, Mauritius",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "fd0b3842db7c796c216601cc80e94666b5319ea95b40d630c40e97b714f362b0",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "98eefb48870f3ca1be18e44cbfa8982ffe4159ee",
+          "line": 2813
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "809bdd587aa4f7507d5d4990d8485303e157214c",
+          "line": 2813
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "98eefb48870f3ca1be18e44cbfa8982ffe4159ee",
+          "lastProjectionCommit": "809bdd587aa4f7507d5d4990d8485303e157214c",
+          "projectionObservationCount": 5,
+          "sourceVariantCount": 1
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [],
+        "reason": "Retained summary describes IFC upstream advisory in Africa but gives no detailed duties.",
+        "missingEvidence": "Obtain original posting to confirm project preparation versus principal investment."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0028",
+        "title": "Senior Associate, Credit Risk and Portfolio Management",
+        "company": "InfraCredit",
+        "summary": "Credit risk and portfolio management role at InfraCredit focused on infrastructure debt and portfolio monitoring.",
+        "aboutRole": "InfraCredit is a Nigerian financial institution providing credit guarantees to enable long-term local currency infrastructure financing. This Senior Associate role in Credit Risk and Portfolio Management supports credit risk execution, transaction closing, portfolio management and relationship maintenance across InfraCredit’s guarantee portfolio.",
+        "responsibilities": [
+          "Review deal structures from a credit risk perspective and ensure alignment of term sheets, credit papers and legal agreements with guarantee policy",
+          "Manage conditions precedent fulfilment and sign-off processes",
+          "Create loan repayment schedules in the transaction management system",
+          "Review guarantee documentation and assess transaction controls",
+          "Conduct detailed due diligence reviews of financial models, environmental/social reports and counterparty information",
+          "Prepare risk assessment matrices identifying and allocating risks with proposed mitigants",
+          "Monitor all active deals and credit conditions including covenants, precedent conditions and performance indicators",
+          "Manage collateral monitoring including valuations, cover ratios and margin call requirements",
+          "Track covenant breaches and escalate through appropriate channels",
+          "Maintain regular client contact to ensure timely receipt of risk information and conduct periodic security reviews",
+          "Prepare periodic management information system reports and presentations",
+          "Support compliance monitoring of on-lending schemes and funding arrangements"
+        ],
+        "requirements": [],
+        "sourceUrl": "https://infracredit.ng/candidate/career/senior-associate-credit-risk-and-portfolio-management/",
+        "applyUrl": "https://infracredit.ng/candidate/career/senior-associate-credit-risk-and-portfolio-management/",
+        "country": "Nigeria",
+        "region": "West Africa",
+        "locationDisplay": "Lagos, Nigeria",
+        "boardSection": "Jobs",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "3b4c0dd4c4bc7600d8158aa0489c225bae3ce82b9f8671e32e432559c48ced27",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "97145bd20c17ed02f8b150f9f631b6e0a98a4683",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "27f711261d2aa3098cb988e3d21c610581c3349b",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "8d8ca7a2fffb489000876459895e5b79f176e46a",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "364822b70504e059750897fc70a58219acf2ab01",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "63ccdf5966202731c9a8133c80f8722006ce0157",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "efa8ce36319f9092662bc1b784ba6bc4f176deac",
+          "line": 1193
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "line": 1193
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "57a49595e15e3f042874cc7da37ad8413ad8a7a5",
+          "lastProjectionCommit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "projectionObservationCount": 24,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "project-structured-finance",
+        "jobFunction": "Risk & Underwriting",
+        "dutyNumbers": [
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        "reason": "Guarantee-backed infrastructure credit assessment, covenant and collateral work support risk within structured finance.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0332",
+        "title": "Structured Origination Lead",
+        "company": "Standard Bank",
+        "summary": "Join Standard Bank’s Corporate & Investment Banking franchise in London to originate and execute complex financing across African and international markets. The role combines senior client coverage, bespoke structuring and capital mobilisation for sovereigns, financial institutions and corporate borrowers.",
+        "aboutRole": "This position sits across Coverage, Global Markets, Investment Banking and Transaction Banking. The lead identifies client needs, converts opportunities into mandates and takes responsibility for transactions through approval, execution and closing. Solutions may combine financing and risk management where standard products do not adequately address the client’s objectives. Investor engagement is integral: the role aligns borrowers’ funding needs with institutional appetite, syndication and distribution capacity, and risk-transfer opportunities. Candidates should bring deep African credit and capital-markets knowledge, technical judgement and a record of building relationships with senior executives, sponsors, DFIs and investors.",
+        "responsibilities": [
+          "Originate structured-financing opportunities and maintain an actionable pipeline across priority clients and markets.",
+          "Lead pitches and develop tailored financing and risk-management structures with product and coverage teams.",
+          "Manage structuring, pricing, internal approval and execution through transaction close.",
+          "Engage institutional investors, insurers and distribution partners on syndication, capital mobilisation and risk transfer.",
+          "Build strategic client relationships and identify market developments that support commercially viable mandates."
+        ],
+        "requirements": [
+          "Degree in finance, economics, engineering, mathematics or a related discipline.",
+          "At least fifteen years in structured finance, credit origination, syndication or distribution.",
+          "Advanced experience designing, pricing and executing bespoke financing solutions.",
+          "Strong African credit and capital-markets track record, investor relationships and ability to manage complex stakeholders."
+        ],
+        "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000152337259",
+        "applyUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000152337259",
+        "country": "United Kingdom",
+        "region": "Pan-African",
+        "locationDisplay": "London, United Kingdom — African and international markets",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "b01887a164848954b77cb8b3aa1e075e1ece9ab0f354d81cd8ce15a3a7827e62",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "01b987a3dcbb71e076681dafeda8a36292188450",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 67,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "project-structured-finance",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Africa is explicit in London role location and remit; bespoke structures, pricing and approval precede distribution.",
+        "missingEvidence": "Clarify mix of structured lending, syndication and capital-market instruments."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "DRAFT-2f674368d9ee",
+        "title": "South Africa Bank Treasurer",
+        "company": "Absa",
+        "summary": "Lead the strategic management of Absa’s South African banking balance sheet from Sandton. Reporting to the Group Treasurer, the role brings together liquidity, funding, capital, HQLA investments and asset-liability management, with ownership of ZAR and USD ALM budgets and senior responsibility for risk-adjusted returns and regulatory engagement.",
+        "aboutRole": "The Bank Treasurer steers structural interest-rate and liquidity positions within approved mandates and risk appetite, while advising executive leadership and ALCO on balance-sheet strategy. The mandate includes funding mix and contingency readiness, investment governance for the bank’s high-quality liquid asset portfolio, and coordination with Global Markets. It also involves leading a specialist Treasury team and working closely with Finance, Risk, regulators and governance committees.",
+        "responsibilities": [
+          "Own ZAR and USD ALM budgets and steer structural interest-rate and liquidity positions within approved limits.",
+          "Oversee banking-book interest-rate risk, using forecasts, scenarios and stress tests to guide positioning and corrective action.",
+          "Advise ALCO on balance-sheet strategy and assess the capital, liquidity and earnings impact of business plans and transactions.",
+          "Steer the funding mix, tenor, concentration and cost across currencies; coordinate funding and hedging with Global Markets.",
+          "Manage the HQLA portfolio’s asset allocation, duration, concentration, liquidity positioning and risk-adjusted performance.",
+          "Lead specialist Treasury colleagues, engage regulators and executive stakeholders, and maintain effective investment, risk and control governance."
+        ],
+        "requirements": [
+          "Relevant postgraduate qualification in finance, economics, accounting, quantitative finance or a related field is preferred; the advert’s education field lists a master’s degree.",
+          "Significant senior experience in bank Treasury, ALM, liquidity, funding, capital or balance-sheet management.",
+          "Demonstrated accountability for material budgets and risk positions, with experience supporting executive decisions.",
+          "Leadership of specialist teams and experience engaging regulators, governance committees and senior executives.",
+          "Deep knowledge of South African rates, money and FX markets, alongside HQLA, liquidity, IRRBB, capital and balance-sheet economics."
+        ],
+        "sourceUrl": "https://absa.wd3.myworkdayjobs.com/ABSAcareersite/job/Sandton/South-Africa-Bank-Treasurer_R-15992413",
+        "applyUrl": "https://absa.wd3.myworkdayjobs.com/ABSAcareersite/job/Sandton/South-Africa-Bank-Treasurer_R-15992413",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Sandton, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-11-09",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "d5d4db3c61a0f1f5651099bb7ac42af7318078381010394e7018cbe4a142c8b4",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "c7a4a9e07e20c62842d249359a95e67dedad6c21",
+          "lastProjectionCommit": "d33e8e2dee2d6fd3e366db9a04784aeab92ca8ed",
+          "projectionObservationCount": 11,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "treasury-funding-alm",
+        "jobFunction": "Strategic Finance",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Balance-sheet steering, liquidity, funding mix and interest-rate decisions are the core remit.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "ACD-0220",
+        "title": "Executive: Deal Structuring - Trade and Working Capital",
+        "company": "Absa Corporate and Investment Banking",
+        "summary": "Senior Absa CIB role originating, structuring and executing complex trade and working-capital solutions.",
+        "aboutRole": "Absa CIB is seeking a deal-structuring executive to develop bankable trade and working-capital solutions for financial institutions, corporate and institutional clients. The role brings together coverage, product, credit, legal, compliance and operations colleagues around client-led transactions. Its focus on trade, guarantees, receivables, payables and supply-chain finance gives it a distinct transactional-banking mandate.",
+        "responsibilities": [
+          "Partner with sales and coverage teams to identify high-value opportunities.",
+          "Structure and execute integrated trade and working-capital transactions.",
+          "Coordinate credit, legal, compliance and operations stakeholders through the lifecycle."
+        ],
+        "requirements": [
+          "Relevant degree in commerce, finance, economics, banking, law or related discipline.",
+          "Eight to twelve years in trade finance, transactional banking, corporate banking or structured trade solutions.",
+          "Complex-transaction structuring, execution, client engagement and governance capability."
+        ],
+        "sourceUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+        "applyUrl": "https://absa.wd3.myworkdayjobs.com/en-GB/ABSAcareersite/job/Executive--Deal-Structuring---Trade-and-Working-Capital_R-15990640",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Sandton, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-09-10",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "87b3c88b7c1eac5be4eb6a13663f26a9e888da7ab8d17db832e95ec7ed1a25af",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "944a0ba2726a58cc9bd96cd350e8ed3af096c1b6",
+          "lastProjectionCommit": "2ec0fb09e0f206fcfd644f4c71e7d4541647477b",
+          "projectionObservationCount": 9,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": "trade-syndicated-finance",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3
+        ],
+        "reason": "Client coverage supports complex trade and working-capital transaction structuring and execution.",
+        "missingEvidence": "Specific instruments are sparse; current duties distinguish trade finance from market product design."
+      }
+    },
+    {
+      "batch": 3,
+      "input": {
+        "id": "DRAFT-92837797fbe3",
+        "title": "Country Risk Head",
+        "company": "RMB",
+        "summary": "Lead RMB country and sovereign risk across Broader Africa, informing material credit, capital-allocation and growth decisions. Includes sovereign debt sustainability, cross-border transaction advice, risk appetite and executive credit governance.",
+        "aboutRole": "Provide leadership and accountability for the country and sovereign risk agenda across Broader Africa, shaping country risk strategy, appetite, governance and portfolio direction. Act as the organisation’s senior authority on country and sovereign risk, ensuring that macroeconomic, geopolitical and sovereign risk considerations inform material credit, capital allocation and growth decisions across markets. Country and sovereign credit strategy · Own and direct the country risk assessment and sovereign risk strategy across Broader Africa, including sovereign ratings, country limits and concentration insights. · Shape country risk appetite, limits and portfolio direction within approved governance and delegated authority. · Direct risk appetite interventions where sovereign, macroeconomic, credit conditions or geopolitical developments materially change the organisation's risk position. · Provide country-risk input into Credit EXCO and other executive governance decisions.",
+        "responsibilities": [
+          "Oversee sovereign debt sustainability, external liquidity, transfer and convertibility risk, scenario analysis and early-warning indicators.",
+          "Partners early with investment banking, regional and credit teams on cross-border transactions, growth plans and market exposure.",
+          "Provide leadership and accountability for the country and sovereign risk agenda across Broader Africa, shaping country risk strategy, appetite, governance and portfolio direction.",
+          "Country and sovereign credit strategy · Own and direct the country risk assessment and sovereign risk strategy across Broader Africa, including sovereign ratings, country limits and concentration insights. · Shape country risk appetite, limits and portfolio direction within approved governance and delegated authority. · Direct risk appetite interventions where sovereign, macroeconomic, credit conditions or geopolitical developments materially change the organisation's risk position. · Provide country-risk input into Credit EXCO and other executive governance decisions.",
+          "Economics and forward-looking risk intelligence · Integrate macroeconomic, fiscal, monetary, political and geopolitical developments into actionable credit assessments. · Oversee sovereign debt sustainability, external liquidity, transfer and convertibility risk, scenario analysis and early-warning indicators. · Explain implications for banks, corporates, households and sovereign counterparties across African markets.",
+          "Commercial advisory and business partnership · Partners early with investment banking, regional and credit teams on cross-border transactions, growth plans and market exposure. · Deliver independently, solutions-oriented challenge that balances commercial opportunity with credit discipline. · Translate complex risk analysis into clear recommendations for senior decision-makers."
+        ],
+        "requirements": [
+          "A postgraduate degree in Economics, Finance, Econometrics or a related field, or equivalent depth of expertise.",
+          "At least ten years in African macroeconomics, sovereign/country risk, or credit and banking risk.",
+          "Understanding of credit appetite, portfolio exposures, governance and cross-border banking products across African markets.",
+          "Exposure to sovereign debt, banking systems, political economy, DFIs, central banks, ratings agencies or institutional economic research.",
+          "Direct credit-approval or committee experience."
+        ],
+        "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/Country-Risk-Head_R55667-1",
+        "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Johannesburg/Country-Risk-Head_R55667-1",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-12-04",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "067bd08cf7ef5e9676904b8187f964a6e3ee19500b3d2a9cddc6c85c6ac1a579",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "c8e3b81ea217a2132359eef7acc0055f1c273945",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 2,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "banking-structured-finance",
+        "subcategoryId": null,
+        "jobFunction": "Risk & Underwriting",
+        "dutyNumbers": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "reason": "Sovereign debt sustainability, ratings and country limits are specialist credit risk with no precise approved banking subcategory.",
+        "missingEvidence": "Can record a suggested banking area and function without forcing a child."
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0082",
+        "title": "Infrastructure Advisory – Senior Associate",
+        "company": "KPMG",
+        "summary": "Senior Associate role in KPMG East Africa's Pan-African Infrastructure Advisory team, supporting strategy, project preparation, financial feasibility, commercial modelling, procurement, financing and transaction advisory across African infrastructure projects.",
+        "aboutRole": "KPMG East Africa is recruiting a Senior Associate for its Pan-Africa Infrastructure Advisory team. The team delivers end-to-end advisory services across infrastructure project lifecycles, supporting African governments, development partners, financiers, and developers in closing the continent's infrastructure gap. The role spans the full project cycle from strategy and project preparation through financing, delivery, and asset management.",
+        "responsibilities": [
+          "Support advisory engagements across all infrastructure project lifecycle phases",
+          "Lead financial feasibility studies, business case development, and commercial model analyses",
+          "Prepare and review financial models for investment decisions and deal structuring",
+          "Provide strategic input on project structuring, procurement, risk allocation, and financing",
+          "Draft client-ready reports, proposals, and technical deliverables",
+          "Conduct market research and stakeholder consultations",
+          "Support business development materials and client presentations",
+          "Build relationships with government agencies, financiers, and advisers",
+          "Mentor associates and contribute to thought leadership"
+        ],
+        "requirements": [
+          "Bachelor's degree in finance, accounting, economics, public policy, or a related field",
+          "4-7 years of experience in infrastructure advisory, project finance, PPP, or transaction services",
+          "Demonstrated financial advisory expertise including modelling and project structuring",
+          "Exposure to African or emerging-market infrastructure deals"
+        ],
+        "sourceUrl": "https://kpmg.com/ke/en/careers/experienced-hires/2026/infrastructure-advisory-senior-associate.html",
+        "applyUrl": "https://assets.kpmg.com/content/dam/kpmgsites/ke/pdf/jobs/2026/Infrastructure_Senior_Associate_Deal_Advisory_Advert.pdf.coredownload.inline.pdf",
+        "country": "Kenya",
+        "region": "East Africa",
+        "locationDisplay": "Nairobi, Kenya",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live",
+        "historicalDecisionReasons": []
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "b5cb2caa139523a8aa55ec978f31dd2d8d888f2b330a8d3f1cc9d57a25eb31c9",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "98eefb48870f3ca1be18e44cbfa8982ffe4159ee",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 152,
+          "sourceVariantCount": 5
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "transaction-restructuring-advisory",
+        "jobFunction": "Research & Analysis",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Client feasibility models, business cases and transaction advice are the substantive work; analytical delivery dominates origination.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0284",
+        "title": "Senior Advisory Vice President, Investment Banking",
+        "company": "Standard Bank CIB",
+        "summary": "Lead origination, structuring and end-to-end execution of complex M&A and corporate-finance advisory transactions.",
+        "aboutRole": "Within Standard Bank’s Corporate & Investment Banking business, this advisory role leads corporate-finance mandates from client origination to closing. It combines senior relationship coverage with transaction structuring, valuation oversight, negotiation and coordination of multidisciplinary deal teams, while maintaining the approvals and controls required for complex advisory work.",
+        "responsibilities": [
+          "Develop C-suite relationships and originate investment-banking advisory mandates.",
+          "Lead pitches, valuation, financial modelling, structuring, negotiation, approvals, documentation and closing.",
+          "Manage transaction teams and execution quality across complex mandates."
+        ],
+        "requirements": [
+          "Business or Commerce degree.",
+          "Approximately 8–10 years in investment banking, valuation and complex deal execution."
+        ],
+        "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000150635089-senior-advisory-vice-president-investment-banking",
+        "applyUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000150635089",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "fe37a576cfabf80ff3e3805663079fc2b791b81f282ff3f80d166bbe649afc2f",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "3a0837273396ab3932431bc5b88999e5bc8125b2",
+          "lastProjectionCommit": "9dc4744df22ff40bc1c1b5ef1d71e832f87451ad",
+          "projectionObservationCount": 49,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "ma-corporate-finance",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3
+        ],
+        "reason": "External M&A mandate origination and execution distinguish banker advisory from in-house acquisition.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "DRAFT-a77c2f9007f3",
+        "title": "Head: Equity Capital Markets (ECM)",
+        "company": "Nedbank",
+        "summary": "Lead Nedbank’s Equity Capital Markets business in Johannesburg, shaping its strategy and originating equity-related transactions. This senior role combines client advisory, transaction oversight and franchise leadership, with accountability for a sustainable pipeline, revenue growth and disciplined execution.",
+        "aboutRole": "The Head of ECM works alongside Corporate Finance, Coverage, Markets, Debt Capital Markets and sector teams to offer integrated capital-raising solutions. The remit spans IPOs, rights issues, secondary placements, accelerated bookbuilds and equity-linked transactions. Established relationships with executives, boards and investors are central, alongside responsibility for the team, financial performance, governance and expansion of the franchise.",
+        "responsibilities": [
+          "Set and deliver the ECM strategy, identify market opportunities and maintain a high-quality transaction pipeline.",
+          "Use senior client relationships to originate equity raises and advise executives, boards, shareholders and sponsors.",
+          "Oversee structuring, valuation, pricing, investor marketing, regulatory approvals and end-to-end transaction execution.",
+          "Coordinate legal advisers, auditors, sponsors, exchanges, regulators and investors with internal product and coverage teams.",
+          "Manage budgets, forecasts, revenue and profitability, while embedding transaction approvals, conduct standards and risk controls.",
+          "Build and mentor the ECM team, strengthen investor networks and develop financing capabilities across African markets."
+        ],
+        "requirements": [
+          "Professional qualification or honours degree; MBA, CA(SA), CFA or a finance or economics master’s degree is preferred.",
+          "At least ten years in ECM, corporate finance, investment banking or capital-markets advisory.",
+          "Demonstrated origination and execution of complex equity transactions and established senior corporate relationships.",
+          "Experience engaging with boards, executive teams, investors and regulators, supported by commercial and strategic judgement.",
+          "Significant people-leadership experience and the ability to develop talent and deliver business performance.",
+          "Leading an established ECM franchise, a strong investor network and pan-African capital-markets experience are preferred."
+        ],
+        "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Head-Equity-Capital-Markets-%28ECM%29/1435120033",
+        "applyUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Head-Equity-Capital-Markets-%28ECM%29/1435120033",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "139d4e56093b5cddd04a617928d5f4e7860d2c89bbf65dbbc1415edc35f364eb",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "9992c77ef69ad1b2f6ebc2e7655e84a7a270043f",
+          "lastProjectionCommit": "9dc4744df22ff40bc1c1b5ef1d71e832f87451ad",
+          "projectionObservationCount": 24,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "investment-banking-advisory",
+        "subcategoryId": "capital-markets",
+        "jobFunction": "Financing & Origination",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Origination, structuring and pricing of equity raises establish ECM; franchise management supports that work.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0108",
+        "title": "Assistant Portfolio Manager (Global) - Multi-Management Public Markets",
+        "company": "Public Investment Corporation (PIC)",
+        "summary": "Senior multi-manager role supporting global manager selection, portfolio construction, risk-and-return analysis, monitoring and investment recommendations.",
+        "aboutRole": "The Public Investment Corporation (PIC) is one of Africa's largest asset managers, managing funds on behalf of South African government employees and other public-sector institutions. This Assistant Portfolio Manager role (Grade E1-E2, reference APMG070726) sits within the Multi-Management Public Markets team, assisting in manager selection and portfolio construction across allocated asset classes while providing a high level of support in the monitoring of external managers.",
+        "responsibilities": [
+          "Assist in manager selection and portfolio construction across allocated asset classes",
+          "Monitor financial market developments and their impact on client portfolios",
+          "Analyse existing managers using qualitative and quantitative approaches",
+          "Produce risk and return analysis of managers against peer groups",
+          "Generate reports for clients and internal committees including the Portfolio Management Committee and Investment Committee",
+          "Conduct quantitative analysis relative to benchmarks and peer groups",
+          "Research and evaluate investment strategies, ideas, and concepts"
+        ],
+        "requirements": [
+          "B Com (Hons) or BSc (Hons) in Financial Management",
+          "10+ years of post-qualification investment experience",
+          "Minimum 5 years in multi-manager funds and minimum 5 years in global strategies",
+          "Excellent quantitative skills including Excel and risk tools such as MSCI Barra or Bloomberg",
+          "Strong ability to research, interpret, and communicate investment recommendations",
+          "Solid knowledge of investment managers' disciplines and portfolio characteristics"
+        ],
+        "sourceUrl": "https://www.pic.gov.za/careers",
+        "applyUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=XrL9BoynGEijBFYgB_12Gxlff2oYRUVOhT7hR68mGYJUQ0xQSDVTQkNRN0E1QjRaR0JQMTRPWUw5WC4u",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Pretoria, South Africa",
+        "boardSection": "Jobs"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "c413a195bf450df3f0eb7803df05413754a6e8d02aab78fd6526f807523eba09",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "27f711261d2aa3098cb988e3d21c610581c3349b",
+          "line": 3329
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "8d8ca7a2fffb489000876459895e5b79f176e46a",
+          "line": 3293
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "364822b70504e059750897fc70a58219acf2ab01",
+          "line": 2803
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "63ccdf5966202731c9a8133c80f8722006ce0157",
+          "line": 3250
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "efa8ce36319f9092662bc1b784ba6bc4f176deac",
+          "line": 3219
+        },
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "line": 3365
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "46cbdd889ded6a6beafe7dbdd71e632c81934982",
+          "lastProjectionCommit": "36bbac7a59171f53526fd30550899db4dc5c06dc",
+          "projectionObservationCount": 12,
+          "sourceVariantCount": 4
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "asset-management-research",
+        "subcategoryId": "portfolio-management",
+        "jobFunction": "Portfolio & Asset Management",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Public-markets portfolio construction, manager selection and monitoring establish asset management.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0346",
+        "title": "Senior Equity Research",
+        "company": "Prime Securities Brokerage / Prime Holding",
+        "summary": "Join Prime Securities Brokerage’s research department as a senior equity analyst covering Egyptian listed companies. The role combines fundamental analysis, valuation and investment recommendations within the brokerage’s sell-side research team.",
+        "aboutRole": "The analyst investigates companies within assigned sectors, develops stock ideas and translates financial findings into timely research publications. Work connects company-level modelling with sector developments and the wider economic environment. Regular company visits help maintain an informed view of corporate performance and news. The opportunity offers direct exposure to Egyptian equities and the analytical judgement required to support investment decisions.",
+        "responsibilities": [
+          "Build financial models and value listed equities, producing buy, hold or sell recommendations.",
+          "Analyse sectors and macroeconomic developments and assess their implications for company valuations.",
+          "Conduct corporate visits and publish clear research reports and updates."
+        ],
+        "requirements": [
+          "Bachelor’s degree in business, economics, finance or accounting.",
+          "Minimum four to five years in fundamental analysis; CFA qualification is mandatory.",
+          "Strong accounting, macroeconomic and valuation knowledge, attention to detail and a methodical research approach.",
+          "Excellent written and spoken English and effective teamwork."
+        ],
+        "sourceUrl": "https://www.linkedin.com/posts/prime-holding_we-are-hiring-senior-equity-research-activity-7496105820561063936-EgUU",
+        "applyUrl": "mailto:hr@primegroup.org",
+        "country": "Egypt",
+        "region": "North Africa",
+        "locationDisplay": "Giza / Greater Cairo, Egypt",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "626e6c63c3f1a586dd7e44c766a8351470321f36a8e79ae474067a8478f3d69a",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "11c6b7c32c0523b2b99ae3a95d24be1b48738ab5",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 66,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "asset-management-research",
+        "subcategoryId": "investment-research",
+        "jobFunction": "Research & Analysis",
+        "dutyNumbers": [
+          1,
+          2,
+          3
+        ],
+        "reason": "Fundamental valuations, buy/hold/sell recommendations and publications establish sell-side research.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "DRAFT-afa947d106af",
+        "title": "Junior Portfolio Manager (FAIS)",
+        "company": "Absa Stockbrokers",
+        "summary": "Support investment research and portfolio management at Absa Stockbrokers in Cape Town. The junior role analyses markets and investment opportunities, monitors portfolio performance and assists with investment decisions and implementation, while helping Portfolio Managers and Senior Portfolio Managers deliver reporting, client reviews and investment outcomes within approved mandates.",
+        "aboutRole": "The position combines analytical support with practical portfolio implementation, governance and client service. You contribute to research, portfolio rebalancing and investment reporting, escalate risks and opportunities, and help maintain accurate client and adviser information. The work supports senior investment colleagues rather than replacing their decision-making responsibilities. The official Workday record identifies a hybrid arrangement and lists several relevant qualification routes.",
+        "responsibilities": [
+          "Research local and global markets, economic trends, sectors and investment instruments to support portfolio decisions.",
+          "Monitor investment performance, identify risks and opportunities and prepare portfolio review reports.",
+          "Assist with portfolio strategies, rebalancing and approved investment transactions within mandates and controls.",
+          "Prepare investment reports, market commentary, presentations and documentation for client portfolio reviews.",
+          "Support client onboarding, investment implementation, adviser queries and professional client relationships.",
+          "Contribute to governance, compliance, reporting accuracy, operational improvements and adoption of digital investment tools."
+        ],
+        "requirements": [
+          "Relevant qualification in accounting, commerce, finance and investment management or statistics through the degree, advanced-diploma or postgraduate routes listed by the employer.",
+          "Ability to analyse financial markets, investment instruments, portfolio performance and relevant economic information.",
+          "Accuracy in investment reporting, transaction execution, client documentation and portfolio administration.",
+          "Clear communication and collaboration with investment colleagues, advisers and clients.",
+          "Understanding of investment mandates, risk controls, governance and regulatory compliance."
+        ],
+        "sourceUrl": "https://absa.wd3.myworkdayjobs.com/ABSAcareersite/job/Cape-Town/Junior-Portfolio-Manager--FAIS-_R-15992647",
+        "applyUrl": "https://absa.wd3.myworkdayjobs.com/ABSAcareersite/job/Cape-Town/Junior-Portfolio-Manager--FAIS-_R-15992647",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Cape Town, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-11-18",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "20dae8bc3d356002c315c3fca4d97bd192b1f42a802a6764635c27ac78d6de5a",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "d33e8e2dee2d6fd3e366db9a04784aeab92ca8ed",
+          "lastProjectionCommit": "d34fe2e9c24de3e42242628a8ef0acea323782ab",
+          "projectionObservationCount": 4,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "asset-management-research",
+        "subcategoryId": "portfolio-management",
+        "jobFunction": "Portfolio & Asset Management",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "reason": "Research serves mandate-based portfolio monitoring, rebalancing and implementation.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0167",
+        "title": "Economist, Africa Region FIC Research",
+        "company": "Standard Bank Corporate & Investment Banking",
+        "summary": "Africa-focused FIC research role producing macro forecasts, fixed-income and currency trade ideas, sovereign-market analysis and investor-facing research across several African countries.",
+        "aboutRole": "The Economist will cover approximately three to five African countries within Standard Bank's Africa Region Fixed Income and Currencies Research team. The role combines macroeconomic forecasting, sovereign and financial-market analysis and the development of tradable fixed-income and currency ideas for institutional and corporate clients.",
+        "responsibilities": [
+          "Collect, organise and analyse primary macroeconomic data for assigned African countries",
+          "Maintain reliable databases of economic and financial-market information",
+          "Produce medium- and long-term forecasts for growth, inflation, exchange rates and interest rates",
+          "Translate macroeconomic forecasts into fixed-income and currency trading or hedging strategies",
+          "Monitor sovereign credit ratings and African Eurobond pricing",
+          "Contribute trade ideas and analysis to the Africa Sovereign weekly report",
+          "Produce timely commentary for the Africa Brief",
+          "Contribute to the African Financial Markets Handbook",
+          "Develop frameworks for monitoring economic and market trends",
+          "Present country forecasts and market developments to internal and external stakeholders",
+          "Support the Chief Economist at IMF, AfDB and investor meetings",
+          "Organise research roadshows and investor trips involving policymakers and institutional investors",
+          "Produce flash notes and client-facing research"
+        ],
+        "requirements": [
+          "Approximately 8–10 years of senior macroeconomic-research and financial-market experience",
+          "Experience producing fixed-income or currency investment ideas",
+          "Experience developing currency-hedging ideas for corporate clients",
+          "Strong economic forecasting and financial-market-analysis skills",
+          "Knowledge of African sovereign, rates and currency markets",
+          "Ability to manage and interpret large economic datasets",
+          "Strong written and verbal communication skills",
+          "Ability to present investment views to institutional clients and senior policymakers"
+        ],
+        "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+        "applyUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000144279439-economist-africa-region-fic-research",
+        "country": "South Africa",
+        "region": "Pan-African",
+        "locationDisplay": "Johannesburg, South Africa",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "c5732b40830b3ce8044439582561161d6dfd5ca9db76b59aba2af9fe2db8a012",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "8c6feab588949cb73a0755de67406ce2f7c5d13c",
+          "lastProjectionCommit": "bed1c009fd65e21e5e68294903d63913eed18031",
+          "projectionObservationCount": 39,
+          "sourceVariantCount": 6
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "asset-management-research",
+        "subcategoryId": "investment-research",
+        "jobFunction": "Research & Analysis",
+        "dutyNumbers": [
+          3,
+          4,
+          5,
+          6,
+          13
+        ],
+        "reason": "Forecasts and trade ideas are client research deliverables; the source lists no order execution or position ownership.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "ACD-0187",
+        "title": "Associate, Local Institutional Trading",
+        "company": "EFG Holding / EFG Hermes",
+        "summary": "Institutional-equities trading role executing client trades, developing market and stock ideas, supporting structured and access products and expanding institutional client relationships.",
+        "aboutRole": "The Associate is responsible for processing and executing institutional-client trades across different markets. The role combines trade execution, client coverage, stock and market analysis, order management, regulatory compliance and coordination with local brokers and back-office teams.",
+        "responsibilities": [
+          "Develop business with institutional clients through trade execution and market coverage",
+          "Provide clients with market data, news, market commentary and trade ideas",
+          "Receive and execute client orders through phone, email, Bloomberg and FIX channels",
+          "Monitor stock performance and determine appropriate execution strategies",
+          "Execute VWAP, volume-restricted, price-restricted and benchmarked orders",
+          "Book daily executions in internal order-management systems",
+          "Review invoices and send confirmations to clients",
+          "Maintain relationships with clients, brokers and back-office teams",
+          "Follow fundamental and technical research and regional market developments",
+          "Offer access and structured-product solutions",
+          "Support cross-border growth between trading desks",
+          "Ensure compliance with market, AML, CTF and sanctions requirements"
+        ],
+        "requirements": [
+          "Bachelor's degree",
+          "At least four years of experience in a similar role",
+          "Strong understanding of capital markets and investment products",
+          "Experience in institutional sales, client service or trading",
+          "Strong analytical and problem-solving skills",
+          "Very good written and spoken Arabic and English",
+          "Good Word, Excel and PowerPoint skills",
+          "Excellent communication and relationship-building abilities",
+          "Ability to work under pressure and manage changing deadlines",
+          "Consistent focus on accuracy and high-quality execution"
+        ],
+        "sourceUrl": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+        "applyUrl": "https://eg.linkedin.com/jobs/view/associate-local-institutional-trading-at-efg-holding-4455237780",
+        "country": "Egypt",
+        "region": "North Africa",
+        "locationDisplay": "Giza, Egypt",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "needs_verification",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "ef347d0bfdfb6fb4903dd53b50f95ed633b1b1cba054c25ae4f27658beaafe34",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "8c6feab588949cb73a0755de67406ce2f7c5d13c",
+          "lastProjectionCommit": "2cacbbf8f12ac32b481a91e64d0481c8dc6da7c8",
+          "projectionObservationCount": 47,
+          "sourceVariantCount": 6
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "global-markets-structuring",
+        "subcategoryId": "institutional-sales-trading",
+        "jobFunction": "Trading",
+        "dutyNumbers": [
+          1,
+          3,
+          4,
+          5,
+          10
+        ],
+        "reason": "Client order execution and execution strategy dominate relationship development and structured-product offerings.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 4,
+      "input": {
+        "id": "DRAFT-e7ad6a136e54",
+        "title": "Foreign Exchange Product House Lead",
+        "company": "FNB Eswatini Ltd",
+        "summary": "Own FNB Eswatini’s foreign exchange product strategy, pricing and performance across corporate and investment banking, commercial banking and retail. Based in Ezulwini, the role develops FX solutions, manages product economics and ensures that controls keep pace with growth.",
+        "aboutRole": "The remit connects FX product development with trading, sales enablement and client coverage. It spans institutional hedging and structured products alongside retail FX. You work with Treasury, Risk, Compliance and Legal and lead the specialists responsible for product delivery, performance and risk discipline.",
+        "responsibilities": [
+          "Set FX product strategy and oversee revenue, pricing and profitability.",
+          "Develop FX products and hedging solutions for different client segments.",
+          "Partner with trading, coverage and sales teams on execution and distribution.",
+          "Strengthen product governance, risk controls and regulatory readiness.",
+          "Lead product managers and FX specialists and represent the bank at industry or regulatory engagements."
+        ],
+        "requirements": [
+          "Postgraduate degree in finance, economics, accounting, business science or a related field.",
+          "A relevant master’s degree is advantageous.",
+          "ACI Dealing or Operations certification, CFA Level II or charter, or exchange-control accreditation is preferred or advantageous."
+        ],
+        "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/The-Offices-Complex-Corner-MR103-Road--Swaki-Street-Ezulwini-H103/Foreign-Exchange-Product-House-Lead_R55199",
+        "applyUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/The-Offices-Complex-Corner-MR103-Road--Swaki-Street-Ezulwini-H103/Foreign-Exchange-Product-House-Lead_R55199",
+        "country": "Eswatini",
+        "region": "Southern Africa",
+        "locationDisplay": "Ezulwini, Eswatini",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-11-18",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "ea7750f944582ca88f9994627f75db2d13756472c6f5ec10a4d252febb4ef2ca",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "792e8948d21fe15052c0dd505b7a1b98b50dd211",
+          "lastProjectionCommit": "d34fe2e9c24de3e42242628a8ef0acea323782ab",
+          "projectionObservationCount": 2,
+          "sourceVariantCount": 2
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "global-markets-structuring",
+        "subcategoryId": "structuring-financial-engineering",
+        "jobFunction": "Structuring & Financial Engineering",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Pricing and FX/hedging product design support a tentative existing specialist product mapping.",
+        "missingEvidence": "Clarify instrument complexity and whether product economics and governance outweigh solution design."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "DRAFT-c93d3acd7658",
+        "title": "Business Planning & Performance Management Manager",
+        "company": "Dangote Industries",
+        "summary": "Lead financial planning and business-performance management across Dangote’s operations from Lagos. The role connects budgets and forecasts with capital-investment decisions, cash generation, margin improvement and strategic advice to executive management and the Board, alongside financial governance responsibilities.",
+        "aboutRole": "The manager oversees Group planning cycles, challenges plant and business-unit assumptions, and translates performance data into decisions. Work covers medium-term plans, liquidity and working capital, investment appraisal and reporting systems. The position also develops the planning team and retains responsibility for related-party reporting, transfer-pricing compliance and financial controls.",
+        "responsibilities": [
+          "Lead annual budgets and three-to-five-year business plans, including consolidated Board submissions.",
+          "Develop driver-based forecasts, scenario analyses and performance scorecards.",
+          "Evaluate capital expenditure using NPV, IRR and payback analysis, and conduct post-investment reviews.",
+          "Partner with Treasury on cash forecasting, funding needs and working-capital improvement.",
+          "Provide strategic analysis for pricing, market entry, M&A and restructuring, while improving planning systems and coaching analysts."
+        ],
+        "requirements": [
+          "Bachelor’s degree in finance, accounting, economics, business administration or a related field.",
+          "Professional certification such as ACA, ACCA, CIMA, CPA, CFA or FP&A certification.",
+          "At least 10 years in FP&A, business planning, corporate finance or performance management, including five in senior finance or strategic planning.",
+          "Strong financial modelling, ERP, analytics, stakeholder-management and leadership skills.",
+          "Manufacturing, cement, industrial or FMCG experience preferred; a relevant postgraduate qualification is advantageous."
+        ],
+        "sourceUrl": "https://careers.dangote.com/job/Head-Office-Lagos-Business-Planning-&-Performance-Management-Manager-Head/1373590757",
+        "applyUrl": "https://careers.dangote.com/job/Head-Office-Lagos-Business-Planning-&-Performance-Management-Manager-Head/1373590757",
+        "country": "Nigeria",
+        "region": "West Africa",
+        "locationDisplay": "Lagos, Nigeria",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "8be2a76b2de8a58574aea4227eb6a888396c204e3fd2e521d4aea2c462ca4af9",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "strategic-finance-investments",
+        "jobFunction": "Strategic Finance",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Capex NPV/IRR, post-investment reviews and strategic decisions support this mapping despite extensive FP&A.",
+        "missingEvidence": "Confirm relative weight of recurring planning and capital decisions."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "DRAFT-ac7c1fc547f6",
+        "title": "Business Performance Partner – Lines of Solution-Orange Wholesale Intl",
+        "company": "Orange Business",
+        "summary": "Advise Orange’s wholesale business on profitability, growth and portfolio performance from Casablanca. The role combines commercial finance, market analysis and strategic planning, helping product, sales and finance leaders challenge assumptions and turn performance insights into better business decisions.",
+        "aboutRole": "The Business Performance Partner works across Lines of Solution and product teams, providing an independent view of revenue, margins, customer portfolios and market position. Its remit spans business reviews, forecasts and strategic plans, with close collaboration with analytics specialists to improve decision tools and performance governance across international activities.",
+        "responsibilities": [
+          "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
+          "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
+          "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
+          "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
+          "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
+        ],
+        "requirements": [
+          "Master’s degree in finance, economics, strategy or a related field is identified in the candidate profile.",
+          "Experience in P&L analysis, business reviews, forecasting, budgeting and strategic cycles.",
+          "Fluent French and English, with strong advisory and stakeholder-influencing skills.",
+          "Advanced Excel and familiarity with visualisation tools such as Power BI, Dataiku or ThinkCell.",
+          "Knowledge of B2B telecommunications, wholesale, infrastructure or digital services."
+        ],
+        "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
+        "applyUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
+        "country": "Morocco",
+        "region": "North Africa",
+        "locationDisplay": "Casablanca, Morocco",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "43517174403966811180ab48c98a4895bcb14601a2cb38b777123d6e1cdcd825",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "fpa-finance-leadership",
+        "jobFunction": "FP&A & Business Partnering",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "Revenue and margin analysis, forecast variance and corrective advice substantiate business partnering.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "DRAFT-0e6691395f9f",
+        "title": "General Manager, Core M&A — GSM Platforms",
+        "company": "MTN Group",
+        "summary": "Lead acquisition strategy and execution for MTN’s core GSM platform businesses. This senior M&A position combines target origination, financial assessment, deal structuring and negotiation, supporting portfolio growth, strategic partnerships and investment decisions across the Group’s operating markets.",
+        "aboutRole": "The General Manager works with Group functions and platform businesses to execute the M&A lifecycle within governance and risk requirements. The mandate includes acquisition targets, joint ventures and new licence bids, with responsibility for valuation, investment structures and post-deal handover. The position also leads a team and oversees initiative budgets and reporting.",
+        "responsibilities": [
+          "Shape GSM-platform M&A priorities and originate potential acquisition targets.",
+          "Lead diligence and assess strategic fit, financial viability, synergies and risk.",
+          "Coordinate capital-structure advice, valuation, financial modelling and transaction negotiations.",
+          "Lead licence-bid teams on valuation, shareholder consortia and investment structures.",
+          "Manage partnerships, investment budgets and executive reporting, ensuring clear integration handover."
+        ],
+        "requirements": [
+          "Four-year tertiary degree in finance, business or a related discipline.",
+          "MBA or equivalent master’s qualification is listed as a requirement for this role.",
+          "At least five years as a seasoned senior manager specialising in corporate finance, investment banking or M&A transactions.",
+          "Proven M&A origination and execution, corporate-finance and strategic-planning experience.",
+          "Fluent English and cross-cultural experience; multinational emerging-market experience and relevant professional accreditation are advantageous."
+        ],
+        "sourceUrl": "https://ehle.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7856",
+        "applyUrl": "https://ehle.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7856",
+        "country": "South Africa",
+        "region": "Southern Africa",
+        "locationDisplay": "Roodepoort, South Africa",
+        "boardSection": "Jobs",
+        "deadlineDate": "2026-10-27",
+        "lifecycleStatus": "closed",
+        "publicationStatus": "removed"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "16f62a413f44cf7f2031063c68bd8cfd75cd3d6d0fa0bf5516be5f350a6e700e",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "9dc4744df22ff40bc1c1b5ef1d71e832f87451ad",
+          "projectionObservationCount": 3,
+          "sourceVariantCount": 3
+        },
+        "priorReview": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "in-scope",
+        "areaId": "corporate-finance-strategy",
+        "subcategoryId": "corporate-ma",
+        "jobFunction": "Investment",
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Owns the corporate group’s acquisition pipeline, valuation, structuring and negotiation.",
+        "missingEvidence": null
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "DRAFT-2d7b2c277bb4",
+        "title": "Chargé d’étude",
+        "company": "Africa Global Logistics",
+        "summary": "Produce feasibility studies, business cases and project-portfolio analysis for Africa Global Logistics in Côte d’Ivoire. Working under the PMO, the role helps management evaluate opportunities, understand project performance and make decisions using reliable data, budgets, risk information and governance reporting.",
+        "aboutRole": "The analyst supports both strategic and operational projects and consolidates information from project managers into management dashboards. The work combines market and opportunity studies with portfolio monitoring, documentation and improved project methods. Familiarity with transport, logistics and the African business context is valued, while the advert does not specify a city.",
+        "responsibilities": [
+          "Conduct market, opportunity and feasibility studies and prepare business cases.",
+          "Collect, validate and analyse data supporting project decisions.",
+          "Consolidate portfolio schedules, budgets, risks, milestones and performance indicators.",
+          "Prepare dashboards, executive reports and governance presentations.",
+          "Improve PMO methods, documentation quality and project-management standards."
+        ],
+        "requirements": [
+          "Bac+4/5 in project management, strategy, finance, economics, data or business analysis, engineering or equivalent.",
+          "Two to four years in studies, PMO, consulting, project oversight or strategy consulting.",
+          "Advanced Excel, PowerPoint and Power BI skills, with experience producing business cases and management dashboards.",
+          "Good English for international exchanges and English-language tools.",
+          "Knowledge of African or Ivorian markets and transport or logistics is advantageous."
+        ],
+        "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx",
+        "applyUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx",
+        "country": "Côte d’Ivoire",
+        "region": "West Africa",
+        "locationDisplay": "Côte d’Ivoire",
+        "boardSection": "Jobs",
+        "lifecycleStatus": "active",
+        "publicationStatus": "live"
+      },
+      "sourceKind": "recovered-job",
+      "sourceRevision": "0711e601093e833a6b95d221f804f27d44c7bbcbab5dd68df0c6eab98ab643c0",
+      "provenance": [
+        {
+          "path": "src/data/opportunities.ts",
+          "commit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "line": null
+        }
+      ],
+      "historical": {
+        "projection": {
+          "observedInPublicJobsProjection": true,
+          "firstProjectionCommit": "a9d9d89d51bd4d63bbf6100d2d39fbb0c6b5af94",
+          "lastProjectionCommit": "58a95fa5212a25fd0719a62c33b11c9e7978153e",
+          "projectionObservationCount": 38,
+          "sourceVariantCount": 3
+        },
+        "priorReview": {
+          "id": "DRAFT-2d7b2c277bb4",
+          "title": "Chargé d’étude",
+          "company": "Africa Global Logistics",
+          "previousProposal": {
+            "areaId": "corporate-development-investments",
+            "subcategoryId": "strategic-finance-capital-allocation",
+            "jobFunction": "Research & Analysis",
+            "interestTags": [
+              "investment appraisal",
+              "business cases",
+              "financial analysis"
+            ],
+            "rationale": "Feasibility studies, business cases, budgets and investment/project-portfolio analysis provide substantive financial decision support.",
+            "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx",
+            "proposedBy": "ACD classification assistant",
+            "proposedAt": "2026-11-08",
+            "method": "ai-assisted",
+            "status": "proposed",
+            "employerType": "Corporate"
+          },
+          "status": "classification-evidence-required",
+          "reason": "Feasibility studies and business cases are potentially relevant, but portfolio schedules, budgets and PMO governance dominate the available evidence. Financial modelling or investment appraisal responsibility requires confirmation.",
+          "publicationAction": "none",
+          "reviewedAt": "2026-11-28",
+          "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-charge-d-etude_10208.aspx"
+        }
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "Feasibility and business cases sit within broad PMO operations, budgets and milestones.",
+        "missingEvidence": "Obtain evidence of valuation, return analysis or financial decision responsibility before mapping."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "HIST-65ae70bfdab15cf8",
+        "title": "Managing Director, Finance",
+        "company": "Aceli Africa",
+        "summary": "",
+        "aboutRole": "",
+        "responsibilities": [],
+        "requirements": [],
+        "sourceUrl": "https://jobs.smartrecruiters.com/AceliAfrica/744000099120195-managing-director-finance",
+        "applyUrl": "",
+        "country": "",
+        "region": "",
+        "locationDisplay": "",
+        "historicalDecisionReasons": [
+          "SmartRecruiters page says applications should be submitted by 31 Jan 2026, so it is expired as of 6 Jul 2026."
+        ]
+      },
+      "sourceKind": "workbook-history",
+      "sourceRevision": "c53e8936d1e962c8d3f59988258fff58bb4a06d4b79ef77af80a8dc05b811f1e",
+      "provenance": [
+        {
+          "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+          "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+          "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+          "sheet": "V3 rejected expired",
+          "row": 2
+        }
+      ],
+      "historical": {
+        "originalDecisions": [
+          {
+            "decision": "Do not add",
+            "reason": "SmartRecruiters page says applications should be submitted by 31 Jan 2026, so it is expired as of 6 Jul 2026.",
+            "authority": "recorded in source workbook; reviewer identity not supplied",
+            "provenance": {
+              "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+              "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+              "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+              "sheet": "V3 rejected expired",
+              "row": 2
+            }
+          }
+        ],
+        "linkedCanonicalId": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [],
+        "reason": "Original expiry exclusion is an availability fact; title alone establishes no duties.",
+        "missingEvidence": "Recover original vacancy responsibilities."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "HIST-5a1b45aeef4aac85",
+        "title": "VIA – Abidjan – Chargé.e d’affaires Energie et Infrastructures",
+        "company": "Proparco",
+        "summary": "",
+        "aboutRole": "",
+        "responsibilities": [],
+        "requirements": [],
+        "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10419?c=afd&lang=fr-FR",
+        "applyUrl": "",
+        "country": "",
+        "region": "",
+        "locationDisplay": "",
+        "historicalDecisionReasons": [
+          "User reports the official ATS page is not available. It should not be added unless manually verified live again."
+        ]
+      },
+      "sourceKind": "workbook-history",
+      "sourceRevision": "b0063cf2cfb19a25fe3d4242c70f9020d6fcafdf132940a2eef5a6deb93a6acb",
+      "provenance": [
+        {
+          "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+          "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+          "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+          "sheet": "V3 rejected expired",
+          "row": 3
+        }
+      ],
+      "historical": {
+        "originalDecisions": [
+          {
+            "decision": "Do not add now",
+            "reason": "User reports the official ATS page is not available. It should not be added unless manually verified live again.",
+            "authority": "recorded in source workbook; reviewer identity not supplied",
+            "provenance": {
+              "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+              "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+              "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+              "sheet": "V3 rejected expired",
+              "row": 3
+            }
+          }
+        ],
+        "linkedCanonicalId": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [],
+        "reason": "Original missing-ATS hold is an availability decision; sector and location in title cannot establish activity.",
+        "missingEvidence": "Recover original employer description and responsibilities."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "HIST-84118f0e9446d29a",
+        "title": "Principal Deal Originator Mining & Critical Minerals X2",
+        "company": "DBSA",
+        "summary": "",
+        "aboutRole": "",
+        "responsibilities": [],
+        "requirements": [],
+        "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS250917-9",
+        "applyUrl": "",
+        "country": "",
+        "region": "",
+        "locationDisplay": "",
+        "historicalDecisionReasons": [
+          "Direct DBSA URL returned 'Not found / closed and no longer receiving applications' in one check. Keep out of final add list despite some search snippets."
+        ]
+      },
+      "sourceKind": "workbook-history",
+      "sourceRevision": "2d92a5914d6ebf2bd5a77027580b7855a6de4c1f8c85cfcd0be369f79da9c69f",
+      "provenance": [
+        {
+          "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+          "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+          "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+          "sheet": "V3 rejected expired",
+          "row": 4
+        }
+      ],
+      "historical": {
+        "originalDecisions": [
+          {
+            "decision": "Do not add unless manual browser check proves open",
+            "reason": "Direct DBSA URL returned 'Not found / closed and no longer receiving applications' in one check. Keep out of final add list despite some search snippets.",
+            "authority": "recorded in source workbook; reviewer identity not supplied",
+            "provenance": {
+              "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+              "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+              "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+              "sheet": "V3 rejected expired",
+              "row": 4
+            }
+          }
+        ],
+        "linkedCanonicalId": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [],
+        "reason": "Closed/not-found decision is preserved; a deal-origination title alone cannot determine professional scope.",
+        "missingEvidence": "Recover official description and transactional remit."
+      }
+    },
+    {
+      "batch": 5,
+      "input": {
+        "id": "HIST-d8f4fb6b55724547",
+        "title": "Chargé.e de projets Infrastructure, Energie et Numérique",
+        "company": "AFD",
+        "summary": "",
+        "aboutRole": "",
+        "responsibilities": [],
+        "requirements": [],
+        "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10560?c=afd&lang=fr-FR",
+        "applyUrl": "",
+        "country": "",
+        "region": "",
+        "locationDisplay": "",
+        "historicalDecisionReasons": [
+          "Cambodia-focused, not Africa-linked enough for Africa Career Desk."
+        ]
+      },
+      "sourceKind": "workbook-history",
+      "sourceRevision": "edc41e248944cafaba3c32ad5a64fff7276c0c981d02bfedd499ff72daa20b0c",
+      "provenance": [
+        {
+          "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+          "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+          "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+          "sheet": "V3 rejected expired",
+          "row": 5
+        }
+      ],
+      "historical": {
+        "originalDecisions": [
+          {
+            "decision": "Skip",
+            "reason": "Cambodia-focused, not Africa-linked enough for Africa Career Desk.",
+            "authority": "recorded in source workbook; reviewer identity not supplied",
+            "provenance": {
+              "path": "data/imports/Africa_Career_V2_plus_Launch_Opportunities_3_Final.xlsx",
+              "blob": "cc911675f051ef561671ba8beef7f8ff5b22679b",
+              "commit": "abadfbf95df87eba681a9233b3825e3ffec442f2",
+              "sheet": "V3 rejected expired",
+              "row": 5
+            }
+          }
+        ],
+        "linkedCanonicalId": null
+      },
+      "ownerConfirmed": null,
+      "editorial": {
+        "authority": "provisional-analyst",
+        "scope": "needs-review",
+        "areaId": null,
+        "subcategoryId": null,
+        "jobFunction": null,
+        "dutyNumbers": [],
+        "reason": "Original geography-based Skip is preserved; the retained review cites Cambodia and no sufficient Africa link.",
+        "missingEvidence": "Missing responsibilities and explicit geographic terms prevent an independent current scope label."
+      }
+    }
+  ]
+}
