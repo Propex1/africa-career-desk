@@ -6,7 +6,7 @@
     "reason": "Commercial fintech/wallet account sales and partnerships; no substantive investment or financial structuring remit established. Owner recommends outside future scope.",
     "status": "outside-future-scope-recommendation",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Develop Visa’s fintech and wallet partnerships from Abidjan, supporting payment-flow growth and market expansion. The role combines regional wallet strategy, commercial negotiations and new-solution launches, working with country leadership, digital teams and non-traditional payments partners across the region.",
       "aboutRole": "Within Merchant Sales and Solutions, the manager translates local market needs into partner strategies and product propositions. Responsibilities include strategic deals, regulatory and pricing initiatives, and the rollout of mobile payment solutions. The position is hybrid, with office attendance confirmed by the hiring manager, and retains a strong commercial-sales and relationship-management component.",
@@ -34,7 +34,7 @@
     "reason": "Satellite strategy, presales and programme coordination do not demonstrate substantial financial investment analysis or capital allocation. Include only if stronger responsibility evidence is supplied.",
     "status": "conditional-evidence-required",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Help develop Orange’s satellite business across the Middle East and Africa, combining strategy, partnerships and programme execution. Based in Morocco, the role supports growth initiatives including Direct-to-Device and coordinates subsidiary needs with regional stakeholders and the wider satellite ecosystem.",
       "aboutRole": "The position reports to the Satellite Business Management and Direct-to-Device programme director within Orange International Networks Infrastructures and Services. It works with Satellite Factory, Orange Business, wholesale and MEA teams. The mandate combines strategic coordination and market analysis with business development, presales and governance; occasional international travel is expected.",
@@ -59,10 +59,10 @@
     "id": "DRAFT-b2b3e647c4a8",
     "title": "Commercial Project Manager",
     "company": "Siemens Energy",
-    "reason": "Project delivery, contractual control, accounting and project profitability monitoring dominate; these do not establish investment appraisal or financing strategy.",
-    "status": "outside-future-scope-recommendation",
+    "reason": "Cash-flow forecasts, hedging, guarantees and financial-risk management may fit the broader specialist FP&A remit, but invoicing, contractual control and project delivery also dominate. Earlier owner recommendation generally outside scope remains intact; clarify whether specialist finance or project accounting is the primary remit before mapping.",
+    "status": "editorial-scope-review",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Manage the commercial and financial execution of Digital Grid projects at Siemens Energy in Cairo. The role combines project profitability, cash forecasting, contractual changes and risk management, working with project and regional teams to deliver complex customer engagements within agreed budgets.",
       "aboutRole": "The position is within Grid Technologies and the finance organisation, with a regional Middle East remit. It works alongside project managers, bid teams, controllers and segment heads. Responsibilities cover financial and contractual oversight as well as administrative, tax and accounting requirements, making this a commercial project-delivery role rather than a project-investment origination position.",
@@ -90,7 +90,7 @@
     "reason": "VMI logistics solution sales and trade-finance context do not demonstrate responsibility for actual financial structuring.",
     "status": "outside-future-scope-recommendation",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Develop vendor-managed inventory solutions that connect logistics, international trade and client working-capital needs. This AGL business-development role focuses on new opportunities, strategic client relationships and tailored supply-chain and trade-finance propositions, with responsibility for commercially sound execution and account performance.",
       "aboutRole": "The position sits in the Vendor Managed Inventory division and works alongside logistics, operations, customs and compliance teams. Its commercial mandate includes existing accounts and targeted market sectors. Solutions aim to improve import and export flows, strengthen supply chains and build long-term client partnerships while managing account risk and trade-regulation requirements.",
@@ -117,7 +117,7 @@
     "reason": "Logistics SME product development and commercial rollout dominate. Budget and ROI references alone do not establish a strategic-finance career.",
     "status": "outside-future-scope-recommendation",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Develop AGL’s SME logistics offering and digital-service strategy in Côte d’Ivoire, including WeGoAfrica. This role combines product and commercial development, investment prioritisation and programme coordination, with responsibility for budgets, adoption, incremental margin and return on investment.",
       "aboutRole": "The position coordinates commercial and operational teams, support functions and local partners around one SME and innovation roadmap. Its scope includes import/export consolidation, warehousing, cold-chain services and digital customer journeys. The manager reports progress to country leadership and balances immediate launches with longer-term investment and service-development priorities.",
@@ -138,52 +138,6 @@
     "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-responsable-developpement-offre-pme-_10370.aspx"
   },
   {
-    "id": "DRAFT-ac7c1fc547f6",
-    "title": "Business Performance Partner – Lines of Solution-Orange Wholesale Intl",
-    "company": "Orange Business",
-    "previousProposal": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
-      "jobFunction": "Strategic Finance",
-      "interestTags": [
-        "strategic finance",
-        "business planning",
-        "capital allocation",
-        "financial modelling"
-      ],
-      "rationale": "Substantive financial modelling, business planning, investment/profitability analysis and financial decision support fit the approved broader strategic-finance remit.",
-      "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "employerType": "Corporate"
-    },
-    "status": "classification-evidence-required",
-    "reason": "Stored duties show revenue/margin reviews, forecast deviations, pricing assumptions, budgeting and KPI dashboards. Substantial investment appraisal, financing strategy or capital allocation is not demonstrated; hold Strategic Finance mapping.",
-    "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
-    "evidence": {
-      "summary": "Advise Orange’s wholesale business on profitability, growth and portfolio performance from Casablanca. The role combines commercial finance, market analysis and strategic planning, helping product, sales and finance leaders challenge assumptions and turn performance insights into better business decisions.",
-      "aboutRole": "The Business Performance Partner works across Lines of Solution and product teams, providing an independent view of revenue, margins, customer portfolios and market position. Its remit spans business reviews, forecasts and strategic plans, with close collaboration with analytics specialists to improve decision tools and performance governance across international activities.",
-      "responsibilities": [
-        "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
-        "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
-        "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
-        "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
-        "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
-      ],
-      "requirements": [
-        "Master’s degree in finance, economics, strategy or a related field is identified in the candidate profile.",
-        "Experience in P&L analysis, business reviews, forecasting, budgeting and strategic cycles.",
-        "Fluent French and English, with strong advisory and stakeholder-influencing skills.",
-        "Advanced Excel and familiarity with visualisation tools such as Power BI, Dataiku or ThinkCell.",
-        "Knowledge of B2B telecommunications, wholesale, infrastructure or digital services."
-      ]
-    },
-    "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl"
-  },
-  {
     "id": "DRAFT-64faaeb3a173",
     "title": "Director Consulting",
     "company": "Visa",
@@ -202,7 +156,7 @@
     "status": "classification-evidence-required",
     "reason": "Consulting sales proposals, commercial terms, programme governance and delivery do not by themselves establish substantive financial analysis or investment decision support.",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Lead Visa Consulting & Analytics engagements for banks, merchants and fintechs across African markets. This Johannesburg director role combines consulting-business development, client strategy and implementation leadership, translating complex client needs into commercially sound programmes and measurable delivery outcomes.",
       "aboutRole": "The team serves Southern and Eastern Africa as well as West and Central Africa. The director builds senior relationships, develops proposals and leads multidisciplinary consulting and implementation teams. A further part of the remit is improving the practice’s operating model, delivery standards and pipeline, with frequent travel and work at client sites.",
@@ -247,7 +201,7 @@
     "status": "classification-evidence-required",
     "reason": "Feasibility studies and business cases are potentially relevant, but portfolio schedules, budgets and PMO governance dominate the available evidence. Financial modelling or investment appraisal responsibility requires confirmation.",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Produce feasibility studies, business cases and project-portfolio analysis for Africa Global Logistics in Côte d’Ivoire. Working under the PMO, the role helps management evaluate opportunities, understand project performance and make decisions using reliable data, budgets, risk information and governance reporting.",
       "aboutRole": "The analyst supports both strategic and operational projects and consolidates information from project managers into management dashboards. The work combines market and opportunity studies with portfolio monitoring, documentation and improved project methods. Familiarity with transport, logistics and the African business context is valued, while the advert does not specify a city.",
@@ -291,7 +245,7 @@
     "status": "classification-evidence-required",
     "reason": "Monitoring investment programmes, project proposals, strategic fit and delivery budgets does not establish financial investment appraisal. Do not infer investment responsibility from programme context.",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "evidence": {
       "summary": "Support CMA CGM’s growth in Mauritania through business-opportunity research, strategic partnerships and cross-functional projects. Reporting to the CEO in Nouakchott, this VIE assignment combines investment-programme monitoring, project selection, business planning and coordination with the agency’s management and headquarters.",
       "aboutRole": "The role develops a portfolio of projects aligned with the agency’s strategy and monitors public-policy and investment developments. It links local departments with headquarters to secure project approvals, track budgets and report progress. Digital transformation and innovative solutions also form part of the assignment’s business-development and execution responsibilities.",
@@ -312,55 +266,13 @@
     "sourceUrl": "https://jobs.cmacgm-group.com/job/VIE-Business-Developer-Mauritanie/587719-en_GB"
   },
   {
-    "id": "DRAFT-9fe8bfbbe223",
-    "title": "Gestor de Mercado de Capitais - Standard Invest",
-    "company": "Standard Invest",
-    "previousProposal": {
-      "areaId": "global-markets-structuring",
-      "subcategoryId": "sales-trading",
-      "jobFunction": "Trading & Structuring",
-      "interestTags": [],
-      "rationale": "Client distribution of dealing-room investment products; sales function rather than research or discretionary portfolio management.",
-      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed"
-    },
-    "status": "function-evidence-required",
-    "reason": "Capital-market client investment proposals and financial analysis support Sales & Trading as a field, but the evidence does not establish a Trading & Structuring function. Hold rather than label investment sales as trading.",
-    "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
-    "evidence": {
-      "summary": "Develop capital-markets client relationships and investment-product sales for Standard Invest in Luanda. The role combines market analysis, commercial development and portfolio insight, matching financial solutions to client needs while meeting revenue objectives, risk limits and regulatory standards.",
-      "aboutRole": "Within the Standard Bank Group investment-services business, you manage a client portfolio and promote products offered by Standard Invest’s dealing room. The work ranges from understanding cash flows and investment objectives to preparing proposals and coordinating transactions and service requests. It also includes market commentary, digital-service adoption and collaboration with colleagues to improve products and client experience.",
-      "responsibilities": [
-        "Monitor financial markets, interest rates, asset prices and economic developments and turn findings into useful client insights.",
-        "Manage client relationships, prepare investment proposals and track portfolio activity, profitability and growth potential.",
-        "Identify new business and cross-selling opportunities and guide suitable solutions from initial discussion to transaction completion.",
-        "Analyse client financial statements, transaction histories and portfolios to identify investment or optimisation opportunities.",
-        "Coordinate operational and support teams to resolve client queries and maintain accurate, confidential client information.",
-        "Ensure transparent product communication and regulatory compliance while supporting digital channels and improvements in commercial processes."
-      ],
-      "requirements": [
-        "Bachelor’s degree in management, economics, finance, accounting, banking, financial markets or a related discipline.",
-        "At least three years in financial markets, investment banking, asset management, brokerage, treasury or a related area.",
-        "Demonstrated client management, business development and proposal-preparation experience.",
-        "Knowledge of financial products, preferably across multiple asset classes, and Angola’s financial and regulatory environment.",
-        "Ability to analyse financial and market information, communicate clearly and assess product risks and client needs.",
-        "Additional financial-markets or investment qualifications and English-language knowledge are advantageous."
-      ]
-    },
-    "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090"
-  },
-  {
     "id": "DRAFT-8ef3f54f7385",
     "title": "Senior Consultant, Country Engagement Lead - Natural Capital",
     "company": "CrossBoundary Advisory",
     "status": "classification-evidence-required",
     "reason": "Natural-capital funding proposals and investment-readiness lead screening are relevant context, but engagement, consultations and coordination dominate the stored duties. Substantive financial analysis or funding structuring is not demonstrated; do not infer it from the employer.",
     "publicationAction": "none",
-    "reviewedAt": "2026-11-19",
+    "reviewedAt": "2026-11-28",
     "sourceUrl": "https://crossboundary.applytojob.com/apply/Afj3GbbrJC/Senior-Consultant-Country-Engagement-Lead-Natural-Capital",
     "evidence": {
       "summary": "Lead Côte d’Ivoire stakeholder engagement for a blended finance platform focused on regenerative agriculture and landscape resilience. The role shapes landscape investment plans, identifies early investment opportunities and works with CrossBoundary’s investment and structuring team.",
@@ -380,6 +292,152 @@
         "Experience leading stakeholder consultations and knowledge of agricultural value chains.",
         "Ability to work independently and travel as needed. Ghana or Nigeria experience is preferred.",
         "Climate-fund, regenerative agriculture or agricultural SME investment-readiness experience is valued."
+      ]
+    }
+  },
+  {
+    "id": "DRAFT-aa4d33a969b6",
+    "title": "Strategy Enablement Head",
+    "company": "Standard Bank of South Africa",
+    "status": "classification-evidence-required",
+    "reason": "Strategy enablement, execution governance, operating-model alignment, committee agendas and organisational change dominate. A reference to influencing capital allocation does not establish primary finance leadership or substantive financial modelling. Hold rather than automatically map general strategy into Strategic Finance.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-28",
+    "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
+    "evidence": {
+      "summary": "Translate strategic ambition into coordinated initiatives for Standard Bank in Johannesburg. The Strategy Enablement Head advises executives on positioning, portfolio priorities and investment trade-offs, drives execution across business lines and geographies, and connects strategy with operating models, performance governance, budgeting and capital-allocation decisions.",
+      "aboutRole": "The mandate spans a business line, group function or region, embedding strategy into the organisation’s operating rhythm and decision-making. It combines research and scenario planning with early initiative design, execution governance, leadership engagement and performance analysis. The role prepares executive and Board narratives, removes systemic delivery barriers, guides business-model evolution and integrates strategic risk and continuity planning across multiple banking jurisdictions.",
+      "responsibilities": [
+        "Advise executives on market positioning, competitive advantage and strategic trade-offs, supported by research, foresight and scenario planning.",
+        "Shape strategic investment decisions and portfolio priorities and influence budgeting, investment planning and capital allocation.",
+        "Develop and refine strategic initiatives and establish resources, sequencing, execution standards and governance across geographies.",
+        "Diagnose internal-client problems, resolve execution barriers, escalate risks and align strategic committee agendas.",
+        "Prepare executive and Board narratives, leadership dialogues and communications that translate strategy into organisational action.",
+        "Track strategic KPIs, use product and performance data to refine strategy, and align business and operating models with customer needs.",
+        "Integrate strategic risk, regulatory responses, continuity and external knowledge partnerships into planning and execution."
+      ],
+      "requirements": [
+        "Postgraduate degree in Business Commerce, Finance and Accounting, Generic Management or Risk Management.",
+        "More than ten years of strategy experience in financial services.",
+        "More than ten years of experience managing a broad range of projects through to defined business objectives or metrics.",
+        "More than ten years of experience influencing transformational change and operational efficiency in banking across multiple jurisdictions.",
+        "A demonstrable track record contributing to strategic thinking and initiatives, with strong research, programme management and written-communication capabilities."
+      ]
+    }
+  },
+  {
+    "id": "DRAFT-fe436e09fa88",
+    "title": "Senior Quantitative Analyst",
+    "company": "Nedbank",
+    "status": "classification-evidence-required",
+    "reason": "Quantitative models support Private Wealth and Small Business portfolio decisions and Credit/Risk/Finance, but the description does not identify investment portfolio analytics versus retail-credit analytics. Do not force this into financial engineering or investment research without the model mandate.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-28",
+    "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Senior-Quantitative-Analyst/1460609833",
+    "evidence": {
+      "summary": "Develop quantitative models and portfolio insights for Nedbank’s Private Clients, Private Wealth and Small Business Services division in Johannesburg. The Senior Quantitative Analyst uses financial and statistical analysis to support portfolio performance, risk management and business decisions, working across Credit, Risk, Finance and business stakeholders.",
+      "aboutRole": "Based at 135 Rivonia Road in Sandown, this role sits in Nedbank’s quantitative career stream and supports the PWS business rather than a dedicated CIB transaction team. Work covers model development, data preparation, analytical reporting, model review and improvements across the model lifecycle. The advert calls for production-ready quantitative programming and knowledge of credit and market-risk measures, alongside the ability to explain complex findings to both technical and non-technical colleagues.",
+      "responsibilities": [
+        "Develop, maintain and enhance quantitative and statistical models supporting portfolio and business decisions; analyse complex data for trends, risks and opportunities.",
+        "Prepare, validate and quality-check data, using SAS, Python and SQL to build models and improve analytical processes.",
+        "Monitor portfolio performance and behaviour across Private Wealth and Small Business Services; investigate movements and translate findings into clear commercial insights.",
+        "Prepare accurate analytical reports and reporting packs, present results to stakeholders and respond to Credit, Risk, Finance and business analysis needs.",
+        "Monitor model performance, participate in reviews and analytical challenge sessions, and test and validate outputs before implementation or distribution.",
+        "Improve and automate models, analytical processes, reporting and data quality; share technical expertise and stay current with quantitative methods and financial-services analytics."
+      ],
+      "requirements": [
+        "Professional qualifications or an honours degree are listed as the essential qualification level. The advert’s preferred section also lists advanced diplomas or national first degrees.",
+        "At least five years of relevant quantitative-analytics experience in banking, financial services and/or insurance, including modelling, statistical analysis, portfolio or risk analytics, or decision support.",
+        "Hands-on experience preparing, analysing and interpreting complex datasets, with practical SAS, Python and SQL skills and strong quantitative programming capability.",
+        "Knowledge of statistical modelling, forecasting, production-ready model programming, model/software testing and the full model lifecycle; risk-model measures include PD/LGD, VaR, Expected Shortfall and EPE/PFE.",
+        "Ability to translate complex quantitative work into clear business insights and reporting, with advanced Excel and strong communication skills.",
+        "Credit, risk, finance or portfolio-analytics exposure is advantageous. Preferred capabilities include Power BI, explainable AI/machine learning and cloud analytics; generative-AI and LLM knowledge is advantageous."
+      ]
+    }
+  },
+  {
+    "id": "DRAFT-ab70fe1b5687",
+    "title": "Associate, Business Readiness, Green RISE Africa Accelerator Program",
+    "company": "Acumen",
+    "status": "classification-evidence-required",
+    "reason": "Business-readiness support centres on commercial strategy, distribution, go-to-market and operational capabilities. Financial management/budgets appear but substantive specialist finance is not established; keep for editorial scope review.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-28",
+    "sourceUrl": "https://job-boards.greenhouse.io/acumen/jobs/8960114002",
+    "evidence": {
+      "summary": "Support green enterprises in Nairobi or Lagos as they strengthen commercial strategy, business models and growth capabilities through Acumen’s Green RISE Africa accelerator. The Associate works with founders and specialist partners on go-to-market plans, financial management, targeted technical assistance and implementation of projects that create inclusive economic opportunities.",
+      "aboutRole": "The Business Readiness Associate reports to the Ready to Scale Track Lead and collaborates with Acumen’s East and West African portfolio colleagues, learning-design staff and external business-development service partners. The programme supports green enterprises in climate-smart agriculture, renewable energy, circular economy and climate adaptation. The role translates learning and advisory support into practical business improvements, tracks readiness milestones and helps enterprises deliver Impact Projects and employment outcomes, particularly for young women.",
+      "responsibilities": [
+        "Assess enterprise business-readiness gaps and growth opportunities; develop and track tailored action plans, milestones and support priorities.",
+        "Work with founders on business models, commercial strategy, customer understanding, distribution channels and go-to-market plans.",
+        "Help enterprises strengthen business planning, financial management, operational processes and organisational capabilities needed for sustainable growth.",
+        "Coordinate workshops, coaching, office hours and specialist advisory engagements; monitor the relevance and effectiveness of business-development support.",
+        "Support Impact Project plans, budgets, timelines and reporting; identify delivery risks and track job creation and opportunities for young women.",
+        "Analyse enterprise revenue, operating performance, employment and impact data; prepare progress updates and document lessons, success stories and improvement opportunities."
+      ],
+      "requirements": [
+        "A bachelor’s degree in Business Administration, Finance, Economics, Entrepreneurship, Development Studies or another relevant discipline.",
+        "At least three to five years of relevant experience in enterprise development, business advisory, entrepreneurship support, SME capacity building, consulting or a related field.",
+        "Experience working directly with early-stage or growing businesses, preferably in emerging markets and African enterprise ecosystems, including accelerator or technical-assistance support.",
+        "Understanding of business models, commercial strategy, customer acquisition, go-to-market planning, financial management and operating processes.",
+        "Strong financial and analytical skills, including interpretation of basic financial statements, budgets, cash-flow projections and business-performance data.",
+        "Coordination of consultants or service providers is an advantage. Green-business familiarity is desirable; experience with women-led or youth-led enterprises in underserved or rural markets is an added advantage."
+      ]
+    }
+  },
+  {
+    "id": "DRAFT-69b14b6c42ef",
+    "title": "Strategy Analyst",
+    "company": "Nedbank",
+    "status": "outside-future-scope-recommendation",
+    "reason": "Beyond-banking platform commercialisation, customer propositions, process improvement and generic strategy research do not establish substantive finance, investment appraisal or financial leadership. Recommend outside future scope, with publication untouched.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-28",
+    "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Strategy-Analyst/1459746433",
+    "evidence": {
+      "summary": "Support beyond-banking platform strategy and commercialisation for Nedbank’s South African small-business segment. Based in Sandton within Private, Wealth and Small Business, the Strategy Analyst turns research and complex data into commercial insights, client propositions and recommendations that inform senior management decisions.",
+      "aboutRole": "The position sits within Nedbank Private, Wealth and Small Business’s Beyond Banking unit at the Rivonia Campus. Its focus is the platform and technology strategy serving South African small businesses, rather than technical delivery. Work involves strategic research, cross-divisional collaboration and recommendations on customer needs and business challenges, with responsibility for communicating findings clearly and aligning proposed solutions with business-unit priorities.",
+      "responsibilities": [
+        "Analyse strategic issues and business challenges to inform the beyond-banking platform and commercialisation strategy.",
+        "Translate research and data into targeted reports, presentations and recommendations for senior management.",
+        "Investigate customer needs and contribute insights that help shape client value propositions.",
+        "Consult stakeholders across Nedbank to resolve research queries and align divisional requirements.",
+        "Develop reporting processes and communicate key findings so stakeholders can make informed decisions.",
+        "Recommend improvements to business processes and obtain stakeholder support for implementation."
+      ],
+      "requirements": [
+        "An advanced diploma or national first degree; a degree in marketing or business science is preferred.",
+        "Three to five years of Strategy Analyst experience incorporating marketing, advertising, technology and strategy.",
+        "Strong analytical thinking, research, critical-thinking and data-analysis capabilities.",
+        "Ability to use analytical tools and communicate findings through clear writing, presentations and storytelling.",
+        "Stakeholder-management skills, business knowledge and familiarity with strategic concepts, frameworks and AI literacy."
+      ]
+    }
+  },
+  {
+    "id": "DRAFT-688cfbb6ec15",
+    "title": "Head Growth Sectors",
+    "company": "Nedbank",
+    "status": "classification-evidence-required",
+    "reason": "Sector propositions, commercial growth initiatives and cross-team coordination dominate. Financial return monitoring alone does not establish financing execution, financial modelling or finance leadership. Hold pending stronger financial responsibilities.",
+    "publicationAction": "none",
+    "reviewedAt": "2026-11-28",
+    "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Head-Growth-Sectors/1457716333",
+    "evidence": {
+      "summary": "Lead sector growth strategy within Nedbank’s Business and Commercial Banking activities. The Johannesburg role translates market and portfolio insights into commercial propositions, expansion priorities and measurable revenue growth while balancing credit quality, pricing discipline and risk-adjusted returns.",
+      "aboutRole": "The Head Growth Sectors identifies attractive opportunities and coordinates product, client coverage, sales, credit and risk teams to execute them. The mandate includes sector thought leadership, development of commercial initiatives and management of senior teams, with accountability for sustainable market and portfolio expansion.",
+      "responsibilities": [
+        "Develop commercial growth strategies for priority sectors.",
+        "Translate market intelligence into sector propositions and executable initiatives.",
+        "Build and prioritise a pipeline of growth opportunities.",
+        "Coordinate product, coverage, credit and risk teams to deliver results.",
+        "Monitor portfolio performance, risk-adjusted returns and commercial outcomes."
+      ],
+      "requirements": [
+        "Relevant degree in commerce, finance, economics, business or banking.",
+        "At least ten years in business or commercial banking or a related financial-services environment.",
+        "Experience developing growth strategies and leading managers or senior commercial teams.",
+        "Evidence of delivering commercial outcomes across functions, with sound financial, risk and governance judgement."
       ]
     }
   }

@@ -8,14 +8,14 @@ test("career registry has unique IDs, seven areas and twenty-three subcategories
   const subcategories = CAREER_AREAS.flatMap(area => area.subcategories.map(subcategory => subcategory.id));
   assert.equal(areas.length, 7);
   assert.equal(new Set(areas).size, 7);
-  assert.equal(subcategories.length, 24);
-  assert.equal(new Set(subcategories).size, 24);
+  assert.equal(subcategories.length, 23);
+  assert.equal(new Set(subcategories).size, 23);
   assert.equal(DEFAULT_EXPANDED_CAREER_AREA, "private-markets");
 });
 
 test("investment and financing infrastructure classifications have distinct parents", () => {
   assert.ok(isCareerSelection({ areaId: "private-markets", subcategoryId: "infrastructure-real-assets" }));
-  assert.ok(isCareerSelection({ areaId: "corporate-structured-finance", subcategoryId: "project-structured-finance" }));
+  assert.ok(isCareerSelection({ areaId: "banking-structured-finance", subcategoryId: "project-structured-finance" }));
   assert.equal(isCareerSelection({ areaId: "private-markets", subcategoryId: "project-structured-finance" }), false);
   assert.equal(isCareerSelection({ areaId: "development-finance", subcategoryId: "private-credit" }), false);
   assert.equal(isCareerSelection(null), false);
@@ -42,4 +42,16 @@ test("AI proposals require explicit human approval and complete provenance", () 
   assert.equal(getApprovedCareerClassification({ ...approved, subcategoryId: "project-structured-finance" }), undefined);
   assert.equal(getApprovedCareerClassification({ ...approved, interestTags: [1] }), undefined);
   assert.deepEqual(proposal, before);
+});
+
+test("registry presents the exact approved seven-area 23-subcategory structure", () => {
+  assert.deepEqual(CAREER_AREAS.map(area => [area.label, area.subcategories.map(sub => sub.label)]), [
+    ["Private Markets", ["Private Equity & Growth", "Venture Capital", "Private Credit", "Infrastructure & Real Assets", "Fund Investments & Secondaries"]],
+    ["Development Finance", ["Investment & Lending", "Advisory & Capital Mobilisation"]],
+    ["Investment Banking & Advisory", ["M&A & Corporate Finance", "Transaction & Restructuring Advisory", "Capital Markets"]],
+    ["Asset Management & Research", ["Portfolio Management", "Investment Research", "Investment Advisory & Wealth Management"]],
+    ["Global Markets & Structuring", ["Institutional Sales & Trading", "Structuring & Financial Engineering"]],
+    ["Banking & Structured Finance", ["Corporate Banking", "Project & Structured Finance", "Trade & Syndicated Finance", "Treasury, Funding & ALM"]],
+    ["Corporate Finance & Strategy", ["Corporate M&A", "Strategic Finance & Investments", "FP&A & Finance Leadership", "Corporate Investor Relations"]],
+  ]);
 });

@@ -1,6 +1,6 @@
 import type { DiscoveryTheme, Opportunity } from "../types/index.ts";
 import { ENABLED_JOB_CATEGORY_PAGES } from "../data/job-categories.ts";
-import { careerFilterLabel } from "../data/career-taxonomy.ts";
+import { careerFilterLabel, normalizeCareerFilterIds } from "../data/career-taxonomy.ts";
 import { getDiscoverableCareerClassification } from "./career-classification.ts";
 
 export interface JobBoardFilters {
@@ -65,10 +65,11 @@ export function filterJobsForBoard(
     ENABLED_JOB_CATEGORY_PAGES.find((category) => category.roleType === roleType) ?? { roleType },
   );
   const q = search.trim().toLowerCase();
+  const career = normalizeCareerFilterIds(filters.career ?? []);
 
   return filterJobsForDiscovery(jobs, selections).filter((job) => {
     const classification = getDiscoverableCareerClassification(job.careerClassification, allowCareerProposals);
-    if (filters.career?.length && !filters.career.some(id =>
+    if (filters.career?.length && !career.some(id =>
       id === "unclassified" ? !classification :
         classification && (id === classification.areaId || id === classification.subcategoryId))) return false;
     if (filters.region.length && !filters.region.includes(job.region ?? "")) return false;

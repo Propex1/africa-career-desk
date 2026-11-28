@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { Opportunity } from "../../../src/types/index.ts";
-import { toggleCareerSelection } from "../../../src/data/career-taxonomy.ts";
+import { toggleCareerSelection, LEGACY_CAREER_FILTER_ALIASES } from "../../../src/data/career-taxonomy.ts";
 import { filterJobsForBoard, getJobFilterCounts, getJobBoardRecoverySuggestions } from "../../../src/lib/job-filters.ts";
 import { EMPTY_JOB_BOARD_FILTERS, parseJobBoardState, serializeJobBoardState } from "../../../src/lib/job-board-state.ts";
 import { withCareerPreviewProposals } from "../../../src/lib/career-preview.ts";
@@ -81,4 +81,25 @@ test("preview overlays preserve canonical records and reject stale proposals", (
   assert.strictEqual(withCareerPreviewProposals([alreadyApproved])[0], alreadyApproved);
   const newJob = job("new-main-job");
   assert.strictEqual(withCareerPreviewProposals([newJob])[0], newJob);
+});
+
+
+test("every retired career URL normalises, deduplicates and round trips to current filters", () => {
+  const allowed = { regions: [], countries: [], roleTypes: ["Infrastructure & Project Finance"], experienceBuckets: [], languages: [] };
+  for (const [legacy, current] of Object.entries(LEGACY_CAREER_FILTER_ALIASES)) {
+    const state = parseJobBoardState(new URLSearchParams(`career=${legacy}&career=${current}&career=unknown&role=Infrastructure+%26+Project+Finance`), allowed);
+    assert.deepEqual(state.filters.career, [current]);
+    assert.deepEqual(state.filters.roleType, ["Infrastructure & Project Finance"]);
+    const query = serializeJobBoardState(state);
+    assert.deepEqual(query.getAll("career"), [current]);
+    assert.deepEqual(parseJobBoardState(query, allowed), state);
+    assert.equal(query.has("unknown"), false);
+  }
+});
+
+test("legacy parent filters still select the corresponding current classification", () => {
+  const jobs = [job("corporate-finance", { careerClassification: { ...approved, areaId: "corporate-finance-strategy", subcategoryId: "fpa-finance-leadership", jobFunction: "Finance Leadership" } })];
+  const results = filterJobsForBoard(jobs, { ...EMPTY_JOB_BOARD_FILTERS, career: ["corporate-development-investments"] });
+  assert.deepEqual(results.map(job => job.id), ["corporate-finance"]);
+  assert.deepEqual(toggleCareerSelection(["corporate-development-investments"], "fpa-finance-leadership"), ["corporate-ma", "strategic-finance-investments", "corporate-investor-relations"]);
 });

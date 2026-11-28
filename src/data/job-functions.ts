@@ -2,10 +2,16 @@
 export const JOB_FUNCTIONS = [
   "Investment",
   "Research & Analysis",
-  "Trading & Structuring",
+  "Trading",
+  "Institutional Sales",
+  "Structuring & Financial Engineering",
   "Financing & Origination",
   "Portfolio & Asset Management",
   "Strategic Finance",
+  "FP&A & Business Partnering",
+  "Finance Leadership",
+  "Impact & ESG",
+  "Investment Advisory",
   "Fundraising & Investor Relations", // Investment-fund capital raising and LP relations.
   "Corporate Investor Relations", // Corporate earnings, disclosures and shareholder communications.
   "Risk & Underwriting",

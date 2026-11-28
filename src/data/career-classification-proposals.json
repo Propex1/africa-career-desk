@@ -7,7 +7,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "valuation",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Africa50 Infrastructure Acceleration Fund. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-africa50-infrastructure-acceleration-fund/",
@@ -46,7 +48,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "valuation",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Project Development. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-1/",
@@ -91,7 +95,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "valuation",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, Project Development (AGIA). Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-project-development-agia/",
@@ -135,7 +141,8 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Analyst, Project Development. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-analyst-project-development-1/",
@@ -220,7 +227,8 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "valuation"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Director, Africa50 Infrastructure Acceleration Fund. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-director-infrastructure-acceleration-fund/",
@@ -304,7 +312,8 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Analyst, Project Development Fund. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-analyst-project-development/",
@@ -415,7 +424,8 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "ESG"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Associate, Project Development Fund. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-investment-associate-project-development/",
@@ -489,7 +499,8 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "ESG"
       ],
       "rationale": "Asset monitoring, governance, financial models and lender reporting are primary, with new-investment support secondary.",
       "sourceUrl": "https://careers.meridiam.com/o/vie-analyste-projets-developpement-dinfrastructures-sag-2027",
@@ -530,7 +541,11 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure",
+        "valuation",
+        "ESG"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Associate, DRE. Requires editorial confirmation.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/investment-associate-dre/",
       "proposedBy": "ACD classification assistant",
@@ -564,7 +579,9 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "private-equity-growth",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Chargé d'investissement Confirmé H/F. Requires editorial confirmation.",
       "sourceUrl": "https://bmcecapital-cand.talent-soft.com/offre-de-emploi/emploi-charge-d-investissement-confirme-h-f_467.aspx",
       "proposedBy": "ACD classification assistant",
@@ -602,7 +619,9 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "private-equity-growth",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Analyst / Associate. Requires editorial confirmation.",
       "sourceUrl": "https://www.linkedin.com/posts/privateequity-investment-hiring-share-7505596269009158144-dBM8/",
       "proposedBy": "ACD classification assistant",
@@ -643,7 +662,9 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "venture-capital",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Associate. Requires editorial confirmation.",
       "sourceUrl": "https://f6vc.bamboohr.com/careers/40?source=aWQ9NA%3D%3D",
       "proposedBy": "ACD classification assistant",
@@ -780,8 +801,10 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
-      "interestTags": [],
+      "subcategoryId": "investment-lending",
+      "interestTags": [
+        "restructuring"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Investment Officer-Manufacturing Industry. Requires editorial confirmation.",
       "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39265?c=worldbankgroup",
       "proposedBy": "ACD classification assistant",
@@ -819,8 +842,10 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
-      "interestTags": [],
+      "subcategoryId": "investment-lending",
+      "interestTags": [
+        "restructuring"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Principal Investment Officer, Manufacturing & Services, East and Southern Africa (GH1). Requires editorial confirmation.",
       "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39268?c=worldbankgroup",
       "proposedBy": "ACD classification assistant",
@@ -858,9 +883,10 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "restructuring"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Officer, Infrastructure. Requires editorial confirmation.",
       "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38911?c=worldbankgroup",
@@ -895,9 +921,10 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "interestTags": [
-        "infrastructure"
+        "infrastructure",
+        "restructuring"
       ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Officer/Senior Investment Officer- Infrastructure. Requires editorial confirmation.",
       "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38931?c=worldbankgroup",
@@ -932,8 +959,10 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
-      "interestTags": [],
+      "subcategoryId": "investment-lending",
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: VIA – DOUALA – CHARGE-E D’INVESTISSEMENT CORPORATE PROPARCO - H/F. Requires editorial confirmation.",
       "sourceUrl": "https://afd.csod.com/ux/ats/careersite/5/home/requisition/10760?c=afd&lang=fr-FR",
       "proposedBy": "ACD classification assistant",
@@ -967,7 +996,7 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investment Officer – Finance du développement. Requires editorial confirmation.",
       "sourceUrl": "https://greysearchafrica.com/investment-officer-finance-developpement",
@@ -1005,7 +1034,7 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Director, Senior Banker. Requires editorial confirmation.",
       "sourceUrl": "https://jobs.ebrd.com/job/Lagos-Associate-Director%2C-Senior-Banker/1453316433",
@@ -1043,8 +1072,10 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
-      "interestTags": [],
+      "subcategoryId": "investment-lending",
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Investments Officer. Requires editorial confirmation.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261030-1",
       "proposedBy": "ACD classification assistant",
@@ -1081,15 +1112,17 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Investment Professional - Anglophone West Africa - DFI. Requires editorial confirmation.",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "DFI-facing adviser supports screening, committee papers, diligence and capital mobilisation for partner institutions rather than investing its own balance sheet.",
       "sourceUrl": "https://crossboundary.applytojob.com/apply/HFvHU3UfRw/Investment-Professional-Anglophone-West-Africa-DFI",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Investment",
+      "jobFunction": "Financing & Origination",
       "employerType": "Advisory Firm"
     },
     "evidence": {
@@ -1120,15 +1153,20 @@
     "roleType": "Climate & Impact Investing",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate / Senior Associate Consultant - Natural Capital. Requires editorial confirmation.",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "interestTags": [
+        "impact",
+        "climate",
+        "blended finance",
+        "concessional finance"
+      ],
+      "rationale": "Fund modelling, concessional-capital sizing, capital-stack analysis, investor sounding and funding proposals establish advisory/capital mobilisation; natural capital, climate and blended finance remain tags.",
       "sourceUrl": "https://crossboundary.applytojob.com/apply/1bMcJmUHPG/Associate-Senior-Associate-Consultant-Natural-Capital",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Research & Analysis",
+      "jobFunction": "Financing & Origination",
       "employerType": "Advisory Firm"
     },
     "evidence": {
@@ -1159,9 +1197,12 @@
     "roleType": "Climate & Impact Investing",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
-      "interestTags": [],
-      "rationale": "Enterprise financial support, tranche disbursement monitoring and portfolio KPIs dominate alongside investment selection.",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "interestTags": [
+        "impact",
+        "ESG"
+      ],
+      "rationale": "Enterprise unit economics, projections, programme support and tranche monitoring are catalytic-finance programme advisory/oversight; impact is a tag rather than a separate investment field.",
       "sourceUrl": "https://job-boards.greenhouse.io/acumen/jobs/8931880002",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -1196,15 +1237,19 @@
     "roleType": "Climate & Impact Investing",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Impact Assessment Officer. Requires editorial confirmation.",
+      "subcategoryId": "investment-lending",
+      "interestTags": [
+        "impact",
+        "climate",
+        "valuation"
+      ],
+      "rationale": "Transaction impact ratings, underwriting-committee impact notes, additionality and portfolio outcomes support the DFI investment/underwriting activity. Impact/ESG describes the specialist function.",
       "sourceUrl": "https://www.atidi.africa/wp-content/uploads/2026/10/Job-Description-Impact-Assessment-Officer-20261013.pdf",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Research & Analysis"
+      "jobFunction": "Impact & ESG"
     },
     "evidence": {
       "summary": "Assess and monitor the development impact of ATIDI’s underwriting operations in Nairobi. The Impact Assessment Officer evaluates expected outcomes and additionality, integrates findings into transaction decisions and follows results through portfolio monitoring and evaluation, supporting credible reporting to the Board and partners.",
@@ -1234,14 +1279,18 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
-      "interestTags": [],
-      "rationale": "Infrastructure investment ESG due diligence, ESMS and portfolio ESG risks describe an investment-support risk function, not a separate climate-finance mandate.",
+      "interestTags": [
+        "infrastructure",
+        "climate",
+        "ESG"
+      ],
+      "rationale": "ESMS due diligence, investment-committee ESG inputs, portfolio commitments and impact reporting establish a specialist ESG function in infrastructure investing.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/esg-coordinator",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Risk & Underwriting",
+      "jobFunction": "Impact & ESG",
       "employerType": "Investment Platform"
     },
     "evidence": {
@@ -1272,14 +1321,17 @@
     "classification": {
       "areaId": "private-markets",
       "subcategoryId": "venture-capital",
-      "interestTags": [],
-      "rationale": "VC employer context with ESG and impact analysis/monitoring; climate/impact support alone does not turn the underlying investment field into Development Finance.",
+      "interestTags": [
+        "climate",
+        "ESG"
+      ],
+      "rationale": "Published duties explicitly cover impact strategy, impact reporting, ESG and climate strategy within a VC manager. Sparse evidence supports the ESG function, not investment execution.",
       "sourceUrl": "https://eg.linkedin.com/company/sawari-ventures",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Research & Analysis"
+      "jobFunction": "Impact & ESG"
     },
     "evidence": {
       "summary": "Support Sawari Ventures' impact strategy, monitoring and reporting, ESG work and development of its portfolio climate strategy in Cairo.",
@@ -1300,9 +1352,9 @@
     "roleType": "Climate & Impact Investing",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "interestTags": [],
-      "rationale": "Seed-finance disbursements, technical assistance, company performance and donor reporting support a development/blended-finance portfolio function.",
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Seed-finance disbursements, technical assistance, company performance and donor reporting support a development/blended-finance portfolio function.",
       "sourceUrl": "https://www.ietp.com/fr/content/chargee-de-programme-acceleration-abidjan",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -1334,7 +1386,9 @@
     "classification": {
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Transactor: Corporate Finance. Requires editorial confirmation.",
       "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Transactor--Corporate-Finance_R54737",
       "proposedBy": "ACD classification assistant",
@@ -1438,8 +1492,10 @@
     "classification": {
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Transaction Leader. Requires editorial confirmation.",
+      "interestTags": [
+        "blended finance"
+      ],
+      "rationale": "Corporate capital-raising advisory across equity and debt, financing strategies, financial models and term sheets supports corporate-finance advisory; blended capital is a specialisation, not grounds to infer a DFI mandate.",
       "sourceUrl": "https://opencapitaladvisors.applytojob.com/apply/Dh70cCWzGk/Senior-Transaction-Leader",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -1476,7 +1532,9 @@
     "classification": {
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Analyst — Senegal. Requires editorial confirmation.",
       "sourceUrl": "https://crossboundary.applytojob.com/apply/H5AR9vjMfA/analyst-senegal",
       "proposedBy": "ACD classification assistant",
@@ -1511,7 +1569,9 @@
     "classification": {
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
-      "interestTags": [],
+      "interestTags": [
+        "blended finance"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate — Gambia. Requires editorial confirmation.",
       "sourceUrl": "https://crossboundary.applytojob.com/apply/XwOeUO2FLt/associate-gambia",
       "proposedBy": "ACD classification assistant",
@@ -1546,7 +1606,9 @@
     "classification": {
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
-      "interestTags": [],
+      "interestTags": [
+        "blended finance"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Principal — Senegal. Requires editorial confirmation.",
       "sourceUrl": "https://crossboundary.applytojob.com/apply/Ha2mIKdhAN/Associate-Principal-Senegal",
       "proposedBy": "ACD classification assistant",
@@ -1582,7 +1644,7 @@
       "areaId": "asset-management-research",
       "subcategoryId": "portfolio-management",
       "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Manager Diversified. Requires editorial confirmation.",
+      "rationale": "Actual asset-allocation, institutional manager-selection, exposure and rebalancing decisions establish portfolio management, even in a wealth context. This is not retail product sales.",
       "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159387018",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -1619,7 +1681,11 @@
     "classification": {
       "areaId": "asset-management-research",
       "subcategoryId": "portfolio-management",
-      "interestTags": [],
+      "interestTags": [
+        "fixed income",
+        "equity",
+        "restructuring"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Portfolio Implementation Analyst. Requires editorial confirmation.",
       "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4436&jobTitle=Portfolio%20Implementation%20Analyst",
       "proposedBy": "ACD classification assistant",
@@ -1759,7 +1825,10 @@
     "classification": {
       "areaId": "asset-management-research",
       "subcategoryId": "investment-research",
-      "interestTags": [],
+      "interestTags": [
+        "equity",
+        "valuation"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Equity Research. Requires editorial confirmation.",
       "sourceUrl": "https://www.linkedin.com/posts/prime-holding_we-are-hiring-senior-equity-research-activity-7496105820561063936-EgUU",
       "proposedBy": "ACD classification assistant",
@@ -1791,15 +1860,17 @@
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
       "areaId": "global-markets-structuring",
-      "subcategoryId": "sales-trading",
-      "interestTags": [],
+      "subcategoryId": "institutional-sales-trading",
+      "interestTags": [
+        "fixed income"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior Fixed Income Dealer (D3). Requires editorial confirmation.",
       "sourceUrl": "https://jobs.nedbank.co.za/job/Windhoek-Senior-Fixed-Income-Dealer-%28D3%29/1455052333",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Trading & Structuring",
+      "jobFunction": "Trading",
       "employerType": "Bank"
     },
     "evidence": {
@@ -1828,7 +1899,7 @@
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
       "areaId": "global-markets-structuring",
-      "subcategoryId": "sales-trading",
+      "subcategoryId": "institutional-sales-trading",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Senior: Forex Dealer (D3). Requires editorial confirmation.",
       "sourceUrl": "https://jobs.nedbank.co.za/job/Windhoek-Senior-Forex-Dealer-%28D3%29/1452647333",
@@ -1836,7 +1907,7 @@
       "proposedAt": "2026-11-08",
       "method": "ai-assisted",
       "status": "proposed",
-      "jobFunction": "Trading & Structuring",
+      "jobFunction": "Trading",
       "employerType": "Bank"
     },
     "evidence": {
@@ -1865,9 +1936,11 @@
     "company": "CFAO",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Project Finance Associate H/F. Requires editorial confirmation.",
       "sourceUrl": "https://cfaocareers.talent-soft.com/job/job-project-finance-associate-h-f_4215.aspx",
       "proposedBy": "ACD classification assistant",
@@ -1900,7 +1973,7 @@
     "company": "Attijariwafa bank",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Project Manager (Financement de projets). Requires editorial confirmation.",
@@ -1932,7 +2005,7 @@
     "company": "KPMG",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "interestTags": [
         "infrastructure"
@@ -1973,7 +2046,7 @@
     "company": "Nedbank",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "trade-syndicated-finance",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Associate Principal: Export Credit & Insurance Solutions. Requires editorial confirmation.",
@@ -2010,9 +2083,11 @@
     "company": "Standard Bank Corporate & Investment Banking",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "trade-syndicated-finance",
-      "interestTags": [],
+      "interestTags": [
+        "restructuring"
+      ],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Head, Product, Structured Trade & Commodity Finance. Requires editorial confirmation.",
       "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000154178184",
       "proposedBy": "ACD classification assistant",
@@ -2048,7 +2123,7 @@
     "company": "CFG Bank",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Corporate Banker. Requires editorial confirmation.",
@@ -2084,7 +2159,7 @@
     "company": "Standard Bank Namibia",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "interestTags": [],
       "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Manager, Credit Origination. Requires editorial confirmation.",
@@ -2114,50 +2189,12 @@
       ]
     }
   },
-  "DRAFT-aa4d33a969b6": {
-    "title": "Strategy Enablement Head",
-    "company": "Standard Bank of South Africa",
-    "roleType": "Corporate Development, M&A & Strategy",
-    "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-investments-strategy",
-      "interestTags": [],
-      "rationale": "Draft mapping based on the existing published role title, employer context and legacy category: Strategy Enablement Head. Requires editorial confirmation.",
-      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000159846165",
-      "proposedBy": "ACD classification assistant",
-      "proposedAt": "2026-11-08",
-      "method": "ai-assisted",
-      "status": "proposed",
-      "jobFunction": "Strategic Finance",
-      "employerType": "Bank"
-    },
-    "evidence": {
-      "summary": "Translate strategic ambition into coordinated initiatives for Standard Bank in Johannesburg. The Strategy Enablement Head advises executives on positioning, portfolio priorities and investment trade-offs, drives execution across business lines and geographies, and connects strategy with operating models, performance governance, budgeting and capital-allocation decisions.",
-      "aboutRole": "The mandate spans a business line, group function or region, embedding strategy into the organisation’s operating rhythm and decision-making. It combines research and scenario planning with early initiative design, execution governance, leadership engagement and performance analysis. The role prepares executive and Board narratives, removes systemic delivery barriers, guides business-model evolution and integrates strategic risk and continuity planning across multiple banking jurisdictions.",
-      "responsibilities": [
-        "Advise executives on market positioning, competitive advantage and strategic trade-offs, supported by research, foresight and scenario planning.",
-        "Shape strategic investment decisions and portfolio priorities and influence budgeting, investment planning and capital allocation.",
-        "Develop and refine strategic initiatives and establish resources, sequencing, execution standards and governance across geographies.",
-        "Diagnose internal-client problems, resolve execution barriers, escalate risks and align strategic committee agendas.",
-        "Prepare executive and Board narratives, leadership dialogues and communications that translate strategy into organisational action.",
-        "Track strategic KPIs, use product and performance data to refine strategy, and align business and operating models with customer needs.",
-        "Integrate strategic risk, regulatory responses, continuity and external knowledge partnerships into planning and execution."
-      ],
-      "requirements": [
-        "Postgraduate degree in Business Commerce, Finance and Accounting, Generic Management or Risk Management.",
-        "More than ten years of strategy experience in financial services.",
-        "More than ten years of experience managing a broad range of projects through to defined business objectives or metrics.",
-        "More than ten years of experience influencing transformational change and operational efficiency in banking across multiple jurisdictions.",
-        "A demonstrable track record contributing to strategic thinking and initiatives, with strong research, programme management and written-communication capabilities."
-      ]
-    }
-  },
   "DRAFT-779c39ac18df": {
     "title": "Senior Credit Manager, Natural Resources, Origination, CIB",
     "company": "Standard Bank of South Africa",
     "roleType": "Legal, Risk & Compliance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Risk & Underwriting",
       "interestTags": [],
@@ -2195,7 +2232,7 @@
     "company": "Nedbank",
     "roleType": "Legal, Risk & Compliance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "trade-syndicated-finance",
       "jobFunction": "Risk & Underwriting",
       "interestTags": [],
@@ -2232,9 +2269,12 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
+      "interestTags": [
+        "concessional finance",
+        "infrastructure"
+      ],
       "rationale": "Origination and execution of development-bank financing, including debt rather than equity only.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS250917-8",
       "proposedBy": "ACD classification assistant",
@@ -2270,10 +2310,12 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
-      "rationale": "Project preparation and bankability at DBSA, rather than a commercial infrastructure fund role.",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Project preparation and bankability at DBSA, rather than a commercial infrastructure fund role.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS251127-2",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -2308,9 +2350,11 @@
     "roleType": "Legal, Risk & Compliance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "jobFunction": "Risk & Underwriting",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Independent country-risk support to DFI lending and investment decisions.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261101-1",
       "proposedBy": "ACD classification assistant",
@@ -2346,10 +2390,13 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "impact-climate-finance",
-      "jobFunction": "Research & Analysis",
-      "interestTags": [],
-      "rationale": "Development-outcome monitoring and economic impact assessment; impact function must remain explicit.",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Impact & ESG",
+      "interestTags": [
+        "impact",
+        "infrastructure"
+      ],
+      "rationale": "Economic impact appraisal, investment-results indicators and portfolio monitoring support the DFI investment activity. This is an impact function, not direct investment execution.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261102-2",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -2383,10 +2430,14 @@
     "company": "Norrenberger",
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
       "jobFunction": "Strategic Finance",
-      "interestTags": [],
+      "interestTags": [
+        "fixed income",
+        "equity",
+        "valuation"
+      ],
       "rationale": "Group funding and capital planning, acquisition evaluation and treasury responsibilities fit strategic finance.",
       "sourceUrl": "https://norrenberger.seamlesshiring.com/job/view/11271",
       "proposedBy": "ACD classification assistant",
@@ -2420,7 +2471,7 @@
     "company": "Standard Bank of South Africa",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "trade-syndicated-finance",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
@@ -2458,10 +2509,10 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Research & Analysis",
       "interestTags": [],
-      "rationale": "Startup advisory and investment readiness at a DFI; not direct VC investment execution.",
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Startup advisory and investment readiness at a DFI; not direct VC investment execution.",
       "sourceUrl": "https://jobs.ebrd.com/job/Abidjan-Associate%2C-Star-Venture/1453449233",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -2496,10 +2547,10 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Research & Analysis",
       "interestTags": [],
-      "rationale": "Startup advisory and investment readiness at a DFI; not direct VC investment execution.",
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Startup advisory and investment readiness at a DFI; not direct VC investment execution.",
       "sourceUrl": "https://jobs.ebrd.com/job/Nairobi-Associate%2C-Star-Venture/1453440033",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -2533,10 +2584,12 @@
     "company": "Africa Global Logistics",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-investments-strategy",
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
       "jobFunction": "Investment",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Operating-company infrastructure/concession investment pipeline; infrastructure remains an interest tag.",
       "sourceUrl": "https://acareerbyagl.talent-soft.com/job/job-director-strategic-projects-and-infrastructure-h-f_10338.aspx",
       "proposedBy": "ACD classification assistant",
@@ -2572,7 +2625,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Portfolio & Asset Management",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Financial and operational oversight of owned renewable project companies; sponsor role distinguished from fund investing.",
       "sourceUrl": "https://jobs.totalenergies.com/en_US/careers/JobDetail?jobId=85202#",
       "proposedBy": "ACD classification assistant",
@@ -2605,10 +2660,12 @@
     "company": "TotalEnergies",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Lender coordination, financing and financial close rather than fund equity origination.",
       "sourceUrl": "https://jobs.totalenergies.com/en_US/careers/JobDetail?jobId=50248",
       "proposedBy": "ACD classification assistant",
@@ -2644,7 +2701,10 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Fundraising & Investor Relations",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure",
+        "ESG"
+      ],
       "rationale": "Raises third-party capital for the infrastructure investment platform; function label prevents confusion with investment execution.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-associate-fundraising-and-investor-relations",
       "proposedBy": "ACD classification assistant",
@@ -2682,7 +2742,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Fundraising & Investor Relations",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Raises third-party capital for the infrastructure investment platform; function label prevents confusion with investment execution.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/associate-fundraising-and-investor-relations",
       "proposedBy": "ACD classification assistant",
@@ -2720,7 +2782,10 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Portfolio & Asset Management",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure",
+        "valuation"
+      ],
       "rationale": "Infrastructure investment valuation, portfolio performance and monitoring, rather than public-markets portfolio management.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/senior-director-portfolio-management-and-performance",
       "proposedBy": "ACD classification assistant",
@@ -2758,7 +2823,9 @@
       "areaId": "investment-banking-advisory",
       "subcategoryId": "ma-corporate-finance",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Published description identifies investment-banking mandates and deal execution.",
       "sourceUrl": "https://www.hc-si.com/careers",
       "proposedBy": "ACD classification assistant",
@@ -2793,7 +2860,7 @@
     "company": "Standard Bank Corporate & Investment Banking",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
@@ -2831,7 +2898,7 @@
     "company": "Nedbank",
     "roleType": "Legal, Risk & Compliance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Risk & Underwriting",
       "interestTags": [],
@@ -2872,7 +2939,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Investment Legal",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Legal support for infrastructure transactions and vehicles; retain explicit legal label.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/legal-counsel",
       "proposedBy": "ACD classification assistant",
@@ -2908,7 +2977,7 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
       "rationale": "Origination and execution of development-bank financing, including debt rather than equity only.",
@@ -2958,7 +3027,10 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Portfolio & Asset Management",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure",
+        "valuation"
+      ],
       "rationale": "Infrastructure investment valuation, portfolio performance and monitoring, rather than public-markets portfolio management.",
       "sourceUrl": "https://www.africa50.com/working-with-us/career/portfolio-performance-intern/",
       "proposedBy": "ACD classification assistant",
@@ -2997,7 +3069,9 @@
       "areaId": "private-markets",
       "subcategoryId": "infrastructure-real-assets",
       "jobFunction": "Investment",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Project-development investments and equity/project-finance structuring within a dedicated infrastructure investment platform.",
       "sourceUrl": "https://a50mobility.com/associate-director-development/",
       "proposedBy": "ACD classification assistant",
@@ -3037,7 +3111,7 @@
     "company": "Nedbank",
     "roleType": "Legal, Risk & Compliance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Risk & Underwriting",
       "interestTags": [],
@@ -3069,7 +3143,7 @@
     "company": "CFG Bank",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
@@ -3102,10 +3176,10 @@
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Research & Analysis",
       "interestTags": [],
-      "rationale": "Technical advisory for inclusive financial-service providers; not direct investment execution.",
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Technical advisory for inclusive financial-service providers; not direct investment execution.",
       "sourceUrl": "https://jobs-accion.icims.com/jobs/2479/associate,-customer-strategy-and-impact---mea,-accion-advisory/job",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-08",
@@ -3135,7 +3209,7 @@
     "company": "Absa",
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Financing & Origination",
       "interestTags": [
@@ -3175,7 +3249,7 @@
     "company": "Absa",
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "treasury-funding-alm",
       "jobFunction": "Strategic Finance",
       "interestTags": [
@@ -3218,8 +3292,8 @@
     "company": "Africa Global Logistics",
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
       "jobFunction": "Strategic Finance",
       "interestTags": [
         "strategic finance",
@@ -3258,14 +3332,15 @@
     "company": "Dangote Industries",
     "roleType": "Corporate Development, M&A & Strategy",
     "classification": {
-      "areaId": "corporate-development-investments",
-      "subcategoryId": "strategic-finance-capital-allocation",
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
       "jobFunction": "Strategic Finance",
       "interestTags": [
         "strategic finance",
         "business planning",
         "capital allocation",
-        "financial modelling"
+        "financial modelling",
+        "restructuring"
       ],
       "rationale": "Explicit capex appraisal using NPV, IRR and payback; post-investment reviews, driver-based scenario forecasts, funding needs and strategic market-entry/M&A analysis substantiate strategic finance beyond routine FP&A.",
       "sourceUrl": "https://careers.dangote.com/job/Head-Office-Lagos-Business-Planning-&-Performance-Management-Manager-Head/1373590757",
@@ -3340,7 +3415,8 @@
       "interestTags": [
         "fund of funds",
         "portfolio reporting",
-        "fund operations"
+        "fund operations",
+        "valuation"
       ],
       "rationale": "FASA fund-of-funds financial/operational management and portfolio coordination fit Fund Investments & Secondaries with an explicit operations function.",
       "sourceUrl": "https://ietp.com/fr/content/fasa-portfolio-officer",
@@ -3406,7 +3482,7 @@
     "company": "Standard Bank",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "jobFunction": "Financing & Origination",
       "interestTags": [
@@ -3446,7 +3522,7 @@
     "company": "Beltone Holding",
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
-      "areaId": "corporate-development-investments",
+      "areaId": "corporate-finance-strategy",
       "subcategoryId": "corporate-investor-relations",
       "jobFunction": "Corporate Investor Relations",
       "interestTags": [
@@ -3488,7 +3564,7 @@
     "company": "CFG Bank / CFG Finance",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
@@ -3525,10 +3601,12 @@
     "company": "Stanbic IBTC Bank",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Research & Analysis",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Infrastructure client coverage is supported by financial metrics, scenario models, credit analysis and covenant monitoring; analyst research supports financing rather than direct investment execution.",
       "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000161633659",
       "proposedBy": "ACD classification assistant",
@@ -3563,8 +3641,8 @@
     "roleType": "Fund Management, Treasury & Investor Relations",
     "classification": {
       "areaId": "global-markets-structuring",
-      "subcategoryId": "derivatives-structured-products",
-      "jobFunction": "Trading & Structuring",
+      "subcategoryId": "structuring-financial-engineering",
+      "jobFunction": "Structuring & Financial Engineering",
       "interestTags": [],
       "rationale": "Explicit help structuring income, capital-preservation and yield investments, product term sheets and underlying-asset execution distinguish this structured-product role from generic commercial sales.",
       "sourceUrl": "https://norrenberger.seamlesshiring.com/job/view/9048",
@@ -3599,11 +3677,13 @@
     "company": "Standard Bank of South Africa",
     "roleType": "Investment Banking & Advisory",
     "classification": {
-      "areaId": "investment-banking-advisory",
-      "subcategoryId": "ma-corporate-finance",
-      "jobFunction": "Financing & Origination",
-      "interestTags": [],
-      "rationale": "Although controls and accounting appear, stored duties explicitly include leading M&A/capital-markets evaluation and execution plus valuation and transaction-structuring models. Mapping relies on these substantive transaction duties.",
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "fpa-finance-leadership",
+      "jobFunction": "Finance Leadership",
+      "interestTags": [
+        "valuation"
+      ],
+      "rationale": "Finance operations, valuation/investment-decision models, controls and leading finance colleagues establish substantive CIB finance management. The broad finance-leadership category avoids assuming an advisory franchise from transaction-support duties.",
       "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000161475619",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-19",
@@ -3637,7 +3717,7 @@
     "company": "Nedbank",
     "roleType": "Legal, Risk & Compliance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "corporate-banking",
       "jobFunction": "Risk & Underwriting",
       "interestTags": [],
@@ -3674,7 +3754,7 @@
     "roleType": "Development Finance & Multilaterals",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "dfi-investments",
+      "subcategoryId": "investment-lending",
       "jobFunction": "Financing & Origination",
       "interestTags": [],
       "rationale": "DFI corporate lending appraisal, risk mitigants, negotiated financing terms, committee approvals and closings establish financing origination and execution.",
@@ -3708,10 +3788,12 @@
     "company": "Nedbank",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Infrastructure debt origination, pricing, structuring, negotiated terms and conditions precedent establish project-finance execution.",
       "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Principal-Infrastructure-Finance/1456451233",
       "proposedBy": "ACD classification assistant",
@@ -3746,7 +3828,9 @@
       "areaId": "private-markets",
       "subcategoryId": "venture-capital",
       "jobFunction": "Investment",
-      "interestTags": [],
+      "interestTags": [
+        "valuation"
+      ],
       "rationale": "Startup forecasts, valuations, diligence, investment memos, follow-on analysis and portfolio/fund metrics establish a venture investment analyst function.",
       "sourceUrl": "https://f6vc.bamboohr.com/careers/42",
       "proposedBy": "ACD classification assistant",
@@ -3780,10 +3864,12 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
-      "rationale": "ICT project origination, feasibility and funding-structure development with project-preparation funding mobilisation support a development-finance project-preparation mandate.",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. ICT project origination, feasibility and funding-structure development with project-preparation funding mobilisation support a development-finance project-preparation mandate.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261108-3",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-19",
@@ -3816,10 +3902,12 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
-      "rationale": "Social-infrastructure origination, feasibility assessment and programme funding design create a financing pipeline; project preparation is the development-finance context.",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. Social-infrastructure origination, feasibility assessment and programme funding design create a financing pipeline; project preparation is the development-finance context.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261108-2",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-19",
@@ -3852,10 +3940,12 @@
     "roleType": "Infrastructure & Project Finance",
     "classification": {
       "areaId": "development-finance",
-      "subcategoryId": "development-blended-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
-      "rationale": "ICT commercial feasibility, programme funding structures and reduction of project risks explicitly create financing opportunities for the DFI.",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Advisory, project preparation, investment readiness or capital mobilisation is the primary activity. ICT commercial feasibility, programme funding structures and reduction of project risks explicitly create financing opportunities for the DFI.",
       "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261109-2",
       "proposedBy": "ACD classification assistant",
       "proposedAt": "2026-11-19",
@@ -3925,10 +4015,12 @@
     "company": "Standard Bank Angola",
     "roleType": "Infrastructure & Project Finance",
     "classification": {
-      "areaId": "corporate-structured-finance",
+      "areaId": "banking-structured-finance",
       "subcategoryId": "project-structured-finance",
       "jobFunction": "Financing & Origination",
-      "interestTags": [],
+      "interestTags": [
+        "infrastructure"
+      ],
       "rationale": "Energy/infrastructure debt origination, financial models, debt structuring, commitment terms and loan negotiations establish substantive structured financing.",
       "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000160815544",
       "proposedBy": "ACD classification assistant",
@@ -3955,6 +4047,1100 @@
         "Knowledge of local and international debt products and the ability to develop and present financing solutions.",
         "Experience working with specialist risk functions, regulatory frameworks and portfolio risk and exposure monitoring.",
         "Strong financial-analysis, modelling, reporting and negotiation capability, supported by relevant sector or country knowledge."
+      ]
+    }
+  },
+  "DRAFT-ac7c1fc547f6": {
+    "title": "Business Performance Partner – Lines of Solution-Orange Wholesale Intl",
+    "company": "Orange Business",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "fpa-finance-leadership",
+      "jobFunction": "FP&A & Business Partnering",
+      "interestTags": [
+        "FP&A",
+        "business partnering",
+        "performance analysis"
+      ],
+      "rationale": "Integrated revenue/margin analysis, challenging pricing/volume/cost assumptions and recommending corrective decisions with Product, Sales and Finance establish substantive business partnering under the revised scope. No claim of investment execution or capital allocation.",
+      "sourceUrl": "https://orange.jobs/gb/en/job/ICM-589282/Business-Performance-Partner-Lines-of-Solution-Orange-Wholesale-Intl",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Corporate"
+    },
+    "evidence": {
+      "summary": "Advise Orange’s wholesale business on profitability, growth and portfolio performance from Casablanca. The role combines commercial finance, market analysis and strategic planning, helping product, sales and finance leaders challenge assumptions and turn performance insights into better business decisions.",
+      "aboutRole": "The Business Performance Partner works across Lines of Solution and product teams, providing an independent view of revenue, margins, customer portfolios and market position. Its remit spans business reviews, forecasts and strategic plans, with close collaboration with analytics specialists to improve decision tools and performance governance across international activities.",
+      "responsibilities": [
+        "Prepare product and business reviews with integrated revenue, margin and portfolio analysis.",
+        "Explain deviations from forecasts and strategic targets and recommend corrective actions.",
+        "Challenge pricing, volume, cost and growth assumptions with market and customer evidence.",
+        "Contribute to budgeting, forecasting and planning with Product, Sales and Finance.",
+        "Develop executive insights and improve KPI reliability, dashboards and decision follow-up."
+      ],
+      "requirements": [
+        "Master’s degree in finance, economics, strategy or a related field is identified in the candidate profile.",
+        "Experience in P&L analysis, business reviews, forecasting, budgeting and strategic cycles.",
+        "Fluent French and English, with strong advisory and stakeholder-influencing skills.",
+        "Advanced Excel and familiarity with visualisation tools such as Power BI, Dataiku or ThinkCell.",
+        "Knowledge of B2B telecommunications, wholesale, infrastructure or digital services."
+      ]
+    }
+  },
+  "DRAFT-9fe8bfbbe223": {
+    "title": "Gestor de Mercado de Capitais - Standard Invest",
+    "company": "Standard Invest",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "asset-management-research",
+      "subcategoryId": "investment-advisory-wealth-management",
+      "jobFunction": "Investment Advisory",
+      "interestTags": [
+        "investment advisory",
+        "capital markets"
+      ],
+      "rationale": "Investment proposals informed by financial statements, portfolio analysis and market insights support specialised investment advice. No evidence of discretionary management or trading; generic cross-selling is not the reason for inclusion.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000155948090",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Develop capital-markets client relationships and investment-product sales for Standard Invest in Luanda. The role combines market analysis, commercial development and portfolio insight, matching financial solutions to client needs while meeting revenue objectives, risk limits and regulatory standards.",
+      "aboutRole": "Within the Standard Bank Group investment-services business, you manage a client portfolio and promote products offered by Standard Invest’s dealing room. The work ranges from understanding cash flows and investment objectives to preparing proposals and coordinating transactions and service requests. It also includes market commentary, digital-service adoption and collaboration with colleagues to improve products and client experience.",
+      "responsibilities": [
+        "Monitor financial markets, interest rates, asset prices and economic developments and turn findings into useful client insights.",
+        "Manage client relationships, prepare investment proposals and track portfolio activity, profitability and growth potential.",
+        "Identify new business and cross-selling opportunities and guide suitable solutions from initial discussion to transaction completion.",
+        "Analyse client financial statements, transaction histories and portfolios to identify investment or optimisation opportunities.",
+        "Coordinate operational and support teams to resolve client queries and maintain accurate, confidential client information.",
+        "Ensure transparent product communication and regulatory compliance while supporting digital channels and improvements in commercial processes."
+      ],
+      "requirements": [
+        "Bachelor’s degree in management, economics, finance, accounting, banking, financial markets or a related discipline.",
+        "At least three years in financial markets, investment banking, asset management, brokerage, treasury or a related area.",
+        "Demonstrated client management, business development and proposal-preparation experience.",
+        "Knowledge of financial products, preferably across multiple asset classes, and Angola’s financial and regulatory environment.",
+        "Ability to analyse financial and market information, communicate clearly and assess product risks and client needs.",
+        "Additional financial-markets or investment qualifications and English-language knowledge are advantageous."
+      ]
+    }
+  },
+  "DRAFT-10b3c7a5e9dc": {
+    "title": "(Associate) Investment Officer – Manufacturing & Services, East and Southern Africa",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Investment",
+      "interestTags": [
+        "restructuring"
+      ],
+      "rationale": "Credit appraisal, loan/equity/mezzanine execution, structuring, documentation and investment supervision establish DFI investment and lending.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39604?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Originate, structure and execute manufacturing and services investments across East and Southern Africa from IFC’s Nairobi office. The Associate Investment Officer / Investment Officer works on loan, equity and mezzanine transactions, combining commercial and credit analysis with development-impact assessment, client engagement and portfolio supervision.",
+      "aboutRole": "The position sits in IFC’s Manufacturing & Services Africa team and reports to the Manager of the Services unit. Its mandate spans tourism, retail, property, health care, education, industrial and manufacturing businesses. Working with regional colleagues and teams in Washington, DC, the officer supports the full investment cycle, from identifying clients and assessing opportunities to financing execution and ongoing supervision. This is a locally recruited, open-ended staff position requiring frequent regional travel.",
+      "responsibilities": [
+        "Identify and screen prospective clients and investments against market potential, financial strength, sponsor quality and strategic fit; develop relationships with private-sector clients and development partners.",
+        "Appraise investment opportunities with a focus on credit quality and development impact, preparing clear recommendations for IFC management.",
+        "Contribute to, and progressively lead, loan, equity and mezzanine financings through due diligence, structuring, negotiation, documentation, syndication and internal approvals.",
+        "Work with environmental, social, technical, legal, insurance and governance specialists to identify project risks and develop appropriate mitigation measures.",
+        "Monitor compliance with investment agreements, prepare supervision reports and identify early-warning signs; support workouts, restructurings or rescheduling where needed.",
+        "Support sector and country strategies and maintain high-quality client service from sourcing through portfolio supervision."
+      ],
+      "requirements": [
+        "An MBA or a master’s degree in Business and/or Finance.",
+        "At least four to seven years of relevant experience in investment or corporate banking, project or structured finance, private equity, or an international or development finance institution, with emerging-markets exposure.",
+        "Demonstrated sourcing, structuring, negotiation and closing experience in debt and/or equity investments, including credit analysis and financial modelling.",
+        "Sound commercial and credit judgement, financial-instrument structuring skills and the ability to build credible relationships with clients, partners and senior stakeholders.",
+        "Excellent written and spoken English; ability to work independently and in multicultural teams, deliver under pressure and travel frequently within the region.",
+        "African market, services/manufacturing investment, syndication, co-financing or blended-finance experience is desirable. The advert also asks for responsible use of commercially available AI tools, validation against primary sources and accountability for recommendations."
+      ]
+    }
+  },
+  "DRAFT-d9930f7959c3": {
+    "title": "Senior Associate: Property Finance",
+    "company": "Nedbank",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Property financing models, tailored lending structures, credit submissions and development-finance drawdowns establish real-estate structured lending.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Cape-Town-Senior-Associate-Property-Finance/1460277933",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Originate, structure and execute commercial property-finance transactions within Nedbank Corporate and Investment Banking in Cape Town. The role combines client origination, financial modelling and credit analysis with end-to-end deal execution, development-finance monitoring and responsibility for portfolio growth and risk-adjusted returns.",
+      "aboutRole": "Based at Cape Town’s V&A Waterfront, the position sits within Nedbank CIB Property Finance. It covers investment, development, owner-occupied and structured-lending transactions, bringing together property-market knowledge, capital-structure analysis and strategic client relationships. Work spans sourcing opportunities through approval, documentation and implementation, with continued involvement in loan drawdowns, project monitoring and portfolio risk. Collaboration across CIB supports integrated financing solutions and appropriate cross-sell opportunities.",
+      "responsibilities": [
+        "Originate commercial property-finance opportunities through existing banking channels, referral networks and new clients; build relationships with developers, brokers and professional advisers.",
+        "Structure tailored lending solutions using property-market analysis, debt scoping, financial models and assessments of capital structures and risk.",
+        "Prepare and present credit applications, investment memoranda, annual reviews and transaction updates for credit and investment decisions.",
+        "Execute transactions from origination through approval, documentation and implementation, coordinating internal teams and external stakeholders.",
+        "Support negotiations and legal-document reviews, ensuring agreements reflect approved commercial terms, security requirements and credit conditions.",
+        "Manage development-finance drawdowns and project monitoring; identify and mitigate credit, market and transaction risks while growing the client portfolio."
+      ],
+      "requirements": [
+        "An advanced diploma or national first degree is the stated essential qualification level.",
+        "Five to eight years of experience in commercial and industrial property finance, client acquisition and sales, property development, or investment, commercial or retail banking.",
+        "A BCom or BSc in Property Studies, or an equivalent financial qualification, is preferred; CA(SA) and CFA credentials are advantages.",
+        "Strong knowledge of South African commercial property markets, valuation methods, development finance and investment, owner-occupied and structured-lending transactions.",
+        "Expertise in financial analysis, modelling, forecasting, debt-service assessment, credit risk, capital structures, security packages and covenants.",
+        "Ability to manage transactions, legal documentation, stakeholder relationships and applicable governance, compliance, AML and KYC requirements."
+      ]
+    }
+  },
+  "DRAFT-c425f1e0ee28": {
+    "title": "Associate, Investment Readiness, Green RISE Africa Accelerator Program",
+    "company": "Acumen",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [
+        "blended finance"
+      ],
+      "rationale": "Capital-needs assessment, financing strategy, models, investor documentation and fundraising pipelines establish enterprise investment-readiness advisory.",
+      "sourceUrl": "https://job-boards.greenhouse.io/acumen/jobs/8960167002",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Help African green enterprises prepare for growth capital through Acumen’s Green RISE Africa accelerator. Based in Nairobi or Lagos, the Associate supports financial models, capital strategies, investor materials and due-diligence preparation, helping founders strengthen their investment propositions and engage appropriate equity, debt and blended-finance providers.",
+      "aboutRole": "The Investment Readiness Associate supports Green RISE Africa’s Ready to Scale Track, working with the Investment Readiness Manager, enterprise founders, business-development service partners and technical experts. Participating enterprises operate across green value chains including climate-smart agriculture, renewable energy, circular economy and climate adaptation. The mandate combines direct enterprise advisory support with coordinated technical assistance, investor engagement and monitoring of commercial performance, implementation milestones and inclusive impact.",
+      "responsibilities": [
+        "Assess investment-readiness gaps in financial management, strategy, governance and operations; help enterprises create action plans and measurable milestones.",
+        "Support growth plans, capital-needs assessments and financing strategies using appropriate equity, debt, blended-finance and other growth-capital instruments.",
+        "Help founders refine investment propositions, business plans, pitch decks, teasers and financial models for investor engagement.",
+        "Prepare enterprise data rooms and documentation for financial, commercial, operational, governance and impact due diligence; coordinate support to close identified gaps.",
+        "Map investors and capital providers, coordinate pitch preparation and investor-readiness sessions, and maintain fundraising pipelines and engagement trackers.",
+        "Coordinate technical-assistance providers and monitor investment-readiness recommendations, Impact Projects, financial performance, employment and programme milestones."
+      ],
+      "requirements": [
+        "A bachelor’s degree in Finance, Accounting, Economics, Business Administration, Investment Management or another relevant discipline; a related postgraduate qualification is an advantage.",
+        "At least three to five years of relevant experience in investment readiness, financial advisory, corporate finance, transaction advisory, SME finance, investment analysis, consulting or enterprise development.",
+        "Experience supporting growing businesses with financial planning, strategy, investment preparation, due diligence, fundraising or investor engagement.",
+        "Strong financial-modelling skills, including integrated statements, cash-flow projections, forecasts and scenario analysis; ability to review business plans and investor materials.",
+        "Understanding of equity, debt, blended finance and investment due diligence across financial, commercial, operational, governance and ESG considerations.",
+        "African SME or growth-enterprise experience is strongly preferred. Green-business or climate-finance familiarity is an advantage; impact-investing exposure would be beneficial."
+      ]
+    }
+  },
+  "DRAFT-a94c011bab9f": {
+    "title": "Valuations Specialist, Private Markets",
+    "company": "Ninety One",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "private-credit",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [
+        "infrastructure",
+        "valuation"
+      ],
+      "rationale": "Direct-lending and structured-credit fair-value models, spreads, recovery analysis and valuation committee papers establish private-credit valuation expertise. This is in-house portfolio valuation, not client transaction advisory.",
+      "sourceUrl": "https://externalcareers.ninetyone.com/experienced-hires/details.html?jobId=4531&jobTitle=Valuations+Specialist%2C+Private+Markets",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Build and own private-credit valuation models at Ninety One in Cape Town. Covering direct lending, infrastructure debt, asset-based finance and structured credit, the role combines investment analysis with responsibility for quarterly fair-value judgements, valuation governance and the development of a dedicated valuation function.",
+      "aboutRole": "Based within Private Markets Operations, this newly created position supports the transition from amortised cost to fair value across the private-credit fund range. You will shape methodologies, model architecture and controls while working with investment, risk, product, legal and fund-control colleagues. The platform spans private credit, infrastructure, CLOs and structured debt, with scope for the successful candidate to grow into leading the valuation function as it scales.",
+      "responsibilities": [
+        "Build and upgrade valuation models for direct lending, asset-based finance, infrastructure debt, CLOs and structured-credit positions.",
+        "Apply discounted cash flow, yield and spread analysis, market comparables and structured cash-flow modelling; document methodologies and assumptions.",
+        "Research economic and credit conditions, monitor borrower performance and covenants, and assess their effects on fair values and recovery expectations.",
+        "Own the quarterly valuation cycle and prepare committee papers, sensitivities and explanations of valuation movements.",
+        "Develop auditable valuation policies and controls; coordinate administrators and auditors so approved values flow into fund reporting.",
+        "Support the move from amortised cost to fair value and automate data collection, model runs and valuation reporting."
+      ],
+      "requirements": [
+        "A degree in finance, economics, mathematics or a related discipline, plus a recognised qualification such as CFA, CA(SA), ACA, ACCA or FRM, or an equivalent technical foundation.",
+        "Meaningful experience valuing private credit, loans, structured credit or other illiquid fixed-income instruments at an asset manager, bank, valuation provider, administrator, audit or advisory firm.",
+        "Strong credit and fixed-income valuation knowledge, including DCF, yield curves, credit spreads, fair value versus amortised cost, and IFRS 13 and IFRS 9.",
+        "Advanced Excel and the ability to build well-documented, auditable models; Python or similar skills are a distinct advantage.",
+        "Ability to assess market and borrower data, defend valuation judgements and manage multiple valuation cycles and deadlines.",
+        "Direct-lending, infrastructure-debt, CLO or other structured-finance exposure, valuation governance and fund-structure experience are advantages."
+      ]
+    }
+  },
+  "DRAFT-0126e362f348": {
+    "title": "Distribution & Syndication Associate",
+    "company": "Standard Bank of South Africa",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "trade-syndicated-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Structured-lending distribution and loan syndication execution establish syndicated financing rather than equity capital markets.",
+      "sourceUrl": "https://jobs.smartrecruiters.com/StandardBankGroup/744000163210674-distribution-syndication-associate",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead origination, structuring and execution of loan-distribution and syndication solutions for complex CIB clients at Standard Bank in Johannesburg. The role combines client-portfolio leadership, structured-lending distribution and risk partnerships, contributing to investment-banking revenue and the franchise’s position in loan syndication.",
+      "aboutRole": "Within Corporate & Investment Banking, the mandate covers a single portfolio of complex clients and both vanilla and structured distribution solutions. The advert emphasises leading distribution strategies, developing lending solutions and managing relationships inside and outside the bank. Although the advertised title is Associate, the formal profile requires more than ten years of experience and proven team leadership; applicants should assess suitability against those requirements.",
+      "responsibilities": [
+        "Lead a portfolio of complex clients through origination, structuring and execution of vanilla and structured distribution solutions.",
+        "Develop and lead structured-lending distribution strategies across the CIB franchise, contributing to investment-banking revenue targets.",
+        "Partner with specialist risk teams to align distribution activity with risk policies and manage ongoing exposure.",
+        "Lead teams and maintain internal and external relationships that support client service and loan-syndication execution."
+      ],
+      "requirements": [
+        "A degree in Business Commerce.",
+        "More than ten years of investment-banking distribution experience, including leadership of structured-lending distribution strategies.",
+        "Advanced knowledge and experience developing innovative distribution and lending solutions.",
+        "More than ten years of experience partnering with specialist risk areas on requirements, policies, procedures and exposure management.",
+        "More than ten years of experience demonstrating team leadership and relationship-building inside and outside an organisation.",
+        "Technical strengths in business insights, client business cases, data analysis, deal appraisal and negotiation, market knowledge, and strategic planning."
+      ]
+    }
+  },
+  "DRAFT-eb2c84ede7f9": {
+    "title": "Regional Industry Director, FIG- West, Central and North Africa",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Investment",
+      "interestTags": [],
+      "rationale": "Investment decision authority, origination, investment quality and portfolio oversight dominate the FIG director remit despite secondary advisory and mobilisation duties.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39579?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead IFC’s financial-institutions investment and advisory business across West, Central and North Africa. This regional leadership role combines investment origination, portfolio oversight, capital mobilisation and strategy, directing teams that support banks, insurers, capital markets, housing finance, trade finance and fintech while delivering profitability and development impact.",
+      "aboutRole": "Reporting to IFC’s Vice President for Africa and serving on the Africa leadership team, the Director oversees the Financial Institutions Group’s regional investments, upstream work and advisory operations. Priorities include jobs, MSMEs, climate, gender, financial inclusion and mobilisation. The role works across IFC and the wider World Bank Group, combining delegated investment authority with responsibility for managers, dispersed teams, resources and senior client relationships. The duty station is Dakar or Abidjan.",
+      "responsibilities": [
+        "Develop and implement FIG strategy across West, Central and North Africa, balancing business growth, profitability and sustainable development impact.",
+        "Lead investment origination, business development and portfolio oversight, maintaining investment quality and proactive client coverage.",
+        "Chair Investment Review Meetings and make investment decisions within delegated authority.",
+        "Oversee upstream and advisory engagements and advance the regional equity strategy.",
+        "Build senior relationships with financial institutions, governments, investors, donors and development partners.",
+        "Mobilise capital and joint solutions with other IFC industries, IBRD/IDA, MIGA, Treasury and Knowledge Bank colleagues.",
+        "Lead managers and dispersed teams, allocate resources, develop talent and use portfolio lessons and analytics to improve delivery."
+      ],
+      "requirements": [
+        "A master’s degree or equivalent professional qualification in economics, finance, business or a related field, plus at least 20 years of relevant experience.",
+        "Proven investment and business-delivery experience, with sound judgement and credibility across financial institutions and markets.",
+        "Strong experience making investment decisions involving credit, legal, environmental, social and integrity considerations.",
+        "Demonstrated strategic leadership, prioritisation, resource allocation and delivery under pressure.",
+        "Proven ability to lead large, dispersed, multicultural teams and develop high-performing talent.",
+        "Excellent written and spoken communication; the detailed selection criteria require fluency in both English and French."
+      ]
+    }
+  },
+  "DRAFT-98d048944435": {
+    "title": "Regional Industry Director, FIG - East and Southern Africa",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Investment",
+      "interestTags": [],
+      "rationale": "Investment decisions, origination and portfolio quality lead the regional FIG mandate; advisory and mobilisation are supporting activities.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39569?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead IFC’s financial-institutions investment and advisory business across East and Southern Africa. This regional leadership role combines investment origination, portfolio oversight, capital mobilisation and strategy, directing teams that support banks, insurers, capital markets, housing finance, trade finance and fintech while delivering profitability and development impact.",
+      "aboutRole": "Reporting to IFC’s Vice President for Africa and serving on the Africa leadership team, the Director oversees the Financial Institutions Group’s regional investments, upstream work and advisory operations. Priorities include jobs, MSMEs, climate, gender, financial inclusion and mobilisation. The role works across IFC and the wider World Bank Group, combining delegated investment authority with responsibility for managers, dispersed teams, resources and senior client relationships. The duty station is Johannesburg or Nairobi.",
+      "responsibilities": [
+        "Develop and implement FIG strategy across East and Southern Africa, balancing business growth, profitability and sustainable development impact.",
+        "Lead investment origination, business development and portfolio oversight, maintaining investment quality and proactive client coverage.",
+        "Chair Investment Review Meetings and make investment decisions within delegated authority.",
+        "Oversee upstream and advisory engagements and advance the regional equity strategy.",
+        "Build senior relationships with financial institutions, governments, investors, donors and development partners.",
+        "Mobilise capital and joint solutions with other IFC industries, IBRD/IDA, MIGA, Treasury and Knowledge Bank colleagues.",
+        "Lead managers and dispersed teams, allocate resources, develop talent and use portfolio lessons and analytics to improve delivery."
+      ],
+      "requirements": [
+        "A master’s degree or equivalent professional qualification in economics, finance, business or a related field, plus at least 20 years of relevant experience.",
+        "Proven investment and business-delivery experience, with sound judgement and credibility across financial institutions and markets.",
+        "Strong experience making investment decisions involving credit, legal, environmental, social and integrity considerations.",
+        "Demonstrated strategic leadership, prioritisation, resource allocation and delivery under pressure.",
+        "Proven ability to lead large, dispersed, multicultural teams and develop high-performing talent.",
+        "Excellent written and spoken communication; fluency in English is required."
+      ]
+    }
+  },
+  "DRAFT-bdd94e11f270": {
+    "title": "Manager: Balance Sheet Management",
+    "company": "Nedbank",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "treasury-funding-alm",
+      "jobFunction": "Strategic Finance",
+      "interestTags": [],
+      "rationale": "Balance-sheet optimisation, funding/capital plans, ALM, stress tests and ALCO decisions establish specialist treasury finance.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Windhoek-Manager-Balance-Sheet-Management/1459776233",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead Nedbank’s asset-liability and balance-sheet management function in Windhoek. This strategic Treasury and risk mandate covers liquidity, funding, capital planning, interest-rate risk and prudential regulation, translating balance-sheet analysis into recommendations for executive management, ALCO, Board committees and regulators.",
+      "aboutRole": "Reporting to the Head of Finance, the ALCO Manager oversees the bank’s balance-sheet risk frameworks and regulatory planning. The position brings together capital and liquidity adequacy assessments, recovery and resolution planning, stress testing and Basel III compliance. It also owns the ALCO governance process, supports regulatory engagements and helps directors and executives understand the financial and prudential implications of proposed strategies.",
+      "responsibilities": [
+        "Lead asset-liability management across liquidity, funding, capital and interest-rate risk in the banking book.",
+        "Recommend balance-sheet optimisation, funding strategies, capital plans and risk-management actions.",
+        "Develop and maintain ICAAP, ILAAP, recovery and resolution-planning frameworks, including regulatory submissions.",
+        "Oversee stress testing, scenario analysis and risk reporting for strategic decisions and regulatory compliance.",
+        "Lead Basel III and prudential-regulation engagements, coordinating responses to supervisory reviews and information requests.",
+        "Manage ALCO governance and prepare reports and presentations for executives, Board committees and the Board.",
+        "Improve risk methodologies and reporting, and train management and directors on capital, liquidity and emerging regulatory developments."
+      ],
+      "requirements": [
+        "A professional qualification or honours degree is the stated essential qualification level.",
+        "At least five years of experience in Treasury, ALM, balance-sheet management, capital management, liquidity risk or a related banking function.",
+        "Demonstrated experience with ICAAP, ILAAP, recovery and resolution planning, Basel III, stress testing and balance-sheet risk management.",
+        "Experience with regulatory reporting and presenting to executive committees, Board committees and regulators.",
+        "Relevant accounting or finance studies, FRM, a related master’s degree, CA or CFA credentials are listed as preferred qualifications."
+      ]
+    }
+  },
+  "DRAFT-f6779c5db17c": {
+    "title": "Transactor: RSS",
+    "company": "RMB",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Resources financing origination, transaction structuring, cash flows, credit approvals and legal execution establish specialist structured lending.",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Transactor--RSS_R55016",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Originate and execute resources-sector investment-banking transactions at RMB in Johannesburg. The role combines client development, deal structuring and implementation with ongoing portfolio management, ensuring approved commercial terms, legal agreements and financial obligations are carried through the transaction lifecycle.",
+      "aboutRole": "This resources transactor position covers investment-banking clients from implementation to termination. Work spans proposals, financial analysis, legal-documentation inputs and coordination with finance, securities and other internal teams. The successful candidate develops client relationships, contributes directly to origination and structuring, and manages the financial and regulatory requirements of an active transaction portfolio.",
+      "responsibilities": [
+        "Originate resources-sector opportunities, develop client relationships and prepare transaction proposals.",
+        "Structure and implement deals in line with credit approvals and legal agreements.",
+        "Prepare cash flows, financial reports and client-strategy analysis; resolve management-account queries with CIB Finance.",
+        "Coordinate legal documentation, signatures, drawdowns, payments and transaction instructions with relevant teams.",
+        "Monitor transaction obligations, regulatory requirements and internal controls; identify risks and coordinate mitigation.",
+        "Develop the client portfolio and identify appropriate cross-selling opportunities with more experienced transactors."
+      ],
+      "requirements": [
+        "A relevant bachelor’s degree.",
+        "At least five years of experience as a Resources Transactor."
+      ]
+    }
+  },
+  "DRAFT-a952ce04c1b3": {
+    "title": "Head: Municipal Utility Reform Programme (MURP)",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Results-based financing design, project preparation, grants/loans access and funding-condition verification establish a development-finance programme mobilisation remit, beyond generic coordination.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261118-3",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead DBSA’s Municipal Utility Reform Programme from Midrand, supporting reform of municipal water and energy services. The position combines infrastructure programme strategy, development-finance oversight and performance-based implementation, with responsibility for a programme management office operating under African Development Bank loan and National Treasury grant conditions.",
+      "aboutRole": "The programme addresses utility turnaround, revenue improvement, service sustainability and reduced water and electricity losses. Its Head leads strategy, budgets, governance and multidisciplinary delivery while coordinating municipalities, National Treasury, development partners and transaction advisers. A central responsibility is results-based financing, including disbursement-linked indicators, verification evidence and donor reporting. The employer describes this as a fixed-term appointment but gives inconsistent contract-duration information.",
+      "responsibilities": [
+        "Develop the programme’s three-to-five-year strategy, implementation plans, budgets and operating frameworks.",
+        "Lead results-based financing, disbursement-linked indicators and the programme results framework.",
+        "Oversee project preparation, technical assistance and beneficiary access to grants, loans and support instruments.",
+        "Manage procurement strategies, performance-based contracts, service-provider delivery and value-for-money controls.",
+        "Oversee financial reporting, disbursement verification, funding conditions and programme risk management.",
+        "Build partnerships with municipalities, government, development partners and transaction advisers; report to executive and oversight bodies.",
+        "Lead the programme management office, develop staff and coordinate multidisciplinary implementation teams."
+      ],
+      "requirements": [
+        "A postgraduate degree in business administration, finance, procurement, engineering or the built environment, including the listed civil/construction/quantity-surveying fields.",
+        "At least 12 years in infrastructure project development, the built environment, advisory services or consulting, including five or more years in management.",
+        "In-depth experience managing performance-based contractors or comparable long-term PPP contracts, plus monitoring and evaluation knowledge.",
+        "Understanding of feasibility studies, deal structuring, development finance, public finance and infrastructure financial instruments.",
+        "Practical municipal-sector knowledge covering procurement legislation, council governance, performance management and audit requirements.",
+        "Experience leading complex municipal utility, water, energy or infrastructure programmes and engaging senior public-sector stakeholders.",
+        "Results-based financing and work with distressed municipalities are desirable; relevant specialist postgraduate qualifications are also advantageous."
+      ]
+    }
+  },
+  "DRAFT-868b0a16d06c": {
+    "title": "Analyst, Economics & Policy",
+    "company": "European Bank for Reconstruction and Development (EBRD)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [
+        "climate"
+      ],
+      "rationale": "Macroeconomic scenarios for banking financial models, investment-project tasks and policy/country diagnostics establish analytical advisory supporting development finance.",
+      "sourceUrl": "https://jobs.ebrd.com/job/Abidjan-Analyst%2C-Economics-&-Policy/1458914233",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Support EBRD’s economic-policy and transition agenda across Sub-Saharan Africa from Abidjan. The analyst contributes country research, policy dialogue and investment-related analysis, including green-economy transition, structural reform and macroeconomic scenarios used by Banking teams in their investment work.",
+      "aboutRole": "The role sits in the Regional Policy and Strategy team within Policy and Partnerships. Working with Banking, Policy Strategy and Delivery, and Climate Strategy and Delivery colleagues, the analyst helps connect country priorities, policy reforms and investment delivery. Assignments range from country diagnostics and strategies to transaction support, policy compacts, growth forecasts and briefings for internal decision-making.",
+      "responsibilities": [
+        "Monitor economic growth, reform progress and macroeconomic risks across the region.",
+        "Support policy dialogue on green transition, governance, competitiveness, human capital, digitalisation and capital markets.",
+        "Contribute climate analysis and implementation of the Green Economy Transition Strategy in Côte d’Ivoire.",
+        "Support defined investment and policy-project tasks, including Banking presentations to decision-making bodies.",
+        "Prepare country diagnostics, country strategies and inputs to economic forecasts and the Transition Report.",
+        "Develop macroeconomic scenarios for Banking financial models and prepare policy briefings, research and presentations."
+      ],
+      "requirements": [
+        "Relevant degree-level education in the employer’s listed economics, development, business, engineering, environmental, energy-economics or commerce fields, or comparable professional experience.",
+        "Experience contributing to project management and multidisciplinary teams, with familiarity with emerging markets and transition economies.",
+        "Familiarity with finance and investment decision-making and knowledge of a relevant policy or technical area.",
+        "Ability to explain complex policy issues, build consensus and work with multiple stakeholders.",
+        "Excellent written and spoken English and advanced Excel, PowerPoint and Word skills; familiarity with a language of EBRD’s countries of operations is advantageous.",
+        "EBRD invites applicants who are nationals of its member countries; candidates should check their eligibility against the employer’s requirements."
+      ]
+    }
+  },
+  "DRAFT-60f57c100f80": {
+    "title": "Trade Product Manager (Mauritius or South Africa)",
+    "company": "Standard Chartered CIB",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "trade-syndicated-finance",
+      "jobFunction": "Strategic Finance",
+      "interestTags": [],
+      "rationale": "Trade-product P&L, pricing, regulatory-capital allocation, ALCO work and investment business cases establish specialist trade-finance financial decision making.",
+      "sourceUrl": "https://jobs.standardchartered.com/job/Trade-Product-Manager-%28Mauritius-or-South-Africa%29/65876-en_GB",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Own the strategy and commercial performance of Standard Chartered’s trade-finance products in a role based in Mauritius or South Africa. The position combines product P&L, pricing and regulatory-capital decisions with investment business cases, market analysis and coordination across transaction banking, treasury, sales and risk.",
+      "aboutRole": "Working with the Country Product Head and regional and global teams, the Trade Product Manager oversees the product lifecycle and its financial and non-financial performance. The mandate includes capabilities, governance, profitability and future access strategies. Client campaigns, RFPs, complex implementations and pricing discussions are supported in collaboration with the relevant teams, alongside digital improvements to the product operating model.",
+      "responsibilities": [
+        "Manage the end-to-end trade-banking product lifecycle in line with global policy and regional priorities.",
+        "Own product-portfolio P&L, pricing, asset-management decisions and regulatory capital allocation.",
+        "Work with Trade and Treasury leadership on ALCO matters, pricing and financial performance.",
+        "Develop and assess investment business cases for the product operating model.",
+        "Analyse markets and competitors and implement strategies to improve growth, market share and profitability.",
+        "Lead product innovation and digital improvements while maintaining risk and governance controls.",
+        "Coordinate product strategies across countries and support client-facing teams with complex product requirements."
+      ],
+      "requirements": [
+        "Extensive experience in trade-finance product management, preferably in multinational banking or financial services.",
+        "Practical understanding of trade-finance instruments, risk, compliance and Southern African regulation.",
+        "Demonstrated ability to manage P&L, pricing and capital allocation and execute profitable product strategies.",
+        "Strong analytical, problem-solving and market-data interpretation skills, including effective use of technology.",
+        "Communication and stakeholder-management skills across business units, partners and clients.",
+        "Professional qualifications in banking, finance or trade-related disciplines are advantageous rather than stated as mandatory."
+      ]
+    }
+  },
+  "DRAFT-7cebed260714": {
+    "title": "Partnerships and Industrial Development Specialist",
+    "company": "Industrial Development Corporation of South Africa (IDC)",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Commercial viability screening, investor/funder mobilisation, finance facilitation and investment pipeline development support industrial development-finance advisory.",
+      "sourceUrl": "https://careers.idc.co.za/details.html?jobId=17216&jobTitle=Partnerships+and+Industrial+Development+Specialist",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Develop partnerships and investment-ready circular-economy projects at South Africa’s Industrial Development Corporation. Based in Johannesburg, the role connects government, municipalities, industry, investors and development-finance institutions to translate industrial-development priorities into commercially viable projects, private-sector participation and opportunities for emerging enterprises.",
+      "aboutRole": "This 36-month fixed-term role combines strategic partnership development, investment facilitation and practical implementation support. Its remit includes industrial symbiosis, recycling and resource recovery, municipal-private arrangements and value-chain development. The specialist builds a project pipeline, screens commercial viability and readiness, supports investor due diligence and tracks investment mobilisation, enterprise participation and development outcomes.",
+      "responsibilities": [
+        "Develop strategic relationships with companies, industry bodies, municipalities, investors and development-finance institutions.",
+        "Identify circular-economy industries, industrial-symbiosis opportunities and projects within industrial parks or economic zones.",
+        "Support municipal project-development models, including partnerships, concessions and service contracts.",
+        "Connect priority projects with investors, funders, developers and strategic partners; coordinate due-diligence information.",
+        "Build and screen a project pipeline for commercial viability, implementation readiness and development impact.",
+        "Facilitate market access, finance, procurement and supplier-development opportunities for SMMEs and emerging enterprises.",
+        "Monitor investment mobilisation, jobs and enterprise outcomes while maintaining partnership governance and legal compliance."
+      ],
+      "requirements": [
+        "A recognised bachelor’s degree in the employer’s listed environmental, development, economics, business, public-administration or social-science fields, or a related relevant discipline.",
+        "Five to eight years in enterprise/SMME development, business growth, competitiveness and sustainability.",
+        "Experience in investment promotion and facilitation, public-private partnerships and multi-stakeholder development initiatives.",
+        "A strong record of stakeholder engagement across government, municipalities, industry, investors and development agencies.",
+        "Knowledge of economic inclusion, enterprise development, project preparation and investment readiness.",
+        "Relevant additional qualifications or certifications in project management, circular economy, investment facilitation, enterprise development, municipal infrastructure or partnerships are advantageous."
+      ]
+    }
+  },
+  "DRAFT-7bf16bbce018": {
+    "title": "Markets Trader",
+    "company": "RMB",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "institutional-sales-trading",
+      "jobFunction": "Trading",
+      "interestTags": [],
+      "rationale": "Money-market positioning, relative-value trades, Treasury Bills/NCD execution and trading risk limits establish institutional trading.",
+      "sourceUrl": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Markets-Trader_R55325",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Build short-term interest-rate, liquidity and funding views as a Markets Trader at RMB in Johannesburg. The role manages an allocated money-market portfolio, executes trades in short-term instruments and contributes risk-adjusted returns while supporting the desk’s profitability, liquidity and balance-sheet objectives.",
+      "aboutRole": "The position sits on the Money Market Trading Desk and combines market analysis with disciplined risk-taking. Work includes Treasury Bills, negotiable certificates of deposit and other short-term interest-rate instruments. The trader operates within approved mandates, limits and stop-loss parameters, communicates market recommendations and works with banks, institutional investors and internal stakeholders on funding and trading opportunities.",
+      "responsibilities": [
+        "Develop interest-rate, liquidity and funding views and translate them into prudent positioning and execution.",
+        "Manage an allocated money-market portfolio within approved risk limits and stop-loss parameters.",
+        "Identify relative-value opportunities and execute trades in Treasury Bills, NCDs and related instruments.",
+        "Balance portfolio risk and return while contributing to desk profitability and strategy.",
+        "Support liquidity, funding and balance-sheet management through effective market execution.",
+        "Monitor market, liquidity and counterparty risk, escalating concerns when needed.",
+        "Produce market commentary and recommendations and maintain relationships with institutional counterparties."
+      ],
+      "requirements": [
+        "BCom Honours, BSc, B.Bus.Sci or a comparable qualification in economics, finance, mathematics, statistics or a similar field, as listed by the employer.",
+        "Zero to three years of experience in treasury, money markets, fixed income, asset-liability management or financial markets.",
+        "Strong analytical and numerical skills and understanding of interest rates, liquidity and fixed-income instruments.",
+        "Advanced Excel capability; Bloomberg experience is advantageous.",
+        "Strong communication and stakeholder-management skills."
+      ]
+    }
+  },
+  "DRAFT-926bda1c10ae": {
+    "title": "Chief Finance & Value Management Officer",
+    "company": "Standard Lesotho Bank",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "fpa-finance-leadership",
+      "jobFunction": "Finance Leadership",
+      "interestTags": [],
+      "rationale": "Leadership of country finance, executive/Board forecasts and analytics, investment decisions and capital/liquidity oversight establish substantive finance leadership.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000162738255",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead Finance and Value Management for Standard Lesotho Bank in Maseru. This executive role partners with the Board, Chief Executive and country leadership to translate strategy into financial plans, stronger performance and value creation, with oversight of finance operations, capital, liquidity and financial governance.",
+      "aboutRole": "The position combines forward-looking commercial finance with leadership of the country finance team. The officer challenges business performance, costs and investment decisions, brings insights to executive and Board discussions, and supports accountable delivery against strategic objectives. Executive responsibilities also span treasury, capital management, tax and procurement, alongside regulatory engagement and finance transformation.",
+      "responsibilities": [
+        "Advise on bank strategy, financial plans, business performance, costs and investment decisions.",
+        "Lead the country finance team, performance objectives and monitoring against agreed metrics.",
+        "Assess financial and business results against strategic goals, benchmarks, competitors and market trends.",
+        "Provide forecasts, financial insights and analytics for executive and Board decisions.",
+        "Maintain finance policies, systems, governance and controls in line with Group standards and risk appetite.",
+        "Oversee treasury, capital, tax and procurement and ensure compliance with capital, liquidity and financial regulations."
+      ],
+      "requirements": [
+        "Either Chartered Accountant status or a postgraduate qualification in finance or a related field.",
+        "Ten to fifteen years of senior finance, commercial and business-leadership experience, including at least five years in senior leadership within a large or complex organisation.",
+        "Broad experience across finance, financial planning, performance and value management, with a record of translating strategy into business outcomes.",
+        "Experience leading multidisciplinary teams, organisational change and finance transformation.",
+        "Strong engagement with Boards, executive leadership, stakeholders, regulators and fiscal authorities."
+      ]
+    }
+  },
+  "DRAFT-8e3cc567e47e": {
+    "title": "Head: Leveraged Finance",
+    "company": "Nedbank",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "project-structured-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Leveraged/acquisition debt, senior/mezzanine structures, financial analysis, credit pricing and documentation establish structured-finance origination.",
+      "sourceUrl": "https://jobs.nedbank.co.za/job/Johannesburg-Head-Leveraged-Finance/1457916133",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead Nedbank’s leveraged finance business, originating and executing debt solutions for private equity sponsors, investment holding companies and family offices. The Johannesburg role covers acquisition finance, mezzanine and subordinated structures, with accountability for the franchise’s commercial performance.",
+      "aboutRole": "The Head of Leveraged Finance builds the transaction pipeline and leads a team across origination, structuring and execution. The mandate includes collaboration with corporate finance, capital markets, coverage and private equity colleagues to deliver integrated sponsor solutions and manage risk-adjusted portfolio returns.",
+      "responsibilities": [
+        "Build relationships with financial sponsors and originate leveraged and acquisition financings.",
+        "Design senior, mezzanine and subordinated debt structures and negotiate transaction terms.",
+        "Lead financial analysis, credit assessment, pricing and legal execution.",
+        "Manage portfolio risk, capital usage and risk-adjusted returns.",
+        "Develop the leveraged finance team and coordinate solutions across Nedbank CIB."
+      ],
+      "requirements": [
+        "Relevant professional or honours qualification, with postgraduate finance study preferred.",
+        "At least ten years in investment banking, leveraged finance, acquisition finance or private equity.",
+        "Experience originating and executing complex financing transactions and advising senior clients.",
+        "Strong financial modelling, valuation, credit analysis and team leadership. CA(SA), CFA or equivalent is advantageous."
+      ]
+    }
+  },
+  "DRAFT-1fe00eaad007": {
+    "title": "Advisory Head, Investment Banking (East Africa)",
+    "company": "Stanbic Bank Kenya",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "investment-banking-advisory",
+      "subcategoryId": "ma-corporate-finance",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [
+        "valuation"
+      ],
+      "rationale": "Corporate financial/capital-structuring advice, transaction origination, valuations and advisory team leadership establish corporate-finance advisory.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000162287825",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead investment banking advisory across East Africa at Stanbic Bank Kenya. Based in Nairobi, the role originates and structures transactions, advises complex clients on strategic financial decisions and is responsible for advisory revenue, market share and team development.",
+      "aboutRole": "The Advisory Head provides forward-looking financial and capital-structuring advice tailored to clients’ objectives. The role coordinates multiple deals and product teams, reviews financial and valuation work, and oversees the preparation of board materials and other documents used in transaction execution.",
+      "responsibilities": [
+        "Originate and structure advisory transactions for complex corporate clients.",
+        "Advise clients on strategic financial and capital-structuring decisions.",
+        "Review financial models, valuations and transaction presentations.",
+        "Coordinate product teams and resources across concurrent deals.",
+        "Lead and mentor the advisory team while growing the franchise."
+      ],
+      "requirements": [
+        "Degree in business, finance, law, economics or a related discipline.",
+        "Eight to ten years of relevant experience, including team leadership.",
+        "Advanced financial analysis, valuation and transaction-documentation skills.",
+        "Knowledge of securities, company and tax rules affecting transaction structures."
+      ]
+    }
+  },
+  "DRAFT-aba8cba73179": {
+    "title": "Principal Banker, TMT, SEMED",
+    "company": "European Bank for Reconstruction and Development (EBRD)",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Investment",
+      "interestTags": [],
+      "rationale": "TMT investment origination, diligence, financial models, financing negotiation and investment monitoring establish DFI investment/lending.",
+      "sourceUrl": "https://jobs.ebrd.com/job/Cairo-Principal-Banker%2C-TMT%2C-SEMED/1457935433",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead technology, media and telecommunications transactions in EBRD’s Southern and Eastern Mediterranean team. The Cairo-based Principal Banker role combines investment origination, due diligence, structuring and execution with portfolio work and development of client relationships across the region.",
+      "aboutRole": "Working within the TMT banking team, the Principal Banker takes responsibility for transactions through their full investment cycle. The role prepares internal approvals, negotiates financing terms and legal documentation, and coordinates advisers and colleagues while assessing commercial viability, credit quality and development objectives.",
+      "responsibilities": [
+        "Originate and develop TMT investment opportunities and client relationships.",
+        "Lead due diligence, financial modelling and assessment of transaction risks.",
+        "Structure financing terms and negotiate legal documentation.",
+        "Prepare approval materials and manage transaction execution.",
+        "Monitor investments and coordinate project teams, advisers and internal specialists."
+      ],
+      "requirements": [
+        "Bachelor’s degree, with a master’s degree or equivalent experience preferred.",
+        "Significant experience in banking, private equity, asset management or financial consulting.",
+        "Practical experience leading transactions, financial models and due diligence.",
+        "Strong credit analysis and English communication skills, with willingness to travel. Professional finance qualifications are advantageous."
+      ]
+    }
+  },
+  "DRAFT-7287ab1f9724": {
+    "title": "Global Markets Analyst",
+    "company": "Stanbic Bank Kenya",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "global-markets-structuring",
+      "subcategoryId": "institutional-sales-trading",
+      "jobFunction": "Research & Analysis",
+      "interestTags": [
+        "fixed income"
+      ],
+      "rationale": "Market-product analysis and support to institutional sales/trade execution establish analyst activity in global markets; not assumed to own trading risk.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000162222749",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Develop sales and trading skills within Stanbic Bank Kenya’s Global Markets business in Nairobi. The analyst programme covers foreign exchange, rates, fixed income, money markets, commodities and structured solutions, with exposure to both client needs and trading risk.",
+      "aboutRole": "The position is designed for early-career candidates with a strong interest in financial markets. It combines learning across market products with analysis, trade execution and an understanding of risk and reward. The employer values quantitative ability, regional market knowledge and previous dealing-room or treasury exposure.",
+      "responsibilities": [
+        "Build knowledge of FX, rates, fixed-income and commodity products.",
+        "Analyse markets and develop insight into client needs.",
+        "Learn sales and trading processes across Global Markets desks.",
+        "Support trade execution and assessment of risk and reward.",
+        "Develop clear market research and analytical communication."
+      ],
+      "requirements": [
+        "First degree, with finance, economics, mathematics and other quantitative fields preferred.",
+        "One to two years of experience and a demonstrated interest in markets.",
+        "Strong analytical, numerical, communication and Excel skills.",
+        "Eligibility to work in Kenya. Progress towards CFA or FRM and a treasury internship are advantageous."
+      ]
+    }
+  },
+  "DRAFT-81feb52a9429": {
+    "title": "Principal Investor Relations Officer",
+    "company": "International Finance Corporation (IFC)",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "advisory-capital-mobilisation",
+      "jobFunction": "Fundraising & Investor Relations",
+      "interestTags": [],
+      "rationale": "Institutional mandates, co-investment platforms, investor roadshows and matching investor appetite to IFC transactions establish capital mobilisation, not corporate earnings communications.",
+      "sourceUrl": "https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/39473?c=worldbankgroup",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Lead institutional investor engagement and capital mobilisation at IFC. Johannesburg is one of nine advertised duty stations for this Principal Investor Relations Officer recruitment, which connects investor demand with IFC-originated debt, equity and structured investment opportunities across emerging markets.",
+      "aboutRole": "The role sits within IFC’s Global Investor Relations function and supports its Originate-to-Distribute model. It owns senior investor relationships, develops engagement plans and translates investor preferences into input for origination and structuring teams. IFC will determine selected candidates’ final duty stations according to organisational requirements.",
+      "responsibilities": [
+        "Own and grow relationships with major institutional investors.",
+        "Match investor mandates with IFC products, platforms and transactions.",
+        "Lead engagement plans, roadshows and co-investment discussions.",
+        "Advise origination and structuring teams on investor appetite and terms.",
+        "Coordinate investor agreements, onboarding and relationship reviews."
+      ],
+      "requirements": [
+        "Master’s degree or MBA, or an equivalent combination of education and experience.",
+        "At least twelve years in institutional investor relations, capital markets, asset management or investment banking.",
+        "Experience managing senior investor relationships and translating demand into business outcomes.",
+        "Strong English communication and cross-team leadership. Origination, syndication or capital-mobilisation experience is preferred."
+      ]
+    }
+  },
+  "DRAFT-ee969652f61e": {
+    "title": "PRINCIPAL RISK MANAGEMENT OFFICER, PSF",
+    "company": "PSF (recruitment hosted by AfDB)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Risk & Underwriting",
+      "interestTags": [],
+      "rationale": "Transaction participation risk opinions, credit models, stress tests and portfolio concentration support development-finance investment risk underwriting.",
+      "sourceUrl": "https://afdb.jobs2web.com/job/Abidjan-PRINCIPAL-RISK-MANAGEMENT-OFFICER%2C-PSF/1457791233",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Assess non-sovereign credit risk and portfolio capital needs at the Private Sector Credit Enhancement Facility (PSF). Based in Abidjan, the Principal Risk Management Officer reviews risk participations, structured credit exposures and financial models supporting private-sector development financing.",
+      "aboutRole": "The officer reports to the PSF Administrator and assesses the facility’s risk-bearing capacity, portfolio concentration and capital adequacy. The work includes independent transaction opinions, stress tests and risk-policy development. AfDB hosts this recruitment on behalf of PSF, which is the employer.",
+      "responsibilities": [
+        "Review transaction structures, projections and credit risks for proposed participations.",
+        "Monitor portfolio concentration, provisions and risk-capital needs.",
+        "Develop financial models, stress tests and scenario analysis.",
+        "Prepare risk opinions, dashboards and governance submissions.",
+        "Improve credit-risk policies and support capital planning and mobilisation."
+      ],
+      "requirements": [
+        "Master’s degree in risk, finance, actuarial science, economics or a related field.",
+        "At least six years in non-sovereign credit assessment or portfolio risk.",
+        "Experience assessing emerging-market credit and structured credit instruments.",
+        "Strong financial modelling and English or French, preferably with knowledge of the other language. CFA or FRM is advantageous."
+      ]
+    }
+  },
+  "DRAFT-ee872619d52d": {
+    "title": "Treasury Risk Analyst (TA), PSF",
+    "company": "PSF (recruitment hosted by AfDB)",
+    "roleType": "Fund Management, Treasury & Investor Relations",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "treasury-funding-alm",
+      "jobFunction": "Risk & Underwriting",
+      "interestTags": [
+        "valuation"
+      ],
+      "rationale": "Liquidity, ALM, funding buffers, maturity/currency mismatches and treasury stress tests establish treasury risk; employer type does not override the activity.",
+      "sourceUrl": "https://afdb.jobs2web.com/job/Abidjan-Treasury-Risk-Analyst-%28TA%29%2C-PSF/1457790633",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Analyse treasury, liquidity and balance-sheet risks at the Private Sector Credit Enhancement Facility (PSF). This Abidjan role develops models and monitoring tools for asset-liability management, counterparty exposures and treasury investment risks while supporting capital preservation and prudential limits.",
+      "aboutRole": "The Treasury Risk Analyst provides quantitative analysis and risk reporting to support management of PSF’s resources. The mandate covers cash-flow forecasts, interest-rate and currency exposures, portfolio valuation and stress testing. AfDB advertises the position on behalf of PSF, which is the hiring employer.",
+      "responsibilities": [
+        "Develop models for liquidity, ALM, market and counterparty risk.",
+        "Forecast cash flows and assess funding needs and liquidity buffers.",
+        "Analyse maturity, interest-rate and currency mismatches.",
+        "Monitor investment limits, valuations and portfolio risk indicators.",
+        "Prepare stress tests, dashboards and treasury-risk recommendations."
+      ],
+      "requirements": [
+        "Master’s degree in finance, risk, financial engineering, economics or a related quantitative field.",
+        "At least five years in treasury risk, ALM, liquidity or investment risk.",
+        "Strong modelling, cash-flow forecasting and scenario-analysis skills.",
+        "English or French communication, preferably with knowledge of the other language. Treasury-system experience is advantageous."
+      ]
+    }
+  },
+  "DRAFT-f27ec7d2c136": {
+    "title": "Program Officer (TA), PSF",
+    "company": "PSF (recruitment hosted by AfDB)",
+    "roleType": "Development Finance & Multilaterals",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Portfolio & Asset Management",
+      "interestTags": [],
+      "rationale": "Risk-participation screening, portfolio construction/performance, claims and guarantee/disbursement monitoring support a development-finance investment portfolio.",
+      "sourceUrl": "https://afdb.jobs2web.com/job/Abidjan-Program-Officer-%28TA%29%2C-PSF/1457790833",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Manage pipeline and portfolio activities for the Private Sector Credit Enhancement Facility (PSF) in Abidjan. The Program Officer supports risk-participation transactions, portfolio construction, guarantee implementation and resource mobilisation alongside operational coordination of the facility’s work programme.",
+      "aboutRole": "Reporting to the PSF Administrator, the officer coordinates transaction screening, approval documents and legal execution for risk participations. The role also monitors portfolio performance, claims and disbursements and contributes to fundraising. PSF is the employer, with recruitment hosted by AfDB.",
+      "responsibilities": [
+        "Maintain the risk-participation pipeline and portfolio-management systems.",
+        "Support portfolio construction, performance analysis and claims monitoring.",
+        "Screen transactions and prepare risk-participation recommendations.",
+        "Coordinate legal documentation, guarantees and disbursement follow-up.",
+        "Prepare programme reports and support fundraising and partner engagement."
+      ],
+      "requirements": [
+        "Master’s degree in finance, business administration, economics or a related field.",
+        "At least seven years in programme management, fund administration or operations.",
+        "At least six years implementing credit insurance, guarantees or risk participations.",
+        "At least four years in non-sovereign portfolio construction, investment appraisal and management, with strong English or French."
+      ]
+    }
+  },
+  "DRAFT-7983a7257eee": {
+    "title": "Investment Officer",
+    "company": "Development Bank of Southern Africa (DBSA)",
+    "roleType": "Infrastructure & Project Finance",
+    "classification": {
+      "areaId": "development-finance",
+      "subcategoryId": "investment-lending",
+      "jobFunction": "Investment",
+      "interestTags": [
+        "infrastructure"
+      ],
+      "rationale": "Infrastructure investment screening, financial modelling, financing structures and investment committee submissions establish DFI investment/lending.",
+      "sourceUrl": "https://dbsa.erecruit.co/candidateapp/Jobs/View/DBS261112-1",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "DFI / Multilateral"
+    },
+    "evidence": {
+      "summary": "Originate and execute infrastructure investments at DBSA. This Midrand-based role combines deal sourcing, financial modelling and deal structuring with negotiation and credit approval across project finance, corporate finance and structured finance.",
+      "aboutRole": "The Investment Officer builds a pipeline of projects suitable for development financing. The role works with Treasury, Legal, Credit and Loan Administration from first assessment through approval and closing, and develops relationships with sponsors, lenders and government counterparts across sub-Saharan Africa.",
+      "responsibilities": [
+        "Source and screen infrastructure investment opportunities in DBSA’s priority sectors.",
+        "Assess commercial viability, build financial models and evaluate institutional and transaction risks.",
+        "Structure financings and negotiate term sheets, finance agreements and project documents.",
+        "Prepare Investment Committee and Board submissions and take transactions through credit approval.",
+        "Develop relationships with sponsors, lenders, multilateral partners and government counterparts."
+      ],
+      "requirements": [
+        "Bachelor’s degree in business, finance, engineering, economics or actuarial science.",
+        "Three to five years of transaction experience within a financial institution.",
+        "Experience appraising, negotiating and closing project, corporate or structured financings.",
+        "Ability to analyse commercial risks, model cash flows and help structure complex transactions."
+      ]
+    }
+  },
+  "DRAFT-eed6813929c7": {
+    "title": "Senior Vice President, Mining & Metals",
+    "company": "Stanbic Bank Ghana",
+    "roleType": "Investment Banking & Advisory",
+    "classification": {
+      "areaId": "banking-structured-finance",
+      "subcategoryId": "corporate-banking",
+      "jobFunction": "Financing & Origination",
+      "interestTags": [],
+      "rationale": "Complex mining-client coverage, financial analysis and coordination of financing origination/execution establish specialist corporate banking rather than ordinary sales.",
+      "sourceUrl": "https://www.standardbank.com/sbg/standard-bank-group/careers/apply/jobs/view-all-jobs/job-detail?jobID=744000161777669",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Bank"
+    },
+    "evidence": {
+      "summary": "Lead mining and metals client coverage for Stanbic Bank Ghana in Accra. The role manages a portfolio of complex clients, coordinates deal origination and execution across the bank, and is responsible for client growth, revenue and risk oversight.",
+      "aboutRole": "The Senior Vice President advises senior client executives and brings product and deal teams together to deliver financing and other solutions. The position includes first-line risk management and oversight of financial and valuation analysis, alongside responsibility for client service throughout the relationship.",
+      "responsibilities": [
+        "Manage and grow a portfolio of complex mining and metals clients.",
+        "Advise executives and negotiate changes to meet client needs.",
+        "Coordinate origination and execution with deal and product teams.",
+        "Use sector trends and financial analysis to identify opportunities for clients and the bank.",
+        "Own first-line risk management while delivering client service and revenue targets."
+      ],
+      "requirements": [
+        "First degree in business or commerce.",
+        "Eight to ten years of experience leading executive-level client relationships.",
+        "Experience coordinating cross-functional deal teams and developing client solutions.",
+        "Track record using sector insights and detailed financial or valuation analysis in client coverage.",
+        "Experience managing risk as the first line of defence."
+      ]
+    }
+  },
+  "DRAFT-92c1702355bb": {
+    "title": "Associate Director of Risk Management",
+    "company": "Lendable",
+    "roleType": "Private Equity, VC & Private Credit",
+    "classification": {
+      "areaId": "private-markets",
+      "subcategoryId": "private-credit",
+      "jobFunction": "Risk & Underwriting",
+      "interestTags": [
+        "restructuring"
+      ],
+      "rationale": "Borrower models/stress tests, covenant monitoring, waivers and restructuring/recovery negotiations establish private-credit risk expertise.",
+      "sourceUrl": "https://za.linkedin.com/jobs/view/associate-director-of-risk-management-at-lendable-4485074416",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Investment Manager"
+    },
+    "evidence": {
+      "summary": "Lead credit risk monitoring across Lendable’s emerging-market private credit portfolio. This Johannesburg-based role covers financial modelling, covenant monitoring and portfolio-company engagement, with responsibility for restructuring and recoveries where borrowers are under stress.",
+      "aboutRole": "Reporting to the Managing Director and Head of Risk, the Associate Director helps shape the risk framework as the portfolio grows. The investments are primarily in fintech and climate finance. The role works with investment, data and investor relations teams and reports on portfolio risks to senior management, investors and committees.",
+      "responsibilities": [
+        "Assess portfolio-company performance, financial projections and covenant compliance.",
+        "Build financial models and stress tests for emerging-market borrowers.",
+        "Lead portfolio-company monitoring meetings and in-person visits.",
+        "Review risk ratings, negotiate waivers and amendments, and escalate emerging problems.",
+        "Lead restructuring negotiations and recovery plans when borrowers are in distress."
+      ],
+      "requirements": [
+        "At least seven years of corporate credit analysis in a financial institution managing private credit or loans.",
+        "Experience in emerging markets or fintech, with climate or impact credit experience advantageous.",
+        "Strong financial modelling, stress-testing, corporate finance and accounting skills.",
+        "Ability to present to senior executives and investors, fluency in English and willingness to travel."
+      ]
+    }
+  },
+  "DRAFT-3153d8fe298f": {
+    "title": "General Manager, Finance Strategy, Performance and Control",
+    "company": "MTN Group",
+    "roleType": "Corporate Development, M&A & Strategy",
+    "classification": {
+      "areaId": "corporate-finance-strategy",
+      "subcategoryId": "strategic-finance-investments",
+      "jobFunction": "Strategic Finance",
+      "interestTags": [
+        "valuation"
+      ],
+      "rationale": "Five-year plans/scenario forecasts, capital-spending prioritisation, post-investment returns and acquisition/venture evaluation establish substantive strategic finance.",
+      "sourceUrl": "https://ehle.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7949",
+      "proposedBy": "ACD classification assistant",
+      "proposedAt": "2026-11-28",
+      "method": "ai-assisted",
+      "status": "proposed",
+      "employerType": "Corporate"
+    },
+    "evidence": {
+      "summary": "Lead finance strategy and capital allocation for MTN South Africa. Reporting to the CFO, the General Manager owns financial planning and performance, evaluates investment trade-offs, and oversees financial reporting and controls while leading finance transformation.",
+      "aboutRole": "The position acts as a senior partner and deputy to the CFO, including at executive and board forums when delegated. It combines management of the five-year business plan and capital expenditure with evaluation of strategic projects, including acquisitions, partnerships and digital ventures. The work also covers IFRS reporting, audit and finance systems.",
+      "responsibilities": [
+        "Own the five-year plan, annual budget and scenario-based forecasts.",
+        "Prioritise capital spending across network, technology and growth investments and review returns after investment.",
+        "Advise executives on business performance, pricing, cost and investment decisions.",
+        "Sponsor financial evaluation of acquisitions, partnerships and digital ventures.",
+        "Lead reporting, controls, audit and finance-system transformation."
+      ],
+      "requirements": [
+        "CA(SA) or CIMA (CGMA), with an MBA or relevant master’s degree.",
+        "At least 12–15 years of post-qualification experience, including five to seven years in senior finance leadership.",
+        "Experience in capital allocation, planning, IFRS reporting, consolidation and audit.",
+        "Track record reporting to boards and executive committees and leading finance transformation; telecommunications experience is strongly preferred."
       ]
     }
   }

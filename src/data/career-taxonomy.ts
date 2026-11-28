@@ -8,34 +8,33 @@ export const CAREER_AREAS = [
     { id: "fund-investments-secondaries", label: "Fund Investments & Secondaries" },
   ] },
   { id: "development-finance", label: "Development Finance", subcategories: [
-    { id: "dfi-investments", label: "DFI Investments" },
-    { id: "development-blended-finance", label: "Development & Blended Finance" },
-    { id: "impact-climate-finance", label: "Impact & Climate Finance" },
+    { id: "investment-lending", label: "Investment & Lending" },
+    { id: "advisory-capital-mobilisation", label: "Advisory & Capital Mobilisation" },
   ] },
   { id: "investment-banking-advisory", label: "Investment Banking & Advisory", subcategories: [
     { id: "ma-corporate-finance", label: "M&A & Corporate Finance" },
-    { id: "valuation-transaction-advisory", label: "Valuation & Transaction Advisory" },
+    { id: "transaction-restructuring-advisory", label: "Transaction & Restructuring Advisory" },
     { id: "capital-markets", label: "Capital Markets" },
   ] },
   { id: "asset-management-research", label: "Asset Management & Research", subcategories: [
-    { id: "equity-fixed-income", label: "Equity & Fixed Income" },
     { id: "portfolio-management", label: "Portfolio Management" },
     { id: "investment-research", label: "Investment Research" },
+    { id: "investment-advisory-wealth-management", label: "Investment Advisory & Wealth Management" },
   ] },
   { id: "global-markets-structuring", label: "Global Markets & Structuring", subcategories: [
-    { id: "sales-trading", label: "Sales & Trading" },
-    { id: "derivatives-structured-products", label: "Derivatives & Structured Products" },
+    { id: "institutional-sales-trading", label: "Institutional Sales & Trading" },
+    { id: "structuring-financial-engineering", label: "Structuring & Financial Engineering" },
   ] },
-  { id: "corporate-structured-finance", label: "Corporate & Structured Finance", subcategories: [
+  { id: "banking-structured-finance", label: "Banking & Structured Finance", subcategories: [
     { id: "corporate-banking", label: "Corporate Banking" },
     { id: "project-structured-finance", label: "Project & Structured Finance" },
     { id: "trade-syndicated-finance", label: "Trade & Syndicated Finance" },
     { id: "treasury-funding-alm", label: "Treasury, Funding & ALM" },
   ] },
-  { id: "corporate-development-investments", label: "Corporate Development & Investments", subcategories: [
+  { id: "corporate-finance-strategy", label: "Corporate Finance & Strategy", subcategories: [
     { id: "corporate-ma", label: "Corporate M&A" },
-    { id: "strategic-investments-strategy", label: "Strategic Investments & Strategy" },
-    { id: "strategic-finance-capital-allocation", label: "Strategic Finance & Capital Allocation" },
+    { id: "strategic-finance-investments", label: "Strategic Finance & Investments" },
+    { id: "fpa-finance-leadership", label: "FP&A & Finance Leadership" },
     { id: "corporate-investor-relations", label: "Corporate Investor Relations" },
   ] },
 ] as const;
@@ -59,7 +58,30 @@ export const CAREER_FILTER_OPTIONS: readonly string[] = [
   "unclassified",
 ];
 
+/** URL compatibility only: old themes broaden to their current activity-based parent.
+ * These aliases must never be used to classify an individual job automatically.
+ */
+export const LEGACY_CAREER_FILTER_ALIASES: Readonly<Record<string, string>> = {
+  "corporate-structured-finance": "banking-structured-finance",
+  "corporate-development-investments": "corporate-finance-strategy",
+  "dfi-investments": "investment-lending",
+  "development-blended-finance": "development-finance",
+  "impact-climate-finance": "development-finance",
+  "valuation-transaction-advisory": "transaction-restructuring-advisory",
+  "equity-fixed-income": "asset-management-research",
+  "sales-trading": "institutional-sales-trading",
+  "derivatives-structured-products": "structuring-financial-engineering",
+  "strategic-investments-strategy": "strategic-finance-investments",
+  "strategic-finance-capital-allocation": "strategic-finance-investments",
+};
+
+export function normalizeCareerFilterIds(ids: readonly string[]): string[] {
+  return [...new Set(ids.map(id => LEGACY_CAREER_FILTER_ALIASES[id] ?? id)
+    .filter(id => CAREER_FILTER_OPTIONS.includes(id)))];
+}
+
 export function careerFilterLabel(id: string): string {
+  id = LEGACY_CAREER_FILTER_ALIASES[id] ?? id;
   if (id === "unclassified") return "Awaiting classification";
   for (const area of CAREER_AREAS) {
     if (area.id === id) return area.label;
@@ -71,6 +93,8 @@ export function careerFilterLabel(id: string): string {
 
 /** Parent selection includes every child; deselecting one child narrows that parent. */
 export function toggleCareerSelection(selected: readonly string[], id: string): string[] {
+  selected = normalizeCareerFilterIds(selected);
+  id = LEGACY_CAREER_FILTER_ALIASES[id] ?? id;
   const area = CAREER_AREAS.find(item => item.id === id);
   if (area) {
     const children: readonly string[] = area.subcategories.map(item => item.id);
